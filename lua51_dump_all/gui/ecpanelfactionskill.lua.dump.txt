@@ -1,0 +1,1865 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpanelfactionskill.lua
+SIZE: 17413
+PARSED: 17413
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpanelfactionskill.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 18
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Types.Vector3'
+K[003] = 'GUI.ECGUITools'
+K[004] = 'GUI.ECPanelBase'
+K[005] = 'Data.ElementData'
+K[006] = 'Data.ECEquipDesc'
+K[007] = 'Main.ECGame'
+K[008] = 'Event.NotifyFaction'
+K[009] = 'PB.net_common'
+K[010] = 'PB.pb_helper'
+K[011] = 'Extend'
+K[012] = 'ECPanelFactionSkill'
+K[013] = 'define'
+K[014] = 'field'
+K[015] = 'number'
+K[016] = 'm_CurrentSkill'
+K[017] = 1.0
+K[018] = 'm_ActiveSkill'
+K[019] = -1.0
+K[020] = 'table'
+K[021] = 'm_SkillList'
+K[022] = 'POSITION_NORMAL'
+K[023] = 0.0
+K[024] = 'POSITION_MASTER'
+K[025] = 'POSITION_VICE_MASTER1'
+K[026] = 2.0
+K[027] = 'POSITION_ZHANGLAO1'
+K[028] = 3.0
+K[029] = 'POSITION_ZHANGLAO2'
+K[030] = 4.0
+K[031] = 'static'
+K[032] = '=>'
+K[033] = 'Instance'
+K[034] = 'method'
+K[035] = 'UpgradeSkill'
+K[036] = 'ActiveSkill'
+K[037] = 'UpdateUI'
+K[038] = 'UpdateSkillUI'
+K[039] = 'string'
+K[040] = 'onClick'
+K[041] = 'Toggle'
+K[042] = 'override'
+K[043] = 'OnCreate'
+K[044] = 'OnDestroy'
+K[045] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    2] 0x00008081  LOADK      R2 = K[2]='Types.Vector3'
+0005 [line    2] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    3] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    3] 0x0000C0C1  LOADK      R3 = K[3]='GUI.ECGUITools'
+0008 [line    3] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    4] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    4] 0x00010101  LOADK      R4 = K[4]='GUI.ECPanelBase'
+0011 [line    4] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    5] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    5] 0x00014141  LOADK      R5 = K[5]='Data.ElementData'
+0014 [line    5] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    6] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    6] 0x00018181  LOADK      R6 = K[6]='Data.ECEquipDesc'
+0017 [line    6] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    7] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line    7] 0x0001C1C1  LOADK      R7 = K[7]='Main.ECGame'
+0020 [line    7] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    8] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    8] 0x00020201  LOADK      R8 = K[8]='Event.NotifyFaction'
+0023 [line    8] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line    9] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line    9] 0x00024241  LOADK      R9 = K[9]='PB.net_common'
+0026 [line    9] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   10] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   10] 0x00028281  LOADK      R10 = K[10]='PB.pb_helper'
+0029 [line   10] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   11] 0x0042C286  GETTABLE   R10 = R0[K[11]='Extend']
+0031 [line   11] 0x018002C0  MOVE       R11 = R3
+0032 [line   11] 0x00030301  LOADK      R12 = K[12]='ECPanelFactionSkill'
+0033 [line   11] 0x0180829C  CALL       A=10 B=3 C=2
+0034 [line   12] 0x054342C6  GETTABLE   R11 = R10[K[13]='define']
+0035 [line   14] 0x05C38306  GETTABLE   R12 = R11[K[14]='field']
+0036 [line   14] 0x0003C341  LOADK      R13 = K[15]='number'
+0037 [line   14] 0x0100831C  CALL       A=12 B=2 C=2
+0038 [line   14] 0x88444309  SETTABLE   R12[K[16]='m_CurrentSkill'] = K[17]=1.0
+0039 [line   15] 0x05C38306  GETTABLE   R12 = R11[K[14]='field']
+0040 [line   15] 0x0003C341  LOADK      R13 = K[15]='number'
+0041 [line   15] 0x0100831C  CALL       A=12 B=2 C=2
+0042 [line   15] 0x8944C309  SETTABLE   R12[K[18]='m_ActiveSkill'] = K[19]=-1.0
+0043 [line   16] 0x05C38306  GETTABLE   R12 = R11[K[14]='field']
+0044 [line   16] 0x00050341  LOADK      R13 = K[20]='table'
+0045 [line   16] 0x0100831C  CALL       A=12 B=2 C=2
+0046 [line   16] 0x00000364  CLOSURE    R13 = PROTO[0]
+0047 [line   16] 0x8A834309  SETTABLE   R12[K[21]='m_SkillList'] = R13
+0048 [line   18] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+0049 [line   20] 0x0001434A  NEWTABLE   A=13 B=0 C=5 Bx=5
+0050 [line   21] 0x8B45C349  SETTABLE   R13[K[22]='POSITION_NORMAL'] = K[23]=0.0
+0051 [line   22] 0x8C444349  SETTABLE   R13[K[24]='POSITION_MASTER'] = K[17]=1.0
+0052 [line   23] 0x8CC68349  SETTABLE   R13[K[25]='POSITION_VICE_MASTER1'] = K[26]=2.0
+0053 [line   24] 0x8DC70349  SETTABLE   R13[K[27]='POSITION_ZHANGLAO1'] = K[28]=3.0
+0054 [line   25] 0x8EC78349  SETTABLE   R13[K[29]='POSITION_ZHANGLAO2'] = K[30]=4.0
+0055 [line   28] 0x05C7C386  GETTABLE   R14 = R11[K[31]='static']
+0056 [line   28] 0x000803C1  LOADK      R15 = K[32]='=>'
+0057 [line   28] 0x05000400  MOVE       R16 = R10
+0058 [line   28] 0x0180839C  CALL       A=14 B=3 C=2
+0059 [line   33] 0x000043E4  CLOSURE    R15 = PROTO[1]
+0060 [line   33] 0x06000000  MOVE       R0 = R12
+0061 [line   33] 0x05000000  MOVE       R0 = R10
+0062 [line   33] 0x9083C389  SETTABLE   R14[K[33]='Instance'] = R15
+0063 [line   46] 0x000083A4  CLOSURE    R14 = PROTO[2]
+0064 [line   46] 0x04800000  MOVE       R0 = R9
+0065 [line   46] 0x03000000  MOVE       R0 = R6
+0066 [line   46] 0x04000000  MOVE       R0 = R8
+0067 [line   48] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0068 [line   48] 0x008083DC  CALL       A=15 B=1 C=2
+0069 [line   58] 0x0000C424  CLOSURE    R16 = PROTO[3]
+0070 [line   58] 0x07000000  MOVE       R0 = R14
+0071 [line   58] 0x918403C9  SETTABLE   R15[K[35]='UpgradeSkill'] = R16
+0072 [line   60] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0073 [line   60] 0x008083DC  CALL       A=15 B=1 C=2
+0074 [line   68] 0x00010424  CLOSURE    R16 = PROTO[4]
+0075 [line   68] 0x04800000  MOVE       R0 = R9
+0076 [line   68] 0x920403C9  SETTABLE   R15[K[36]='ActiveSkill'] = R16
+0077 [line   70] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0078 [line   70] 0x008083DC  CALL       A=15 B=1 C=2
+0079 [line  179] 0x00014424  CLOSURE    R16 = PROTO[5]
+0080 [line  179] 0x03000000  MOVE       R0 = R6
+0081 [line  179] 0x01000000  MOVE       R0 = R2
+0082 [line  179] 0x02000000  MOVE       R0 = R4
+0083 [line  179] 0x928403C9  SETTABLE   R15[K[37]='UpdateUI'] = R16
+0084 [line  181] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0085 [line  181] 0x008083DC  CALL       A=15 B=1 C=2
+0086 [line  326] 0x00018424  CLOSURE    R16 = PROTO[6]
+0087 [line  326] 0x03000000  MOVE       R0 = R6
+0088 [line  326] 0x02000000  MOVE       R0 = R4
+0089 [line  326] 0x02800000  MOVE       R0 = R5
+0090 [line  326] 0x01000000  MOVE       R0 = R2
+0091 [line  326] 0x06800000  MOVE       R0 = R13
+0092 [line  326] 0x930403C9  SETTABLE   R15[K[38]='UpdateSkillUI'] = R16
+0093 [line  329] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0094 [line  329] 0x0009C401  LOADK      R16 = K[39]='string'
+0095 [line  329] 0x010083DC  CALL       A=15 B=2 C=2
+0096 [line  342] 0x0001C424  CLOSURE    R16 = PROTO[7]
+0097 [line  342] 0x940403C9  SETTABLE   R15[K[40]='onClick'] = R16
+0098 [line  345] 0x05C883C6  GETTABLE   R15 = R11[K[34]='method']
+0099 [line  345] 0x008083DC  CALL       A=15 B=1 C=2
+0100 [line  351] 0x00020424  CLOSURE    R16 = PROTO[8]
+0101 [line  351] 0x948403C9  SETTABLE   R15[K[41]='Toggle'] = R16
+0102 [line  359] 0x000243E4  CLOSURE    R15 = PROTO[9]
+0103 [line  361] 0x05CA8406  GETTABLE   R16 = R11[K[42]='override']
+0104 [line  361] 0x0080841C  CALL       A=16 B=1 C=2
+0105 [line  364] 0x00028464  CLOSURE    R17 = PROTO[10]
+0106 [line  364] 0x03000000  MOVE       R0 = R6
+0107 [line  364] 0x03800000  MOVE       R0 = R7
+0108 [line  364] 0x07800000  MOVE       R0 = R15
+0109 [line  364] 0x95844409  SETTABLE   R16[K[43]='OnCreate'] = R17
+0110 [line  366] 0x05CA8406  GETTABLE   R16 = R11[K[42]='override']
+0111 [line  366] 0x0080841C  CALL       A=16 B=1 C=2
+0112 [line  368] 0x0002C464  CLOSURE    R17 = PROTO[11]
+0113 [line  368] 0x03000000  MOVE       R0 = R6
+0114 [line  368] 0x03800000  MOVE       R0 = R7
+0115 [line  368] 0x07800000  MOVE       R0 = R15
+0116 [line  368] 0x96044409  SETTABLE   R16[K[44]='OnDestroy'] = R17
+0117 [line  370] 0x054B4406  GETTABLE   R16 = R10[K[45]='Commit']
+0118 [line  370] 0x0080441C  CALL       A=16 B=1 C=1
+0119 [line  371] 0x0100029E  RETURN     A=10 B=2 C=0
+0120 [line  371] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 120
+'EC': 6 -> 120
+'ECGUITools': 9 -> 120
+'ECPanelBase': 12 -> 120
+'ElementData': 15 -> 120
+'ECEquipDesc': 18 -> 120
+'ECGame': 21 -> 120
+'NotifyFaction': 24 -> 120
+'net_common': 27 -> 120
+'pb_helper': 30 -> 120
+'ECPanelFactionSkill': 34 -> 120
+'def': 35 -> 120
+'m_Instance': 49 -> 120
+'Official_Position': 55 -> 120
+'UpgradeSkillConfirmCallBack': 67 -> 120
+'OnUpdateUI': 103 -> 120
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x500
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 16 - 16
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   16] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   16] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   16] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x540
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 28 - 33
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   29] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   29] 0x0000401A  TEST       A=0 B=0 C=1
+    0002 [line   29] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   30] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   30] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   30] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   32] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   32] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   33] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x5D7
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 35 - 46
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'MsgBox'
+    K[001] = 'MsgBoxRetT'
+    K[002] = 'MBRT_OK'
+    K[003] = 'NewCmd'
+    K[004] = 'npt_corps_appoint'
+    K[005] = 'Instance'
+    K[006] = 'm_HostPlayer'
+    K[007] = 'Faction'
+    K[008] = 'dst'
+    K[009] = '_masterid'
+    K[010] = 'skill_level'
+    K[011] = 'm_SkillList'
+    K[012] = 'm_CurrentSkill'
+    K[013] = 'skillLevel'
+    K[014] = 'skill_index'
+    K[015] = 'skillIndex'
+    K[016] = 'op'
+    K[017] = 'CORPS_UPGRADE_SKILL2'
+    K[018] = 'Send'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   36] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='MsgBox'
+    0001 [line   36] 0x01404086  GETTABLE   R2 = R2[K[1]='MsgBoxRetT']
+    0002 [line   36] 0x01408086  GETTABLE   R2 = R2[K[2]='MBRT_OK']
+    0003 [line   36] 0x00808017  EQ         A=0 B=R1 C=R2
+    0004 [line   36] 0x8006C016  JMP        A=0 sBx=28
+    0005 [line   37] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0006 [line   37] 0x0140C086  GETTABLE   R2 = R2[K[3]='NewCmd']
+    0007 [line   37] 0x000100C1  LOADK      R3 = K[4]='npt_corps_appoint'
+    0008 [line   37] 0x0100809C  CALL       A=2 B=2 C=2
+    0009 [line   38] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0010 [line   38] 0x01C140C6  GETTABLE   R3 = R3[K[5]='Instance']
+    0011 [line   38] 0x008080DC  CALL       A=3 B=1 C=2
+    0012 [line   38] 0x01C180C6  GETTABLE   R3 = R3[K[6]='m_HostPlayer']
+    0013 [line   38] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='Faction']
+    0014 [line   40] 0x01C24106  GETTABLE   R4 = R3[K[9]='_masterid']
+    0015 [line   40] 0x84010089  SETTABLE   R2[K[8]='dst'] = R4
+    0016 [line   41] 0x0042C106  GETTABLE   R4 = R0[K[11]='m_SkillList']
+    0017 [line   41] 0x00430146  GETTABLE   R5 = R0[K[12]='m_CurrentSkill']
+    0018 [line   41] 0x02014106  GETTABLE   R4 = R4[R5]
+    0019 [line   41] 0x02434106  GETTABLE   R4 = R4[K[13]='skillLevel']
+    0020 [line   41] 0x85010089  SETTABLE   R2[K[10]='skill_level'] = R4
+    0021 [line   42] 0x0042C106  GETTABLE   R4 = R0[K[11]='m_SkillList']
+    0022 [line   42] 0x00430146  GETTABLE   R5 = R0[K[12]='m_CurrentSkill']
+    0023 [line   42] 0x02014106  GETTABLE   R4 = R4[R5]
+    0024 [line   42] 0x0243C106  GETTABLE   R4 = R4[K[15]='skillIndex']
+    0025 [line   42] 0x87010089  SETTABLE   R2[K[14]='skill_index'] = R4
+    0026 [line   43] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0027 [line   43] 0x02444106  GETTABLE   R4 = R4[K[17]='CORPS_UPGRADE_SKILL2']
+    0028 [line   43] 0x88010089  SETTABLE   R2[K[16]='op'] = R4
+    0029 [line   44] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0030 [line   44] 0x02448106  GETTABLE   R4 = R4[K[18]='Send']
+    0031 [line   44] 0x01000140  MOVE       R5 = R2
+    0032 [line   44] 0x0100411C  CALL       A=4 B=2 C=1
+    0033 [line   46] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 33
+    'retval': 0 -> 33
+    'msg': 9 -> 33
+    'faction': 14 -> 33
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x8A3
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 48 - 58
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_SkillList'
+    K[001] = 'm_CurrentSkill'
+    K[002] = 'StringTable'
+    K[003] = 'Get'
+    K[004] = 2111.0
+    K[005] = 'currentSkillLevel'
+    K[006] = 'string'
+    K[007] = 'format'
+    K[008] = 'cost_contribution'
+    K[009] = 'nextSkillLevel'
+    K[010] = 'MsgBox'
+    K[011] = 'ShowMsgBox'
+    K[012] = 1850.0
+    K[013] = 'MsgBoxType'
+    K[014] = 'MBBT_OKCANCEL'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   49] 0x00400046  GETTABLE   R1 = R0[K[0]='m_SkillList']
+    0001 [line   49] 0x00404086  GETTABLE   R2 = R0[K[1]='m_CurrentSkill']
+    0002 [line   49] 0x00808046  GETTABLE   R1 = R1[R2]
+    0003 [line   49] 0x0000405A  TEST       A=1 B=0 C=1
+    0004 [line   49] 0x80000016  JMP        A=0 sBx=1
+    0005 [line   49] 0x0080001E  RETURN     A=0 B=1 C=0
+    0006 [line   50] 0x00400046  GETTABLE   R1 = R0[K[0]='m_SkillList']
+    0007 [line   50] 0x00404086  GETTABLE   R2 = R0[K[1]='m_CurrentSkill']
+    0008 [line   50] 0x00808046  GETTABLE   R1 = R1[R2]
+    0009 [line   51] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='StringTable'
+    0010 [line   51] 0x0140C086  GETTABLE   R2 = R2[K[3]='Get']
+    0011 [line   51] 0x000100C1  LOADK      R3 = K[4]=2111.0
+    0012 [line   51] 0x0100809C  CALL       A=2 B=2 C=2
+    0013 [line   52] 0x00C140C6  GETTABLE   R3 = R1[K[5]='currentSkillLevel']
+    0014 [line   52] 0x000000DA  TEST       A=3 B=0 C=0
+    0015 [line   52] 0x8001C016  JMP        A=0 sBx=8
+    0016 [line   53] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='string'
+    0017 [line   53] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='format']
+    0018 [line   53] 0x01000100  MOVE       R4 = R2
+    0019 [line   53] 0x00C14146  GETTABLE   R5 = R1[K[5]='currentSkillLevel']
+    0020 [line   53] 0x02C20146  GETTABLE   R5 = R5[K[8]='cost_contribution']
+    0021 [line   53] 0x018080DC  CALL       A=3 B=3 C=2
+    0022 [line   53] 0x01800080  MOVE       R2 = R3
+    0023 [line   53] 0x80024016  JMP        A=0 sBx=10
+    0024 [line   54] 0x00C240C6  GETTABLE   R3 = R1[K[9]='nextSkillLevel']
+    0025 [line   54] 0x000000DA  TEST       A=3 B=0 C=0
+    0026 [line   54] 0x80018016  JMP        A=0 sBx=7
+    0027 [line   55] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='string'
+    0028 [line   55] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='format']
+    0029 [line   55] 0x01000100  MOVE       R4 = R2
+    0030 [line   55] 0x00C24146  GETTABLE   R5 = R1[K[9]='nextSkillLevel']
+    0031 [line   55] 0x02C20146  GETTABLE   R5 = R5[K[8]='cost_contribution']
+    0032 [line   55] 0x018080DC  CALL       A=3 B=3 C=2
+    0033 [line   55] 0x01800080  MOVE       R2 = R3
+    0034 [line   57] 0x000280C5  GETGLOBAL  R3 = GLOBAL K[10]='MsgBox'
+    0035 [line   57] 0x01C2C0C6  GETTABLE   R3 = R3[K[11]='ShowMsgBox']
+    0036 [line   57] 0x00000100  MOVE       R4 = R0
+    0037 [line   57] 0x01000140  MOVE       R5 = R2
+    0038 [line   57] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='StringTable'
+    0039 [line   57] 0x0340C186  GETTABLE   R6 = R6[K[3]='Get']
+    0040 [line   57] 0x000301C1  LOADK      R7 = K[12]=1850.0
+    0041 [line   57] 0x0100819C  CALL       A=6 B=2 C=2
+    0042 [line   57] 0x000341C5  GETGLOBAL  R7 = GLOBAL K[13]='MsgBoxType'
+    0043 [line   57] 0x03C381C6  GETTABLE   R7 = R7[K[14]='MBBT_OKCANCEL']
+    0044 [line   57] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0045 [line   57] 0x030040DC  CALL       A=3 B=6 C=1
+    0046 [line   58] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 46
+    'skill': 9 -> 46
+    'tooltip': 13 -> 46
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xB84
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 60 - 68
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_SkillList'
+    K[001] = 'm_CurrentSkill'
+    K[002] = 'm_ActiveSkill'
+    K[003] = 'NewCmd'
+    K[004] = 'gp_corp_config'
+    K[005] = 'config'
+    K[006] = 'active_level'
+    K[007] = 'skillLevel'
+    K[008] = 'active_index'
+    K[009] = 'skillIndex'
+    K[010] = 'Send'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   61] 0x00400046  GETTABLE   R1 = R0[K[0]='m_SkillList']
+    0001 [line   61] 0x00404086  GETTABLE   R2 = R0[K[1]='m_CurrentSkill']
+    0002 [line   61] 0x00808046  GETTABLE   R1 = R1[R2]
+    0003 [line   61] 0x0000405A  TEST       A=1 B=0 C=1
+    0004 [line   61] 0x80000016  JMP        A=0 sBx=1
+    0005 [line   61] 0x0080001E  RETURN     A=0 B=1 C=0
+    0006 [line   62] 0x00404046  GETTABLE   R1 = R0[K[1]='m_CurrentSkill']
+    0007 [line   62] 0x81004009  SETTABLE   R0[K[2]='m_ActiveSkill'] = R1
+    0008 [line   63] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0009 [line   63] 0x00C0C046  GETTABLE   R1 = R1[K[3]='NewCmd']
+    0010 [line   63] 0x00010081  LOADK      R2 = K[4]='gp_corp_config'
+    0011 [line   63] 0x0100805C  CALL       A=1 B=2 C=2
+    0012 [line   65] 0x00C14086  GETTABLE   R2 = R1[K[5]='config']
+    0013 [line   65] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_SkillList']
+    0014 [line   65] 0x00404106  GETTABLE   R4 = R0[K[1]='m_CurrentSkill']
+    0015 [line   65] 0x018100C6  GETTABLE   R3 = R3[R4]
+    0016 [line   65] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='skillLevel']
+    0017 [line   65] 0x8300C089  SETTABLE   R2[K[6]='active_level'] = R3
+    0018 [line   66] 0x00C14086  GETTABLE   R2 = R1[K[5]='config']
+    0019 [line   66] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_SkillList']
+    0020 [line   66] 0x00404106  GETTABLE   R4 = R0[K[1]='m_CurrentSkill']
+    0021 [line   66] 0x018100C6  GETTABLE   R3 = R3[R4]
+    0022 [line   66] 0x01C240C6  GETTABLE   R3 = R3[K[9]='skillIndex']
+    0023 [line   66] 0x8400C089  SETTABLE   R2[K[8]='active_index'] = R3
+    0024 [line   67] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0025 [line   67] 0x01428086  GETTABLE   R2 = R2[K[10]='Send']
+    0026 [line   67] 0x008000C0  MOVE       R3 = R1
+    0027 [line   67] 0x0100409C  CALL       A=2 B=2 C=1
+    0028 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 28
+    'msg': 12 -> 28
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xD75
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 70 - 179
+    Params : 1
+    Stack  : 31
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'Faction'
+    K[003] = 'm_ActiveSkill'
+    K[004] = '_activefactionskill'
+    K[005] = 1.0
+    K[006] = 'm_panel'
+    K[007] = 'FindChild'
+    K[008] = 'Txt_MoneyNum'
+    K[009] = 'UpdateLable'
+    K[010] = 'tostring'
+    K[011] = '_factionmoney'
+    K[012] = 'getConfig'
+    K[013] = 17.0
+    K[014] = '_skillroom'
+    K[015] = 5.0
+    K[016] = 'Group_Level'
+    K[017] = 'string'
+    K[018] = 'format'
+    K[019] = '%02d'
+    K[020] = 'gym_addon_group'
+    K[021] = '_skillroomlevel'
+    K[022] = 'Skill'
+    K[023] = 'addon_level'
+    K[024] = 0.0
+    K[025] = 'addon_group'
+    K[026] = 'cost_contribution'
+    K[027] = 'addon_group_id'
+    K[028] = 'SetActive'
+    K[029] = '/5'
+    K[030] = 'datapath'
+    K[031] = 'GetPathByID'
+    K[032] = 'icon'
+    K[033] = 'Txt_SkillLevel'
+    K[034] = 'name'
+    K[035] = 'Txt_SkillName'
+    K[036] = 'UpdateGridImage'
+    K[037] = 'Img_Skill'
+    K[038] = 'GetComponent'
+    K[039] = 'UIWidget'
+    K[040] = 'color'
+    K[041] = 'Color'
+    K[042] = 'white'
+    K[043] = 'Img_Up'
+    K[044] = '_factioncontribution'
+    K[045] = 'Img_Choose'
+    K[046] = 'm_SkillList'
+    K[047] = 'active'
+    K[048] = True
+    K[049] = 'skillName'
+    K[050] = 'skillDesc'
+    K[051] = 'desc'
+    K[052] = 'skillLevel'
+    K[053] = 'skillIndex'
+    K[054] = 'currentSkillLevel'
+    K[055] = 'nextSkillLevel'
+    K[056] = None
+    K[057] = '0/5'
+    K[058] = 'grey'
+    K[059] = 'Img_Lock'
+    K[060] = False
+    K[061] = 'UpdateSkillUI'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   71] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   71] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   71] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   71] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line   71] 0x00C08046  GETTABLE   R1 = R1[K[2]='Faction']
+    0005 [line   72] 0x00C10086  GETTABLE   R2 = R1[K[4]='_activefactionskill']
+    0006 [line   72] 0x0141408C  ADD        A=2 B=R2 C=K[5]=1.0
+    0007 [line   72] 0x81808009  SETTABLE   R0[K[3]='m_ActiveSkill'] = R2
+    0008 [line   74] 0x00418086  GETTABLE   R2 = R0[K[6]='m_panel']
+    0009 [line   74] 0x0141C08B  SELF       A=2 B=2 C=263 Bx=1287
+    0010 [line   74] 0x00020101  LOADK      R4 = K[8]='Txt_MoneyNum'
+    0011 [line   74] 0x0180809C  CALL       A=2 B=3 C=2
+    0012 [line   75] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0013 [line   75] 0x01C240C6  GETTABLE   R3 = R3[K[9]='UpdateLable']
+    0014 [line   75] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='tostring'
+    0015 [line   75] 0x00C2C146  GETTABLE   R5 = R1[K[11]='_factionmoney']
+    0016 [line   75] 0x0100811C  CALL       A=4 B=2 C=2
+    0017 [line   75] 0x01000140  MOVE       R5 = R2
+    0018 [line   75] 0x018040DC  CALL       A=3 B=3 C=1
+    0019 [line   76] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0020 [line   76] 0x01C300C6  GETTABLE   R3 = R3[K[12]='getConfig']
+    0021 [line   76] 0x00034101  LOADK      R4 = K[13]=17.0
+    0022 [line   76] 0x010080DC  CALL       A=3 B=2 C=2
+    0023 [line   78] 0x00C38106  GETTABLE   R4 = R1[K[14]='_skillroom']
+    0024 [line   79] 0x00014141  LOADK      R5 = K[5]=1.0
+    0025 [line   79] 0x0003C181  LOADK      R6 = K[15]=5.0
+    0026 [line   79] 0x000141C1  LOADK      R7 = K[5]=1.0
+    0027 [line   79] 0x80734160  FORPREP    A=5 sBx=462
+    0028 [line   80] 0x00418246  GETTABLE   R9 = R0[K[6]='m_panel']
+    0029 [line   80] 0x04C1C24B  SELF       A=9 B=9 C=263 Bx=4871
+    0030 [line   80] 0x000402C1  LOADK      R11 = K[16]='Group_Level'
+    0031 [line   80] 0x00044305  GETGLOBAL  R12 = GLOBAL K[17]='string'
+    0032 [line   80] 0x06448306  GETTABLE   R12 = R12[K[18]='format']
+    0033 [line   80] 0x0004C341  LOADK      R13 = K[19]='%02d'
+    0034 [line   80] 0x04000380  MOVE       R14 = R8
+    0035 [line   80] 0x0180831C  CALL       A=12 B=3 C=2
+    0036 [line   80] 0x058302D5  CONCAT     A=11 B=11 C=12 Bx=5644
+    0037 [line   80] 0x0180825C  CALL       A=9 B=3 C=2
+    0038 [line   81] 0x01C50286  GETTABLE   R10 = R3[K[20]='gym_addon_group']
+    0039 [line   81] 0x05020286  GETTABLE   R10 = R10[R8]
+    0040 [line   82] 0x00C542C6  GETTABLE   R11 = R1[K[21]='_skillroomlevel']
+    0041 [line   82] 0x0402C019  LE         A=0 B=R8 C=R11
+    0042 [line   82] 0x804D4016  JMP        A=0 sBx=310
+    0043 [line   83] 0x000142C1  LOADK      R11 = K[5]=1.0
+    0044 [line   83] 0x0003C301  LOADK      R12 = K[15]=5.0
+    0045 [line   83] 0x00014341  LOADK      R13 = K[5]=1.0
+    0046 [line   83] 0x804BC2E0  FORPREP    A=11 sBx=304
+    0047 [line   84] 0x044143CD  SUB        A=15 B=R8 C=K[5]=1.0
+    0048 [line   84] 0x07C3C3CE  MUL        A=15 B=R15 C=K[15]=5.0
+    0049 [line   84] 0x078383CC  ADD        A=15 B=R15 C=R14
+    0050 [line   85] 0x04C1C40B  SELF       A=16 B=9 C=263 Bx=4871
+    0051 [line   85] 0x00058481  LOADK      R18 = K[22]='Skill'
+    0052 [line   85] 0x000444C5  GETGLOBAL  R19 = GLOBAL K[17]='string'
+    0053 [line   85] 0x09C484C6  GETTABLE   R19 = R19[K[18]='format']
+    0054 [line   85] 0x0004C501  LOADK      R20 = K[19]='%02d'
+    0055 [line   85] 0x07800540  MOVE       R21 = R15
+    0056 [line   85] 0x018084DC  CALL       A=19 B=3 C=2
+    0057 [line   85] 0x0904C495  CONCAT     A=18 B=18 C=19 Bx=9235
+    0058 [line   85] 0x0180841C  CALL       A=16 B=3 C=2
+    0059 [line   86] 0x05038446  GETTABLE   R17 = R10[R14]
+    0060 [line   87] 0x02020486  GETTABLE   R18 = R4[R8]
+    0061 [line   87] 0x0945C486  GETTABLE   R18 = R18[K[23]='addon_level']
+    0062 [line   87] 0x09038486  GETTABLE   R18 = R18[R14]
+    0063 [line   88] 0x8C048018  LT         A=0 B=K[24]=0.0 C=R18
+    0064 [line   88] 0x80240016  JMP        A=0 sBx=145
+    0065 [line   88] 0x0943C019  LE         A=0 B=R18 C=K[15]=5.0
+    0066 [line   88] 0x80238016  JMP        A=0 sBx=143
+    0067 [line   89] 0x08C644C6  GETTABLE   R19 = R17[K[25]='addon_group']
+    0068 [line   89] 0x098484C6  GETTABLE   R19 = R19[R18]
+    0069 [line   89] 0x09C684C6  GETTABLE   R19 = R19[K[26]='cost_contribution']
+    0070 [line   90] 0x08C64506  GETTABLE   R20 = R17[K[25]='addon_group']
+    0071 [line   90] 0x0A048506  GETTABLE   R20 = R20[R18]
+    0072 [line   90] 0x0A46C506  GETTABLE   R20 = R20[K[27]='addon_group_id']
+    0073 [line   92] 0x09C60057  EQ         A=1 B=R19 C=K[24]=0.0
+    0074 [line   92] 0x80208016  JMP        A=0 sBx=131
+    0075 [line   92] 0x0A460057  EQ         A=1 B=R20 C=K[24]=0.0
+    0076 [line   92] 0x80200016  JMP        A=0 sBx=129
+    0077 [line   93] 0x0847054B  SELF       A=21 B=16 C=284 Bx=8476
+    0078 [line   93] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0079 [line   93] 0x0180455C  CALL       A=21 B=3 C=1
+    0080 [line   94] 0x00028545  GETGLOBAL  R21 = GLOBAL K[10]='tostring'
+    0081 [line   94] 0x09000580  MOVE       R22 = R18
+    0082 [line   94] 0x0100855C  CALL       A=21 B=2 C=2
+    0083 [line   94] 0x00074581  LOADK      R22 = K[29]='/5'
+    0084 [line   94] 0x0A858555  CONCAT     A=21 B=21 C=22 Bx=10774
+    0085 [line   95] 0x00078585  GETGLOBAL  R22 = GLOBAL K[30]='datapath'
+    0086 [line   95] 0x0B47C586  GETTABLE   R22 = R22[K[31]='GetPathByID']
+    0087 [line   95] 0x08C805C6  GETTABLE   R23 = R17[K[32]='icon']
+    0088 [line   95] 0x0100859C  CALL       A=22 B=2 C=2
+    0089 [line   96] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0090 [line   96] 0x0BC245C6  GETTABLE   R23 = R23[K[9]='UpdateLable']
+    0091 [line   96] 0x0A800600  MOVE       R24 = R21
+    0092 [line   96] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0093 [line   96] 0x000846C1  LOADK      R27 = K[33]='Txt_SkillLevel'
+    0094 [line   96] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0095 [line   96] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0096 [line   96] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0097 [line   96] 0x07800780  MOVE       R30 = R15
+    0098 [line   96] 0x0180871C  CALL       A=28 B=3 C=2
+    0099 [line   96] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0100 [line   96] 0x0180065C  CALL       A=25 B=3 C=0
+    0101 [line   96] 0x000045DC  CALL       A=23 B=0 C=1
+    0102 [line   97] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0103 [line   97] 0x0BC245C6  GETTABLE   R23 = R23[K[9]='UpdateLable']
+    0104 [line   97] 0x08C88606  GETTABLE   R24 = R17[K[34]='name']
+    0105 [line   97] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0106 [line   97] 0x0008C6C1  LOADK      R27 = K[35]='Txt_SkillName'
+    0107 [line   97] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0108 [line   97] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0109 [line   97] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0110 [line   97] 0x07800780  MOVE       R30 = R15
+    0111 [line   97] 0x0180871C  CALL       A=28 B=3 C=2
+    0112 [line   97] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0113 [line   97] 0x0180065C  CALL       A=25 B=3 C=0
+    0114 [line   97] 0x000045DC  CALL       A=23 B=0 C=1
+    0115 [line   98] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0116 [line   98] 0x0BC905C6  GETTABLE   R23 = R23[K[36]='UpdateGridImage']
+    0117 [line   98] 0x0B000600  MOVE       R24 = R22
+    0118 [line   98] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0119 [line   98] 0x000946C1  LOADK      R27 = K[37]='Img_Skill'
+    0120 [line   98] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0121 [line   98] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0122 [line   98] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0123 [line   98] 0x07800780  MOVE       R30 = R15
+    0124 [line   98] 0x0180871C  CALL       A=28 B=3 C=2
+    0125 [line   98] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0126 [line   98] 0x0180065C  CALL       A=25 B=3 C=0
+    0127 [line   98] 0x000045DC  CALL       A=23 B=0 C=1
+    0128 [line   99] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0129 [line   99] 0x00094641  LOADK      R25 = K[37]='Img_Skill'
+    0130 [line   99] 0x00044685  GETGLOBAL  R26 = GLOBAL K[17]='string'
+    0131 [line   99] 0x0D448686  GETTABLE   R26 = R26[K[18]='format']
+    0132 [line   99] 0x0004C6C1  LOADK      R27 = K[19]='%02d'
+    0133 [line   99] 0x07800700  MOVE       R28 = R15
+    0134 [line   99] 0x0180869C  CALL       A=26 B=3 C=2
+    0135 [line   99] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0136 [line   99] 0x018085DC  CALL       A=23 B=3 C=2
+    0137 [line   99] 0x0BC985CB  SELF       A=23 B=23 C=294 Bx=12070
+    0138 [line   99] 0x0009C641  LOADK      R25 = K[39]='UIWidget'
+    0139 [line   99] 0x018085DC  CALL       A=23 B=3 C=2
+    0140 [line   99] 0x000A4605  GETGLOBAL  R24 = GLOBAL K[41]='Color'
+    0141 [line   99] 0x0C4A8606  GETTABLE   R24 = R24[K[42]='white']
+    0142 [line   99] 0x940605C9  SETTABLE   R23[K[40]='color'] = R24
+    0143 [line  100] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0144 [line  100] 0x000AC641  LOADK      R25 = K[43]='Img_Up'
+    0145 [line  100] 0x018085DC  CALL       A=23 B=3 C=2
+    0146 [line  100] 0x0BC705CB  SELF       A=23 B=23 C=284 Bx=12060
+    0147 [line  100] 0x0943C018  LT         A=0 B=R18 C=K[15]=5.0
+    0148 [line  100] 0x80008016  JMP        A=0 sBx=3
+    0149 [line  100] 0x00CB0646  GETTABLE   R25 = R1[K[44]='_factioncontribution']
+    0150 [line  100] 0x09864059  LE         A=1 B=R19 C=R25
+    0151 [line  100] 0x80000016  JMP        A=0 sBx=1
+    0152 [line  100] 0x00004642  LOADBOOL   A=25 B=0 C=1
+    0153 [line  100] 0x00800642  LOADBOOL   A=25 B=1 C=0
+    0154 [line  100] 0x018045DC  CALL       A=23 B=3 C=1
+    0155 [line  101] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0156 [line  101] 0x000B4641  LOADK      R25 = K[45]='Img_Choose'
+    0157 [line  101] 0x018085DC  CALL       A=23 B=3 C=2
+    0158 [line  101] 0x0BC705CB  SELF       A=23 B=23 C=284 Bx=12060
+    0159 [line  101] 0x0040C646  GETTABLE   R25 = R0[K[3]='m_ActiveSkill']
+    0160 [line  101] 0x07864057  EQ         A=1 B=R15 C=R25
+    0161 [line  101] 0x80000016  JMP        A=0 sBx=1
+    0162 [line  101] 0x00004642  LOADBOOL   A=25 B=0 C=1
+    0163 [line  101] 0x00800642  LOADBOOL   A=25 B=1 C=0
+    0164 [line  101] 0x018045DC  CALL       A=23 B=3 C=1
+    0165 [line  102] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0166 [line  102] 0x0000060A  NEWTABLE   A=24 B=0 C=0 Bx=0
+    0167 [line  102] 0x078605C9  SETTABLE   R23[R15] = R24
+    0168 [line  103] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0169 [line  103] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0170 [line  103] 0x97CC05C9  SETTABLE   R23[K[47]='active'] = K[48]=True
+    0171 [line  104] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0172 [line  104] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0173 [line  104] 0x08C88606  GETTABLE   R24 = R17[K[34]='name']
+    0174 [line  104] 0x988605C9  SETTABLE   R23[K[49]='skillName'] = R24
+    0175 [line  105] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0176 [line  105] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0177 [line  105] 0x08CCC606  GETTABLE   R24 = R17[K[51]='desc']
+    0178 [line  105] 0x990605C9  SETTABLE   R23[K[50]='skillDesc'] = R24
+    0179 [line  106] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0180 [line  106] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0181 [line  106] 0x0441460D  SUB        A=24 B=R8 C=K[5]=1.0
+    0182 [line  106] 0x9A0605C9  SETTABLE   R23[K[52]='skillLevel'] = R24
+    0183 [line  107] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0184 [line  107] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0185 [line  107] 0x0741460D  SUB        A=24 B=R14 C=K[5]=1.0
+    0186 [line  107] 0x9A8605C9  SETTABLE   R23[K[53]='skillIndex'] = R24
+    0187 [line  108] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0188 [line  108] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0189 [line  108] 0x08C64606  GETTABLE   R24 = R17[K[25]='addon_group']
+    0190 [line  108] 0x0C048606  GETTABLE   R24 = R24[R18]
+    0191 [line  108] 0x9B0605C9  SETTABLE   R23[K[54]='currentSkillLevel'] = R24
+    0192 [line  109] 0x094145CC  ADD        A=23 B=R18 C=K[5]=1.0
+    0193 [line  109] 0x0BC3C019  LE         A=0 B=R23 C=K[15]=5.0
+    0194 [line  109] 0x80018016  JMP        A=0 sBx=7
+    0195 [line  110] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0196 [line  110] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0197 [line  110] 0x08C64606  GETTABLE   R24 = R17[K[25]='addon_group']
+    0198 [line  110] 0x0941464C  ADD        A=25 B=R18 C=K[5]=1.0
+    0199 [line  110] 0x0C064606  GETTABLE   R24 = R24[R25]
+    0200 [line  110] 0x9B8605C9  SETTABLE   R23[K[55]='nextSkillLevel'] = R24
+    0201 [line  110] 0x80224016  JMP        A=0 sBx=138
+    0202 [line  112] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0203 [line  112] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0204 [line  112] 0x9BCE05C9  SETTABLE   R23[K[55]='nextSkillLevel'] = K[56]=None
+    0205 [line  113] 0x80214016  JMP        A=0 sBx=134
+    0206 [line  115] 0x0847054B  SELF       A=21 B=16 C=284 Bx=8476
+    0207 [line  115] 0x000005C2  LOADBOOL   A=23 B=0 C=0
+    0208 [line  115] 0x0180455C  CALL       A=21 B=3 C=1
+    0209 [line  116] 0x80204016  JMP        A=0 sBx=130
+    0210 [line  117] 0x09460017  EQ         A=0 B=R18 C=K[24]=0.0
+    0211 [line  117] 0x801FC016  JMP        A=0 sBx=128
+    0212 [line  118] 0x08C644C6  GETTABLE   R19 = R17[K[25]='addon_group']
+    0213 [line  118] 0x09C144C6  GETTABLE   R19 = R19[K[5]=1.0]
+    0214 [line  118] 0x09C684C6  GETTABLE   R19 = R19[K[26]='cost_contribution']
+    0215 [line  119] 0x08C64506  GETTABLE   R20 = R17[K[25]='addon_group']
+    0216 [line  119] 0x0A414506  GETTABLE   R20 = R20[K[5]=1.0]
+    0217 [line  119] 0x0A46C506  GETTABLE   R20 = R20[K[27]='addon_group_id']
+    0218 [line  120] 0x09C60057  EQ         A=1 B=R19 C=K[24]=0.0
+    0219 [line  120] 0x801D0016  JMP        A=0 sBx=117
+    0220 [line  120] 0x0A460057  EQ         A=1 B=R20 C=K[24]=0.0
+    0221 [line  120] 0x801C8016  JMP        A=0 sBx=115
+    0222 [line  121] 0x0847054B  SELF       A=21 B=16 C=284 Bx=8476
+    0223 [line  121] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0224 [line  121] 0x0180455C  CALL       A=21 B=3 C=1
+    0225 [line  122] 0x000E4541  LOADK      R21 = K[57]='0/5'
+    0226 [line  123] 0x00078585  GETGLOBAL  R22 = GLOBAL K[30]='datapath'
+    0227 [line  123] 0x0B47C586  GETTABLE   R22 = R22[K[31]='GetPathByID']
+    0228 [line  123] 0x08C805C6  GETTABLE   R23 = R17[K[32]='icon']
+    0229 [line  123] 0x0100859C  CALL       A=22 B=2 C=2
+    0230 [line  124] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0231 [line  124] 0x0BC245C6  GETTABLE   R23 = R23[K[9]='UpdateLable']
+    0232 [line  124] 0x0A800600  MOVE       R24 = R21
+    0233 [line  124] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0234 [line  124] 0x000846C1  LOADK      R27 = K[33]='Txt_SkillLevel'
+    0235 [line  124] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0236 [line  124] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0237 [line  124] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0238 [line  124] 0x07800780  MOVE       R30 = R15
+    0239 [line  124] 0x0180871C  CALL       A=28 B=3 C=2
+    0240 [line  124] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0241 [line  124] 0x0180065C  CALL       A=25 B=3 C=0
+    0242 [line  124] 0x000045DC  CALL       A=23 B=0 C=1
+    0243 [line  125] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0244 [line  125] 0x0BC245C6  GETTABLE   R23 = R23[K[9]='UpdateLable']
+    0245 [line  125] 0x08C88606  GETTABLE   R24 = R17[K[34]='name']
+    0246 [line  125] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0247 [line  125] 0x0008C6C1  LOADK      R27 = K[35]='Txt_SkillName'
+    0248 [line  125] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0249 [line  125] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0250 [line  125] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0251 [line  125] 0x07800780  MOVE       R30 = R15
+    0252 [line  125] 0x0180871C  CALL       A=28 B=3 C=2
+    0253 [line  125] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0254 [line  125] 0x0180065C  CALL       A=25 B=3 C=0
+    0255 [line  125] 0x000045DC  CALL       A=23 B=0 C=1
+    0256 [line  126] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0257 [line  126] 0x0BC905C6  GETTABLE   R23 = R23[K[36]='UpdateGridImage']
+    0258 [line  126] 0x0B000600  MOVE       R24 = R22
+    0259 [line  126] 0x0841C64B  SELF       A=25 B=16 C=263 Bx=8455
+    0260 [line  126] 0x000946C1  LOADK      R27 = K[37]='Img_Skill'
+    0261 [line  126] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='string'
+    0262 [line  126] 0x0E448706  GETTABLE   R28 = R28[K[18]='format']
+    0263 [line  126] 0x0004C741  LOADK      R29 = K[19]='%02d'
+    0264 [line  126] 0x07800780  MOVE       R30 = R15
+    0265 [line  126] 0x0180871C  CALL       A=28 B=3 C=2
+    0266 [line  126] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+    0267 [line  126] 0x0180065C  CALL       A=25 B=3 C=0
+    0268 [line  126] 0x000045DC  CALL       A=23 B=0 C=1
+    0269 [line  127] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0270 [line  127] 0x00094641  LOADK      R25 = K[37]='Img_Skill'
+    0271 [line  127] 0x00044685  GETGLOBAL  R26 = GLOBAL K[17]='string'
+    0272 [line  127] 0x0D448686  GETTABLE   R26 = R26[K[18]='format']
+    0273 [line  127] 0x0004C6C1  LOADK      R27 = K[19]='%02d'
+    0274 [line  127] 0x07800700  MOVE       R28 = R15
+    0275 [line  127] 0x0180869C  CALL       A=26 B=3 C=2
+    0276 [line  127] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0277 [line  127] 0x018085DC  CALL       A=23 B=3 C=2
+    0278 [line  127] 0x0BC985CB  SELF       A=23 B=23 C=294 Bx=12070
+    0279 [line  127] 0x0009C641  LOADK      R25 = K[39]='UIWidget'
+    0280 [line  127] 0x018085DC  CALL       A=23 B=3 C=2
+    0281 [line  127] 0x000A4605  GETGLOBAL  R24 = GLOBAL K[41]='Color'
+    0282 [line  127] 0x0C4E8606  GETTABLE   R24 = R24[K[58]='grey']
+    0283 [line  127] 0x940605C9  SETTABLE   R23[K[40]='color'] = R24
+    0284 [line  128] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0285 [line  128] 0x000AC641  LOADK      R25 = K[43]='Img_Up'
+    0286 [line  128] 0x018085DC  CALL       A=23 B=3 C=2
+    0287 [line  128] 0x0BC705CB  SELF       A=23 B=23 C=284 Bx=12060
+    0288 [line  128] 0x0943C018  LT         A=0 B=R18 C=K[15]=5.0
+    0289 [line  128] 0x80008016  JMP        A=0 sBx=3
+    0290 [line  128] 0x00CB0646  GETTABLE   R25 = R1[K[44]='_factioncontribution']
+    0291 [line  128] 0x09864059  LE         A=1 B=R19 C=R25
+    0292 [line  128] 0x80000016  JMP        A=0 sBx=1
+    0293 [line  128] 0x00004642  LOADBOOL   A=25 B=0 C=1
+    0294 [line  128] 0x00800642  LOADBOOL   A=25 B=1 C=0
+    0295 [line  128] 0x018045DC  CALL       A=23 B=3 C=1
+    0296 [line  129] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0297 [line  129] 0x000B4641  LOADK      R25 = K[45]='Img_Choose'
+    0298 [line  129] 0x018085DC  CALL       A=23 B=3 C=2
+    0299 [line  129] 0x0BC705CB  SELF       A=23 B=23 C=284 Bx=12060
+    0300 [line  129] 0x0040C646  GETTABLE   R25 = R0[K[3]='m_ActiveSkill']
+    0301 [line  129] 0x07864057  EQ         A=1 B=R15 C=R25
+    0302 [line  129] 0x80000016  JMP        A=0 sBx=1
+    0303 [line  129] 0x00004642  LOADBOOL   A=25 B=0 C=1
+    0304 [line  129] 0x00800642  LOADBOOL   A=25 B=1 C=0
+    0305 [line  129] 0x018045DC  CALL       A=23 B=3 C=1
+    0306 [line  130] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0307 [line  130] 0x0000060A  NEWTABLE   A=24 B=0 C=0 Bx=0
+    0308 [line  130] 0x078605C9  SETTABLE   R23[R15] = R24
+    0309 [line  131] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0310 [line  131] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0311 [line  131] 0x97CC05C9  SETTABLE   R23[K[47]='active'] = K[48]=True
+    0312 [line  132] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0313 [line  132] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0314 [line  132] 0x08C88606  GETTABLE   R24 = R17[K[34]='name']
+    0315 [line  132] 0x988605C9  SETTABLE   R23[K[49]='skillName'] = R24
+    0316 [line  133] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0317 [line  133] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0318 [line  133] 0x08CCC606  GETTABLE   R24 = R17[K[51]='desc']
+    0319 [line  133] 0x990605C9  SETTABLE   R23[K[50]='skillDesc'] = R24
+    0320 [line  134] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0321 [line  134] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0322 [line  134] 0x0441460D  SUB        A=24 B=R8 C=K[5]=1.0
+    0323 [line  134] 0x9A0605C9  SETTABLE   R23[K[52]='skillLevel'] = R24
+    0324 [line  135] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0325 [line  135] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0326 [line  135] 0x0741460D  SUB        A=24 B=R14 C=K[5]=1.0
+    0327 [line  135] 0x9A8605C9  SETTABLE   R23[K[53]='skillIndex'] = R24
+    0328 [line  136] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0329 [line  136] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0330 [line  136] 0x9B4E05C9  SETTABLE   R23[K[54]='currentSkillLevel'] = K[56]=None
+    0331 [line  137] 0x004B85C6  GETTABLE   R23 = R0[K[46]='m_SkillList']
+    0332 [line  137] 0x0B83C5C6  GETTABLE   R23 = R23[R15]
+    0333 [line  137] 0x08C64606  GETTABLE   R24 = R17[K[25]='addon_group']
+    0334 [line  137] 0x0C414606  GETTABLE   R24 = R24[K[5]=1.0]
+    0335 [line  137] 0x9B8605C9  SETTABLE   R23[K[55]='nextSkillLevel'] = R24
+    0336 [line  137] 0x80008016  JMP        A=0 sBx=3
+    0337 [line  139] 0x0847054B  SELF       A=21 B=16 C=284 Bx=8476
+    0338 [line  139] 0x000005C2  LOADBOOL   A=23 B=0 C=0
+    0339 [line  139] 0x0180455C  CALL       A=21 B=3 C=1
+    0340 [line  142] 0x0841C4CB  SELF       A=19 B=16 C=263 Bx=8455
+    0341 [line  142] 0x000EC541  LOADK      R21 = K[59]='Img_Lock'
+    0342 [line  142] 0x018084DC  CALL       A=19 B=3 C=2
+    0343 [line  142] 0x000004DA  TEST       A=19 B=0 C=0
+    0344 [line  142] 0x80014016  JMP        A=0 sBx=6
+    0345 [line  143] 0x0841C4CB  SELF       A=19 B=16 C=263 Bx=8455
+    0346 [line  143] 0x000EC541  LOADK      R21 = K[59]='Img_Lock'
+    0347 [line  143] 0x018084DC  CALL       A=19 B=3 C=2
+    0348 [line  143] 0x09C704CB  SELF       A=19 B=19 C=284 Bx=10012
+    0349 [line  143] 0x00000542  LOADBOOL   A=21 B=0 C=0
+    0350 [line  143] 0x018044DC  CALL       A=19 B=3 C=1
+    0351 [line   83] 0x7FB382DF  FORLOOP    A=11 sBx=-305
+    0352 [line  145] 0x80220016  JMP        A=0 sBx=137
+    0353 [line  147] 0x000142C1  LOADK      R11 = K[5]=1.0
+    0354 [line  147] 0x0003C301  LOADK      R12 = K[15]=5.0
+    0355 [line  147] 0x00014341  LOADK      R13 = K[5]=1.0
+    0356 [line  147] 0x8020C2E0  FORPREP    A=11 sBx=132
+    0357 [line  148] 0x044143CD  SUB        A=15 B=R8 C=K[5]=1.0
+    0358 [line  148] 0x07C3C3CE  MUL        A=15 B=R15 C=K[15]=5.0
+    0359 [line  148] 0x078383CC  ADD        A=15 B=R15 C=R14
+    0360 [line  150] 0x04C1C40B  SELF       A=16 B=9 C=263 Bx=4871
+    0361 [line  150] 0x00058481  LOADK      R18 = K[22]='Skill'
+    0362 [line  150] 0x000444C5  GETGLOBAL  R19 = GLOBAL K[17]='string'
+    0363 [line  150] 0x09C484C6  GETTABLE   R19 = R19[K[18]='format']
+    0364 [line  150] 0x0004C501  LOADK      R20 = K[19]='%02d'
+    0365 [line  150] 0x07800540  MOVE       R21 = R15
+    0366 [line  150] 0x018084DC  CALL       A=19 B=3 C=2
+    0367 [line  150] 0x0904C495  CONCAT     A=18 B=18 C=19 Bx=9235
+    0368 [line  150] 0x0180841C  CALL       A=16 B=3 C=2
+    0369 [line  151] 0x05038446  GETTABLE   R17 = R10[R14]
+    0370 [line  152] 0x08C64486  GETTABLE   R18 = R17[K[25]='addon_group']
+    0371 [line  152] 0x09414486  GETTABLE   R18 = R18[K[5]=1.0]
+    0372 [line  152] 0x09468486  GETTABLE   R18 = R18[K[26]='cost_contribution']
+    0373 [line  153] 0x08C644C6  GETTABLE   R19 = R17[K[25]='addon_group']
+    0374 [line  153] 0x09C144C6  GETTABLE   R19 = R19[K[5]=1.0]
+    0375 [line  153] 0x09C6C4C6  GETTABLE   R19 = R19[K[27]='addon_group_id']
+    0376 [line  154] 0x09460057  EQ         A=1 B=R18 C=K[24]=0.0
+    0377 [line  154] 0x801AC016  JMP        A=0 sBx=108
+    0378 [line  154] 0x09C60057  EQ         A=1 B=R19 C=K[24]=0.0
+    0379 [line  154] 0x801A4016  JMP        A=0 sBx=106
+    0380 [line  155] 0x00078505  GETGLOBAL  R20 = GLOBAL K[30]='datapath'
+    0381 [line  155] 0x0A47C506  GETTABLE   R20 = R20[K[31]='GetPathByID']
+    0382 [line  155] 0x08C80546  GETTABLE   R21 = R17[K[32]='icon']
+    0383 [line  155] 0x0100851C  CALL       A=20 B=2 C=2
+    0384 [line  156] 0x0841C54B  SELF       A=21 B=16 C=263 Bx=8455
+    0385 [line  156] 0x000945C1  LOADK      R23 = K[37]='Img_Skill'
+    0386 [line  156] 0x00044605  GETGLOBAL  R24 = GLOBAL K[17]='string'
+    0387 [line  156] 0x0C448606  GETTABLE   R24 = R24[K[18]='format']
+    0388 [line  156] 0x0004C641  LOADK      R25 = K[19]='%02d'
+    0389 [line  156] 0x07800680  MOVE       R26 = R15
+    0390 [line  156] 0x0180861C  CALL       A=24 B=3 C=2
+    0391 [line  156] 0x0B8605D5  CONCAT     A=23 B=23 C=24 Bx=11800
+    0392 [line  156] 0x0180855C  CALL       A=21 B=3 C=2
+    0393 [line  156] 0x0AC9854B  SELF       A=21 B=21 C=294 Bx=11046
+    0394 [line  156] 0x0009C5C1  LOADK      R23 = K[39]='UIWidget'
+    0395 [line  156] 0x0180855C  CALL       A=21 B=3 C=2
+    0396 [line  156] 0x000A4585  GETGLOBAL  R22 = GLOBAL K[41]='Color'
+    0397 [line  156] 0x0B4E8586  GETTABLE   R22 = R22[K[58]='grey']
+    0398 [line  156] 0x94058549  SETTABLE   R21[K[40]='color'] = R22
+    0399 [line  157] 0x00800544  GETUPVAL   A=21 B=1 C=0 Bx=512
+    0400 [line  157] 0x0AC90546  GETTABLE   R21 = R21[K[36]='UpdateGridImage']
+    0401 [line  157] 0x0A000580  MOVE       R22 = R20
+    0402 [line  157] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0403 [line  157] 0x00094641  LOADK      R25 = K[37]='Img_Skill'
+    0404 [line  157] 0x00044685  GETGLOBAL  R26 = GLOBAL K[17]='string'
+    0405 [line  157] 0x0D448686  GETTABLE   R26 = R26[K[18]='format']
+    0406 [line  157] 0x0004C6C1  LOADK      R27 = K[19]='%02d'
+    0407 [line  157] 0x07800700  MOVE       R28 = R15
+    0408 [line  157] 0x0180869C  CALL       A=26 B=3 C=2
+    0409 [line  157] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0410 [line  157] 0x018005DC  CALL       A=23 B=3 C=0
+    0411 [line  157] 0x0000455C  CALL       A=21 B=0 C=1
+    0412 [line  158] 0x00800544  GETUPVAL   A=21 B=1 C=0 Bx=512
+    0413 [line  158] 0x0AC24546  GETTABLE   R21 = R21[K[9]='UpdateLable']
+    0414 [line  158] 0x000E4581  LOADK      R22 = K[57]='0/5'
+    0415 [line  158] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0416 [line  158] 0x00084641  LOADK      R25 = K[33]='Txt_SkillLevel'
+    0417 [line  158] 0x00044685  GETGLOBAL  R26 = GLOBAL K[17]='string'
+    0418 [line  158] 0x0D448686  GETTABLE   R26 = R26[K[18]='format']
+    0419 [line  158] 0x0004C6C1  LOADK      R27 = K[19]='%02d'
+    0420 [line  158] 0x07800700  MOVE       R28 = R15
+    0421 [line  158] 0x0180869C  CALL       A=26 B=3 C=2
+    0422 [line  158] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0423 [line  158] 0x018005DC  CALL       A=23 B=3 C=0
+    0424 [line  158] 0x0000455C  CALL       A=21 B=0 C=1
+    0425 [line  159] 0x00800544  GETUPVAL   A=21 B=1 C=0 Bx=512
+    0426 [line  159] 0x0AC24546  GETTABLE   R21 = R21[K[9]='UpdateLable']
+    0427 [line  159] 0x08C88586  GETTABLE   R22 = R17[K[34]='name']
+    0428 [line  159] 0x0841C5CB  SELF       A=23 B=16 C=263 Bx=8455
+    0429 [line  159] 0x0008C641  LOADK      R25 = K[35]='Txt_SkillName'
+    0430 [line  159] 0x00044685  GETGLOBAL  R26 = GLOBAL K[17]='string'
+    0431 [line  159] 0x0D448686  GETTABLE   R26 = R26[K[18]='format']
+    0432 [line  159] 0x0004C6C1  LOADK      R27 = K[19]='%02d'
+    0433 [line  159] 0x07800700  MOVE       R28 = R15
+    0434 [line  159] 0x0180869C  CALL       A=26 B=3 C=2
+    0435 [line  159] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0436 [line  159] 0x018005DC  CALL       A=23 B=3 C=0
+    0437 [line  159] 0x0000455C  CALL       A=21 B=0 C=1
+    0438 [line  160] 0x0841C54B  SELF       A=21 B=16 C=263 Bx=8455
+    0439 [line  160] 0x000AC5C1  LOADK      R23 = K[43]='Img_Up'
+    0440 [line  160] 0x0180855C  CALL       A=21 B=3 C=2
+    0441 [line  160] 0x0AC7054B  SELF       A=21 B=21 C=284 Bx=11036
+    0442 [line  160] 0x000005C2  LOADBOOL   A=23 B=0 C=0
+    0443 [line  160] 0x0180455C  CALL       A=21 B=3 C=1
+    0444 [line  161] 0x0841C54B  SELF       A=21 B=16 C=263 Bx=8455
+    0445 [line  161] 0x000EC5C1  LOADK      R23 = K[59]='Img_Lock'
+    0446 [line  161] 0x0180855C  CALL       A=21 B=3 C=2
+    0447 [line  161] 0x0000055A  TEST       A=21 B=0 C=0
+    0448 [line  161] 0x80014016  JMP        A=0 sBx=6
+    0449 [line  162] 0x0841C54B  SELF       A=21 B=16 C=263 Bx=8455
+    0450 [line  162] 0x000EC5C1  LOADK      R23 = K[59]='Img_Lock'
+    0451 [line  162] 0x0180855C  CALL       A=21 B=3 C=2
+    0452 [line  162] 0x0AC7054B  SELF       A=21 B=21 C=284 Bx=11036
+    0453 [line  162] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0454 [line  162] 0x0180455C  CALL       A=21 B=3 C=1
+    0455 [line  164] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0456 [line  164] 0x0000058A  NEWTABLE   A=22 B=0 C=0 Bx=0
+    0457 [line  164] 0x07858549  SETTABLE   R21[R15] = R22
+    0458 [line  165] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0459 [line  165] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0460 [line  165] 0x97CF0549  SETTABLE   R21[K[47]='active'] = K[60]=False
+    0461 [line  166] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0462 [line  166] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0463 [line  166] 0x08C88586  GETTABLE   R22 = R17[K[34]='name']
+    0464 [line  166] 0x98858549  SETTABLE   R21[K[49]='skillName'] = R22
+    0465 [line  167] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0466 [line  167] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0467 [line  167] 0x08CCC586  GETTABLE   R22 = R17[K[51]='desc']
+    0468 [line  167] 0x99058549  SETTABLE   R21[K[50]='skillDesc'] = R22
+    0469 [line  168] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0470 [line  168] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0471 [line  168] 0x0441458D  SUB        A=22 B=R8 C=K[5]=1.0
+    0472 [line  168] 0x9A058549  SETTABLE   R21[K[52]='skillLevel'] = R22
+    0473 [line  169] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0474 [line  169] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0475 [line  169] 0x0741458D  SUB        A=22 B=R14 C=K[5]=1.0
+    0476 [line  169] 0x9A858549  SETTABLE   R21[K[53]='skillIndex'] = R22
+    0477 [line  170] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0478 [line  170] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0479 [line  170] 0x9B4E0549  SETTABLE   R21[K[54]='currentSkillLevel'] = K[56]=None
+    0480 [line  171] 0x004B8546  GETTABLE   R21 = R0[K[46]='m_SkillList']
+    0481 [line  171] 0x0A83C546  GETTABLE   R21 = R21[R15]
+    0482 [line  171] 0x08C64586  GETTABLE   R22 = R17[K[25]='addon_group']
+    0483 [line  171] 0x0B414586  GETTABLE   R22 = R22[K[5]=1.0]
+    0484 [line  171] 0x9B858549  SETTABLE   R21[K[55]='nextSkillLevel'] = R22
+    0485 [line  171] 0x80008016  JMP        A=0 sBx=3
+    0486 [line  173] 0x0847050B  SELF       A=20 B=16 C=284 Bx=8476
+    0487 [line  173] 0x00000582  LOADBOOL   A=22 B=0 C=0
+    0488 [line  173] 0x0180451C  CALL       A=20 B=3 C=1
+    0489 [line  147] 0x7FDE82DF  FORLOOP    A=11 sBx=-133
+    0490 [line   79] 0x7F8C015F  FORLOOP    A=5 sBx=-463
+    0491 [line  178] 0x004F414B  SELF       A=5 B=0 C=317 Bx=317
+    0492 [line  178] 0x0100415C  CALL       A=5 B=2 C=1
+    0493 [line  179] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 493
+    'faction': 5 -> 493
+    'txMoneyNum': 12 -> 493
+    'factionConfig': 23 -> 493
+    'skillroom': 24 -> 493
+    '(for index)': 27 -> 491
+    '(for limit)': 27 -> 491
+    '(for step)': 27 -> 491
+    'i': 28 -> 490
+    'groupLevel': 38 -> 490
+    'levelSkill': 40 -> 490
+    '(for index)': 46 -> 352
+    '(for limit)': 46 -> 352
+    '(for step)': 46 -> 352
+    'j': 47 -> 351
+    'index': 50 -> 351
+    'skillItem': 59 -> 351
+    'skill': 60 -> 351
+    'currentSkillLevel': 63 -> 351
+    'contribution': 70 -> 209
+    'addonGroupID': 73 -> 209
+    'desc': 85 -> 205
+    'imgPath': 89 -> 205
+    'contribution': 215 -> 340
+    'addonGroupID': 218 -> 340
+    'desc': 226 -> 336
+    'imgPath': 230 -> 336
+    '(for index)': 356 -> 490
+    '(for limit)': 356 -> 490
+    '(for step)': 356 -> 490
+    'j': 357 -> 489
+    'index': 360 -> 489
+    'skillItem': 369 -> 489
+    'skill': 370 -> 489
+    'contribution': 373 -> 489
+    'addonGroupID': 376 -> 489
+    'imgPath': 384 -> 485
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x23DC
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 181 - 326
+    Params : 1
+    Stack  : 30
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_SkillList'
+    K[001] = 'm_CurrentSkill'
+    K[002] = 'm_panel'
+    K[003] = 'FindChild'
+    K[004] = 'Group_SkillLevelUp'
+    K[005] = 'Group_Money'
+    K[006] = 'Txt_SkillInfo'
+    K[007] = 'Txt_SkillName'
+    K[008] = 'Group_Attri'
+    K[009] = 'Instance'
+    K[010] = 'm_HostPlayer'
+    K[011] = 'Faction'
+    K[012] = 0.0
+    K[013] = 'skillDesc'
+    K[014] = 'skillName'
+    K[015] = 'currentSkillLevel'
+    K[016] = 'addon_group_id'
+    K[017] = 'getAddonGroup'
+    K[018] = 'nextSkillLevel'
+    K[019] = 'cost_contribution'
+    K[020] = 1.0
+    K[021] = 5.0
+    K[022] = 'Attri'
+    K[023] = 'string'
+    K[024] = 'format'
+    K[025] = '%02d'
+    K[026] = ''
+    K[027] = 'Txt_AttriNum'
+    K[028] = 'addons'
+    K[029] = 'id'
+    K[030] = 'getAddon'
+    K[031] = 'type'
+    K[032] = 'param1'
+    K[033] = 'GetAttrName'
+    K[034] = 'SetActive'
+    K[035] = 'name'
+    K[036] = 'sub'
+    K[037] = -1.0
+    K[038] = '%'
+    K[039] = 10.0
+    K[040] = 'UpdateLable'
+    K[041] = 'tostring'
+    K[042] = '0'
+    K[043] = 'Txt_AttriNext'
+    K[044] = '->'
+    K[045] = 'len'
+    K[046] = 'StringTable'
+    K[047] = 'Get'
+    K[048] = 15065.0
+    K[049] = 'Txt_AttriName'
+    K[050] = '_hostfactionposition'
+    K[051] = 'Btn_Up'
+    K[052] = 'Group_Hit'
+    K[053] = 'skillLevel'
+    K[054] = '_skillroomlevel'
+    K[055] = 'Group_Btn'
+    K[056] = 198.0
+    K[057] = 'Txt_LevelHit'
+    K[058] = 'POSITION_MASTER'
+    K[059] = 'collider'
+    K[060] = 'enabled'
+    K[061] = 'active'
+    K[062] = '_factionmoney'
+    K[063] = 'cando'
+    K[064] = 'UPGRADESKILL'
+    K[065] = 'Txt_MoneyNum'
+    K[066] = 'Btn_Choose'
+    K[067] = 'm_ActiveSkill'
+    K[068] = False
+    K[069] = True
+
+    ----- INSTRUCTIONS -----
+    0000 [line  182] 0x00400046  GETTABLE   R1 = R0[K[0]='m_SkillList']
+    0001 [line  182] 0x00404086  GETTABLE   R2 = R0[K[1]='m_CurrentSkill']
+    0002 [line  182] 0x00808046  GETTABLE   R1 = R1[R2]
+    0003 [line  182] 0x0000405A  TEST       A=1 B=0 C=1
+    0004 [line  182] 0x80000016  JMP        A=0 sBx=1
+    0005 [line  182] 0x0080001E  RETURN     A=0 B=1 C=0
+    0006 [line  183] 0x00408046  GETTABLE   R1 = R0[K[2]='m_panel']
+    0007 [line  183] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0008 [line  183] 0x000100C1  LOADK      R3 = K[4]='Group_SkillLevelUp'
+    0009 [line  183] 0x0180805C  CALL       A=1 B=3 C=2
+    0010 [line  184] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0011 [line  184] 0x00014101  LOADK      R4 = K[5]='Group_Money'
+    0012 [line  184] 0x0180809C  CALL       A=2 B=3 C=2
+    0013 [line  186] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0014 [line  186] 0x00018141  LOADK      R5 = K[6]='Txt_SkillInfo'
+    0015 [line  186] 0x018080DC  CALL       A=3 B=3 C=2
+    0016 [line  187] 0x00C0C10B  SELF       A=4 B=1 C=259 Bx=771
+    0017 [line  187] 0x0001C181  LOADK      R6 = K[7]='Txt_SkillName'
+    0018 [line  187] 0x0180811C  CALL       A=4 B=3 C=2
+    0019 [line  188] 0x00C0C14B  SELF       A=5 B=1 C=259 Bx=771
+    0020 [line  188] 0x000201C1  LOADK      R7 = K[8]='Group_Attri'
+    0021 [line  188] 0x0180815C  CALL       A=5 B=3 C=2
+    0022 [line  189] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0023 [line  189] 0x03424186  GETTABLE   R6 = R6[K[9]='Instance']
+    0024 [line  189] 0x0080819C  CALL       A=6 B=1 C=2
+    0025 [line  189] 0x03428186  GETTABLE   R6 = R6[K[10]='m_HostPlayer']
+    0026 [line  189] 0x0342C186  GETTABLE   R6 = R6[K[11]='Faction']
+    0027 [line  190] 0x000301C1  LOADK      R7 = K[12]=0.0
+    0028 [line  191] 0x00400206  GETTABLE   R8 = R0[K[0]='m_SkillList']
+    0029 [line  191] 0x00404246  GETTABLE   R9 = R0[K[1]='m_CurrentSkill']
+    0030 [line  191] 0x04024206  GETTABLE   R8 = R8[R9]
+    0031 [line  191] 0x04434206  GETTABLE   R8 = R8[K[13]='skillDesc']
+    0032 [line  192] 0x00400246  GETTABLE   R9 = R0[K[0]='m_SkillList']
+    0033 [line  192] 0x00404286  GETTABLE   R10 = R0[K[1]='m_CurrentSkill']
+    0034 [line  192] 0x04828246  GETTABLE   R9 = R9[R10]
+    0035 [line  192] 0x04C38246  GETTABLE   R9 = R9[K[14]='skillName']
+    0036 [line  193] 0x00030281  LOADK      R10 = K[12]=0.0
+    0037 [line  194] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+    0038 [line  195] 0x00400306  GETTABLE   R12 = R0[K[0]='m_SkillList']
+    0039 [line  195] 0x00404346  GETTABLE   R13 = R0[K[1]='m_CurrentSkill']
+    0040 [line  195] 0x06034306  GETTABLE   R12 = R12[R13]
+    0041 [line  195] 0x0643C306  GETTABLE   R12 = R12[K[15]='currentSkillLevel']
+    0042 [line  195] 0x0000031A  TEST       A=12 B=0 C=0
+    0043 [line  195] 0x80024016  JMP        A=0 sBx=10
+    0044 [line  196] 0x00400306  GETTABLE   R12 = R0[K[0]='m_SkillList']
+    0045 [line  196] 0x00404346  GETTABLE   R13 = R0[K[1]='m_CurrentSkill']
+    0046 [line  196] 0x06034306  GETTABLE   R12 = R12[R13]
+    0047 [line  196] 0x0643C306  GETTABLE   R12 = R12[K[15]='currentSkillLevel']
+    0048 [line  196] 0x06440286  GETTABLE   R10 = R12[K[16]='addon_group_id']
+    0049 [line  197] 0x00800304  GETUPVAL   A=12 B=1 C=0 Bx=512
+    0050 [line  197] 0x06444306  GETTABLE   R12 = R12[K[17]='getAddonGroup']
+    0051 [line  197] 0x05000340  MOVE       R13 = R10
+    0052 [line  197] 0x0100831C  CALL       A=12 B=2 C=2
+    0053 [line  197] 0x060002C0  MOVE       R11 = R12
+    0054 [line  199] 0x00030301  LOADK      R12 = K[12]=0.0
+    0055 [line  200] 0x06800343  LOADNIL    A=13 B=13 C=0 Bx=6656
+    0056 [line  201] 0x00400386  GETTABLE   R14 = R0[K[0]='m_SkillList']
+    0057 [line  201] 0x004043C6  GETTABLE   R15 = R0[K[1]='m_CurrentSkill']
+    0058 [line  201] 0x0703C386  GETTABLE   R14 = R14[R15]
+    0059 [line  201] 0x07448386  GETTABLE   R14 = R14[K[18]='nextSkillLevel']
+    0060 [line  201] 0x0000039A  TEST       A=14 B=0 C=0
+    0061 [line  201] 0x80024016  JMP        A=0 sBx=10
+    0062 [line  202] 0x00400386  GETTABLE   R14 = R0[K[0]='m_SkillList']
+    0063 [line  202] 0x004043C6  GETTABLE   R15 = R0[K[1]='m_CurrentSkill']
+    0064 [line  202] 0x0703C386  GETTABLE   R14 = R14[R15]
+    0065 [line  202] 0x07448386  GETTABLE   R14 = R14[K[18]='nextSkillLevel']
+    0066 [line  202] 0x07440306  GETTABLE   R12 = R14[K[16]='addon_group_id']
+    0067 [line  203] 0x00800384  GETUPVAL   A=14 B=1 C=0 Bx=512
+    0068 [line  203] 0x07444386  GETTABLE   R14 = R14[K[17]='getAddonGroup']
+    0069 [line  203] 0x060003C0  MOVE       R15 = R12
+    0070 [line  203] 0x0100839C  CALL       A=14 B=2 C=2
+    0071 [line  203] 0x07000340  MOVE       R13 = R14
+    0072 [line  207] 0x00400386  GETTABLE   R14 = R0[K[0]='m_SkillList']
+    0073 [line  207] 0x004043C6  GETTABLE   R15 = R0[K[1]='m_CurrentSkill']
+    0074 [line  207] 0x0703C386  GETTABLE   R14 = R14[R15]
+    0075 [line  207] 0x0743C386  GETTABLE   R14 = R14[K[15]='currentSkillLevel']
+    0076 [line  207] 0x0000439A  TEST       A=14 B=0 C=1
+    0077 [line  207] 0x80014016  JMP        A=0 sBx=6
+    0078 [line  208] 0x00400386  GETTABLE   R14 = R0[K[0]='m_SkillList']
+    0079 [line  208] 0x004043C6  GETTABLE   R15 = R0[K[1]='m_CurrentSkill']
+    0080 [line  208] 0x0703C386  GETTABLE   R14 = R14[R15]
+    0081 [line  208] 0x07448386  GETTABLE   R14 = R14[K[18]='nextSkillLevel']
+    0082 [line  208] 0x0744C1C6  GETTABLE   R7 = R14[K[19]='cost_contribution']
+    0083 [line  208] 0x80010016  JMP        A=0 sBx=5
+    0084 [line  210] 0x00400386  GETTABLE   R14 = R0[K[0]='m_SkillList']
+    0085 [line  210] 0x004043C6  GETTABLE   R15 = R0[K[1]='m_CurrentSkill']
+    0086 [line  210] 0x0703C386  GETTABLE   R14 = R14[R15]
+    0087 [line  210] 0x0743C386  GETTABLE   R14 = R14[K[15]='currentSkillLevel']
+    0088 [line  210] 0x0744C1C6  GETTABLE   R7 = R14[K[19]='cost_contribution']
+    0089 [line  212] 0x00050381  LOADK      R14 = K[20]=1.0
+    0090 [line  212] 0x000543C1  LOADK      R15 = K[21]=5.0
+    0091 [line  212] 0x00050401  LOADK      R16 = K[20]=1.0
+    0092 [line  212] 0x803C03A0  FORPREP    A=14 sBx=241
+    0093 [line  213] 0x00C0C48B  SELF       A=18 B=1 C=259 Bx=771
+    0094 [line  213] 0x00058501  LOADK      R20 = K[22]='Attri'
+    0095 [line  213] 0x0005C545  GETGLOBAL  R21 = GLOBAL K[23]='string'
+    0096 [line  213] 0x0AC60546  GETTABLE   R21 = R21[K[24]='format']
+    0097 [line  213] 0x00064581  LOADK      R22 = K[25]='%02d'
+    0098 [line  213] 0x088005C0  MOVE       R23 = R17
+    0099 [line  213] 0x0180855C  CALL       A=21 B=3 C=2
+    0100 [line  213] 0x0A054515  CONCAT     A=20 B=20 C=21 Bx=10261
+    0101 [line  213] 0x0180849C  CALL       A=18 B=3 C=2
+    0102 [line  214] 0x000684C1  LOADK      R19 = K[26]=''
+    0103 [line  215] 0x0940C50B  SELF       A=20 B=18 C=259 Bx=9475
+    0104 [line  215] 0x0006C581  LOADK      R22 = K[27]='Txt_AttriNum'
+    0105 [line  215] 0x0005C5C5  GETGLOBAL  R23 = GLOBAL K[23]='string'
+    0106 [line  215] 0x0BC605C6  GETTABLE   R23 = R23[K[24]='format']
+    0107 [line  215] 0x00064601  LOADK      R24 = K[25]='%02d'
+    0108 [line  215] 0x08800640  MOVE       R25 = R17
+    0109 [line  215] 0x018085DC  CALL       A=23 B=3 C=2
+    0110 [line  215] 0x0B05C595  CONCAT     A=22 B=22 C=23 Bx=11287
+    0111 [line  215] 0x0180851C  CALL       A=20 B=3 C=2
+    0112 [line  217] 0x000002DA  TEST       A=11 B=0 C=0
+    0113 [line  217] 0x8011C016  JMP        A=0 sBx=72
+    0114 [line  217] 0x05C70546  GETTABLE   R21 = R11[K[28]='addons']
+    0115 [line  217] 0x0A844546  GETTABLE   R21 = R21[R17]
+    0116 [line  217] 0x0AC74546  GETTABLE   R21 = R21[K[29]='id']
+    0117 [line  217] 0x0AC30057  EQ         A=1 B=R21 C=K[12]=0.0
+    0118 [line  217] 0x80108016  JMP        A=0 sBx=67
+    0119 [line  218] 0x00800544  GETUPVAL   A=21 B=1 C=0 Bx=512
+    0120 [line  218] 0x0AC78546  GETTABLE   R21 = R21[K[30]='getAddon']
+    0121 [line  218] 0x05C70586  GETTABLE   R22 = R11[K[28]='addons']
+    0122 [line  218] 0x0B044586  GETTABLE   R22 = R22[R17]
+    0123 [line  218] 0x0B474586  GETTABLE   R22 = R22[K[29]='id']
+    0124 [line  218] 0x0100855C  CALL       A=21 B=2 C=2
+    0125 [line  218] 0x0AC7C546  GETTABLE   R21 = R21[K[31]='type']
+    0126 [line  219] 0x00800584  GETUPVAL   A=22 B=1 C=0 Bx=512
+    0127 [line  219] 0x0B478586  GETTABLE   R22 = R22[K[30]='getAddon']
+    0128 [line  219] 0x05C705C6  GETTABLE   R23 = R11[K[28]='addons']
+    0129 [line  219] 0x0B8445C6  GETTABLE   R23 = R23[R17]
+    0130 [line  219] 0x0BC745C6  GETTABLE   R23 = R23[K[29]='id']
+    0131 [line  219] 0x0100859C  CALL       A=22 B=2 C=2
+    0132 [line  219] 0x0B480586  GETTABLE   R22 = R22[K[32]='param1']
+    0133 [line  220] 0x010005C4  GETUPVAL   A=23 B=2 C=0 Bx=1024
+    0134 [line  220] 0x0BC845C6  GETTABLE   R23 = R23[K[33]='GetAttrName']
+    0135 [line  220] 0x0A800600  MOVE       R24 = R21
+    0136 [line  220] 0x010085DC  CALL       A=23 B=2 C=2
+    0137 [line  220] 0x0B8004C0  MOVE       R19 = R23
+    0138 [line  222] 0x05430057  EQ         A=1 B=R10 C=K[12]=0.0
+    0139 [line  222] 0x800A4016  JMP        A=0 sBx=42
+    0140 [line  223] 0x0A4885CB  SELF       A=23 B=20 C=290 Bx=10530
+    0141 [line  223] 0x00800642  LOADBOOL   A=25 B=1 C=0
+    0142 [line  223] 0x018045DC  CALL       A=23 B=3 C=1
+    0143 [line  224] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0144 [line  224] 0x0BC785C6  GETTABLE   R23 = R23[K[30]='getAddon']
+    0145 [line  224] 0x05C70606  GETTABLE   R24 = R11[K[28]='addons']
+    0146 [line  224] 0x0C044606  GETTABLE   R24 = R24[R17]
+    0147 [line  224] 0x0C474606  GETTABLE   R24 = R24[K[29]='id']
+    0148 [line  224] 0x010085DC  CALL       A=23 B=2 C=2
+    0149 [line  224] 0x0BC80586  GETTABLE   R22 = R23[K[32]='param1']
+    0150 [line  226] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0151 [line  226] 0x0BC785C6  GETTABLE   R23 = R23[K[30]='getAddon']
+    0152 [line  226] 0x05C70606  GETTABLE   R24 = R11[K[28]='addons']
+    0153 [line  226] 0x0C044606  GETTABLE   R24 = R24[R17]
+    0154 [line  226] 0x0C474606  GETTABLE   R24 = R24[K[29]='id']
+    0155 [line  226] 0x010085DC  CALL       A=23 B=2 C=2
+    0156 [line  226] 0x0BC8C5C6  GETTABLE   R23 = R23[K[35]='name']
+    0157 [line  227] 0x0BC9060B  SELF       A=24 B=23 C=292 Bx=12068
+    0158 [line  227] 0x00094681  LOADK      R26 = K[37]=-1.0
+    0159 [line  227] 0x000946C1  LOADK      R27 = K[37]=-1.0
+    0160 [line  227] 0x0200861C  CALL       A=24 B=4 C=2
+    0161 [line  227] 0x0C498017  EQ         A=0 B=R24 C=K[38]='%'
+    0162 [line  227] 0x80028016  JMP        A=0 sBx=11
+    0163 [line  228] 0x0B49C58F  DIV        A=22 B=R22 C=K[39]=10.0
+    0164 [line  229] 0x01800604  GETUPVAL   A=24 B=3 C=0 Bx=1536
+    0165 [line  229] 0x0C4A0606  GETTABLE   R24 = R24[K[40]='UpdateLable']
+    0166 [line  229] 0x000A4645  GETGLOBAL  R25 = GLOBAL K[41]='tostring'
+    0167 [line  229] 0x0B000680  MOVE       R26 = R22
+    0168 [line  229] 0x0100865C  CALL       A=25 B=2 C=2
+    0169 [line  229] 0x00098681  LOADK      R26 = K[38]='%'
+    0170 [line  229] 0x0C868655  CONCAT     A=25 B=25 C=26 Bx=12826
+    0171 [line  229] 0x0A000680  MOVE       R26 = R20
+    0172 [line  229] 0x0180461C  CALL       A=24 B=3 C=1
+    0173 [line  229] 0x800BC016  JMP        A=0 sBx=48
+    0174 [line  231] 0x01800604  GETUPVAL   A=24 B=3 C=0 Bx=1536
+    0175 [line  231] 0x0C4A0606  GETTABLE   R24 = R24[K[40]='UpdateLable']
+    0176 [line  231] 0x000A4645  GETGLOBAL  R25 = GLOBAL K[41]='tostring'
+    0177 [line  231] 0x0B000680  MOVE       R26 = R22
+    0178 [line  231] 0x0100865C  CALL       A=25 B=2 C=2
+    0179 [line  231] 0x0A000680  MOVE       R26 = R20
+    0180 [line  231] 0x0180461C  CALL       A=24 B=3 C=1
+    0181 [line  232] 0x8009C016  JMP        A=0 sBx=40
+    0182 [line  235] 0x0A4885CB  SELF       A=23 B=20 C=290 Bx=10530
+    0183 [line  235] 0x00000642  LOADBOOL   A=25 B=0 C=0
+    0184 [line  235] 0x018045DC  CALL       A=23 B=3 C=1
+    0185 [line  236] 0x8008C016  JMP        A=0 sBx=36
+    0186 [line  237] 0x0000035A  TEST       A=13 B=0 C=0
+    0187 [line  237] 0x80078016  JMP        A=0 sBx=31
+    0188 [line  237] 0x06C70546  GETTABLE   R21 = R13[K[28]='addons']
+    0189 [line  237] 0x0A844546  GETTABLE   R21 = R21[R17]
+    0190 [line  237] 0x0AC74546  GETTABLE   R21 = R21[K[29]='id']
+    0191 [line  237] 0x0AC30057  EQ         A=1 B=R21 C=K[12]=0.0
+    0192 [line  237] 0x80064016  JMP        A=0 sBx=26
+    0193 [line  238] 0x0A48854B  SELF       A=21 B=20 C=290 Bx=10530
+    0194 [line  238] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0195 [line  238] 0x0180455C  CALL       A=21 B=3 C=1
+    0196 [line  239] 0x00800544  GETUPVAL   A=21 B=1 C=0 Bx=512
+    0197 [line  239] 0x0AC78546  GETTABLE   R21 = R21[K[30]='getAddon']
+    0198 [line  239] 0x06C70586  GETTABLE   R22 = R13[K[28]='addons']
+    0199 [line  239] 0x0B044586  GETTABLE   R22 = R22[R17]
+    0200 [line  239] 0x0B474586  GETTABLE   R22 = R22[K[29]='id']
+    0201 [line  239] 0x0100855C  CALL       A=21 B=2 C=2
+    0202 [line  239] 0x0AC8C546  GETTABLE   R21 = R21[K[35]='name']
+    0203 [line  240] 0x000A8581  LOADK      R22 = K[42]='0'
+    0204 [line  241] 0x0AC905CB  SELF       A=23 B=21 C=292 Bx=11044
+    0205 [line  241] 0x00094641  LOADK      R25 = K[37]=-1.0
+    0206 [line  241] 0x00094681  LOADK      R26 = K[37]=-1.0
+    0207 [line  241] 0x020085DC  CALL       A=23 B=4 C=2
+    0208 [line  241] 0x0BC98017  EQ         A=0 B=R23 C=K[38]='%'
+    0209 [line  241] 0x80008016  JMP        A=0 sBx=3
+    0210 [line  242] 0x0B0005C0  MOVE       R23 = R22
+    0211 [line  242] 0x00098601  LOADK      R24 = K[38]='%'
+    0212 [line  242] 0x0B860595  CONCAT     A=22 B=23 C=24 Bx=11800
+    0213 [line  244] 0x018005C4  GETUPVAL   A=23 B=3 C=0 Bx=1536
+    0214 [line  244] 0x0BCA05C6  GETTABLE   R23 = R23[K[40]='UpdateLable']
+    0215 [line  244] 0x0B000600  MOVE       R24 = R22
+    0216 [line  244] 0x0A000640  MOVE       R25 = R20
+    0217 [line  244] 0x018045DC  CALL       A=23 B=3 C=1
+    0218 [line  244] 0x80008016  JMP        A=0 sBx=3
+    0219 [line  246] 0x0A48854B  SELF       A=21 B=20 C=290 Bx=10530
+    0220 [line  246] 0x000005C2  LOADBOOL   A=23 B=0 C=0
+    0221 [line  246] 0x0180455C  CALL       A=21 B=3 C=1
+    0222 [line  248] 0x0940C54B  SELF       A=21 B=18 C=259 Bx=9475
+    0223 [line  248] 0x000AC5C1  LOADK      R23 = K[43]='Txt_AttriNext'
+    0224 [line  248] 0x0005C605  GETGLOBAL  R24 = GLOBAL K[23]='string'
+    0225 [line  248] 0x0C460606  GETTABLE   R24 = R24[K[24]='format']
+    0226 [line  248] 0x00064641  LOADK      R25 = K[25]='%02d'
+    0227 [line  248] 0x08800680  MOVE       R26 = R17
+    0228 [line  248] 0x0180861C  CALL       A=24 B=3 C=2
+    0229 [line  248] 0x0B8605D5  CONCAT     A=23 B=23 C=24 Bx=11800
+    0230 [line  248] 0x0180855C  CALL       A=21 B=3 C=2
+    0231 [line  249] 0x0000035A  TEST       A=13 B=0 C=0
+    0232 [line  249] 0x80128016  JMP        A=0 sBx=75
+    0233 [line  249] 0x06C70586  GETTABLE   R22 = R13[K[28]='addons']
+    0234 [line  249] 0x0B044586  GETTABLE   R22 = R22[R17]
+    0235 [line  249] 0x0B474586  GETTABLE   R22 = R22[K[29]='id']
+    0236 [line  249] 0x0B430057  EQ         A=1 B=R22 C=K[12]=0.0
+    0237 [line  249] 0x80114016  JMP        A=0 sBx=70
+    0238 [line  250] 0x00800584  GETUPVAL   A=22 B=1 C=0 Bx=512
+    0239 [line  250] 0x0B478586  GETTABLE   R22 = R22[K[30]='getAddon']
+    0240 [line  250] 0x06C705C6  GETTABLE   R23 = R13[K[28]='addons']
+    0241 [line  250] 0x0B8445C6  GETTABLE   R23 = R23[R17]
+    0242 [line  250] 0x0BC745C6  GETTABLE   R23 = R23[K[29]='id']
+    0243 [line  250] 0x0100859C  CALL       A=22 B=2 C=2
+    0244 [line  250] 0x0B47C586  GETTABLE   R22 = R22[K[31]='type']
+    0245 [line  251] 0x008005C4  GETUPVAL   A=23 B=1 C=0 Bx=512
+    0246 [line  251] 0x0BC785C6  GETTABLE   R23 = R23[K[30]='getAddon']
+    0247 [line  251] 0x06C70606  GETTABLE   R24 = R13[K[28]='addons']
+    0248 [line  251] 0x0C044606  GETTABLE   R24 = R24[R17]
+    0249 [line  251] 0x0C474606  GETTABLE   R24 = R24[K[29]='id']
+    0250 [line  251] 0x010085DC  CALL       A=23 B=2 C=2
+    0251 [line  251] 0x0BC805C6  GETTABLE   R23 = R23[K[32]='param1']
+    0252 [line  252] 0x01000604  GETUPVAL   A=24 B=2 C=0 Bx=1024
+    0253 [line  252] 0x0C484606  GETTABLE   R24 = R24[K[33]='GetAttrName']
+    0254 [line  252] 0x0B000640  MOVE       R25 = R22
+    0255 [line  252] 0x0100861C  CALL       A=24 B=2 C=2
+    0256 [line  252] 0x0C0004C0  MOVE       R19 = R24
+    0257 [line  254] 0x06430057  EQ         A=1 B=R12 C=K[12]=0.0
+    0258 [line  254] 0x800B0016  JMP        A=0 sBx=45
+    0259 [line  255] 0x0AC8860B  SELF       A=24 B=21 C=290 Bx=11042
+    0260 [line  255] 0x00800682  LOADBOOL   A=26 B=1 C=0
+    0261 [line  255] 0x0180461C  CALL       A=24 B=3 C=1
+    0262 [line  256] 0x00800604  GETUPVAL   A=24 B=1 C=0 Bx=512
+    0263 [line  256] 0x0C478606  GETTABLE   R24 = R24[K[30]='getAddon']
+    0264 [line  256] 0x06C70646  GETTABLE   R25 = R13[K[28]='addons']
+    0265 [line  256] 0x0C844646  GETTABLE   R25 = R25[R17]
+    0266 [line  256] 0x0CC74646  GETTABLE   R25 = R25[K[29]='id']
+    0267 [line  256] 0x0100861C  CALL       A=24 B=2 C=2
+    0268 [line  256] 0x0C4805C6  GETTABLE   R23 = R24[K[32]='param1']
+    0269 [line  257] 0x00800604  GETUPVAL   A=24 B=1 C=0 Bx=512
+    0270 [line  257] 0x0C478606  GETTABLE   R24 = R24[K[30]='getAddon']
+    0271 [line  257] 0x06C70646  GETTABLE   R25 = R13[K[28]='addons']
+    0272 [line  257] 0x0C844646  GETTABLE   R25 = R25[R17]
+    0273 [line  257] 0x0CC74646  GETTABLE   R25 = R25[K[29]='id']
+    0274 [line  257] 0x0100861C  CALL       A=24 B=2 C=2
+    0275 [line  257] 0x0C48C606  GETTABLE   R24 = R24[K[35]='name']
+    0276 [line  259] 0x0C49064B  SELF       A=25 B=24 C=292 Bx=12580
+    0277 [line  259] 0x000946C1  LOADK      R27 = K[37]=-1.0
+    0278 [line  259] 0x00094701  LOADK      R28 = K[37]=-1.0
+    0279 [line  259] 0x0200865C  CALL       A=25 B=4 C=2
+    0280 [line  259] 0x0CC98017  EQ         A=0 B=R25 C=K[38]='%'
+    0281 [line  259] 0x8002C016  JMP        A=0 sBx=12
+    0282 [line  260] 0x0BC9C5CF  DIV        A=23 B=R23 C=K[39]=10.0
+    0283 [line  261] 0x01800644  GETUPVAL   A=25 B=3 C=0 Bx=1536
+    0284 [line  261] 0x0CCA0646  GETTABLE   R25 = R25[K[40]='UpdateLable']
+    0285 [line  261] 0x000B0681  LOADK      R26 = K[44]='->'
+    0286 [line  261] 0x000A46C5  GETGLOBAL  R27 = GLOBAL K[41]='tostring'
+    0287 [line  261] 0x0B800700  MOVE       R28 = R23
+    0288 [line  261] 0x010086DC  CALL       A=27 B=2 C=2
+    0289 [line  261] 0x00098701  LOADK      R28 = K[38]='%'
+    0290 [line  261] 0x0D070695  CONCAT     A=26 B=26 C=28 Bx=13340
+    0291 [line  261] 0x0A8006C0  MOVE       R27 = R21
+    0292 [line  261] 0x0180465C  CALL       A=25 B=3 C=1
+    0293 [line  261] 0x80040016  JMP        A=0 sBx=17
+    0294 [line  263] 0x01800644  GETUPVAL   A=25 B=3 C=0 Bx=1536
+    0295 [line  263] 0x0CCA0646  GETTABLE   R25 = R25[K[40]='UpdateLable']
+    0296 [line  263] 0x000B0681  LOADK      R26 = K[44]='->'
+    0297 [line  263] 0x000A46C5  GETGLOBAL  R27 = GLOBAL K[41]='tostring'
+    0298 [line  263] 0x0B800700  MOVE       R28 = R23
+    0299 [line  263] 0x010086DC  CALL       A=27 B=2 C=2
+    0300 [line  263] 0x0D06C695  CONCAT     A=26 B=26 C=27 Bx=13339
+    0301 [line  263] 0x0A8006C0  MOVE       R27 = R21
+    0302 [line  263] 0x0180465C  CALL       A=25 B=3 C=1
+    0303 [line  264] 0x80018016  JMP        A=0 sBx=7
+    0304 [line  267] 0x0AC8860B  SELF       A=24 B=21 C=290 Bx=11042
+    0305 [line  267] 0x00000682  LOADBOOL   A=26 B=0 C=0
+    0306 [line  267] 0x0180461C  CALL       A=24 B=3 C=1
+    0307 [line  268] 0x80008016  JMP        A=0 sBx=3
+    0308 [line  270] 0x0AC8858B  SELF       A=22 B=21 C=290 Bx=11042
+    0309 [line  270] 0x00000602  LOADBOOL   A=24 B=0 C=0
+    0310 [line  270] 0x0180459C  CALL       A=22 B=3 C=1
+    0311 [line  272] 0x09CB458B  SELF       A=22 B=19 C=301 Bx=10029
+    0312 [line  272] 0x0100859C  CALL       A=22 B=2 C=2
+    0313 [line  272] 0x0B430057  EQ         A=1 B=R22 C=K[12]=0.0
+    0314 [line  272] 0x80014016  JMP        A=0 sBx=6
+    0315 [line  273] 0x09800580  MOVE       R22 = R19
+    0316 [line  273] 0x000B85C5  GETGLOBAL  R23 = GLOBAL K[46]='StringTable'
+    0317 [line  273] 0x0BCBC5C6  GETTABLE   R23 = R23[K[47]='Get']
+    0318 [line  273] 0x000C0601  LOADK      R24 = K[48]=15065.0
+    0319 [line  273] 0x010085DC  CALL       A=23 B=2 C=2
+    0320 [line  273] 0x0B05C4D5  CONCAT     A=19 B=22 C=23 Bx=11287
+    0321 [line  275] 0x01800584  GETUPVAL   A=22 B=3 C=0 Bx=1536
+    0322 [line  275] 0x0B4A0586  GETTABLE   R22 = R22[K[40]='UpdateLable']
+    0323 [line  275] 0x098005C0  MOVE       R23 = R19
+    0324 [line  275] 0x0940C60B  SELF       A=24 B=18 C=259 Bx=9475
+    0325 [line  275] 0x000C4681  LOADK      R26 = K[49]='Txt_AttriName'
+    0326 [line  275] 0x0005C6C5  GETGLOBAL  R27 = GLOBAL K[23]='string'
+    0327 [line  275] 0x0DC606C6  GETTABLE   R27 = R27[K[24]='format']
+    0328 [line  275] 0x00064701  LOADK      R28 = K[25]='%02d'
+    0329 [line  275] 0x08800740  MOVE       R29 = R17
+    0330 [line  275] 0x018086DC  CALL       A=27 B=3 C=2
+    0331 [line  275] 0x0D06C695  CONCAT     A=26 B=26 C=27 Bx=13339
+    0332 [line  275] 0x0180061C  CALL       A=24 B=3 C=0
+    0333 [line  275] 0x0000459C  CALL       A=22 B=0 C=1
+    0334 [line  212] 0x7FC3439F  FORLOOP    A=14 sBx=-242
+    0335 [line  278] 0x01800384  GETUPVAL   A=14 B=3 C=0 Bx=1536
+    0336 [line  278] 0x074A0386  GETTABLE   R14 = R14[K[40]='UpdateLable']
+    0337 [line  278] 0x000A43C5  GETGLOBAL  R15 = GLOBAL K[41]='tostring'
+    0338 [line  278] 0x04800400  MOVE       R16 = R9
+    0339 [line  278] 0x010083DC  CALL       A=15 B=2 C=2
+    0340 [line  278] 0x02000400  MOVE       R16 = R4
+    0341 [line  278] 0x0180439C  CALL       A=14 B=3 C=1
+    0342 [line  279] 0x01800384  GETUPVAL   A=14 B=3 C=0 Bx=1536
+    0343 [line  279] 0x074A0386  GETTABLE   R14 = R14[K[40]='UpdateLable']
+    0344 [line  279] 0x000A43C5  GETGLOBAL  R15 = GLOBAL K[41]='tostring'
+    0345 [line  279] 0x04000400  MOVE       R16 = R8
+    0346 [line  279] 0x010083DC  CALL       A=15 B=2 C=2
+    0347 [line  279] 0x01800400  MOVE       R16 = R3
+    0348 [line  279] 0x0180439C  CALL       A=14 B=3 C=1
+    0349 [line  281] 0x034C8386  GETTABLE   R14 = R6[K[50]='_hostfactionposition']
+    0350 [line  283] 0x00C0C3CB  SELF       A=15 B=1 C=259 Bx=771
+    0351 [line  283] 0x000CC441  LOADK      R17 = K[51]='Btn_Up'
+    0352 [line  283] 0x018083DC  CALL       A=15 B=3 C=2
+    0353 [line  285] 0x00C0C40B  SELF       A=16 B=1 C=259 Bx=771
+    0354 [line  285] 0x000D0481  LOADK      R18 = K[52]='Group_Hit'
+    0355 [line  285] 0x0180841C  CALL       A=16 B=3 C=2
+    0356 [line  286] 0x0848844B  SELF       A=17 B=16 C=290 Bx=8482
+    0357 [line  286] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0358 [line  286] 0x0180445C  CALL       A=17 B=3 C=1
+    0359 [line  288] 0x00400446  GETTABLE   R17 = R0[K[0]='m_SkillList']
+    0360 [line  288] 0x00404486  GETTABLE   R18 = R0[K[1]='m_CurrentSkill']
+    0361 [line  288] 0x08848446  GETTABLE   R17 = R17[R18]
+    0362 [line  288] 0x08CD4446  GETTABLE   R17 = R17[K[53]='skillLevel']
+    0363 [line  288] 0x08C5044C  ADD        A=17 B=R17 C=K[20]=1.0
+    0364 [line  288] 0x034D8486  GETTABLE   R18 = R6[K[54]='_skillroomlevel']
+    0365 [line  288] 0x09044018  LT         A=0 B=R18 C=R17
+    0366 [line  288] 0x80078016  JMP        A=0 sBx=31
+    0367 [line  289] 0x0848844B  SELF       A=17 B=16 C=290 Bx=8482
+    0368 [line  289] 0x008004C2  LOADBOOL   A=19 B=1 C=0
+    0369 [line  289] 0x0180445C  CALL       A=17 B=3 C=1
+    0370 [line  290] 0x0148844B  SELF       A=17 B=2 C=290 Bx=1314
+    0371 [line  290] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0372 [line  290] 0x0180445C  CALL       A=17 B=3 C=1
+    0373 [line  291] 0x00C0C44B  SELF       A=17 B=1 C=259 Bx=771
+    0374 [line  291] 0x000DC4C1  LOADK      R19 = K[55]='Group_Btn'
+    0375 [line  291] 0x0180845C  CALL       A=17 B=3 C=2
+    0376 [line  291] 0x08C8844B  SELF       A=17 B=17 C=290 Bx=8994
+    0377 [line  291] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0378 [line  291] 0x0180445C  CALL       A=17 B=3 C=1
+    0379 [line  292] 0x000B8445  GETGLOBAL  R17 = GLOBAL K[46]='StringTable'
+    0380 [line  292] 0x08CBC446  GETTABLE   R17 = R17[K[47]='Get']
+    0381 [line  292] 0x000E0481  LOADK      R18 = K[56]=198.0
+    0382 [line  292] 0x0100845C  CALL       A=17 B=2 C=2
+    0383 [line  292] 0x08C6044B  SELF       A=17 B=17 C=280 Bx=8984
+    0384 [line  292] 0x004004C6  GETTABLE   R19 = R0[K[0]='m_SkillList']
+    0385 [line  292] 0x00404506  GETTABLE   R20 = R0[K[1]='m_CurrentSkill']
+    0386 [line  292] 0x098504C6  GETTABLE   R19 = R19[R20]
+    0387 [line  292] 0x09CD44C6  GETTABLE   R19 = R19[K[53]='skillLevel']
+    0388 [line  292] 0x09C504CC  ADD        A=19 B=R19 C=K[20]=1.0
+    0389 [line  292] 0x0180845C  CALL       A=17 B=3 C=2
+    0390 [line  293] 0x01800484  GETUPVAL   A=18 B=3 C=0 Bx=1536
+    0391 [line  293] 0x094A0486  GETTABLE   R18 = R18[K[40]='UpdateLable']
+    0392 [line  293] 0x088004C0  MOVE       R19 = R17
+    0393 [line  293] 0x0840C50B  SELF       A=20 B=16 C=259 Bx=8451
+    0394 [line  293] 0x000E4581  LOADK      R22 = K[57]='Txt_LevelHit'
+    0395 [line  293] 0x0180051C  CALL       A=20 B=3 C=0
+    0396 [line  293] 0x0000449C  CALL       A=18 B=0 C=1
+    0397 [line  294] 0x0080001E  RETURN     A=0 B=1 C=0
+    0398 [line  297] 0x00C0C44B  SELF       A=17 B=1 C=259 Bx=771
+    0399 [line  297] 0x000DC4C1  LOADK      R19 = K[55]='Group_Btn'
+    0400 [line  297] 0x0180845C  CALL       A=17 B=3 C=2
+    0401 [line  297] 0x08C8844B  SELF       A=17 B=17 C=290 Bx=8994
+    0402 [line  297] 0x008004C2  LOADBOOL   A=19 B=1 C=0
+    0403 [line  297] 0x0180445C  CALL       A=17 B=3 C=1
+    0404 [line  298] 0x02000444  GETUPVAL   A=17 B=4 C=0 Bx=2048
+    0405 [line  298] 0x08CE8446  GETTABLE   R17 = R17[K[58]='POSITION_MASTER']
+    0406 [line  298] 0x07044017  EQ         A=0 B=R14 C=R17
+    0407 [line  298] 0x800C0016  JMP        A=0 sBx=49
+    0408 [line  299] 0x00400446  GETTABLE   R17 = R0[K[0]='m_SkillList']
+    0409 [line  299] 0x00404486  GETTABLE   R18 = R0[K[1]='m_CurrentSkill']
+    0410 [line  299] 0x08848446  GETTABLE   R17 = R17[R18]
+    0411 [line  299] 0x08C48446  GETTABLE   R17 = R17[K[18]='nextSkillLevel']
+    0412 [line  299] 0x0000445A  TEST       A=17 B=0 C=1
+    0413 [line  299] 0x80018016  JMP        A=0 sBx=7
+    0414 [line  300] 0x07C8844B  SELF       A=17 B=15 C=290 Bx=7970
+    0415 [line  300] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0416 [line  300] 0x0180445C  CALL       A=17 B=3 C=1
+    0417 [line  301] 0x0148844B  SELF       A=17 B=2 C=290 Bx=1314
+    0418 [line  301] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0419 [line  301] 0x0180445C  CALL       A=17 B=3 C=1
+    0420 [line  301] 0x800A4016  JMP        A=0 sBx=42
+    0421 [line  305] 0x07CEC446  GETTABLE   R17 = R15[K[59]='collider']
+    0422 [line  305] 0x00400486  GETTABLE   R18 = R0[K[0]='m_SkillList']
+    0423 [line  305] 0x004044C6  GETTABLE   R19 = R0[K[1]='m_CurrentSkill']
+    0424 [line  305] 0x0904C486  GETTABLE   R18 = R18[R19]
+    0425 [line  305] 0x094F4486  GETTABLE   R18 = R18[K[61]='active']
+    0426 [line  305] 0x0000049A  TEST       A=18 B=0 C=0
+    0427 [line  305] 0x80020016  JMP        A=0 sBx=9
+    0428 [line  305] 0x034F8486  GETTABLE   R18 = R6[K[62]='_factionmoney']
+    0429 [line  305] 0x03848019  LE         A=0 B=R7 C=R18
+    0430 [line  305] 0x8000C016  JMP        A=0 sBx=4
+    0431 [line  305] 0x034FC48B  SELF       A=18 B=6 C=319 Bx=3391
+    0432 [line  305] 0x00100501  LOADK      R20 = K[64]='UPGRADESKILL'
+    0433 [line  305] 0x0180849C  CALL       A=18 B=3 C=2
+    0434 [line  305] 0x80004016  JMP        A=0 sBx=2
+    0435 [line  305] 0x00004482  LOADBOOL   A=18 B=0 C=1
+    0436 [line  305] 0x00800482  LOADBOOL   A=18 B=1 C=0
+    0437 [line  305] 0x9E048449  SETTABLE   R17[K[60]='enabled'] = R18
+    0438 [line  306] 0x07C8844B  SELF       A=17 B=15 C=290 Bx=7970
+    0439 [line  306] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0440 [line  306] 0x0180445C  CALL       A=17 B=3 C=1
+    0441 [line  307] 0x07C8844B  SELF       A=17 B=15 C=290 Bx=7970
+    0442 [line  307] 0x008004C2  LOADBOOL   A=19 B=1 C=0
+    0443 [line  307] 0x0180445C  CALL       A=17 B=3 C=1
+    0444 [line  308] 0x0148844B  SELF       A=17 B=2 C=290 Bx=1314
+    0445 [line  308] 0x008004C2  LOADBOOL   A=19 B=1 C=0
+    0446 [line  308] 0x0180445C  CALL       A=17 B=3 C=1
+    0447 [line  309] 0x01800444  GETUPVAL   A=17 B=3 C=0 Bx=1536
+    0448 [line  309] 0x08CA0446  GETTABLE   R17 = R17[K[40]='UpdateLable']
+    0449 [line  309] 0x000A4485  GETGLOBAL  R18 = GLOBAL K[41]='tostring'
+    0450 [line  309] 0x038004C0  MOVE       R19 = R7
+    0451 [line  309] 0x0100849C  CALL       A=18 B=2 C=2
+    0452 [line  309] 0x0140C4CB  SELF       A=19 B=2 C=259 Bx=1283
+    0453 [line  309] 0x00104541  LOADK      R21 = K[65]='Txt_MoneyNum'
+    0454 [line  309] 0x018004DC  CALL       A=19 B=3 C=0
+    0455 [line  309] 0x0000445C  CALL       A=17 B=0 C=1
+    0456 [line  310] 0x80014016  JMP        A=0 sBx=6
+    0457 [line  312] 0x0148844B  SELF       A=17 B=2 C=290 Bx=1314
+    0458 [line  312] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0459 [line  312] 0x0180445C  CALL       A=17 B=3 C=1
+    0460 [line  314] 0x07C8844B  SELF       A=17 B=15 C=290 Bx=7970
+    0461 [line  314] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0462 [line  314] 0x0180445C  CALL       A=17 B=3 C=1
+    0463 [line  316] 0x00C0C44B  SELF       A=17 B=1 C=259 Bx=771
+    0464 [line  316] 0x001084C1  LOADK      R19 = K[66]='Btn_Choose'
+    0465 [line  316] 0x0180845C  CALL       A=17 B=3 C=2
+    0466 [line  318] 0x00400486  GETTABLE   R18 = R0[K[0]='m_SkillList']
+    0467 [line  318] 0x004044C6  GETTABLE   R19 = R0[K[1]='m_CurrentSkill']
+    0468 [line  318] 0x0904C486  GETTABLE   R18 = R18[R19]
+    0469 [line  318] 0x0943C486  GETTABLE   R18 = R18[K[15]='currentSkillLevel']
+    0470 [line  318] 0x0000049A  TEST       A=18 B=0 C=0
+    0471 [line  318] 0x8000C016  JMP        A=0 sBx=4
+    0472 [line  318] 0x00404486  GETTABLE   R18 = R0[K[1]='m_CurrentSkill']
+    0473 [line  318] 0x0050C4C6  GETTABLE   R19 = R0[K[67]='m_ActiveSkill']
+    0474 [line  318] 0x0904C017  EQ         A=0 B=R18 C=R19
+    0475 [line  318] 0x80008016  JMP        A=0 sBx=3
+    0476 [line  319] 0x08CEC486  GETTABLE   R18 = R17[K[59]='collider']
+    0477 [line  319] 0x9E510489  SETTABLE   R18[K[60]='enabled'] = K[68]=False
+    0478 [line  319] 0x80004016  JMP        A=0 sBx=2
+    0479 [line  321] 0x08CEC486  GETTABLE   R18 = R17[K[59]='collider']
+    0480 [line  321] 0x9E514489  SETTABLE   R18[K[60]='enabled'] = K[69]=True
+    0481 [line  323] 0x08C8848B  SELF       A=18 B=17 C=290 Bx=8994
+    0482 [line  323] 0x00000502  LOADBOOL   A=20 B=0 C=0
+    0483 [line  323] 0x0180449C  CALL       A=18 B=3 C=1
+    0484 [line  324] 0x08C8848B  SELF       A=18 B=17 C=290 Bx=8994
+    0485 [line  324] 0x00800502  LOADBOOL   A=20 B=1 C=0
+    0486 [line  324] 0x0180449C  CALL       A=18 B=3 C=1
+    0487 [line  326] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 487
+    'groupSkill': 10 -> 487
+    'groupContribution': 13 -> 487
+    'txtSkillInfo': 16 -> 487
+    'txtSkillName': 19 -> 487
+    'groupAttribute': 22 -> 487
+    'faction': 27 -> 487
+    'upgradeContribution': 28 -> 487
+    'skillInfo': 32 -> 487
+    'skillName': 36 -> 487
+    'addonID': 37 -> 487
+    'addonGroup': 38 -> 487
+    'nextAddonID': 55 -> 487
+    'nextAddonGroup': 56 -> 487
+    '(for index)': 92 -> 335
+    '(for limit)': 92 -> 335
+    '(for step)': 92 -> 335
+    'i': 93 -> 334
+    'txtAttri': 102 -> 334
+    'attrName': 103 -> 334
+    'txtAttriCurrent': 112 -> 334
+    'addonType': 126 -> 185
+    'addAttribute': 133 -> 185
+    'templateName': 157 -> 181
+    'templateName': 203 -> 218
+    'default': 204 -> 218
+    'txtAttriNext': 231 -> 334
+    'addonType': 245 -> 307
+    'addAttribute': 252 -> 307
+    'templateName': 276 -> 303
+    'factionPosition': 350 -> 487
+    'btnUp': 353 -> 487
+    'groupHit': 356 -> 487
+    'tooltip': 390 -> 398
+    'btnChoose': 466 -> 487
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x3AA5
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 329 - 342
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Btn_Close'
+    K[001] = 'DestroyPanel'
+    K[002] = 'Btn_Up'
+    K[003] = 'UpgradeSkill'
+    K[004] = 'find'
+    K[005] = 'Skill'
+    K[006] = 1.0
+    K[007] = 'm_CurrentSkill'
+    K[008] = 'tonumber'
+    K[009] = 'sub'
+    K[010] = -2.0
+    K[011] = -1.0
+    K[012] = 0.0
+    K[013] = 'UpdateSkillUI'
+    K[014] = 'Btn_Choose'
+    K[015] = 'ActiveSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  330] 0x00C00017  EQ         A=0 B=R1 C=K[0]='Btn_Close'
+    0001 [line  330] 0x80008016  JMP        A=0 sBx=3
+    0002 [line  331] 0x0040408B  SELF       A=2 B=0 C=257 Bx=257
+    0003 [line  331] 0x0100409C  CALL       A=2 B=2 C=1
+    0004 [line  331] 0x80068016  JMP        A=0 sBx=27
+    0005 [line  332] 0x00C08017  EQ         A=0 B=R1 C=K[2]='Btn_Up'
+    0006 [line  332] 0x80008016  JMP        A=0 sBx=3
+    0007 [line  333] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0008 [line  333] 0x0100409C  CALL       A=2 B=2 C=1
+    0009 [line  333] 0x80054016  JMP        A=0 sBx=22
+    0010 [line  334] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0011 [line  334] 0x00014101  LOADK      R4 = K[5]='Skill'
+    0012 [line  334] 0x0180809C  CALL       A=2 B=3 C=2
+    0013 [line  334] 0x01418017  EQ         A=0 B=R2 C=K[6]=1.0
+    0014 [line  334] 0x80030016  JMP        A=0 sBx=13
+    0015 [line  335] 0x00020085  GETGLOBAL  R2 = GLOBAL K[8]='tonumber'
+    0016 [line  335] 0x00C240CB  SELF       A=3 B=1 C=265 Bx=777
+    0017 [line  335] 0x00028141  LOADK      R5 = K[10]=-2.0
+    0018 [line  335] 0x0002C181  LOADK      R6 = K[11]=-1.0
+    0019 [line  335] 0x020000DC  CALL       A=3 B=4 C=0
+    0020 [line  335] 0x0000809C  CALL       A=2 B=0 C=2
+    0021 [line  335] 0x83808009  SETTABLE   R0[K[7]='m_CurrentSkill'] = R2
+    0022 [line  336] 0x0041C086  GETTABLE   R2 = R0[K[7]='m_CurrentSkill']
+    0023 [line  336] 0x01430057  EQ         A=1 B=R2 C=K[12]=0.0
+    0024 [line  336] 0x80018016  JMP        A=0 sBx=7
+    0025 [line  337] 0x0043408B  SELF       A=2 B=0 C=269 Bx=269
+    0026 [line  337] 0x0100409C  CALL       A=2 B=2 C=1
+    0027 [line  338] 0x8000C016  JMP        A=0 sBx=4
+    0028 [line  339] 0x00C38017  EQ         A=0 B=R1 C=K[14]='Btn_Choose'
+    0029 [line  339] 0x80004016  JMP        A=0 sBx=2
+    0030 [line  340] 0x0043C08B  SELF       A=2 B=0 C=271 Bx=271
+    0031 [line  340] 0x0100409C  CALL       A=2 B=2 C=1
+    0032 [line  342] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 32
+    'id': 0 -> 32
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x3CCC
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 345 - 351
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'DestroyPanel'
+    K[002] = 'CreatePanel'
+    K[003] = 'RESPATH'
+    K[004] = 'Panel_FactionSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  346] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  346] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  346] 0x80008016  JMP        A=0 sBx=3
+    0003 [line  347] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0004 [line  347] 0x0100405C  CALL       A=1 B=2 C=1
+    0005 [line  347] 0x8000C016  JMP        A=0 sBx=4
+    0006 [line  349] 0x0040804B  SELF       A=1 B=0 C=258 Bx=258
+    0007 [line  349] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='RESPATH'
+    0008 [line  349] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Panel_FactionSkill']
+    0009 [line  349] 0x0180405C  CALL       A=1 B=3 C=1
+    0010 [line  351] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x3DB2
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 353 - 359
+    Params : 0
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECPanelFactionSkill'
+    K[002] = 'Instance'
+    K[003] = 'm_panel'
+    K[004] = 'UpdateUI'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  354] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0001 [line  354] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelFactionSkill'
+    0002 [line  354] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line  355] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0004 [line  355] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line  356] 0x00C0C086  GETTABLE   R2 = R1[K[3]='m_panel']
+    0006 [line  356] 0x0000009A  TEST       A=2 B=0 C=0
+    0007 [line  356] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  357] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0009 [line  357] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line  359] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECPanelFactionSkill': 3 -> 10
+    'instance': 5 -> 10
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x3EBA
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 361 - 364
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'UpdateUI'
+    K[001] = 'EventManager'
+    K[002] = 'addHandler'
+    K[003] = 'NotifyFactionInfo'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  362] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  362] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  363] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0003 [line  363] 0x00C04046  GETTABLE   R1 = R1[K[1]='EventManager']
+    0004 [line  363] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0005 [line  363] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0006 [line  363] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='NotifyFactionInfo']
+    0007 [line  363] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0008 [line  363] 0x0200405C  CALL       A=1 B=4 C=1
+    0009 [line  364] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x3FB6
+    Source : '@lua\\gui\\ecpanelfactionskill.lua'
+    Lines  : 366 - 368
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'EventManager'
+    K[001] = 'removeHandler'
+    K[002] = 'NotifyFactionInfo'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  367] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  367] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0002 [line  367] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0003 [line  367] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line  367] 0x01C080C6  GETTABLE   R3 = R3[K[2]='NotifyFactionInfo']
+    0005 [line  367] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0006 [line  367] 0x0200405C  CALL       A=1 B=4 C=1
+    0007 [line  368] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7

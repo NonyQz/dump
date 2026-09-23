@@ -1,0 +1,221 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_duke.lua
+SIZE: 2132
+PARSED: 2132
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_duke.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 8
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'Main.ECGame'
+K[003] = 'Event.DukeInfoChangeEvent'
+K[004] = 'GUI.ECPanelOfficer'
+K[005] = 'AddHandler'
+K[006] = 'gp_duke_notify'
+
+----- INSTRUCTIONS -----
+0000 [line    8] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    8] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    8] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    9] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    9] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    9] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   10] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line   10] 0x0000C0C1  LOADK      R3 = K[3]='Event.DukeInfoChangeEvent'
+0008 [line   10] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line   11] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line   11] 0x00010101  LOADK      R4 = K[4]='GUI.ECPanelOfficer'
+0011 [line   11] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line   74] 0x00000124  CLOSURE    R4 = PROTO[0]
+0013 [line   74] 0x01000000  MOVE       R0 = R2
+0014 [line   74] 0x00800000  MOVE       R0 = R1
+0015 [line   76] 0x00414146  GETTABLE   R5 = R0[K[5]='AddHandler']
+0016 [line   76] 0x00018181  LOADK      R6 = K[6]='gp_duke_notify'
+0017 [line   76] 0x020001C0  MOVE       R7 = R4
+0018 [line   76] 0x0180415C  CALL       A=5 B=3 C=1
+0019 [line   76] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 19
+'ECGame': 6 -> 19
+'DukeInfoChangeEvent': 9 -> 19
+'ECPanelOfficer': 12 -> 19
+'on_duke_notify': 15 -> 19
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x117
+    Source : '@lua\\pb\\pb_duke.lua'
+    Lines  : 18 - 74
+    Params : 2
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Players.ECDukeInfo'
+    K[002] = 'Instance'
+    K[003] = 'notify_type'
+    K[004] = 1.0
+    K[005] = 'IsInit'
+    K[006] = 'duke_level'
+    K[007] = 'reward_count'
+    K[008] = 'active_duke_skill'
+    K[009] = 0.0
+    K[010] = 'changeType'
+    K[011] = 'EventManager'
+    K[012] = 'raiseEvent'
+    K[013] = 'Event.DukeSkillChangeEvent'
+    K[014] = 'Event.DukeUpGradeEvent'
+    K[015] = 'm_HostPlayer'
+    K[016] = 'roleid'
+    K[017] = 'ID'
+    K[018] = 2.0
+    K[019] = 3.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   21] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line   21] 0x000040C1  LOADK      R3 = K[1]='Players.ECDukeInfo'
+    0002 [line   21] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line   22] 0x014080C6  GETTABLE   R3 = R2[K[2]='Instance']
+    0004 [line   22] 0x008080DC  CALL       A=3 B=1 C=2
+    0005 [line   23] 0x00C0C106  GETTABLE   R4 = R1[K[3]='notify_type']
+    0006 [line   23] 0x02410017  EQ         A=0 B=R4 C=K[4]=1.0
+    0007 [line   23] 0x80190016  JMP        A=0 sBx=101
+    0008 [line   25] 0x01C1410B  SELF       A=4 B=3 C=261 Bx=1797
+    0009 [line   25] 0x0100811C  CALL       A=4 B=2 C=2
+    0010 [line   26] 0x00C18146  GETTABLE   R5 = R1[K[6]='duke_level']
+    0011 [line   26] 0x01C18186  GETTABLE   R6 = R3[K[6]='duke_level']
+    0012 [line   26] 0x0281814D  SUB        A=5 B=R5 C=R6
+    0013 [line   27] 0x01C1C186  GETTABLE   R6 = R3[K[7]='reward_count']
+    0014 [line   27] 0x00C1C1C6  GETTABLE   R7 = R1[K[7]='reward_count']
+    0015 [line   27] 0x0301C18D  SUB        A=6 B=R6 C=R7
+    0016 [line   28] 0x01C201C6  GETTABLE   R7 = R3[K[8]='active_duke_skill']
+    0017 [line   28] 0x00C20206  GETTABLE   R8 = R1[K[8]='active_duke_skill']
+    0018 [line   28] 0x038201CD  SUB        A=7 B=R7 C=R8
+    0019 [line   30] 0x00C18206  GETTABLE   R8 = R1[K[6]='duke_level']
+    0020 [line   30] 0x830200C9  SETTABLE   R3[K[6]='duke_level'] = R8
+    0021 [line   31] 0x00C1C206  GETTABLE   R8 = R1[K[7]='reward_count']
+    0022 [line   31] 0x838200C9  SETTABLE   R3[K[7]='reward_count'] = R8
+    0023 [line   32] 0x00C20206  GETTABLE   R8 = R1[K[8]='active_duke_skill']
+    0024 [line   32] 0x840200C9  SETTABLE   R3[K[8]='active_duke_skill'] = R8
+    0025 [line   35] 0x02424017  EQ         A=0 B=R4 C=K[9]=0.0
+    0026 [line   35] 0x8004C016  JMP        A=0 sBx=20
+    0027 [line   36] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0028 [line   36] 0x0080821C  CALL       A=8 B=1 C=2
+    0029 [line   37] 0x85424209  SETTABLE   R8[K[10]='changeType'] = K[9]=0.0
+    0030 [line   38] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0031 [line   38] 0x04C2C246  GETTABLE   R9 = R9[K[11]='EventManager']
+    0032 [line   38] 0x04C3024B  SELF       A=9 B=9 C=268 Bx=4876
+    0033 [line   38] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+    0034 [line   38] 0x04000300  MOVE       R12 = R8
+    0035 [line   38] 0x0200425C  CALL       A=9 B=4 C=1
+    0036 [line   41] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+    0037 [line   41] 0x00034281  LOADK      R10 = K[13]='Event.DukeSkillChangeEvent'
+    0038 [line   41] 0x0100825C  CALL       A=9 B=2 C=2
+    0039 [line   42] 0x00800284  GETUPVAL   A=10 B=1 C=0 Bx=512
+    0040 [line   42] 0x0542C286  GETTABLE   R10 = R10[K[11]='EventManager']
+    0041 [line   42] 0x0543028B  SELF       A=10 B=10 C=268 Bx=5388
+    0042 [line   42] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0043 [line   42] 0x04800340  MOVE       R13 = R9
+    0044 [line   42] 0x0080035C  CALL       A=13 B=1 C=0
+    0045 [line   42] 0x0000429C  CALL       A=10 B=0 C=1
+    0046 [line   42] 0x800F4016  JMP        A=0 sBx=62
+    0047 [line   44] 0x84814018  LT         A=0 B=K[9]=0.0 C=R5
+    0048 [line   44] 0x8006C016  JMP        A=0 sBx=28
+    0049 [line   45] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+    0050 [line   45] 0x00038241  LOADK      R9 = K[14]='Event.DukeUpGradeEvent'
+    0051 [line   45] 0x0100821C  CALL       A=8 B=2 C=2
+    0052 [line   46] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0053 [line   46] 0x04C08246  GETTABLE   R9 = R9[K[2]='Instance']
+    0054 [line   46] 0x0080825C  CALL       A=9 B=1 C=2
+    0055 [line   46] 0x04C3C246  GETTABLE   R9 = R9[K[15]='m_HostPlayer']
+    0056 [line   47] 0x04000280  MOVE       R10 = R8
+    0057 [line   47] 0x0080829C  CALL       A=10 B=1 C=2
+    0058 [line   48] 0x0000025A  TEST       A=9 B=0 C=0
+    0059 [line   48] 0x80004016  JMP        A=0 sBx=2
+    0060 [line   49] 0x04C442C6  GETTABLE   R11 = R9[K[17]='ID']
+    0061 [line   49] 0x8802C289  SETTABLE   R10[K[16]='roleid'] = R11
+    0062 [line   51] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0063 [line   51] 0x05C2C2C6  GETTABLE   R11 = R11[K[11]='EventManager']
+    0064 [line   51] 0x05C302CB  SELF       A=11 B=11 C=268 Bx=5900
+    0065 [line   51] 0x06800343  LOADNIL    A=13 B=13 C=0 Bx=6656
+    0066 [line   51] 0x05000380  MOVE       R14 = R10
+    0067 [line   51] 0x020042DC  CALL       A=11 B=4 C=1
+    0068 [line   53] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0069 [line   53] 0x008082DC  CALL       A=11 B=1 C=2
+    0070 [line   54] 0x854482C9  SETTABLE   R11[K[10]='changeType'] = K[18]=2.0
+    0071 [line   55] 0x00800304  GETUPVAL   A=12 B=1 C=0 Bx=512
+    0072 [line   55] 0x0642C306  GETTABLE   R12 = R12[K[11]='EventManager']
+    0073 [line   55] 0x0643030B  SELF       A=12 B=12 C=268 Bx=6412
+    0074 [line   55] 0x07000383  LOADNIL    A=14 B=14 C=0 Bx=7168
+    0075 [line   55] 0x058003C0  MOVE       R15 = R11
+    0076 [line   55] 0x0200431C  CALL       A=12 B=4 C=1
+    0077 [line   58] 0x03424057  EQ         A=1 B=R6 C=K[9]=0.0
+    0078 [line   58] 0x80020016  JMP        A=0 sBx=9
+    0079 [line   59] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0080 [line   59] 0x0080821C  CALL       A=8 B=1 C=2
+    0081 [line   60] 0x85410209  SETTABLE   R8[K[10]='changeType'] = K[4]=1.0
+    0082 [line   61] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0083 [line   61] 0x04C2C246  GETTABLE   R9 = R9[K[11]='EventManager']
+    0084 [line   61] 0x04C3024B  SELF       A=9 B=9 C=268 Bx=4876
+    0085 [line   61] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+    0086 [line   61] 0x04000300  MOVE       R12 = R8
+    0087 [line   61] 0x0200425C  CALL       A=9 B=4 C=1
+    0088 [line   64] 0x03C24057  EQ         A=1 B=R7 C=K[9]=0.0
+    0089 [line   64] 0x80048016  JMP        A=0 sBx=19
+    0090 [line   65] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+    0091 [line   65] 0x00034241  LOADK      R9 = K[13]='Event.DukeSkillChangeEvent'
+    0092 [line   65] 0x0100821C  CALL       A=8 B=2 C=2
+    0093 [line   66] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0094 [line   66] 0x04C2C246  GETTABLE   R9 = R9[K[11]='EventManager']
+    0095 [line   66] 0x04C3024B  SELF       A=9 B=9 C=268 Bx=4876
+    0096 [line   66] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+    0097 [line   66] 0x04000300  MOVE       R12 = R8
+    0098 [line   66] 0x0080031C  CALL       A=12 B=1 C=0
+    0099 [line   66] 0x0000425C  CALL       A=9 B=0 C=1
+    0100 [line   68] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0101 [line   68] 0x0080825C  CALL       A=9 B=1 C=2
+    0102 [line   69] 0x8544C249  SETTABLE   R9[K[10]='changeType'] = K[19]=3.0
+    0103 [line   70] 0x00800284  GETUPVAL   A=10 B=1 C=0 Bx=512
+    0104 [line   70] 0x0542C286  GETTABLE   R10 = R10[K[11]='EventManager']
+    0105 [line   70] 0x0543028B  SELF       A=10 B=10 C=268 Bx=5388
+    0106 [line   70] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0107 [line   70] 0x04800340  MOVE       R13 = R9
+    0108 [line   70] 0x0200429C  CALL       A=10 B=4 C=1
+    0109 [line   74] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 109
+    'msg': 0 -> 109
+    'ECDukeInfo': 3 -> 109
+    'DukeInfo': 5 -> 109
+    'retKey': 10 -> 109
+    'isUpLv': 13 -> 109
+    'isGet': 16 -> 109
+    'useSkill': 19 -> 109
+    'event': 29 -> 46
+    'DukeSkillChangeEvent': 39 -> 46
+    'DukeUpGradeEvent': 52 -> 77
+    'host': 56 -> 77
+    'event': 58 -> 77
+    'event': 70 -> 77
+    'event': 81 -> 88
+    'DukeSkillChangeEvent': 93 -> 109
+    'event': 102 -> 109

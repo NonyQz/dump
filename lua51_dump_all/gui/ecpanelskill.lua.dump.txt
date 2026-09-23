@@ -1,0 +1,3696 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpanelskill.lua
+SIZE: 35864
+PARSED: 35864
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpanelskill.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 39
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Types.Vector3'
+K[003] = 'GUI.ECPanelBase'
+K[004] = 'GUI.ECPanelTaskInfo'
+K[005] = 'GUI.ECPanelChar'
+K[006] = 'Utility.ECUIUtility'
+K[007] = 'Data.ElementData'
+K[008] = 'Event.NotifyXPEvent'
+K[009] = 'Event.HostPlayerReadyEvent'
+K[010] = 'Event.SkillCoolDownEvent'
+K[011] = 'Event.IvtrUpdateEvent'
+K[012] = 'Event.DukeSkillChangeEvent'
+K[013] = 'Event.HostSkillEvents'
+K[014] = 'HostRuneInfoEvent'
+K[015] = 'Guide.ECFunctionUnlockEvents'
+K[016] = 'Data.Exptypes'
+K[017] = 'Skill.ECSkillHelper'
+K[018] = 'Skill.ElementSkill'
+K[019] = 'Guide.ECFunctionUnlock'
+K[020] = 'Utility.GcCallbacks'
+K[021] = 'PB.net_common'
+K[022] = 'PB.pb_helper'
+K[023] = 'GUI.ECGUITools'
+K[024] = 'Data.Expdef'
+K[025] = 'bit'
+K[026] = 'Data.SkillIDsCfg'
+K[027] = 'ForwardDeclare'
+K[028] = 'ECGame'
+K[029] = 'Extend'
+K[030] = 'ECPanelSkill'
+K[031] = 'define'
+K[032] = 6.0
+K[033] = 'field'
+K[034] = 'userdata'
+K[035] = 'BtnStart'
+K[036] = None
+K[037] = 'BtnStop'
+K[038] = 'XPFullEffect'
+K[039] = 'number'
+K[040] = 'CommonAttackIndex'
+K[041] = 1.0
+K[042] = 'CAIResetTimer'
+K[043] = 0.0
+K[044] = 'm_chariotFixingTimer'
+K[045] = 'm_cleaner'
+K[046] = 'table'
+K[047] = 'SkillSlotInfo'
+K[048] = 'cast_skill_timer'
+K[049] = 'boolean'
+K[050] = 'ignore_next_cast'
+K[051] = False
+K[052] = 'mContinue'
+K[053] = 'static'
+K[054] = '=>'
+K[055] = 'Instance'
+K[056] = 'method'
+K[057] = 'isHostInDart'
+K[058] = 'override'
+K[059] = 'OnCreate'
+K[060] = 'OnDestroy'
+K[061] = 'UpdateChariotGetOnButton'
+K[062] = 'string'
+K[063] = 'onClick'
+K[064] = 'onPress'
+K[065] = 'onDrag'
+K[066] = 'CastSkillMannally'
+K[067] = 'GetActiveSkill'
+K[068] = 'InitControls'
+K[069] = 'UpdateSkillIcons'
+K[070] = 'PlayLearnSkillGfx'
+K[071] = 'UpdateDukeSkillIcon'
+K[072] = 'UpdateSkillCDInfo'
+K[073] = 'RefreshXPSkill'
+K[074] = 'UpdateCoolDownState'
+K[075] = 'UpdateDrugCount'
+K[076] = 'UpdateChangxingDrug'
+K[077] = 'ChangeLayer'
+K[078] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    2] 0x00008081  LOADK      R2 = K[2]='Types.Vector3'
+0005 [line    2] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    3] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    3] 0x0000C0C1  LOADK      R3 = K[3]='GUI.ECPanelBase'
+0008 [line    3] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    4] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    4] 0x00010101  LOADK      R4 = K[4]='GUI.ECPanelTaskInfo'
+0011 [line    4] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    5] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    5] 0x00014141  LOADK      R5 = K[5]='GUI.ECPanelChar'
+0014 [line    5] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    7] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    7] 0x00018181  LOADK      R6 = K[6]='Utility.ECUIUtility'
+0017 [line    7] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    8] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line    8] 0x0001C1C1  LOADK      R7 = K[7]='Data.ElementData'
+0020 [line    8] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    9] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    9] 0x00020201  LOADK      R8 = K[8]='Event.NotifyXPEvent'
+0023 [line    9] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   10] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line   10] 0x00024241  LOADK      R9 = K[9]='Event.HostPlayerReadyEvent'
+0026 [line   10] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   11] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   11] 0x00028281  LOADK      R10 = K[10]='Event.SkillCoolDownEvent'
+0029 [line   11] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   12] 0x00000285  GETGLOBAL  R10 = GLOBAL K[0]='require'
+0031 [line   12] 0x0002C2C1  LOADK      R11 = K[11]='Event.IvtrUpdateEvent'
+0032 [line   12] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   13] 0x000002C5  GETGLOBAL  R11 = GLOBAL K[0]='require'
+0034 [line   13] 0x00030301  LOADK      R12 = K[12]='Event.DukeSkillChangeEvent'
+0035 [line   13] 0x010082DC  CALL       A=11 B=2 C=2
+0036 [line   14] 0x00000305  GETGLOBAL  R12 = GLOBAL K[0]='require'
+0037 [line   14] 0x00034341  LOADK      R13 = K[13]='Event.HostSkillEvents'
+0038 [line   14] 0x0100831C  CALL       A=12 B=2 C=2
+0039 [line   14] 0x06438306  GETTABLE   R12 = R12[K[14]='HostRuneInfoEvent']
+0040 [line   15] 0x00000345  GETGLOBAL  R13 = GLOBAL K[0]='require'
+0041 [line   15] 0x0003C381  LOADK      R14 = K[15]='Guide.ECFunctionUnlockEvents'
+0042 [line   15] 0x0100835C  CALL       A=13 B=2 C=2
+0043 [line   16] 0x00000385  GETGLOBAL  R14 = GLOBAL K[0]='require'
+0044 [line   16] 0x000403C1  LOADK      R15 = K[16]='Data.Exptypes'
+0045 [line   16] 0x0100839C  CALL       A=14 B=2 C=2
+0046 [line   17] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+0047 [line   17] 0x00044401  LOADK      R16 = K[17]='Skill.ECSkillHelper'
+0048 [line   17] 0x010083DC  CALL       A=15 B=2 C=2
+0049 [line   18] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+0050 [line   18] 0x00048441  LOADK      R17 = K[18]='Skill.ElementSkill'
+0051 [line   18] 0x0100841C  CALL       A=16 B=2 C=2
+0052 [line   19] 0x00000445  GETGLOBAL  R17 = GLOBAL K[0]='require'
+0053 [line   19] 0x0004C481  LOADK      R18 = K[19]='Guide.ECFunctionUnlock'
+0054 [line   19] 0x0100845C  CALL       A=17 B=2 C=2
+0055 [line   20] 0x00000485  GETGLOBAL  R18 = GLOBAL K[0]='require'
+0056 [line   20] 0x000504C1  LOADK      R19 = K[20]='Utility.GcCallbacks'
+0057 [line   20] 0x0100849C  CALL       A=18 B=2 C=2
+0058 [line   21] 0x000004C5  GETGLOBAL  R19 = GLOBAL K[0]='require'
+0059 [line   21] 0x00054501  LOADK      R20 = K[21]='PB.net_common'
+0060 [line   21] 0x010084DC  CALL       A=19 B=2 C=2
+0061 [line   22] 0x00000505  GETGLOBAL  R20 = GLOBAL K[0]='require'
+0062 [line   22] 0x00058541  LOADK      R21 = K[22]='PB.pb_helper'
+0063 [line   22] 0x0100851C  CALL       A=20 B=2 C=2
+0064 [line   23] 0x00000545  GETGLOBAL  R21 = GLOBAL K[0]='require'
+0065 [line   23] 0x0005C581  LOADK      R22 = K[23]='GUI.ECGUITools'
+0066 [line   23] 0x0100855C  CALL       A=21 B=2 C=2
+0067 [line   24] 0x00000585  GETGLOBAL  R22 = GLOBAL K[0]='require'
+0068 [line   24] 0x000605C1  LOADK      R23 = K[24]='Data.Expdef'
+0069 [line   24] 0x0100859C  CALL       A=22 B=2 C=2
+0070 [line   25] 0x000005C5  GETGLOBAL  R23 = GLOBAL K[0]='require'
+0071 [line   25] 0x00064601  LOADK      R24 = K[25]='bit'
+0072 [line   25] 0x010085DC  CALL       A=23 B=2 C=2
+0073 [line   27] 0x00000605  GETGLOBAL  R24 = GLOBAL K[0]='require'
+0074 [line   27] 0x00068641  LOADK      R25 = K[26]='Data.SkillIDsCfg'
+0075 [line   27] 0x0100861C  CALL       A=24 B=2 C=2
+0076 [line   29] 0x0046C646  GETTABLE   R25 = R0[K[27]='ForwardDeclare']
+0077 [line   29] 0x00070681  LOADK      R26 = K[28]='ECGame'
+0078 [line   29] 0x0100865C  CALL       A=25 B=2 C=2
+0079 [line   31] 0x00474686  GETTABLE   R26 = R0[K[29]='Extend']
+0080 [line   31] 0x010006C0  MOVE       R27 = R2
+0081 [line   31] 0x00078701  LOADK      R28 = K[30]='ECPanelSkill'
+0082 [line   31] 0x0180869C  CALL       A=26 B=3 C=2
+0083 [line   32] 0x0D47C6C6  GETTABLE   R27 = R26[K[31]='define']
+0084 [line   34] 0x00080701  LOADK      R28 = K[32]=6.0
+0085 [line   36] 0x0E800743  LOADNIL    A=29 B=29 C=0 Bx=14848
+0086 [line   39] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0087 [line   39] 0x000887C1  LOADK      R31 = K[34]='userdata'
+0088 [line   39] 0x0100879C  CALL       A=30 B=2 C=2
+0089 [line   39] 0x91C90789  SETTABLE   R30[K[35]='BtnStart'] = K[36]=None
+0090 [line   40] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0091 [line   40] 0x000887C1  LOADK      R31 = K[34]='userdata'
+0092 [line   40] 0x0100879C  CALL       A=30 B=2 C=2
+0093 [line   40] 0x92C90789  SETTABLE   R30[K[37]='BtnStop'] = K[36]=None
+0094 [line   41] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0095 [line   41] 0x000887C1  LOADK      R31 = K[34]='userdata'
+0096 [line   41] 0x0100879C  CALL       A=30 B=2 C=2
+0097 [line   41] 0x93490789  SETTABLE   R30[K[38]='XPFullEffect'] = K[36]=None
+0098 [line   43] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0099 [line   43] 0x0009C7C1  LOADK      R31 = K[39]='number'
+0100 [line   43] 0x0100879C  CALL       A=30 B=2 C=2
+0101 [line   43] 0x944A4789  SETTABLE   R30[K[40]='CommonAttackIndex'] = K[41]=1.0
+0102 [line   44] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0103 [line   44] 0x0009C7C1  LOADK      R31 = K[39]='number'
+0104 [line   44] 0x0100879C  CALL       A=30 B=2 C=2
+0105 [line   44] 0x954AC789  SETTABLE   R30[K[42]='CAIResetTimer'] = K[43]=0.0
+0106 [line   45] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0107 [line   45] 0x0009C7C1  LOADK      R31 = K[39]='number'
+0108 [line   45] 0x0100879C  CALL       A=30 B=2 C=2
+0109 [line   45] 0x964AC789  SETTABLE   R30[K[44]='m_chariotFixingTimer'] = K[43]=0.0
+0110 [line   47] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0111 [line   47] 0x090007C0  MOVE       R31 = R18
+0112 [line   47] 0x0100879C  CALL       A=30 B=2 C=2
+0113 [line   47] 0x96C90789  SETTABLE   R30[K[45]='m_cleaner'] = K[36]=None
+0114 [line   50] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0115 [line   50] 0x000B87C1  LOADK      R31 = K[46]='table'
+0116 [line   50] 0x0100879C  CALL       A=30 B=2 C=2
+0117 [line   50] 0x000007E4  CLOSURE    R31 = PROTO[0]
+0118 [line   50] 0x9787C789  SETTABLE   R30[K[47]='SkillSlotInfo'] = R31
+0119 [line   51] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0120 [line   51] 0x0009C7C1  LOADK      R31 = K[39]='number'
+0121 [line   51] 0x0100879C  CALL       A=30 B=2 C=2
+0122 [line   51] 0x984AC789  SETTABLE   R30[K[48]='cast_skill_timer'] = K[43]=0.0
+0123 [line   53] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0124 [line   53] 0x000C47C1  LOADK      R31 = K[49]='boolean'
+0125 [line   53] 0x0100879C  CALL       A=30 B=2 C=2
+0126 [line   53] 0x994CC789  SETTABLE   R30[K[50]='ignore_next_cast'] = K[51]=False
+0127 [line   54] 0x0DC84786  GETTABLE   R30 = R27[K[33]='field']
+0128 [line   54] 0x000C47C1  LOADK      R31 = K[49]='boolean'
+0129 [line   54] 0x0100879C  CALL       A=30 B=2 C=2
+0130 [line   54] 0x9A4CC789  SETTABLE   R30[K[52]='mContinue'] = K[51]=False
+0131 [line   57] 0x0DCD4786  GETTABLE   R30 = R27[K[53]='static']
+0132 [line   57] 0x000D87C1  LOADK      R31 = K[54]='=>'
+0133 [line   57] 0x0D000800  MOVE       R32 = R26
+0134 [line   57] 0x0180879C  CALL       A=30 B=3 C=2
+0135 [line   62] 0x000047E4  CLOSURE    R31 = PROTO[1]
+0136 [line   62] 0x0E800000  MOVE       R0 = R29
+0137 [line   62] 0x0D000000  MOVE       R0 = R26
+0138 [line   62] 0x9B87C789  SETTABLE   R30[K[55]='Instance'] = R31
+0139 [line   68] 0x000087A4  CLOSURE    R30 = PROTO[2]
+0140 [line   68] 0x0E800000  MOVE       R0 = R29
+0141 [line   76] 0x0000C7E4  CLOSURE    R31 = PROTO[3]
+0142 [line   76] 0x0E800000  MOVE       R0 = R29
+0143 [line   82] 0x00010824  CLOSURE    R32 = PROTO[4]
+0144 [line   82] 0x0E800000  MOVE       R0 = R29
+0145 [line   88] 0x00014864  CLOSURE    R33 = PROTO[5]
+0146 [line   88] 0x0E800000  MOVE       R0 = R29
+0147 [line   96] 0x000188A4  CLOSURE    R34 = PROTO[6]
+0148 [line   96] 0x0E800000  MOVE       R0 = R29
+0149 [line   98] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0150 [line   98] 0x000D8901  LOADK      R36 = K[54]='=>'
+0151 [line   98] 0x000C4941  LOADK      R37 = K[49]='boolean'
+0152 [line   98] 0x018088DC  CALL       A=35 B=3 C=2
+0153 [line  105] 0x0001C924  CLOSURE    R36 = PROTO[7]
+0154 [line  105] 0x0C800000  MOVE       R0 = R25
+0155 [line  105] 0x9C8908C9  SETTABLE   R35[K[57]='isHostInDart'] = R36
+0156 [line  107] 0x0DCE88C6  GETTABLE   R35 = R27[K[58]='override']
+0157 [line  107] 0x008088DC  CALL       A=35 B=1 C=2
+0158 [line  215] 0x00020924  CLOSURE    R36 = PROTO[8]
+0159 [line  215] 0x09000000  MOVE       R0 = R18
+0160 [line  215] 0x07000000  MOVE       R0 = R14
+0161 [line  215] 0x0C800000  MOVE       R0 = R25
+0162 [line  215] 0x04000000  MOVE       R0 = R8
+0163 [line  215] 0x0F800000  MOVE       R0 = R31
+0164 [line  215] 0x03800000  MOVE       R0 = R7
+0165 [line  215] 0x0F000000  MOVE       R0 = R30
+0166 [line  215] 0x04800000  MOVE       R0 = R9
+0167 [line  215] 0x10000000  MOVE       R0 = R32
+0168 [line  215] 0x05000000  MOVE       R0 = R10
+0169 [line  215] 0x10800000  MOVE       R0 = R33
+0170 [line  215] 0x05800000  MOVE       R0 = R11
+0171 [line  215] 0x11000000  MOVE       R0 = R34
+0172 [line  215] 0x06000000  MOVE       R0 = R12
+0173 [line  215] 0x06800000  MOVE       R0 = R13
+0174 [line  215] 0x0E800000  MOVE       R0 = R29
+0175 [line  215] 0x02800000  MOVE       R0 = R5
+0176 [line  215] 0x0A800000  MOVE       R0 = R21
+0177 [line  215] 0x9D8908C9  SETTABLE   R35[K[59]='OnCreate'] = R36
+0178 [line  217] 0x0DCE88C6  GETTABLE   R35 = R27[K[58]='override']
+0179 [line  217] 0x008088DC  CALL       A=35 B=1 C=2
+0180 [line  243] 0x00024924  CLOSURE    R36 = PROTO[9]
+0181 [line  243] 0x0C800000  MOVE       R0 = R25
+0182 [line  243] 0x9E0908C9  SETTABLE   R35[K[60]='OnDestroy'] = R36
+0183 [line  245] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0184 [line  245] 0x008088DC  CALL       A=35 B=1 C=2
+0185 [line  261] 0x00028924  CLOSURE    R36 = PROTO[10]
+0186 [line  261] 0x0C800000  MOVE       R0 = R25
+0187 [line  261] 0x9E8908C9  SETTABLE   R35[K[61]='UpdateChariotGetOnButton'] = R36
+0188 [line  263] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0189 [line  263] 0x000F8901  LOADK      R36 = K[62]='string'
+0190 [line  263] 0x010088DC  CALL       A=35 B=2 C=2
+0191 [line  403] 0x0002C924  CLOSURE    R36 = PROTO[11]
+0192 [line  403] 0x0C800000  MOVE       R0 = R25
+0193 [line  403] 0x03000000  MOVE       R0 = R6
+0194 [line  403] 0x07000000  MOVE       R0 = R14
+0195 [line  403] 0x09800000  MOVE       R0 = R19
+0196 [line  403] 0x0A000000  MOVE       R0 = R20
+0197 [line  403] 0x9F8908C9  SETTABLE   R35[K[63]='onClick'] = R36
+0198 [line  404] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0199 [line  404] 0x000F8901  LOADK      R36 = K[62]='string'
+0200 [line  404] 0x000C4941  LOADK      R37 = K[49]='boolean'
+0201 [line  404] 0x018088DC  CALL       A=35 B=3 C=2
+0202 [line  412] 0x00030924  CLOSURE    R36 = PROTO[12]
+0203 [line  412] 0xA00908C9  SETTABLE   R35[K[64]='onPress'] = R36
+0204 [line  414] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0205 [line  414] 0x000F8901  LOADK      R36 = K[62]='string'
+0206 [line  414] 0x0009C941  LOADK      R37 = K[39]='number'
+0207 [line  414] 0x0009C981  LOADK      R38 = K[39]='number'
+0208 [line  414] 0x020088DC  CALL       A=35 B=4 C=2
+0209 [line  425] 0x00034924  CLOSURE    R36 = PROTO[13]
+0210 [line  425] 0xA08908C9  SETTABLE   R35[K[65]='onDrag'] = R36
+0211 [line  427] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0212 [line  427] 0x0009C901  LOADK      R36 = K[39]='number'
+0213 [line  427] 0x010088DC  CALL       A=35 B=2 C=2
+0214 [line  517] 0x00038924  CLOSURE    R36 = PROTO[14]
+0215 [line  517] 0x0C800000  MOVE       R0 = R25
+0216 [line  517] 0x0E000000  MOVE       R0 = R28
+0217 [line  517] 0x0C000000  MOVE       R0 = R24
+0218 [line  517] 0xA10908C9  SETTABLE   R35[K[66]='CastSkillMannally'] = R36
+0219 [line  531] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0220 [line  531] 0x0009C901  LOADK      R36 = K[39]='number'
+0221 [line  531] 0x000D8941  LOADK      R37 = K[54]='=>'
+0222 [line  531] 0x0009C981  LOADK      R38 = K[39]='number'
+0223 [line  531] 0x020088DC  CALL       A=35 B=4 C=2
+0224 [line  536] 0x0003C924  CLOSURE    R36 = PROTO[15]
+0225 [line  536] 0x0E000000  MOVE       R0 = R28
+0226 [line  536] 0xA18908C9  SETTABLE   R35[K[67]='GetActiveSkill'] = R36
+0227 [line  538] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0228 [line  538] 0x008088DC  CALL       A=35 B=1 C=2
+0229 [line  579] 0x00040924  CLOSURE    R36 = PROTO[16]
+0230 [line  579] 0x0E000000  MOVE       R0 = R28
+0231 [line  579] 0x0A800000  MOVE       R0 = R21
+0232 [line  579] 0xA20908C9  SETTABLE   R35[K[68]='InitControls'] = R36
+0233 [line  581] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0234 [line  581] 0x008088DC  CALL       A=35 B=1 C=2
+0235 [line  620] 0x00044924  CLOSURE    R36 = PROTO[17]
+0236 [line  620] 0x0C800000  MOVE       R0 = R25
+0237 [line  620] 0x0C000000  MOVE       R0 = R24
+0238 [line  620] 0x02800000  MOVE       R0 = R5
+0239 [line  620] 0x08800000  MOVE       R0 = R17
+0240 [line  620] 0xA28908C9  SETTABLE   R35[K[69]='UpdateSkillIcons'] = R36
+0241 [line  622] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0242 [line  622] 0x0009C901  LOADK      R36 = K[39]='number'
+0243 [line  622] 0x010088DC  CALL       A=35 B=2 C=2
+0244 [line  629] 0x00048924  CLOSURE    R36 = PROTO[18]
+0245 [line  629] 0x02800000  MOVE       R0 = R5
+0246 [line  629] 0xA30908C9  SETTABLE   R35[K[70]='PlayLearnSkillGfx'] = R36
+0247 [line  632] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0248 [line  632] 0x008088DC  CALL       A=35 B=1 C=2
+0249 [line  673] 0x0004C924  CLOSURE    R36 = PROTO[19]
+0250 [line  673] 0x02800000  MOVE       R0 = R5
+0251 [line  673] 0xA38908C9  SETTABLE   R35[K[71]='UpdateDukeSkillIcon'] = R36
+0252 [line  675] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0253 [line  675] 0x008088DC  CALL       A=35 B=1 C=2
+0254 [line  706] 0x00050924  CLOSURE    R36 = PROTO[20]
+0255 [line  706] 0x0C800000  MOVE       R0 = R25
+0256 [line  706] 0x08000000  MOVE       R0 = R16
+0257 [line  706] 0xA40908C9  SETTABLE   R35[K[72]='UpdateSkillCDInfo'] = R36
+0258 [line  708] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0259 [line  708] 0x008088DC  CALL       A=35 B=1 C=2
+0260 [line  729] 0x00054924  CLOSURE    R36 = PROTO[21]
+0261 [line  729] 0x0C800000  MOVE       R0 = R25
+0262 [line  729] 0xA48908C9  SETTABLE   R35[K[73]='RefreshXPSkill'] = R36
+0263 [line  731] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0264 [line  731] 0x04800900  MOVE       R36 = R9
+0265 [line  731] 0x010088DC  CALL       A=35 B=2 C=2
+0266 [line  760] 0x00058924  CLOSURE    R36 = PROTO[22]
+0267 [line  760] 0x0E000000  MOVE       R0 = R28
+0268 [line  760] 0xA50908C9  SETTABLE   R35[K[74]='UpdateCoolDownState'] = R36
+0269 [line  762] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0270 [line  762] 0x008088DC  CALL       A=35 B=1 C=2
+0271 [line  768] 0x0005C924  CLOSURE    R36 = PROTO[23]
+0272 [line  768] 0x0C800000  MOVE       R0 = R25
+0273 [line  768] 0xA58908C9  SETTABLE   R35[K[75]='UpdateDrugCount'] = R36
+0274 [line  770] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0275 [line  770] 0x008088DC  CALL       A=35 B=1 C=2
+0276 [line  794] 0x00060924  CLOSURE    R36 = PROTO[24]
+0277 [line  794] 0x0C800000  MOVE       R0 = R25
+0278 [line  794] 0x0B800000  MOVE       R0 = R23
+0279 [line  794] 0x0A800000  MOVE       R0 = R21
+0280 [line  794] 0xA60908C9  SETTABLE   R35[K[76]='UpdateChangxingDrug'] = R36
+0281 [line  796] 0x0DCE08C6  GETTABLE   R35 = R27[K[56]='method']
+0282 [line  796] 0x0009C901  LOADK      R36 = K[39]='number'
+0283 [line  796] 0x010088DC  CALL       A=35 B=2 C=2
+0284 [line  814] 0x00064924  CLOSURE    R36 = PROTO[25]
+0285 [line  814] 0x0C800000  MOVE       R0 = R25
+0286 [line  814] 0xA68908C9  SETTABLE   R35[K[77]='ChangeLayer'] = R36
+0287 [line  816] 0x0D5388C6  GETTABLE   R35 = R26[K[78]='Commit']
+0288 [line  816] 0x008048DC  CALL       A=35 B=1 C=1
+0289 [line  817] 0x0100069E  RETURN     A=26 B=2 C=0
+0290 [line  817] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 290
+'EC': 6 -> 290
+'ECPanelBase': 9 -> 290
+'ECPanelTaskInfo': 12 -> 290
+'ECPanelChar': 15 -> 290
+'ECUIUtility': 18 -> 290
+'ElementData': 21 -> 290
+'NotifyXPEvent': 24 -> 290
+'HostPlayerReadyEvent': 27 -> 290
+'SkillCoolDownEvent': 30 -> 290
+'IvtrUpdateEvent': 33 -> 290
+'DukeSkillChangeEvent': 36 -> 290
+'HostRuneInfoEvent': 40 -> 290
+'ECFunctionUnlockEvents': 43 -> 290
+'Exptypes': 46 -> 290
+'ECSkillHelper': 49 -> 290
+'ElementSkill': 52 -> 290
+'ECFunctionUnlock': 55 -> 290
+'GcCallbacks': 58 -> 290
+'net_common': 61 -> 290
+'pb_helper': 64 -> 290
+'ECGUITools': 67 -> 290
+'Expdef': 70 -> 290
+'bit': 73 -> 290
+'SkillIDsCfg': 76 -> 290
+'ECGame': 79 -> 290
+'ECPanelSkill': 83 -> 290
+'def': 84 -> 290
+'SKILL_ICON_COUNT': 85 -> 290
+'m_Instance': 86 -> 290
+'OnXPChangeEvent': 141 -> 290
+'OnHostPlayerReadyEvent': 143 -> 290
+'OnSkillCoolDownEvent': 145 -> 290
+'OnIvtrUpdateEvent': 147 -> 290
+'OnDukeSkillChangeEvent': 149 -> 290
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xA73
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 50 - 50
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   50] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   50] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   50] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xAB3
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 57 - 62
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line   58] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   58] 0x00400017  EQ         A=0 B=R0 C=K[0]=None
+    0002 [line   58] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   59] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   59] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   59] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   61] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   61] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   62] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xB44
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 64 - 68
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'm_panel'
+    K[002] = 'RefreshXPSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   65] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   65] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0002 [line   65] 0x80018016  JMP        A=0 sBx=7
+    0003 [line   65] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   65] 0x01404086  GETTABLE   R2 = R2[K[1]='m_panel']
+    0005 [line   65] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0006 [line   65] 0x80008016  JMP        A=0 sBx=3
+    0007 [line   66] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0008 [line   66] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0009 [line   66] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 10
+    'event': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xC1A
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 70 - 76
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'm_panel'
+    K[002] = 'UpdateSkillIcons'
+    K[003] = 'UpdateSkillCDInfo'
+    K[004] = 'RefreshXPSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   71] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   71] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0002 [line   71] 0x80030016  JMP        A=0 sBx=13
+    0003 [line   71] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   71] 0x01404086  GETTABLE   R2 = R2[K[1]='m_panel']
+    0005 [line   71] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0006 [line   71] 0x80020016  JMP        A=0 sBx=9
+    0007 [line   72] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0008 [line   72] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0009 [line   72] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line   73] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0011 [line   73] 0x0140C08B  SELF       A=2 B=2 C=259 Bx=1283
+    0012 [line   73] 0x0100409C  CALL       A=2 B=2 C=1
+    0013 [line   74] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0014 [line   74] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0015 [line   74] 0x0100409C  CALL       A=2 B=2 C=1
+    0016 [line   76] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 16
+    'event': 0 -> 16
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xD4D
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 78 - 82
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'm_panel'
+    K[002] = 'UpdateCoolDownState'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   79] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   79] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0002 [line   79] 0x8001C016  JMP        A=0 sBx=8
+    0003 [line   79] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   79] 0x01404086  GETTABLE   R2 = R2[K[1]='m_panel']
+    0005 [line   79] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0006 [line   79] 0x8000C016  JMP        A=0 sBx=4
+    0007 [line   80] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0008 [line   80] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0009 [line   80] 0x00800100  MOVE       R4 = R1
+    0010 [line   80] 0x0180409C  CALL       A=2 B=3 C=1
+    0011 [line   82] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 11
+    'event': 0 -> 11
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xE30
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 84 - 88
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'm_panel'
+    K[002] = 'UpdateDrugCount'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   85] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   85] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0002 [line   85] 0x80018016  JMP        A=0 sBx=7
+    0003 [line   85] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   85] 0x01404086  GETTABLE   R2 = R2[K[1]='m_panel']
+    0005 [line   85] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0006 [line   85] 0x80008016  JMP        A=0 sBx=3
+    0007 [line   86] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0008 [line   86] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0009 [line   86] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line   88] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 10
+    'event': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xF07
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 91 - 96
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'm_panel'
+    K[002] = 'UpdateDukeSkillIcon'
+    K[003] = 'UpdateSkillCDInfo'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   92] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   92] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0002 [line   92] 0x80024016  JMP        A=0 sBx=10
+    0003 [line   92] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   92] 0x01404086  GETTABLE   R2 = R2[K[1]='m_panel']
+    0005 [line   92] 0x01400057  EQ         A=1 B=R2 C=K[0]=None
+    0006 [line   92] 0x80014016  JMP        A=0 sBx=6
+    0007 [line   93] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0008 [line   93] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0009 [line   93] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line   94] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0011 [line   94] 0x0140C08B  SELF       A=2 B=2 C=259 Bx=1283
+    0012 [line   94] 0x0100409C  CALL       A=2 B=2 C=1
+    0013 [line   96] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 13
+    'event': 0 -> 13
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1011
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 98 - 105
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'isOnDart'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   99] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   99] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   99] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   99] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  100] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line  100] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  101] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0007 [line  101] 0x0100009E  RETURN     A=2 B=2 C=0
+    0008 [line  101] 0x80008016  JMP        A=0 sBx=3
+    0009 [line  103] 0x00C0808B  SELF       A=2 B=1 C=258 Bx=770
+    0010 [line  103] 0x0100009D  TAILCALL   A=2 B=2 C=0
+    0011 [line  103] 0x0000009E  RETURN     A=2 B=0 C=0
+    0012 [line  105] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 12
+    'hp': 4 -> 12
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x10FA
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 107 - 215
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_cleaner'
+    K[001] = 'm_chariotFixingTimer'
+    K[002] = 0.0
+    K[003] = 'm_panel'
+    K[004] = 'InitControls'
+    K[005] = 'pairs'
+    K[006] = 'SkillSlotInfo'
+    K[007] = 5.0
+    K[008] = 'Cooldown'
+    K[009] = 'SetActive'
+    K[010] = 'UpdateSkillIcons'
+    K[011] = 'UpdateDukeSkillIcon'
+    K[012] = 'UpdateSkillCDInfo'
+    K[013] = 'UpdateDrugCount'
+    K[014] = 'RefreshXPSkill'
+    K[015] = 'require'
+    K[016] = 'Data.ElementData'
+    K[017] = 'getData'
+    K[018] = 'MEDICINE_ESSENCE'
+    K[019] = '_G'
+    K[020] = 'medicine_id'
+    K[021] = None
+    K[022] = 'medicine_cooldown_id'
+    K[023] = 'GP_CT_MEDICINE_START'
+    K[024] = 'cool_type'
+    K[025] = 'EventManager'
+    K[026] = 'addHandlerWithCleaner'
+    K[027] = 'ReloadUnlockStateEvent'
+    K[028] = 'FunctionUnlockedEvent'
+    K[029] = 'print'
+    K[030] = 'Failed to create Skill Panel'
+    K[031] = 'isHostInDart'
+    K[032] = 'ChangeLayer'
+    K[033] = 'ClientDef_Layer'
+    K[034] = 'Invisible'
+    K[035] = 'UpdateChariotGetOnButton'
+    K[036] = 'FindDirect'
+    K[037] = 'Widget/Btn_GetOn'
+    K[038] = 'AutoRefreshCooldown'
+    K[039] = 'Img_Cooling'
+    K[040] = 65.0
+    K[041] = 'Widget/Btn_Fix'
+    K[042] = 66.0
+    K[043] = 'GameUtil'
+    K[044] = 'GetCoolDownData'
+    K[045] = 'Event.CoolDownEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  108] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  108] 0x0080805C  CALL       A=1 B=1 C=2
+    0002 [line  108] 0x80004009  SETTABLE   R0[K[0]='m_cleaner'] = R1
+    0003 [line  109] 0x80C08009  SETTABLE   R0[K[1]='m_chariotFixingTimer'] = K[2]=0.0
+    0004 [line  111] 0x0040C046  GETTABLE   R1 = R0[K[3]='m_panel']
+    0005 [line  111] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  111] 0x80194016  JMP        A=0 sBx=102
+    0007 [line  112] 0x0041004B  SELF       A=1 B=0 C=260 Bx=260
+    0008 [line  112] 0x0100405C  CALL       A=1 B=2 C=1
+    0009 [line  113] 0x00014045  GETGLOBAL  R1 = GLOBAL K[5]='pairs'
+    0010 [line  113] 0x00418086  GETTABLE   R2 = R0[K[6]='SkillSlotInfo']
+    0011 [line  113] 0x0101005C  CALL       A=1 B=2 C=4
+    0012 [line  113] 0x80014016  JMP        A=0 sBx=6
+    0013 [line  114] 0x0241C057  EQ         A=1 B=R4 C=K[7]=5.0
+    0014 [line  114] 0x8000C016  JMP        A=0 sBx=4
+    0015 [line  115] 0x02C20186  GETTABLE   R6 = R5[K[8]='Cooldown']
+    0016 [line  115] 0x0342418B  SELF       A=6 B=6 C=265 Bx=3337
+    0017 [line  115] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0018 [line  115] 0x0180419C  CALL       A=6 B=3 C=1
+    0019 [line  113] 0x00008061  TFORLOOP   A=1 B=0 C=2
+    0020 [line  116] 0x7FFDC016  JMP        A=0 sBx=-8
+    0021 [line  118] 0x0042804B  SELF       A=1 B=0 C=266 Bx=266
+    0022 [line  118] 0x0100405C  CALL       A=1 B=2 C=1
+    0023 [line  119] 0x0042C04B  SELF       A=1 B=0 C=267 Bx=267
+    0024 [line  119] 0x0100405C  CALL       A=1 B=2 C=1
+    0025 [line  120] 0x0043004B  SELF       A=1 B=0 C=268 Bx=268
+    0026 [line  120] 0x0100405C  CALL       A=1 B=2 C=1
+    0027 [line  122] 0x0043404B  SELF       A=1 B=0 C=269 Bx=269
+    0028 [line  122] 0x0100405C  CALL       A=1 B=2 C=1
+    0029 [line  123] 0x0043804B  SELF       A=1 B=0 C=270 Bx=270
+    0030 [line  123] 0x0100405C  CALL       A=1 B=2 C=1
+    0031 [line  125] 0x0003C045  GETGLOBAL  R1 = GLOBAL K[15]='require'
+    0032 [line  125] 0x00040081  LOADK      R2 = K[16]='Data.ElementData'
+    0033 [line  125] 0x0100805C  CALL       A=1 B=2 C=2
+    0034 [line  126] 0x00C44086  GETTABLE   R2 = R1[K[17]='getData']
+    0035 [line  126] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0036 [line  126] 0x01C480C6  GETTABLE   R3 = R3[K[18]='MEDICINE_ESSENCE']
+    0037 [line  126] 0x0004C105  GETGLOBAL  R4 = GLOBAL K[19]='_G'
+    0038 [line  126] 0x02450106  GETTABLE   R4 = R4[K[20]='medicine_id']
+    0039 [line  126] 0x0180809C  CALL       A=2 B=3 C=2
+    0040 [line  127] 0x01454057  EQ         A=1 B=R2 C=K[21]=None
+    0041 [line  127] 0x80010016  JMP        A=0 sBx=5
+    0042 [line  128] 0x0004C0C5  GETGLOBAL  R3 = GLOBAL K[19]='_G'
+    0043 [line  128] 0x0005C105  GETGLOBAL  R4 = GLOBAL K[23]='GP_CT_MEDICINE_START'
+    0044 [line  128] 0x01460146  GETTABLE   R5 = R2[K[24]='cool_type']
+    0045 [line  128] 0x0201410C  ADD        A=4 B=R4 C=R5
+    0046 [line  128] 0x8B0100C9  SETTABLE   R3[K[22]='medicine_cooldown_id'] = R4
+    0047 [line  132] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0048 [line  132] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0049 [line  132] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0050 [line  132] 0x01800144  GETUPVAL   A=5 B=3 C=0 Bx=1536
+    0051 [line  132] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+    0052 [line  132] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0053 [line  132] 0x028040DC  CALL       A=3 B=5 C=1
+    0054 [line  134] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0055 [line  134] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0056 [line  134] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0057 [line  134] 0x02800144  GETUPVAL   A=5 B=5 C=0 Bx=2560
+    0058 [line  134] 0x03000184  GETUPVAL   A=6 B=6 C=0 Bx=3072
+    0059 [line  134] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0060 [line  134] 0x028040DC  CALL       A=3 B=5 C=1
+    0061 [line  135] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0062 [line  135] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0063 [line  135] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0064 [line  135] 0x03800144  GETUPVAL   A=5 B=7 C=0 Bx=3584
+    0065 [line  135] 0x04000184  GETUPVAL   A=6 B=8 C=0 Bx=4096
+    0066 [line  135] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0067 [line  135] 0x028040DC  CALL       A=3 B=5 C=1
+    0068 [line  136] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0069 [line  136] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0070 [line  136] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0071 [line  136] 0x04800144  GETUPVAL   A=5 B=9 C=0 Bx=4608
+    0072 [line  136] 0x05000184  GETUPVAL   A=6 B=10 C=0 Bx=5120
+    0073 [line  136] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0074 [line  136] 0x028040DC  CALL       A=3 B=5 C=1
+    0075 [line  137] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0076 [line  137] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0077 [line  137] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0078 [line  137] 0x05800144  GETUPVAL   A=5 B=11 C=0 Bx=5632
+    0079 [line  137] 0x06000184  GETUPVAL   A=6 B=12 C=0 Bx=6144
+    0080 [line  137] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0081 [line  137] 0x028040DC  CALL       A=3 B=5 C=1
+    0082 [line  138] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0083 [line  138] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0084 [line  138] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0085 [line  138] 0x06800144  GETUPVAL   A=5 B=13 C=0 Bx=6656
+    0086 [line  143] 0x000001A4  CLOSURE    R6 = PROTO[0]
+    0087 [line  143] 0x00000000  MOVE       R0 = R0
+    0088 [line  143] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0089 [line  138] 0x028040DC  CALL       A=3 B=5 C=1
+    0090 [line  144] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0091 [line  144] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0092 [line  144] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0093 [line  144] 0x07000144  GETUPVAL   A=5 B=14 C=0 Bx=7168
+    0094 [line  144] 0x02C6C146  GETTABLE   R5 = R5[K[27]='ReloadUnlockStateEvent']
+    0095 [line  151] 0x000041A4  CLOSURE    R6 = PROTO[1]
+    0096 [line  151] 0x07800004  GETUPVAL   A=0 B=15 C=0 Bx=7680
+    0097 [line  151] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0098 [line  144] 0x028040DC  CALL       A=3 B=5 C=1
+    0099 [line  152] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0100 [line  152] 0x01C640C6  GETTABLE   R3 = R3[K[25]='EventManager']
+    0101 [line  152] 0x01C680CB  SELF       A=3 B=3 C=282 Bx=1818
+    0102 [line  152] 0x07000144  GETUPVAL   A=5 B=14 C=0 Bx=7168
+    0103 [line  152] 0x02C70146  GETTABLE   R5 = R5[K[28]='FunctionUnlockedEvent']
+    0104 [line  161] 0x000081A4  CLOSURE    R6 = PROTO[2]
+    0105 [line  161] 0x07800004  GETUPVAL   A=0 B=15 C=0 Bx=7680
+    0106 [line  161] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_cleaner']
+    0107 [line  152] 0x028040DC  CALL       A=3 B=5 C=1
+    0108 [line  161] 0x80008016  JMP        A=0 sBx=3
+    0109 [line  163] 0x00074045  GETGLOBAL  R1 = GLOBAL K[29]='print'
+    0110 [line  163] 0x00078081  LOADK      R2 = K[30]='Failed to create Skill Panel'
+    0111 [line  163] 0x0100405C  CALL       A=1 B=2 C=1
+    0112 [line  166] 0x0047C04B  SELF       A=1 B=0 C=287 Bx=287
+    0113 [line  166] 0x0100805C  CALL       A=1 B=2 C=2
+    0114 [line  166] 0x0000005A  TEST       A=1 B=0 C=0
+    0115 [line  166] 0x8000C016  JMP        A=0 sBx=4
+    0116 [line  167] 0x0048004B  SELF       A=1 B=0 C=288 Bx=288
+    0117 [line  167] 0x000840C5  GETGLOBAL  R3 = GLOBAL K[33]='ClientDef_Layer'
+    0118 [line  167] 0x01C880C6  GETTABLE   R3 = R3[K[34]='Invisible']
+    0119 [line  167] 0x0180405C  CALL       A=1 B=3 C=1
+    0120 [line  169] 0x0048C04B  SELF       A=1 B=0 C=291 Bx=291
+    0121 [line  169] 0x0100405C  CALL       A=1 B=2 C=1
+    0122 [line  171] 0x0040C046  GETTABLE   R1 = R0[K[3]='m_panel']
+    0123 [line  171] 0x00C9004B  SELF       A=1 B=1 C=292 Bx=804
+    0124 [line  171] 0x000940C1  LOADK      R3 = K[37]='Widget/Btn_GetOn'
+    0125 [line  171] 0x0180805C  CALL       A=1 B=3 C=2
+    0126 [line  172] 0x0000005A  TEST       A=1 B=0 C=0
+    0127 [line  172] 0x8001C016  JMP        A=0 sBx=8
+    0128 [line  173] 0x08000084  GETUPVAL   A=2 B=16 C=0 Bx=8192
+    0129 [line  173] 0x01498086  GETTABLE   R2 = R2[K[38]='AutoRefreshCooldown']
+    0130 [line  173] 0x00C900CB  SELF       A=3 B=1 C=292 Bx=804
+    0131 [line  173] 0x0009C141  LOADK      R5 = K[39]='Img_Cooling'
+    0132 [line  173] 0x018080DC  CALL       A=3 B=3 C=2
+    0133 [line  173] 0x000A0101  LOADK      R4 = K[40]=65.0
+    0134 [line  173] 0x00400146  GETTABLE   R5 = R0[K[0]='m_cleaner']
+    0135 [line  173] 0x0200409C  CALL       A=2 B=4 C=1
+    0136 [line  175] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0137 [line  175] 0x0149008B  SELF       A=2 B=2 C=292 Bx=1316
+    0138 [line  175] 0x000A4101  LOADK      R4 = K[41]='Widget/Btn_Fix'
+    0139 [line  175] 0x0180809C  CALL       A=2 B=3 C=2
+    0140 [line  176] 0x0000009A  TEST       A=2 B=0 C=0
+    0141 [line  176] 0x80078016  JMP        A=0 sBx=31
+    0142 [line  177] 0x000A80C1  LOADK      R3 = K[42]=66.0
+    0143 [line  194] 0x0000C124  CLOSURE    R4 = PROTO[3]
+    0144 [line  194] 0x00000000  MOVE       R0 = R0
+    0145 [line  194] 0x01800000  MOVE       R0 = R3
+    0146 [line  194] 0x08800004  GETUPVAL   A=0 B=17 C=0 Bx=8704
+    0147 [line  194] 0x01000000  MOVE       R0 = R2
+    0148 [line  196] 0x000AC145  GETGLOBAL  R5 = GLOBAL K[43]='GameUtil'
+    0149 [line  196] 0x02CB0146  GETTABLE   R5 = R5[K[44]='GetCoolDownData']
+    0150 [line  196] 0x01800180  MOVE       R6 = R3
+    0151 [line  196] 0x0100C15C  CALL       A=5 B=2 C=3
+    0152 [line  197] 0x81014018  LT         A=0 B=K[2]=0.0 C=R5
+    0153 [line  197] 0x80004016  JMP        A=0 sBx=2
+    0154 [line  198] 0x020001C0  MOVE       R7 = R4
+    0155 [line  198] 0x008041DC  CALL       A=7 B=1 C=1
+    0156 [line  200] 0x014901CB  SELF       A=7 B=2 C=292 Bx=1316
+    0157 [line  200] 0x0009C241  LOADK      R9 = K[39]='Img_Cooling'
+    0158 [line  200] 0x018081DC  CALL       A=7 B=3 C=2
+    0159 [line  201] 0x01000204  GETUPVAL   A=8 B=2 C=0 Bx=1024
+    0160 [line  201] 0x04464206  GETTABLE   R8 = R8[K[25]='EventManager']
+    0161 [line  201] 0x0446820B  SELF       A=8 B=8 C=282 Bx=4378
+    0162 [line  201] 0x0003C285  GETGLOBAL  R10 = GLOBAL K[15]='require'
+    0163 [line  201] 0x000B42C1  LOADK      R11 = K[45]='Event.CoolDownEvent'
+    0164 [line  201] 0x0100829C  CALL       A=10 B=2 C=2
+    0165 [line  207] 0x000102E4  CLOSURE    R11 = PROTO[4]
+    0166 [line  207] 0x03800000  MOVE       R0 = R7
+    0167 [line  207] 0x01800000  MOVE       R0 = R3
+    0168 [line  207] 0x00000000  MOVE       R0 = R0
+    0169 [line  207] 0x02000000  MOVE       R0 = R4
+    0170 [line  207] 0x00400306  GETTABLE   R12 = R0[K[0]='m_cleaner']
+    0171 [line  201] 0x0280421C  CALL       A=8 B=5 C=1
+    0172 [line  207] 0x000000E3  CLOSE      A=3 B=0 C=0 Bx=0
+    0173 [line  215] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 173
+    '(for generator)': 12 -> 21
+    '(for state)': 12 -> 21
+    '(for control)': 12 -> 21
+    'k': 13 -> 19
+    'v': 13 -> 19
+    'ElementData': 34 -> 108
+    'data': 40 -> 108
+    'buttonGo': 126 -> 173
+    'buttonGo': 140 -> 173
+    'coolDownId': 143 -> 172
+    'startTimer': 148 -> 172
+    'cur_time': 152 -> 172
+    'max_time': 152 -> 172
+    'img': 159 -> 172
+
+        ============================================================
+        PROTO ROOT.8.0
+        Offset : 0x171D
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 138 - 143
+        Params : 2
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_panel'
+        K[001] = 'UpdateSkillIcons'
+        K[002] = 'UpdateSkillCDInfo'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  139] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0001 [line  139] 0x01400086  GETTABLE   R2 = R2[K[0]='m_panel']
+        0002 [line  139] 0x0000009A  TEST       A=2 B=0 C=0
+        0003 [line  139] 0x80014016  JMP        A=0 sBx=6
+        0004 [line  140] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  140] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+        0006 [line  140] 0x0100409C  CALL       A=2 B=2 C=1
+        0007 [line  141] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0008 [line  141] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+        0009 [line  141] 0x0100409C  CALL       A=2 B=2 C=1
+        0010 [line  143] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 10
+        'event': 0 -> 10
+
+        ============================================================
+        PROTO ROOT.8.1
+        Offset : 0x1805
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 144 - 151
+        Params : 2
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_panel'
+        K[001] = 'UpdateSkillIcons'
+        K[002] = 'UpdateDukeSkillIcon'
+        K[003] = 'UpdateSkillCDInfo'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  145] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0001 [line  146] 0x014000C6  GETTABLE   R3 = R2[K[0]='m_panel']
+        0002 [line  146] 0x000000DA  TEST       A=3 B=0 C=0
+        0003 [line  146] 0x80014016  JMP        A=0 sBx=6
+        0004 [line  147] 0x014040CB  SELF       A=3 B=2 C=257 Bx=1281
+        0005 [line  147] 0x010040DC  CALL       A=3 B=2 C=1
+        0006 [line  148] 0x014080CB  SELF       A=3 B=2 C=258 Bx=1282
+        0007 [line  148] 0x010040DC  CALL       A=3 B=2 C=1
+        0008 [line  149] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+        0009 [line  149] 0x010040DC  CALL       A=3 B=2 C=1
+        0010 [line  151] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 10
+        'event': 0 -> 10
+        'self': 1 -> 10
+
+        ============================================================
+        PROTO ROOT.8.2
+        Offset : 0x191D
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 152 - 161
+        Params : 2
+        Stack  : 7
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'function_name'
+        K[001] = 'match'
+        K[002] = 'skill_index_(%d+)'
+        K[003] = 'm_panel'
+        K[004] = 'UpdateSkillIcons'
+        K[005] = 'PlayLearnSkillGfx'
+        K[006] = 0.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  153] 0x00C00086  GETTABLE   R2 = R1[K[0]='function_name']
+        0001 [line  153] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+        0002 [line  153] 0x00008101  LOADK      R4 = K[2]='skill_index_(%d+)'
+        0003 [line  153] 0x0180809C  CALL       A=2 B=3 C=2
+        0004 [line  154] 0x0000009A  TEST       A=2 B=0 C=0
+        0005 [line  154] 0x80020016  JMP        A=0 sBx=9
+        0006 [line  155] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0007 [line  156] 0x01C0C106  GETTABLE   R4 = R3[K[3]='m_panel']
+        0008 [line  156] 0x0000011A  TEST       A=4 B=0 C=0
+        0009 [line  156] 0x80010016  JMP        A=0 sBx=5
+        0010 [line  157] 0x01C1010B  SELF       A=4 B=3 C=260 Bx=1796
+        0011 [line  157] 0x0100411C  CALL       A=4 B=2 C=1
+        0012 [line  158] 0x01C1410B  SELF       A=4 B=3 C=261 Bx=1797
+        0013 [line  158] 0x0141818C  ADD        A=6 B=R2 C=K[6]=0.0
+        0014 [line  158] 0x0180411C  CALL       A=4 B=3 C=1
+        0015 [line  161] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 15
+        'event': 0 -> 15
+        'iSkillStr': 4 -> 15
+        'self': 7 -> 15
+
+        ============================================================
+        PROTO ROOT.8.3
+        Offset : 0x1A98
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 178 - 194
+        Params : 0
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_chariotFixingTimer'
+        K[001] = 0.0
+        K[002] = 'GameUtil'
+        K[003] = 'RemoveGlobalTimer'
+        K[004] = 'AddGlobalTimer'
+        K[005] = 1.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  179] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  179] 0x00400006  GETTABLE   R0 = R0[K[0]='m_chariotFixingTimer']
+        0002 [line  179] 0x00404057  EQ         A=1 B=R0 C=K[1]=0.0
+        0003 [line  179] 0x80018016  JMP        A=0 sBx=7
+        0004 [line  180] 0x00008005  GETGLOBAL  R0 = GLOBAL K[2]='GameUtil'
+        0005 [line  180] 0x0040C006  GETTABLE   R0 = R0[K[3]='RemoveGlobalTimer']
+        0006 [line  180] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0007 [line  180] 0x00C00046  GETTABLE   R1 = R1[K[0]='m_chariotFixingTimer']
+        0008 [line  180] 0x0100401C  CALL       A=0 B=2 C=1
+        0009 [line  181] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0010 [line  181] 0x80404009  SETTABLE   R0[K[0]='m_chariotFixingTimer'] = K[1]=0.0
+        0011 [line  183] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0012 [line  183] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='GameUtil'
+        0013 [line  183] 0x00C10046  GETTABLE   R1 = R1[K[4]='AddGlobalTimer']
+        0014 [line  183] 0x00014081  LOADK      R2 = K[5]=1.0
+        0015 [line  183] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+        0016 [line  193] 0x00000124  CLOSURE    R4 = PROTO[0]
+        0017 [line  193] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0018 [line  193] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0019 [line  193] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0020 [line  193] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+        0021 [line  183] 0x0200805C  CALL       A=1 B=4 C=2
+        0022 [line  193] 0x80004009  SETTABLE   R0[K[0]='m_chariotFixingTimer'] = R1
+        0023 [line  194] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+            ============================================================
+            PROTO ROOT.8.3.0
+            Offset : 0x1B79
+            Source : '@lua\\gui\\ecpanelskill.lua'
+            Lines  : 183 - 193
+            Params : 0
+            Stack  : 7
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'GameUtil'
+            K[001] = 'GetCoolDownData'
+            K[002] = 0.0
+            K[003] = 'm_chariotFixingTimer'
+            K[004] = 'RemoveGlobalTimer'
+            K[005] = 'UpdateChariotGetOnButton'
+            K[006] = 'UpdateLable'
+            K[007] = 'StringTable'
+            K[008] = 'Get'
+            K[009] = 16411.0
+            K[010] = 'format'
+            K[011] = 60.0
+            K[012] = 'FindDirect'
+            K[013] = 'Txt_Time'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  184] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='GameUtil'
+            0001 [line  184] 0x00404006  GETTABLE   R0 = R0[K[1]='GetCoolDownData']
+            0002 [line  184] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+            0003 [line  184] 0x0100C01C  CALL       A=0 B=2 C=3
+            0004 [line  185] 0x00408019  LE         A=0 B=R0 C=K[2]=0.0
+            0005 [line  185] 0x80034016  JMP        A=0 sBx=14
+            0006 [line  186] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+            0007 [line  186] 0x0140C086  GETTABLE   R2 = R2[K[3]='m_chariotFixingTimer']
+            0008 [line  186] 0x01408057  EQ         A=1 B=R2 C=K[2]=0.0
+            0009 [line  186] 0x80018016  JMP        A=0 sBx=7
+            0010 [line  187] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='GameUtil'
+            0011 [line  187] 0x01410086  GETTABLE   R2 = R2[K[4]='RemoveGlobalTimer']
+            0012 [line  187] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+            0013 [line  187] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='m_chariotFixingTimer']
+            0014 [line  187] 0x0100409C  CALL       A=2 B=2 C=1
+            0015 [line  188] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+            0016 [line  188] 0x81C08089  SETTABLE   R2[K[3]='m_chariotFixingTimer'] = K[2]=0.0
+            0017 [line  190] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+            0018 [line  190] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+            0019 [line  190] 0x0100409C  CALL       A=2 B=2 C=1
+            0020 [line  192] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0021 [line  192] 0x01418086  GETTABLE   R2 = R2[K[6]='UpdateLable']
+            0022 [line  192] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='StringTable'
+            0023 [line  192] 0x01C200C6  GETTABLE   R3 = R3[K[8]='Get']
+            0024 [line  192] 0x00024101  LOADK      R4 = K[9]=16411.0
+            0025 [line  192] 0x010080DC  CALL       A=3 B=2 C=2
+            0026 [line  192] 0x01C280CB  SELF       A=3 B=3 C=266 Bx=1802
+            0027 [line  192] 0x0042C14F  DIV        A=5 B=R0 C=K[11]=60.0
+            0028 [line  192] 0x0042C190  MOD        A=6 B=R0 C=K[11]=60.0
+            0029 [line  192] 0x020080DC  CALL       A=3 B=4 C=2
+            0030 [line  192] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+            0031 [line  192] 0x0243010B  SELF       A=4 B=4 C=268 Bx=2316
+            0032 [line  192] 0x00034181  LOADK      R6 = K[13]='Txt_Time'
+            0033 [line  192] 0x0180011C  CALL       A=4 B=3 C=0
+            0034 [line  192] 0x0000409C  CALL       A=2 B=0 C=1
+            0035 [line  193] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'cur_time': 4 -> 35
+            'max_time': 4 -> 35
+
+        ============================================================
+        PROTO ROOT.8.4
+        Offset : 0x1EA1
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 201 - 207
+        Params : 2
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'isnil'
+        K[001] = 'coolDownId'
+        K[002] = 'GameUtil'
+        K[003] = 'AddCoolDownComponent'
+        K[004] = 'UpdateChariotGetOnButton'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  202] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0001 [line  202] 0x01400086  GETTABLE   R2 = R2[K[0]='isnil']
+        0002 [line  202] 0x0000409A  TEST       A=2 B=0 C=1
+        0003 [line  202] 0x80038016  JMP        A=0 sBx=15
+        0004 [line  202] 0x00C04086  GETTABLE   R2 = R1[K[1]='coolDownId']
+        0005 [line  202] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0006 [line  202] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0007 [line  202] 0x80028016  JMP        A=0 sBx=11
+        0008 [line  203] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='GameUtil'
+        0009 [line  203] 0x0140C086  GETTABLE   R2 = R2[K[3]='AddCoolDownComponent']
+        0010 [line  203] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0011 [line  203] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+        0012 [line  203] 0x00800142  LOADBOOL   A=5 B=1 C=0
+        0013 [line  203] 0x0200409C  CALL       A=2 B=4 C=1
+        0014 [line  204] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0015 [line  204] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+        0016 [line  204] 0x0100409C  CALL       A=2 B=2 C=1
+        0017 [line  205] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+        0018 [line  205] 0x0080409C  CALL       A=2 B=1 C=1
+        0019 [line  207] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 19
+        'event': 0 -> 19
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x2587
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 217 - 243
+    Params : 1
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_cleaner'
+    K[001] = 'dispose'
+    K[002] = None
+    K[003] = 'ignore_next_cast'
+    K[004] = False
+    K[005] = 'mContinue'
+    K[006] = 1.0
+    K[007] = 'SkillSlotInfo'
+    K[008] = 'CDTimer'
+    K[009] = 0.0
+    K[010] = 'GameUtil'
+    K[011] = 'RemoveGlobalTimer'
+    K[012] = 'CAIResetTimer'
+    K[013] = 'Instance'
+    K[014] = 'm_HostPlayer'
+    K[015] = 'RemoveTimer'
+    K[016] = 'GetGameObject'
+    K[017] = 'm_chariotFixingTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  218] 0x00400046  GETTABLE   R1 = R0[K[0]='m_cleaner']
+    0001 [line  218] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  218] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  219] 0x00400046  GETTABLE   R1 = R0[K[0]='m_cleaner']
+    0004 [line  219] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0005 [line  219] 0x0100405C  CALL       A=1 B=2 C=1
+    0006 [line  220] 0x80408009  SETTABLE   R0[K[0]='m_cleaner'] = K[2]=None
+    0007 [line  223] 0x81C10009  SETTABLE   R0[K[3]='ignore_next_cast'] = K[4]=False
+    0008 [line  224] 0x82C10009  SETTABLE   R0[K[5]='mContinue'] = K[4]=False
+    0009 [line  225] 0x00018041  LOADK      R1 = K[6]=1.0
+    0010 [line  225] 0x0041C086  GETTABLE   R2 = R0[K[7]='SkillSlotInfo']
+    0011 [line  225] 0x01000094  LEN        A=2 B=2 C=0 Bx=1024
+    0012 [line  225] 0x000180C1  LOADK      R3 = K[6]=1.0
+    0013 [line  225] 0x80030060  FORPREP    A=1 sBx=13
+    0014 [line  226] 0x0041C146  GETTABLE   R5 = R0[K[7]='SkillSlotInfo']
+    0015 [line  226] 0x02810146  GETTABLE   R5 = R5[R4]
+    0016 [line  227] 0x02C20186  GETTABLE   R6 = R5[K[8]='CDTimer']
+    0017 [line  227] 0x03408057  EQ         A=1 B=R6 C=K[2]=None
+    0018 [line  227] 0x8001C016  JMP        A=0 sBx=8
+    0019 [line  227] 0x02C20186  GETTABLE   R6 = R5[K[8]='CDTimer']
+    0020 [line  227] 0x84818018  LT         A=0 B=K[9]=0.0 C=R6
+    0021 [line  227] 0x80010016  JMP        A=0 sBx=5
+    0022 [line  228] 0x00028185  GETGLOBAL  R6 = GLOBAL K[10]='GameUtil'
+    0023 [line  228] 0x0342C186  GETTABLE   R6 = R6[K[11]='RemoveGlobalTimer']
+    0024 [line  228] 0x02C201C6  GETTABLE   R7 = R5[K[8]='CDTimer']
+    0025 [line  228] 0x0100419C  CALL       A=6 B=2 C=1
+    0026 [line  229] 0x84424149  SETTABLE   R5[K[8]='CDTimer'] = K[9]=0.0
+    0027 [line  225] 0x7FFC405F  FORLOOP    A=1 sBx=-14
+    0028 [line  233] 0x00430046  GETTABLE   R1 = R0[K[12]='CAIResetTimer']
+    0029 [line  233] 0x00C24057  EQ         A=1 B=R1 C=K[9]=0.0
+    0030 [line  233] 0x80028016  JMP        A=0 sBx=11
+    0031 [line  234] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0032 [line  234] 0x00C34046  GETTABLE   R1 = R1[K[13]='Instance']
+    0033 [line  234] 0x0080805C  CALL       A=1 B=1 C=2
+    0034 [line  234] 0x00C38046  GETTABLE   R1 = R1[K[14]='m_HostPlayer']
+    0035 [line  235] 0x00028085  GETGLOBAL  R2 = GLOBAL K[10]='GameUtil'
+    0036 [line  235] 0x0143C086  GETTABLE   R2 = R2[K[15]='RemoveTimer']
+    0037 [line  235] 0x00C400CB  SELF       A=3 B=1 C=272 Bx=784
+    0038 [line  235] 0x010080DC  CALL       A=3 B=2 C=2
+    0039 [line  235] 0x00430106  GETTABLE   R4 = R0[K[12]='CAIResetTimer']
+    0040 [line  235] 0x0180409C  CALL       A=2 B=3 C=1
+    0041 [line  236] 0x86424009  SETTABLE   R0[K[12]='CAIResetTimer'] = K[9]=0.0
+    0042 [line  239] 0x00444046  GETTABLE   R1 = R0[K[17]='m_chariotFixingTimer']
+    0043 [line  239] 0x00C24057  EQ         A=1 B=R1 C=K[9]=0.0
+    0044 [line  239] 0x80010016  JMP        A=0 sBx=5
+    0045 [line  240] 0x00028045  GETGLOBAL  R1 = GLOBAL K[10]='GameUtil'
+    0046 [line  240] 0x00C2C046  GETTABLE   R1 = R1[K[11]='RemoveGlobalTimer']
+    0047 [line  240] 0x00444086  GETTABLE   R2 = R0[K[17]='m_chariotFixingTimer']
+    0048 [line  240] 0x0100405C  CALL       A=1 B=2 C=1
+    0049 [line  241] 0x88C24009  SETTABLE   R0[K[17]='m_chariotFixingTimer'] = K[9]=0.0
+    0050 [line  243] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 50
+    '(for index)': 13 -> 28
+    '(for limit)': 13 -> 28
+    '(for step)': 13 -> 28
+    'i': 14 -> 27
+    'info': 16 -> 27
+    'hp': 35 -> 42
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x28E4
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 245 - 261
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'FindDirect'
+    K[002] = 'Widget/Btn_GetOn'
+    K[003] = 'Widget/Btn_Fix'
+    K[004] = 'Instance'
+    K[005] = 'm_HostPlayer'
+    K[006] = 'Faction'
+    K[007] = 'getCurrentChariotTid'
+    K[008] = 0.0
+    K[009] = 'GameUtil'
+    K[010] = 'GetCoolDownData'
+    K[011] = 66.0
+    K[012] = 'SetActive'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  246] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  246] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  246] 0x800C0016  JMP        A=0 sBx=49
+    0003 [line  247] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0004 [line  247] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0005 [line  247] 0x000080C1  LOADK      R3 = K[2]='Widget/Btn_GetOn'
+    0006 [line  247] 0x0180805C  CALL       A=1 B=3 C=2
+    0007 [line  248] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0008 [line  248] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0009 [line  248] 0x0000C101  LOADK      R4 = K[3]='Widget/Btn_Fix'
+    0010 [line  248] 0x0180809C  CALL       A=2 B=3 C=2
+    0011 [line  250] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0012 [line  250] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+    0013 [line  250] 0x008080DC  CALL       A=3 B=1 C=2
+    0014 [line  250] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostPlayer']
+    0015 [line  251] 0x0180011B  TESTSET    A=4 B=3 C=0
+    0016 [line  251] 0x80024016  JMP        A=0 sBx=10
+    0017 [line  251] 0x01C18106  GETTABLE   R4 = R3[K[6]='Faction']
+    0018 [line  251] 0x0000011A  TEST       A=4 B=0 C=0
+    0019 [line  251] 0x80018016  JMP        A=0 sBx=7
+    0020 [line  251] 0x01C18106  GETTABLE   R4 = R3[K[6]='Faction']
+    0021 [line  251] 0x0241C10B  SELF       A=4 B=4 C=263 Bx=2311
+    0022 [line  251] 0x0100811C  CALL       A=4 B=2 C=2
+    0023 [line  251] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0024 [line  251] 0x80000016  JMP        A=0 sBx=1
+    0025 [line  251] 0x00004102  LOADBOOL   A=4 B=0 C=1
+    0026 [line  251] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0027 [line  252] 0x0000011A  TEST       A=4 B=0 C=0
+    0028 [line  252] 0x80040016  JMP        A=0 sBx=17
+    0029 [line  253] 0x00024145  GETGLOBAL  R5 = GLOBAL K[9]='GameUtil'
+    0030 [line  253] 0x02C28146  GETTABLE   R5 = R5[K[10]='GetCoolDownData']
+    0031 [line  253] 0x0002C181  LOADK      R6 = K[11]=66.0
+    0032 [line  253] 0x0100C15C  CALL       A=5 B=2 C=3
+    0033 [line  254] 0x00C301CB  SELF       A=7 B=1 C=268 Bx=780
+    0034 [line  254] 0x02C20059  LE         A=1 B=R5 C=K[8]=0.0
+    0035 [line  254] 0x80000016  JMP        A=0 sBx=1
+    0036 [line  254] 0x00004242  LOADBOOL   A=9 B=0 C=1
+    0037 [line  254] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0038 [line  254] 0x018041DC  CALL       A=7 B=3 C=1
+    0039 [line  255] 0x014301CB  SELF       A=7 B=2 C=268 Bx=1292
+    0040 [line  255] 0x84014058  LT         A=1 B=K[8]=0.0 C=R5
+    0041 [line  255] 0x80000016  JMP        A=0 sBx=1
+    0042 [line  255] 0x00004242  LOADBOOL   A=9 B=0 C=1
+    0043 [line  255] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0044 [line  255] 0x018041DC  CALL       A=7 B=3 C=1
+    0045 [line  255] 0x80014016  JMP        A=0 sBx=6
+    0046 [line  257] 0x00C3014B  SELF       A=5 B=1 C=268 Bx=780
+    0047 [line  257] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0048 [line  257] 0x0180415C  CALL       A=5 B=3 C=1
+    0049 [line  258] 0x0143014B  SELF       A=5 B=2 C=268 Bx=1292
+    0050 [line  258] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0051 [line  258] 0x0180415C  CALL       A=5 B=3 C=1
+    0052 [line  261] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 52
+    'buttonGetOn': 7 -> 52
+    'buttonFix': 11 -> 52
+    'hp': 15 -> 52
+    'rentChariot': 27 -> 52
+    'cur_time': 33 -> 45
+    'max_time': 33 -> 45
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x2C21
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 263 - 403
+    Params : 2
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = None
+    K[003] = 'InfoData'
+    K[004] = 'IsInNormalState'
+    K[005] = 'Btn_TabTarget'
+    K[006] = 'SkillHdl'
+    K[007] = 'SwitchTarget'
+    K[008] = 'Btn_GetOn'
+    K[009] = 'GameUtil'
+    K[010] = 'GetCoolDownData'
+    K[011] = 65.0
+    K[012] = 0.0
+    K[013] = 'm_curSceneId'
+    K[014] = 'Faction'
+    K[015] = 'getCurrentChariotTid'
+    K[016] = 'getEssence'
+    K[017] = 'getConfig'
+    K[018] = 'props'
+    K[019] = 1.0
+    K[020] = 'transform_id'
+    K[021] = 'getData'
+    K[022] = 'INTEGER_ARRAY_CONFIG'
+    K[023] = 'limit_scene_id_array'
+    K[024] = 'data'
+    K[025] = 'len'
+    K[026] = 'tonumber'
+    K[027] = 'FlashTipMan'
+    K[028] = 'FlashTip'
+    K[029] = 'StringTable'
+    K[030] = 'Get'
+    K[031] = 16415.0
+    K[032] = 'IsXyxwState'
+    K[033] = 302000.0
+    K[034] = 'IsFollowed'
+    K[035] = 2451.0
+    K[036] = 'gp_transform_chariot'
+    K[037] = 'tid'
+    K[038] = 'geton'
+    K[039] = True
+    K[040] = 'Send'
+    K[041] = 'warn'
+    K[042] = 'rent no chariots'
+    K[043] = 'Btn_Fix'
+    K[044] = 66.0
+    K[045] = 'MsgBox'
+    K[046] = 'ShowMsgBox'
+    K[047] = 16412.0
+    K[048] = 'format'
+    K[049] = 9.0
+    K[050] = 10.0
+    K[051] = 'MsgBoxType'
+    K[052] = 'MBBT_OKCANCEL'
+    K[053] = 'Btn_Auto'
+    K[054] = 'EnterAutoFightingState'
+    K[055] = 'Btn_Cancel'
+    K[056] = 'LeaveAutoFightingState'
+    K[057] = 'Drug_QTE'
+    K[058] = 7736.0
+    K[059] = 'Package'
+    K[060] = 'NormalPack'
+    K[061] = 'GetItem'
+    K[062] = 'Use'
+    K[063] = 'Drug01'
+    K[064] = 'CanEat'
+    K[065] = 'medicine_cooldown_id'
+    K[066] = 'medicine_id'
+    K[067] = 'require'
+    K[068] = 'GUI.ECPanelBobyShop'
+    K[069] = 'OpenBodyShopAndBuyItme'
+    K[070] = 'Img_NotLearn'
+    K[071] = 2.0
+    K[072] = 'Img_Skillxp'
+    K[073] = 5.0
+    K[074] = 'Img_Skill06'
+    K[075] = 6.0
+    K[076] = 'string'
+    K[077] = 'find'
+    K[078] = 'Img_Skill'
+    K[079] = 'sub'
+    K[080] = 'IsTransforming'
+    K[081] = 'IsOnDart'
+    K[082] = 8553.0
+    K[083] = 2418.0
+    K[084] = 'Data.SkillIDsCfg'
+    K[085] = 'SkillSlotInfo'
+    K[086] = 'ActiveSkill'
+    K[087] = 'IsJieYunSkill'
+    K[088] = 'CanCastSkill'
+    K[089] = 'CastSkillMannally'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  264] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  264] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  264] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  264] 0x01404086  GETTABLE   R2 = R2[K[1]='m_HostPlayer']
+    0004 [line  265] 0x01408057  EQ         A=1 B=R2 C=K[2]=None
+    0005 [line  265] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  265] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='InfoData']
+    0007 [line  265] 0x01C08017  EQ         A=0 B=R3 C=K[2]=None
+    0008 [line  265] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  265] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  266] 0x014100CB  SELF       A=3 B=2 C=260 Bx=1284
+    0011 [line  266] 0x010080DC  CALL       A=3 B=2 C=2
+    0012 [line  266] 0x000040DA  TEST       A=3 B=0 C=1
+    0013 [line  266] 0x80000016  JMP        A=0 sBx=1
+    0014 [line  266] 0x0080001E  RETURN     A=0 B=1 C=0
+    0015 [line  268] 0x00C14017  EQ         A=0 B=R1 C=K[5]='Btn_TabTarget'
+    0016 [line  268] 0x8000C016  JMP        A=0 sBx=4
+    0017 [line  269] 0x014180C6  GETTABLE   R3 = R2[K[6]='SkillHdl']
+    0018 [line  269] 0x01C1C0CB  SELF       A=3 B=3 C=263 Bx=1799
+    0019 [line  269] 0x010040DC  CALL       A=3 B=2 C=1
+    0020 [line  269] 0x804B4016  JMP        A=0 sBx=302
+    0021 [line  270] 0x00C20017  EQ         A=0 B=R1 C=K[8]='Btn_GetOn'
+    0022 [line  270] 0x801B8016  JMP        A=0 sBx=111
+    0023 [line  271] 0x000240C5  GETGLOBAL  R3 = GLOBAL K[9]='GameUtil'
+    0024 [line  271] 0x01C280C6  GETTABLE   R3 = R3[K[10]='GetCoolDownData']
+    0025 [line  271] 0x0002C101  LOADK      R4 = K[11]=65.0
+    0026 [line  271] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0027 [line  273] 0x01C30019  LE         A=0 B=R3 C=K[12]=0.0
+    0028 [line  273] 0x80494016  JMP        A=0 sBx=294
+    0029 [line  274] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0030 [line  274] 0x02C00146  GETTABLE   R5 = R5[K[0]='Instance']
+    0031 [line  274] 0x0080815C  CALL       A=5 B=1 C=2
+    0032 [line  274] 0x02C04146  GETTABLE   R5 = R5[K[1]='m_HostPlayer']
+    0033 [line  275] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0034 [line  275] 0x03400186  GETTABLE   R6 = R6[K[0]='Instance']
+    0035 [line  275] 0x0080819C  CALL       A=6 B=1 C=2
+    0036 [line  275] 0x03434186  GETTABLE   R6 = R6[K[13]='m_curSceneId']
+    0037 [line  276] 0x02C381C6  GETTABLE   R7 = R5[K[14]='Faction']
+    0038 [line  276] 0x03C3C1CB  SELF       A=7 B=7 C=271 Bx=3855
+    0039 [line  276] 0x010081DC  CALL       A=7 B=2 C=2
+    0040 [line  277] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0041 [line  277] 0x04440206  GETTABLE   R8 = R8[K[16]='getEssence']
+    0042 [line  277] 0x03800240  MOVE       R9 = R7
+    0043 [line  277] 0x0100821C  CALL       A=8 B=2 C=2
+    0044 [line  278] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0045 [line  279] 0x0000021A  TEST       A=8 B=0 C=0
+    0046 [line  279] 0x80064016  JMP        A=0 sBx=26
+    0047 [line  280] 0x00800284  GETUPVAL   A=10 B=1 C=0 Bx=512
+    0048 [line  280] 0x05444286  GETTABLE   R10 = R10[K[17]='getConfig']
+    0049 [line  280] 0x044482C6  GETTABLE   R11 = R8[K[18]='props']
+    0050 [line  280] 0x05C4C2C6  GETTABLE   R11 = R11[K[19]=1.0]
+    0051 [line  280] 0x05C502C6  GETTABLE   R11 = R11[K[20]='transform_id']
+    0052 [line  280] 0x0100829C  CALL       A=10 B=2 C=2
+    0053 [line  281] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0054 [line  281] 0x05C542C6  GETTABLE   R11 = R11[K[21]='getData']
+    0055 [line  281] 0x01000304  GETUPVAL   A=12 B=2 C=0 Bx=1024
+    0056 [line  281] 0x06458306  GETTABLE   R12 = R12[K[22]='INTEGER_ARRAY_CONFIG']
+    0057 [line  281] 0x0545C346  GETTABLE   R13 = R10[K[23]='limit_scene_id_array']
+    0058 [line  281] 0x018082DC  CALL       A=11 B=3 C=2
+    0059 [line  282] 0x0004C301  LOADK      R12 = K[19]=1.0
+    0060 [line  282] 0x05C60346  GETTABLE   R13 = R11[K[24]='data']
+    0061 [line  282] 0x06C64346  GETTABLE   R13 = R13[K[25]='len']
+    0062 [line  282] 0x0004C381  LOADK      R14 = K[19]=1.0
+    0063 [line  282] 0x8001C320  FORPREP    A=12 sBx=8
+    0064 [line  283] 0x00068405  GETGLOBAL  R16 = GLOBAL K[26]='tonumber'
+    0065 [line  283] 0x05C60446  GETTABLE   R17 = R11[K[24]='data']
+    0066 [line  283] 0x0883C446  GETTABLE   R17 = R17[R15]
+    0067 [line  283] 0x0100841C  CALL       A=16 B=2 C=2
+    0068 [line  283] 0x03040017  EQ         A=0 B=R6 C=R16
+    0069 [line  283] 0x80004016  JMP        A=0 sBx=2
+    0070 [line  284] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0071 [line  285] 0x80000016  JMP        A=0 sBx=1
+    0072 [line  282] 0x7FFD831F  FORLOOP    A=12 sBx=-9
+    0073 [line  289] 0x0000425A  TEST       A=9 B=0 C=1
+    0074 [line  289] 0x8001C016  JMP        A=0 sBx=8
+    0075 [line  290] 0x0006C285  GETGLOBAL  R10 = GLOBAL K[27]='FlashTipMan'
+    0076 [line  290] 0x05470286  GETTABLE   R10 = R10[K[28]='FlashTip']
+    0077 [line  290] 0x000742C5  GETGLOBAL  R11 = GLOBAL K[29]='StringTable'
+    0078 [line  290] 0x05C782C6  GETTABLE   R11 = R11[K[30]='Get']
+    0079 [line  290] 0x0007C301  LOADK      R12 = K[31]=16415.0
+    0080 [line  290] 0x010002DC  CALL       A=11 B=2 C=0
+    0081 [line  290] 0x0000429C  CALL       A=10 B=0 C=1
+    0082 [line  291] 0x0080001E  RETURN     A=0 B=1 C=0
+    0083 [line  294] 0x02C8028B  SELF       A=10 B=5 C=288 Bx=2848
+    0084 [line  294] 0x0100C29C  CALL       A=10 B=2 C=3
+    0085 [line  295] 0x0000029A  TEST       A=10 B=0 C=0
+    0086 [line  295] 0x8001C016  JMP        A=0 sBx=8
+    0087 [line  296] 0x0006C305  GETGLOBAL  R12 = GLOBAL K[27]='FlashTipMan'
+    0088 [line  296] 0x06470306  GETTABLE   R12 = R12[K[28]='FlashTip']
+    0089 [line  296] 0x00074345  GETGLOBAL  R13 = GLOBAL K[29]='StringTable'
+    0090 [line  296] 0x06C78346  GETTABLE   R13 = R13[K[30]='Get']
+    0091 [line  296] 0x00084381  LOADK      R14 = K[33]=302000.0
+    0092 [line  296] 0x0100035C  CALL       A=13 B=2 C=0
+    0093 [line  296] 0x0000431C  CALL       A=12 B=0 C=1
+    0094 [line  297] 0x0080001E  RETURN     A=0 B=1 C=0
+    0095 [line  299] 0x02C8830B  SELF       A=12 B=5 C=290 Bx=2850
+    0096 [line  299] 0x0100831C  CALL       A=12 B=2 C=2
+    0097 [line  299] 0x0000031A  TEST       A=12 B=0 C=0
+    0098 [line  299] 0x8001C016  JMP        A=0 sBx=8
+    0099 [line  300] 0x0006C305  GETGLOBAL  R12 = GLOBAL K[27]='FlashTipMan'
+    0100 [line  300] 0x06470306  GETTABLE   R12 = R12[K[28]='FlashTip']
+    0101 [line  300] 0x00074345  GETGLOBAL  R13 = GLOBAL K[29]='StringTable'
+    0102 [line  300] 0x06C78346  GETTABLE   R13 = R13[K[30]='Get']
+    0103 [line  300] 0x0008C381  LOADK      R14 = K[35]=2451.0
+    0104 [line  300] 0x0100035C  CALL       A=13 B=2 C=0
+    0105 [line  300] 0x0000431C  CALL       A=12 B=0 C=1
+    0106 [line  301] 0x0080001E  RETURN     A=0 B=1 C=0
+    0107 [line  304] 0x0000015A  TEST       A=5 B=0 C=0
+    0108 [line  304] 0x80050016  JMP        A=0 sBx=21
+    0109 [line  304] 0x02C38306  GETTABLE   R12 = R5[K[14]='Faction']
+    0110 [line  304] 0x0000031A  TEST       A=12 B=0 C=0
+    0111 [line  304] 0x80044016  JMP        A=0 sBx=18
+    0112 [line  304] 0x02C38306  GETTABLE   R12 = R5[K[14]='Faction']
+    0113 [line  304] 0x0643C30B  SELF       A=12 B=12 C=271 Bx=6415
+    0114 [line  304] 0x0100831C  CALL       A=12 B=2 C=2
+    0115 [line  304] 0x06430057  EQ         A=1 B=R12 C=K[12]=0.0
+    0116 [line  304] 0x80030016  JMP        A=0 sBx=13
+    0117 [line  305] 0x01800304  GETUPVAL   A=12 B=3 C=0 Bx=1536
+    0118 [line  305] 0x06490306  GETTABLE   R12 = R12[K[36]='gp_transform_chariot']
+    0119 [line  305] 0x0080831C  CALL       A=12 B=1 C=2
+    0120 [line  306] 0x02C38346  GETTABLE   R13 = R5[K[14]='Faction']
+    0121 [line  306] 0x06C3C34B  SELF       A=13 B=13 C=271 Bx=6927
+    0122 [line  306] 0x0100835C  CALL       A=13 B=2 C=2
+    0123 [line  306] 0x92834309  SETTABLE   R12[K[37]='tid'] = R13
+    0124 [line  307] 0x9349C309  SETTABLE   R12[K[38]='geton'] = K[39]=True
+    0125 [line  308] 0x02000344  GETUPVAL   A=13 B=4 C=0 Bx=2048
+    0126 [line  308] 0x06CA0346  GETTABLE   R13 = R13[K[40]='Send']
+    0127 [line  308] 0x06000380  MOVE       R14 = R12
+    0128 [line  308] 0x0100435C  CALL       A=13 B=2 C=1
+    0129 [line  308] 0x80300016  JMP        A=0 sBx=193
+    0130 [line  311] 0x000A4305  GETGLOBAL  R12 = GLOBAL K[41]='warn'
+    0131 [line  311] 0x000A8341  LOADK      R13 = K[42]='rent no chariots'
+    0132 [line  311] 0x0100431C  CALL       A=12 B=2 C=1
+    0133 [line  313] 0x802F0016  JMP        A=0 sBx=189
+    0134 [line  314] 0x00CAC017  EQ         A=0 B=R1 C=K[43]='Btn_Fix'
+    0135 [line  314] 0x80064016  JMP        A=0 sBx=26
+    0136 [line  315] 0x000240C5  GETGLOBAL  R3 = GLOBAL K[9]='GameUtil'
+    0137 [line  315] 0x01C280C6  GETTABLE   R3 = R3[K[10]='GetCoolDownData']
+    0138 [line  315] 0x000B0101  LOADK      R4 = K[44]=66.0
+    0139 [line  315] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0140 [line  316] 0x8600C018  LT         A=0 B=K[12]=0.0 C=R3
+    0141 [line  316] 0x802D0016  JMP        A=0 sBx=181
+    0142 [line  317] 0x000B4145  GETGLOBAL  R5 = GLOBAL K[45]='MsgBox'
+    0143 [line  317] 0x02CB8146  GETTABLE   R5 = R5[K[46]='ShowMsgBox']
+    0144 [line  317] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0145 [line  317] 0x000741C5  GETGLOBAL  R7 = GLOBAL K[29]='StringTable'
+    0146 [line  317] 0x03C781C6  GETTABLE   R7 = R7[K[30]='Get']
+    0147 [line  317] 0x000BC201  LOADK      R8 = K[47]=16412.0
+    0148 [line  317] 0x010081DC  CALL       A=7 B=2 C=2
+    0149 [line  317] 0x03CC01CB  SELF       A=7 B=7 C=304 Bx=3888
+    0150 [line  317] 0x01CC424C  ADD        A=9 B=R3 C=K[49]=9.0
+    0151 [line  317] 0x04CC824F  DIV        A=9 B=R9 C=K[50]=10.0
+    0152 [line  317] 0x018081DC  CALL       A=7 B=3 C=2
+    0153 [line  317] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0154 [line  317] 0x000B4245  GETGLOBAL  R9 = GLOBAL K[45]='MsgBox'
+    0155 [line  317] 0x04CCC246  GETTABLE   R9 = R9[K[51]='MsgBoxType']
+    0156 [line  317] 0x04CD0246  GETTABLE   R9 = R9[K[52]='MBBT_OKCANCEL']
+    0157 [line  324] 0x000002A4  CLOSURE    R10 = PROTO[0]
+    0158 [line  324] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0159 [line  324] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+    0160 [line  317] 0x0300415C  CALL       A=5 B=6 C=1
+    0161 [line  325] 0x80280016  JMP        A=0 sBx=161
+    0162 [line  326] 0x00CD4017  EQ         A=0 B=R1 C=K[53]='Btn_Auto'
+    0163 [line  326] 0x80014016  JMP        A=0 sBx=6
+    0164 [line  327] 0x014180C6  GETTABLE   R3 = R2[K[6]='SkillHdl']
+    0165 [line  327] 0x01CD80CB  SELF       A=3 B=3 C=310 Bx=1846
+    0166 [line  327] 0x00030141  LOADK      R5 = K[12]=0.0
+    0167 [line  327] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0168 [line  327] 0x020040DC  CALL       A=3 B=4 C=1
+    0169 [line  327] 0x80260016  JMP        A=0 sBx=153
+    0170 [line  328] 0x00CDC017  EQ         A=0 B=R1 C=K[55]='Btn_Cancel'
+    0171 [line  328] 0x8000C016  JMP        A=0 sBx=4
+    0172 [line  329] 0x014180C6  GETTABLE   R3 = R2[K[6]='SkillHdl']
+    0173 [line  329] 0x01CE00CB  SELF       A=3 B=3 C=312 Bx=1848
+    0174 [line  329] 0x010040DC  CALL       A=3 B=2 C=1
+    0175 [line  329] 0x80248016  JMP        A=0 sBx=147
+    0176 [line  330] 0x00CE4017  EQ         A=0 B=R1 C=K[57]='Drug_QTE'
+    0177 [line  330] 0x80028016  JMP        A=0 sBx=11
+    0178 [line  332] 0x000E80C1  LOADK      R3 = K[58]=7736.0
+    0179 [line  333] 0x014EC106  GETTABLE   R4 = R2[K[59]='Package']
+    0180 [line  333] 0x024F0106  GETTABLE   R4 = R4[K[60]='NormalPack']
+    0181 [line  333] 0x024F410B  SELF       A=4 B=4 C=317 Bx=2365
+    0182 [line  333] 0x01800180  MOVE       R6 = R3
+    0183 [line  333] 0x0180811C  CALL       A=4 B=3 C=2
+    0184 [line  334] 0x0000011A  TEST       A=4 B=0 C=0
+    0185 [line  334] 0x80220016  JMP        A=0 sBx=137
+    0186 [line  335] 0x024F814B  SELF       A=5 B=4 C=318 Bx=2366
+    0187 [line  335] 0x0100415C  CALL       A=5 B=2 C=1
+    0188 [line  336] 0x80214016  JMP        A=0 sBx=134
+    0189 [line  337] 0x00CFC017  EQ         A=0 B=R1 C=K[63]='Drug01'
+    0190 [line  337] 0x80078016  JMP        A=0 sBx=31
+    0191 [line  338] 0x015000CB  SELF       A=3 B=2 C=320 Bx=1344
+    0192 [line  338] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0193 [line  338] 0x018080DC  CALL       A=3 B=3 C=2
+    0194 [line  338] 0x000040DA  TEST       A=3 B=0 C=1
+    0195 [line  338] 0x80000016  JMP        A=0 sBx=1
+    0196 [line  339] 0x0080001E  RETURN     A=0 B=1 C=0
+    0197 [line  342] 0x000240C5  GETGLOBAL  R3 = GLOBAL K[9]='GameUtil'
+    0198 [line  342] 0x01C280C6  GETTABLE   R3 = R3[K[10]='GetCoolDownData']
+    0199 [line  342] 0x00104105  GETGLOBAL  R4 = GLOBAL K[65]='medicine_cooldown_id'
+    0200 [line  342] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0201 [line  343] 0x01C30017  EQ         A=0 B=R3 C=K[12]=0.0
+    0202 [line  343] 0x801DC016  JMP        A=0 sBx=120
+    0203 [line  344] 0x014EC146  GETTABLE   R5 = R2[K[59]='Package']
+    0204 [line  344] 0x02CF0146  GETTABLE   R5 = R5[K[60]='NormalPack']
+    0205 [line  344] 0x02CF414B  SELF       A=5 B=5 C=317 Bx=2877
+    0206 [line  344] 0x001081C5  GETGLOBAL  R7 = GLOBAL K[66]='medicine_id'
+    0207 [line  344] 0x0180815C  CALL       A=5 B=3 C=2
+    0208 [line  345] 0x02C08057  EQ         A=1 B=R5 C=K[2]=None
+    0209 [line  345] 0x80008016  JMP        A=0 sBx=3
+    0210 [line  346] 0x02CF818B  SELF       A=6 B=5 C=318 Bx=2878
+    0211 [line  346] 0x0100419C  CALL       A=6 B=2 C=1
+    0212 [line  346] 0x801B4016  JMP        A=0 sBx=110
+    0213 [line  348] 0x0010C185  GETGLOBAL  R6 = GLOBAL K[67]='require'
+    0214 [line  348] 0x001101C1  LOADK      R7 = K[68]='GUI.ECPanelBobyShop'
+    0215 [line  348] 0x0100819C  CALL       A=6 B=2 C=2
+    0216 [line  349] 0x034001C6  GETTABLE   R7 = R6[K[0]='Instance']
+    0217 [line  349] 0x008081DC  CALL       A=7 B=1 C=2
+    0218 [line  349] 0x03D141CB  SELF       A=7 B=7 C=325 Bx=3909
+    0219 [line  349] 0x00108245  GETGLOBAL  R9 = GLOBAL K[66]='medicine_id'
+    0220 [line  349] 0x018041DC  CALL       A=7 B=3 C=1
+    0221 [line  351] 0x80190016  JMP        A=0 sBx=101
+    0222 [line  361] 0x00D18017  EQ         A=0 B=R1 C=K[70]='Img_NotLearn'
+    0223 [line  361] 0x8001C016  JMP        A=0 sBx=8
+    0224 [line  362] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='FlashTipMan'
+    0225 [line  362] 0x01C700C6  GETTABLE   R3 = R3[K[28]='FlashTip']
+    0226 [line  362] 0x00074105  GETGLOBAL  R4 = GLOBAL K[29]='StringTable'
+    0227 [line  362] 0x02478106  GETTABLE   R4 = R4[K[30]='Get']
+    0228 [line  362] 0x0011C141  LOADK      R5 = K[71]=2.0
+    0229 [line  362] 0x0100011C  CALL       A=4 B=2 C=0
+    0230 [line  362] 0x000040DC  CALL       A=3 B=0 C=1
+    0231 [line  362] 0x80168016  JMP        A=0 sBx=91
+    0232 [line  365] 0x000300C1  LOADK      R3 = K[12]=0.0
+    0233 [line  366] 0x00D20017  EQ         A=0 B=R1 C=K[72]='Img_Skillxp'
+    0234 [line  366] 0x80004016  JMP        A=0 sBx=2
+    0235 [line  367] 0x001240C1  LOADK      R3 = K[73]=5.0
+    0236 [line  367] 0x8005C016  JMP        A=0 sBx=24
+    0237 [line  368] 0x00D28017  EQ         A=0 B=R1 C=K[74]='Img_Skill06'
+    0238 [line  368] 0x80004016  JMP        A=0 sBx=2
+    0239 [line  369] 0x0012C0C1  LOADK      R3 = K[75]=6.0
+    0240 [line  369] 0x8004C016  JMP        A=0 sBx=20
+    0241 [line  370] 0x00130105  GETGLOBAL  R4 = GLOBAL K[76]='string'
+    0242 [line  370] 0x02534106  GETTABLE   R4 = R4[K[77]='find']
+    0243 [line  370] 0x00800140  MOVE       R5 = R1
+    0244 [line  370] 0x00138181  LOADK      R6 = K[78]='Img_Skill'
+    0245 [line  370] 0x0180811C  CALL       A=4 B=3 C=2
+    0246 [line  370] 0x0244C017  EQ         A=0 B=R4 C=K[19]=1.0
+    0247 [line  370] 0x80030016  JMP        A=0 sBx=13
+    0248 [line  371] 0x00130105  GETGLOBAL  R4 = GLOBAL K[76]='string'
+    0249 [line  371] 0x0253C106  GETTABLE   R4 = R4[K[79]='sub']
+    0250 [line  371] 0x00800140  MOVE       R5 = R1
+    0251 [line  371] 0x000C8181  LOADK      R6 = K[50]=10.0
+    0252 [line  371] 0x001301C5  GETGLOBAL  R7 = GLOBAL K[76]='string'
+    0253 [line  371] 0x03C641C6  GETTABLE   R7 = R7[K[25]='len']
+    0254 [line  371] 0x00800200  MOVE       R8 = R1
+    0255 [line  371] 0x010001DC  CALL       A=7 B=2 C=0
+    0256 [line  371] 0x0000811C  CALL       A=4 B=0 C=2
+    0257 [line  372] 0x00068145  GETGLOBAL  R5 = GLOBAL K[26]='tonumber'
+    0258 [line  372] 0x02000180  MOVE       R6 = R4
+    0259 [line  372] 0x0100815C  CALL       A=5 B=2 C=2
+    0260 [line  372] 0x02C4C0CD  SUB        A=3 B=R5 C=K[19]=1.0
+    0261 [line  375] 0x0154010B  SELF       A=4 B=2 C=336 Bx=1360
+    0262 [line  375] 0x0100811C  CALL       A=4 B=2 C=2
+    0263 [line  375] 0x0000411A  TEST       A=4 B=0 C=1
+    0264 [line  375] 0x8000C016  JMP        A=0 sBx=4
+    0265 [line  375] 0x0154410B  SELF       A=4 B=2 C=337 Bx=1361
+    0266 [line  375] 0x0100811C  CALL       A=4 B=2 C=2
+    0267 [line  375] 0x0000011A  TEST       A=4 B=0 C=0
+    0268 [line  375] 0x8001C016  JMP        A=0 sBx=8
+    0269 [line  376] 0x0006C105  GETGLOBAL  R4 = GLOBAL K[27]='FlashTipMan'
+    0270 [line  376] 0x02470106  GETTABLE   R4 = R4[K[28]='FlashTip']
+    0271 [line  376] 0x00074145  GETGLOBAL  R5 = GLOBAL K[29]='StringTable'
+    0272 [line  376] 0x02C78146  GETTABLE   R5 = R5[K[30]='Get']
+    0273 [line  376] 0x00148181  LOADK      R6 = K[82]=8553.0
+    0274 [line  376] 0x0100015C  CALL       A=5 B=2 C=0
+    0275 [line  376] 0x0000411C  CALL       A=4 B=0 C=1
+    0276 [line  377] 0x0080001E  RETURN     A=0 B=1 C=0
+    0277 [line  380] 0x0148810B  SELF       A=4 B=2 C=290 Bx=1314
+    0278 [line  380] 0x0100811C  CALL       A=4 B=2 C=2
+    0279 [line  380] 0x0000011A  TEST       A=4 B=0 C=0
+    0280 [line  380] 0x8001C016  JMP        A=0 sBx=8
+    0281 [line  381] 0x0006C105  GETGLOBAL  R4 = GLOBAL K[27]='FlashTipMan'
+    0282 [line  381] 0x02470106  GETTABLE   R4 = R4[K[28]='FlashTip']
+    0283 [line  381] 0x00074145  GETGLOBAL  R5 = GLOBAL K[29]='StringTable'
+    0284 [line  381] 0x02C78146  GETTABLE   R5 = R5[K[30]='Get']
+    0285 [line  381] 0x0014C181  LOADK      R6 = K[83]=2418.0
+    0286 [line  381] 0x0100015C  CALL       A=5 B=2 C=0
+    0287 [line  381] 0x0000411C  CALL       A=4 B=0 C=1
+    0288 [line  382] 0x0080001E  RETURN     A=0 B=1 C=0
+    0289 [line  385] 0x0148010B  SELF       A=4 B=2 C=288 Bx=1312
+    0290 [line  385] 0x0100811C  CALL       A=4 B=2 C=2
+    0291 [line  386] 0x0000011A  TEST       A=4 B=0 C=0
+    0292 [line  386] 0x8001C016  JMP        A=0 sBx=8
+    0293 [line  387] 0x0006C145  GETGLOBAL  R5 = GLOBAL K[27]='FlashTipMan'
+    0294 [line  387] 0x02C70146  GETTABLE   R5 = R5[K[28]='FlashTip']
+    0295 [line  387] 0x00074185  GETGLOBAL  R6 = GLOBAL K[29]='StringTable'
+    0296 [line  387] 0x03478186  GETTABLE   R6 = R6[K[30]='Get']
+    0297 [line  387] 0x000841C1  LOADK      R7 = K[33]=302000.0
+    0298 [line  387] 0x0100019C  CALL       A=6 B=2 C=0
+    0299 [line  387] 0x0000415C  CALL       A=5 B=0 C=1
+    0300 [line  388] 0x0080001E  RETURN     A=0 B=1 C=0
+    0301 [line  391] 0x0010C145  GETGLOBAL  R5 = GLOBAL K[67]='require'
+    0302 [line  391] 0x00150181  LOADK      R6 = K[84]='Data.SkillIDsCfg'
+    0303 [line  391] 0x0100815C  CALL       A=5 B=2 C=2
+    0304 [line  392] 0x00554186  GETTABLE   R6 = R0[K[85]='SkillSlotInfo']
+    0305 [line  392] 0x0300C186  GETTABLE   R6 = R6[R3]
+    0306 [line  392] 0x03558186  GETTABLE   R6 = R6[K[86]='ActiveSkill']
+    0307 [line  395] 0x02C001C6  GETTABLE   R7 = R5[K[0]='Instance']
+    0308 [line  395] 0x008081DC  CALL       A=7 B=1 C=2
+    0309 [line  395] 0x03D5C1CB  SELF       A=7 B=7 C=343 Bx=3927
+    0310 [line  395] 0x03000240  MOVE       R9 = R6
+    0311 [line  395] 0x018081DC  CALL       A=7 B=3 C=2
+    0312 [line  395] 0x000041DA  TEST       A=7 B=0 C=1
+    0313 [line  395] 0x80014016  JMP        A=0 sBx=6
+    0314 [line  396] 0x015601CB  SELF       A=7 B=2 C=344 Bx=1368
+    0315 [line  396] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0316 [line  396] 0x018081DC  CALL       A=7 B=3 C=2
+    0317 [line  396] 0x000041DA  TEST       A=7 B=0 C=1
+    0318 [line  396] 0x80000016  JMP        A=0 sBx=1
+    0319 [line  397] 0x0080001E  RETURN     A=0 B=1 C=0
+    0320 [line  401] 0x005641CB  SELF       A=7 B=0 C=345 Bx=345
+    0321 [line  401] 0x01800240  MOVE       R9 = R3
+    0322 [line  401] 0x018041DC  CALL       A=7 B=3 C=1
+    0323 [line  403] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 323
+    'id': 0 -> 323
+    'hp': 4 -> 323
+    'cur_time': 27 -> 133
+    'max_time': 27 -> 133
+    'hp': 33 -> 133
+    'sid': 37 -> 133
+    'chariotTid': 40 -> 133
+    'essChariot': 44 -> 133
+    'canUseTransform': 45 -> 133
+    'transformConfig': 53 -> 73
+    'integerArray': 59 -> 73
+    '(for index)': 63 -> 73
+    '(for limit)': 63 -> 73
+    '(for step)': 63 -> 73
+    'i': 64 -> 72
+    'isXyxw': 85 -> 133
+    'isXyxwHost': 85 -> 133
+    'msg': 120 -> 129
+    'cur_time': 140 -> 161
+    'max_time': 140 -> 161
+    'medicine_id': 179 -> 188
+    'item': 184 -> 188
+    'cur_time': 201 -> 221
+    'max_time': 201 -> 221
+    'item': 208 -> 221
+    'panelBodyShop': 216 -> 221
+    'icon_index': 233 -> 323
+    'sub_string': 257 -> 261
+    'isXyxw': 291 -> 323
+    'SkillIDsCfg': 304 -> 323
+    'skillid': 307 -> 323
+
+        ============================================================
+        PROTO ROOT.11.0
+        Offset : 0x367F
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 317 - 324
+        Params : 2
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'MsgBox'
+        K[001] = 'MsgBoxRetT'
+        K[002] = 'MBRT_OK'
+        K[003] = 'gp_fix_chariot'
+        K[004] = 'use_diamond'
+        K[005] = True
+        K[006] = 'Send'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  318] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='MsgBox'
+        0001 [line  318] 0x01404086  GETTABLE   R2 = R2[K[1]='MsgBoxRetT']
+        0002 [line  318] 0x01408086  GETTABLE   R2 = R2[K[2]='MBRT_OK']
+        0003 [line  318] 0x00808017  EQ         A=0 B=R1 C=R2
+        0004 [line  318] 0x8001C016  JMP        A=0 sBx=8
+        0005 [line  319] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0006 [line  319] 0x0140C086  GETTABLE   R2 = R2[K[3]='gp_fix_chariot']
+        0007 [line  319] 0x0080809C  CALL       A=2 B=1 C=2
+        0008 [line  320] 0x82414089  SETTABLE   R2[K[4]='use_diamond'] = K[5]=True
+        0009 [line  321] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0010 [line  321] 0x01C180C6  GETTABLE   R3 = R3[K[6]='Send']
+        0011 [line  321] 0x01000100  MOVE       R4 = R2
+        0012 [line  321] 0x010040DC  CALL       A=3 B=2 C=1
+        0013 [line  324] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 13
+        'ret': 0 -> 13
+        'msg': 8 -> 13
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x3FBD
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 404 - 412
+    Params : 3
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Btn_TabTarget'
+    K[001] = 'mContinue'
+    K[002] = True
+    K[003] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  405] 0x00C00017  EQ         A=0 B=R1 C=K[0]='Btn_TabTarget'
+    0001 [line  405] 0x80024016  JMP        A=0 sBx=10
+    0002 [line  406] 0x0000009A  TEST       A=2 B=0 C=0
+    0003 [line  406] 0x80010016  JMP        A=0 sBx=5
+    0004 [line  406] 0x004040C6  GETTABLE   R3 = R0[K[1]='mContinue']
+    0005 [line  406] 0x000040DA  TEST       A=3 B=0 C=1
+    0006 [line  406] 0x80004016  JMP        A=0 sBx=2
+    0007 [line  407] 0x80C08009  SETTABLE   R0[K[1]='mContinue'] = K[2]=True
+    0008 [line  407] 0x80008016  JMP        A=0 sBx=3
+    0009 [line  408] 0x0000409A  TEST       A=2 B=0 C=1
+    0010 [line  408] 0x80000016  JMP        A=0 sBx=1
+    0011 [line  409] 0x80C0C009  SETTABLE   R0[K[1]='mContinue'] = K[3]=False
+    0012 [line  412] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 12
+    'name': 0 -> 12
+    'is_down': 0 -> 12
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x40A9
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 414 - 425
+    Params : 4
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Btn_TabTarget'
+    K[001] = 5.0
+    K[002] = 'mContinue'
+    K[003] = 'require'
+    K[004] = 'GUI.ECPanelEnemy'
+    K[005] = 'Instance'
+    K[006] = 'OpenPanel'
+    K[007] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  415] 0x00C00017  EQ         A=0 B=R1 C=K[0]='Btn_TabTarget'
+    0001 [line  415] 0x80044016  JMP        A=0 sBx=18
+    0002 [line  416] 0x8080C018  LT         A=0 B=K[1]=5.0 C=R3
+    0003 [line  416] 0x8002C016  JMP        A=0 sBx=12
+    0004 [line  416] 0x00408106  GETTABLE   R4 = R0[K[2]='mContinue']
+    0005 [line  416] 0x0000011A  TEST       A=4 B=0 C=0
+    0006 [line  416] 0x80020016  JMP        A=0 sBx=9
+    0007 [line  418] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='require'
+    0008 [line  418] 0x00010141  LOADK      R5 = K[4]='GUI.ECPanelEnemy'
+    0009 [line  418] 0x0100811C  CALL       A=4 B=2 C=2
+    0010 [line  419] 0x02414146  GETTABLE   R5 = R4[K[5]='Instance']
+    0011 [line  419] 0x0080815C  CALL       A=5 B=1 C=2
+    0012 [line  419] 0x02C1814B  SELF       A=5 B=5 C=262 Bx=2822
+    0013 [line  419] 0x0100415C  CALL       A=5 B=2 C=1
+    0014 [line  420] 0x8141C009  SETTABLE   R0[K[2]='mContinue'] = K[7]=False
+    0015 [line  420] 0x8000C016  JMP        A=0 sBx=4
+    0016 [line  421] 0x00408106  GETTABLE   R4 = R0[K[2]='mContinue']
+    0017 [line  421] 0x0000011A  TEST       A=4 B=0 C=0
+    0018 [line  421] 0x80000016  JMP        A=0 sBx=1
+    0019 [line  422] 0x8141C009  SETTABLE   R0[K[2]='mContinue'] = K[7]=False
+    0020 [line  425] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 20
+    'id': 0 -> 20
+    'dx': 0 -> 20
+    'dy': 0 -> 20
+    'ECPanelEnemy': 10 -> 15
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x423D
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 427 - 517
+    Params : 2
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = None
+    K[003] = 'InfoData'
+    K[004] = 0.0
+    K[005] = 'Prof'
+    K[006] = 'SkillSlotInfo'
+    K[007] = 'ActiveSkill'
+    K[008] = 'CoolDownID'
+    K[009] = 'GP_CT_SKILL_START'
+    K[010] = 'GameUtil'
+    K[011] = 'GetCoolDownData'
+    K[012] = 1.0
+    K[013] = 'SkillHdl'
+    K[014] = 'SkillInfo'
+    K[015] = 'IsActive'
+    K[016] = 'Skill'
+    K[017] = 'ID'
+    K[018] = 'GetNextSkillInSeq'
+    K[019] = 'CommonAttackIndex'
+    K[020] = 'GetSkillInSeq'
+    K[021] = 'CAIResetTimer'
+    K[022] = 'RemoveTimer'
+    K[023] = 'GetGameObject'
+    K[024] = 'AddTimer'
+    K[025] = 1.5
+    K[026] = 'CheckSkillLimit'
+    K[027] = 'GetUserSkill'
+    K[028] = 'warn'
+    K[029] = 'not learn this skill'
+    K[030] = 'FlashTipMan'
+    K[031] = 'FlashTip'
+    K[032] = 'StringTable'
+    K[033] = 'Get'
+    K[034] = 2.0
+    K[035] = 'GetTargetType'
+    K[036] = 'e_SkillTarget_Type'
+    K[037] = 'Object'
+    K[038] = 'TargetID'
+    K[039] = 'ZeroUInt64'
+    K[040] = 'TargetIsAutoSelected'
+    K[041] = 'm_CurWorld'
+    K[042] = 'FindObject'
+    K[043] = 'IsDead'
+    K[044] = 'CanBeAttacked'
+    K[045] = 'AttackCheckCode'
+    K[046] = 'Success'
+    K[047] = 'Err_Alliance'
+    K[048] = 235.0
+    K[049] = 'attack_alliance'
+    K[050] = 'Err_SelfRefuseFight'
+    K[051] = 236.0
+    K[052] = 'Err_Kindness'
+    K[053] = 30110.0
+    K[054] = '当前不可被攻击的错误码：'
+    K[055] = 234.0
+    K[056] = 'attack'
+    K[057] = 'IsInHPMoveState'
+    K[058] = 'FSMChangeToStandState'
+    K[059] = 'require'
+    K[060] = 'Players.ECAutoMove'
+    K[061] = 'StopAutoMove'
+    K[062] = 'CastSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  428] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  428] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  428] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  428] 0x01404086  GETTABLE   R2 = R2[K[1]='m_HostPlayer']
+    0004 [line  429] 0x01408057  EQ         A=1 B=R2 C=K[2]=None
+    0005 [line  429] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  429] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='InfoData']
+    0007 [line  429] 0x01C08017  EQ         A=0 B=R3 C=K[2]=None
+    0008 [line  429] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  429] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  431] 0x82004018  LT         A=0 B=K[4]=0.0 C=R1
+    0011 [line  431] 0x80344016  JMP        A=0 sBx=210
+    0012 [line  431] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0013 [line  431] 0x0080C019  LE         A=0 B=R1 C=R3
+    0014 [line  431] 0x80338016  JMP        A=0 sBx=207
+    0015 [line  432] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='InfoData']
+    0016 [line  432] 0x01C140C6  GETTABLE   R3 = R3[K[5]='Prof']
+    0017 [line  433] 0x00418106  GETTABLE   R4 = R0[K[6]='SkillSlotInfo']
+    0018 [line  433] 0x02004106  GETTABLE   R4 = R4[R1]
+    0019 [line  433] 0x0241C106  GETTABLE   R4 = R4[K[7]='ActiveSkill']
+    0020 [line  434] 0x82010018  LT         A=0 B=K[4]=0.0 C=R4
+    0021 [line  434] 0x8031C016  JMP        A=0 sBx=200
+    0022 [line  435] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0023 [line  435] 0x02804146  GETTABLE   R5 = R5[R1]
+    0024 [line  435] 0x02C20146  GETTABLE   R5 = R5[K[8]='CoolDownID']
+    0025 [line  435] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='GP_CT_SKILL_START'
+    0026 [line  435] 0x0281814C  ADD        A=5 B=R5 C=R6
+    0027 [line  436] 0x00028185  GETGLOBAL  R6 = GLOBAL K[10]='GameUtil'
+    0028 [line  436] 0x0342C186  GETTABLE   R6 = R6[K[11]='GetCoolDownData']
+    0029 [line  436] 0x028001C0  MOVE       R7 = R5
+    0030 [line  436] 0x0100C19C  CALL       A=6 B=2 C=3
+    0031 [line  437] 0x00C30017  EQ         A=0 B=R1 C=K[12]=1.0
+    0032 [line  437] 0x80000016  JMP        A=0 sBx=1
+    0033 [line  437] 0x00010181  LOADK      R6 = K[4]=0.0
+    0034 [line  438] 0x03410017  EQ         A=0 B=R6 C=K[4]=0.0
+    0035 [line  438] 0x802E4016  JMP        A=0 sBx=186
+    0036 [line  440] 0x00C30017  EQ         A=0 B=R1 C=K[12]=1.0
+    0037 [line  440] 0x800EC016  JMP        A=0 sBx=60
+    0038 [line  441] 0x01434206  GETTABLE   R8 = R2[K[13]='SkillHdl']
+    0039 [line  441] 0x04438206  GETTABLE   R8 = R8[K[14]='SkillInfo']
+    0040 [line  442] 0x00010241  LOADK      R9 = K[4]=0.0
+    0041 [line  443] 0x0443C286  GETTABLE   R10 = R8[K[15]='IsActive']
+    0042 [line  443] 0x0000029A  TEST       A=10 B=0 C=0
+    0043 [line  443] 0x80048016  JMP        A=0 sBx=19
+    0044 [line  443] 0x04440286  GETTABLE   R10 = R8[K[16]='Skill']
+    0045 [line  443] 0x0000029A  TEST       A=10 B=0 C=0
+    0046 [line  443] 0x8003C016  JMP        A=0 sBx=16
+    0047 [line  444] 0x04440286  GETTABLE   R10 = R8[K[16]='Skill']
+    0048 [line  444] 0x05444286  GETTABLE   R10 = R10[K[17]='ID']
+    0049 [line  445] 0x000102C1  LOADK      R11 = K[4]=0.0
+    0050 [line  446] 0x01000304  GETUPVAL   A=12 B=2 C=0 Bx=1024
+    0051 [line  446] 0x06400306  GETTABLE   R12 = R12[K[0]='Instance']
+    0052 [line  446] 0x0080831C  CALL       A=12 B=1 C=2
+    0053 [line  446] 0x0644830B  SELF       A=12 B=12 C=274 Bx=6418
+    0054 [line  446] 0x01800380  MOVE       R14 = R3
+    0055 [line  446] 0x050003C0  MOVE       R15 = R10
+    0056 [line  446] 0x0201031C  CALL       A=12 B=4 C=4
+    0057 [line  446] 0x07000240  MOVE       R9 = R14
+    0058 [line  446] 0x068002C0  MOVE       R11 = R13
+    0059 [line  446] 0x06000100  MOVE       R4 = R12
+    0060 [line  447] 0x05C3030C  ADD        A=12 B=R11 C=K[12]=1.0
+    0061 [line  447] 0x89830009  SETTABLE   R0[K[19]='CommonAttackIndex'] = R12
+    0062 [line  447] 0x8002C016  JMP        A=0 sBx=12
+    0063 [line  449] 0x01000284  GETUPVAL   A=10 B=2 C=0 Bx=1024
+    0064 [line  449] 0x05400286  GETTABLE   R10 = R10[K[0]='Instance']
+    0065 [line  449] 0x0080829C  CALL       A=10 B=1 C=2
+    0066 [line  449] 0x0545028B  SELF       A=10 B=10 C=276 Bx=5396
+    0067 [line  449] 0x01800300  MOVE       R12 = R3
+    0068 [line  449] 0x0044C346  GETTABLE   R13 = R0[K[19]='CommonAttackIndex']
+    0069 [line  449] 0x0200C29C  CALL       A=10 B=4 C=3
+    0070 [line  449] 0x05800240  MOVE       R9 = R11
+    0071 [line  449] 0x05000100  MOVE       R4 = R10
+    0072 [line  450] 0x0044C286  GETTABLE   R10 = R0[K[19]='CommonAttackIndex']
+    0073 [line  450] 0x0543028C  ADD        A=10 B=R10 C=K[12]=1.0
+    0074 [line  450] 0x89828009  SETTABLE   R0[K[19]='CommonAttackIndex'] = R10
+    0075 [line  452] 0x0044C286  GETTABLE   R10 = R0[K[19]='CommonAttackIndex']
+    0076 [line  452] 0x04828018  LT         A=0 B=R9 C=R10
+    0077 [line  452] 0x80000016  JMP        A=0 sBx=1
+    0078 [line  452] 0x89C30009  SETTABLE   R0[K[19]='CommonAttackIndex'] = K[12]=1.0
+    0079 [line  453] 0x00454286  GETTABLE   R10 = R0[K[21]='CAIResetTimer']
+    0080 [line  453] 0x05410057  EQ         A=1 B=R10 C=K[4]=0.0
+    0081 [line  453] 0x80014016  JMP        A=0 sBx=6
+    0082 [line  454] 0x00028285  GETGLOBAL  R10 = GLOBAL K[10]='GameUtil'
+    0083 [line  454] 0x05458286  GETTABLE   R10 = R10[K[22]='RemoveTimer']
+    0084 [line  454] 0x0145C2CB  SELF       A=11 B=2 C=279 Bx=1303
+    0085 [line  454] 0x010082DC  CALL       A=11 B=2 C=2
+    0086 [line  454] 0x00454306  GETTABLE   R12 = R0[K[21]='CAIResetTimer']
+    0087 [line  454] 0x0180429C  CALL       A=10 B=3 C=1
+    0088 [line  456] 0x00028285  GETGLOBAL  R10 = GLOBAL K[10]='GameUtil'
+    0089 [line  456] 0x05460286  GETTABLE   R10 = R10[K[24]='AddTimer']
+    0090 [line  456] 0x0145C2CB  SELF       A=11 B=2 C=279 Bx=1303
+    0091 [line  456] 0x010082DC  CALL       A=11 B=2 C=2
+    0092 [line  456] 0x00064301  LOADK      R12 = K[25]=1.5
+    0093 [line  456] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0094 [line  459] 0x000003A4  CLOSURE    R14 = PROTO[0]
+    0095 [line  459] 0x00000000  MOVE       R0 = R0
+    0096 [line  456] 0x0280829C  CALL       A=10 B=5 C=2
+    0097 [line  459] 0x8A828009  SETTABLE   R0[K[21]='CAIResetTimer'] = R10
+    0098 [line  468] 0x01434206  GETTABLE   R8 = R2[K[13]='SkillHdl']
+    0099 [line  468] 0x0446820B  SELF       A=8 B=8 C=282 Bx=4378
+    0100 [line  468] 0x02000280  MOVE       R10 = R4
+    0101 [line  468] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0102 [line  468] 0x0200821C  CALL       A=8 B=4 C=2
+    0103 [line  468] 0x0000421A  TEST       A=8 B=0 C=1
+    0104 [line  468] 0x80000016  JMP        A=0 sBx=1
+    0105 [line  469] 0x0080001E  RETURN     A=0 B=1 C=0
+    0106 [line  472] 0x0146C20B  SELF       A=8 B=2 C=283 Bx=1307
+    0107 [line  472] 0x02000280  MOVE       R10 = R4
+    0108 [line  472] 0x0180821C  CALL       A=8 B=3 C=2
+    0109 [line  473] 0x04408017  EQ         A=0 B=R8 C=K[2]=None
+    0110 [line  473] 0x80028016  JMP        A=0 sBx=11
+    0111 [line  474] 0x00070245  GETGLOBAL  R9 = GLOBAL K[28]='warn'
+    0112 [line  474] 0x00074281  LOADK      R10 = K[29]='not learn this skill'
+    0113 [line  474] 0x0100425C  CALL       A=9 B=2 C=1
+    0114 [line  475] 0x00078245  GETGLOBAL  R9 = GLOBAL K[30]='FlashTipMan'
+    0115 [line  475] 0x04C7C246  GETTABLE   R9 = R9[K[31]='FlashTip']
+    0116 [line  475] 0x00080285  GETGLOBAL  R10 = GLOBAL K[32]='StringTable'
+    0117 [line  475] 0x05484286  GETTABLE   R10 = R10[K[33]='Get']
+    0118 [line  475] 0x000882C1  LOADK      R11 = K[34]=2.0
+    0119 [line  475] 0x0100029C  CALL       A=10 B=2 C=0
+    0120 [line  475] 0x0000425C  CALL       A=9 B=0 C=1
+    0121 [line  476] 0x0080001E  RETURN     A=0 B=1 C=0
+    0122 [line  479] 0x0448C24B  SELF       A=9 B=8 C=291 Bx=4387
+    0123 [line  479] 0x0100825C  CALL       A=9 B=2 C=2
+    0124 [line  479] 0x00090285  GETGLOBAL  R10 = GLOBAL K[36]='e_SkillTarget_Type'
+    0125 [line  479] 0x05494286  GETTABLE   R10 = R10[K[37]='Object']
+    0126 [line  479] 0x04828017  EQ         A=0 B=R9 C=R10
+    0127 [line  479] 0x80130016  JMP        A=0 sBx=77
+    0128 [line  479] 0x01498246  GETTABLE   R9 = R2[K[38]='TargetID']
+    0129 [line  479] 0x0009C285  GETGLOBAL  R10 = GLOBAL K[39]='ZeroUInt64'
+    0130 [line  479] 0x04828057  EQ         A=1 B=R9 C=R10
+    0131 [line  479] 0x80120016  JMP        A=0 sBx=73
+    0132 [line  479] 0x014A0246  GETTABLE   R9 = R2[K[40]='TargetIsAutoSelected']
+    0133 [line  479] 0x0000425A  TEST       A=9 B=0 C=1
+    0134 [line  479] 0x80114016  JMP        A=0 sBx=70
+    0135 [line  480] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0136 [line  480] 0x04C00246  GETTABLE   R9 = R9[K[0]='Instance']
+    0137 [line  480] 0x0080825C  CALL       A=9 B=1 C=2
+    0138 [line  480] 0x04CA4246  GETTABLE   R9 = R9[K[41]='m_CurWorld']
+    0139 [line  481] 0x04CA828B  SELF       A=10 B=9 C=298 Bx=4906
+    0140 [line  481] 0x01498306  GETTABLE   R12 = R2[K[38]='TargetID']
+    0141 [line  481] 0x0180829C  CALL       A=10 B=3 C=2
+    0142 [line  482] 0x05408057  EQ         A=1 B=R10 C=K[2]=None
+    0143 [line  482] 0x8000C016  JMP        A=0 sBx=4
+    0144 [line  482] 0x054AC2CB  SELF       A=11 B=10 C=299 Bx=5419
+    0145 [line  482] 0x010082DC  CALL       A=11 B=2 C=2
+    0146 [line  482] 0x000002DA  TEST       A=11 B=0 C=0
+    0147 [line  482] 0x80000016  JMP        A=0 sBx=1
+    0148 [line  483] 0x0080001E  RETURN     A=0 B=1 C=0
+    0149 [line  486] 0x054B02CB  SELF       A=11 B=10 C=300 Bx=5420
+    0150 [line  486] 0x010082DC  CALL       A=11 B=2 C=2
+    0151 [line  487] 0x000B4305  GETGLOBAL  R12 = GLOBAL K[45]='AttackCheckCode'
+    0152 [line  487] 0x064B8306  GETTABLE   R12 = R12[K[46]='Success']
+    0153 [line  487] 0x05830057  EQ         A=1 B=R11 C=R12
+    0154 [line  487] 0x800C4016  JMP        A=0 sBx=50
+    0155 [line  488] 0x000B4305  GETGLOBAL  R12 = GLOBAL K[45]='AttackCheckCode'
+    0156 [line  488] 0x064BC306  GETTABLE   R12 = R12[K[47]='Err_Alliance']
+    0157 [line  488] 0x05830017  EQ         A=0 B=R11 C=R12
+    0158 [line  488] 0x80020016  JMP        A=0 sBx=9
+    0159 [line  489] 0x00078305  GETGLOBAL  R12 = GLOBAL K[30]='FlashTipMan'
+    0160 [line  489] 0x0647C306  GETTABLE   R12 = R12[K[31]='FlashTip']
+    0161 [line  489] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='StringTable'
+    0162 [line  489] 0x06C84346  GETTABLE   R13 = R13[K[33]='Get']
+    0163 [line  489] 0x000C0381  LOADK      R14 = K[48]=235.0
+    0164 [line  489] 0x0100835C  CALL       A=13 B=2 C=2
+    0165 [line  489] 0x000C4381  LOADK      R14 = K[49]='attack_alliance'
+    0166 [line  489] 0x0180431C  CALL       A=12 B=3 C=1
+    0167 [line  489] 0x8008C016  JMP        A=0 sBx=36
+    0168 [line  490] 0x000B4305  GETGLOBAL  R12 = GLOBAL K[45]='AttackCheckCode'
+    0169 [line  490] 0x064C8306  GETTABLE   R12 = R12[K[50]='Err_SelfRefuseFight']
+    0170 [line  490] 0x05830017  EQ         A=0 B=R11 C=R12
+    0171 [line  490] 0x8001C016  JMP        A=0 sBx=8
+    0172 [line  491] 0x00078305  GETGLOBAL  R12 = GLOBAL K[30]='FlashTipMan'
+    0173 [line  491] 0x0647C306  GETTABLE   R12 = R12[K[31]='FlashTip']
+    0174 [line  491] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='StringTable'
+    0175 [line  491] 0x06C84346  GETTABLE   R13 = R13[K[33]='Get']
+    0176 [line  491] 0x000CC381  LOADK      R14 = K[51]=236.0
+    0177 [line  491] 0x0100035C  CALL       A=13 B=2 C=0
+    0178 [line  491] 0x0000431C  CALL       A=12 B=0 C=1
+    0179 [line  491] 0x8005C016  JMP        A=0 sBx=24
+    0180 [line  492] 0x000B4305  GETGLOBAL  R12 = GLOBAL K[45]='AttackCheckCode'
+    0181 [line  492] 0x064D0306  GETTABLE   R12 = R12[K[52]='Err_Kindness']
+    0182 [line  492] 0x05830017  EQ         A=0 B=R11 C=R12
+    0183 [line  492] 0x8001C016  JMP        A=0 sBx=8
+    0184 [line  493] 0x00078305  GETGLOBAL  R12 = GLOBAL K[30]='FlashTipMan'
+    0185 [line  493] 0x0647C306  GETTABLE   R12 = R12[K[31]='FlashTip']
+    0186 [line  493] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='StringTable'
+    0187 [line  493] 0x06C84346  GETTABLE   R13 = R13[K[33]='Get']
+    0188 [line  493] 0x000D4381  LOADK      R14 = K[53]=30110.0
+    0189 [line  493] 0x0100035C  CALL       A=13 B=2 C=0
+    0190 [line  493] 0x0000431C  CALL       A=12 B=0 C=1
+    0191 [line  493] 0x8002C016  JMP        A=0 sBx=12
+    0192 [line  495] 0x00070305  GETGLOBAL  R12 = GLOBAL K[28]='warn'
+    0193 [line  495] 0x000D8341  LOADK      R13 = K[54]='当前不可被攻击的错误码：'
+    0194 [line  495] 0x05800380  MOVE       R14 = R11
+    0195 [line  495] 0x0180431C  CALL       A=12 B=3 C=1
+    0196 [line  496] 0x00078305  GETGLOBAL  R12 = GLOBAL K[30]='FlashTipMan'
+    0197 [line  496] 0x0647C306  GETTABLE   R12 = R12[K[31]='FlashTip']
+    0198 [line  496] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='StringTable'
+    0199 [line  496] 0x06C84346  GETTABLE   R13 = R13[K[33]='Get']
+    0200 [line  496] 0x000DC381  LOADK      R14 = K[55]=234.0
+    0201 [line  496] 0x0100835C  CALL       A=13 B=2 C=2
+    0202 [line  496] 0x000E0381  LOADK      R14 = K[56]='attack'
+    0203 [line  496] 0x0180431C  CALL       A=12 B=3 C=1
+    0204 [line  498] 0x0080001E  RETURN     A=0 B=1 C=0
+    0205 [line  501] 0x014E424B  SELF       A=9 B=2 C=313 Bx=1337
+    0206 [line  501] 0x0100825C  CALL       A=9 B=2 C=2
+    0207 [line  501] 0x0000025A  TEST       A=9 B=0 C=0
+    0208 [line  501] 0x80004016  JMP        A=0 sBx=2
+    0209 [line  502] 0x014E824B  SELF       A=9 B=2 C=314 Bx=1338
+    0210 [line  502] 0x0100425C  CALL       A=9 B=2 C=1
+    0211 [line  505] 0x000EC245  GETGLOBAL  R9 = GLOBAL K[59]='require'
+    0212 [line  505] 0x000F0281  LOADK      R10 = K[60]='Players.ECAutoMove'
+    0213 [line  505] 0x0100825C  CALL       A=9 B=2 C=2
+    0214 [line  506] 0x04CF4286  GETTABLE   R10 = R9[K[61]='StopAutoMove']
+    0215 [line  506] 0x0080429C  CALL       A=10 B=1 C=1
+    0216 [line  508] 0x01434286  GETTABLE   R10 = R2[K[13]='SkillHdl']
+    0217 [line  508] 0x054F828B  SELF       A=10 B=10 C=318 Bx=5438
+    0218 [line  508] 0x02000300  MOVE       R12 = R4
+    0219 [line  508] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0220 [line  508] 0x0200429C  CALL       A=10 B=4 C=1
+    0221 [line  508] 0x7FFFC016  JMP        A=0 sBx=0
+    0222 [line  517] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 222
+    'icon_index': 0 -> 222
+    'hp': 4 -> 222
+    'prof': 17 -> 222
+    'skillid': 20 -> 222
+    'cd_id': 27 -> 222
+    'cur_time': 31 -> 222
+    'max_time': 31 -> 222
+    'cur_skill_info': 40 -> 98
+    'max_cnts': 41 -> 98
+    'cur_skill_id': 49 -> 62
+    'index': 50 -> 62
+    'user_skill': 109 -> 221
+    'world': 139 -> 205
+    'cur_target': 142 -> 205
+    'attackCheckCode': 151 -> 205
+    'ECAutoMove': 214 -> 221
+
+        ============================================================
+        PROTO ROOT.14.0
+        Offset : 0x49DA
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 456 - 459
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'CommonAttackIndex'
+        K[001] = 1.0
+        K[002] = 'CAIResetTimer'
+        K[003] = 0.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  457] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  457] 0x80404009  SETTABLE   R0[K[0]='CommonAttackIndex'] = K[1]=1.0
+        0002 [line  458] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0003 [line  458] 0x8140C009  SETTABLE   R0[K[2]='CAIResetTimer'] = K[3]=0.0
+        0004 [line  459] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x4F8D
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 531 - 536
+    Params : 2
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 'SkillSlotInfo'
+    K[002] = 'ActiveSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  532] 0x80004018  LT         A=0 B=K[0]=0.0 C=R1
+    0001 [line  532] 0x80018016  JMP        A=0 sBx=7
+    0002 [line  532] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0003 [line  532] 0x00808019  LE         A=0 B=R1 C=R2
+    0004 [line  532] 0x8000C016  JMP        A=0 sBx=4
+    0005 [line  533] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0006 [line  533] 0x01004086  GETTABLE   R2 = R2[R1]
+    0007 [line  533] 0x01408086  GETTABLE   R2 = R2[K[2]='ActiveSkill']
+    0008 [line  533] 0x0100009E  RETURN     A=2 B=2 C=0
+    0009 [line  535] 0x00000081  LOADK      R2 = K[0]=0.0
+    0010 [line  535] 0x0100009E  RETURN     A=2 B=2 C=0
+    0011 [line  536] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 11
+    'index': 0 -> 11
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x507A
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 538 - 579
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'SkillSlotInfo'
+    K[002] = 'Group'
+    K[003] = 'm_panel'
+    K[004] = 'FindChild'
+    K[005] = 'Skill02'
+    K[006] = 'Normal'
+    K[007] = 'Img_Skill02'
+    K[008] = 'Cooldown'
+    K[009] = 'Img_CoolSkill02'
+    K[010] = 'CDOverEffect'
+    K[011] = None
+    K[012] = 2.0
+    K[013] = 'Skill03'
+    K[014] = 'Img_Skill03'
+    K[015] = 'Img_CoolSkill03'
+    K[016] = 'fx_ui_Skill_blue'
+    K[017] = 'SignItem'
+    K[018] = 'FindDirect'
+    K[019] = 'Widget/BgSkill/Skill03/ChooseSignItem'
+    K[020] = 3.0
+    K[021] = 'Skill04'
+    K[022] = 'Img_Skill04'
+    K[023] = 'Img_CoolSkill04'
+    K[024] = 'Widget/BgSkill/Skill04/ChooseSignItem'
+    K[025] = 4.0
+    K[026] = 'Skill05'
+    K[027] = 'Img_Skill05'
+    K[028] = 'Img_CoolSkill05'
+    K[029] = 'Widget/BgSkill/Skill05/ChooseSignItem'
+    K[030] = 5.0
+    K[031] = 'Skillxp'
+    K[032] = 'Img_Skillxp'
+    K[033] = 'Img_CoolSkillxp'
+    K[034] = 'fx_ui_Skill_red'
+    K[035] = 'XPFullEffect'
+    K[036] = 'fx_ui_Skillxp'
+    K[037] = 6.0
+    K[038] = 'Skill06'
+    K[039] = 'Img_Skill06'
+    K[040] = 'Img_CoolSkill06'
+    K[041] = 'SetActive'
+    K[042] = 'require'
+    K[043] = 'Main.ECGame'
+    K[044] = 'Instance'
+    K[045] = 'm_InCenterServer'
+    K[046] = 'm_InOneWorldCenterServer'
+    K[047] = 'setVisible'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  539] 0x00000041  LOADK      R1 = K[0]=1.0
+    0001 [line  539] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  539] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0003 [line  539] 0x80008060  FORPREP    A=1 sBx=3
+    0004 [line  540] 0x00404146  GETTABLE   R5 = R0[K[1]='SkillSlotInfo']
+    0005 [line  540] 0x0000018A  NEWTABLE   A=6 B=0 C=0 Bx=0
+    0006 [line  540] 0x02018149  SETTABLE   R5[R4] = R6
+    0007 [line  539] 0x7FFEC05F  FORLOOP    A=1 sBx=-4
+    0008 [line  542] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0009 [line  542] 0x00C00046  GETTABLE   R1 = R1[K[0]=1.0]
+    0010 [line  542] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0011 [line  542] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0012 [line  542] 0x00014101  LOADK      R4 = K[5]='Skill02'
+    0013 [line  542] 0x0180809C  CALL       A=2 B=3 C=2
+    0014 [line  542] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0015 [line  543] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0016 [line  543] 0x00C00046  GETTABLE   R1 = R1[K[0]=1.0]
+    0017 [line  543] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0018 [line  543] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0019 [line  543] 0x0001C101  LOADK      R4 = K[7]='Img_Skill02'
+    0020 [line  543] 0x0180809C  CALL       A=2 B=3 C=2
+    0021 [line  543] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0022 [line  544] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0023 [line  544] 0x00C00046  GETTABLE   R1 = R1[K[0]=1.0]
+    0024 [line  544] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0025 [line  544] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0026 [line  544] 0x00024101  LOADK      R4 = K[9]='Img_CoolSkill02'
+    0027 [line  544] 0x0180809C  CALL       A=2 B=3 C=2
+    0028 [line  544] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0029 [line  545] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0030 [line  545] 0x00C00046  GETTABLE   R1 = R1[K[0]=1.0]
+    0031 [line  545] 0x8542C049  SETTABLE   R1[K[10]='CDOverEffect'] = K[11]=None
+    0032 [line  546] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0033 [line  546] 0x00C30046  GETTABLE   R1 = R1[K[12]=2.0]
+    0034 [line  546] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0035 [line  546] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0036 [line  546] 0x00034101  LOADK      R4 = K[13]='Skill03'
+    0037 [line  546] 0x0180809C  CALL       A=2 B=3 C=2
+    0038 [line  546] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0039 [line  547] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0040 [line  547] 0x00C30046  GETTABLE   R1 = R1[K[12]=2.0]
+    0041 [line  547] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0042 [line  547] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0043 [line  547] 0x00038101  LOADK      R4 = K[14]='Img_Skill03'
+    0044 [line  547] 0x0180809C  CALL       A=2 B=3 C=2
+    0045 [line  547] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0046 [line  548] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0047 [line  548] 0x00C30046  GETTABLE   R1 = R1[K[12]=2.0]
+    0048 [line  548] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0049 [line  548] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0050 [line  548] 0x0003C101  LOADK      R4 = K[15]='Img_CoolSkill03'
+    0051 [line  548] 0x0180809C  CALL       A=2 B=3 C=2
+    0052 [line  548] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0053 [line  549] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0054 [line  549] 0x00C30046  GETTABLE   R1 = R1[K[12]=2.0]
+    0055 [line  549] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0056 [line  549] 0x01430086  GETTABLE   R2 = R2[K[12]=2.0]
+    0057 [line  549] 0x01408086  GETTABLE   R2 = R2[K[2]='Group']
+    0058 [line  549] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0059 [line  549] 0x00040101  LOADK      R4 = K[16]='fx_ui_Skill_blue'
+    0060 [line  549] 0x0180809C  CALL       A=2 B=3 C=2
+    0061 [line  549] 0x85008049  SETTABLE   R1[K[10]='CDOverEffect'] = R2
+    0062 [line  550] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0063 [line  550] 0x00C30046  GETTABLE   R1 = R1[K[12]=2.0]
+    0064 [line  550] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0065 [line  550] 0x0144808B  SELF       A=2 B=2 C=274 Bx=1298
+    0066 [line  550] 0x0004C101  LOADK      R4 = K[19]='Widget/BgSkill/Skill03/ChooseSignItem'
+    0067 [line  550] 0x0180809C  CALL       A=2 B=3 C=2
+    0068 [line  550] 0x88808049  SETTABLE   R1[K[17]='SignItem'] = R2
+    0069 [line  551] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0070 [line  551] 0x00C50046  GETTABLE   R1 = R1[K[20]=3.0]
+    0071 [line  551] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0072 [line  551] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0073 [line  551] 0x00054101  LOADK      R4 = K[21]='Skill04'
+    0074 [line  551] 0x0180809C  CALL       A=2 B=3 C=2
+    0075 [line  551] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0076 [line  552] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0077 [line  552] 0x00C50046  GETTABLE   R1 = R1[K[20]=3.0]
+    0078 [line  552] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0079 [line  552] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0080 [line  552] 0x00058101  LOADK      R4 = K[22]='Img_Skill04'
+    0081 [line  552] 0x0180809C  CALL       A=2 B=3 C=2
+    0082 [line  552] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0083 [line  553] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0084 [line  553] 0x00C50046  GETTABLE   R1 = R1[K[20]=3.0]
+    0085 [line  553] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0086 [line  553] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0087 [line  553] 0x0005C101  LOADK      R4 = K[23]='Img_CoolSkill04'
+    0088 [line  553] 0x0180809C  CALL       A=2 B=3 C=2
+    0089 [line  553] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0090 [line  554] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0091 [line  554] 0x00C50046  GETTABLE   R1 = R1[K[20]=3.0]
+    0092 [line  554] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0093 [line  554] 0x01450086  GETTABLE   R2 = R2[K[20]=3.0]
+    0094 [line  554] 0x01408086  GETTABLE   R2 = R2[K[2]='Group']
+    0095 [line  554] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0096 [line  554] 0x00040101  LOADK      R4 = K[16]='fx_ui_Skill_blue'
+    0097 [line  554] 0x0180809C  CALL       A=2 B=3 C=2
+    0098 [line  554] 0x85008049  SETTABLE   R1[K[10]='CDOverEffect'] = R2
+    0099 [line  555] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0100 [line  555] 0x00C50046  GETTABLE   R1 = R1[K[20]=3.0]
+    0101 [line  555] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0102 [line  555] 0x0144808B  SELF       A=2 B=2 C=274 Bx=1298
+    0103 [line  555] 0x00060101  LOADK      R4 = K[24]='Widget/BgSkill/Skill04/ChooseSignItem'
+    0104 [line  555] 0x0180809C  CALL       A=2 B=3 C=2
+    0105 [line  555] 0x88808049  SETTABLE   R1[K[17]='SignItem'] = R2
+    0106 [line  556] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0107 [line  556] 0x00C64046  GETTABLE   R1 = R1[K[25]=4.0]
+    0108 [line  556] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0109 [line  556] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0110 [line  556] 0x00068101  LOADK      R4 = K[26]='Skill05'
+    0111 [line  556] 0x0180809C  CALL       A=2 B=3 C=2
+    0112 [line  556] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0113 [line  557] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0114 [line  557] 0x00C64046  GETTABLE   R1 = R1[K[25]=4.0]
+    0115 [line  557] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0116 [line  557] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0117 [line  557] 0x0006C101  LOADK      R4 = K[27]='Img_Skill05'
+    0118 [line  557] 0x0180809C  CALL       A=2 B=3 C=2
+    0119 [line  557] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0120 [line  558] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0121 [line  558] 0x00C64046  GETTABLE   R1 = R1[K[25]=4.0]
+    0122 [line  558] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0123 [line  558] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0124 [line  558] 0x00070101  LOADK      R4 = K[28]='Img_CoolSkill05'
+    0125 [line  558] 0x0180809C  CALL       A=2 B=3 C=2
+    0126 [line  558] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0127 [line  559] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0128 [line  559] 0x00C64046  GETTABLE   R1 = R1[K[25]=4.0]
+    0129 [line  559] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0130 [line  559] 0x01464086  GETTABLE   R2 = R2[K[25]=4.0]
+    0131 [line  559] 0x01408086  GETTABLE   R2 = R2[K[2]='Group']
+    0132 [line  559] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0133 [line  559] 0x00040101  LOADK      R4 = K[16]='fx_ui_Skill_blue'
+    0134 [line  559] 0x0180809C  CALL       A=2 B=3 C=2
+    0135 [line  559] 0x85008049  SETTABLE   R1[K[10]='CDOverEffect'] = R2
+    0136 [line  560] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0137 [line  560] 0x00C64046  GETTABLE   R1 = R1[K[25]=4.0]
+    0138 [line  560] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0139 [line  560] 0x0144808B  SELF       A=2 B=2 C=274 Bx=1298
+    0140 [line  560] 0x00074101  LOADK      R4 = K[29]='Widget/BgSkill/Skill05/ChooseSignItem'
+    0141 [line  560] 0x0180809C  CALL       A=2 B=3 C=2
+    0142 [line  560] 0x88808049  SETTABLE   R1[K[17]='SignItem'] = R2
+    0143 [line  561] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0144 [line  561] 0x00C78046  GETTABLE   R1 = R1[K[30]=5.0]
+    0145 [line  561] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0146 [line  561] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0147 [line  561] 0x0007C101  LOADK      R4 = K[31]='Skillxp'
+    0148 [line  561] 0x0180809C  CALL       A=2 B=3 C=2
+    0149 [line  561] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0150 [line  562] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0151 [line  562] 0x00C78046  GETTABLE   R1 = R1[K[30]=5.0]
+    0152 [line  562] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0153 [line  562] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0154 [line  562] 0x00080101  LOADK      R4 = K[32]='Img_Skillxp'
+    0155 [line  562] 0x0180809C  CALL       A=2 B=3 C=2
+    0156 [line  562] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0157 [line  563] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0158 [line  563] 0x00C78046  GETTABLE   R1 = R1[K[30]=5.0]
+    0159 [line  563] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0160 [line  563] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0161 [line  563] 0x00084101  LOADK      R4 = K[33]='Img_CoolSkillxp'
+    0162 [line  563] 0x0180809C  CALL       A=2 B=3 C=2
+    0163 [line  563] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0164 [line  564] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0165 [line  564] 0x00C78046  GETTABLE   R1 = R1[K[30]=5.0]
+    0166 [line  564] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0167 [line  564] 0x01430086  GETTABLE   R2 = R2[K[12]=2.0]
+    0168 [line  564] 0x01408086  GETTABLE   R2 = R2[K[2]='Group']
+    0169 [line  564] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0170 [line  564] 0x00088101  LOADK      R4 = K[34]='fx_ui_Skill_red'
+    0171 [line  564] 0x0180809C  CALL       A=2 B=3 C=2
+    0172 [line  564] 0x85008049  SETTABLE   R1[K[10]='CDOverEffect'] = R2
+    0173 [line  565] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0174 [line  565] 0x00C78046  GETTABLE   R1 = R1[K[30]=5.0]
+    0175 [line  565] 0x00C08046  GETTABLE   R1 = R1[K[2]='Group']
+    0176 [line  565] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0177 [line  565] 0x000900C1  LOADK      R3 = K[36]='fx_ui_Skillxp'
+    0178 [line  565] 0x0180805C  CALL       A=1 B=3 C=2
+    0179 [line  565] 0x91804009  SETTABLE   R0[K[35]='XPFullEffect'] = R1
+    0180 [line  568] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0181 [line  568] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0182 [line  568] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0183 [line  568] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0184 [line  568] 0x00098101  LOADK      R4 = K[38]='Skill06'
+    0185 [line  568] 0x0180809C  CALL       A=2 B=3 C=2
+    0186 [line  568] 0x81008049  SETTABLE   R1[K[2]='Group'] = R2
+    0187 [line  569] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0188 [line  569] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0189 [line  569] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0190 [line  569] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0191 [line  569] 0x0009C101  LOADK      R4 = K[39]='Img_Skill06'
+    0192 [line  569] 0x0180809C  CALL       A=2 B=3 C=2
+    0193 [line  569] 0x83008049  SETTABLE   R1[K[6]='Normal'] = R2
+    0194 [line  570] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0195 [line  570] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0196 [line  570] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0197 [line  570] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0198 [line  570] 0x000A0101  LOADK      R4 = K[40]='Img_CoolSkill06'
+    0199 [line  570] 0x0180809C  CALL       A=2 B=3 C=2
+    0200 [line  570] 0x84008049  SETTABLE   R1[K[8]='Cooldown'] = R2
+    0201 [line  571] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0202 [line  571] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0203 [line  571] 0x00404086  GETTABLE   R2 = R0[K[1]='SkillSlotInfo']
+    0204 [line  571] 0x01494086  GETTABLE   R2 = R2[K[37]=6.0]
+    0205 [line  571] 0x01408086  GETTABLE   R2 = R2[K[2]='Group']
+    0206 [line  571] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0207 [line  571] 0x00040101  LOADK      R4 = K[16]='fx_ui_Skill_blue'
+    0208 [line  571] 0x0180809C  CALL       A=2 B=3 C=2
+    0209 [line  571] 0x85008049  SETTABLE   R1[K[10]='CDOverEffect'] = R2
+    0210 [line  572] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0211 [line  572] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0212 [line  572] 0x00C18046  GETTABLE   R1 = R1[K[6]='Normal']
+    0213 [line  572] 0x00CA404B  SELF       A=1 B=1 C=297 Bx=809
+    0214 [line  572] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0215 [line  572] 0x0180405C  CALL       A=1 B=3 C=1
+    0216 [line  573] 0x00404046  GETTABLE   R1 = R0[K[1]='SkillSlotInfo']
+    0217 [line  573] 0x00C94046  GETTABLE   R1 = R1[K[37]=6.0]
+    0218 [line  573] 0x00C20046  GETTABLE   R1 = R1[K[8]='Cooldown']
+    0219 [line  573] 0x00CA404B  SELF       A=1 B=1 C=297 Bx=809
+    0220 [line  573] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0221 [line  573] 0x0180405C  CALL       A=1 B=3 C=1
+    0222 [line  574] 0x000A8045  GETGLOBAL  R1 = GLOBAL K[42]='require'
+    0223 [line  574] 0x000AC081  LOADK      R2 = K[43]='Main.ECGame'
+    0224 [line  574] 0x0100805C  CALL       A=1 B=2 C=2
+    0225 [line  574] 0x00CB0046  GETTABLE   R1 = R1[K[44]='Instance']
+    0226 [line  574] 0x0080805C  CALL       A=1 B=1 C=2
+    0227 [line  574] 0x00CB4046  GETTABLE   R1 = R1[K[45]='m_InCenterServer']
+    0228 [line  575] 0x000A8085  GETGLOBAL  R2 = GLOBAL K[42]='require'
+    0229 [line  575] 0x000AC0C1  LOADK      R3 = K[43]='Main.ECGame'
+    0230 [line  575] 0x0100809C  CALL       A=2 B=2 C=2
+    0231 [line  575] 0x014B0086  GETTABLE   R2 = R2[K[44]='Instance']
+    0232 [line  575] 0x0080809C  CALL       A=2 B=1 C=2
+    0233 [line  575] 0x014B8086  GETTABLE   R2 = R2[K[46]='m_InOneWorldCenterServer']
+    0234 [line  575] 0x0000009A  TEST       A=2 B=0 C=0
+    0235 [line  575] 0x80000016  JMP        A=0 sBx=1
+    0236 [line  575] 0x00800080  MOVE       R2 = R1
+    0237 [line  576] 0x004040C6  GETTABLE   R3 = R0[K[1]='SkillSlotInfo']
+    0238 [line  576] 0x01C940C6  GETTABLE   R3 = R3[K[37]=6.0]
+    0239 [line  576] 0x000000DA  TEST       A=3 B=0 C=0
+    0240 [line  576] 0x8002C016  JMP        A=0 sBx=12
+    0241 [line  576] 0x004040C6  GETTABLE   R3 = R0[K[1]='SkillSlotInfo']
+    0242 [line  576] 0x01C940C6  GETTABLE   R3 = R3[K[37]=6.0]
+    0243 [line  576] 0x01C080C6  GETTABLE   R3 = R3[K[2]='Group']
+    0244 [line  576] 0x000000DA  TEST       A=3 B=0 C=0
+    0245 [line  576] 0x80018016  JMP        A=0 sBx=7
+    0246 [line  577] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0247 [line  577] 0x01CBC0C6  GETTABLE   R3 = R3[K[47]='setVisible']
+    0248 [line  577] 0x00404106  GETTABLE   R4 = R0[K[1]='SkillSlotInfo']
+    0249 [line  577] 0x02494106  GETTABLE   R4 = R4[K[37]=6.0]
+    0250 [line  577] 0x02408106  GETTABLE   R4 = R4[K[2]='Group']
+    0251 [line  577] 0x01000153  NOT        A=5 B=2 C=0 Bx=1024
+    0252 [line  577] 0x018040DC  CALL       A=3 B=3 C=1
+    0253 [line  579] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 253
+    '(for index)': 3 -> 8
+    '(for limit)': 3 -> 8
+    '(for step)': 3 -> 8
+    'i': 4 -> 7
+    'center_server': 228 -> 253
+    'oneworld_server': 237 -> 253
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x5C8F
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 581 - 620
+    Params : 1
+    Stack  : 17
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = None
+    K[003] = 'InfoData'
+    K[004] = 'Prof'
+    K[005] = 'GetSkillIDsByProf'
+    K[006] = 'ipairs'
+    K[007] = 'SkillSlotInfo'
+    K[008] = 'MainSkill'
+    K[009] = 'Normal'
+    K[010] = 'GetComponent'
+    K[011] = 'UISprite'
+    K[012] = 'SetSkillIcon'
+    K[013] = 'skill_index_'
+    K[014] = 'IsUnlocked'
+    K[015] = 'UIButton'
+    K[016] = 'isEnabled'
+    K[017] = 'Group'
+    K[018] = 'FindChild'
+    K[019] = 'Img_NotLearn'
+    K[020] = 'SetActive'
+    K[021] = 1.0
+    K[022] = 'ActiveSkill'
+    K[023] = 2.0
+    K[024] = 5.0
+    K[025] = 'GetActiveSkillId'
+    K[026] = 3.0
+    K[027] = 4.0
+    K[028] = 'SignItem'
+    K[029] = 'FindDirect'
+    K[030] = 'Img_Sign'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  582] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  582] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  582] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  582] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  583] 0x00C08057  EQ         A=1 B=R1 C=K[2]=None
+    0005 [line  583] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  583] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0007 [line  583] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0008 [line  583] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  583] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  584] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0011 [line  584] 0x01410086  GETTABLE   R2 = R2[K[4]='Prof']
+    0012 [line  585] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0013 [line  585] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+    0014 [line  585] 0x008080DC  CALL       A=3 B=1 C=2
+    0015 [line  585] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0016 [line  585] 0x01000140  MOVE       R5 = R2
+    0017 [line  585] 0x018080DC  CALL       A=3 B=3 C=2
+    0018 [line  586] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='ipairs'
+    0019 [line  586] 0x01800140  MOVE       R5 = R3
+    0020 [line  586] 0x0101011C  CALL       A=4 B=2 C=4
+    0021 [line  586] 0x80090016  JMP        A=0 sBx=37
+    0022 [line  587] 0x0041C246  GETTABLE   R9 = R0[K[7]='SkillSlotInfo']
+    0023 [line  587] 0x0481C246  GETTABLE   R9 = R9[R7]
+    0024 [line  587] 0x84020249  SETTABLE   R9[K[8]='MainSkill'] = R8
+    0025 [line  589] 0x0041C246  GETTABLE   R9 = R0[K[7]='SkillSlotInfo']
+    0026 [line  589] 0x0481C246  GETTABLE   R9 = R9[R7]
+    0027 [line  589] 0x04C24246  GETTABLE   R9 = R9[K[9]='Normal']
+    0028 [line  589] 0x04C2824B  SELF       A=9 B=9 C=266 Bx=4874
+    0029 [line  589] 0x0002C2C1  LOADK      R11 = K[11]='UISprite'
+    0030 [line  589] 0x0180825C  CALL       A=9 B=3 C=2
+    0031 [line  590] 0x01000284  GETUPVAL   A=10 B=2 C=0 Bx=1024
+    0032 [line  590] 0x05430286  GETTABLE   R10 = R10[K[12]='SetSkillIcon']
+    0033 [line  590] 0x048002C0  MOVE       R11 = R9
+    0034 [line  590] 0x04000300  MOVE       R12 = R8
+    0035 [line  590] 0x0180429C  CALL       A=10 B=3 C=1
+    0036 [line  592] 0x00034281  LOADK      R10 = K[13]='skill_index_'
+    0037 [line  592] 0x038002C0  MOVE       R11 = R7
+    0038 [line  592] 0x0502C295  CONCAT     A=10 B=10 C=11 Bx=5131
+    0039 [line  593] 0x018002C4  GETUPVAL   A=11 B=3 C=0 Bx=1536
+    0040 [line  593] 0x05C382C6  GETTABLE   R11 = R11[K[14]='IsUnlocked']
+    0041 [line  593] 0x05000300  MOVE       R12 = R10
+    0042 [line  593] 0x010082DC  CALL       A=11 B=2 C=2
+    0043 [line  596] 0x0041C306  GETTABLE   R12 = R0[K[7]='SkillSlotInfo']
+    0044 [line  596] 0x0601C306  GETTABLE   R12 = R12[R7]
+    0045 [line  596] 0x06424306  GETTABLE   R12 = R12[K[9]='Normal']
+    0046 [line  596] 0x0642830B  SELF       A=12 B=12 C=266 Bx=6410
+    0047 [line  596] 0x0003C381  LOADK      R14 = K[15]='UIButton'
+    0048 [line  596] 0x0180831C  CALL       A=12 B=3 C=2
+    0049 [line  597] 0x8802C309  SETTABLE   R12[K[16]='isEnabled'] = R11
+    0050 [line  599] 0x0041C346  GETTABLE   R13 = R0[K[7]='SkillSlotInfo']
+    0051 [line  599] 0x0681C346  GETTABLE   R13 = R13[R7]
+    0052 [line  599] 0x06C44346  GETTABLE   R13 = R13[K[17]='Group']
+    0053 [line  599] 0x06C4834B  SELF       A=13 B=13 C=274 Bx=6930
+    0054 [line  599] 0x0004C3C1  LOADK      R15 = K[19]='Img_NotLearn'
+    0055 [line  599] 0x0180835C  CALL       A=13 B=3 C=2
+    0056 [line  600] 0x06C5038B  SELF       A=14 B=13 C=276 Bx=6932
+    0057 [line  600] 0x05800413  NOT        A=16 B=11 C=0 Bx=5632
+    0058 [line  600] 0x0180439C  CALL       A=14 B=3 C=1
+    0059 [line  586] 0x00008121  TFORLOOP   A=4 B=0 C=2
+    0060 [line  600] 0x7FF60016  JMP        A=0 sBx=-39
+    0061 [line  604] 0x0041C106  GETTABLE   R4 = R0[K[7]='SkillSlotInfo']
+    0062 [line  604] 0x02454106  GETTABLE   R4 = R4[K[21]=1.0]
+    0063 [line  604] 0x0041C146  GETTABLE   R5 = R0[K[7]='SkillSlotInfo']
+    0064 [line  604] 0x02C54146  GETTABLE   R5 = R5[K[21]=1.0]
+    0065 [line  604] 0x02C20146  GETTABLE   R5 = R5[K[8]='MainSkill']
+    0066 [line  604] 0x8B014109  SETTABLE   R4[K[22]='ActiveSkill'] = R5
+    0067 [line  606] 0x0005C101  LOADK      R4 = K[23]=2.0
+    0068 [line  606] 0x00060141  LOADK      R5 = K[24]=5.0
+    0069 [line  606] 0x00054181  LOADK      R6 = K[21]=1.0
+    0070 [line  606] 0x800C8120  FORPREP    A=4 sBx=51
+    0071 [line  607] 0x0041C206  GETTABLE   R8 = R0[K[7]='SkillSlotInfo']
+    0072 [line  607] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0073 [line  607] 0x00C6424B  SELF       A=9 B=1 C=281 Bx=793
+    0074 [line  607] 0x0041C2C6  GETTABLE   R11 = R0[K[7]='SkillSlotInfo']
+    0075 [line  607] 0x0581C2C6  GETTABLE   R11 = R11[R7]
+    0076 [line  607] 0x05C202C6  GETTABLE   R11 = R11[K[8]='MainSkill']
+    0077 [line  607] 0x0180825C  CALL       A=9 B=3 C=2
+    0078 [line  607] 0x8B024209  SETTABLE   R8[K[22]='ActiveSkill'] = R9
+    0079 [line  609] 0x03C5C057  EQ         A=1 B=R7 C=K[23]=2.0
+    0080 [line  609] 0x8000C016  JMP        A=0 sBx=4
+    0081 [line  609] 0x03C68057  EQ         A=1 B=R7 C=K[26]=3.0
+    0082 [line  609] 0x80004016  JMP        A=0 sBx=2
+    0083 [line  609] 0x03C6C017  EQ         A=0 B=R7 C=K[27]=4.0
+    0084 [line  609] 0x80090016  JMP        A=0 sBx=37
+    0085 [line  611] 0x0041C206  GETTABLE   R8 = R0[K[7]='SkillSlotInfo']
+    0086 [line  611] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0087 [line  611] 0x04458206  GETTABLE   R8 = R8[K[22]='ActiveSkill']
+    0088 [line  611] 0x0041C246  GETTABLE   R9 = R0[K[7]='SkillSlotInfo']
+    0089 [line  611] 0x0481C246  GETTABLE   R9 = R9[R7]
+    0090 [line  611] 0x04C20246  GETTABLE   R9 = R9[K[8]='MainSkill']
+    0091 [line  611] 0x04024017  EQ         A=0 B=R8 C=R9
+    0092 [line  611] 0x80018016  JMP        A=0 sBx=7
+    0093 [line  612] 0x0041C206  GETTABLE   R8 = R0[K[7]='SkillSlotInfo']
+    0094 [line  612] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0095 [line  612] 0x04470206  GETTABLE   R8 = R8[K[28]='SignItem']
+    0096 [line  612] 0x0445020B  SELF       A=8 B=8 C=276 Bx=4372
+    0097 [line  612] 0x00000282  LOADBOOL   A=10 B=0 C=0
+    0098 [line  612] 0x0180421C  CALL       A=8 B=3 C=1
+    0099 [line  612] 0x80054016  JMP        A=0 sBx=22
+    0100 [line  614] 0x0041C206  GETTABLE   R8 = R0[K[7]='SkillSlotInfo']
+    0101 [line  614] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0102 [line  614] 0x04470206  GETTABLE   R8 = R8[K[28]='SignItem']
+    0103 [line  614] 0x0445020B  SELF       A=8 B=8 C=276 Bx=4372
+    0104 [line  614] 0x00800282  LOADBOOL   A=10 B=1 C=0
+    0105 [line  614] 0x0180421C  CALL       A=8 B=3 C=1
+    0106 [line  615] 0x0041C206  GETTABLE   R8 = R0[K[7]='SkillSlotInfo']
+    0107 [line  615] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0108 [line  615] 0x04470206  GETTABLE   R8 = R8[K[28]='SignItem']
+    0109 [line  615] 0x0447420B  SELF       A=8 B=8 C=285 Bx=4381
+    0110 [line  615] 0x00078281  LOADK      R10 = K[30]='Img_Sign'
+    0111 [line  615] 0x0180821C  CALL       A=8 B=3 C=2
+    0112 [line  615] 0x0442820B  SELF       A=8 B=8 C=266 Bx=4362
+    0113 [line  615] 0x0002C281  LOADK      R10 = K[11]='UISprite'
+    0114 [line  615] 0x0180821C  CALL       A=8 B=3 C=2
+    0115 [line  616] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0116 [line  616] 0x04C30246  GETTABLE   R9 = R9[K[12]='SetSkillIcon']
+    0117 [line  616] 0x04000280  MOVE       R10 = R8
+    0118 [line  616] 0x0041C2C6  GETTABLE   R11 = R0[K[7]='SkillSlotInfo']
+    0119 [line  616] 0x0581C2C6  GETTABLE   R11 = R11[R7]
+    0120 [line  616] 0x05C582C6  GETTABLE   R11 = R11[K[22]='ActiveSkill']
+    0121 [line  616] 0x0180425C  CALL       A=9 B=3 C=1
+    0122 [line  606] 0x7FF2C11F  FORLOOP    A=4 sBx=-52
+    0123 [line  620] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 123
+    'hp': 4 -> 123
+    'prof': 12 -> 123
+    'skillids': 18 -> 123
+    '(for generator)': 21 -> 61
+    '(for state)': 21 -> 61
+    '(for control)': 21 -> 61
+    'k': 22 -> 59
+    'v': 22 -> 59
+    'iconSprite': 31 -> 59
+    'functionName': 39 -> 59
+    'bLearned': 43 -> 59
+    'iconButton': 49 -> 59
+    'Img_NotLearn': 56 -> 59
+    '(for index)': 70 -> 123
+    '(for limit)': 70 -> 123
+    '(for step)': 70 -> 123
+    'i': 71 -> 122
+    'runeIconSprite': 115 -> 122
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x6422
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 622 - 629
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Main.ECGame'
+    K[002] = 'Instance'
+    K[003] = 'm_InOneWorldCenterServer'
+    K[004] = 'center_server'
+    K[005] = 'SkillSlotInfo'
+    K[006] = 'AddSelfDestroyObject'
+    K[007] = 'RESPATH'
+    K[008] = 'fx_ui_learn_skill'
+    K[009] = 'Group'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  623] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line  623] 0x000040C1  LOADK      R3 = K[1]='Main.ECGame'
+    0002 [line  623] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line  623] 0x01408086  GETTABLE   R2 = R2[K[2]='Instance']
+    0004 [line  623] 0x0080809C  CALL       A=2 B=1 C=2
+    0005 [line  623] 0x0140C086  GETTABLE   R2 = R2[K[3]='m_InOneWorldCenterServer']
+    0006 [line  623] 0x0000009A  TEST       A=2 B=0 C=0
+    0007 [line  623] 0x80000016  JMP        A=0 sBx=1
+    0008 [line  623] 0x00010085  GETGLOBAL  R2 = GLOBAL K[4]='center_server'
+    0009 [line  624] 0x0000009A  TEST       A=2 B=0 C=0
+    0010 [line  624] 0x80000016  JMP        A=0 sBx=1
+    0011 [line  624] 0x0080001E  RETURN     A=0 B=1 C=0
+    0012 [line  625] 0x004140C6  GETTABLE   R3 = R0[K[5]='SkillSlotInfo']
+    0013 [line  625] 0x018040C6  GETTABLE   R3 = R3[R1]
+    0014 [line  626] 0x000000DA  TEST       A=3 B=0 C=0
+    0015 [line  626] 0x80018016  JMP        A=0 sBx=7
+    0016 [line  627] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0017 [line  627] 0x02418106  GETTABLE   R4 = R4[K[6]='AddSelfDestroyObject']
+    0018 [line  627] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='RESPATH'
+    0019 [line  627] 0x02C20146  GETTABLE   R5 = R5[K[8]='fx_ui_learn_skill']
+    0020 [line  627] 0x00000180  MOVE       R6 = R0
+    0021 [line  627] 0x01C241C6  GETTABLE   R7 = R3[K[9]='Group']
+    0022 [line  627] 0x0200411C  CALL       A=4 B=4 C=1
+    0023 [line  629] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 23
+    'index': 0 -> 23
+    'oneworld_server': 9 -> 23
+    'slot': 14 -> 23
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x6623
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 632 - 673
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Players.ECDukeInfo'
+    K[002] = 'Skill.ECPlayerSkillDesc'
+    K[003] = 'Instance'
+    K[004] = 'active_duke_skill'
+    K[005] = 0.0
+    K[006] = 'SkillSlotInfo'
+    K[007] = 6.0
+    K[008] = 'MainSkill'
+    K[009] = 'ActiveSkill'
+    K[010] = 'GetDescData'
+    K[011] = None
+    K[012] = 'warn'
+    K[013] = 'skill has not desc data: '
+    K[014] = 'Normal'
+    K[015] = 'GetComponent'
+    K[016] = 'UISprite'
+    K[017] = 'SetSkillIcon'
+    K[018] = 'SetActive'
+    K[019] = 'Cooldown'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  633] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+    0001 [line  633] 0x00004081  LOADK      R2 = K[1]='Players.ECDukeInfo'
+    0002 [line  633] 0x0100805C  CALL       A=1 B=2 C=2
+    0003 [line  634] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0004 [line  634] 0x000080C1  LOADK      R3 = K[2]='Skill.ECPlayerSkillDesc'
+    0005 [line  634] 0x0100809C  CALL       A=2 B=2 C=2
+    0006 [line  635] 0x00C0C0C6  GETTABLE   R3 = R1[K[3]='Instance']
+    0007 [line  635] 0x008080DC  CALL       A=3 B=1 C=2
+    0008 [line  636] 0x01C10106  GETTABLE   R4 = R3[K[4]='active_duke_skill']
+    0009 [line  650] 0x82810018  LT         A=0 B=K[5]=0.0 C=R4
+    0010 [line  650] 0x80084016  JMP        A=0 sBx=34
+    0011 [line  651] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0012 [line  651] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0013 [line  651] 0x84010149  SETTABLE   R5[K[8]='MainSkill'] = R4
+    0014 [line  652] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0015 [line  652] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0016 [line  652] 0x84810149  SETTABLE   R5[K[9]='ActiveSkill'] = R4
+    0017 [line  654] 0x01428146  GETTABLE   R5 = R2[K[10]='GetDescData']
+    0018 [line  654] 0x02000180  MOVE       R6 = R4
+    0019 [line  654] 0x0100815C  CALL       A=5 B=2 C=2
+    0020 [line  655] 0x02C2C017  EQ         A=0 B=R5 C=K[11]=None
+    0021 [line  655] 0x80010016  JMP        A=0 sBx=5
+    0022 [line  656] 0x00030185  GETGLOBAL  R6 = GLOBAL K[12]='warn'
+    0023 [line  656] 0x000341C1  LOADK      R7 = K[13]='skill has not desc data: '
+    0024 [line  656] 0x02000200  MOVE       R8 = R4
+    0025 [line  656] 0x0180419C  CALL       A=6 B=3 C=1
+    0026 [line  657] 0x0080001E  RETURN     A=0 B=1 C=0
+    0027 [line  660] 0x00418186  GETTABLE   R6 = R0[K[6]='SkillSlotInfo']
+    0028 [line  660] 0x0341C186  GETTABLE   R6 = R6[K[7]=6.0]
+    0029 [line  660] 0x03438186  GETTABLE   R6 = R6[K[14]='Normal']
+    0030 [line  660] 0x0343C18B  SELF       A=6 B=6 C=271 Bx=3343
+    0031 [line  660] 0x00040201  LOADK      R8 = K[16]='UISprite'
+    0032 [line  660] 0x0180819C  CALL       A=6 B=3 C=2
+    0033 [line  661] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0034 [line  661] 0x03C441C6  GETTABLE   R7 = R7[K[17]='SetSkillIcon']
+    0035 [line  661] 0x03000200  MOVE       R8 = R6
+    0036 [line  661] 0x02000240  MOVE       R9 = R4
+    0037 [line  661] 0x018041DC  CALL       A=7 B=3 C=1
+    0038 [line  662] 0x004181C6  GETTABLE   R7 = R0[K[6]='SkillSlotInfo']
+    0039 [line  662] 0x03C1C1C6  GETTABLE   R7 = R7[K[7]=6.0]
+    0040 [line  662] 0x03C381C6  GETTABLE   R7 = R7[K[14]='Normal']
+    0041 [line  662] 0x03C481CB  SELF       A=7 B=7 C=274 Bx=3858
+    0042 [line  662] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0043 [line  662] 0x018041DC  CALL       A=7 B=3 C=1
+    0044 [line  662] 0x80044016  JMP        A=0 sBx=18
+    0045 [line  668] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0046 [line  668] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0047 [line  668] 0x84414149  SETTABLE   R5[K[8]='MainSkill'] = K[5]=0.0
+    0048 [line  669] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0049 [line  669] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0050 [line  669] 0x84C14149  SETTABLE   R5[K[9]='ActiveSkill'] = K[5]=0.0
+    0051 [line  670] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0052 [line  670] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0053 [line  670] 0x02C38146  GETTABLE   R5 = R5[K[14]='Normal']
+    0054 [line  670] 0x02C4814B  SELF       A=5 B=5 C=274 Bx=2834
+    0055 [line  670] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0056 [line  670] 0x0180415C  CALL       A=5 B=3 C=1
+    0057 [line  671] 0x00418146  GETTABLE   R5 = R0[K[6]='SkillSlotInfo']
+    0058 [line  671] 0x02C1C146  GETTABLE   R5 = R5[K[7]=6.0]
+    0059 [line  671] 0x02C4C146  GETTABLE   R5 = R5[K[19]='Cooldown']
+    0060 [line  671] 0x02C4814B  SELF       A=5 B=5 C=274 Bx=2834
+    0061 [line  671] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0062 [line  671] 0x0180415C  CALL       A=5 B=3 C=1
+    0063 [line  673] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 63
+    'ECDukeInfo': 3 -> 63
+    'ECPlayerSkillDesc': 6 -> 63
+    'DukeInfo': 8 -> 63
+    'dataId': 9 -> 63
+    'descData': 20 -> 44
+    'iconSprite': 33 -> 44
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x6A37
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 675 - 706
+    Params : 1
+    Stack  : 17
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = None
+    K[003] = 'InfoData'
+    K[004] = 'm_SkillMgr'
+    K[005] = 'SkillSlotInfo'
+    K[006] = 1.0
+    K[007] = 'CoolDownID'
+    K[008] = 0.0
+    K[009] = 2.0
+    K[010] = 6.0
+    K[011] = 'ActiveSkill'
+    K[012] = 'getSkill'
+    K[013] = 5.0
+    K[014] = 'cooldown_id'
+    K[015] = 'GP_CT_SKILL_START'
+    K[016] = 'GameUtil'
+    K[017] = 'AddCoolDownComponent'
+    K[018] = 'Cooldown'
+    K[019] = 'Normal'
+    K[020] = 'GetCoolDownData'
+    K[021] = 'CDTimer'
+    K[022] = 'RemoveGlobalTimer'
+    K[023] = 'AddGlobalTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  676] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  676] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  676] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  676] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  677] 0x00C08057  EQ         A=1 B=R1 C=K[2]=None
+    0005 [line  677] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  677] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0007 [line  677] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0008 [line  677] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  677] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  679] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0011 [line  679] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0012 [line  679] 0x0080809C  CALL       A=2 B=1 C=2
+    0013 [line  679] 0x01410086  GETTABLE   R2 = R2[K[4]='m_SkillMgr']
+    0014 [line  681] 0x004140C6  GETTABLE   R3 = R0[K[5]='SkillSlotInfo']
+    0015 [line  681] 0x01C180C6  GETTABLE   R3 = R3[K[6]=1.0]
+    0016 [line  681] 0x83C200C9  SETTABLE   R3[K[7]='CoolDownID'] = K[8]=0.0
+    0017 [line  682] 0x000240C1  LOADK      R3 = K[9]=2.0
+    0018 [line  682] 0x00028101  LOADK      R4 = K[10]=6.0
+    0019 [line  682] 0x00018141  LOADK      R5 = K[6]=1.0
+    0020 [line  682] 0x800CC0E0  FORPREP    A=3 sBx=52
+    0021 [line  683] 0x004141C6  GETTABLE   R7 = R0[K[5]='SkillSlotInfo']
+    0022 [line  683] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0023 [line  684] 0x83C201C9  SETTABLE   R7[K[7]='CoolDownID'] = K[8]=0.0
+    0024 [line  685] 0x03C2C206  GETTABLE   R8 = R7[K[11]='ActiveSkill']
+    0025 [line  686] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0026 [line  686] 0x04C30246  GETTABLE   R9 = R9[K[12]='getSkill']
+    0027 [line  686] 0x04000280  MOVE       R10 = R8
+    0028 [line  686] 0x0100825C  CALL       A=9 B=2 C=2
+    0029 [line  687] 0x04420057  EQ         A=1 B=R8 C=K[8]=0.0
+    0030 [line  687] 0x800A0016  JMP        A=0 sBx=41
+    0031 [line  687] 0x04C08057  EQ         A=1 B=R9 C=K[2]=None
+    0032 [line  687] 0x80098016  JMP        A=0 sBx=39
+    0033 [line  688] 0x03434057  EQ         A=1 B=R6 C=K[13]=5.0
+    0034 [line  688] 0x80090016  JMP        A=0 sBx=37
+    0035 [line  689] 0x04C38286  GETTABLE   R10 = R9[K[14]='cooldown_id']
+    0036 [line  689] 0x838281C9  SETTABLE   R7[K[7]='CoolDownID'] = R10
+    0037 [line  690] 0x03C1C286  GETTABLE   R10 = R7[K[7]='CoolDownID']
+    0038 [line  690] 0x0003C2C5  GETGLOBAL  R11 = GLOBAL K[15]='GP_CT_SKILL_START'
+    0039 [line  690] 0x0502C28C  ADD        A=10 B=R10 C=R11
+    0040 [line  691] 0x000402C5  GETGLOBAL  R11 = GLOBAL K[16]='GameUtil'
+    0041 [line  691] 0x05C442C6  GETTABLE   R11 = R11[K[17]='AddCoolDownComponent']
+    0042 [line  691] 0x03C48306  GETTABLE   R12 = R7[K[18]='Cooldown']
+    0043 [line  691] 0x05000340  MOVE       R13 = R10
+    0044 [line  691] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0045 [line  691] 0x03C4C3C6  GETTABLE   R15 = R7[K[19]='Normal']
+    0046 [line  691] 0x028042DC  CALL       A=11 B=5 C=1
+    0047 [line  692] 0x000402C5  GETGLOBAL  R11 = GLOBAL K[16]='GameUtil'
+    0048 [line  692] 0x05C502C6  GETTABLE   R11 = R11[K[20]='GetCoolDownData']
+    0049 [line  692] 0x05000300  MOVE       R12 = R10
+    0050 [line  692] 0x0100C2DC  CALL       A=11 B=2 C=3
+    0051 [line  693] 0x8402C018  LT         A=0 B=K[8]=0.0 C=R11
+    0052 [line  693] 0x80048016  JMP        A=0 sBx=19
+    0053 [line  694] 0x03C54346  GETTABLE   R13 = R7[K[21]='CDTimer']
+    0054 [line  694] 0x06C08057  EQ         A=1 B=R13 C=K[2]=None
+    0055 [line  694] 0x8001C016  JMP        A=0 sBx=8
+    0056 [line  694] 0x03C54346  GETTABLE   R13 = R7[K[21]='CDTimer']
+    0057 [line  694] 0x84034018  LT         A=0 B=K[8]=0.0 C=R13
+    0058 [line  694] 0x80010016  JMP        A=0 sBx=5
+    0059 [line  695] 0x00040345  GETGLOBAL  R13 = GLOBAL K[16]='GameUtil'
+    0060 [line  695] 0x06C58346  GETTABLE   R13 = R13[K[22]='RemoveGlobalTimer']
+    0061 [line  695] 0x03C54386  GETTABLE   R14 = R7[K[21]='CDTimer']
+    0062 [line  695] 0x0100435C  CALL       A=13 B=2 C=1
+    0063 [line  696] 0x8AC201C9  SETTABLE   R7[K[21]='CDTimer'] = K[8]=0.0
+    0064 [line  698] 0x00040345  GETGLOBAL  R13 = GLOBAL K[16]='GameUtil'
+    0065 [line  698] 0x06C5C346  GETTABLE   R13 = R13[K[23]='AddGlobalTimer']
+    0066 [line  698] 0x05800380  MOVE       R14 = R11
+    0067 [line  698] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0068 [line  701] 0x00000424  CLOSURE    R16 = PROTO[0]
+    0069 [line  701] 0x03800000  MOVE       R0 = R7
+    0070 [line  698] 0x0200835C  CALL       A=13 B=4 C=2
+    0071 [line  701] 0x8A8341C9  SETTABLE   R7[K[21]='CDTimer'] = R13
+    0072 [line  704] 0x000001E3  CLOSE      A=7 B=0 C=0 Bx=0
+    0073 [line  682] 0x7FF280DF  FORLOOP    A=3 sBx=-53
+    0074 [line  706] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 74
+    'hp': 4 -> 74
+    'skill_mgr': 14 -> 74
+    '(for index)': 20 -> 74
+    '(for limit)': 20 -> 74
+    '(for step)': 20 -> 74
+    'i': 21 -> 73
+    'info': 23 -> 72
+    'id': 25 -> 72
+    'skillData': 29 -> 72
+    'cooldown_id': 40 -> 72
+    'cur_time': 51 -> 72
+    'max_time': 51 -> 72
+
+        ============================================================
+        PROTO ROOT.20.0
+        Offset : 0x6CE4
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 698 - 701
+        Params : 0
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'CDOverEffect'
+        K[001] = 'SetActive'
+        K[002] = 'CDTimer'
+        K[003] = 0.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  699] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  699] 0x00400006  GETTABLE   R0 = R0[K[0]='CDOverEffect']
+        0002 [line  699] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+        0003 [line  699] 0x00800082  LOADBOOL   A=2 B=1 C=0
+        0004 [line  699] 0x0180401C  CALL       A=0 B=3 C=1
+        0005 [line  700] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0006 [line  700] 0x8140C009  SETTABLE   R0[K[2]='CDTimer'] = K[3]=0.0
+        0007 [line  701] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x6FE3
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 708 - 729
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = None
+    K[003] = 'InfoData'
+    K[004] = 'FightData'
+    K[005] = 'XP'
+    K[006] = 'MAX_XP'
+    K[007] = 'SkillSlotInfo'
+    K[008] = 5.0
+    K[009] = 'Normal'
+    K[010] = 'GetComponent'
+    K[011] = 'UISprite'
+    K[012] = 'Cooldown'
+    K[013] = 'SetActive'
+    K[014] = 'fillAmount'
+    K[015] = 1.0
+    K[016] = 'color'
+    K[017] = 'Color'
+    K[018] = 'gray'
+    K[019] = 'XPFullEffect'
+    K[020] = 'white'
+    K[021] = 'unbind'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  710] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  710] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  710] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  710] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  711] 0x00C08057  EQ         A=1 B=R1 C=K[2]=None
+    0005 [line  711] 0x80018016  JMP        A=0 sBx=7
+    0006 [line  711] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0007 [line  711] 0x01408057  EQ         A=1 B=R2 C=K[2]=None
+    0008 [line  711] 0x8000C016  JMP        A=0 sBx=4
+    0009 [line  711] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0010 [line  711] 0x01410086  GETTABLE   R2 = R2[K[4]='FightData']
+    0011 [line  711] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0012 [line  711] 0x80000016  JMP        A=0 sBx=1
+    0013 [line  711] 0x0080001E  RETURN     A=0 B=1 C=0
+    0014 [line  712] 0x00C0C086  GETTABLE   R2 = R1[K[3]='InfoData']
+    0015 [line  712] 0x01410086  GETTABLE   R2 = R2[K[4]='FightData']
+    0016 [line  712] 0x01414086  GETTABLE   R2 = R2[K[5]='XP']
+    0017 [line  714] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='MAX_XP'
+    0018 [line  714] 0x0100C0CF  DIV        A=3 B=R2 C=R3
+    0019 [line  716] 0x0041C106  GETTABLE   R4 = R0[K[7]='SkillSlotInfo']
+    0020 [line  716] 0x02420106  GETTABLE   R4 = R4[K[8]=5.0]
+    0021 [line  716] 0x02424106  GETTABLE   R4 = R4[K[9]='Normal']
+    0022 [line  716] 0x0242810B  SELF       A=4 B=4 C=266 Bx=2314
+    0023 [line  716] 0x0002C181  LOADK      R6 = K[11]='UISprite'
+    0024 [line  716] 0x0180811C  CALL       A=4 B=3 C=2
+    0025 [line  717] 0x0041C146  GETTABLE   R5 = R0[K[7]='SkillSlotInfo']
+    0026 [line  717] 0x02C20146  GETTABLE   R5 = R5[K[8]=5.0]
+    0027 [line  717] 0x02C30146  GETTABLE   R5 = R5[K[12]='Cooldown']
+    0028 [line  717] 0x02C2814B  SELF       A=5 B=5 C=266 Bx=2826
+    0029 [line  717] 0x0002C1C1  LOADK      R7 = K[11]='UISprite'
+    0030 [line  717] 0x0180815C  CALL       A=5 B=3 C=2
+    0031 [line  718] 0x0041C186  GETTABLE   R6 = R0[K[7]='SkillSlotInfo']
+    0032 [line  718] 0x03420186  GETTABLE   R6 = R6[K[8]=5.0]
+    0033 [line  718] 0x03430186  GETTABLE   R6 = R6[K[12]='Cooldown']
+    0034 [line  718] 0x0343418B  SELF       A=6 B=6 C=269 Bx=3341
+    0035 [line  718] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0036 [line  718] 0x0180419C  CALL       A=6 B=3 C=1
+    0037 [line  719] 0x8700C149  SETTABLE   R5[K[14]='fillAmount'] = R3
+    0038 [line  720] 0x01C3C018  LT         A=0 B=R3 C=K[15]=1.0
+    0039 [line  720] 0x8001C016  JMP        A=0 sBx=8
+    0040 [line  721] 0x00044185  GETGLOBAL  R6 = GLOBAL K[17]='Color'
+    0041 [line  721] 0x03448186  GETTABLE   R6 = R6[K[18]='gray']
+    0042 [line  721] 0x88018109  SETTABLE   R4[K[16]='color'] = R6
+    0043 [line  722] 0x0044C186  GETTABLE   R6 = R0[K[19]='XPFullEffect']
+    0044 [line  722] 0x0343418B  SELF       A=6 B=6 C=269 Bx=3341
+    0045 [line  722] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0046 [line  722] 0x0180419C  CALL       A=6 B=3 C=1
+    0047 [line  722] 0x80018016  JMP        A=0 sBx=7
+    0048 [line  724] 0x00044185  GETGLOBAL  R6 = GLOBAL K[17]='Color'
+    0049 [line  724] 0x03450186  GETTABLE   R6 = R6[K[20]='white']
+    0050 [line  724] 0x88018109  SETTABLE   R4[K[16]='color'] = R6
+    0051 [line  725] 0x0044C186  GETTABLE   R6 = R0[K[19]='XPFullEffect']
+    0052 [line  725] 0x0343418B  SELF       A=6 B=6 C=269 Bx=3341
+    0053 [line  725] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0054 [line  725] 0x0180419C  CALL       A=6 B=3 C=1
+    0055 [line  727] 0x0245418B  SELF       A=6 B=4 C=277 Bx=2325
+    0056 [line  727] 0x0100419C  CALL       A=6 B=2 C=1
+    0057 [line  728] 0x02C5418B  SELF       A=6 B=5 C=277 Bx=2837
+    0058 [line  728] 0x0100419C  CALL       A=6 B=2 C=1
+    0059 [line  729] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 59
+    'hp': 4 -> 59
+    'xp': 17 -> 59
+    'percent': 19 -> 59
+    'norm_sprite': 25 -> 59
+    'cd_sprite': 31 -> 59
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x7380
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 731 - 760
+    Params : 2
+    Stack  : 20
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'IndexList'
+    K[001] = 'pairs'
+    K[002] = 2.0
+    K[003] = 1.0
+    K[004] = 5.0
+    K[005] = 'SkillSlotInfo'
+    K[006] = 'CoolDownID'
+    K[007] = 'GP_CT_SKILL_START'
+    K[008] = 'GameUtil'
+    K[009] = 'AddCoolDownComponent'
+    K[010] = 'Cooldown'
+    K[011] = 'Normal'
+    K[012] = 'GetCoolDownData'
+    K[013] = 0.0
+    K[014] = 'CDTimer'
+    K[015] = None
+    K[016] = 'RemoveGlobalTimer'
+    K[017] = 'AddGlobalTimer'
+    K[018] = 'medicine_cooldown_id'
+    K[019] = 'm_panel'
+    K[020] = 'FindChild'
+    K[021] = 'Widget/Drug/Img_CoolDrug'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  732] 0x00C00086  GETTABLE   R2 = R1[K[0]='IndexList']
+    0001 [line  733] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='pairs'
+    0002 [line  733] 0x01000100  MOVE       R4 = R2
+    0003 [line  733] 0x010100DC  CALL       A=3 B=2 C=4
+    0004 [line  733] 0x800EC016  JMP        A=0 sBx=60
+    0005 [line  734] 0x00008201  LOADK      R8 = K[2]=2.0
+    0006 [line  734] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0007 [line  734] 0x0000C281  LOADK      R10 = K[3]=1.0
+    0008 [line  734] 0x800A4220  FORPREP    A=8 sBx=42
+    0009 [line  735] 0x05C10057  EQ         A=1 B=R11 C=K[4]=5.0
+    0010 [line  735] 0x8009C016  JMP        A=0 sBx=40
+    0011 [line  736] 0x00414306  GETTABLE   R12 = R0[K[5]='SkillSlotInfo']
+    0012 [line  736] 0x0602C306  GETTABLE   R12 = R12[R11]
+    0013 [line  737] 0x06418346  GETTABLE   R13 = R12[K[6]='CoolDownID']
+    0014 [line  737] 0x0001C385  GETGLOBAL  R14 = GLOBAL K[7]='GP_CT_SKILL_START'
+    0015 [line  737] 0x0683834C  ADD        A=13 B=R13 C=R14
+    0016 [line  738] 0x03834017  EQ         A=0 B=R7 C=R13
+    0017 [line  738] 0x8007C016  JMP        A=0 sBx=32
+    0018 [line  739] 0x00020385  GETGLOBAL  R14 = GLOBAL K[8]='GameUtil'
+    0019 [line  739] 0x07424386  GETTABLE   R14 = R14[K[9]='AddCoolDownComponent']
+    0020 [line  739] 0x064283C6  GETTABLE   R15 = R12[K[10]='Cooldown']
+    0021 [line  739] 0x06800400  MOVE       R16 = R13
+    0022 [line  739] 0x00000442  LOADBOOL   A=17 B=0 C=0
+    0023 [line  739] 0x0642C486  GETTABLE   R18 = R12[K[11]='Normal']
+    0024 [line  739] 0x0280439C  CALL       A=14 B=5 C=1
+    0025 [line  740] 0x00020385  GETGLOBAL  R14 = GLOBAL K[8]='GameUtil'
+    0026 [line  740] 0x07430386  GETTABLE   R14 = R14[K[12]='GetCoolDownData']
+    0027 [line  740] 0x068003C0  MOVE       R15 = R13
+    0028 [line  740] 0x0100C39C  CALL       A=14 B=2 C=3
+    0029 [line  741] 0x86838018  LT         A=0 B=K[13]=0.0 C=R14
+    0030 [line  741] 0x80048016  JMP        A=0 sBx=19
+    0031 [line  742] 0x06438406  GETTABLE   R16 = R12[K[14]='CDTimer']
+    0032 [line  742] 0x0843C057  EQ         A=1 B=R16 C=K[15]=None
+    0033 [line  742] 0x8001C016  JMP        A=0 sBx=8
+    0034 [line  742] 0x06438406  GETTABLE   R16 = R12[K[14]='CDTimer']
+    0035 [line  742] 0x86840018  LT         A=0 B=K[13]=0.0 C=R16
+    0036 [line  742] 0x80010016  JMP        A=0 sBx=5
+    0037 [line  743] 0x00020405  GETGLOBAL  R16 = GLOBAL K[8]='GameUtil'
+    0038 [line  743] 0x08440406  GETTABLE   R16 = R16[K[16]='RemoveGlobalTimer']
+    0039 [line  743] 0x06438446  GETTABLE   R17 = R12[K[14]='CDTimer']
+    0040 [line  743] 0x0100441C  CALL       A=16 B=2 C=1
+    0041 [line  744] 0x87434309  SETTABLE   R12[K[14]='CDTimer'] = K[13]=0.0
+    0042 [line  746] 0x00020405  GETGLOBAL  R16 = GLOBAL K[8]='GameUtil'
+    0043 [line  746] 0x08444406  GETTABLE   R16 = R16[K[17]='AddGlobalTimer']
+    0044 [line  746] 0x07000440  MOVE       R17 = R14
+    0045 [line  746] 0x00800482  LOADBOOL   A=18 B=1 C=0
+    0046 [line  749] 0x000004E4  CLOSURE    R19 = PROTO[0]
+    0047 [line  749] 0x06000000  MOVE       R0 = R12
+    0048 [line  746] 0x0200841C  CALL       A=16 B=4 C=2
+    0049 [line  749] 0x87040309  SETTABLE   R12[K[14]='CDTimer'] = R16
+    0050 [line  751] 0x00000323  CLOSE      A=12 B=0 C=0 Bx=0
+    0051 [line  734] 0x7FF5021F  FORLOOP    A=8 sBx=-43
+    0052 [line  755] 0x00048205  GETGLOBAL  R8 = GLOBAL K[18]='medicine_cooldown_id'
+    0053 [line  755] 0x03820017  EQ         A=0 B=R7 C=R8
+    0054 [line  755] 0x80024016  JMP        A=0 sBx=10
+    0055 [line  756] 0x0044C206  GETTABLE   R8 = R0[K[19]='m_panel']
+    0056 [line  756] 0x0445020B  SELF       A=8 B=8 C=276 Bx=4372
+    0057 [line  756] 0x00054281  LOADK      R10 = K[21]='Widget/Drug/Img_CoolDrug'
+    0058 [line  756] 0x0180821C  CALL       A=8 B=3 C=2
+    0059 [line  757] 0x00020245  GETGLOBAL  R9 = GLOBAL K[8]='GameUtil'
+    0060 [line  757] 0x04C24246  GETTABLE   R9 = R9[K[9]='AddCoolDownComponent']
+    0061 [line  757] 0x04000280  MOVE       R10 = R8
+    0062 [line  757] 0x038002C0  MOVE       R11 = R7
+    0063 [line  757] 0x00800302  LOADBOOL   A=12 B=1 C=0
+    0064 [line  757] 0x0200425C  CALL       A=9 B=4 C=1
+    0065 [line  733] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0066 [line  758] 0x7FF04016  JMP        A=0 sBx=-62
+    0067 [line  760] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 67
+    'event': 0 -> 67
+    'cd_idx_list': 1 -> 67
+    '(for generator)': 4 -> 67
+    '(for state)': 4 -> 67
+    '(for control)': 4 -> 67
+    'k': 5 -> 65
+    'v': 5 -> 65
+    '(for index)': 8 -> 52
+    '(for limit)': 8 -> 52
+    '(for step)': 8 -> 52
+    'i': 9 -> 51
+    'info': 13 -> 50
+    'cooldown_id': 16 -> 50
+    'cur_time': 29 -> 50
+    'max_time': 29 -> 50
+    'cd_sprite': 59 -> 65
+
+        ============================================================
+        PROTO ROOT.22.0
+        Offset : 0x7608
+        Source : '@lua\\gui\\ecpanelskill.lua'
+        Lines  : 746 - 749
+        Params : 0
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'CDOverEffect'
+        K[001] = 'SetActive'
+        K[002] = 'CDTimer'
+        K[003] = 0.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  747] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  747] 0x00400006  GETTABLE   R0 = R0[K[0]='CDOverEffect']
+        0002 [line  747] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+        0003 [line  747] 0x00800082  LOADBOOL   A=2 B=1 C=0
+        0004 [line  747] 0x0180401C  CALL       A=0 B=3 C=1
+        0005 [line  748] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0006 [line  748] 0x8140C009  SETTABLE   R0[K[2]='CDTimer'] = K[3]=0.0
+        0007 [line  749] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x7944
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 762 - 768
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = None
+    K[002] = 'FindChild'
+    K[003] = 'Widget/Drug/Txt_Num'
+    K[004] = 'GetComponent'
+    K[005] = 'UILabel'
+    K[006] = 'Instance'
+    K[007] = 'm_HostPlayer'
+    K[008] = 'Package'
+    K[009] = 'NormalPack'
+    K[010] = 'GetItemTotalNum'
+    K[011] = 'medicine_id'
+    K[012] = 'text'
+    K[013] = 0.0
+    K[014] = 'tostring'
+    K[015] = 'StringTable'
+    K[016] = 'Get'
+    K[017] = 12401.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  763] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  763] 0x00C04017  EQ         A=0 B=R1 C=K[1]=None
+    0002 [line  763] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  763] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  764] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0005 [line  764] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0006 [line  764] 0x0000C0C1  LOADK      R3 = K[3]='Widget/Drug/Txt_Num'
+    0007 [line  764] 0x0180805C  CALL       A=1 B=3 C=2
+    0008 [line  764] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0009 [line  764] 0x000140C1  LOADK      R3 = K[5]='UILabel'
+    0010 [line  764] 0x0180805C  CALL       A=1 B=3 C=2
+    0011 [line  765] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0012 [line  765] 0x01418086  GETTABLE   R2 = R2[K[6]='Instance']
+    0013 [line  765] 0x0080809C  CALL       A=2 B=1 C=2
+    0014 [line  765] 0x0141C086  GETTABLE   R2 = R2[K[7]='m_HostPlayer']
+    0015 [line  765] 0x01420086  GETTABLE   R2 = R2[K[8]='Package']
+    0016 [line  766] 0x014240C6  GETTABLE   R3 = R2[K[9]='NormalPack']
+    0017 [line  766] 0x01C280CB  SELF       A=3 B=3 C=266 Bx=1802
+    0018 [line  766] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='medicine_id'
+    0019 [line  766] 0x018080DC  CALL       A=3 B=3 C=2
+    0020 [line  767] 0x8680C018  LT         A=0 B=K[13]=0.0 C=R3
+    0021 [line  767] 0x80010016  JMP        A=0 sBx=5
+    0022 [line  767] 0x00038105  GETGLOBAL  R4 = GLOBAL K[14]='tostring'
+    0023 [line  767] 0x01800140  MOVE       R5 = R3
+    0024 [line  767] 0x0100811C  CALL       A=4 B=2 C=2
+    0025 [line  767] 0x0000411A  TEST       A=4 B=0 C=1
+    0026 [line  767] 0x8000C016  JMP        A=0 sBx=4
+    0027 [line  767] 0x0003C105  GETGLOBAL  R4 = GLOBAL K[15]='StringTable'
+    0028 [line  767] 0x02440106  GETTABLE   R4 = R4[K[16]='Get']
+    0029 [line  767] 0x00044141  LOADK      R5 = K[17]=12401.0
+    0030 [line  767] 0x0100811C  CALL       A=4 B=2 C=2
+    0031 [line  767] 0x86010049  SETTABLE   R1[K[12]='text'] = R4
+    0032 [line  768] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 32
+    'count_label': 11 -> 32
+    'packs': 16 -> 32
+    'count': 20 -> 32
+
+    ============================================================
+    PROTO ROOT.24
+    Offset : 0x7BC8
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 770 - 794
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = None
+    K[002] = 'isnil'
+    K[003] = 7736.0
+    K[004] = 'Instance'
+    K[005] = 'm_HostPlayer'
+    K[006] = 'Package'
+    K[007] = 'NormalPack'
+    K[008] = 'GetItemTotalNum'
+    K[009] = 0.0
+    K[010] = 'SkillHdl'
+    K[011] = 'SkillInfo'
+    K[012] = 'Skill'
+    K[013] = 'ID'
+    K[014] = 135.0
+    K[015] = 'band'
+    K[016] = 'IdelStateMask'
+    K[017] = 'IDLESTATE_MASK'
+    K[018] = 'GP_IDLE_STATE_BAD1'
+    K[019] = 'GetItem'
+    K[020] = 'CanUse'
+    K[021] = 'CanCurrentlyUse'
+    K[022] = 'FindDirect'
+    K[023] = 'Widget/Drug_changxingdan'
+    K[024] = 'setVisible'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  771] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  771] 0x00C04057  EQ         A=1 B=R1 C=K[1]=None
+    0002 [line  771] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  771] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0004 [line  771] 0x00C08046  GETTABLE   R1 = R1[K[2]='isnil']
+    0005 [line  771] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  771] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  771] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  773] 0x0000C041  LOADK      R1 = K[3]=7736.0
+    0009 [line  775] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0010 [line  776] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0011 [line  776] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+    0012 [line  776] 0x008080DC  CALL       A=3 B=1 C=2
+    0013 [line  776] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostPlayer']
+    0014 [line  777] 0x01C18106  GETTABLE   R4 = R3[K[6]='Package']
+    0015 [line  777] 0x0241C106  GETTABLE   R4 = R4[K[7]='NormalPack']
+    0016 [line  777] 0x0242010B  SELF       A=4 B=4 C=264 Bx=2312
+    0017 [line  777] 0x00800180  MOVE       R6 = R1
+    0018 [line  777] 0x0180811C  CALL       A=4 B=3 C=2
+    0019 [line  778] 0x02424019  LE         A=0 B=R4 C=K[9]=0.0
+    0020 [line  778] 0x80004016  JMP        A=0 sBx=2
+    0021 [line  779] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0022 [line  779] 0x800A8016  JMP        A=0 sBx=43
+    0023 [line  780] 0x01C28146  GETTABLE   R5 = R3[K[10]='SkillHdl']
+    0024 [line  780] 0x02C2C146  GETTABLE   R5 = R5[K[11]='SkillInfo']
+    0025 [line  780] 0x0000015A  TEST       A=5 B=0 C=0
+    0026 [line  780] 0x80030016  JMP        A=0 sBx=13
+    0027 [line  780] 0x01C28146  GETTABLE   R5 = R3[K[10]='SkillHdl']
+    0028 [line  780] 0x02C2C146  GETTABLE   R5 = R5[K[11]='SkillInfo']
+    0029 [line  780] 0x02C30146  GETTABLE   R5 = R5[K[12]='Skill']
+    0030 [line  780] 0x0000015A  TEST       A=5 B=0 C=0
+    0031 [line  780] 0x8001C016  JMP        A=0 sBx=8
+    0032 [line  780] 0x01C28146  GETTABLE   R5 = R3[K[10]='SkillHdl']
+    0033 [line  780] 0x02C2C146  GETTABLE   R5 = R5[K[11]='SkillInfo']
+    0034 [line  780] 0x02C30146  GETTABLE   R5 = R5[K[12]='Skill']
+    0035 [line  780] 0x02C34146  GETTABLE   R5 = R5[K[13]='ID']
+    0036 [line  780] 0x02C38017  EQ         A=0 B=R5 C=K[14]=135.0
+    0037 [line  780] 0x80004016  JMP        A=0 sBx=2
+    0038 [line  781] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0039 [line  781] 0x80064016  JMP        A=0 sBx=26
+    0040 [line  782] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0041 [line  782] 0x02C3C146  GETTABLE   R5 = R5[K[15]='band']
+    0042 [line  782] 0x01C40186  GETTABLE   R6 = R3[K[16]='IdelStateMask']
+    0043 [line  782] 0x000441C5  GETGLOBAL  R7 = GLOBAL K[17]='IDLESTATE_MASK'
+    0044 [line  782] 0x03C481C6  GETTABLE   R7 = R7[K[18]='GP_IDLE_STATE_BAD1']
+    0045 [line  782] 0x0180815C  CALL       A=5 B=3 C=2
+    0046 [line  782] 0x02C24017  EQ         A=0 B=R5 C=K[9]=0.0
+    0047 [line  782] 0x80004016  JMP        A=0 sBx=2
+    0048 [line  783] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0049 [line  783] 0x8003C016  JMP        A=0 sBx=16
+    0050 [line  786] 0x01C18146  GETTABLE   R5 = R3[K[6]='Package']
+    0051 [line  786] 0x02C1C146  GETTABLE   R5 = R5[K[7]='NormalPack']
+    0052 [line  786] 0x02C4C14B  SELF       A=5 B=5 C=275 Bx=2835
+    0053 [line  786] 0x008001C0  MOVE       R7 = R1
+    0054 [line  786] 0x0180815C  CALL       A=5 B=3 C=2
+    0055 [line  787] 0x02C04057  EQ         A=1 B=R5 C=K[1]=None
+    0056 [line  787] 0x8001C016  JMP        A=0 sBx=8
+    0057 [line  787] 0x02C5018B  SELF       A=6 B=5 C=276 Bx=2836
+    0058 [line  787] 0x0100819C  CALL       A=6 B=2 C=2
+    0059 [line  787] 0x0000019A  TEST       A=6 B=0 C=0
+    0060 [line  787] 0x8000C016  JMP        A=0 sBx=4
+    0061 [line  787] 0x02C5418B  SELF       A=6 B=5 C=277 Bx=2837
+    0062 [line  787] 0x0100819C  CALL       A=6 B=2 C=2
+    0063 [line  787] 0x0000419A  TEST       A=6 B=0 C=1
+    0064 [line  787] 0x80000016  JMP        A=0 sBx=1
+    0065 [line  788] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0066 [line  791] 0x00400146  GETTABLE   R5 = R0[K[0]='m_panel']
+    0067 [line  791] 0x02C5814B  SELF       A=5 B=5 C=278 Bx=2838
+    0068 [line  791] 0x0005C1C1  LOADK      R7 = K[23]='Widget/Drug_changxingdan'
+    0069 [line  791] 0x0180815C  CALL       A=5 B=3 C=2
+    0070 [line  791] 0x02C04057  EQ         A=1 B=R5 C=K[1]=None
+    0071 [line  791] 0x8001C016  JMP        A=0 sBx=8
+    0072 [line  792] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0073 [line  792] 0x02C60146  GETTABLE   R5 = R5[K[24]='setVisible']
+    0074 [line  792] 0x00400186  GETTABLE   R6 = R0[K[0]='m_panel']
+    0075 [line  792] 0x0345818B  SELF       A=6 B=6 C=278 Bx=3350
+    0076 [line  792] 0x0005C201  LOADK      R8 = K[23]='Widget/Drug_changxingdan'
+    0077 [line  792] 0x0180819C  CALL       A=6 B=3 C=2
+    0078 [line  792] 0x010001C0  MOVE       R7 = R2
+    0079 [line  792] 0x0180415C  CALL       A=5 B=3 C=1
+    0080 [line  794] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 80
+    'medicine_id': 9 -> 80
+    'visible': 10 -> 80
+    'hp': 14 -> 80
+    'count': 19 -> 80
+    'item': 55 -> 66
+
+    ============================================================
+    PROTO ROOT.25
+    Offset : 0x8074
+    Source : '@lua\\gui\\ecpanelskill.lua'
+    Lines  : 796 - 814
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'isnil'
+    K[002] = 'require'
+    K[003] = 'GUI.ECPanelCharHead'
+    K[004] = 'GUI.ECPanelAutoFight'
+    K[005] = 'Instance'
+    K[006] = 'bMenuMode'
+    K[007] = 'SetLayer'
+    K[008] = 'ClientDef_Layer'
+    K[009] = 'Invisible'
+    K[010] = 'ChangeLayer'
+    K[011] = 'm_HostPlayer'
+    K[012] = 'IsTransforming'
+    K[013] = 'isOnDart'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  797] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  797] 0x0000009A  TEST       A=2 B=0 C=0
+    0002 [line  797] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  797] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0004 [line  797] 0x01404086  GETTABLE   R2 = R2[K[1]='isnil']
+    0005 [line  797] 0x0000009A  TEST       A=2 B=0 C=0
+    0006 [line  797] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  797] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  798] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='require'
+    0009 [line  798] 0x0000C0C1  LOADK      R3 = K[3]='GUI.ECPanelCharHead'
+    0010 [line  798] 0x0100809C  CALL       A=2 B=2 C=2
+    0011 [line  799] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='require'
+    0012 [line  799] 0x00010101  LOADK      R4 = K[4]='GUI.ECPanelAutoFight'
+    0013 [line  799] 0x010080DC  CALL       A=3 B=2 C=2
+    0014 [line  801] 0x01414106  GETTABLE   R4 = R2[K[5]='Instance']
+    0015 [line  801] 0x0080811C  CALL       A=4 B=1 C=2
+    0016 [line  801] 0x02418106  GETTABLE   R4 = R4[K[6]='bMenuMode']
+    0017 [line  801] 0x0000011A  TEST       A=4 B=0 C=0
+    0018 [line  801] 0x80028016  JMP        A=0 sBx=11
+    0019 [line  802] 0x0041C10B  SELF       A=4 B=0 C=263 Bx=263
+    0020 [line  802] 0x00020185  GETGLOBAL  R6 = GLOBAL K[8]='ClientDef_Layer'
+    0021 [line  802] 0x03424186  GETTABLE   R6 = R6[K[9]='Invisible']
+    0022 [line  802] 0x0180411C  CALL       A=4 B=3 C=1
+    0023 [line  803] 0x01C14106  GETTABLE   R4 = R3[K[5]='Instance']
+    0024 [line  803] 0x0080811C  CALL       A=4 B=1 C=2
+    0025 [line  803] 0x0242810B  SELF       A=4 B=4 C=266 Bx=2314
+    0026 [line  803] 0x00020185  GETGLOBAL  R6 = GLOBAL K[8]='ClientDef_Layer'
+    0027 [line  803] 0x03424186  GETTABLE   R6 = R6[K[9]='Invisible']
+    0028 [line  803] 0x0180411C  CALL       A=4 B=3 C=1
+    0029 [line  803] 0x80080016  JMP        A=0 sBx=33
+    0030 [line  805] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0031 [line  805] 0x02414106  GETTABLE   R4 = R4[K[5]='Instance']
+    0032 [line  805] 0x0080811C  CALL       A=4 B=1 C=2
+    0033 [line  805] 0x0242C106  GETTABLE   R4 = R4[K[11]='m_HostPlayer']
+    0034 [line  806] 0x0000011A  TEST       A=4 B=0 C=0
+    0035 [line  806] 0x80048016  JMP        A=0 sBx=19
+    0036 [line  806] 0x0243014B  SELF       A=5 B=4 C=268 Bx=2316
+    0037 [line  806] 0x0100815C  CALL       A=5 B=2 C=2
+    0038 [line  806] 0x0000415A  TEST       A=5 B=0 C=1
+    0039 [line  806] 0x8000C016  JMP        A=0 sBx=4
+    0040 [line  806] 0x0243414B  SELF       A=5 B=4 C=269 Bx=2317
+    0041 [line  806] 0x0100815C  CALL       A=5 B=2 C=2
+    0042 [line  806] 0x0000015A  TEST       A=5 B=0 C=0
+    0043 [line  806] 0x80028016  JMP        A=0 sBx=11
+    0044 [line  807] 0x0041C14B  SELF       A=5 B=0 C=263 Bx=263
+    0045 [line  807] 0x000201C5  GETGLOBAL  R7 = GLOBAL K[8]='ClientDef_Layer'
+    0046 [line  807] 0x03C241C6  GETTABLE   R7 = R7[K[9]='Invisible']
+    0047 [line  807] 0x0180415C  CALL       A=5 B=3 C=1
+    0048 [line  808] 0x01C14146  GETTABLE   R5 = R3[K[5]='Instance']
+    0049 [line  808] 0x0080815C  CALL       A=5 B=1 C=2
+    0050 [line  808] 0x02C2814B  SELF       A=5 B=5 C=266 Bx=2826
+    0051 [line  808] 0x000201C5  GETGLOBAL  R7 = GLOBAL K[8]='ClientDef_Layer'
+    0052 [line  808] 0x03C241C6  GETTABLE   R7 = R7[K[9]='Invisible']
+    0053 [line  808] 0x0180415C  CALL       A=5 B=3 C=1
+    0054 [line  808] 0x8001C016  JMP        A=0 sBx=8
+    0055 [line  810] 0x0041C14B  SELF       A=5 B=0 C=263 Bx=263
+    0056 [line  810] 0x008001C0  MOVE       R7 = R1
+    0057 [line  810] 0x0180415C  CALL       A=5 B=3 C=1
+    0058 [line  811] 0x01C14146  GETTABLE   R5 = R3[K[5]='Instance']
+    0059 [line  811] 0x0080815C  CALL       A=5 B=1 C=2
+    0060 [line  811] 0x02C2814B  SELF       A=5 B=5 C=266 Bx=2826
+    0061 [line  811] 0x008001C0  MOVE       R7 = R1
+    0062 [line  811] 0x0180415C  CALL       A=5 B=3 C=1
+    0063 [line  814] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 63
+    'layer': 0 -> 63
+    'ECPanelCharHead': 11 -> 63
+    'ECPanelAutoFight': 14 -> 63
+    'hp': 34 -> 63

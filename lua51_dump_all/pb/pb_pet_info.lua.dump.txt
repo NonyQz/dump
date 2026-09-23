@@ -1,0 +1,940 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_pet_info.lua
+SIZE: 9266
+PARSED: 9266
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_pet_info.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 8
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'AddHandler'
+K[003] = 'gp_pet_list_info'
+K[004] = 'gp_pet_info'
+K[005] = 'gp_pet_operate_re'
+K[006] = 'gp_equip_soul_result'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line   25] 0x00000064  CLOSURE    R1 = PROTO[0]
+0004 [line   26] 0x00408086  GETTABLE   R2 = R0[K[2]='AddHandler']
+0005 [line   26] 0x0000C0C1  LOADK      R3 = K[3]='gp_pet_list_info'
+0006 [line   26] 0x00800100  MOVE       R4 = R1
+0007 [line   26] 0x0180409C  CALL       A=2 B=3 C=1
+0008 [line   83] 0x000040A4  CLOSURE    R2 = PROTO[1]
+0009 [line   84] 0x004080C6  GETTABLE   R3 = R0[K[2]='AddHandler']
+0010 [line   84] 0x00010101  LOADK      R4 = K[4]='gp_pet_info'
+0011 [line   84] 0x01000140  MOVE       R5 = R2
+0012 [line   84] 0x018040DC  CALL       A=3 B=3 C=1
+0013 [line  195] 0x000080E4  CLOSURE    R3 = PROTO[2]
+0014 [line  196] 0x00408106  GETTABLE   R4 = R0[K[2]='AddHandler']
+0015 [line  196] 0x00014141  LOADK      R5 = K[5]='gp_pet_operate_re'
+0016 [line  196] 0x01800180  MOVE       R6 = R3
+0017 [line  196] 0x0180411C  CALL       A=4 B=3 C=1
+0018 [line  219] 0x0000C124  CLOSURE    R4 = PROTO[3]
+0019 [line  220] 0x00408146  GETTABLE   R5 = R0[K[2]='AddHandler']
+0020 [line  220] 0x00018181  LOADK      R6 = K[6]='gp_equip_soul_result'
+0021 [line  220] 0x020001C0  MOVE       R7 = R4
+0022 [line  220] 0x0180415C  CALL       A=5 B=3 C=1
+0023 [line  220] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 23
+'on_pet_list_info': 4 -> 23
+'on_pet_info': 9 -> 23
+'on_pet_operator_re': 14 -> 23
+'on_pet_equip_soul_result': 19 -> 23
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x127
+    Source : '@lua\\pb\\pb_pet_info.lua'
+    Lines  : 6 - 25
+    Params : 2
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.ECPetData'
+    K[002] = 'LogWarn'
+    K[003] = 'on_pet_list_info'
+    K[004] = 'Instance'
+    K[005] = 'onPetListInfo'
+    K[006] = 'Event.PetEvent'
+    K[007] = 'PetListEvt'
+    K[008] = 'Main.ECGame'
+    K[009] = 'EventManager'
+    K[010] = 'raiseEvent'
+    K[011] = 'GetCurrentFightPet'
+    K[012] = 'PetSummonEvt'
+    K[013] = 'pet_tid'
+    K[014] = 'petdata'
+    K[015] = 'pet_pos'
+    K[016] = 'pos_index'
+    K[017] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line    7] 0x000040C1  LOADK      R3 = K[1]='Data.ECPetData'
+    0002 [line    7] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line    8] 0x014080C6  GETTABLE   R3 = R2[K[2]='LogWarn']
+    0004 [line    8] 0x0000C101  LOADK      R4 = K[3]='on_pet_list_info'
+    0005 [line    8] 0x00800140  MOVE       R5 = R1
+    0006 [line    8] 0x018040DC  CALL       A=3 B=3 C=1
+    0007 [line   10] 0x014100C6  GETTABLE   R3 = R2[K[4]='Instance']
+    0008 [line   10] 0x008080DC  CALL       A=3 B=1 C=2
+    0009 [line   10] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0010 [line   10] 0x00800140  MOVE       R5 = R1
+    0011 [line   10] 0x018040DC  CALL       A=3 B=3 C=1
+    0012 [line   12] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0013 [line   12] 0x00018101  LOADK      R4 = K[6]='Event.PetEvent'
+    0014 [line   12] 0x010080DC  CALL       A=3 B=2 C=2
+    0015 [line   12] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='PetListEvt']
+    0016 [line   13] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0017 [line   13] 0x00020141  LOADK      R5 = K[8]='Main.ECGame'
+    0018 [line   13] 0x0100811C  CALL       A=4 B=2 C=2
+    0019 [line   14] 0x01800140  MOVE       R5 = R3
+    0020 [line   14] 0x0080815C  CALL       A=5 B=1 C=2
+    0021 [line   15] 0x02424186  GETTABLE   R6 = R4[K[9]='EventManager']
+    0022 [line   15] 0x0342818B  SELF       A=6 B=6 C=266 Bx=3338
+    0023 [line   15] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0024 [line   15] 0x02800240  MOVE       R9 = R5
+    0025 [line   15] 0x0200419C  CALL       A=6 B=4 C=1
+    0026 [line   18] 0x01410186  GETTABLE   R6 = R2[K[4]='Instance']
+    0027 [line   18] 0x0080819C  CALL       A=6 B=1 C=2
+    0028 [line   18] 0x0342C18B  SELF       A=6 B=6 C=267 Bx=3339
+    0029 [line   18] 0x0100C19C  CALL       A=6 B=2 C=3
+    0030 [line   19] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+    0031 [line   19] 0x00018241  LOADK      R9 = K[6]='Event.PetEvent'
+    0032 [line   19] 0x0100821C  CALL       A=8 B=2 C=2
+    0033 [line   19] 0x04430206  GETTABLE   R8 = R8[K[12]='PetSummonEvt']
+    0034 [line   20] 0x04000240  MOVE       R9 = R8
+    0035 [line   20] 0x0080825C  CALL       A=9 B=1 C=2
+    0036 [line   21] 0x86818249  SETTABLE   R9[K[13]='pet_tid'] = R6
+    0037 [line   22] 0x8701C249  SETTABLE   R9[K[14]='petdata'] = R7
+    0038 [line   23] 0x000001DA  TEST       A=7 B=0 C=0
+    0039 [line   23] 0x80008016  JMP        A=0 sBx=3
+    0040 [line   23] 0x03C40286  GETTABLE   R10 = R7[K[16]='pos_index']
+    0041 [line   23] 0x0000429A  TEST       A=10 B=0 C=1
+    0042 [line   23] 0x80000016  JMP        A=0 sBx=1
+    0043 [line   23] 0x00044281  LOADK      R10 = K[17]=-1.0
+    0044 [line   23] 0x87828249  SETTABLE   R9[K[15]='pet_pos'] = R10
+    0045 [line   24] 0x02424286  GETTABLE   R10 = R4[K[9]='EventManager']
+    0046 [line   24] 0x0542828B  SELF       A=10 B=10 C=266 Bx=5386
+    0047 [line   24] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0048 [line   24] 0x04800340  MOVE       R13 = R9
+    0049 [line   24] 0x0200429C  CALL       A=10 B=4 C=1
+    0050 [line   25] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 50
+    'msg': 0 -> 50
+    'ECPetData': 3 -> 50
+    'PetListEvt': 16 -> 50
+    'ECGame': 19 -> 50
+    'event': 21 -> 50
+    'cur_pet_tid': 30 -> 50
+    'petdata': 30 -> 50
+    'PetSummonEvt': 34 -> 50
+    'event2': 36 -> 50
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x4D9
+    Source : '@lua\\pb\\pb_pet_info.lua'
+    Lines  : 32 - 83
+    Params : 2
+    Stack  : 25
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.ECPetData'
+    K[002] = 'LogWarn'
+    K[003] = 'on_pet_info'
+    K[004] = 'pet_info'
+    K[005] = 'pos_index'
+    K[006] = 'Instance'
+    K[007] = 'GetPetDataAt'
+    K[008] = 'quality_star'
+    K[009] = 1.0
+    K[010] = 'level'
+    K[011] = 0.0
+    K[012] = 'quality_color'
+    K[013] = 'star_bless_value'
+    K[014] = 'LuaUInt64'
+    K[015] = 'ToDouble'
+    K[016] = 'exp'
+    K[017] = 'ipairs'
+    K[018] = 'skill_addon'
+    K[019] = 'table'
+    K[020] = 'insert'
+    K[021] = 'onPetInfo'
+    K[022] = True
+    K[023] = 'Event.PetEvent'
+    K[024] = 'PetDataEvt'
+    K[025] = 'Main.ECGame'
+    K[026] = 'pet_pos'
+    K[027] = 'petdata'
+    K[028] = 'star_up'
+    K[029] = 'level_up'
+    K[030] = 'quality_up'
+    K[031] = 'exp_up'
+    K[032] = 'new_got'
+    K[033] = 'bless_add'
+    K[034] = 'skill_addon_changelist'
+    K[035] = None
+    K[036] = 'EventManager'
+    K[037] = 'raiseEvent'
+    K[038] = 'GetCurrentFightPet'
+    K[039] = 'PetSummonEvt'
+    K[040] = 'pet_tid'
+    K[041] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   33] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line   33] 0x000040C1  LOADK      R3 = K[1]='Data.ECPetData'
+    0002 [line   33] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line   34] 0x014080C6  GETTABLE   R3 = R2[K[2]='LogWarn']
+    0004 [line   34] 0x0000C101  LOADK      R4 = K[3]='on_pet_info'
+    0005 [line   34] 0x00800140  MOVE       R5 = R1
+    0006 [line   34] 0x018040DC  CALL       A=3 B=3 C=1
+    0007 [line   36] 0x00C100C6  GETTABLE   R3 = R1[K[4]='pet_info']
+    0008 [line   36] 0x01C140C6  GETTABLE   R3 = R3[K[5]='pos_index']
+    0009 [line   37] 0x01418106  GETTABLE   R4 = R2[K[6]='Instance']
+    0010 [line   37] 0x0080811C  CALL       A=4 B=1 C=2
+    0011 [line   37] 0x0241C10B  SELF       A=4 B=4 C=263 Bx=2311
+    0012 [line   37] 0x01800180  MOVE       R6 = R3
+    0013 [line   37] 0x0180811C  CALL       A=4 B=3 C=2
+    0014 [line   38] 0x0000011A  TEST       A=4 B=0 C=0
+    0015 [line   38] 0x80008016  JMP        A=0 sBx=3
+    0016 [line   38] 0x02420146  GETTABLE   R5 = R4[K[8]='quality_star']
+    0017 [line   38] 0x0000415A  TEST       A=5 B=0 C=1
+    0018 [line   38] 0x80000016  JMP        A=0 sBx=1
+    0019 [line   38] 0x00024141  LOADK      R5 = K[9]=1.0
+    0020 [line   39] 0x0000011A  TEST       A=4 B=0 C=0
+    0021 [line   39] 0x80008016  JMP        A=0 sBx=3
+    0022 [line   39] 0x02428186  GETTABLE   R6 = R4[K[10]='level']
+    0023 [line   39] 0x0000419A  TEST       A=6 B=0 C=1
+    0024 [line   39] 0x80000016  JMP        A=0 sBx=1
+    0025 [line   39] 0x0002C181  LOADK      R6 = K[11]=0.0
+    0026 [line   40] 0x0000011A  TEST       A=4 B=0 C=0
+    0027 [line   40] 0x80008016  JMP        A=0 sBx=3
+    0028 [line   40] 0x024301C6  GETTABLE   R7 = R4[K[12]='quality_color']
+    0029 [line   40] 0x000041DA  TEST       A=7 B=0 C=1
+    0030 [line   40] 0x80000016  JMP        A=0 sBx=1
+    0031 [line   40] 0x000241C1  LOADK      R7 = K[9]=1.0
+    0032 [line   41] 0x0000011A  TEST       A=4 B=0 C=0
+    0033 [line   41] 0x80008016  JMP        A=0 sBx=3
+    0034 [line   41] 0x02434206  GETTABLE   R8 = R4[K[13]='star_bless_value']
+    0035 [line   41] 0x0000421A  TEST       A=8 B=0 C=1
+    0036 [line   41] 0x80000016  JMP        A=0 sBx=1
+    0037 [line   41] 0x0002C201  LOADK      R8 = K[11]=0.0
+    0038 [line   42] 0x0000011A  TEST       A=4 B=0 C=0
+    0039 [line   42] 0x80014016  JMP        A=0 sBx=6
+    0040 [line   42] 0x00038245  GETGLOBAL  R9 = GLOBAL K[14]='LuaUInt64'
+    0041 [line   42] 0x04C3C246  GETTABLE   R9 = R9[K[15]='ToDouble']
+    0042 [line   42] 0x02440286  GETTABLE   R10 = R4[K[16]='exp']
+    0043 [line   42] 0x0100825C  CALL       A=9 B=2 C=2
+    0044 [line   42] 0x0000425A  TEST       A=9 B=0 C=1
+    0045 [line   42] 0x80000016  JMP        A=0 sBx=1
+    0046 [line   42] 0x0002C241  LOADK      R9 = K[11]=0.0
+    0047 [line   43] 0x0000411A  TEST       A=4 B=0 C=1
+    0048 [line   43] 0x80000016  JMP        A=0 sBx=1
+    0049 [line   43] 0x80008016  JMP        A=0 sBx=3
+    0050 [line   43] 0x00000282  LOADBOOL   A=10 B=0 C=0
+    0051 [line   43] 0x80004016  JMP        A=0 sBx=2
+    0052 [line   43] 0x00004282  LOADBOOL   A=10 B=0 C=1
+    0053 [line   43] 0x00800282  LOADBOOL   A=10 B=1 C=0
+    0054 [line   44] 0x000002CA  NEWTABLE   A=11 B=0 C=0 Bx=0
+    0055 [line   45] 0x0000011A  TEST       A=4 B=0 C=0
+    0056 [line   45] 0x80028016  JMP        A=0 sBx=11
+    0057 [line   46] 0x00044305  GETGLOBAL  R12 = GLOBAL K[17]='ipairs'
+    0058 [line   46] 0x02448346  GETTABLE   R13 = R4[K[18]='skill_addon']
+    0059 [line   46] 0x0101031C  CALL       A=12 B=2 C=4
+    0060 [line   46] 0x80010016  JMP        A=0 sBx=5
+    0061 [line   47] 0x0004C445  GETGLOBAL  R17 = GLOBAL K[19]='table'
+    0062 [line   47] 0x08C50446  GETTABLE   R17 = R17[K[20]='insert']
+    0063 [line   47] 0x05800480  MOVE       R18 = R11
+    0064 [line   47] 0x080004C0  MOVE       R19 = R16
+    0065 [line   47] 0x0180445C  CALL       A=17 B=3 C=1
+    0066 [line   46] 0x00008321  TFORLOOP   A=12 B=0 C=2
+    0067 [line   47] 0x7FFE0016  JMP        A=0 sBx=-7
+    0068 [line   51] 0x01418306  GETTABLE   R12 = R2[K[6]='Instance']
+    0069 [line   51] 0x0080831C  CALL       A=12 B=1 C=2
+    0070 [line   51] 0x0645430B  SELF       A=12 B=12 C=277 Bx=6421
+    0071 [line   51] 0x00800380  MOVE       R14 = R1
+    0072 [line   51] 0x0180431C  CALL       A=12 B=3 C=1
+    0073 [line   53] 0x0000030A  NEWTABLE   A=12 B=0 C=0 Bx=0
+    0074 [line   54] 0x00C10346  GETTABLE   R13 = R1[K[4]='pet_info']
+    0075 [line   54] 0x06C48346  GETTABLE   R13 = R13[K[18]='skill_addon']
+    0076 [line   55] 0x00044385  GETGLOBAL  R14 = GLOBAL K[17]='ipairs'
+    0077 [line   55] 0x068003C0  MOVE       R15 = R13
+    0078 [line   55] 0x0101039C  CALL       A=14 B=2 C=4
+    0079 [line   55] 0x80040016  JMP        A=0 sBx=17
+    0080 [line   56] 0x058444C6  GETTABLE   R19 = R11[R17]
+    0081 [line   56] 0x000044DA  TEST       A=19 B=0 C=1
+    0082 [line   56] 0x80034016  JMP        A=0 sBx=14
+    0083 [line   56] 0x068444C6  GETTABLE   R19 = R13[R17]
+    0084 [line   56] 0x000004DA  TEST       A=19 B=0 C=0
+    0085 [line   56] 0x80028016  JMP        A=0 sBx=11
+    0086 [line   56] 0x058444C6  GETTABLE   R19 = R11[R17]
+    0087 [line   56] 0x000004DA  TEST       A=19 B=0 C=0
+    0088 [line   56] 0x8001C016  JMP        A=0 sBx=8
+    0089 [line   56] 0x068444C6  GETTABLE   R19 = R13[R17]
+    0090 [line   56] 0x000004DA  TEST       A=19 B=0 C=0
+    0091 [line   56] 0x80010016  JMP        A=0 sBx=5
+    0092 [line   56] 0x068444C6  GETTABLE   R19 = R13[R17]
+    0093 [line   56] 0x05844506  GETTABLE   R20 = R11[R17]
+    0094 [line   56] 0x09850057  EQ         A=1 B=R19 C=R20
+    0095 [line   56] 0x80000016  JMP        A=0 sBx=1
+    0096 [line   57] 0x08C58309  SETTABLE   R12[R17] = K[22]=True
+    0097 [line   55] 0x000083A1  TFORLOOP   A=14 B=0 C=2
+    0098 [line   58] 0x7FFB0016  JMP        A=0 sBx=-19
+    0099 [line   61] 0x00000385  GETGLOBAL  R14 = GLOBAL K[0]='require'
+    0100 [line   61] 0x0005C3C1  LOADK      R15 = K[23]='Event.PetEvent'
+    0101 [line   61] 0x0100839C  CALL       A=14 B=2 C=2
+    0102 [line   61] 0x07460386  GETTABLE   R14 = R14[K[24]='PetDataEvt']
+    0103 [line   62] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+    0104 [line   62] 0x00064401  LOADK      R16 = K[25]='Main.ECGame'
+    0105 [line   62] 0x010083DC  CALL       A=15 B=2 C=2
+    0106 [line   63] 0x07000400  MOVE       R16 = R14
+    0107 [line   63] 0x0080841C  CALL       A=16 B=1 C=2
+    0108 [line   64] 0x8D00C409  SETTABLE   R16[K[26]='pet_pos'] = R3
+    0109 [line   65] 0x00C10446  GETTABLE   R17 = R1[K[4]='pet_info']
+    0110 [line   65] 0x8D844409  SETTABLE   R16[K[27]='petdata'] = R17
+    0111 [line   66] 0x00C10446  GETTABLE   R17 = R1[K[4]='pet_info']
+    0112 [line   66] 0x08C20446  GETTABLE   R17 = R17[K[8]='quality_star']
+    0113 [line   66] 0x02844058  LT         A=1 B=R5 C=R17
+    0114 [line   66] 0x80000016  JMP        A=0 sBx=1
+    0115 [line   66] 0x00004442  LOADBOOL   A=17 B=0 C=1
+    0116 [line   66] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0117 [line   66] 0x8E044409  SETTABLE   R16[K[28]='star_up'] = R17
+    0118 [line   67] 0x00C10446  GETTABLE   R17 = R1[K[4]='pet_info']
+    0119 [line   67] 0x08C28446  GETTABLE   R17 = R17[K[10]='level']
+    0120 [line   67] 0x03044058  LT         A=1 B=R6 C=R17
+    0121 [line   67] 0x80000016  JMP        A=0 sBx=1
+    0122 [line   67] 0x00004442  LOADBOOL   A=17 B=0 C=1
+    0123 [line   67] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0124 [line   67] 0x8E844409  SETTABLE   R16[K[29]='level_up'] = R17
+    0125 [line   68] 0x00C10446  GETTABLE   R17 = R1[K[4]='pet_info']
+    0126 [line   68] 0x08C30446  GETTABLE   R17 = R17[K[12]='quality_color']
+    0127 [line   68] 0x03844058  LT         A=1 B=R7 C=R17
+    0128 [line   68] 0x80000016  JMP        A=0 sBx=1
+    0129 [line   68] 0x00004442  LOADBOOL   A=17 B=0 C=1
+    0130 [line   68] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0131 [line   68] 0x8F044409  SETTABLE   R16[K[30]='quality_up'] = R17
+    0132 [line   69] 0x00038445  GETGLOBAL  R17 = GLOBAL K[14]='LuaUInt64'
+    0133 [line   69] 0x08C3C446  GETTABLE   R17 = R17[K[15]='ToDouble']
+    0134 [line   69] 0x00C10486  GETTABLE   R18 = R1[K[4]='pet_info']
+    0135 [line   69] 0x09440486  GETTABLE   R18 = R18[K[16]='exp']
+    0136 [line   69] 0x0100845C  CALL       A=17 B=2 C=2
+    0137 [line   69] 0x04844058  LT         A=1 B=R9 C=R17
+    0138 [line   69] 0x80000016  JMP        A=0 sBx=1
+    0139 [line   69] 0x00004442  LOADBOOL   A=17 B=0 C=1
+    0140 [line   69] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0141 [line   69] 0x8F844409  SETTABLE   R16[K[31]='exp_up'] = R17
+    0142 [line   70] 0x90028409  SETTABLE   R16[K[32]='new_got'] = R10
+    0143 [line   71] 0x00C10446  GETTABLE   R17 = R1[K[4]='pet_info']
+    0144 [line   71] 0x08C34446  GETTABLE   R17 = R17[K[13]='star_bless_value']
+    0145 [line   71] 0x0882044D  SUB        A=17 B=R17 C=R8
+    0146 [line   71] 0x90844409  SETTABLE   R16[K[33]='bless_add'] = R17
+    0147 [line   72] 0x9148C409  SETTABLE   R16[K[34]='skill_addon_changelist'] = K[35]=None
+    0148 [line   73] 0x07C90446  GETTABLE   R17 = R15[K[36]='EventManager']
+    0149 [line   73] 0x08C9444B  SELF       A=17 B=17 C=293 Bx=8997
+    0150 [line   73] 0x098004C3  LOADNIL    A=19 B=19 C=0 Bx=9728
+    0151 [line   73] 0x08000500  MOVE       R20 = R16
+    0152 [line   73] 0x0200445C  CALL       A=17 B=4 C=1
+    0153 [line   76] 0x01418446  GETTABLE   R17 = R2[K[6]='Instance']
+    0154 [line   76] 0x0080845C  CALL       A=17 B=1 C=2
+    0155 [line   76] 0x08C9844B  SELF       A=17 B=17 C=294 Bx=8998
+    0156 [line   76] 0x0100C45C  CALL       A=17 B=2 C=3
+    0157 [line   77] 0x000004C5  GETGLOBAL  R19 = GLOBAL K[0]='require'
+    0158 [line   77] 0x0005C501  LOADK      R20 = K[23]='Event.PetEvent'
+    0159 [line   77] 0x010084DC  CALL       A=19 B=2 C=2
+    0160 [line   77] 0x09C9C4C6  GETTABLE   R19 = R19[K[39]='PetSummonEvt']
+    0161 [line   78] 0x09800500  MOVE       R20 = R19
+    0162 [line   78] 0x0080851C  CALL       A=20 B=1 C=2
+    0163 [line   79] 0x94044509  SETTABLE   R20[K[40]='pet_tid'] = R17
+    0164 [line   80] 0x8D848509  SETTABLE   R20[K[27]='petdata'] = R18
+    0165 [line   81] 0x0000049A  TEST       A=18 B=0 C=0
+    0166 [line   81] 0x80008016  JMP        A=0 sBx=3
+    0167 [line   81] 0x09414546  GETTABLE   R21 = R18[K[5]='pos_index']
+    0168 [line   81] 0x0000455A  TEST       A=21 B=0 C=1
+    0169 [line   81] 0x80000016  JMP        A=0 sBx=1
+    0170 [line   81] 0x000A4541  LOADK      R21 = K[41]=-1.0
+    0171 [line   81] 0x8D054509  SETTABLE   R20[K[26]='pet_pos'] = R21
+    0172 [line   82] 0x07C90546  GETTABLE   R21 = R15[K[36]='EventManager']
+    0173 [line   82] 0x0AC9454B  SELF       A=21 B=21 C=293 Bx=11045
+    0174 [line   82] 0x0B8005C3  LOADNIL    A=23 B=23 C=0 Bx=11776
+    0175 [line   82] 0x0A000600  MOVE       R24 = R20
+    0176 [line   82] 0x0200455C  CALL       A=21 B=4 C=1
+    0177 [line   83] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 177
+    'msg': 0 -> 177
+    'ECPetData': 3 -> 177
+    'pet_pos_index': 9 -> 177
+    'old_pet': 14 -> 177
+    'old_star_lv': 20 -> 177
+    'old_level': 26 -> 177
+    'old_quality': 32 -> 177
+    'old_bless_value': 38 -> 177
+    'old_exp': 47 -> 177
+    'new_got': 54 -> 177
+    'old_skill_addon': 55 -> 177
+    '(for generator)': 60 -> 68
+    '(for state)': 60 -> 68
+    '(for control)': 60 -> 68
+    'i': 61 -> 66
+    'v': 61 -> 66
+    'skill_addon_changelist': 74 -> 177
+    'new_skill_addon': 76 -> 177
+    '(for generator)': 79 -> 99
+    '(for state)': 79 -> 99
+    '(for control)': 79 -> 99
+    'i': 80 -> 97
+    '_': 80 -> 97
+    'PetDataEvt': 103 -> 177
+    'ECGame': 106 -> 177
+    'event': 108 -> 177
+    'cur_pet_tid': 157 -> 177
+    'petdata': 157 -> 177
+    'PetSummonEvt': 161 -> 177
+    'event2': 163 -> 177
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xFA5
+    Source : '@lua\\pb\\pb_pet_info.lua'
+    Lines  : 89 - 195
+    Params : 2
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.ECPetData'
+    K[002] = 'LogWarn'
+    K[003] = 'on_pet_operator_re'
+    K[004] = 'Main.ECGame'
+    K[005] = 'oper_type'
+    K[006] = 3.0
+    K[007] = 'oper_retcode'
+    K[008] = 0.0
+    K[009] = 'FlashTipMan'
+    K[010] = 'FlashTip'
+    K[011] = 'StringTable'
+    K[012] = 'Get'
+    K[013] = 17706.0
+    K[014] = 'Instance'
+    K[015] = 'GetCurrentFightPet'
+    K[016] = 'onPetDisappear'
+    K[017] = 'result_param1'
+    K[018] = 'Event.PetEvent'
+    K[019] = 'PetDisappearEvt'
+    K[020] = 'pet_pos'
+    K[021] = 'EventManager'
+    K[022] = 'raiseEvent'
+    K[023] = 'pos_index'
+    K[024] = 'PetSummonEvt'
+    K[025] = 'event2'
+    K[026] = 'pet_tid'
+    K[027] = 'petdata'
+    K[028] = 5.0
+    K[029] = 17709.0
+    K[030] = 'GameUtil'
+    K[031] = 'AddGlobalTimer'
+    K[032] = 'GetUnlockSkillNum'
+    K[033] = 'Utility.Task'
+    K[034] = 'Utility.ECAsyncTask'
+    K[035] = 'createSteps'
+    K[036] = 'start'
+    K[037] = 'result_param2'
+    K[038] = 4.0
+    K[039] = 'PetStarupEvt'
+    K[040] = 'is_crit'
+    K[041] = 1.0
+    K[042] = 2.0
+    K[043] = 'PetWashingEvt'
+    K[044] = 7.0
+    K[045] = 17761.0
+    K[046] = 8.0
+    K[047] = 17780.0
+    K[048] = 'PetLongGuEvt'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   90] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line   90] 0x000040C1  LOADK      R3 = K[1]='Data.ECPetData'
+    0002 [line   90] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line   91] 0x014080C6  GETTABLE   R3 = R2[K[2]='LogWarn']
+    0004 [line   91] 0x0000C101  LOADK      R4 = K[3]='on_pet_operator_re'
+    0005 [line   91] 0x00800140  MOVE       R5 = R1
+    0006 [line   91] 0x018040DC  CALL       A=3 B=3 C=1
+    0007 [line   92] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0008 [line   92] 0x00010101  LOADK      R4 = K[4]='Main.ECGame'
+    0009 [line   92] 0x010080DC  CALL       A=3 B=2 C=2
+    0010 [line   93] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0011 [line   93] 0x02418017  EQ         A=0 B=R4 C=K[6]=3.0
+    0012 [line   93] 0x800E0016  JMP        A=0 sBx=57
+    0013 [line   94] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0014 [line   94] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0015 [line   94] 0x80380016  JMP        A=0 sBx=225
+    0016 [line   95] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='FlashTipMan'
+    0017 [line   95] 0x02428106  GETTABLE   R4 = R4[K[10]='FlashTip']
+    0018 [line   95] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='StringTable'
+    0019 [line   95] 0x02C30146  GETTABLE   R5 = R5[K[12]='Get']
+    0020 [line   95] 0x00034181  LOADK      R6 = K[13]=17706.0
+    0021 [line   95] 0x0100015C  CALL       A=5 B=2 C=0
+    0022 [line   95] 0x0000411C  CALL       A=4 B=0 C=1
+    0023 [line   97] 0x01438106  GETTABLE   R4 = R2[K[14]='Instance']
+    0024 [line   97] 0x0080811C  CALL       A=4 B=1 C=2
+    0025 [line   97] 0x0243C10B  SELF       A=4 B=4 C=271 Bx=2319
+    0026 [line   97] 0x0100C11C  CALL       A=4 B=2 C=3
+    0027 [line   99] 0x01438186  GETTABLE   R6 = R2[K[14]='Instance']
+    0028 [line   99] 0x0080819C  CALL       A=6 B=1 C=2
+    0029 [line   99] 0x0344018B  SELF       A=6 B=6 C=272 Bx=3344
+    0030 [line   99] 0x00C44206  GETTABLE   R8 = R1[K[17]='result_param1']
+    0031 [line   99] 0x0180419C  CALL       A=6 B=3 C=1
+    0032 [line  101] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+    0033 [line  101] 0x000481C1  LOADK      R7 = K[18]='Event.PetEvent'
+    0034 [line  101] 0x0100819C  CALL       A=6 B=2 C=2
+    0035 [line  101] 0x0344C186  GETTABLE   R6 = R6[K[19]='PetDisappearEvt']
+    0036 [line  103] 0x030001C0  MOVE       R7 = R6
+    0037 [line  103] 0x008081DC  CALL       A=7 B=1 C=2
+    0038 [line  104] 0x00C44206  GETTABLE   R8 = R1[K[17]='result_param1']
+    0039 [line  104] 0x8A0201C9  SETTABLE   R7[K[20]='pet_pos'] = R8
+    0040 [line  105] 0x01C54206  GETTABLE   R8 = R3[K[21]='EventManager']
+    0041 [line  105] 0x0445820B  SELF       A=8 B=8 C=278 Bx=4374
+    0042 [line  105] 0x05000283  LOADNIL    A=10 B=10 C=0 Bx=5120
+    0043 [line  105] 0x038002C0  MOVE       R11 = R7
+    0044 [line  105] 0x0200421C  CALL       A=8 B=4 C=1
+    0045 [line  108] 0x0000015A  TEST       A=5 B=0 C=0
+    0046 [line  108] 0x80304016  JMP        A=0 sBx=194
+    0047 [line  108] 0x02C5C206  GETTABLE   R8 = R5[K[23]='pos_index']
+    0048 [line  108] 0x00C44246  GETTABLE   R9 = R1[K[17]='result_param1']
+    0049 [line  108] 0x04024017  EQ         A=0 B=R8 C=R9
+    0050 [line  108] 0x802F4016  JMP        A=0 sBx=190
+    0051 [line  109] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+    0052 [line  109] 0x00048241  LOADK      R9 = K[18]='Event.PetEvent'
+    0053 [line  109] 0x0100821C  CALL       A=8 B=2 C=2
+    0054 [line  109] 0x04460206  GETTABLE   R8 = R8[K[24]='PetSummonEvt']
+    0055 [line  110] 0x04000240  MOVE       R9 = R8
+    0056 [line  110] 0x0080825C  CALL       A=9 B=1 C=2
+    0057 [line  111] 0x00064285  GETGLOBAL  R10 = GLOBAL K[25]='event2'
+    0058 [line  111] 0x8D010289  SETTABLE   R10[K[26]='pet_tid'] = R4
+    0059 [line  112] 0x00064285  GETGLOBAL  R10 = GLOBAL K[25]='event2'
+    0060 [line  112] 0x8D814289  SETTABLE   R10[K[27]='petdata'] = R5
+    0061 [line  113] 0x00064285  GETGLOBAL  R10 = GLOBAL K[25]='event2'
+    0062 [line  113] 0x00C442C6  GETTABLE   R11 = R1[K[17]='result_param1']
+    0063 [line  113] 0x8A02C289  SETTABLE   R10[K[20]='pet_pos'] = R11
+    0064 [line  114] 0x01C54286  GETTABLE   R10 = R3[K[21]='EventManager']
+    0065 [line  114] 0x0545828B  SELF       A=10 B=10 C=278 Bx=5398
+    0066 [line  114] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0067 [line  114] 0x00064345  GETGLOBAL  R13 = GLOBAL K[25]='event2'
+    0068 [line  114] 0x0200429C  CALL       A=10 B=4 C=1
+    0069 [line  116] 0x802A8016  JMP        A=0 sBx=171
+    0070 [line  117] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0071 [line  117] 0x02470017  EQ         A=0 B=R4 C=K[28]=5.0
+    0072 [line  117] 0x80144016  JMP        A=0 sBx=82
+    0073 [line  118] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0074 [line  118] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0075 [line  118] 0x80290016  JMP        A=0 sBx=165
+    0076 [line  119] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='FlashTipMan'
+    0077 [line  119] 0x02428106  GETTABLE   R4 = R4[K[10]='FlashTip']
+    0078 [line  119] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='StringTable'
+    0079 [line  119] 0x02C30146  GETTABLE   R5 = R5[K[12]='Get']
+    0080 [line  119] 0x00074181  LOADK      R6 = K[29]=17709.0
+    0081 [line  119] 0x0100015C  CALL       A=5 B=2 C=0
+    0082 [line  119] 0x0000411C  CALL       A=4 B=0 C=1
+    0083 [line  120] 0x00078105  GETGLOBAL  R4 = GLOBAL K[30]='GameUtil'
+    0084 [line  120] 0x0247C106  GETTABLE   R4 = R4[K[31]='AddGlobalTimer']
+    0085 [line  120] 0x00020141  LOADK      R5 = K[8]=0.0
+    0086 [line  120] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0087 [line  126] 0x000001E4  CLOSURE    R7 = PROTO[0]
+    0088 [line  126] 0x01000000  MOVE       R0 = R2
+    0089 [line  126] 0x00800000  MOVE       R0 = R1
+    0090 [line  120] 0x0200411C  CALL       A=4 B=4 C=1
+    0091 [line  128] 0x01438106  GETTABLE   R4 = R2[K[14]='Instance']
+    0092 [line  128] 0x0080811C  CALL       A=4 B=1 C=2
+    0093 [line  128] 0x0248010B  SELF       A=4 B=4 C=288 Bx=2336
+    0094 [line  128] 0x00C44186  GETTABLE   R6 = R1[K[17]='result_param1']
+    0095 [line  128] 0x0180C11C  CALL       A=4 B=3 C=3
+    0096 [line  130] 0x02014018  LT         A=0 B=R4 C=R5
+    0097 [line  130] 0x80030016  JMP        A=0 sBx=13
+    0098 [line  131] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+    0099 [line  131] 0x000841C1  LOADK      R7 = K[33]='Utility.Task'
+    0100 [line  131] 0x0100819C  CALL       A=6 B=2 C=2
+    0101 [line  132] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+    0102 [line  132] 0x00088201  LOADK      R8 = K[34]='Utility.ECAsyncTask'
+    0103 [line  132] 0x010081DC  CALL       A=7 B=2 C=2
+    0104 [line  133] 0x0348C206  GETTABLE   R8 = R6[K[35]='createSteps']
+    0105 [line  140] 0x00004264  CLOSURE    R9 = PROTO[1]
+    0106 [line  140] 0x03800000  MOVE       R0 = R7
+    0107 [line  133] 0x0100821C  CALL       A=8 B=2 C=2
+    0108 [line  141] 0x0449024B  SELF       A=9 B=8 C=292 Bx=4388
+    0109 [line  141] 0x0100425C  CALL       A=9 B=2 C=1
+    0110 [line  141] 0x000001A3  CLOSE      A=6 B=0 C=0 Bx=0
+    0111 [line  144] 0x01438186  GETTABLE   R6 = R2[K[14]='Instance']
+    0112 [line  144] 0x0080819C  CALL       A=6 B=1 C=2
+    0113 [line  144] 0x0343C18B  SELF       A=6 B=6 C=271 Bx=3343
+    0114 [line  144] 0x0100C19C  CALL       A=6 B=2 C=3
+    0115 [line  146] 0x01438206  GETTABLE   R8 = R2[K[14]='Instance']
+    0116 [line  146] 0x0080821C  CALL       A=8 B=1 C=2
+    0117 [line  146] 0x0444020B  SELF       A=8 B=8 C=272 Bx=4368
+    0118 [line  146] 0x00C94286  GETTABLE   R10 = R1[K[37]='result_param2']
+    0119 [line  146] 0x0180421C  CALL       A=8 B=3 C=1
+    0120 [line  148] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+    0121 [line  148] 0x00048241  LOADK      R9 = K[18]='Event.PetEvent'
+    0122 [line  148] 0x0100821C  CALL       A=8 B=2 C=2
+    0123 [line  148] 0x0444C206  GETTABLE   R8 = R8[K[19]='PetDisappearEvt']
+    0124 [line  150] 0x04000240  MOVE       R9 = R8
+    0125 [line  150] 0x0080825C  CALL       A=9 B=1 C=2
+    0126 [line  151] 0x00C94286  GETTABLE   R10 = R1[K[37]='result_param2']
+    0127 [line  151] 0x8A028249  SETTABLE   R9[K[20]='pet_pos'] = R10
+    0128 [line  152] 0x01C54286  GETTABLE   R10 = R3[K[21]='EventManager']
+    0129 [line  152] 0x0545828B  SELF       A=10 B=10 C=278 Bx=5398
+    0130 [line  152] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0131 [line  152] 0x04800340  MOVE       R13 = R9
+    0132 [line  152] 0x0200429C  CALL       A=10 B=4 C=1
+    0133 [line  155] 0x000001DA  TEST       A=7 B=0 C=0
+    0134 [line  155] 0x801A4016  JMP        A=0 sBx=106
+    0135 [line  155] 0x03C5C286  GETTABLE   R10 = R7[K[23]='pos_index']
+    0136 [line  155] 0x00C942C6  GETTABLE   R11 = R1[K[37]='result_param2']
+    0137 [line  155] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0138 [line  155] 0x80194016  JMP        A=0 sBx=102
+    0139 [line  156] 0x00000285  GETGLOBAL  R10 = GLOBAL K[0]='require'
+    0140 [line  156] 0x000482C1  LOADK      R11 = K[18]='Event.PetEvent'
+    0141 [line  156] 0x0100829C  CALL       A=10 B=2 C=2
+    0142 [line  156] 0x05460286  GETTABLE   R10 = R10[K[24]='PetSummonEvt']
+    0143 [line  157] 0x050002C0  MOVE       R11 = R10
+    0144 [line  157] 0x008082DC  CALL       A=11 B=1 C=2
+    0145 [line  158] 0x8D0182C9  SETTABLE   R11[K[26]='pet_tid'] = R6
+    0146 [line  159] 0x8D81C2C9  SETTABLE   R11[K[27]='petdata'] = R7
+    0147 [line  160] 0x00C94306  GETTABLE   R12 = R1[K[37]='result_param2']
+    0148 [line  160] 0x8A0302C9  SETTABLE   R11[K[20]='pet_pos'] = R12
+    0149 [line  161] 0x01C54306  GETTABLE   R12 = R3[K[21]='EventManager']
+    0150 [line  161] 0x0645830B  SELF       A=12 B=12 C=278 Bx=6422
+    0151 [line  161] 0x07000383  LOADNIL    A=14 B=14 C=0 Bx=7168
+    0152 [line  161] 0x058003C0  MOVE       R15 = R11
+    0153 [line  161] 0x0200431C  CALL       A=12 B=4 C=1
+    0154 [line  163] 0x80154016  JMP        A=0 sBx=86
+    0155 [line  164] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0156 [line  164] 0x02498017  EQ         A=0 B=R4 C=K[38]=4.0
+    0157 [line  164] 0x80058016  JMP        A=0 sBx=23
+    0158 [line  165] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0159 [line  165] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0160 [line  165] 0x8013C016  JMP        A=0 sBx=80
+    0161 [line  166] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0162 [line  166] 0x00048141  LOADK      R5 = K[18]='Event.PetEvent'
+    0163 [line  166] 0x0100811C  CALL       A=4 B=2 C=2
+    0164 [line  166] 0x0249C106  GETTABLE   R4 = R4[K[39]='PetStarupEvt']
+    0165 [line  168] 0x02000140  MOVE       R5 = R4
+    0166 [line  168] 0x0080815C  CALL       A=5 B=1 C=2
+    0167 [line  169] 0x00C44186  GETTABLE   R6 = R1[K[17]='result_param1']
+    0168 [line  169] 0x8A018149  SETTABLE   R5[K[20]='pet_pos'] = R6
+    0169 [line  170] 0x00C94186  GETTABLE   R6 = R1[K[37]='result_param2']
+    0170 [line  170] 0x034A4057  EQ         A=1 B=R6 C=K[41]=1.0
+    0171 [line  170] 0x80000016  JMP        A=0 sBx=1
+    0172 [line  170] 0x00004182  LOADBOOL   A=6 B=0 C=1
+    0173 [line  170] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0174 [line  170] 0x94018149  SETTABLE   R5[K[40]='is_crit'] = R6
+    0175 [line  171] 0x01C54186  GETTABLE   R6 = R3[K[21]='EventManager']
+    0176 [line  171] 0x0345818B  SELF       A=6 B=6 C=278 Bx=3350
+    0177 [line  171] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0178 [line  171] 0x02800240  MOVE       R9 = R5
+    0179 [line  171] 0x0200419C  CALL       A=6 B=4 C=1
+    0180 [line  172] 0x800EC016  JMP        A=0 sBx=60
+    0181 [line  173] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0182 [line  173] 0x024A8017  EQ         A=0 B=R4 C=K[42]=2.0
+    0183 [line  173] 0x80040016  JMP        A=0 sBx=17
+    0184 [line  174] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0185 [line  174] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0186 [line  174] 0x800D4016  JMP        A=0 sBx=54
+    0187 [line  175] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0188 [line  175] 0x00048141  LOADK      R5 = K[18]='Event.PetEvent'
+    0189 [line  175] 0x0100811C  CALL       A=4 B=2 C=2
+    0190 [line  175] 0x024AC106  GETTABLE   R4 = R4[K[43]='PetWashingEvt']
+    0191 [line  177] 0x02000140  MOVE       R5 = R4
+    0192 [line  177] 0x0080815C  CALL       A=5 B=1 C=2
+    0193 [line  178] 0x00C44186  GETTABLE   R6 = R1[K[17]='result_param1']
+    0194 [line  178] 0x8A018149  SETTABLE   R5[K[20]='pet_pos'] = R6
+    0195 [line  179] 0x01C54186  GETTABLE   R6 = R3[K[21]='EventManager']
+    0196 [line  179] 0x0345818B  SELF       A=6 B=6 C=278 Bx=3350
+    0197 [line  179] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0198 [line  179] 0x02800240  MOVE       R9 = R5
+    0199 [line  179] 0x0200419C  CALL       A=6 B=4 C=1
+    0200 [line  180] 0x8009C016  JMP        A=0 sBx=40
+    0201 [line  181] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0202 [line  181] 0x024B0017  EQ         A=0 B=R4 C=K[44]=7.0
+    0203 [line  181] 0x80028016  JMP        A=0 sBx=11
+    0204 [line  182] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0205 [line  182] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0206 [line  182] 0x80084016  JMP        A=0 sBx=34
+    0207 [line  183] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='FlashTipMan'
+    0208 [line  183] 0x02428106  GETTABLE   R4 = R4[K[10]='FlashTip']
+    0209 [line  183] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='StringTable'
+    0210 [line  183] 0x02C30146  GETTABLE   R5 = R5[K[12]='Get']
+    0211 [line  183] 0x000B4181  LOADK      R6 = K[45]=17761.0
+    0212 [line  183] 0x0100015C  CALL       A=5 B=2 C=0
+    0213 [line  183] 0x0000411C  CALL       A=4 B=0 C=1
+    0214 [line  184] 0x80064016  JMP        A=0 sBx=26
+    0215 [line  185] 0x00C14106  GETTABLE   R4 = R1[K[5]='oper_type']
+    0216 [line  185] 0x024B8017  EQ         A=0 B=R4 C=K[46]=8.0
+    0217 [line  185] 0x80058016  JMP        A=0 sBx=23
+    0218 [line  186] 0x00C1C106  GETTABLE   R4 = R1[K[7]='oper_retcode']
+    0219 [line  186] 0x02420017  EQ         A=0 B=R4 C=K[8]=0.0
+    0220 [line  186] 0x8004C016  JMP        A=0 sBx=20
+    0221 [line  187] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='FlashTipMan'
+    0222 [line  187] 0x02428106  GETTABLE   R4 = R4[K[10]='FlashTip']
+    0223 [line  187] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='StringTable'
+    0224 [line  187] 0x02C30146  GETTABLE   R5 = R5[K[12]='Get']
+    0225 [line  187] 0x000BC181  LOADK      R6 = K[47]=17780.0
+    0226 [line  187] 0x0100015C  CALL       A=5 B=2 C=0
+    0227 [line  187] 0x0000411C  CALL       A=4 B=0 C=1
+    0228 [line  188] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0229 [line  188] 0x00048141  LOADK      R5 = K[18]='Event.PetEvent'
+    0230 [line  188] 0x0100811C  CALL       A=4 B=2 C=2
+    0231 [line  188] 0x024C0106  GETTABLE   R4 = R4[K[48]='PetLongGuEvt']
+    0232 [line  190] 0x02000140  MOVE       R5 = R4
+    0233 [line  190] 0x0080815C  CALL       A=5 B=1 C=2
+    0234 [line  191] 0x00C44186  GETTABLE   R6 = R1[K[17]='result_param1']
+    0235 [line  191] 0x8A018149  SETTABLE   R5[K[20]='pet_pos'] = R6
+    0236 [line  192] 0x01C54186  GETTABLE   R6 = R3[K[21]='EventManager']
+    0237 [line  192] 0x0345818B  SELF       A=6 B=6 C=278 Bx=3350
+    0238 [line  192] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0239 [line  192] 0x02800240  MOVE       R9 = R5
+    0240 [line  192] 0x0200419C  CALL       A=6 B=4 C=1
+    0241 [line  195] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 241
+    'msg': 0 -> 241
+    'ECPetData': 3 -> 241
+    'ECGame': 10 -> 241
+    'cur_pet_tid': 27 -> 69
+    'petdata': 27 -> 69
+    'PetDisappearEvt': 36 -> 69
+    'event': 38 -> 69
+    'PetSummonEvt': 55 -> 69
+    'event': 57 -> 69
+    'unlockNum': 96 -> 154
+    'skillNum': 96 -> 154
+    'Task': 101 -> 110
+    'ECAsyncTask': 104 -> 110
+    'task': 108 -> 110
+    'cur_pet_tid': 115 -> 154
+    'petdata': 115 -> 154
+    'PetDisappearEvt': 124 -> 154
+    'event': 126 -> 154
+    'PetSummonEvt': 143 -> 154
+    'event2': 145 -> 154
+    'PetStarupEvt': 165 -> 180
+    'event': 167 -> 180
+    'PetWashingEvt': 191 -> 200
+    'event': 193 -> 200
+    'PetLongGuEvt': 232 -> 241
+    'event': 234 -> 241
+
+        ============================================================
+        PROTO ROOT.2.0
+        Offset : 0x1669
+        Source : '@lua\\pb\\pb_pet_info.lua'
+        Lines  : 120 - 126
+        Params : 0
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Instance'
+        K[001] = 'GetPetDataAt'
+        K[002] = 'result_param1'
+        K[003] = 'require'
+        K[004] = 'GUI.ECPanelPetCombineResult'
+        K[005] = 'Popup'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  121] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  121] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+        0002 [line  121] 0x0080801C  CALL       A=0 B=1 C=2
+        0003 [line  121] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+        0004 [line  121] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0005 [line  121] 0x01408086  GETTABLE   R2 = R2[K[2]='result_param1']
+        0006 [line  121] 0x0180801C  CALL       A=0 B=3 C=2
+        0007 [line  122] 0x0000001A  TEST       A=0 B=0 C=0
+        0008 [line  122] 0x80020016  JMP        A=0 sBx=9
+        0009 [line  123] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='require'
+        0010 [line  123] 0x00010081  LOADK      R2 = K[4]='GUI.ECPanelPetCombineResult'
+        0011 [line  123] 0x0100805C  CALL       A=1 B=2 C=2
+        0012 [line  124] 0x00C00086  GETTABLE   R2 = R1[K[0]='Instance']
+        0013 [line  124] 0x0080809C  CALL       A=2 B=1 C=2
+        0014 [line  124] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+        0015 [line  124] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+        0016 [line  124] 0x02408106  GETTABLE   R4 = R4[K[2]='result_param1']
+        0017 [line  124] 0x0180409C  CALL       A=2 B=3 C=1
+        0018 [line  126] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'old_pet': 7 -> 18
+        'ECPanelPetCombineResult': 12 -> 18
+
+        ============================================================
+        PROTO ROOT.2.1
+        Offset : 0x17E3
+        Source : '@lua\\pb\\pb_pet_info.lua'
+        Lines  : 133 - 140
+        Params : 2
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 2.0
+        K[001] = 'FlashTipMan'
+        K[002] = 'FlashTip'
+        K[003] = 'StringTable'
+        K[004] = 'Get'
+        K[005] = 17743.0
+        K[006] = 'pet_sklls'
+        K[007] = 'completeSub'
+        K[008] = 'WaitForTime'
+        K[009] = 5.0
+        K[010] = 'end'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  134] 0x00C00019  LE         A=0 B=R1 C=K[0]=2.0
+        0001 [line  134] 0x8003C016  JMP        A=0 sBx=16
+        0002 [line  135] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='FlashTipMan'
+        0003 [line  135] 0x01408086  GETTABLE   R2 = R2[K[2]='FlashTip']
+        0004 [line  135] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='StringTable'
+        0005 [line  135] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Get']
+        0006 [line  135] 0x00014101  LOADK      R4 = K[5]=17743.0
+        0007 [line  135] 0x010080DC  CALL       A=3 B=2 C=2
+        0008 [line  135] 0x00018101  LOADK      R4 = K[6]='pet_sklls'
+        0009 [line  135] 0x0180409C  CALL       A=2 B=3 C=1
+        0010 [line  136] 0x0041C08B  SELF       A=2 B=0 C=263 Bx=263
+        0011 [line  136] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+        0012 [line  136] 0x02420106  GETTABLE   R4 = R4[K[8]='WaitForTime']
+        0013 [line  136] 0x00024141  LOADK      R5 = K[9]=5.0
+        0014 [line  136] 0x0100011C  CALL       A=4 B=2 C=0
+        0015 [line  136] 0x0000009D  TAILCALL   A=2 B=0 C=0
+        0016 [line  136] 0x0000009E  RETURN     A=2 B=0 C=0
+        0017 [line  136] 0x80004016  JMP        A=0 sBx=2
+        0018 [line  138] 0x00028081  LOADK      R2 = K[10]='end'
+        0019 [line  138] 0x0100009E  RETURN     A=2 B=2 C=0
+        0020 [line  140] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'task': 0 -> 20
+        'step': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x1F85
+    Source : '@lua\\pb\\pb_pet_info.lua'
+    Lines  : 201 - 219
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.ECPetData'
+    K[002] = 'LogWarn'
+    K[003] = 'on_pet_equip_soul_result'
+    K[004] = 'result'
+    K[005] = 0.0
+    K[006] = 'Main.ECGame'
+    K[007] = 'Event.PetEvent'
+    K[008] = 'PetEquipSoulEvt'
+    K[009] = 'pet_pos'
+    K[010] = 'Instance'
+    K[011] = 'PetLocationToIndex'
+    K[012] = 'pet_location'
+    K[013] = 'equip_index'
+    K[014] = 'property_index'
+    K[015] = 'level'
+    K[016] = 'soulvalue_add'
+    K[017] = 'exp_change'
+    K[018] = 'EventManager'
+    K[019] = 'raiseEvent'
+    K[020] = 'FlashTipMan'
+    K[021] = 'FlashTip'
+    K[022] = 'StringTable'
+    K[023] = 'Get'
+    K[024] = 17748.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  202] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line  202] 0x000040C1  LOADK      R3 = K[1]='Data.ECPetData'
+    0002 [line  202] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line  203] 0x014080C6  GETTABLE   R3 = R2[K[2]='LogWarn']
+    0004 [line  203] 0x0000C101  LOADK      R4 = K[3]='on_pet_equip_soul_result'
+    0005 [line  203] 0x00800140  MOVE       R5 = R1
+    0006 [line  203] 0x018040DC  CALL       A=3 B=3 C=1
+    0007 [line  204] 0x00C100C6  GETTABLE   R3 = R1[K[4]='result']
+    0008 [line  204] 0x01C14017  EQ         A=0 B=R3 C=K[5]=0.0
+    0009 [line  204] 0x80070016  JMP        A=0 sBx=29
+    0010 [line  205] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0011 [line  205] 0x00018101  LOADK      R4 = K[6]='Main.ECGame'
+    0012 [line  205] 0x010080DC  CALL       A=3 B=2 C=2
+    0013 [line  206] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0014 [line  206] 0x0001C141  LOADK      R5 = K[7]='Event.PetEvent'
+    0015 [line  206] 0x0100811C  CALL       A=4 B=2 C=2
+    0016 [line  206] 0x02420106  GETTABLE   R4 = R4[K[8]='PetEquipSoulEvt']
+    0017 [line  207] 0x02000140  MOVE       R5 = R4
+    0018 [line  207] 0x0080815C  CALL       A=5 B=1 C=2
+    0019 [line  208] 0x01428186  GETTABLE   R6 = R2[K[10]='Instance']
+    0020 [line  208] 0x0080819C  CALL       A=6 B=1 C=2
+    0021 [line  208] 0x0342C18B  SELF       A=6 B=6 C=267 Bx=3339
+    0022 [line  208] 0x00C30206  GETTABLE   R8 = R1[K[12]='pet_location']
+    0023 [line  208] 0x0180819C  CALL       A=6 B=3 C=2
+    0024 [line  208] 0x84818149  SETTABLE   R5[K[9]='pet_pos'] = R6
+    0025 [line  209] 0x00C34186  GETTABLE   R6 = R1[K[13]='equip_index']
+    0026 [line  209] 0x86818149  SETTABLE   R5[K[13]='equip_index'] = R6
+    0027 [line  210] 0x00C38186  GETTABLE   R6 = R1[K[14]='property_index']
+    0028 [line  210] 0x87018149  SETTABLE   R5[K[14]='property_index'] = R6
+    0029 [line  212] 0x00C3C186  GETTABLE   R6 = R1[K[15]='level']
+    0030 [line  212] 0x87818149  SETTABLE   R5[K[15]='level'] = R6
+    0031 [line  213] 0x00C44186  GETTABLE   R6 = R1[K[17]='exp_change']
+    0032 [line  213] 0x88018149  SETTABLE   R5[K[16]='soulvalue_add'] = R6
+    0033 [line  215] 0x01C48186  GETTABLE   R6 = R3[K[18]='EventManager']
+    0034 [line  215] 0x0344C18B  SELF       A=6 B=6 C=275 Bx=3347
+    0035 [line  215] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0036 [line  215] 0x02800240  MOVE       R9 = R5
+    0037 [line  215] 0x0200419C  CALL       A=6 B=4 C=1
+    0038 [line  215] 0x80018016  JMP        A=0 sBx=7
+    0039 [line  217] 0x000500C5  GETGLOBAL  R3 = GLOBAL K[20]='FlashTipMan'
+    0040 [line  217] 0x01C540C6  GETTABLE   R3 = R3[K[21]='FlashTip']
+    0041 [line  217] 0x00058105  GETGLOBAL  R4 = GLOBAL K[22]='StringTable'
+    0042 [line  217] 0x0245C106  GETTABLE   R4 = R4[K[23]='Get']
+    0043 [line  217] 0x00060141  LOADK      R5 = K[24]=17748.0
+    0044 [line  217] 0x0100011C  CALL       A=4 B=2 C=0
+    0045 [line  217] 0x000040DC  CALL       A=3 B=0 C=1
+    0046 [line  219] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 46
+    'msg': 0 -> 46
+    'ECPetData': 3 -> 46
+    'ECGame': 13 -> 38
+    'PetEquipSoulEvt': 17 -> 38
+    'event2': 19 -> 38

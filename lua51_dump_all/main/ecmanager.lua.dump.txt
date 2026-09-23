@@ -1,0 +1,692 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\main\ecmanager.lua
+SIZE: 5978
+PARSED: 5978
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\main\\ecmanager.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 8
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Object.ECObject'
+K[003] = 'Class'
+K[004] = 'ECManager'
+K[005] = 'define'
+K[006] = 'const'
+K[007] = 'table'
+K[008] = 'EC_MAN_ENUM'
+K[009] = 'MAN_PLAYER'
+K[010] = 1.0
+K[011] = 'MAN_NPC'
+K[012] = 2.0
+K[013] = 'MAN_MATTER'
+K[014] = 3.0
+K[015] = 'MAN_SUBOBJECT'
+K[016] = 4.0
+K[017] = 'field'
+K[018] = 'number'
+K[019] = 'm_Type'
+K[020] = 0.0
+K[021] = 'm_ObjMap'
+K[022] = None
+K[023] = 'm_SortList'
+K[024] = 'm_TempSortList'
+K[025] = 'userdata'
+K[026] = 'm_Qteobj'
+K[027] = 'm_objQTE'
+K[028] = 'boolean'
+K[029] = 'm_QuickSort'
+K[030] = False
+K[031] = 'method'
+K[032] = 'Init'
+K[033] = '=>'
+K[034] = 'GetObjCount'
+K[035] = 'virtual'
+K[036] = 'OnObjectLeave'
+K[037] = 'string'
+K[038] = 'OnCmd_ObjectLeaveScene'
+K[039] = 'ReleaseObjAfterQte'
+K[040] = 'Release'
+K[041] = 'ClearTempSortList'
+K[042] = 'SortByDistToHost'
+K[043] = 'EnablePate'
+K[044] = 'RemoveObj'
+K[045] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    3] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    3] 0x00008081  LOADK      R2 = K[2]='Object.ECObject'
+0005 [line    3] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    5] 0x0040C086  GETTABLE   R2 = R0[K[3]='Class']
+0007 [line    5] 0x000100C1  LOADK      R3 = K[4]='ECManager'
+0008 [line    5] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    6] 0x014140C6  GETTABLE   R3 = R2[K[5]='define']
+0010 [line    8] 0x01C18106  GETTABLE   R4 = R3[K[6]='const']
+0011 [line    8] 0x0001C141  LOADK      R5 = K[7]='table'
+0012 [line    8] 0x0100811C  CALL       A=4 B=2 C=2
+0013 [line    8] 0x0001014A  NEWTABLE   A=5 B=0 C=4 Bx=4
+0014 [line    9] 0x84C28149  SETTABLE   R5[K[9]='MAN_PLAYER'] = K[10]=1.0
+0015 [line   10] 0x85C30149  SETTABLE   R5[K[11]='MAN_NPC'] = K[12]=2.0
+0016 [line   11] 0x86C38149  SETTABLE   R5[K[13]='MAN_MATTER'] = K[14]=3.0
+0017 [line   12] 0x87C40149  SETTABLE   R5[K[15]='MAN_SUBOBJECT'] = K[16]=4.0
+0018 [line   13] 0x84014109  SETTABLE   R4[K[8]='EC_MAN_ENUM'] = R5
+0019 [line   15] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0020 [line   15] 0x00048141  LOADK      R5 = K[18]='number'
+0021 [line   15] 0x0100811C  CALL       A=4 B=2 C=2
+0022 [line   15] 0x89C50109  SETTABLE   R4[K[19]='m_Type'] = K[20]=0.0
+0023 [line   16] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0024 [line   16] 0x0001C141  LOADK      R5 = K[7]='table'
+0025 [line   16] 0x0100811C  CALL       A=4 B=2 C=2
+0026 [line   16] 0x8AC58109  SETTABLE   R4[K[21]='m_ObjMap'] = K[22]=None
+0027 [line   17] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0028 [line   17] 0x0001C141  LOADK      R5 = K[7]='table'
+0029 [line   17] 0x0100811C  CALL       A=4 B=2 C=2
+0030 [line   17] 0x8BC58109  SETTABLE   R4[K[23]='m_SortList'] = K[22]=None
+0031 [line   18] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0032 [line   18] 0x0001C141  LOADK      R5 = K[7]='table'
+0033 [line   18] 0x0100811C  CALL       A=4 B=2 C=2
+0034 [line   18] 0x8C458109  SETTABLE   R4[K[24]='m_TempSortList'] = K[22]=None
+0035 [line   19] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0036 [line   19] 0x00064141  LOADK      R5 = K[25]='userdata'
+0037 [line   19] 0x0100811C  CALL       A=4 B=2 C=2
+0038 [line   19] 0x8D458109  SETTABLE   R4[K[26]='m_Qteobj'] = K[22]=None
+0039 [line   20] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0040 [line   20] 0x00800140  MOVE       R5 = R1
+0041 [line   20] 0x0100811C  CALL       A=4 B=2 C=2
+0042 [line   20] 0x8DC58109  SETTABLE   R4[K[27]='m_objQTE'] = K[22]=None
+0043 [line   21] 0x01C44106  GETTABLE   R4 = R3[K[17]='field']
+0044 [line   21] 0x00070141  LOADK      R5 = K[28]='boolean'
+0045 [line   21] 0x0100811C  CALL       A=4 B=2 C=2
+0046 [line   21] 0x8EC78109  SETTABLE   R4[K[29]='m_QuickSort'] = K[30]=False
+0047 [line   23] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0048 [line   23] 0x00048141  LOADK      R5 = K[18]='number'
+0049 [line   23] 0x0100811C  CALL       A=4 B=2 C=2
+0050 [line   28] 0x00000164  CLOSURE    R5 = PROTO[0]
+0051 [line   28] 0x90014109  SETTABLE   R4[K[32]='Init'] = R5
+0052 [line   30] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0053 [line   30] 0x00084141  LOADK      R5 = K[33]='=>'
+0054 [line   30] 0x00048181  LOADK      R6 = K[18]='number'
+0055 [line   30] 0x0180811C  CALL       A=4 B=3 C=2
+0056 [line   37] 0x00004164  CLOSURE    R5 = PROTO[1]
+0057 [line   37] 0x91014109  SETTABLE   R4[K[34]='GetObjCount'] = R5
+0058 [line   39] 0x01C8C106  GETTABLE   R4 = R3[K[35]='virtual']
+0059 [line   39] 0x00800140  MOVE       R5 = R1
+0060 [line   39] 0x0100811C  CALL       A=4 B=2 C=2
+0061 [line   40] 0x00008164  CLOSURE    R5 = PROTO[2]
+0062 [line   40] 0x92014109  SETTABLE   R4[K[36]='OnObjectLeave'] = R5
+0063 [line   42] 0x01C8C106  GETTABLE   R4 = R3[K[35]='virtual']
+0064 [line   42] 0x00094141  LOADK      R5 = K[37]='string'
+0065 [line   42] 0x00070181  LOADK      R6 = K[28]='boolean'
+0066 [line   42] 0x0180811C  CALL       A=4 B=3 C=2
+0067 [line   62] 0x0000C164  CLOSURE    R5 = PROTO[3]
+0068 [line   62] 0x93014109  SETTABLE   R4[K[38]='OnCmd_ObjectLeaveScene'] = R5
+0069 [line   64] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0070 [line   64] 0x0080811C  CALL       A=4 B=1 C=2
+0071 [line   82] 0x00010164  CLOSURE    R5 = PROTO[4]
+0072 [line   82] 0x93814109  SETTABLE   R4[K[39]='ReleaseObjAfterQte'] = R5
+0073 [line   84] 0x01C8C106  GETTABLE   R4 = R3[K[35]='virtual']
+0074 [line   84] 0x00070141  LOADK      R5 = K[28]='boolean'
+0075 [line   84] 0x0100811C  CALL       A=4 B=2 C=2
+0076 [line   92] 0x00014164  CLOSURE    R5 = PROTO[5]
+0077 [line   92] 0x94014109  SETTABLE   R4[K[40]='Release'] = R5
+0078 [line   94] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0079 [line   94] 0x0080811C  CALL       A=4 B=1 C=2
+0080 [line   99] 0x00018164  CLOSURE    R5 = PROTO[6]
+0081 [line   99] 0x94814109  SETTABLE   R4[K[41]='ClearTempSortList'] = R5
+0082 [line  102] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0083 [line  102] 0x00070141  LOADK      R5 = K[28]='boolean'
+0084 [line  102] 0x00084181  LOADK      R6 = K[33]='=>'
+0085 [line  102] 0x0001C1C1  LOADK      R7 = K[7]='table'
+0086 [line  102] 0x0200811C  CALL       A=4 B=4 C=2
+0087 [line  148] 0x0001C164  CLOSURE    R5 = PROTO[7]
+0088 [line  148] 0x95014109  SETTABLE   R4[K[42]='SortByDistToHost'] = R5
+0089 [line  150] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0090 [line  150] 0x00070141  LOADK      R5 = K[28]='boolean'
+0091 [line  150] 0x0100811C  CALL       A=4 B=2 C=2
+0092 [line  155] 0x00020164  CLOSURE    R5 = PROTO[8]
+0093 [line  155] 0x95814109  SETTABLE   R4[K[43]='EnablePate'] = R5
+0094 [line  157] 0x01C7C106  GETTABLE   R4 = R3[K[31]='method']
+0095 [line  157] 0x00094141  LOADK      R5 = K[37]='string'
+0096 [line  157] 0x00084181  LOADK      R6 = K[33]='=>'
+0097 [line  157] 0x008001C0  MOVE       R7 = R1
+0098 [line  157] 0x0200811C  CALL       A=4 B=4 C=2
+0099 [line  162] 0x00024164  CLOSURE    R5 = PROTO[9]
+0100 [line  162] 0x96014109  SETTABLE   R4[K[44]='RemoveObj'] = R5
+0101 [line  164] 0x014B4106  GETTABLE   R4 = R2[K[45]='Commit']
+0102 [line  164] 0x0080411C  CALL       A=4 B=1 C=1
+0103 [line  166] 0x0100009E  RETURN     A=2 B=2 C=0
+0104 [line  166] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 104
+'ECObject': 6 -> 104
+'ECManager': 9 -> 104
+'def': 10 -> 104
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x45F
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 23 - 28
+    Params : 2
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Type'
+    K[001] = 'm_ObjMap'
+    K[002] = 'm_SortList'
+    K[003] = 'm_TempSortList'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   24] 0x80004009  SETTABLE   R0[K[0]='m_Type'] = R1
+    0001 [line   25] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0002 [line   25] 0x80808009  SETTABLE   R0[K[1]='m_ObjMap'] = R2
+    0003 [line   26] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0004 [line   26] 0x81008009  SETTABLE   R0[K[2]='m_SortList'] = R2
+    0005 [line   27] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0006 [line   27] 0x81808009  SETTABLE   R0[K[3]='m_TempSortList'] = R2
+    0007 [line   28] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7
+    'type': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x527
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 30 - 37
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 'm_ObjMap'
+    K[002] = 'pairs'
+    K[003] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   31] 0x00000041  LOADK      R1 = K[0]=0.0
+    0001 [line   32] 0x00404086  GETTABLE   R2 = R0[K[1]='m_ObjMap']
+    0002 [line   33] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='pairs'
+    0003 [line   33] 0x01000100  MOVE       R4 = R2
+    0004 [line   33] 0x010100DC  CALL       A=3 B=2 C=4
+    0005 [line   33] 0x80000016  JMP        A=0 sBx=1
+    0006 [line   34] 0x00C0C04C  ADD        A=1 B=R1 C=K[3]=1.0
+    0007 [line   33] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0008 [line   34] 0x7FFF0016  JMP        A=0 sBx=-3
+    0009 [line   36] 0x0100005E  RETURN     A=1 B=2 C=0
+    0010 [line   37] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    'count': 1 -> 10
+    'objmap': 2 -> 10
+    '(for generator)': 5 -> 9
+    '(for state)': 5 -> 9
+    '(for control)': 5 -> 9
+    'k': 6 -> 7
+    'v': 6 -> 7
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x672
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 39 - 40
+    Params : 2
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   40] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 0
+    'obj': 0 -> 0
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x6C3
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 42 - 62
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_ObjMap'
+    K[001] = None
+    K[002] = 'OnObjectLeave'
+    K[003] = 'Release'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   43] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_ObjMap']
+    0001 [line   44] 0x01804106  GETTABLE   R4 = R3[R1]
+    0002 [line   46] 0x0000011A  TEST       A=4 B=0 C=0
+    0003 [line   46] 0x80014016  JMP        A=0 sBx=6
+    0004 [line   47] 0x00C040C9  SETTABLE   R3[R1] = K[1]=None
+    0005 [line   48] 0x0040814B  SELF       A=5 B=0 C=258 Bx=258
+    0006 [line   48] 0x020001C0  MOVE       R7 = R4
+    0007 [line   48] 0x0180415C  CALL       A=5 B=3 C=1
+    0008 [line   49] 0x0240C14B  SELF       A=5 B=4 C=259 Bx=2307
+    0009 [line   49] 0x0100415C  CALL       A=5 B=2 C=1
+    0010 [line   62] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    'id': 0 -> 10
+    'outofsight': 0 -> 10
+    'objmap': 1 -> 10
+    'obj': 2 -> 10
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x7CC
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 64 - 82
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Qteobj'
+    K[001] = 'm_objQTE'
+    K[002] = 'm_ECModel'
+    K[003] = 'Play'
+    K[004] = 'AnimationNameTable'
+    K[005] = 'NPC_Die'
+    K[006] = 'require'
+    K[007] = 'Main.ECGame'
+    K[008] = 'Instance'
+    K[009] = 'm_HostPlayer'
+    K[010] = 'TargetID'
+    K[011] = 'ID'
+    K[012] = 'Event.TargetChangeEvent'
+    K[013] = 'ZeroUInt64'
+    K[014] = 'EventManager'
+    K[015] = 'raiseEvent'
+    K[016] = 'Release'
+    K[017] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line   65] 0x00400046  GETTABLE   R1 = R0[K[0]='m_Qteobj']
+    0001 [line   65] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line   65] 0x80090016  JMP        A=0 sBx=37
+    0003 [line   65] 0x00404046  GETTABLE   R1 = R0[K[1]='m_objQTE']
+    0004 [line   65] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line   65] 0x80084016  JMP        A=0 sBx=34
+    0006 [line   67] 0x00404046  GETTABLE   R1 = R0[K[1]='m_objQTE']
+    0007 [line   67] 0x00C08046  GETTABLE   R1 = R1[K[2]='m_ECModel']
+    0008 [line   68] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0009 [line   68] 0x00010105  GETGLOBAL  R4 = GLOBAL K[4]='AnimationNameTable'
+    0010 [line   68] 0x02414106  GETTABLE   R4 = R4[K[5]='NPC_Die']
+    0011 [line   68] 0x0180409C  CALL       A=2 B=3 C=1
+    0012 [line   69] 0x00018085  GETGLOBAL  R2 = GLOBAL K[6]='require'
+    0013 [line   69] 0x0001C0C1  LOADK      R3 = K[7]='Main.ECGame'
+    0014 [line   69] 0x0100809C  CALL       A=2 B=2 C=2
+    0015 [line   70] 0x014200C6  GETTABLE   R3 = R2[K[8]='Instance']
+    0016 [line   70] 0x008080DC  CALL       A=3 B=1 C=2
+    0017 [line   70] 0x01C240C6  GETTABLE   R3 = R3[K[9]='m_HostPlayer']
+    0018 [line   70] 0x01C280C6  GETTABLE   R3 = R3[K[10]='TargetID']
+    0019 [line   71] 0x00404106  GETTABLE   R4 = R0[K[1]='m_objQTE']
+    0020 [line   71] 0x0242C106  GETTABLE   R4 = R4[K[11]='ID']
+    0021 [line   71] 0x01810017  EQ         A=0 B=R3 C=R4
+    0022 [line   71] 0x8002C016  JMP        A=0 sBx=12
+    0023 [line   72] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='require'
+    0024 [line   72] 0x00030141  LOADK      R5 = K[12]='Event.TargetChangeEvent'
+    0025 [line   72] 0x0100811C  CALL       A=4 B=2 C=2
+    0026 [line   73] 0x02000140  MOVE       R5 = R4
+    0027 [line   73] 0x0080815C  CALL       A=5 B=1 C=2
+    0028 [line   74] 0x00034185  GETGLOBAL  R6 = GLOBAL K[13]='ZeroUInt64'
+    0029 [line   74] 0x85018149  SETTABLE   R5[K[10]='TargetID'] = R6
+    0030 [line   75] 0x01438186  GETTABLE   R6 = R2[K[14]='EventManager']
+    0031 [line   75] 0x0343C18B  SELF       A=6 B=6 C=271 Bx=3343
+    0032 [line   75] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0033 [line   75] 0x02800240  MOVE       R9 = R5
+    0034 [line   75] 0x0200419C  CALL       A=6 B=4 C=1
+    0035 [line   78] 0x00404106  GETTABLE   R4 = R0[K[1]='m_objQTE']
+    0036 [line   78] 0x0244010B  SELF       A=4 B=4 C=272 Bx=2320
+    0037 [line   78] 0x0100411C  CALL       A=4 B=2 C=1
+    0038 [line   79] 0x80C44009  SETTABLE   R0[K[1]='m_objQTE'] = K[17]=None
+    0039 [line   80] 0x80444009  SETTABLE   R0[K[0]='m_Qteobj'] = K[17]=None
+    0040 [line   82] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 40
+    'm': 8 -> 40
+    'ECGame': 15 -> 40
+    'cur_target_id': 19 -> 40
+    'TargetChangeEvent': 26 -> 35
+    'event': 28 -> 35
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xAC3
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 84 - 92
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_ObjMap'
+    K[001] = 'pairs'
+    K[002] = 'Release'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   85] 0x00400086  GETTABLE   R2 = R0[K[0]='m_ObjMap']
+    0001 [line   87] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='pairs'
+    0002 [line   87] 0x01000100  MOVE       R4 = R2
+    0003 [line   87] 0x010100DC  CALL       A=3 B=2 C=4
+    0004 [line   87] 0x80004016  JMP        A=0 sBx=2
+    0005 [line   88] 0x03C0820B  SELF       A=8 B=7 C=258 Bx=3842
+    0006 [line   88] 0x0100421C  CALL       A=8 B=2 C=1
+    0007 [line   87] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0008 [line   88] 0x7FFEC016  JMP        A=0 sBx=-4
+    0009 [line   91] 0x000000CA  NEWTABLE   A=3 B=0 C=0 Bx=0
+    0010 [line   91] 0x8000C009  SETTABLE   R0[K[0]='m_ObjMap'] = R3
+    0011 [line   92] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 11
+    'bReleaseScene': 0 -> 11
+    'objmap': 1 -> 11
+    '(for generator)': 4 -> 9
+    '(for state)': 4 -> 9
+    '(for control)': 4 -> 9
+    'k': 5 -> 7
+    'v': 5 -> 7
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xC19
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 94 - 99
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_TempSortList'
+    K[001] = 1.0
+    K[002] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line   95] 0x00400046  GETTABLE   R1 = R0[K[0]='m_TempSortList']
+    0001 [line   96] 0x00004081  LOADK      R2 = K[1]=1.0
+    0002 [line   96] 0x008000D4  LEN        A=3 B=1 C=0 Bx=512
+    0003 [line   96] 0x00004101  LOADK      R4 = K[1]=1.0
+    0004 [line   96] 0x800000A0  FORPREP    A=2 sBx=1
+    0005 [line   97] 0x02C08049  SETTABLE   R1[R5] = K[2]=False
+    0006 [line   96] 0x7FFF409F  FORLOOP    A=2 sBx=-2
+    0007 [line   99] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7
+    'ls': 1 -> 7
+    '(for index)': 4 -> 7
+    '(for limit)': 4 -> 7
+    '(for step)': 4 -> 7
+    'i': 5 -> 6
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0xD15
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 102 - 148
+    Params : 2
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_TempSortList'
+    K[001] = 0.0
+    K[002] = 'm_ObjMap'
+    K[003] = 'pairs'
+    K[004] = 'm_bReady'
+    K[005] = 1.0
+    K[006] = -1.0
+    K[007] = None
+    K[008] = 'm_QuickSort'
+    K[009] = 'table'
+    K[010] = 'sort'
+    K[011] = 'm_SortList'
+    K[012] = 'ID'
+    K[013] = 'ClearTempSortList'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  103] 0x00400086  GETTABLE   R2 = R0[K[0]='m_TempSortList']
+    0001 [line  104] 0x010000D4  LEN        A=3 B=2 C=0 Bx=1024
+    0002 [line  105] 0x00004101  LOADK      R4 = K[1]=0.0
+    0003 [line  106] 0x00408146  GETTABLE   R5 = R0[K[2]='m_ObjMap']
+    0004 [line  107] 0x0000C185  GETGLOBAL  R6 = GLOBAL K[3]='pairs'
+    0005 [line  107] 0x028001C0  MOVE       R7 = R5
+    0006 [line  107] 0x0101019C  CALL       A=6 B=2 C=4
+    0007 [line  107] 0x80010016  JMP        A=0 sBx=5
+    0008 [line  108] 0x054102C6  GETTABLE   R11 = R10[K[4]='m_bReady']
+    0009 [line  108] 0x000002DA  TEST       A=11 B=0 C=0
+    0010 [line  108] 0x80004016  JMP        A=0 sBx=2
+    0011 [line  109] 0x0241410C  ADD        A=4 B=R4 C=K[5]=1.0
+    0012 [line  110] 0x02028089  SETTABLE   R2[R4] = R10
+    0013 [line  107] 0x000081A1  TFORLOOP   A=6 B=0 C=2
+    0014 [line  111] 0x7FFE0016  JMP        A=0 sBx=-7
+    0015 [line  114] 0x01800180  MOVE       R6 = R3
+    0016 [line  114] 0x024141CC  ADD        A=7 B=R4 C=K[5]=1.0
+    0017 [line  114] 0x00018201  LOADK      R8 = K[6]=-1.0
+    0018 [line  114] 0x800001A0  FORPREP    A=6 sBx=1
+    0019 [line  115] 0x04C1C089  SETTABLE   R2[R9] = K[7]=None
+    0020 [line  114] 0x7FFF419F  FORLOOP    A=6 sBx=-2
+    0021 [line  118] 0x00420186  GETTABLE   R6 = R0[K[8]='m_QuickSort']
+    0022 [line  118] 0x0000019A  TEST       A=6 B=0 C=0
+    0023 [line  118] 0x80018016  JMP        A=0 sBx=7
+    0024 [line  121] 0x000001A4  CLOSURE    R6 = PROTO[0]
+    0025 [line  122] 0x000241C5  GETGLOBAL  R7 = GLOBAL K[9]='table'
+    0026 [line  122] 0x03C281C6  GETTABLE   R7 = R7[K[10]='sort']
+    0027 [line  122] 0x01000200  MOVE       R8 = R2
+    0028 [line  122] 0x03000240  MOVE       R9 = R6
+    0029 [line  122] 0x018041DC  CALL       A=7 B=3 C=1
+    0030 [line  122] 0x80014016  JMP        A=0 sBx=6
+    0031 [line  126] 0x000041A4  CLOSURE    R6 = PROTO[1]
+    0032 [line  127] 0x000241C5  GETGLOBAL  R7 = GLOBAL K[9]='table'
+    0033 [line  127] 0x03C281C6  GETTABLE   R7 = R7[K[10]='sort']
+    0034 [line  127] 0x01000200  MOVE       R8 = R2
+    0035 [line  127] 0x03000240  MOVE       R9 = R6
+    0036 [line  127] 0x018041DC  CALL       A=7 B=3 C=1
+    0037 [line  130] 0x010000D4  LEN        A=3 B=2 C=0 Bx=1024
+    0038 [line  131] 0x0042C186  GETTABLE   R6 = R0[K[11]='m_SortList']
+    0039 [line  132] 0x030001D4  LEN        A=7 B=6 C=0 Bx=3072
+    0040 [line  134] 0x00014201  LOADK      R8 = K[5]=1.0
+    0041 [line  134] 0x01800240  MOVE       R9 = R3
+    0042 [line  134] 0x00014281  LOADK      R10 = K[5]=1.0
+    0043 [line  134] 0x80008220  FORPREP    A=8 sBx=3
+    0044 [line  135] 0x0102C306  GETTABLE   R12 = R2[R11]
+    0045 [line  135] 0x06430306  GETTABLE   R12 = R12[K[12]='ID']
+    0046 [line  135] 0x05830189  SETTABLE   R6[R11] = R12
+    0047 [line  134] 0x7FFEC21F  FORLOOP    A=8 sBx=-4
+    0048 [line  138] 0x03800200  MOVE       R8 = R7
+    0049 [line  138] 0x01C1424C  ADD        A=9 B=R3 C=K[5]=1.0
+    0050 [line  138] 0x00018281  LOADK      R10 = K[6]=-1.0
+    0051 [line  138] 0x80000220  FORPREP    A=8 sBx=1
+    0052 [line  139] 0x05C1C189  SETTABLE   R6[R11] = K[7]=None
+    0053 [line  138] 0x7FFF421F  FORLOOP    A=8 sBx=-2
+    0054 [line  142] 0x0000005A  TEST       A=1 B=0 C=0
+    0055 [line  142] 0x80004016  JMP        A=0 sBx=2
+    0056 [line  143] 0x0100009E  RETURN     A=2 B=2 C=0
+    0057 [line  143] 0x8000C016  JMP        A=0 sBx=4
+    0058 [line  145] 0x0043420B  SELF       A=8 B=0 C=269 Bx=269
+    0059 [line  145] 0x0100421C  CALL       A=8 B=2 C=1
+    0060 [line  146] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0061 [line  146] 0x0100021E  RETURN     A=8 B=2 C=0
+    0062 [line  148] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 62
+    'is_ret_list': 0 -> 62
+    'ls': 1 -> 62
+    'tempcount': 2 -> 62
+    'objcount': 3 -> 62
+    'objmap': 4 -> 62
+    '(for generator)': 7 -> 15
+    '(for state)': 7 -> 15
+    '(for control)': 7 -> 15
+    'k': 8 -> 13
+    'v': 8 -> 13
+    '(for index)': 18 -> 21
+    '(for limit)': 18 -> 21
+    '(for step)': 18 -> 21
+    'i': 19 -> 20
+    'mycmpquick': 25 -> 30
+    'mycmp': 32 -> 37
+    'idls': 39 -> 62
+    'sortcount': 40 -> 62
+    '(for index)': 43 -> 48
+    '(for limit)': 43 -> 48
+    '(for step)': 43 -> 48
+    'i': 44 -> 47
+    '(for index)': 51 -> 54
+    '(for limit)': 51 -> 54
+    '(for step)': 51 -> 54
+    'i': 52 -> 53
+
+        ============================================================
+        PROTO ROOT.7.0
+        Offset : 0xED9
+        Source : '@lua\\main\\ecmanager.lua'
+        Lines  : 119 - 121
+        Params : 2
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_DistToHost'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  120] 0x00400086  GETTABLE   R2 = R0[K[0]='m_DistToHost']
+        0001 [line  120] 0x00C000C6  GETTABLE   R3 = R1[K[0]='m_DistToHost']
+        0002 [line  120] 0x0100C058  LT         A=1 B=R2 C=R3
+        0003 [line  120] 0x80000016  JMP        A=0 sBx=1
+        0004 [line  120] 0x00004082  LOADBOOL   A=2 B=0 C=1
+        0005 [line  120] 0x00800082  LOADBOOL   A=2 B=1 C=0
+        0006 [line  120] 0x0100009E  RETURN     A=2 B=2 C=0
+        0007 [line  121] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'v1': 0 -> 7
+        'v2': 0 -> 7
+
+        ============================================================
+        PROTO ROOT.7.1
+        Offset : 0xF71
+        Source : '@lua\\main\\ecmanager.lua'
+        Lines  : 124 - 126
+        Params : 2
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'GetDistToHost'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  125] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+        0001 [line  125] 0x0100809C  CALL       A=2 B=2 C=2
+        0002 [line  125] 0x00C000CB  SELF       A=3 B=1 C=256 Bx=768
+        0003 [line  125] 0x010080DC  CALL       A=3 B=2 C=2
+        0004 [line  125] 0x0100C058  LT         A=1 B=R2 C=R3
+        0005 [line  125] 0x80000016  JMP        A=0 sBx=1
+        0006 [line  125] 0x00004082  LOADBOOL   A=2 B=0 C=1
+        0007 [line  125] 0x00800082  LOADBOOL   A=2 B=1 C=0
+        0008 [line  125] 0x0100009E  RETURN     A=2 B=2 C=0
+        0009 [line  126] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'v1': 0 -> 9
+        'v2': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x1351
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 150 - 155
+    Params : 2
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_ObjMap'
+    K[001] = 'pairs'
+    K[002] = 'EnablePate'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  151] 0x00400086  GETTABLE   R2 = R0[K[0]='m_ObjMap']
+    0001 [line  152] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='pairs'
+    0002 [line  152] 0x01000100  MOVE       R4 = R2
+    0003 [line  152] 0x010100DC  CALL       A=3 B=2 C=4
+    0004 [line  152] 0x80008016  JMP        A=0 sBx=3
+    0005 [line  153] 0x03C0820B  SELF       A=8 B=7 C=258 Bx=3842
+    0006 [line  153] 0x00800280  MOVE       R10 = R1
+    0007 [line  153] 0x0180421C  CALL       A=8 B=3 C=1
+    0008 [line  152] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0009 [line  153] 0x7FFE8016  JMP        A=0 sBx=-5
+    0010 [line  155] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    'enable': 0 -> 10
+    'objmap': 1 -> 10
+    '(for generator)': 4 -> 10
+    '(for state)': 4 -> 10
+    '(for control)': 4 -> 10
+    'k': 5 -> 8
+    'v': 5 -> 8
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x149B
+    Source : '@lua\\main\\ecmanager.lua'
+    Lines  : 157 - 162
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_ObjMap'
+    K[001] = 'OnObjectLeave'
+    K[002] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line  158] 0x00400086  GETTABLE   R2 = R0[K[0]='m_ObjMap']
+    0001 [line  158] 0x01004086  GETTABLE   R2 = R2[R1]
+    0002 [line  159] 0x004040CB  SELF       A=3 B=0 C=257 Bx=257
+    0003 [line  159] 0x01000140  MOVE       R5 = R2
+    0004 [line  159] 0x018040DC  CALL       A=3 B=3 C=1
+    0005 [line  160] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_ObjMap']
+    0006 [line  160] 0x00C080C9  SETTABLE   R3[R1] = K[2]=None
+    0007 [line  161] 0x0100009E  RETURN     A=2 B=2 C=0
+    0008 [line  162] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 8
+    'id': 0 -> 8
+    'obj': 2 -> 8

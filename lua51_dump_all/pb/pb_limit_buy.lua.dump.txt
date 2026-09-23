@@ -1,0 +1,102 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_limit_buy.lua
+SIZE: 863
+PARSED: 863
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_limit_buy.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 5
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'AddHandler'
+K[003] = 'gp_limit_deals_operate_re'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line   16] 0x00000064  CLOSURE    R1 = PROTO[0]
+0004 [line   18] 0x00408086  GETTABLE   R2 = R0[K[2]='AddHandler']
+0005 [line   18] 0x0000C0C1  LOADK      R3 = K[3]='gp_limit_deals_operate_re'
+0006 [line   18] 0x00800100  MOVE       R4 = R1
+0007 [line   18] 0x0180409C  CALL       A=2 B=3 C=1
+0008 [line   18] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 8
+'on_limit_buy_operate_re': 4 -> 8
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xB3
+    Source : '@lua\\pb\\pb_limit_buy.lua'
+    Lines  : 3 - 16
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECSubPanelTimeLimitBuy'
+    K[002] = 'HandleMsg'
+    K[003] = 'Event.LimitBuyEvt'
+    K[004] = 'LimitBuyEvt'
+    K[005] = 'Main.ECGame'
+    K[006] = 'count'
+    K[007] = 'datas'
+    K[008] = 'data'
+    K[009] = 'EventManager'
+    K[010] = 'raiseEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line    6] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line    6] 0x000040C1  LOADK      R3 = K[1]='GUI.ECSubPanelTimeLimitBuy'
+    0002 [line    6] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line    7] 0x014080C6  GETTABLE   R3 = R2[K[2]='HandleMsg']
+    0004 [line    7] 0x00800100  MOVE       R4 = R1
+    0005 [line    7] 0x010040DC  CALL       A=3 B=2 C=1
+    0006 [line    9] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0007 [line    9] 0x0000C101  LOADK      R4 = K[3]='Event.LimitBuyEvt'
+    0008 [line    9] 0x010080DC  CALL       A=3 B=2 C=2
+    0009 [line    9] 0x01C100C6  GETTABLE   R3 = R3[K[4]='LimitBuyEvt']
+    0010 [line   10] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0011 [line   10] 0x00014141  LOADK      R5 = K[5]='Main.ECGame'
+    0012 [line   10] 0x0100811C  CALL       A=4 B=2 C=2
+    0013 [line   12] 0x01800140  MOVE       R5 = R3
+    0014 [line   12] 0x0080815C  CALL       A=5 B=1 C=2
+    0015 [line   13] 0x00C1C186  GETTABLE   R6 = R1[K[7]='datas']
+    0016 [line   13] 0x03420186  GETTABLE   R6 = R6[K[8]='data']
+    0017 [line   13] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0018 [line   13] 0x83018149  SETTABLE   R5[K[6]='count'] = R6
+    0019 [line   14] 0x00C1C186  GETTABLE   R6 = R1[K[7]='datas']
+    0020 [line   14] 0x03420186  GETTABLE   R6 = R6[K[8]='data']
+    0021 [line   14] 0x84018149  SETTABLE   R5[K[8]='data'] = R6
+    0022 [line   15] 0x02424186  GETTABLE   R6 = R4[K[9]='EventManager']
+    0023 [line   15] 0x0342818B  SELF       A=6 B=6 C=266 Bx=3338
+    0024 [line   15] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0025 [line   15] 0x02800240  MOVE       R9 = R5
+    0026 [line   15] 0x0200419C  CALL       A=6 B=4 C=1
+    0027 [line   16] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 27
+    'msg': 0 -> 27
+    'ECSubPanelTimeLimitBuy': 3 -> 27
+    'LimitBuyEvt': 10 -> 27
+    'ECGame': 13 -> 27
+    'event': 15 -> 27

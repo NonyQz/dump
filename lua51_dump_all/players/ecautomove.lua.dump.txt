@@ -1,0 +1,2346 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\players\ecautomove.lua
+SIZE: 20612
+PARSED: 20612
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\players\\ecautomove.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 22
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Main.ECGame'
+K[003] = 'S2C.S2CManager'
+K[004] = 'S2C.find_way_re'
+K[005] = 'Types.Vector3'
+K[006] = 'Configs.npc_list'
+K[007] = 'Utility.Task'
+K[008] = 'Utility.TransportHelper'
+K[009] = 'Event.UserMoveEvent'
+K[010] = 'Configs.DistanceConfig'
+K[011] = 'Class'
+K[012] = 'ECAutoMove'
+K[013] = 'define'
+K[014] = 'static'
+K[015] = '=>'
+K[016] = 'boolean'
+K[017] = 'IsAutoMoving'
+K[018] = 'CanBeginAutoMove'
+K[019] = 'number'
+K[020] = 'function'
+K[021] = 'BeginAutoMove'
+K[022] = 'BeginAutoMoveWithNation'
+K[023] = 'StopAutoMove'
+K[024] = 'table'
+K[025] = 'MakeMoveTask'
+K[026] = 'ClickNPCCallbacks'
+K[027] = 'ClickNPCCallbacksEx'
+K[028] = 'ClickMatterCallbacks'
+K[029] = 'TaskGatherMineCallbacks'
+K[030] = 'KillCallbacks'
+K[031] = 'AutoFightCallbacks'
+K[032] = 'DropInfoCallbacks'
+K[033] = 'UseItemCallbacks'
+K[034] = 'ClickTransportCallbacks'
+K[035] = 'GenCallbacks'
+K[036] = 'GenTaskCallbacks'
+K[037] = 'DerivePosition'
+K[038] = 'hasAutoMoveTask'
+K[039] = 'startAutoMoveTask'
+K[040] = 'stopAutoMoveTask'
+K[041] = 'finishAutoMoveTask'
+K[042] = 'hideStatusUI'
+K[043] = 'unhideStatusUI'
+K[044] = 'Commit'
+K[045] = 'EventManager'
+K[046] = 'addHandler'
+
+----- INSTRUCTIONS -----
+0000 [line    5] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    5] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    5] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    6] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    6] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    6] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    7] 0x0000C0C1  LOADK      R3 = K[3]='S2C.S2CManager'
+0008 [line    7] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    8] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    8] 0x00010101  LOADK      R4 = K[4]='S2C.find_way_re'
+0011 [line    8] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    9] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    9] 0x00014141  LOADK      R5 = K[5]='Types.Vector3'
+0014 [line    9] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   10] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line   10] 0x00018181  LOADK      R6 = K[6]='Configs.npc_list'
+0017 [line   10] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line   11] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line   11] 0x0001C1C1  LOADK      R7 = K[7]='Utility.Task'
+0020 [line   11] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line   12] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line   12] 0x00020201  LOADK      R8 = K[8]='Utility.TransportHelper'
+0023 [line   12] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   13] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line   13] 0x00024241  LOADK      R9 = K[9]='Event.UserMoveEvent'
+0026 [line   13] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   14] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   14] 0x00028281  LOADK      R10 = K[10]='Configs.DistanceConfig'
+0029 [line   14] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   16] 0x0042C286  GETTABLE   R10 = R0[K[11]='Class']
+0031 [line   16] 0x000302C1  LOADK      R11 = K[12]='ECAutoMove'
+0032 [line   16] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   18] 0x054342C6  GETTABLE   R11 = R10[K[13]='define']
+0034 [line   20] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0035 [line   20] 0x0003C341  LOADK      R13 = K[15]='=>'
+0036 [line   20] 0x00040381  LOADK      R14 = K[16]='boolean'
+0037 [line   20] 0x0180831C  CALL       A=12 B=3 C=2
+0038 [line   22] 0x00000364  CLOSURE    R13 = PROTO[0]
+0039 [line   22] 0x05000000  MOVE       R0 = R10
+0040 [line   22] 0x88834309  SETTABLE   R12[K[17]='IsAutoMoving'] = R13
+0041 [line   24] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0042 [line   24] 0x0003C341  LOADK      R13 = K[15]='=>'
+0043 [line   24] 0x00040381  LOADK      R14 = K[16]='boolean'
+0044 [line   24] 0x0180831C  CALL       A=12 B=3 C=2
+0045 [line   31] 0x00004364  CLOSURE    R13 = PROTO[1]
+0046 [line   31] 0x00800000  MOVE       R0 = R1
+0047 [line   31] 0x89034309  SETTABLE   R12[K[18]='CanBeginAutoMove'] = R13
+0048 [line   43] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0049 [line   43] 0x0004C341  LOADK      R13 = K[19]='number'
+0050 [line   43] 0x0004C381  LOADK      R14 = K[19]='number'
+0051 [line   43] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0052 [line   43] 0x0004C401  LOADK      R16 = K[19]='number'
+0053 [line   43] 0x00050441  LOADK      R17 = K[20]='function'
+0054 [line   43] 0x00050481  LOADK      R18 = K[20]='function'
+0055 [line   43] 0x0003C4C1  LOADK      R19 = K[15]='=>'
+0056 [line   43] 0x00040501  LOADK      R20 = K[16]='boolean'
+0057 [line   43] 0x0480831C  CALL       A=12 B=9 C=2
+0058 [line   51] 0x00008364  CLOSURE    R13 = PROTO[2]
+0059 [line   51] 0x05000000  MOVE       R0 = R10
+0060 [line   51] 0x8A834309  SETTABLE   R12[K[21]='BeginAutoMove'] = R13
+0061 [line   59] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0062 [line   59] 0x0004C341  LOADK      R13 = K[19]='number'
+0063 [line   59] 0x0004C381  LOADK      R14 = K[19]='number'
+0064 [line   59] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0065 [line   59] 0x0004C401  LOADK      R16 = K[19]='number'
+0066 [line   59] 0x0004C441  LOADK      R17 = K[19]='number'
+0067 [line   59] 0x00050481  LOADK      R18 = K[20]='function'
+0068 [line   59] 0x000504C1  LOADK      R19 = K[20]='function'
+0069 [line   59] 0x0003C501  LOADK      R20 = K[15]='=>'
+0070 [line   59] 0x00040541  LOADK      R21 = K[16]='boolean'
+0071 [line   59] 0x0500831C  CALL       A=12 B=10 C=2
+0072 [line  149] 0x0000C364  CLOSURE    R13 = PROTO[3]
+0073 [line  149] 0x05000000  MOVE       R0 = R10
+0074 [line  149] 0x00800000  MOVE       R0 = R1
+0075 [line  149] 0x03000000  MOVE       R0 = R6
+0076 [line  149] 0x8B034309  SETTABLE   R12[K[22]='BeginAutoMoveWithNation'] = R13
+0077 [line  154] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0078 [line  154] 0x0080831C  CALL       A=12 B=1 C=2
+0079 [line  166] 0x00010364  CLOSURE    R13 = PROTO[4]
+0080 [line  166] 0x05000000  MOVE       R0 = R10
+0081 [line  166] 0x00800000  MOVE       R0 = R1
+0082 [line  166] 0x8B834309  SETTABLE   R12[K[23]='StopAutoMove'] = R13
+0083 [line  171] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0084 [line  171] 0x00060341  LOADK      R13 = K[24]='table'
+0085 [line  171] 0x0003C381  LOADK      R14 = K[15]='=>'
+0086 [line  171] 0x030003C0  MOVE       R15 = R6
+0087 [line  171] 0x0200831C  CALL       A=12 B=4 C=2
+0088 [line  179] 0x00014364  CLOSURE    R13 = PROTO[5]
+0089 [line  179] 0x00800000  MOVE       R0 = R1
+0090 [line  179] 0x8C834309  SETTABLE   R12[K[25]='MakeMoveTask'] = R13
+0091 [line  188] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0092 [line  188] 0x0004C341  LOADK      R13 = K[19]='number'
+0093 [line  188] 0x0003C381  LOADK      R14 = K[15]='=>'
+0094 [line  188] 0x000503C1  LOADK      R15 = K[20]='function'
+0095 [line  188] 0x00050401  LOADK      R16 = K[20]='function'
+0096 [line  188] 0x0280831C  CALL       A=12 B=5 C=2
+0097 [line  190] 0x00018364  CLOSURE    R13 = PROTO[6]
+0098 [line  190] 0x05000000  MOVE       R0 = R10
+0099 [line  190] 0x8D034309  SETTABLE   R12[K[26]='ClickNPCCallbacks'] = R13
+0100 [line  199] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0101 [line  199] 0x0004C341  LOADK      R13 = K[19]='number'
+0102 [line  199] 0x00050381  LOADK      R14 = K[20]='function'
+0103 [line  199] 0x0003C3C1  LOADK      R15 = K[15]='=>'
+0104 [line  199] 0x00050401  LOADK      R16 = K[20]='function'
+0105 [line  199] 0x00050441  LOADK      R17 = K[20]='function'
+0106 [line  199] 0x0300831C  CALL       A=12 B=6 C=2
+0107 [line  213] 0x0001C364  CLOSURE    R13 = PROTO[7]
+0108 [line  213] 0x00800000  MOVE       R0 = R1
+0109 [line  213] 0x8D834309  SETTABLE   R12[K[27]='ClickNPCCallbacksEx'] = R13
+0110 [line  221] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0111 [line  221] 0x0004C341  LOADK      R13 = K[19]='number'
+0112 [line  221] 0x0003C381  LOADK      R14 = K[15]='=>'
+0113 [line  221] 0x000503C1  LOADK      R15 = K[20]='function'
+0114 [line  221] 0x00050401  LOADK      R16 = K[20]='function'
+0115 [line  221] 0x0280831C  CALL       A=12 B=5 C=2
+0116 [line  233] 0x00020364  CLOSURE    R13 = PROTO[8]
+0117 [line  233] 0x8E034309  SETTABLE   R12[K[28]='ClickMatterCallbacks'] = R13
+0118 [line  242] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0119 [line  242] 0x0004C341  LOADK      R13 = K[19]='number'
+0120 [line  242] 0x0004C381  LOADK      R14 = K[19]='number'
+0121 [line  242] 0x0003C3C1  LOADK      R15 = K[15]='=>'
+0122 [line  242] 0x00050401  LOADK      R16 = K[20]='function'
+0123 [line  242] 0x00050441  LOADK      R17 = K[20]='function'
+0124 [line  242] 0x0300831C  CALL       A=12 B=6 C=2
+0125 [line  299] 0x00024364  CLOSURE    R13 = PROTO[9]
+0126 [line  299] 0x03000000  MOVE       R0 = R6
+0127 [line  299] 0x05000000  MOVE       R0 = R10
+0128 [line  299] 0x8E834309  SETTABLE   R12[K[29]='TaskGatherMineCallbacks'] = R13
+0129 [line  308] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0130 [line  308] 0x0004C341  LOADK      R13 = K[19]='number'
+0131 [line  308] 0x0004C381  LOADK      R14 = K[19]='number'
+0132 [line  308] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0133 [line  308] 0x0004C401  LOADK      R16 = K[19]='number'
+0134 [line  308] 0x0003C441  LOADK      R17 = K[15]='=>'
+0135 [line  308] 0x00050481  LOADK      R18 = K[20]='function'
+0136 [line  308] 0x000504C1  LOADK      R19 = K[20]='function'
+0137 [line  308] 0x0400831C  CALL       A=12 B=8 C=2
+0138 [line  329] 0x00028364  CLOSURE    R13 = PROTO[10]
+0139 [line  329] 0x00800000  MOVE       R0 = R1
+0140 [line  329] 0x02000000  MOVE       R0 = R4
+0141 [line  329] 0x8F034309  SETTABLE   R12[K[30]='KillCallbacks'] = R13
+0142 [line  336] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0143 [line  336] 0x0004C341  LOADK      R13 = K[19]='number'
+0144 [line  336] 0x0004C381  LOADK      R14 = K[19]='number'
+0145 [line  336] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0146 [line  336] 0x0003C401  LOADK      R16 = K[15]='=>'
+0147 [line  336] 0x00050441  LOADK      R17 = K[20]='function'
+0148 [line  336] 0x00050481  LOADK      R18 = K[20]='function'
+0149 [line  336] 0x0380831C  CALL       A=12 B=7 C=2
+0150 [line  338] 0x0002C364  CLOSURE    R13 = PROTO[11]
+0151 [line  338] 0x05000000  MOVE       R0 = R10
+0152 [line  338] 0x8F834309  SETTABLE   R12[K[31]='AutoFightCallbacks'] = R13
+0153 [line  345] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0154 [line  345] 0x0004C341  LOADK      R13 = K[19]='number'
+0155 [line  345] 0x0003C381  LOADK      R14 = K[15]='=>'
+0156 [line  345] 0x000503C1  LOADK      R15 = K[20]='function'
+0157 [line  345] 0x00050401  LOADK      R16 = K[20]='function'
+0158 [line  345] 0x0280831C  CALL       A=12 B=5 C=2
+0159 [line  352] 0x00030364  CLOSURE    R13 = PROTO[12]
+0160 [line  352] 0x90034309  SETTABLE   R12[K[32]='DropInfoCallbacks'] = R13
+0161 [line  359] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0162 [line  359] 0x0004C341  LOADK      R13 = K[19]='number'
+0163 [line  359] 0x0003C381  LOADK      R14 = K[15]='=>'
+0164 [line  359] 0x000503C1  LOADK      R15 = K[20]='function'
+0165 [line  359] 0x00050401  LOADK      R16 = K[20]='function'
+0166 [line  359] 0x0280831C  CALL       A=12 B=5 C=2
+0167 [line  372] 0x00034364  CLOSURE    R13 = PROTO[13]
+0168 [line  372] 0x90834309  SETTABLE   R12[K[33]='UseItemCallbacks'] = R13
+0169 [line  379] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0170 [line  379] 0x0004C341  LOADK      R13 = K[19]='number'
+0171 [line  379] 0x0003C381  LOADK      R14 = K[15]='=>'
+0172 [line  379] 0x000503C1  LOADK      R15 = K[20]='function'
+0173 [line  379] 0x00050401  LOADK      R16 = K[20]='function'
+0174 [line  379] 0x0280831C  CALL       A=12 B=5 C=2
+0175 [line  386] 0x00038364  CLOSURE    R13 = PROTO[14]
+0176 [line  386] 0x03800000  MOVE       R0 = R7
+0177 [line  386] 0x05000000  MOVE       R0 = R10
+0178 [line  386] 0x91034309  SETTABLE   R12[K[34]='ClickTransportCallbacks'] = R13
+0179 [line  395] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0180 [line  395] 0x00060341  LOADK      R13 = K[24]='table'
+0181 [line  395] 0x0004C381  LOADK      R14 = K[19]='number'
+0182 [line  395] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0183 [line  395] 0x0004C401  LOADK      R16 = K[19]='number'
+0184 [line  395] 0x0003C441  LOADK      R17 = K[15]='=>'
+0185 [line  395] 0x0004C481  LOADK      R18 = K[19]='number'
+0186 [line  395] 0x000504C1  LOADK      R19 = K[20]='function'
+0187 [line  395] 0x00050501  LOADK      R20 = K[20]='function'
+0188 [line  395] 0x0480831C  CALL       A=12 B=9 C=2
+0189 [line  397] 0x0003C364  CLOSURE    R13 = PROTO[15]
+0190 [line  397] 0x05000000  MOVE       R0 = R10
+0191 [line  397] 0x91834309  SETTABLE   R12[K[35]='GenCallbacks'] = R13
+0192 [line  399] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0193 [line  399] 0x0004C341  LOADK      R13 = K[19]='number'
+0194 [line  399] 0x00060381  LOADK      R14 = K[24]='table'
+0195 [line  399] 0x0004C3C1  LOADK      R15 = K[19]='number'
+0196 [line  399] 0x0004C401  LOADK      R16 = K[19]='number'
+0197 [line  399] 0x0004C441  LOADK      R17 = K[19]='number'
+0198 [line  399] 0x0003C481  LOADK      R18 = K[15]='=>'
+0199 [line  399] 0x0004C4C1  LOADK      R19 = K[19]='number'
+0200 [line  399] 0x00050501  LOADK      R20 = K[20]='function'
+0201 [line  399] 0x00050541  LOADK      R21 = K[20]='function'
+0202 [line  399] 0x0500831C  CALL       A=12 B=10 C=2
+0203 [line  448] 0x00040364  CLOSURE    R13 = PROTO[16]
+0204 [line  448] 0x04800000  MOVE       R0 = R9
+0205 [line  448] 0x05000000  MOVE       R0 = R10
+0206 [line  448] 0x92034309  SETTABLE   R12[K[36]='GenTaskCallbacks'] = R13
+0207 [line  458] 0x05C38306  GETTABLE   R12 = R11[K[14]='static']
+0208 [line  458] 0x00060341  LOADK      R13 = K[24]='table'
+0209 [line  458] 0x0003C381  LOADK      R14 = K[15]='=>'
+0210 [line  458] 0x000403C1  LOADK      R15 = K[16]='boolean'
+0211 [line  458] 0x0004C401  LOADK      R16 = K[19]='number'
+0212 [line  458] 0x0004C441  LOADK      R17 = K[19]='number'
+0213 [line  458] 0x0004C481  LOADK      R18 = K[19]='number'
+0214 [line  458] 0x0380831C  CALL       A=12 B=7 C=2
+0215 [line  471] 0x00044364  CLOSURE    R13 = PROTO[17]
+0216 [line  471] 0x02800000  MOVE       R0 = R5
+0217 [line  471] 0x92834309  SETTABLE   R12[K[37]='DerivePosition'] = R13
+0218 [line  473] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+0219 [line  475] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0220 [line  475] 0x0003C381  LOADK      R14 = K[15]='=>'
+0221 [line  475] 0x000403C1  LOADK      R15 = K[16]='boolean'
+0222 [line  475] 0x0180835C  CALL       A=13 B=3 C=2
+0223 [line  477] 0x000483A4  CLOSURE    R14 = PROTO[18]
+0224 [line  477] 0x06000000  MOVE       R0 = R12
+0225 [line  477] 0x93038349  SETTABLE   R13[K[38]='hasAutoMoveTask'] = R14
+0226 [line  479] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0227 [line  479] 0x03000380  MOVE       R14 = R6
+0228 [line  479] 0x0100835C  CALL       A=13 B=2 C=2
+0229 [line  501] 0x0004C3A4  CLOSURE    R14 = PROTO[19]
+0230 [line  501] 0x05000000  MOVE       R0 = R10
+0231 [line  501] 0x00800000  MOVE       R0 = R1
+0232 [line  501] 0x04000000  MOVE       R0 = R8
+0233 [line  501] 0x06000000  MOVE       R0 = R12
+0234 [line  501] 0x93838349  SETTABLE   R13[K[39]='startAutoMoveTask'] = R14
+0235 [line  504] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0236 [line  504] 0x0003C381  LOADK      R14 = K[15]='=>'
+0237 [line  504] 0x000403C1  LOADK      R15 = K[16]='boolean'
+0238 [line  504] 0x0180835C  CALL       A=13 B=3 C=2
+0239 [line  515] 0x000503A4  CLOSURE    R14 = PROTO[20]
+0240 [line  515] 0x06000000  MOVE       R0 = R12
+0241 [line  515] 0x94038349  SETTABLE   R13[K[40]='stopAutoMoveTask'] = R14
+0242 [line  517] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0243 [line  517] 0x0080835C  CALL       A=13 B=1 C=2
+0244 [line  523] 0x000543A4  CLOSURE    R14 = PROTO[21]
+0245 [line  523] 0x06000000  MOVE       R0 = R12
+0246 [line  523] 0x94838349  SETTABLE   R13[K[41]='finishAutoMoveTask'] = R14
+0247 [line  525] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0248 [line  525] 0x0080835C  CALL       A=13 B=1 C=2
+0249 [line  528] 0x000583A4  CLOSURE    R14 = PROTO[22]
+0250 [line  528] 0x95038349  SETTABLE   R13[K[42]='hideStatusUI'] = R14
+0251 [line  530] 0x05C38346  GETTABLE   R13 = R11[K[14]='static']
+0252 [line  530] 0x0080835C  CALL       A=13 B=1 C=2
+0253 [line  533] 0x0005C3A4  CLOSURE    R14 = PROTO[23]
+0254 [line  533] 0x95838349  SETTABLE   R13[K[43]='unhideStatusUI'] = R14
+0255 [line  533] 0x000002E3  CLOSE      A=11 B=0 C=0 Bx=0
+0256 [line  536] 0x054B02C6  GETTABLE   R11 = R10[K[44]='Commit']
+0257 [line  536] 0x008042DC  CALL       A=11 B=1 C=1
+0258 [line  538] 0x00CB42C6  GETTABLE   R11 = R1[K[45]='EventManager']
+0259 [line  538] 0x05CB82CB  SELF       A=11 B=11 C=302 Bx=5934
+0260 [line  538] 0x04000340  MOVE       R13 = R8
+0261 [line  538] 0x000603A4  CLOSURE    R14 = PROTO[24]
+0262 [line  538] 0x05000000  MOVE       R0 = R10
+0263 [line  538] 0x020042DC  CALL       A=11 B=4 C=1
+0264 [line  540] 0x0100029E  RETURN     A=10 B=2 C=0
+0265 [line  540] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 265
+'ECGame': 6 -> 265
+'S2CManager': 9 -> 265
+'find_way_re': 12 -> 265
+'EC': 15 -> 265
+'NPCList': 18 -> 265
+'Task': 21 -> 265
+'TransportHelper': 24 -> 265
+'UserMoveEvent': 27 -> 265
+'DistanceConfig': 30 -> 265
+'ECAutoMove': 33 -> 265
+'def': 34 -> 255
+'l_currrentAutoMoveTask': 219 -> 255
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x7FA
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 20 - 22
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'hasAutoMoveTask'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   21] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   21] 0x00400006  GETTABLE   R0 = R0[K[0]='hasAutoMoveTask']
+    0002 [line   21] 0x0080001D  TAILCALL   A=0 B=1 C=0
+    0003 [line   21] 0x0000001E  RETURN     A=0 B=0 C=0
+    0004 [line   22] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x86E
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 24 - 31
+    Params : 0
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'CanMove'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   25] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   25] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line   25] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line   25] 0x00404006  GETTABLE   R0 = R0[K[1]='m_HostPlayer']
+    0004 [line   26] 0x0040804B  SELF       A=1 B=0 C=258 Bx=258
+    0005 [line   26] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0006 [line   26] 0x0180805C  CALL       A=1 B=3 C=2
+    0007 [line   26] 0x0000405A  TEST       A=1 B=0 C=1
+    0008 [line   26] 0x80004016  JMP        A=0 sBx=2
+    0009 [line   27] 0x00000042  LOADBOOL   A=1 B=0 C=0
+    0010 [line   27] 0x0100005E  RETURN     A=1 B=2 C=0
+    0011 [line   30] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0012 [line   30] 0x0100005E  RETURN     A=1 B=2 C=0
+    0013 [line   31] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'host': 4 -> 13
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x94F
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 43 - 51
+    Params : 6
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = -1.0
+    K[001] = 'require'
+    K[002] = 'Configs.InstanceInfo'
+    K[003] = 'Instance'
+    K[004] = 'GetData'
+    K[005] = 'is_neutral'
+    K[006] = 0.0
+    K[007] = 'BeginAutoMoveWithNation'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   44] 0x00000181  LOADK      R6 = K[0]=-1.0
+    0001 [line   45] 0x000041C5  GETGLOBAL  R7 = GLOBAL K[1]='require'
+    0002 [line   45] 0x00008201  LOADK      R8 = K[2]='Configs.InstanceInfo'
+    0003 [line   45] 0x010081DC  CALL       A=7 B=2 C=2
+    0004 [line   45] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='Instance']
+    0005 [line   45] 0x008081DC  CALL       A=7 B=1 C=2
+    0006 [line   45] 0x03C101CB  SELF       A=7 B=7 C=260 Bx=3844
+    0007 [line   45] 0x00000240  MOVE       R9 = R0
+    0008 [line   45] 0x018081DC  CALL       A=7 B=3 C=2
+    0009 [line   46] 0x000001DA  TEST       A=7 B=0 C=0
+    0010 [line   46] 0x8000C016  JMP        A=0 sBx=4
+    0011 [line   46] 0x03C14206  GETTABLE   R8 = R7[K[5]='is_neutral']
+    0012 [line   46] 0x0000021A  TEST       A=8 B=0 C=0
+    0013 [line   46] 0x80000016  JMP        A=0 sBx=1
+    0014 [line   47] 0x00018181  LOADK      R6 = K[6]=0.0
+    0015 [line   50] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0016 [line   50] 0x0441C206  GETTABLE   R8 = R8[K[7]='BeginAutoMoveWithNation']
+    0017 [line   50] 0x03000240  MOVE       R9 = R6
+    0018 [line   50] 0x00000280  MOVE       R10 = R0
+    0019 [line   50] 0x008002C0  MOVE       R11 = R1
+    0020 [line   50] 0x01000300  MOVE       R12 = R2
+    0021 [line   50] 0x01800340  MOVE       R13 = R3
+    0022 [line   50] 0x02000380  MOVE       R14 = R4
+    0023 [line   50] 0x028003C0  MOVE       R15 = R5
+    0024 [line   50] 0x0400021D  TAILCALL   A=8 B=8 C=0
+    0025 [line   50] 0x0000021E  RETURN     A=8 B=0 C=0
+    0026 [line   51] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sceneId': 0 -> 26
+    'x': 0 -> 26
+    'z': 0 -> 26
+    'stopDistance': 0 -> 26
+    'onFinishCallback': 0 -> 26
+    'checkFinishCallback': 0 -> 26
+    'nation': 1 -> 26
+    'instanceInfo': 9 -> 26
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xB91
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 59 - 149
+    Params : 7
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'CanBeginAutoMove'
+    K[001] = 'require'
+    K[002] = 'Players.ECAutoMoveUtility'
+    K[003] = -1.0
+    K[004] = 'LuaTaskInterface'
+    K[005] = 'GetCurrentSceneNation'
+    K[006] = 'IsTargetNationOK'
+    K[007] = 5005.0
+    K[008] = 0.0
+    K[009] = 'nationId'
+    K[010] = 'sceneId'
+    K[011] = 'x'
+    K[012] = 'z'
+    K[013] = 'stopDistance'
+    K[014] = 'MakeMoveTask'
+    K[015] = 'FlashTipMan'
+    K[016] = 'FlashTip'
+    K[017] = 'StringTable'
+    K[018] = 'Get'
+    K[019] = 12302.0
+    K[020] = 'stopAutoMoveTask'
+    K[021] = 'Instance'
+    K[022] = 'm_AutoFightInfo'
+    K[023] = 'pos'
+    K[024] = 'sceneID'
+    K[025] = 'nation'
+    K[026] = 'm_IsAutoFight'
+    K[027] = False
+    K[028] = 'createStepsEx'
+    K[029] = 'cancelWith'
+    K[030] = 'completeWith'
+    K[031] = 'startAutoMoveTask'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   63] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0001 [line   63] 0x03C001C6  GETTABLE   R7 = R7[K[0]='CanBeginAutoMove']
+    0002 [line   63] 0x008081DC  CALL       A=7 B=1 C=2
+    0003 [line   63] 0x000041DA  TEST       A=7 B=0 C=1
+    0004 [line   63] 0x80004016  JMP        A=0 sBx=2
+    0005 [line   64] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0006 [line   64] 0x010001DE  RETURN     A=7 B=2 C=0
+    0007 [line   67] 0x000041C5  GETGLOBAL  R7 = GLOBAL K[1]='require'
+    0008 [line   67] 0x00008201  LOADK      R8 = K[2]='Players.ECAutoMoveUtility'
+    0009 [line   67] 0x010081DC  CALL       A=7 B=2 C=2
+    0010 [line   68] 0x00C0C017  EQ         A=0 B=R1 C=K[3]=-1.0
+    0011 [line   68] 0x8002C016  JMP        A=0 sBx=12
+    0012 [line   69] 0x00010205  GETGLOBAL  R8 = GLOBAL K[4]='LuaTaskInterface'
+    0013 [line   69] 0x04414206  GETTABLE   R8 = R8[K[5]='GetCurrentSceneNation']
+    0014 [line   69] 0x0080821C  CALL       A=8 B=1 C=2
+    0015 [line   70] 0x03C18246  GETTABLE   R9 = R7[K[6]='IsTargetNationOK']
+    0016 [line   70] 0x04000280  MOVE       R10 = R8
+    0017 [line   70] 0x000002C0  MOVE       R11 = R0
+    0018 [line   70] 0x0180825C  CALL       A=9 B=3 C=2
+    0019 [line   70] 0x0000425A  TEST       A=9 B=0 C=1
+    0020 [line   70] 0x80004016  JMP        A=0 sBx=2
+    0021 [line   71] 0x0001C041  LOADK      R1 = K[7]=5005.0
+    0022 [line   71] 0x80000016  JMP        A=0 sBx=1
+    0023 [line   73] 0x00020041  LOADK      R1 = K[8]=0.0
+    0024 [line   77] 0x0001420A  NEWTABLE   A=8 B=0 C=5 Bx=5
+    0025 [line   77] 0x84800209  SETTABLE   R8[K[9]='nationId'] = R0
+    0026 [line   77] 0x85004209  SETTABLE   R8[K[10]='sceneId'] = R1
+    0027 [line   77] 0x85808209  SETTABLE   R8[K[11]='x'] = R2
+    0028 [line   77] 0x8600C209  SETTABLE   R8[K[12]='z'] = R3
+    0029 [line   77] 0x86810209  SETTABLE   R8[K[13]='stopDistance'] = R4
+    0030 [line   78] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0031 [line   79] 0x00C20057  EQ         A=1 B=R1 C=K[8]=0.0
+    0032 [line   79] 0x80048016  JMP        A=0 sBx=19
+    0033 [line   80] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0034 [line   80] 0x05438286  GETTABLE   R10 = R10[K[14]='MakeMoveTask']
+    0035 [line   80] 0x040002C0  MOVE       R11 = R8
+    0036 [line   80] 0x0100829C  CALL       A=10 B=2 C=2
+    0037 [line   80] 0x05000240  MOVE       R9 = R10
+    0038 [line   81] 0x0000425A  TEST       A=9 B=0 C=1
+    0039 [line   81] 0x8002C016  JMP        A=0 sBx=12
+    0040 [line   82] 0x0003C285  GETGLOBAL  R10 = GLOBAL K[15]='FlashTipMan'
+    0041 [line   82] 0x05440286  GETTABLE   R10 = R10[K[16]='FlashTip']
+    0042 [line   82] 0x000442C5  GETGLOBAL  R11 = GLOBAL K[17]='StringTable'
+    0043 [line   82] 0x05C482C6  GETTABLE   R11 = R11[K[18]='Get']
+    0044 [line   82] 0x0004C301  LOADK      R12 = K[19]=12302.0
+    0045 [line   82] 0x010002DC  CALL       A=11 B=2 C=0
+    0046 [line   82] 0x0000429C  CALL       A=10 B=0 C=1
+    0047 [line   83] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0048 [line   83] 0x05450286  GETTABLE   R10 = R10[K[20]='stopAutoMoveTask']
+    0049 [line   83] 0x0080429C  CALL       A=10 B=1 C=1
+    0050 [line   84] 0x00000282  LOADBOOL   A=10 B=0 C=0
+    0051 [line   84] 0x0100029E  RETURN     A=10 B=2 C=0
+    0052 [line   89] 0x00800284  GETUPVAL   A=10 B=1 C=0 Bx=512
+    0053 [line   89] 0x05454286  GETTABLE   R10 = R10[K[21]='Instance']
+    0054 [line   89] 0x0080829C  CALL       A=10 B=1 C=2
+    0055 [line   89] 0x05458286  GETTABLE   R10 = R10[K[22]='m_AutoFightInfo']
+    0056 [line   90] 0x0000029A  TEST       A=10 B=0 C=0
+    0057 [line   90] 0x80048016  JMP        A=0 sBx=19
+    0058 [line   91] 0x0545C2C6  GETTABLE   R11 = R10[K[23]='pos']
+    0059 [line   92] 0x000002DA  TEST       A=11 B=0 C=0
+    0060 [line   92] 0x8003C016  JMP        A=0 sBx=16
+    0061 [line   93] 0x05C2C306  GETTABLE   R12 = R11[K[11]='x']
+    0062 [line   93] 0x06008017  EQ         A=0 B=R12 C=R2
+    0063 [line   93] 0x80020016  JMP        A=0 sBx=9
+    0064 [line   93] 0x05C30306  GETTABLE   R12 = R11[K[12]='z']
+    0065 [line   93] 0x0600C017  EQ         A=0 B=R12 C=R3
+    0066 [line   93] 0x80014016  JMP        A=0 sBx=6
+    0067 [line   93] 0x05460306  GETTABLE   R12 = R10[K[24]='sceneID']
+    0068 [line   93] 0x06004017  EQ         A=0 B=R12 C=R1
+    0069 [line   93] 0x80008016  JMP        A=0 sBx=3
+    0070 [line   93] 0x05464306  GETTABLE   R12 = R10[K[25]='nation']
+    0071 [line   93] 0x06000057  EQ         A=1 B=R12 C=R0
+    0072 [line   93] 0x8000C016  JMP        A=0 sBx=4
+    0073 [line   95] 0x00800304  GETUPVAL   A=12 B=1 C=0 Bx=512
+    0074 [line   95] 0x06454306  GETTABLE   R12 = R12[K[21]='Instance']
+    0075 [line   95] 0x0080831C  CALL       A=12 B=1 C=2
+    0076 [line   95] 0x8D46C309  SETTABLE   R12[K[26]='m_IsAutoFight'] = K[27]=False
+    0077 [line  101] 0x048002C0  MOVE       R11 = R9
+    0078 [line  102] 0x02800300  MOVE       R12 = R5
+    0079 [line  103] 0x03000340  MOVE       R13 = R6
+    0080 [line  105] 0x01000384  GETUPVAL   A=14 B=2 C=0 Bx=1024
+    0081 [line  105] 0x07470386  GETTABLE   R14 = R14[K[28]='createStepsEx']
+    0082 [line  139] 0x000003E4  CLOSURE    R15 = PROTO[0]
+    0083 [line  139] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0084 [line  139] 0x06800000  MOVE       R0 = R13
+    0085 [line  139] 0x05800000  MOVE       R0 = R11
+    0086 [line  139] 0x06000000  MOVE       R0 = R12
+    0087 [line  139] 0x04000000  MOVE       R0 = R8
+    0088 [line  141] 0x00004424  CLOSURE    R16 = PROTO[1]
+    0089 [line  105] 0x0180839C  CALL       A=14 B=3 C=2
+    0090 [line  142] 0x074743CB  SELF       A=15 B=14 C=285 Bx=7453
+    0091 [line  142] 0x00008464  CLOSURE    R17 = PROTO[2]
+    0092 [line  142] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0093 [line  142] 0x018083DC  CALL       A=15 B=3 C=2
+    0094 [line  143] 0x07C783CB  SELF       A=15 B=15 C=286 Bx=7966
+    0095 [line  145] 0x0000C464  CLOSURE    R17 = PROTO[3]
+    0096 [line  145] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0097 [line  143] 0x018043DC  CALL       A=15 B=3 C=1
+    0098 [line  147] 0x000003C4  GETUPVAL   A=15 B=0 C=0 Bx=0
+    0099 [line  147] 0x07C7C3C6  GETTABLE   R15 = R15[K[31]='startAutoMoveTask']
+    0100 [line  147] 0x07000400  MOVE       R16 = R14
+    0101 [line  147] 0x010043DC  CALL       A=15 B=2 C=1
+    0102 [line  148] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0103 [line  148] 0x010003DE  RETURN     A=15 B=2 C=0
+    0104 [line  149] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nationId': 0 -> 104
+    'sceneId': 0 -> 104
+    'x': 0 -> 104
+    'z': 0 -> 104
+    'stopDistance': 0 -> 104
+    'onFinishCallback': 0 -> 104
+    'checkFinishCallback': 0 -> 104
+    'ECAutoMoveUtility': 10 -> 104
+    'fromNation': 15 -> 24
+    'destPosInfo': 30 -> 104
+    'firstMoveTask': 31 -> 104
+    'autoFightInfo': 56 -> 104
+    'autoFightPos': 59 -> 77
+    'nextMoveTask': 78 -> 104
+    'nextOnFinishCallback': 79 -> 104
+    'nextCheckFinishCallback': 80 -> 104
+    'wholeTask': 90 -> 104
+
+        ============================================================
+        PROTO ROOT.3.0
+        Offset : 0xF40
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 105 - 139
+        Params : 2
+        Stack  : 7
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 3.0
+        K[001] = 1.0
+        K[002] = 'CanBeginAutoMove'
+        K[003] = 'cancel'
+        K[004] = 'end'
+        K[005] = 'continue'
+        K[006] = 2.0
+        K[007] = 'completeSub'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  106] 0x00C00090  MOD        A=2 B=R1 C=K[0]=3.0
+        0001 [line  106] 0x01404017  EQ         A=0 B=R2 C=K[1]=1.0
+        0002 [line  106] 0x80050016  JMP        A=0 sBx=21
+        0003 [line  107] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0004 [line  107] 0x01408086  GETTABLE   R2 = R2[K[2]='CanBeginAutoMove']
+        0005 [line  107] 0x0080809C  CALL       A=2 B=1 C=2
+        0006 [line  107] 0x0000409A  TEST       A=2 B=0 C=1
+        0007 [line  107] 0x8000C016  JMP        A=0 sBx=4
+        0008 [line  108] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+        0009 [line  108] 0x0100409C  CALL       A=2 B=2 C=1
+        0010 [line  109] 0x00010081  LOADK      R2 = K[4]='end'
+        0011 [line  109] 0x0100009E  RETURN     A=2 B=2 C=0
+        0012 [line  112] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0013 [line  112] 0x0000009A  TEST       A=2 B=0 C=0
+        0014 [line  112] 0x80014016  JMP        A=0 sBx=6
+        0015 [line  112] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0016 [line  112] 0x0080809C  CALL       A=2 B=1 C=2
+        0017 [line  112] 0x0000009A  TEST       A=2 B=0 C=0
+        0018 [line  112] 0x80004016  JMP        A=0 sBx=2
+        0019 [line  113] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+        0020 [line  113] 0x01000088  SETUPVAL   A=2 B=2 C=0 Bx=1024
+        0021 [line  115] 0x00014081  LOADK      R2 = K[5]='continue'
+        0022 [line  115] 0x0100009E  RETURN     A=2 B=2 C=0
+        0023 [line  115] 0x800AC016  JMP        A=0 sBx=44
+        0024 [line  116] 0x00C00090  MOD        A=2 B=R1 C=K[0]=3.0
+        0025 [line  116] 0x01418017  EQ         A=0 B=R2 C=K[6]=2.0
+        0026 [line  116] 0x80028016  JMP        A=0 sBx=11
+        0027 [line  117] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0028 [line  117] 0x0000009A  TEST       A=2 B=0 C=0
+        0029 [line  117] 0x80010016  JMP        A=0 sBx=5
+        0030 [line  118] 0x0041C08B  SELF       A=2 B=0 C=263 Bx=263
+        0031 [line  118] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+        0032 [line  118] 0x0180009D  TAILCALL   A=2 B=3 C=0
+        0033 [line  118] 0x0000009E  RETURN     A=2 B=0 C=0
+        0034 [line  118] 0x80080016  JMP        A=0 sBx=33
+        0035 [line  120] 0x00014081  LOADK      R2 = K[5]='continue'
+        0036 [line  120] 0x0100009E  RETURN     A=2 B=2 C=0
+        0037 [line  121] 0x80074016  JMP        A=0 sBx=30
+        0038 [line  123] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+        0039 [line  123] 0x0000009A  TEST       A=2 B=0 C=0
+        0040 [line  123] 0x8002C016  JMP        A=0 sBx=12
+        0041 [line  124] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+        0042 [line  125] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+        0043 [line  125] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+        0044 [line  125] 0x010140DC  CALL       A=3 B=2 C=5
+        0045 [line  125] 0x03000080  MOVE       R2 = R6
+        0046 [line  125] 0x00800148  SETUPVAL   A=5 B=1 C=0 Bx=512
+        0047 [line  125] 0x01800108  SETUPVAL   A=4 B=3 C=0 Bx=1536
+        0048 [line  125] 0x010000C8  SETUPVAL   A=3 B=2 C=0 Bx=1024
+        0049 [line  126] 0x0000009A  TEST       A=2 B=0 C=0
+        0050 [line  126] 0x80014016  JMP        A=0 sBx=6
+        0051 [line  127] 0x02000088  SETUPVAL   A=2 B=4 C=0 Bx=2048
+        0052 [line  128] 0x8000C016  JMP        A=0 sBx=4
+        0053 [line  130] 0x02000083  LOADNIL    A=2 B=4 C=0 Bx=2048
+        0054 [line  130] 0x00800108  SETUPVAL   A=4 B=1 C=0 Bx=512
+        0055 [line  130] 0x018000C8  SETUPVAL   A=3 B=3 C=0 Bx=1536
+        0056 [line  130] 0x01000088  SETUPVAL   A=2 B=2 C=0 Bx=1024
+        0057 [line  133] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0058 [line  133] 0x0000409A  TEST       A=2 B=0 C=1
+        0059 [line  133] 0x80008016  JMP        A=0 sBx=3
+        0060 [line  133] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+        0061 [line  133] 0x0000009A  TEST       A=2 B=0 C=0
+        0062 [line  133] 0x80008016  JMP        A=0 sBx=3
+        0063 [line  134] 0x00014081  LOADK      R2 = K[5]='continue'
+        0064 [line  134] 0x0100009E  RETURN     A=2 B=2 C=0
+        0065 [line  134] 0x80004016  JMP        A=0 sBx=2
+        0066 [line  136] 0x00010081  LOADK      R2 = K[4]='end'
+        0067 [line  136] 0x0100009E  RETURN     A=2 B=2 C=0
+        0068 [line  139] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'task': 0 -> 68
+        'step': 0 -> 68
+        'nextPosInfo': 42 -> 52
+
+        ============================================================
+        PROTO ROOT.3.1
+        Offset : 0x1294
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 139 - 141
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'stop'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  140] 0x00000041  LOADK      R1 = K[0]='stop'
+        0001 [line  140] 0x0100005E  RETURN     A=1 B=2 C=0
+        0002 [line  141] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'task': 0 -> 2
+
+        ============================================================
+        PROTO ROOT.3.2
+        Offset : 0x12EF
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 142 - 142
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'stopAutoMoveTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  142] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  142] 0x00400006  GETTABLE   R0 = R0[K[0]='stopAutoMoveTask']
+        0002 [line  142] 0x0080401C  CALL       A=0 B=1 C=1
+        0003 [line  142] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.3.3
+        Offset : 0x135C
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 143 - 145
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'finishAutoMoveTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  144] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  144] 0x00400006  GETTABLE   R0 = R0[K[0]='finishAutoMoveTask']
+        0002 [line  144] 0x0080401C  CALL       A=0 B=1 C=1
+        0003 [line  145] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x1747
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 154 - 166
+    Params : 0
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'stopAutoMoveTask'
+    K[001] = 'Instance'
+    K[002] = 'm_HostPlayer'
+    K[003] = 'GetCurrentState'
+    K[004] = 'type'
+    K[005] = 'HostAutoMove'
+    K[006] = 'FSMChangeToStandState'
+    K[007] = 'm_IsAutoMoveAfterRevive'
+    K[008] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  155] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  155] 0x00400006  GETTABLE   R0 = R0[K[0]='stopAutoMoveTask']
+    0002 [line  155] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line  155] 0x0000001A  TEST       A=0 B=0 C=0
+    0004 [line  155] 0x80038016  JMP        A=0 sBx=15
+    0005 [line  157] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0006 [line  157] 0x00404006  GETTABLE   R0 = R0[K[1]='Instance']
+    0007 [line  157] 0x0080801C  CALL       A=0 B=1 C=2
+    0008 [line  157] 0x00408006  GETTABLE   R0 = R0[K[2]='m_HostPlayer']
+    0009 [line  158] 0x0040C04B  SELF       A=1 B=0 C=259 Bx=259
+    0010 [line  158] 0x0100805C  CALL       A=1 B=2 C=2
+    0011 [line  160] 0x00C10086  GETTABLE   R2 = R1[K[4]='type']
+    0012 [line  160] 0x01414017  EQ         A=0 B=R2 C=K[5]='HostAutoMove'
+    0013 [line  160] 0x80014016  JMP        A=0 sBx=6
+    0014 [line  161] 0x0041808B  SELF       A=2 B=0 C=262 Bx=262
+    0015 [line  161] 0x0100409C  CALL       A=2 B=2 C=1
+    0016 [line  163] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0017 [line  163] 0x01404086  GETTABLE   R2 = R2[K[1]='Instance']
+    0018 [line  163] 0x0080809C  CALL       A=2 B=1 C=2
+    0019 [line  163] 0x83C20089  SETTABLE   R2[K[7]='m_IsAutoMoveAfterRevive'] = K[8]=False
+    0020 [line  166] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'host': 9 -> 20
+    'currentState': 11 -> 20
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x18FC
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 171 - 179
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_curSceneId'
+    K[002] = 'LuaTaskInterface'
+    K[003] = 'GetCurrentSceneNation'
+    K[004] = 'require'
+    K[005] = 'Players.ECHostAsyncTask'
+    K[006] = 'AutoMoveToPos'
+    K[007] = 'nationId'
+    K[008] = 'sceneId'
+    K[009] = 'x'
+    K[010] = 'z'
+    K[011] = 'stopDistance'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  172] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  172] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  172] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  172] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_curSceneId']
+    0004 [line  173] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='LuaTaskInterface'
+    0005 [line  173] 0x0140C086  GETTABLE   R2 = R2[K[3]='GetCurrentSceneNation']
+    0006 [line  173] 0x0080809C  CALL       A=2 B=1 C=2
+    0007 [line  175] 0x000100C5  GETGLOBAL  R3 = GLOBAL K[4]='require'
+    0008 [line  175] 0x00014101  LOADK      R4 = K[5]='Players.ECHostAsyncTask'
+    0009 [line  175] 0x010080DC  CALL       A=3 B=2 C=2
+    0010 [line  176] 0x01C18106  GETTABLE   R4 = R3[K[6]='AutoMoveToPos']
+    0011 [line  176] 0x01000140  MOVE       R5 = R2
+    0012 [line  176] 0x00800180  MOVE       R6 = R1
+    0013 [line  177] 0x0041C1C6  GETTABLE   R7 = R0[K[7]='nationId']
+    0014 [line  177] 0x00420206  GETTABLE   R8 = R0[K[8]='sceneId']
+    0015 [line  177] 0x00424246  GETTABLE   R9 = R0[K[9]='x']
+    0016 [line  177] 0x00428286  GETTABLE   R10 = R0[K[10]='z']
+    0017 [line  178] 0x0042C2C6  GETTABLE   R11 = R0[K[11]='stopDistance']
+    0018 [line  178] 0x0042C306  GETTABLE   R12 = R0[K[11]='stopDistance']
+    0019 [line  176] 0x0480011D  TAILCALL   A=4 B=9 C=0
+    0020 [line  178] 0x0000011E  RETURN     A=4 B=0 C=0
+    0021 [line  179] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'destPosInfo': 0 -> 21
+    'currentScene': 4 -> 21
+    'currentSceneNation': 7 -> 21
+    'ECHostAsyncTask': 10 -> 21
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x1B14
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 188 - 190
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'ClickNPCCallbacksEx'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  189] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  189] 0x00C00046  GETTABLE   R1 = R1[K[0]='ClickNPCCallbacksEx']
+    0002 [line  189] 0x00000080  MOVE       R2 = R0
+    0003 [line  189] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0004 [line  189] 0x0180005D  TAILCALL   A=1 B=3 C=0
+    0005 [line  189] 0x0000005E  RETURN     A=1 B=0 C=0
+    0006 [line  190] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npcTid': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1BAF
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 199 - 213
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  210] 0x000000A4  CLOSURE    R2 = PROTO[0]
+    0001 [line  210] 0x00000000  MOVE       R0 = R0
+    0002 [line  210] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0003 [line  210] 0x00800000  MOVE       R0 = R1
+    0004 [line  212] 0x010000C0  MOVE       R3 = R2
+    0005 [line  212] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0006 [line  212] 0x018000DE  RETURN     A=3 B=3 C=0
+    0007 [line  213] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npcTid': 0 -> 7
+    'serviceCallback': 0 -> 7
+    'talk': 4 -> 7
+
+        ============================================================
+        PROTO ROOT.7.0
+        Offset : 0x1BEB
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 200 - 210
+        Params : 0
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostAsyncTask'
+        K[002] = 'FindNearestNPCByTid'
+        K[003] = 'completeWith'
+        K[004] = 'start'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  201] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  201] 0x00004041  LOADK      R1 = K[1]='Players.ECHostAsyncTask'
+        0002 [line  201] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  202] 0x00408046  GETTABLE   R1 = R0[K[2]='FindNearestNPCByTid']
+        0004 [line  202] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  202] 0x0100805C  CALL       A=1 B=2 C=2
+        0006 [line  202] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+        0007 [line  209] 0x000000E4  CLOSURE    R3 = PROTO[0]
+        0008 [line  209] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0009 [line  209] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0010 [line  202] 0x0180805C  CALL       A=1 B=3 C=2
+        0011 [line  209] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+        0012 [line  209] 0x0100405C  CALL       A=1 B=2 C=1
+        0013 [line  210] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECHostAsyncTask': 3 -> 13
+
+            ============================================================
+            PROTO ROOT.7.0.0
+            Offset : 0x1C9F
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 202 - 209
+            Params : 1
+            Stack  : 6
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'require'
+            K[001] = 'NPCs.ECServerNPC'
+            K[002] = 'getResult'
+            K[003] = 'is'
+            K[004] = 'Instance'
+            K[005] = 'm_HostPlayer'
+            K[006] = 'SkillHdl'
+            K[007] = 'SelectTarget'
+            K[008] = 'ID'
+            K[009] = 'SimuOnClickWithServiceCallback'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  203] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+            0001 [line  203] 0x00004081  LOADK      R2 = K[1]='NPCs.ECServerNPC'
+            0002 [line  203] 0x0100805C  CALL       A=1 B=2 C=2
+            0003 [line  204] 0x0040808B  SELF       A=2 B=0 C=258 Bx=258
+            0004 [line  204] 0x0100809C  CALL       A=2 B=2 C=2
+            0005 [line  205] 0x0000009A  TEST       A=2 B=0 C=0
+            0006 [line  205] 0x8003C016  JMP        A=0 sBx=16
+            0007 [line  205] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+            0008 [line  205] 0x00800140  MOVE       R5 = R1
+            0009 [line  205] 0x018080DC  CALL       A=3 B=3 C=2
+            0010 [line  205] 0x000000DA  TEST       A=3 B=0 C=0
+            0011 [line  205] 0x80028016  JMP        A=0 sBx=11
+            0012 [line  206] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+            0013 [line  206] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+            0014 [line  206] 0x008080DC  CALL       A=3 B=1 C=2
+            0015 [line  206] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostPlayer']
+            0016 [line  206] 0x01C180C6  GETTABLE   R3 = R3[K[6]='SkillHdl']
+            0017 [line  206] 0x01C1C0CB  SELF       A=3 B=3 C=263 Bx=1799
+            0018 [line  206] 0x01420146  GETTABLE   R5 = R2[K[8]='ID']
+            0019 [line  206] 0x018040DC  CALL       A=3 B=3 C=1
+            0020 [line  207] 0x014240CB  SELF       A=3 B=2 C=265 Bx=1289
+            0021 [line  207] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+            0022 [line  207] 0x018040DC  CALL       A=3 B=3 C=1
+            0023 [line  209] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'task': 0 -> 23
+            'ECServerNPC': 3 -> 23
+            'npc': 5 -> 23
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x1F86
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 221 - 233
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  230] 0x00000064  CLOSURE    R1 = PROTO[0]
+    0001 [line  230] 0x00000000  MOVE       R0 = R0
+    0002 [line  232] 0x00800080  MOVE       R2 = R1
+    0003 [line  232] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0004 [line  232] 0x0180009E  RETURN     A=2 B=3 C=0
+    0005 [line  233] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'matterTid': 0 -> 5
+    'clickMatter': 2 -> 5
+
+        ============================================================
+        PROTO ROOT.8.0
+        Offset : 0x1FBA
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 222 - 230
+        Params : 0
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostAsyncTask'
+        K[002] = 'FindNearestMatterByTid'
+        K[003] = 'completeWith'
+        K[004] = 'start'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  223] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  223] 0x00004041  LOADK      R1 = K[1]='Players.ECHostAsyncTask'
+        0002 [line  223] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  224] 0x00408046  GETTABLE   R1 = R0[K[2]='FindNearestMatterByTid']
+        0004 [line  224] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  224] 0x0100805C  CALL       A=1 B=2 C=2
+        0006 [line  224] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+        0007 [line  229] 0x000000E4  CLOSURE    R3 = PROTO[0]
+        0008 [line  224] 0x0180805C  CALL       A=1 B=3 C=2
+        0009 [line  229] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+        0010 [line  229] 0x0100405C  CALL       A=1 B=2 C=1
+        0011 [line  230] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECHostAsyncTask': 3 -> 11
+
+            ============================================================
+            PROTO ROOT.8.0.0
+            Offset : 0x2069
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 224 - 229
+            Params : 1
+            Stack  : 4
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'getResult'
+            K[001] = 'SimuOnClick'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  225] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+            0001 [line  225] 0x0100805C  CALL       A=1 B=2 C=2
+            0002 [line  226] 0x0000005A  TEST       A=1 B=0 C=0
+            0003 [line  226] 0x80004016  JMP        A=0 sBx=2
+            0004 [line  227] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+            0005 [line  227] 0x0100409C  CALL       A=2 B=2 C=1
+            0006 [line  229] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'task': 0 -> 6
+            'matter': 2 -> 6
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x21C5
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 242 - 299
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  291] 0x000000E4  CLOSURE    R3 = PROTO[0]
+    0001 [line  291] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0002 [line  291] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0003 [line  291] 0x00800000  MOVE       R0 = R1
+    0004 [line  291] 0x01000000  MOVE       R0 = R2
+    0005 [line  291] 0x01800000  MOVE       R0 = R3
+    0006 [line  296] 0x000040A4  CLOSURE    R2 = PROTO[1]
+    0007 [line  293] 0x00000000  MOVE       R0 = R0
+    0008 [line  298] 0x01800100  MOVE       R4 = R3
+    0009 [line  298] 0x01000140  MOVE       R5 = R2
+    0010 [line  298] 0x0180011E  RETURN     A=4 B=3 C=0
+    0011 [line  299] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 11
+    'mineTid': 0 -> 11
+    'canFinishTask': 0 -> 11
+    'taskGatherMine': 6 -> 11
+
+        ============================================================
+        PROTO ROOT.9.0
+        Offset : 0x2211
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 244 - 291
+        Params : 1
+        Stack  : 10
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostAsyncTask'
+        K[002] = 'Utility.ECAsyncTask'
+        K[003] = 'prepare'
+        K[004] = 'createEx'
+        K[005] = 'continueWith'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  245] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+        0001 [line  245] 0x00004081  LOADK      R2 = K[1]='Players.ECHostAsyncTask'
+        0002 [line  245] 0x0100805C  CALL       A=1 B=2 C=2
+        0003 [line  246] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+        0004 [line  246] 0x000080C1  LOADK      R3 = K[2]='Utility.ECAsyncTask'
+        0005 [line  246] 0x0100809C  CALL       A=2 B=2 C=2
+        0006 [line  248] 0x0000C0C1  LOADK      R3 = K[3]='prepare'
+        0007 [line  249] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+        0008 [line  250] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+        0009 [line  250] 0x02C10146  GETTABLE   R5 = R5[K[4]='createEx']
+        0010 [line  278] 0x000001A4  CLOSURE    R6 = PROTO[0]
+        0011 [line  278] 0x01800000  MOVE       R0 = R3
+        0012 [line  278] 0x01000000  MOVE       R0 = R2
+        0013 [line  278] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0014 [line  278] 0x02000000  MOVE       R0 = R4
+        0015 [line  278] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0016 [line  278] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+        0017 [line  278] 0x00000000  MOVE       R0 = R0
+        0018 [line  280] 0x000041E4  CLOSURE    R7 = PROTO[1]
+        0019 [line  250] 0x0180815C  CALL       A=5 B=3 C=2
+        0020 [line  282] 0x01800184  GETUPVAL   A=6 B=3 C=0 Bx=1536
+        0021 [line  282] 0x0080819C  CALL       A=6 B=1 C=2
+        0022 [line  282] 0x0000019A  TEST       A=6 B=0 C=0
+        0023 [line  282] 0x80008016  JMP        A=0 sBx=3
+        0024 [line  283] 0x04800183  LOADNIL    A=6 B=9 C=0 Bx=4608
+        0025 [line  283] 0x0280019E  RETURN     A=6 B=5 C=0
+        0026 [line  283] 0x80020016  JMP        A=0 sBx=9
+        0027 [line  285] 0x02C1418B  SELF       A=6 B=5 C=261 Bx=2821
+        0028 [line  287] 0x00008224  CLOSURE    R8 = PROTO[2]
+        0029 [line  287] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0030 [line  285] 0x0180419C  CALL       A=6 B=3 C=1
+        0031 [line  289] 0x02800180  MOVE       R6 = R5
+        0032 [line  289] 0x020001C4  GETUPVAL   A=7 B=4 C=0 Bx=2048
+        0033 [line  289] 0x01800204  GETUPVAL   A=8 B=3 C=0 Bx=1536
+        0034 [line  289] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+        0035 [line  289] 0x0280019E  RETURN     A=6 B=5 C=0
+        0036 [line  291] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'destPosInfo': 0 -> 36
+        'ECHostAsyncTask': 3 -> 36
+        'ECAsyncTask': 6 -> 36
+        'nextAction': 7 -> 36
+        'gather_task': 8 -> 36
+        'task': 20 -> 36
+
+            ============================================================
+            PROTO ROOT.9.0.0
+            Offset : 0x2331
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 250 - 278
+            Params : 2
+            Stack  : 7
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'prepare'
+            K[001] = 'gather'
+            K[002] = 'executeSub'
+            K[003] = 'WaitForTime'
+            K[004] = 0.0
+            K[005] = 'hideStatusUI'
+            K[006] = 'require'
+            K[007] = 'Players.ECHostAsyncTask'
+            K[008] = 'GatherMine'
+            K[009] = 'wait'
+            K[010] = 'unhideStatusUI'
+            K[011] = 'result'
+            K[012] = 0.5
+            K[013] = 'end'
+            K[014] = 'MakeMoveTask'
+            K[015] = 'completeSub'
+            K[016] = 'cancel'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  251] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0001 [line  251] 0x01400017  EQ         A=0 B=R2 C=K[0]='prepare'
+            0002 [line  251] 0x80024016  JMP        A=0 sBx=10
+            0003 [line  252] 0x00004081  LOADK      R2 = K[1]='gather'
+            0004 [line  252] 0x00000088  SETUPVAL   A=2 B=0 C=0 Bx=0
+            0005 [line  253] 0x0040808B  SELF       A=2 B=0 C=258 Bx=258
+            0006 [line  253] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+            0007 [line  253] 0x0240C106  GETTABLE   R4 = R4[K[3]='WaitForTime']
+            0008 [line  253] 0x00010141  LOADK      R5 = K[4]=0.0
+            0009 [line  253] 0x0100011C  CALL       A=4 B=2 C=0
+            0010 [line  253] 0x0000009D  TAILCALL   A=2 B=0 C=0
+            0011 [line  253] 0x0000009E  RETURN     A=2 B=0 C=0
+            0012 [line  253] 0x800FC016  JMP        A=0 sBx=64
+            0013 [line  254] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0014 [line  254] 0x01404017  EQ         A=0 B=R2 C=K[1]='gather'
+            0015 [line  254] 0x80048016  JMP        A=0 sBx=19
+            0016 [line  255] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0017 [line  255] 0x01414086  GETTABLE   R2 = R2[K[5]='hideStatusUI']
+            0018 [line  255] 0x0080409C  CALL       A=2 B=1 C=1
+            0019 [line  256] 0x00018085  GETGLOBAL  R2 = GLOBAL K[6]='require'
+            0020 [line  256] 0x0001C0C1  LOADK      R3 = K[7]='Players.ECHostAsyncTask'
+            0021 [line  256] 0x0100809C  CALL       A=2 B=2 C=2
+            0022 [line  257] 0x014200C6  GETTABLE   R3 = R2[K[8]='GatherMine']
+            0023 [line  257] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+            0024 [line  257] 0x010080DC  CALL       A=3 B=2 C=2
+            0025 [line  257] 0x018000C8  SETUPVAL   A=3 B=3 C=0 Bx=1536
+            0026 [line  258] 0x000240C1  LOADK      R3 = K[9]='wait'
+            0027 [line  258] 0x000000C8  SETUPVAL   A=3 B=0 C=0 Bx=0
+            0028 [line  259] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+            0029 [line  259] 0x01420146  GETTABLE   R5 = R2[K[8]='GatherMine']
+            0030 [line  259] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+            0031 [line  259] 0x0100015C  CALL       A=5 B=2 C=0
+            0032 [line  259] 0x000000DD  TAILCALL   A=3 B=0 C=0
+            0033 [line  259] 0x000000DE  RETURN     A=3 B=0 C=0
+            0034 [line  259] 0x800A4016  JMP        A=0 sBx=42
+            0035 [line  260] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0036 [line  260] 0x01424017  EQ         A=0 B=R2 C=K[9]='wait'
+            0037 [line  260] 0x80030016  JMP        A=0 sBx=13
+            0038 [line  261] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0039 [line  261] 0x01428086  GETTABLE   R2 = R2[K[10]='unhideStatusUI']
+            0040 [line  261] 0x0080409C  CALL       A=2 B=1 C=1
+            0041 [line  262] 0x0002C081  LOADK      R2 = K[11]='result'
+            0042 [line  262] 0x00000088  SETUPVAL   A=2 B=0 C=0 Bx=0
+            0043 [line  263] 0x0040808B  SELF       A=2 B=0 C=258 Bx=258
+            0044 [line  263] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+            0045 [line  263] 0x0240C106  GETTABLE   R4 = R4[K[3]='WaitForTime']
+            0046 [line  263] 0x00030141  LOADK      R5 = K[12]=0.5
+            0047 [line  263] 0x0100011C  CALL       A=4 B=2 C=0
+            0048 [line  263] 0x0000009D  TAILCALL   A=2 B=0 C=0
+            0049 [line  263] 0x0000009E  RETURN     A=2 B=0 C=0
+            0050 [line  263] 0x80064016  JMP        A=0 sBx=26
+            0051 [line  264] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0052 [line  264] 0x0142C017  EQ         A=0 B=R2 C=K[11]='result'
+            0053 [line  264] 0x80058016  JMP        A=0 sBx=23
+            0054 [line  265] 0x02800084  GETUPVAL   A=2 B=5 C=0 Bx=2560
+            0055 [line  265] 0x0080809C  CALL       A=2 B=1 C=2
+            0056 [line  265] 0x0000009A  TEST       A=2 B=0 C=0
+            0057 [line  265] 0x80004016  JMP        A=0 sBx=2
+            0058 [line  266] 0x00034081  LOADK      R2 = K[13]='end'
+            0059 [line  266] 0x0100009E  RETURN     A=2 B=2 C=0
+            0060 [line  269] 0x00000081  LOADK      R2 = K[0]='prepare'
+            0061 [line  269] 0x00000088  SETUPVAL   A=2 B=0 C=0 Bx=0
+            0062 [line  270] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0063 [line  270] 0x01438086  GETTABLE   R2 = R2[K[14]='MakeMoveTask']
+            0064 [line  270] 0x030000C4  GETUPVAL   A=3 B=6 C=0 Bx=3072
+            0065 [line  270] 0x0100809C  CALL       A=2 B=2 C=2
+            0066 [line  271] 0x0000009A  TEST       A=2 B=0 C=0
+            0067 [line  271] 0x80010016  JMP        A=0 sBx=5
+            0068 [line  272] 0x0043C0CB  SELF       A=3 B=0 C=271 Bx=271
+            0069 [line  272] 0x01000140  MOVE       R5 = R2
+            0070 [line  272] 0x018000DD  TAILCALL   A=3 B=3 C=0
+            0071 [line  272] 0x000000DE  RETURN     A=3 B=0 C=0
+            0072 [line  272] 0x8000C016  JMP        A=0 sBx=4
+            0073 [line  274] 0x004400CB  SELF       A=3 B=0 C=272 Bx=272
+            0074 [line  274] 0x010040DC  CALL       A=3 B=2 C=1
+            0075 [line  275] 0x000340C1  LOADK      R3 = K[13]='end'
+            0076 [line  275] 0x010000DE  RETURN     A=3 B=2 C=0
+            0077 [line  278] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'task': 0 -> 77
+            'step': 0 -> 77
+            'ECHostAsyncTask': 22 -> 34
+            'moveTask': 66 -> 77
+
+            ============================================================
+            PROTO ROOT.9.0.1
+            Offset : 0x2782
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 278 - 280
+            Params : 0
+            Stack  : 2
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'stop'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  279] 0x00000001  LOADK      R0 = K[0]='stop'
+            0001 [line  279] 0x0100001E  RETURN     A=0 B=2 C=0
+            0002 [line  280] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+
+            ============================================================
+            PROTO ROOT.9.0.2
+            Offset : 0x27CC
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 285 - 287
+            Params : 0
+            Stack  : 2
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'unhideStatusUI'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  286] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+            0001 [line  286] 0x00400006  GETTABLE   R0 = R0[K[0]='unhideStatusUI']
+            0002 [line  286] 0x0080401C  CALL       A=0 B=1 C=1
+            0003 [line  287] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.9.1
+        Offset : 0x29AC
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 293 - 296
+        Params : 0
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Task.ECTaskInterface'
+        K[002] = 'HasTask'
+        K[003] = 'CanFinishTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  294] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  294] 0x00004041  LOADK      R1 = K[1]='Task.ECTaskInterface'
+        0002 [line  294] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  295] 0x00408046  GETTABLE   R1 = R0[K[2]='HasTask']
+        0004 [line  295] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  295] 0x0100805C  CALL       A=1 B=2 C=2
+        0006 [line  295] 0x0000005A  TEST       A=1 B=0 C=0
+        0007 [line  295] 0x80010016  JMP        A=0 sBx=5
+        0008 [line  295] 0x0040C046  GETTABLE   R1 = R0[K[3]='CanFinishTask']
+        0009 [line  295] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0010 [line  295] 0x0100805C  CALL       A=1 B=2 C=2
+        0011 [line  295] 0x80004016  JMP        A=0 sBx=2
+        0012 [line  295] 0x00004042  LOADBOOL   A=1 B=0 C=1
+        0013 [line  295] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0014 [line  295] 0x0100005E  RETURN     A=1 B=2 C=0
+        0015 [line  296] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECTaskInterface': 3 -> 15
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x2B72
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 308 - 329
+    Params : 4
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  314] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0001 [line  314] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0002 [line  314] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0003 [line  314] 0x01000000  MOVE       R0 = R2
+    0004 [line  314] 0x01800000  MOVE       R0 = R3
+    0005 [line  314] 0x00000000  MOVE       R0 = R0
+    0006 [line  326] 0x00004164  CLOSURE    R5 = PROTO[1]
+    0007 [line  326] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0008 [line  326] 0x00000000  MOVE       R0 = R0
+    0009 [line  328] 0x02000180  MOVE       R6 = R4
+    0010 [line  328] 0x028001C0  MOVE       R7 = R5
+    0011 [line  328] 0x0180019E  RETURN     A=6 B=3 C=0
+    0012 [line  329] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npcTid': 0 -> 12
+    'sceneId': 0 -> 12
+    'x': 0 -> 12
+    'z': 0 -> 12
+    'StartAutoFight': 6 -> 12
+    'IsAlreadyInAutoFight': 9 -> 12
+
+        ============================================================
+        PROTO ROOT.10.0
+        Offset : 0x2BC2
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 309 - 314
+        Params : 0
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Instance'
+        K[001] = 'm_HostPlayer'
+        K[002] = 'Vector3'
+        K[003] = 'new'
+        K[004] = 0.0
+        K[005] = 'SkillHdl'
+        K[006] = 'EnterAutoFightingState'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  310] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  310] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+        0002 [line  310] 0x0080801C  CALL       A=0 B=1 C=2
+        0003 [line  310] 0x00404006  GETTABLE   R0 = R0[K[1]='m_HostPlayer']
+        0004 [line  311] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0005 [line  311] 0x00C08046  GETTABLE   R1 = R1[K[2]='Vector3']
+        0006 [line  311] 0x00C0C046  GETTABLE   R1 = R1[K[3]='new']
+        0007 [line  311] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0008 [line  311] 0x000100C1  LOADK      R3 = K[4]=0.0
+        0009 [line  311] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+        0010 [line  311] 0x0200805C  CALL       A=1 B=4 C=2
+        0011 [line  312] 0x00414086  GETTABLE   R2 = R0[K[5]='SkillHdl']
+        0012 [line  312] 0x0141808B  SELF       A=2 B=2 C=262 Bx=1286
+        0013 [line  312] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+        0014 [line  312] 0x00800140  MOVE       R5 = R1
+        0015 [line  312] 0x0200409C  CALL       A=2 B=4 C=1
+        0016 [line  314] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'hp': 4 -> 16
+        'pos': 11 -> 16
+
+        ============================================================
+        PROTO ROOT.10.1
+        Offset : 0x2D23
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 316 - 326
+        Params : 0
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Instance'
+        K[001] = 'm_HostPlayer'
+        K[002] = 'SkillHdl'
+        K[003] = 'AutoFightIsActive'
+        K[004] = 'require'
+        K[005] = 'Players.ECHostAutoFight'
+        K[006] = 'SearchNPCTid'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  317] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  317] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+        0002 [line  317] 0x0080801C  CALL       A=0 B=1 C=2
+        0003 [line  317] 0x00404006  GETTABLE   R0 = R0[K[1]='m_HostPlayer']
+        0004 [line  318] 0x00408046  GETTABLE   R1 = R0[K[2]='SkillHdl']
+        0005 [line  318] 0x00C0C046  GETTABLE   R1 = R1[K[3]='AutoFightIsActive']
+        0006 [line  318] 0x0000005A  TEST       A=1 B=0 C=0
+        0007 [line  318] 0x80028016  JMP        A=0 sBx=11
+        0008 [line  319] 0x00010045  GETGLOBAL  R1 = GLOBAL K[4]='require'
+        0009 [line  319] 0x00014081  LOADK      R2 = K[5]='Players.ECHostAutoFight'
+        0010 [line  319] 0x0100805C  CALL       A=1 B=2 C=2
+        0011 [line  320] 0x00C00086  GETTABLE   R2 = R1[K[0]='Instance']
+        0012 [line  320] 0x0080809C  CALL       A=2 B=1 C=2
+        0013 [line  320] 0x01418086  GETTABLE   R2 = R2[K[6]='SearchNPCTid']
+        0014 [line  320] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0015 [line  320] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0016 [line  320] 0x80004016  JMP        A=0 sBx=2
+        0017 [line  321] 0x00800082  LOADBOOL   A=2 B=1 C=0
+        0018 [line  321] 0x0100009E  RETURN     A=2 B=2 C=0
+        0019 [line  325] 0x00000042  LOADBOOL   A=1 B=0 C=0
+        0020 [line  325] 0x0100005E  RETURN     A=1 B=2 C=0
+        0021 [line  326] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'hp': 4 -> 21
+        'ECHostAutoFight': 11 -> 19
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x2F8E
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 336 - 338
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'KillCallbacks'
+    K[001] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  337] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  337] 0x01C000C6  GETTABLE   R3 = R3[K[0]='KillCallbacks']
+    0002 [line  337] 0x00004101  LOADK      R4 = K[1]=0.0
+    0003 [line  337] 0x00000140  MOVE       R5 = R0
+    0004 [line  337] 0x00800180  MOVE       R6 = R1
+    0005 [line  337] 0x010001C0  MOVE       R7 = R2
+    0006 [line  337] 0x028000DD  TAILCALL   A=3 B=5 C=0
+    0007 [line  337] 0x000000DE  RETURN     A=3 B=0 C=0
+    0008 [line  338] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sceneId': 0 -> 8
+    'x': 0 -> 8
+    'z': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x3059
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 345 - 352
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  349] 0x00000064  CLOSURE    R1 = PROTO[0]
+    0001 [line  349] 0x00000000  MOVE       R0 = R0
+    0002 [line  351] 0x00800080  MOVE       R2 = R1
+    0003 [line  351] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0004 [line  351] 0x0180009E  RETURN     A=2 B=3 C=0
+    0005 [line  352] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'dropTypeId': 0 -> 5
+    'executeDropInfo': 2 -> 5
+
+        ============================================================
+        PROTO ROOT.12.0
+        Offset : 0x308D
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 346 - 349
+        Params : 0
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'GUI.ECItemTipDropMan'
+        K[002] = 'ExecuteDropoutInfoFuncByTypeId'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  347] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  347] 0x00004041  LOADK      R1 = K[1]='GUI.ECItemTipDropMan'
+        0002 [line  347] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  348] 0x00408046  GETTABLE   R1 = R0[K[2]='ExecuteDropoutInfoFuncByTypeId']
+        0004 [line  348] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  348] 0x0100405C  CALL       A=1 B=2 C=1
+        0006 [line  349] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECItemTipDropMan': 3 -> 6
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x31BB
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 359 - 372
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  369] 0x00000064  CLOSURE    R1 = PROTO[0]
+    0001 [line  369] 0x00000000  MOVE       R0 = R0
+    0002 [line  371] 0x00800080  MOVE       R2 = R1
+    0003 [line  371] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0004 [line  371] 0x0180009E  RETURN     A=2 B=3 C=0
+    0005 [line  372] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'itemTid': 0 -> 5
+    'useItem': 2 -> 5
+
+        ============================================================
+        PROTO ROOT.13.0
+        Offset : 0x31EF
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 360 - 369
+        Params : 0
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostConditionOp'
+        K[002] = 'Maker'
+        K[003] = 'item_has'
+        K[004] = 1.0
+        K[005] = 'waitWithTimeout'
+        K[006] = 5.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line  361] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  361] 0x00004041  LOADK      R1 = K[1]='Players.ECHostConditionOp'
+        0002 [line  361] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  362] 0x00408046  GETTABLE   R1 = R0[K[2]='Maker']
+        0004 [line  362] 0x00C0C046  GETTABLE   R1 = R1[K[3]='item_has']
+        0005 [line  362] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0006 [line  362] 0x000100C1  LOADK      R3 = K[4]=1.0
+        0007 [line  362] 0x0180805C  CALL       A=1 B=3 C=2
+        0008 [line  362] 0x00C1404B  SELF       A=1 B=1 C=261 Bx=773
+        0009 [line  368] 0x000000E4  CLOSURE    R3 = PROTO[0]
+        0010 [line  368] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0011 [line  368] 0x00018101  LOADK      R4 = K[6]=5.0
+        0012 [line  362] 0x0200405C  CALL       A=1 B=4 C=1
+        0013 [line  369] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECHostConditionOp': 3 -> 13
+
+            ============================================================
+            PROTO ROOT.13.0.0
+            Offset : 0x32AF
+            Source : '@lua\\players\\ecautomove.lua'
+            Lines  : 362 - 368
+            Params : 0
+            Stack  : 4
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'require'
+            K[001] = 'Inventory.ECItemTools'
+            K[002] = 'FindPackItem'
+            K[003] = 'Use'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  363] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+            0001 [line  363] 0x00004041  LOADK      R1 = K[1]='Inventory.ECItemTools'
+            0002 [line  363] 0x0100801C  CALL       A=0 B=2 C=2
+            0003 [line  364] 0x00408046  GETTABLE   R1 = R0[K[2]='FindPackItem']
+            0004 [line  364] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0005 [line  364] 0x0100805C  CALL       A=1 B=2 C=2
+            0006 [line  365] 0x0000005A  TEST       A=1 B=0 C=0
+            0007 [line  365] 0x80004016  JMP        A=0 sBx=2
+            0008 [line  366] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+            0009 [line  366] 0x0100409C  CALL       A=2 B=2 C=1
+            0010 [line  368] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'ECItemTools': 3 -> 10
+            'item': 6 -> 10
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x3461
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 379 - 386
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTransportType'
+    K[001] = 'transmit_npc'
+    K[002] = 'ClickNPCCallbacks'
+    K[003] = 'transmit_box'
+    K[004] = 'ClickMatterCallbacks'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  380] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  380] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTransportType']
+    0002 [line  380] 0x00000080  MOVE       R2 = R0
+    0003 [line  380] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  381] 0x00C04017  EQ         A=0 B=R1 C=K[1]='transmit_npc'
+    0005 [line  381] 0x80014016  JMP        A=0 sBx=6
+    0006 [line  382] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0007 [line  382] 0x01408086  GETTABLE   R2 = R2[K[2]='ClickNPCCallbacks']
+    0008 [line  382] 0x000000C0  MOVE       R3 = R0
+    0009 [line  382] 0x0100009D  TAILCALL   A=2 B=2 C=0
+    0010 [line  382] 0x0000009E  RETURN     A=2 B=0 C=0
+    0011 [line  382] 0x80018016  JMP        A=0 sBx=7
+    0012 [line  383] 0x00C0C017  EQ         A=0 B=R1 C=K[3]='transmit_box'
+    0013 [line  383] 0x80010016  JMP        A=0 sBx=5
+    0014 [line  384] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0015 [line  384] 0x01410086  GETTABLE   R2 = R2[K[4]='ClickMatterCallbacks']
+    0016 [line  384] 0x000000C0  MOVE       R3 = R0
+    0017 [line  384] 0x0100009D  TAILCALL   A=2 B=2 C=0
+    0018 [line  384] 0x0000009E  RETURN     A=2 B=0 C=0
+    0019 [line  386] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'tid': 0 -> 19
+    'transType': 4 -> 19
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x35DD
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 395 - 397
+    Params : 4
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GenTaskCallbacks'
+    K[001] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  396] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line  396] 0x02400106  GETTABLE   R4 = R4[K[0]='GenTaskCallbacks']
+    0002 [line  396] 0x00004141  LOADK      R5 = K[1]=0.0
+    0003 [line  396] 0x00000180  MOVE       R6 = R0
+    0004 [line  396] 0x008001C0  MOVE       R7 = R1
+    0005 [line  396] 0x01000200  MOVE       R8 = R2
+    0006 [line  396] 0x01800240  MOVE       R9 = R3
+    0007 [line  396] 0x0300011D  TAILCALL   A=4 B=6 C=0
+    0008 [line  396] 0x0000011E  RETURN     A=4 B=0 C=0
+    0009 [line  397] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'action': 0 -> 9
+    'sceneId': 0 -> 9
+    'x': 0 -> 9
+    'z': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x36C6
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 399 - 448
+    Params : 5
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'type'
+    K[001] = 'distance'
+    K[002] = 'none'
+    K[003] = 0.0
+    K[004] = 'talk'
+    K[005] = 'SEARCH_OBJECT_STOP_DISTANCE'
+    K[006] = 'ClickNPCCallbacks'
+    K[007] = 'target'
+    K[008] = 'kill'
+    K[009] = 11.0
+    K[010] = 'KillCallbacks'
+    K[011] = 'mine'
+    K[012] = 'ClickMatterCallbacks'
+    K[013] = 'TaskGatherMineCallbacks'
+    K[014] = 'autofight'
+    K[015] = 1.0
+    K[016] = 'AutoFightCallbacks'
+    K[017] = 'useitem'
+    K[018] = 'UseItemCallbacks'
+    K[019] = 'dropinfo'
+    K[020] = 'DropInfoCallbacks'
+    K[021] = 'custom'
+    K[022] = 'redirect'
+    K[023] = 'escort'
+    K[024] = 'require'
+    K[025] = 'Task.ECSpecialTaskTarget'
+    K[026] = 'MakeStartEscortAutoMove'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  400] 0x00C00146  GETTABLE   R5 = R1[K[0]='type']
+    0001 [line  401] 0x00C04186  GETTABLE   R6 = R1[K[1]='distance']
+    0002 [line  403] 0x02C08017  EQ         A=0 B=R5 C=K[2]='none'
+    0003 [line  403] 0x80014016  JMP        A=0 sBx=6
+    0004 [line  405] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0005 [line  405] 0x80000016  JMP        A=0 sBx=1
+    0006 [line  405] 0x0000C1C1  LOADK      R7 = K[3]=0.0
+    0007 [line  405] 0x04800203  LOADNIL    A=8 B=9 C=0 Bx=4608
+    0008 [line  405] 0x020001DE  RETURN     A=7 B=4 C=0
+    0009 [line  405] 0x801EC016  JMP        A=0 sBx=124
+    0010 [line  406] 0x02C10017  EQ         A=0 B=R5 C=K[4]='talk'
+    0011 [line  406] 0x80024016  JMP        A=0 sBx=10
+    0012 [line  407] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0013 [line  407] 0x80004016  JMP        A=0 sBx=2
+    0014 [line  407] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0015 [line  407] 0x03C141C6  GETTABLE   R7 = R7[K[5]='SEARCH_OBJECT_STOP_DISTANCE']
+    0016 [line  407] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0017 [line  407] 0x04418206  GETTABLE   R8 = R8[K[6]='ClickNPCCallbacks']
+    0018 [line  407] 0x00C1C246  GETTABLE   R9 = R1[K[7]='target']
+    0019 [line  407] 0x0100021C  CALL       A=8 B=2 C=0
+    0020 [line  407] 0x000001DE  RETURN     A=7 B=0 C=0
+    0021 [line  407] 0x801BC016  JMP        A=0 sBx=112
+    0022 [line  408] 0x02C20017  EQ         A=0 B=R5 C=K[8]='kill'
+    0023 [line  408] 0x8002C016  JMP        A=0 sBx=12
+    0024 [line  409] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0025 [line  409] 0x80000016  JMP        A=0 sBx=1
+    0026 [line  409] 0x000241C1  LOADK      R7 = K[9]=11.0
+    0027 [line  409] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0028 [line  409] 0x04428206  GETTABLE   R8 = R8[K[10]='KillCallbacks']
+    0029 [line  409] 0x00C1C246  GETTABLE   R9 = R1[K[7]='target']
+    0030 [line  409] 0x01000280  MOVE       R10 = R2
+    0031 [line  409] 0x018002C0  MOVE       R11 = R3
+    0032 [line  409] 0x02000300  MOVE       R12 = R4
+    0033 [line  409] 0x0280021C  CALL       A=8 B=5 C=0
+    0034 [line  409] 0x000001DE  RETURN     A=7 B=0 C=0
+    0035 [line  409] 0x80184016  JMP        A=0 sBx=98
+    0036 [line  410] 0x02C2C017  EQ         A=0 B=R5 C=K[11]='mine'
+    0037 [line  410] 0x80058016  JMP        A=0 sBx=23
+    0038 [line  411] 0x0040C017  EQ         A=0 B=R0 C=K[3]=0.0
+    0039 [line  411] 0x80024016  JMP        A=0 sBx=10
+    0040 [line  412] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0041 [line  412] 0x80004016  JMP        A=0 sBx=2
+    0042 [line  412] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0043 [line  412] 0x03C141C6  GETTABLE   R7 = R7[K[5]='SEARCH_OBJECT_STOP_DISTANCE']
+    0044 [line  412] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0045 [line  412] 0x04430206  GETTABLE   R8 = R8[K[12]='ClickMatterCallbacks']
+    0046 [line  412] 0x00C1C246  GETTABLE   R9 = R1[K[7]='target']
+    0047 [line  412] 0x0100021C  CALL       A=8 B=2 C=0
+    0048 [line  412] 0x000001DE  RETURN     A=7 B=0 C=0
+    0049 [line  412] 0x8014C016  JMP        A=0 sBx=84
+    0050 [line  414] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0051 [line  414] 0x80004016  JMP        A=0 sBx=2
+    0052 [line  414] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0053 [line  414] 0x03C141C6  GETTABLE   R7 = R7[K[5]='SEARCH_OBJECT_STOP_DISTANCE']
+    0054 [line  414] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0055 [line  414] 0x04434206  GETTABLE   R8 = R8[K[13]='TaskGatherMineCallbacks']
+    0056 [line  414] 0x00000240  MOVE       R9 = R0
+    0057 [line  414] 0x00C1C286  GETTABLE   R10 = R1[K[7]='target']
+    0058 [line  414] 0x0180021C  CALL       A=8 B=3 C=0
+    0059 [line  414] 0x000001DE  RETURN     A=7 B=0 C=0
+    0060 [line  415] 0x80120016  JMP        A=0 sBx=73
+    0061 [line  416] 0x02C38017  EQ         A=0 B=R5 C=K[14]='autofight'
+    0062 [line  416] 0x80028016  JMP        A=0 sBx=11
+    0063 [line  417] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0064 [line  417] 0x80000016  JMP        A=0 sBx=1
+    0065 [line  417] 0x0003C1C1  LOADK      R7 = K[15]=1.0
+    0066 [line  417] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0067 [line  417] 0x04440206  GETTABLE   R8 = R8[K[16]='AutoFightCallbacks']
+    0068 [line  417] 0x01000240  MOVE       R9 = R2
+    0069 [line  417] 0x01800280  MOVE       R10 = R3
+    0070 [line  417] 0x020002C0  MOVE       R11 = R4
+    0071 [line  417] 0x0200021C  CALL       A=8 B=4 C=0
+    0072 [line  417] 0x000001DE  RETURN     A=7 B=0 C=0
+    0073 [line  417] 0x800EC016  JMP        A=0 sBx=60
+    0074 [line  418] 0x02C44017  EQ         A=0 B=R5 C=K[17]='useitem'
+    0075 [line  418] 0x80020016  JMP        A=0 sBx=9
+    0076 [line  419] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0077 [line  419] 0x80000016  JMP        A=0 sBx=1
+    0078 [line  419] 0x0003C1C1  LOADK      R7 = K[15]=1.0
+    0079 [line  419] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0080 [line  419] 0x04448206  GETTABLE   R8 = R8[K[18]='UseItemCallbacks']
+    0081 [line  419] 0x00C1C246  GETTABLE   R9 = R1[K[7]='target']
+    0082 [line  419] 0x0100021C  CALL       A=8 B=2 C=0
+    0083 [line  419] 0x000001DE  RETURN     A=7 B=0 C=0
+    0084 [line  419] 0x800C0016  JMP        A=0 sBx=49
+    0085 [line  420] 0x02C4C017  EQ         A=0 B=R5 C=K[19]='dropinfo'
+    0086 [line  420] 0x80020016  JMP        A=0 sBx=9
+    0087 [line  421] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0088 [line  421] 0x80000016  JMP        A=0 sBx=1
+    0089 [line  421] 0x0003C1C1  LOADK      R7 = K[15]=1.0
+    0090 [line  421] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0091 [line  421] 0x04450206  GETTABLE   R8 = R8[K[20]='DropInfoCallbacks']
+    0092 [line  421] 0x00C1C246  GETTABLE   R9 = R1[K[7]='target']
+    0093 [line  421] 0x0100021C  CALL       A=8 B=2 C=0
+    0094 [line  421] 0x000001DE  RETURN     A=7 B=0 C=0
+    0095 [line  421] 0x80094016  JMP        A=0 sBx=38
+    0096 [line  422] 0x02C54017  EQ         A=0 B=R5 C=K[21]='custom'
+    0097 [line  422] 0x80018016  JMP        A=0 sBx=7
+    0098 [line  423] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0099 [line  423] 0x80000016  JMP        A=0 sBx=1
+    0100 [line  423] 0x0003C1C1  LOADK      R7 = K[15]=1.0
+    0101 [line  423] 0x00C1C206  GETTABLE   R8 = R1[K[7]='target']
+    0102 [line  423] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0103 [line  423] 0x020001DE  RETURN     A=7 B=4 C=0
+    0104 [line  423] 0x80070016  JMP        A=0 sBx=29
+    0105 [line  424] 0x02C58017  EQ         A=0 B=R5 C=K[22]='redirect'
+    0106 [line  424] 0x80024016  JMP        A=0 sBx=10
+    0107 [line  425] 0x030041DB  TESTSET    A=7 B=6 C=1
+    0108 [line  425] 0x80000016  JMP        A=0 sBx=1
+    0109 [line  425] 0x0003C1C1  LOADK      R7 = K[15]=1.0
+    0110 [line  440] 0x00000224  CLOSURE    R8 = PROTO[0]
+    0111 [line  440] 0x00800000  MOVE       R0 = R1
+    0112 [line  440] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0113 [line  440] 0x00000000  MOVE       R0 = R0
+    0114 [line  440] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0115 [line  440] 0x020001DE  RETURN     A=7 B=4 C=0
+    0116 [line  440] 0x80040016  JMP        A=0 sBx=17
+    0117 [line  441] 0x02C5C017  EQ         A=0 B=R5 C=K[23]='escort'
+    0118 [line  441] 0x8002C016  JMP        A=0 sBx=12
+    0119 [line  442] 0x000601C5  GETGLOBAL  R7 = GLOBAL K[24]='require'
+    0120 [line  442] 0x00064201  LOADK      R8 = K[25]='Task.ECSpecialTaskTarget'
+    0121 [line  442] 0x010081DC  CALL       A=7 B=2 C=2
+    0122 [line  443] 0x0300421B  TESTSET    A=8 B=6 C=1
+    0123 [line  443] 0x80000016  JMP        A=0 sBx=1
+    0124 [line  443] 0x0003C201  LOADK      R8 = K[15]=1.0
+    0125 [line  443] 0x03C68246  GETTABLE   R9 = R7[K[26]='MakeStartEscortAutoMove']
+    0126 [line  443] 0x00000280  MOVE       R10 = R0
+    0127 [line  443] 0x0100825C  CALL       A=9 B=2 C=2
+    0128 [line  443] 0x05000283  LOADNIL    A=10 B=10 C=0 Bx=5120
+    0129 [line  443] 0x0200021E  RETURN     A=8 B=4 C=0
+    0130 [line  443] 0x80008016  JMP        A=0 sBx=3
+    0131 [line  446] 0x0000C1C1  LOADK      R7 = K[3]=0.0
+    0132 [line  446] 0x04800203  LOADNIL    A=8 B=9 C=0 Bx=4608
+    0133 [line  446] 0x020001DE  RETURN     A=7 B=4 C=0
+    0134 [line  448] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 134
+    'action': 0 -> 134
+    'sceneId': 0 -> 134
+    'x': 0 -> 134
+    'z': 0 -> 134
+    'actionType': 1 -> 134
+    'stopDis': 2 -> 134
+    'ECSpecialTaskTarget': 122 -> 130
+
+        ============================================================
+        PROTO ROOT.16.0
+        Offset : 0x3AC4
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 425 - 440
+        Params : 0
+        Stack  : 15
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'target'
+        K[001] = 'nation'
+        K[002] = 'sid'
+        K[003] = 'x'
+        K[004] = 'z'
+        K[005] = 'action'
+        K[006] = 'GenTaskCallbacks'
+        K[007] = 'nationId'
+        K[008] = 'sceneId'
+        K[009] = 'stopDistance'
+        K[010] = 'MakeMoveTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  426] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  426] 0x00400006  GETTABLE   R0 = R0[K[0]='target']
+        0002 [line  426] 0x0080801C  CALL       A=0 B=1 C=2
+        0003 [line  429] 0x00404046  GETTABLE   R1 = R0[K[1]='nation']
+        0004 [line  429] 0x00408086  GETTABLE   R2 = R0[K[2]='sid']
+        0005 [line  429] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='x']
+        0006 [line  429] 0x00410106  GETTABLE   R4 = R0[K[4]='z']
+        0007 [line  429] 0x00414146  GETTABLE   R5 = R0[K[5]='action']
+        0008 [line  431] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+        0009 [line  431] 0x03418186  GETTABLE   R6 = R6[K[6]='GenTaskCallbacks']
+        0010 [line  431] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+        0011 [line  431] 0x02800200  MOVE       R8 = R5
+        0012 [line  431] 0x01000240  MOVE       R9 = R2
+        0013 [line  431] 0x01800280  MOVE       R10 = R3
+        0014 [line  431] 0x020002C0  MOVE       R11 = R4
+        0015 [line  431] 0x0301019C  CALL       A=6 B=6 C=4
+        0016 [line  432] 0x0001424A  NEWTABLE   A=9 B=0 C=5 Bx=5
+        0017 [line  432] 0x83804249  SETTABLE   R9[K[7]='nationId'] = R1
+        0018 [line  432] 0x84008249  SETTABLE   R9[K[8]='sceneId'] = R2
+        0019 [line  432] 0x8180C249  SETTABLE   R9[K[3]='x'] = R3
+        0020 [line  432] 0x82010249  SETTABLE   R9[K[4]='z'] = R4
+        0021 [line  432] 0x84818249  SETTABLE   R9[K[9]='stopDistance'] = R6
+        0022 [line  434] 0x00800284  GETUPVAL   A=10 B=1 C=0 Bx=512
+        0023 [line  434] 0x05428286  GETTABLE   R10 = R10[K[10]='MakeMoveTask']
+        0024 [line  434] 0x048002C0  MOVE       R11 = R9
+        0025 [line  434] 0x0100829C  CALL       A=10 B=2 C=2
+        0026 [line  435] 0x0000029A  TEST       A=10 B=0 C=0
+        0027 [line  435] 0x80014016  JMP        A=0 sBx=6
+        0028 [line  436] 0x050002C0  MOVE       R11 = R10
+        0029 [line  436] 0x03800300  MOVE       R12 = R7
+        0030 [line  436] 0x04000340  MOVE       R13 = R8
+        0031 [line  436] 0x04800380  MOVE       R14 = R9
+        0032 [line  436] 0x028002DE  RETURN     A=11 B=5 C=0
+        0033 [line  436] 0x80004016  JMP        A=0 sBx=2
+        0034 [line  438] 0x070002C3  LOADNIL    A=11 B=14 C=0 Bx=7168
+        0035 [line  438] 0x028002DE  RETURN     A=11 B=5 C=0
+        0036 [line  440] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'realTarget': 3 -> 36
+        'newNationId': 8 -> 36
+        'newSceneId': 8 -> 36
+        'newX': 8 -> 36
+        'newZ': 8 -> 36
+        'newAction': 8 -> 36
+        'newStopDistance': 16 -> 36
+        'newOnFinish': 16 -> 36
+        'newCheckFinish': 16 -> 36
+        'realPosInfo': 22 -> 36
+        'newTask': 26 -> 36
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x40AD
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 458 - 471
+    Params : 1
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'type'
+    K[001] = 'talk'
+    K[002] = 'kill'
+    K[003] = 'mine'
+    K[004] = 'autofight'
+    K[005] = 'target'
+    K[006] = 'sid'
+    K[007] = 'pos_x'
+    K[008] = 'pos_z'
+    K[009] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  459] 0x00400046  GETTABLE   R1 = R0[K[0]='type']
+    0001 [line  460] 0x00C04057  EQ         A=1 B=R1 C=K[1]='talk'
+    0002 [line  460] 0x80014016  JMP        A=0 sBx=6
+    0003 [line  460] 0x00C08057  EQ         A=1 B=R1 C=K[2]='kill'
+    0004 [line  460] 0x8000C016  JMP        A=0 sBx=4
+    0005 [line  460] 0x00C0C057  EQ         A=1 B=R1 C=K[3]='mine'
+    0006 [line  460] 0x80004016  JMP        A=0 sBx=2
+    0007 [line  460] 0x00C10017  EQ         A=0 B=R1 C=K[4]='autofight'
+    0008 [line  460] 0x80040016  JMP        A=0 sBx=17
+    0009 [line  461] 0x00414086  GETTABLE   R2 = R0[K[5]='target']
+    0010 [line  462] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0011 [line  462] 0x018080C6  GETTABLE   R3 = R3[R2]
+    0012 [line  463] 0x000000DA  TEST       A=3 B=0 C=0
+    0013 [line  463] 0x80014016  JMP        A=0 sBx=6
+    0014 [line  464] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0015 [line  464] 0x01C18146  GETTABLE   R5 = R3[K[6]='sid']
+    0016 [line  464] 0x01C1C186  GETTABLE   R6 = R3[K[7]='pos_x']
+    0017 [line  464] 0x01C201C6  GETTABLE   R7 = R3[K[8]='pos_z']
+    0018 [line  464] 0x0280011E  RETURN     A=4 B=5 C=0
+    0019 [line  464] 0x80028016  JMP        A=0 sBx=11
+    0020 [line  466] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0021 [line  466] 0x00024141  LOADK      R5 = K[9]=0.0
+    0022 [line  466] 0x00024181  LOADK      R6 = K[9]=0.0
+    0023 [line  466] 0x000241C1  LOADK      R7 = K[9]=0.0
+    0024 [line  466] 0x0280011E  RETURN     A=4 B=5 C=0
+    0025 [line  467] 0x80010016  JMP        A=0 sBx=5
+    0026 [line  469] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0027 [line  469] 0x000240C1  LOADK      R3 = K[9]=0.0
+    0028 [line  469] 0x00024101  LOADK      R4 = K[9]=0.0
+    0029 [line  469] 0x00024141  LOADK      R5 = K[9]=0.0
+    0030 [line  469] 0x0280009E  RETURN     A=2 B=5 C=0
+    0031 [line  471] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'action': 0 -> 31
+    'actionType': 1 -> 31
+    'targetTid': 10 -> 25
+    'info': 12 -> 25
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x429D
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 475 - 477
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line  476] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  476] 0x00400017  EQ         A=0 B=R0 C=K[0]=None
+    0002 [line  476] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  476] 0x00004002  LOADBOOL   A=0 B=0 C=1
+    0004 [line  476] 0x00800002  LOADBOOL   A=0 B=1 C=0
+    0005 [line  476] 0x0100001E  RETURN     A=0 B=2 C=0
+    0006 [line  477] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x4319
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 479 - 501
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'stopAutoMoveTask'
+    K[001] = 'EventManager'
+    K[002] = 'raiseEvent'
+    K[003] = 'self'
+    K[004] = 'Empty'
+    K[005] = 'Instance'
+    K[006] = 'm_HostPlayer'
+    K[007] = 'SkillHdl'
+    K[008] = 'LeaveAutoFightingState'
+    K[009] = 'start'
+    K[010] = 'isActive'
+    K[011] = 'require'
+    K[012] = 'GUI.ECPanelAutoMoveStatus'
+    K[013] = 'Create'
+    K[014] = 'continueWith'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  480] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  480] 0x00C00046  GETTABLE   R1 = R1[K[0]='stopAutoMoveTask']
+    0002 [line  480] 0x0080405C  CALL       A=1 B=1 C=1
+    0003 [line  482] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0004 [line  482] 0x00C04046  GETTABLE   R1 = R1[K[1]='EventManager']
+    0005 [line  482] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0006 [line  482] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='self'
+    0007 [line  482] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0008 [line  482] 0x02410106  GETTABLE   R4 = R4[K[4]='Empty']
+    0009 [line  482] 0x0080011C  CALL       A=4 B=1 C=0
+    0010 [line  482] 0x0000405C  CALL       A=1 B=0 C=1
+    0011 [line  484] 0x01800008  SETUPVAL   A=0 B=3 C=0 Bx=1536
+    0012 [line  486] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0013 [line  486] 0x00C14046  GETTABLE   R1 = R1[K[5]='Instance']
+    0014 [line  486] 0x0080805C  CALL       A=1 B=1 C=2
+    0015 [line  486] 0x00C18046  GETTABLE   R1 = R1[K[6]='m_HostPlayer']
+    0016 [line  487] 0x00C1C086  GETTABLE   R2 = R1[K[7]='SkillHdl']
+    0017 [line  487] 0x0142008B  SELF       A=2 B=2 C=264 Bx=1288
+    0018 [line  487] 0x0100409C  CALL       A=2 B=2 C=1
+    0019 [line  490] 0x0042408B  SELF       A=2 B=0 C=265 Bx=265
+    0020 [line  490] 0x0100409C  CALL       A=2 B=2 C=1
+    0021 [line  492] 0x0042808B  SELF       A=2 B=0 C=266 Bx=266
+    0022 [line  492] 0x0100809C  CALL       A=2 B=2 C=2
+    0023 [line  492] 0x0000009A  TEST       A=2 B=0 C=0
+    0024 [line  492] 0x80024016  JMP        A=0 sBx=10
+    0025 [line  493] 0x0002C085  GETGLOBAL  R2 = GLOBAL K[11]='require'
+    0026 [line  493] 0x000300C1  LOADK      R3 = K[12]='GUI.ECPanelAutoMoveStatus'
+    0027 [line  493] 0x0100809C  CALL       A=2 B=2 C=2
+    0028 [line  494] 0x014140C6  GETTABLE   R3 = R2[K[5]='Instance']
+    0029 [line  494] 0x008080DC  CALL       A=3 B=1 C=2
+    0030 [line  494] 0x01C340CB  SELF       A=3 B=3 C=269 Bx=1805
+    0031 [line  494] 0x010040DC  CALL       A=3 B=2 C=1
+    0032 [line  496] 0x004380CB  SELF       A=3 B=0 C=270 Bx=270
+    0033 [line  499] 0x00000164  CLOSURE    R5 = PROTO[0]
+    0034 [line  496] 0x018040DC  CALL       A=3 B=3 C=1
+    0035 [line  501] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'newTask': 0 -> 35
+    'hp': 16 -> 35
+    'ECPanelAutoMoveStatus': 28 -> 35
+
+        ============================================================
+        PROTO ROOT.19.0
+        Offset : 0x44BF
+        Source : '@lua\\players\\ecautomove.lua'
+        Lines  : 496 - 499
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'GUI.ECPanelRideBtn'
+        K[002] = 'CancelGetOnRideIfPossible'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  497] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  497] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelRideBtn'
+        0002 [line  497] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  498] 0x00408046  GETTABLE   R1 = R0[K[2]='CancelGetOnRideIfPossible']
+        0004 [line  498] 0x0080405C  CALL       A=1 B=1 C=1
+        0005 [line  499] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECPanelRideBtn': 3 -> 5
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x469E
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 504 - 515
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECPanelAutoMoveStatus'
+    K[002] = 'Instance'
+    K[003] = 'Destroy'
+    K[004] = 'cancel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  505] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  505] 0x0000001A  TEST       A=0 B=0 C=0
+    0002 [line  505] 0x80038016  JMP        A=0 sBx=15
+    0003 [line  506] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0004 [line  506] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelAutoMoveStatus'
+    0005 [line  506] 0x0100801C  CALL       A=0 B=2 C=2
+    0006 [line  507] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0007 [line  507] 0x0080805C  CALL       A=1 B=1 C=2
+    0008 [line  507] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0009 [line  507] 0x0100405C  CALL       A=1 B=2 C=1
+    0010 [line  509] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0011 [line  509] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0012 [line  509] 0x0100405C  CALL       A=1 B=2 C=1
+    0013 [line  510] 0x00800043  LOADNIL    A=1 B=1 C=0 Bx=512
+    0014 [line  510] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+    0015 [line  511] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0016 [line  511] 0x0100005E  RETURN     A=1 B=2 C=0
+    0017 [line  511] 0x80004016  JMP        A=0 sBx=2
+    0018 [line  513] 0x00000002  LOADBOOL   A=0 B=0 C=0
+    0019 [line  513] 0x0100001E  RETURN     A=0 B=2 C=0
+    0020 [line  515] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECPanelAutoMoveStatus': 6 -> 17
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x47FE
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 517 - 523
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECPanelAutoMoveStatus'
+    K[002] = 'Instance'
+    K[003] = 'Destroy'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  518] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0001 [line  518] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelAutoMoveStatus'
+    0002 [line  518] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line  519] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0004 [line  519] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line  519] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0006 [line  519] 0x0100405C  CALL       A=1 B=2 C=1
+    0007 [line  520] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0008 [line  520] 0x0000005A  TEST       A=1 B=0 C=0
+    0009 [line  520] 0x80004016  JMP        A=0 sBx=2
+    0010 [line  521] 0x00800043  LOADNIL    A=1 B=1 C=0 Bx=512
+    0011 [line  521] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+    0012 [line  523] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECPanelAutoMoveStatus': 3 -> 12
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x4912
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 525 - 528
+    Params : 0
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECPanelAutoMoveStatus'
+    K[002] = 'Instance'
+    K[003] = 'SetHide'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  526] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0001 [line  526] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelAutoMoveStatus'
+    0002 [line  526] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line  527] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0004 [line  527] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line  527] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0006 [line  527] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0007 [line  527] 0x0180405C  CALL       A=1 B=3 C=1
+    0008 [line  528] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECPanelAutoMoveStatus': 3 -> 8
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x49EB
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 530 - 533
+    Params : 0
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'GUI.ECPanelAutoMoveStatus'
+    K[002] = 'Instance'
+    K[003] = 'SetHide'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  531] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0001 [line  531] 0x00004041  LOADK      R1 = K[1]='GUI.ECPanelAutoMoveStatus'
+    0002 [line  531] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line  532] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0004 [line  532] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line  532] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0006 [line  532] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0007 [line  532] 0x0180405C  CALL       A=1 B=3 C=1
+    0008 [line  533] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECPanelAutoMoveStatus': 3 -> 8
+
+    ============================================================
+    PROTO ROOT.24
+    Offset : 0x4AC4
+    Source : '@lua\\players\\ecautomove.lua'
+    Lines  : 538 - 538
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'StopAutoMove'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  538] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  538] 0x00400006  GETTABLE   R0 = R0[K[0]='StopAutoMove']
+    0002 [line  538] 0x0080401C  CALL       A=0 B=1 C=1
+    0003 [line  538] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----

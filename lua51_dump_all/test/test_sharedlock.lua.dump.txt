@@ -1,0 +1,793 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\test\test_sharedlock.lua
+SIZE: 5684
+PARSED: 5684
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\test\\test_sharedlock.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 8
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'package'
+K[001] = 'path'
+K[002] = '../?.lua;'
+K[003] = 'require'
+K[004] = 'Utility.SharedLock'
+K[005] = 'print'
+K[006] = 'test success'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='package'
+0001 [line    1] 0x00008041  LOADK      R1 = K[2]='../?.lua;'
+0002 [line    1] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='package'
+0003 [line    1] 0x01404086  GETTABLE   R2 = R2[K[1]='path']
+0004 [line    1] 0x00808055  CONCAT     A=1 B=1 C=2 Bx=514
+0005 [line    1] 0x80804009  SETTABLE   R0[K[1]='path'] = R1
+0006 [line    3] 0x0000C005  GETGLOBAL  R0 = GLOBAL K[3]='require'
+0007 [line    3] 0x00010041  LOADK      R1 = K[4]='Utility.SharedLock'
+0008 [line    3] 0x0100801C  CALL       A=0 B=2 C=2
+0009 [line   37] 0x00000064  CLOSURE    R1 = PROTO[0]
+0010 [line   37] 0x00000000  MOVE       R0 = R0
+0011 [line   38] 0x00800080  MOVE       R2 = R1
+0012 [line   38] 0x0080409C  CALL       A=2 B=1 C=1
+0013 [line   55] 0x000040A4  CLOSURE    R2 = PROTO[1]
+0014 [line   55] 0x00000000  MOVE       R0 = R0
+0015 [line   56] 0x010000C0  MOVE       R3 = R2
+0016 [line   56] 0x008040DC  CALL       A=3 B=1 C=1
+0017 [line   78] 0x000080E4  CLOSURE    R3 = PROTO[2]
+0018 [line   78] 0x00000000  MOVE       R0 = R0
+0019 [line   79] 0x01800100  MOVE       R4 = R3
+0020 [line   79] 0x0080411C  CALL       A=4 B=1 C=1
+0021 [line  107] 0x0000C124  CLOSURE    R4 = PROTO[3]
+0022 [line  107] 0x00000000  MOVE       R0 = R0
+0023 [line  108] 0x02000140  MOVE       R5 = R4
+0024 [line  108] 0x0080415C  CALL       A=5 B=1 C=1
+0025 [line  146] 0x00010164  CLOSURE    R5 = PROTO[4]
+0026 [line  146] 0x00000000  MOVE       R0 = R0
+0027 [line  147] 0x02800180  MOVE       R6 = R5
+0028 [line  147] 0x0080419C  CALL       A=6 B=1 C=1
+0029 [line  149] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='print'
+0030 [line  149] 0x000181C1  LOADK      R7 = K[6]='test success'
+0031 [line  149] 0x0100419C  CALL       A=6 B=2 C=1
+0032 [line  149] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'SharedLock': 9 -> 32
+'testBasic': 11 -> 32
+'testUnlockWaiting': 15 -> 32
+'testTryLock': 19 -> 32
+'testRecursiveLock': 23 -> 32
+'testAccessState': 27 -> 32
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x132
+    Source : '@lua\\test\\test_sharedlock.lua'
+    Lines  : 5 - 37
+    Params : 0
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'lock'
+    K[001] = 2.0
+    K[002] = 'assert'
+    K[003] = 'canLock'
+    K[004] = 1.0
+    K[005] = 3.0
+    K[006] = 'unlock'
+
+    ----- INSTRUCTIONS -----
+    0000 [line    6] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line    6] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line    8] 0x00000042  LOADBOOL   A=1 B=0 C=0
+    0003 [line    9] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+    0004 [line    9] 0x00004101  LOADK      R4 = K[1]=2.0
+    0005 [line    9] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0006 [line    9] 0x00004181  LOADK      R6 = K[1]=2.0
+    0007 [line    9] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0008 [line   11] 0x00000224  CLOSURE    R8 = PROTO[0]
+    0009 [line   11] 0x00800000  MOVE       R0 = R1
+    0010 [line    9] 0x0380809C  CALL       A=2 B=7 C=2
+    0011 [line   12] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0012 [line   12] 0x00800100  MOVE       R4 = R1
+    0013 [line   12] 0x010040DC  CALL       A=3 B=2 C=1
+    0014 [line   14] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0015 [line   14] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0016 [line   14] 0x00010181  LOADK      R6 = K[4]=1.0
+    0017 [line   14] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0018 [line   14] 0x0200811C  CALL       A=4 B=4 C=2
+    0019 [line   14] 0x02000113  NOT        A=4 B=4 C=0 Bx=2048
+    0020 [line   14] 0x010040DC  CALL       A=3 B=2 C=1
+    0021 [line   15] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0022 [line   15] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0023 [line   15] 0x00010181  LOADK      R6 = K[4]=1.0
+    0024 [line   15] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0025 [line   15] 0x0200811C  CALL       A=4 B=4 C=2
+    0026 [line   15] 0x02000113  NOT        A=4 B=4 C=0 Bx=2048
+    0027 [line   15] 0x010040DC  CALL       A=3 B=2 C=1
+    0028 [line   16] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0029 [line   16] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0030 [line   16] 0x00004181  LOADK      R6 = K[1]=2.0
+    0031 [line   16] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0032 [line   16] 0x0200811C  CALL       A=4 B=4 C=2
+    0033 [line   16] 0x02000113  NOT        A=4 B=4 C=0 Bx=2048
+    0034 [line   16] 0x010040DC  CALL       A=3 B=2 C=1
+    0035 [line   17] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0036 [line   17] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0037 [line   17] 0x00004181  LOADK      R6 = K[1]=2.0
+    0038 [line   17] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0039 [line   17] 0x0200011C  CALL       A=4 B=4 C=0
+    0040 [line   17] 0x000040DC  CALL       A=3 B=0 C=1
+    0041 [line   18] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0042 [line   18] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0043 [line   18] 0x00014181  LOADK      R6 = K[5]=3.0
+    0044 [line   18] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0045 [line   18] 0x0200011C  CALL       A=4 B=4 C=0
+    0046 [line   18] 0x000040DC  CALL       A=3 B=0 C=1
+    0047 [line   19] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0048 [line   19] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0049 [line   19] 0x00014181  LOADK      R6 = K[5]=3.0
+    0050 [line   19] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0051 [line   19] 0x0200011C  CALL       A=4 B=4 C=0
+    0052 [line   19] 0x000040DC  CALL       A=3 B=0 C=1
+    0053 [line   21] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0054 [line   22] 0x0040010B  SELF       A=4 B=0 C=256 Bx=256
+    0055 [line   22] 0x00004181  LOADK      R6 = K[1]=2.0
+    0056 [line   22] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0057 [line   22] 0x00004201  LOADK      R8 = K[1]=2.0
+    0058 [line   22] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0059 [line   24] 0x000042A4  CLOSURE    R10 = PROTO[1]
+    0060 [line   24] 0x01800000  MOVE       R0 = R3
+    0061 [line   22] 0x0380811C  CALL       A=4 B=7 C=2
+    0062 [line   25] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0063 [line   25] 0x01800193  NOT        A=6 B=3 C=0 Bx=1536
+    0064 [line   25] 0x0100415C  CALL       A=5 B=2 C=1
+    0065 [line   27] 0x0041814B  SELF       A=5 B=0 C=262 Bx=262
+    0066 [line   27] 0x010001C0  MOVE       R7 = R2
+    0067 [line   27] 0x0180415C  CALL       A=5 B=3 C=1
+    0068 [line   28] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0069 [line   28] 0x01800180  MOVE       R6 = R3
+    0070 [line   28] 0x0100415C  CALL       A=5 B=2 C=1
+    0071 [line   29] 0x0041814B  SELF       A=5 B=0 C=262 Bx=262
+    0072 [line   29] 0x020001C0  MOVE       R7 = R4
+    0073 [line   29] 0x0180415C  CALL       A=5 B=3 C=1
+    0074 [line   31] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0075 [line   31] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0076 [line   31] 0x00010201  LOADK      R8 = K[4]=1.0
+    0077 [line   31] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0078 [line   31] 0x0200019C  CALL       A=6 B=4 C=0
+    0079 [line   31] 0x0000415C  CALL       A=5 B=0 C=1
+    0080 [line   32] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0081 [line   32] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0082 [line   32] 0x00010201  LOADK      R8 = K[4]=1.0
+    0083 [line   32] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0084 [line   32] 0x0200019C  CALL       A=6 B=4 C=0
+    0085 [line   32] 0x0000415C  CALL       A=5 B=0 C=1
+    0086 [line   33] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0087 [line   33] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0088 [line   33] 0x00004201  LOADK      R8 = K[1]=2.0
+    0089 [line   33] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0090 [line   33] 0x0200019C  CALL       A=6 B=4 C=0
+    0091 [line   33] 0x0000415C  CALL       A=5 B=0 C=1
+    0092 [line   34] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0093 [line   34] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0094 [line   34] 0x00004201  LOADK      R8 = K[1]=2.0
+    0095 [line   34] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0096 [line   34] 0x0200019C  CALL       A=6 B=4 C=0
+    0097 [line   34] 0x0000415C  CALL       A=5 B=0 C=1
+    0098 [line   35] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0099 [line   35] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0100 [line   35] 0x00014201  LOADK      R8 = K[5]=3.0
+    0101 [line   35] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0102 [line   35] 0x0200019C  CALL       A=6 B=4 C=0
+    0103 [line   35] 0x0000415C  CALL       A=5 B=0 C=1
+    0104 [line   36] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0105 [line   36] 0x0040C18B  SELF       A=6 B=0 C=259 Bx=259
+    0106 [line   36] 0x00014201  LOADK      R8 = K[5]=3.0
+    0107 [line   36] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0108 [line   36] 0x0200019C  CALL       A=6 B=4 C=0
+    0109 [line   36] 0x0000415C  CALL       A=5 B=0 C=1
+    0110 [line   37] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'lock': 2 -> 110
+    'get_lock_1': 3 -> 110
+    'id_1': 11 -> 110
+    'get_lock_2': 54 -> 110
+    'id_2': 62 -> 110
+
+        ============================================================
+        PROTO ROOT.0.0
+        Offset : 0x354
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 9 - 11
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   10] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0001 [line   10] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line   11] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 2
+
+        ============================================================
+        PROTO ROOT.0.1
+        Offset : 0x3B2
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 22 - 24
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   23] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0001 [line   23] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line   24] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x648
+    Source : '@lua\\test\\test_sharedlock.lua'
+    Lines  : 40 - 55
+    Params : 0
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'lock'
+    K[001] = 2.0
+    K[002] = 'assert'
+    K[003] = 'unlock'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   41] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   41] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line   43] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0003 [line   43] 0x000040C1  LOADK      R3 = K[1]=2.0
+    0004 [line   43] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0005 [line   43] 0x00004141  LOADK      R5 = K[1]=2.0
+    0006 [line   43] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0007 [line   43] 0x000001E4  CLOSURE    R7 = PROTO[0]
+    0008 [line   43] 0x0380805C  CALL       A=1 B=7 C=2
+    0009 [line   45] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0010 [line   46] 0x004000CB  SELF       A=3 B=0 C=256 Bx=256
+    0011 [line   46] 0x00004141  LOADK      R5 = K[1]=2.0
+    0012 [line   46] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0013 [line   46] 0x000041C1  LOADK      R7 = K[1]=2.0
+    0014 [line   46] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0015 [line   48] 0x00004264  CLOSURE    R9 = PROTO[1]
+    0016 [line   48] 0x01000000  MOVE       R0 = R2
+    0017 [line   46] 0x038080DC  CALL       A=3 B=7 C=2
+    0018 [line   49] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='assert'
+    0019 [line   49] 0x01000153  NOT        A=5 B=2 C=0 Bx=1024
+    0020 [line   49] 0x0100411C  CALL       A=4 B=2 C=1
+    0021 [line   51] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0022 [line   51] 0x01800180  MOVE       R6 = R3
+    0023 [line   51] 0x0180411C  CALL       A=4 B=3 C=1
+    0024 [line   52] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0025 [line   52] 0x00800180  MOVE       R6 = R1
+    0026 [line   52] 0x0180411C  CALL       A=4 B=3 C=1
+    0027 [line   54] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='assert'
+    0028 [line   54] 0x01000153  NOT        A=5 B=2 C=0 Bx=1024
+    0029 [line   54] 0x0100411C  CALL       A=4 B=2 C=1
+    0030 [line   55] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'lock': 2 -> 30
+    'id_1': 9 -> 30
+    'get_lock_2': 10 -> 30
+    'id_2': 18 -> 30
+
+        ============================================================
+        PROTO ROOT.1.0
+        Offset : 0x70B
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 43 - 43
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   43] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 0
+
+        ============================================================
+        PROTO ROOT.1.1
+        Offset : 0x74A
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 46 - 48
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   47] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0001 [line   47] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line   48] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x889
+    Source : '@lua\\test\\test_sharedlock.lua'
+    Lines  : 58 - 78
+    Params : 0
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'lock'
+    K[001] = 2.0
+    K[002] = 'tryLock'
+    K[003] = 'assert'
+    K[004] = 'unlock'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   59] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   59] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line   61] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0003 [line   61] 0x000040C1  LOADK      R3 = K[1]=2.0
+    0004 [line   61] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0005 [line   61] 0x00004141  LOADK      R5 = K[1]=2.0
+    0006 [line   61] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0007 [line   61] 0x000001E4  CLOSURE    R7 = PROTO[0]
+    0008 [line   61] 0x0380805C  CALL       A=1 B=7 C=2
+    0009 [line   63] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0010 [line   64] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+    0011 [line   64] 0x00004141  LOADK      R5 = K[1]=2.0
+    0012 [line   64] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0013 [line   64] 0x000041C1  LOADK      R7 = K[1]=2.0
+    0014 [line   64] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0015 [line   66] 0x00004264  CLOSURE    R9 = PROTO[1]
+    0016 [line   66] 0x01000000  MOVE       R0 = R2
+    0017 [line   64] 0x038080DC  CALL       A=3 B=7 C=2
+    0018 [line   67] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='assert'
+    0019 [line   67] 0x01800153  NOT        A=5 B=3 C=0 Bx=1536
+    0020 [line   67] 0x0100411C  CALL       A=4 B=2 C=1
+    0021 [line   68] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='assert'
+    0022 [line   68] 0x01000153  NOT        A=5 B=2 C=0 Bx=1024
+    0023 [line   68] 0x0100411C  CALL       A=4 B=2 C=1
+    0024 [line   70] 0x0041010B  SELF       A=4 B=0 C=260 Bx=260
+    0025 [line   70] 0x00800180  MOVE       R6 = R1
+    0026 [line   70] 0x0180411C  CALL       A=4 B=3 C=1
+    0027 [line   71] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='assert'
+    0028 [line   71] 0x01000153  NOT        A=5 B=2 C=0 Bx=1024
+    0029 [line   71] 0x0100411C  CALL       A=4 B=2 C=1
+    0030 [line   73] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0031 [line   74] 0x0040814B  SELF       A=5 B=0 C=258 Bx=258
+    0032 [line   74] 0x000041C1  LOADK      R7 = K[1]=2.0
+    0033 [line   74] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0034 [line   74] 0x00004241  LOADK      R9 = K[1]=2.0
+    0035 [line   74] 0x00800282  LOADBOOL   A=10 B=1 C=0
+    0036 [line   76] 0x000082E4  CLOSURE    R11 = PROTO[2]
+    0037 [line   76] 0x02000000  MOVE       R0 = R4
+    0038 [line   74] 0x0380815C  CALL       A=5 B=7 C=2
+    0039 [line   77] 0x0000C185  GETGLOBAL  R6 = GLOBAL K[3]='assert'
+    0040 [line   77] 0x020001C0  MOVE       R7 = R4
+    0041 [line   77] 0x0100419C  CALL       A=6 B=2 C=1
+    0042 [line   78] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'lock': 2 -> 42
+    'id_1': 9 -> 42
+    'get_lock_2': 10 -> 42
+    'id_2': 18 -> 42
+    'get_lock_3': 31 -> 42
+    'id_3': 39 -> 42
+
+        ============================================================
+        PROTO ROOT.2.0
+        Offset : 0x989
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 61 - 61
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   61] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 0
+
+        ============================================================
+        PROTO ROOT.2.1
+        Offset : 0x9C8
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 64 - 66
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   65] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0001 [line   65] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line   66] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 2
+
+        ============================================================
+        PROTO ROOT.2.2
+        Offset : 0xA26
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 74 - 76
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   75] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0001 [line   75] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line   76] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xBBD
+    Source : '@lua\\test\\test_sharedlock.lua'
+    Lines  : 81 - 107
+    Params : 0
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'lock'
+    K[001] = 2.0
+    K[002] = 'assert'
+    K[003] = 'unlock'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   82] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   82] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line   84] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0003 [line   84] 0x000040C1  LOADK      R3 = K[1]=2.0
+    0004 [line   84] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0005 [line   84] 0x00004141  LOADK      R5 = K[1]=2.0
+    0006 [line   84] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0007 [line   84] 0x000001E4  CLOSURE    R7 = PROTO[0]
+    0008 [line   84] 0x0380805C  CALL       A=1 B=7 C=2
+    0009 [line   86] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0010 [line   87] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0011 [line   89] 0x0040010B  SELF       A=4 B=0 C=256 Bx=256
+    0012 [line   89] 0x00004181  LOADK      R6 = K[1]=2.0
+    0013 [line   89] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0014 [line   89] 0x00004201  LOADK      R8 = K[1]=2.0
+    0015 [line   89] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0016 [line   98] 0x000042A4  CLOSURE    R10 = PROTO[1]
+    0017 [line   98] 0x00000000  MOVE       R0 = R0
+    0018 [line   98] 0x01000000  MOVE       R0 = R2
+    0019 [line   98] 0x01800000  MOVE       R0 = R3
+    0020 [line   89] 0x0380811C  CALL       A=4 B=7 C=2
+    0021 [line  100] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0022 [line  100] 0x01000193  NOT        A=6 B=2 C=0 Bx=1024
+    0023 [line  100] 0x0100415C  CALL       A=5 B=2 C=1
+    0024 [line  101] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0025 [line  101] 0x01800193  NOT        A=6 B=3 C=0 Bx=1536
+    0026 [line  101] 0x0100415C  CALL       A=5 B=2 C=1
+    0027 [line  103] 0x0040C14B  SELF       A=5 B=0 C=259 Bx=259
+    0028 [line  103] 0x008001C0  MOVE       R7 = R1
+    0029 [line  103] 0x0180415C  CALL       A=5 B=3 C=1
+    0030 [line  105] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0031 [line  105] 0x01000180  MOVE       R6 = R2
+    0032 [line  105] 0x0100415C  CALL       A=5 B=2 C=1
+    0033 [line  106] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0034 [line  106] 0x01800180  MOVE       R6 = R3
+    0035 [line  106] 0x0100415C  CALL       A=5 B=2 C=1
+    0036 [line  107] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'lock': 2 -> 36
+    'id_1': 9 -> 36
+    'get_lock_2': 10 -> 36
+    'get_lock_2s': 11 -> 36
+    'id_2': 21 -> 36
+
+        ============================================================
+        PROTO ROOT.3.0
+        Offset : 0xC98
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 84 - 84
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   84] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 0
+
+        ============================================================
+        PROTO ROOT.3.1
+        Offset : 0xCD7
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 89 - 98
+        Params : 1
+        Stack  : 8
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'lock'
+        K[001] = 1.0
+        K[002] = 'unlock'
+
+        ----- INSTRUCTIONS -----
+        0000 [line   90] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0001 [line   90] 0x00C0004B  SELF       A=1 B=1 C=256 Bx=768
+        0002 [line   90] 0x000040C1  LOADK      R3 = K[1]=1.0
+        0003 [line   90] 0x00800102  LOADBOOL   A=4 B=1 C=0
+        0004 [line   90] 0x00004141  LOADK      R5 = K[1]=1.0
+        0005 [line   90] 0x00800182  LOADBOOL   A=6 B=1 C=0
+        0006 [line   94] 0x000001E4  CLOSURE    R7 = PROTO[0]
+        0007 [line   94] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0008 [line   94] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0009 [line   94] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0010 [line   90] 0x0380405C  CALL       A=1 B=7 C=1
+        0011 [line   96] 0x00800042  LOADBOOL   A=1 B=1 C=0
+        0012 [line   96] 0x00800048  SETUPVAL   A=1 B=1 C=0 Bx=512
+        0013 [line   97] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0014 [line   97] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+        0015 [line   97] 0x000000C0  MOVE       R3 = R0
+        0016 [line   97] 0x0180405C  CALL       A=1 B=3 C=1
+        0017 [line   98] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'id': 0 -> 17
+
+            ============================================================
+            PROTO ROOT.3.1.0
+            Offset : 0xD5A
+            Source : '@lua\\test\\test_sharedlock.lua'
+            Lines  : 90 - 94
+            Params : 1
+            Stack  : 4
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'assert'
+            K[001] = 'unlock'
+
+            ----- INSTRUCTIONS -----
+            0000 [line   91] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='assert'
+            0001 [line   91] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+            0002 [line   91] 0x0100405C  CALL       A=1 B=2 C=1
+            0003 [line   92] 0x00800042  LOADBOOL   A=1 B=1 C=0
+            0004 [line   92] 0x00800048  SETUPVAL   A=1 B=1 C=0 Bx=512
+            0005 [line   93] 0x01000044  GETUPVAL   A=1 B=2 C=0 Bx=1024
+            0006 [line   93] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+            0007 [line   93] 0x000000C0  MOVE       R3 = R0
+            0008 [line   93] 0x0180405C  CALL       A=1 B=3 C=1
+            0009 [line   94] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'id': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xFBD
+    Source : '@lua\\test\\test_sharedlock.lua'
+    Lines  : 110 - 146
+    Params : 0
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'makeAccessState'
+    K[001] = 2.0
+    K[002] = 'assert'
+    K[003] = 'state'
+    K[004] = 'none'
+    K[005] = 'lock'
+    K[006] = 'locked'
+    K[007] = 'locking'
+    K[008] = 'unlock'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  111] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  111] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line  112] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0003 [line  112] 0x000040C1  LOADK      R3 = K[1]=2.0
+    0004 [line  112] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0005 [line  112] 0x00004141  LOADK      R5 = K[1]=2.0
+    0006 [line  112] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0007 [line  112] 0x0300805C  CALL       A=1 B=6 C=2
+    0008 [line  113] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+    0009 [line  113] 0x00004101  LOADK      R4 = K[1]=2.0
+    0010 [line  113] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0011 [line  113] 0x00004181  LOADK      R6 = K[1]=2.0
+    0012 [line  113] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0013 [line  113] 0x0300809C  CALL       A=2 B=6 C=2
+    0014 [line  114] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0015 [line  114] 0x00C0C10B  SELF       A=4 B=1 C=259 Bx=771
+    0016 [line  114] 0x0100811C  CALL       A=4 B=2 C=2
+    0017 [line  114] 0x02410057  EQ         A=1 B=R4 C=K[4]='none'
+    0018 [line  114] 0x80000016  JMP        A=0 sBx=1
+    0019 [line  114] 0x00004102  LOADBOOL   A=4 B=0 C=1
+    0020 [line  114] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0021 [line  114] 0x010040DC  CALL       A=3 B=2 C=1
+    0022 [line  115] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='assert'
+    0023 [line  115] 0x0140C10B  SELF       A=4 B=2 C=259 Bx=1283
+    0024 [line  115] 0x0100811C  CALL       A=4 B=2 C=2
+    0025 [line  115] 0x02410057  EQ         A=1 B=R4 C=K[4]='none'
+    0026 [line  115] 0x80000016  JMP        A=0 sBx=1
+    0027 [line  115] 0x00004102  LOADBOOL   A=4 B=0 C=1
+    0028 [line  115] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0029 [line  115] 0x010040DC  CALL       A=3 B=2 C=1
+    0030 [line  117] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0031 [line  118] 0x00C1410B  SELF       A=4 B=1 C=261 Bx=773
+    0032 [line  120] 0x000001A4  CLOSURE    R6 = PROTO[0]
+    0033 [line  120] 0x01800000  MOVE       R0 = R3
+    0034 [line  118] 0x0180411C  CALL       A=4 B=3 C=1
+    0035 [line  121] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='assert'
+    0036 [line  121] 0x01800140  MOVE       R5 = R3
+    0037 [line  121] 0x0100411C  CALL       A=4 B=2 C=1
+    0038 [line  122] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='assert'
+    0039 [line  122] 0x00C0C14B  SELF       A=5 B=1 C=259 Bx=771
+    0040 [line  122] 0x0100815C  CALL       A=5 B=2 C=2
+    0041 [line  122] 0x02C18057  EQ         A=1 B=R5 C=K[6]='locked'
+    0042 [line  122] 0x80000016  JMP        A=0 sBx=1
+    0043 [line  122] 0x00004142  LOADBOOL   A=5 B=0 C=1
+    0044 [line  122] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0045 [line  122] 0x0100411C  CALL       A=4 B=2 C=1
+    0046 [line  124] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0047 [line  125] 0x0141414B  SELF       A=5 B=2 C=261 Bx=1285
+    0048 [line  127] 0x000041E4  CLOSURE    R7 = PROTO[1]
+    0049 [line  127] 0x02000000  MOVE       R0 = R4
+    0050 [line  125] 0x0180415C  CALL       A=5 B=3 C=1
+    0051 [line  128] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0052 [line  128] 0x02000193  NOT        A=6 B=4 C=0 Bx=2048
+    0053 [line  128] 0x0100415C  CALL       A=5 B=2 C=1
+    0054 [line  130] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='assert'
+    0055 [line  130] 0x0140C18B  SELF       A=6 B=2 C=259 Bx=1283
+    0056 [line  130] 0x0100819C  CALL       A=6 B=2 C=2
+    0057 [line  130] 0x0341C057  EQ         A=1 B=R6 C=K[7]='locking'
+    0058 [line  130] 0x80000016  JMP        A=0 sBx=1
+    0059 [line  130] 0x00004182  LOADBOOL   A=6 B=0 C=1
+    0060 [line  130] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0061 [line  130] 0x0100415C  CALL       A=5 B=2 C=1
+    0062 [line  132] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0063 [line  133] 0x0141418B  SELF       A=6 B=2 C=261 Bx=1285
+    0064 [line  135] 0x00008224  CLOSURE    R8 = PROTO[2]
+    0065 [line  135] 0x02800000  MOVE       R0 = R5
+    0066 [line  133] 0x0180419C  CALL       A=6 B=3 C=1
+    0067 [line  136] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0068 [line  136] 0x028001D3  NOT        A=7 B=5 C=0 Bx=2560
+    0069 [line  136] 0x0100419C  CALL       A=6 B=2 C=1
+    0070 [line  138] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0071 [line  138] 0x0140C1CB  SELF       A=7 B=2 C=259 Bx=1283
+    0072 [line  138] 0x010081DC  CALL       A=7 B=2 C=2
+    0073 [line  138] 0x03C1C057  EQ         A=1 B=R7 C=K[7]='locking'
+    0074 [line  138] 0x80000016  JMP        A=0 sBx=1
+    0075 [line  138] 0x000041C2  LOADBOOL   A=7 B=0 C=1
+    0076 [line  138] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0077 [line  138] 0x0100419C  CALL       A=6 B=2 C=1
+    0078 [line  140] 0x00C2018B  SELF       A=6 B=1 C=264 Bx=776
+    0079 [line  140] 0x0100419C  CALL       A=6 B=2 C=1
+    0080 [line  141] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0081 [line  141] 0x00C0C1CB  SELF       A=7 B=1 C=259 Bx=771
+    0082 [line  141] 0x010081DC  CALL       A=7 B=2 C=2
+    0083 [line  141] 0x03C10057  EQ         A=1 B=R7 C=K[4]='none'
+    0084 [line  141] 0x80000016  JMP        A=0 sBx=1
+    0085 [line  141] 0x000041C2  LOADBOOL   A=7 B=0 C=1
+    0086 [line  141] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0087 [line  141] 0x0100419C  CALL       A=6 B=2 C=1
+    0088 [line  143] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0089 [line  143] 0x020001C0  MOVE       R7 = R4
+    0090 [line  143] 0x0100419C  CALL       A=6 B=2 C=1
+    0091 [line  144] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0092 [line  144] 0x028001C0  MOVE       R7 = R5
+    0093 [line  144] 0x0100419C  CALL       A=6 B=2 C=1
+    0094 [line  145] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='assert'
+    0095 [line  145] 0x0140C1CB  SELF       A=7 B=2 C=259 Bx=1283
+    0096 [line  145] 0x010081DC  CALL       A=7 B=2 C=2
+    0097 [line  145] 0x03C18057  EQ         A=1 B=R7 C=K[6]='locked'
+    0098 [line  145] 0x80000016  JMP        A=0 sBx=1
+    0099 [line  145] 0x000041C2  LOADBOOL   A=7 B=0 C=1
+    0100 [line  145] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0101 [line  145] 0x0100419C  CALL       A=6 B=2 C=1
+    0102 [line  146] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'lock': 2 -> 102
+    'state_1': 8 -> 102
+    'state_2': 14 -> 102
+    'get_lock_1': 31 -> 102
+    'get_lock_2': 47 -> 102
+    'get_lock_2b': 63 -> 102
+
+        ============================================================
+        PROTO ROOT.4.0
+        Offset : 0x11E3
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 118 - 120
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line  119] 0x00800002  LOADBOOL   A=0 B=1 C=0
+        0001 [line  119] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+        0002 [line  120] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.4.1
+        Offset : 0x1232
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 125 - 127
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line  126] 0x00800002  LOADBOOL   A=0 B=1 C=0
+        0001 [line  126] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+        0002 [line  127] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.4.2
+        Offset : 0x1281
+        Source : '@lua\\test\\test_sharedlock.lua'
+        Lines  : 133 - 135
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line  134] 0x00800002  LOADBOOL   A=0 B=1 C=0
+        0001 [line  134] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+        0002 [line  135] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----

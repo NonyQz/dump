@@ -1,0 +1,99 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\test\debug_deadlock.lua
+SIZE: 694
+PARSED: 694
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\test\\debug_deadlock.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 6
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'GameUtil'
+K[001] = 'GetAssetsPath'
+K[002] = '/deadlock.txt'
+K[003] = 'io'
+K[004] = 'open'
+K[005] = 'w'
+K[006] = 'debug'
+K[007] = 'sethook'
+K[008] = 'l'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='GameUtil'
+0001 [line    1] 0x00404006  GETTABLE   R0 = R0[K[1]='GetAssetsPath']
+0002 [line    1] 0x0080801C  CALL       A=0 B=1 C=2
+0003 [line    1] 0x00008041  LOADK      R1 = K[2]='/deadlock.txt'
+0004 [line    1] 0x00004015  CONCAT     A=0 B=0 C=1 Bx=1
+0005 [line    2] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='io'
+0006 [line    2] 0x00C10046  GETTABLE   R1 = R1[K[4]='open']
+0007 [line    2] 0x00000080  MOVE       R2 = R0
+0008 [line    2] 0x000140C1  LOADK      R3 = K[5]='w'
+0009 [line    2] 0x0180805C  CALL       A=1 B=3 C=2
+0010 [line    8] 0x000000A4  CLOSURE    R2 = PROTO[0]
+0011 [line    8] 0x00800000  MOVE       R0 = R1
+0012 [line   10] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='debug'
+0013 [line   10] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='sethook']
+0014 [line   10] 0x01000100  MOVE       R4 = R2
+0015 [line   10] 0x00020141  LOADK      R5 = K[8]='l'
+0016 [line   10] 0x018040DC  CALL       A=3 B=3 C=1
+0017 [line   10] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'logFilePath': 5 -> 17
+'fout': 10 -> 17
+'hook': 12 -> 17
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xF9
+    Source : '@lua\\test\\debug_deadlock.lua'
+    Lines  : 4 - 8
+    Params : 0
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'debug'
+    K[001] = 'getinfo'
+    K[002] = 2.0
+    K[003] = 'Sl'
+    K[004] = 'write'
+    K[005] = 'short_src'
+    K[006] = ':'
+    K[007] = 'currentline'
+    K[008] = '\n'
+    K[009] = 'flush'
+
+    ----- INSTRUCTIONS -----
+    0000 [line    5] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='debug'
+    0001 [line    5] 0x00404006  GETTABLE   R0 = R0[K[1]='getinfo']
+    0002 [line    5] 0x00008041  LOADK      R1 = K[2]=2.0
+    0003 [line    5] 0x0000C081  LOADK      R2 = K[3]='Sl'
+    0004 [line    5] 0x0180801C  CALL       A=0 B=3 C=2
+    0005 [line    6] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0006 [line    6] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0007 [line    6] 0x004140C6  GETTABLE   R3 = R0[K[5]='short_src']
+    0008 [line    6] 0x00018101  LOADK      R4 = K[6]=':'
+    0009 [line    6] 0x0041C146  GETTABLE   R5 = R0[K[7]='currentline']
+    0010 [line    6] 0x00020181  LOADK      R6 = K[8]='\n'
+    0011 [line    6] 0x0300405C  CALL       A=1 B=6 C=1
+    0012 [line    7] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0013 [line    7] 0x00C2404B  SELF       A=1 B=1 C=265 Bx=777
+    0014 [line    7] 0x0100405C  CALL       A=1 B=2 C=1
+    0015 [line    8] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'info': 5 -> 15

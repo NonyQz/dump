@@ -1,0 +1,58 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\configs\npc_list.lua
+SIZE: 445
+PARSED: 445
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\configs\\npc_list.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 8
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'pcall'
+K[001] = 'dofile'
+K[002] = 'Configs/npclist.lua'
+K[003] = 'pairs'
+K[004] = 'tid'
+
+----- INSTRUCTIONS -----
+0000 [line    4] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+0001 [line    5] 0x00800043  LOADNIL    A=1 B=1 C=0 Bx=512
+0002 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='pcall'
+0003 [line    7] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='dofile'
+0004 [line    7] 0x00008101  LOADK      R4 = K[2]='Configs/npclist.lua'
+0005 [line    7] 0x0180C09C  CALL       A=2 B=3 C=3
+0006 [line    7] 0x01800000  MOVE       R0 = R3
+0007 [line    7] 0x01000040  MOVE       R1 = R2
+0008 [line    9] 0x0000001A  TEST       A=0 B=0 C=0
+0009 [line    9] 0x80018016  JMP        A=0 sBx=7
+0010 [line   10] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='pairs'
+0011 [line   10] 0x000000C0  MOVE       R3 = R0
+0012 [line   10] 0x0101009C  CALL       A=2 B=2 C=4
+0013 [line   10] 0x80000016  JMP        A=0 sBx=1
+0014 [line   11] 0x82014189  SETTABLE   R6[K[4]='tid'] = R5
+0015 [line   10] 0x000080A1  TFORLOOP   A=2 B=0 C=2
+0016 [line   11] 0x7FFF0016  JMP        A=0 sBx=-3
+0017 [line   15] 0x0100001E  RETURN     A=0 B=2 C=0
+0018 [line   15] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'NPCList': 1 -> 18
+'ret': 2 -> 18
+'(for generator)': 13 -> 17
+'(for state)': 13 -> 17
+'(for control)': 13 -> 17
+'tid': 14 -> 15
+'info': 14 -> 15

@@ -1,0 +1,105 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_s2c_gs_ping.lua
+SIZE: 847
+PARSED: 847
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_s2c_gs_ping.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 6
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'Main.ECGame'
+K[003] = 'AddHandler'
+K[004] = 'gp_s2c_gs_ping'
+
+----- INSTRUCTIONS -----
+0000 [line    4] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    4] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    4] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    5] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    5] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    5] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   15] 0x000000A4  CLOSURE    R2 = PROTO[0]
+0007 [line   15] 0x00800000  MOVE       R0 = R1
+0008 [line   17] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='AddHandler']
+0009 [line   17] 0x00010101  LOADK      R4 = K[4]='gp_s2c_gs_ping'
+0010 [line   17] 0x01000140  MOVE       R5 = R2
+0011 [line   17] 0x018040DC  CALL       A=3 B=3 C=1
+0012 [line   17] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 12
+'ECGame': 6 -> 12
+'on_gp_s2c_gs_ping': 8 -> 12
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xCB
+    Source : '@lua\\pb\\pb_s2c_gs_ping.lua'
+    Lines  : 7 - 15
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'client_send_time'
+    K[002] = 'mLastCheckTime'
+    K[003] = 'math'
+    K[004] = 'fmod'
+    K[005] = 'floor'
+    K[006] = 'GameUtil'
+    K[007] = 'GetMillisecondsFromEpoch'
+    K[008] = 60000.0
+    K[009] = 'mClientLastTTL'
+    K[010] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line    8] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line    8] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line    8] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line    9] 0x00C040C6  GETTABLE   R3 = R1[K[1]='client_send_time']
+    0004 [line    9] 0x01408106  GETTABLE   R4 = R2[K[2]='mLastCheckTime']
+    0005 [line    9] 0x01810017  EQ         A=0 B=R3 C=R4
+    0006 [line    9] 0x80048016  JMP        A=0 sBx=19
+    0007 [line   10] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='math'
+    0008 [line   10] 0x01C100C6  GETTABLE   R3 = R3[K[4]='fmod']
+    0009 [line   10] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='math'
+    0010 [line   10] 0x02414106  GETTABLE   R4 = R4[K[5]='floor']
+    0011 [line   10] 0x00018145  GETGLOBAL  R5 = GLOBAL K[6]='GameUtil'
+    0012 [line   10] 0x02C1C146  GETTABLE   R5 = R5[K[7]='GetMillisecondsFromEpoch']
+    0013 [line   10] 0x0080015C  CALL       A=5 B=1 C=0
+    0014 [line   10] 0x0000811C  CALL       A=4 B=0 C=2
+    0015 [line   10] 0x00020141  LOADK      R5 = K[8]=60000.0
+    0016 [line   10] 0x018080DC  CALL       A=3 B=3 C=2
+    0017 [line   11] 0x00C04106  GETTABLE   R4 = R1[K[1]='client_send_time']
+    0018 [line   11] 0x0181010D  SUB        A=4 B=R3 C=R4
+    0019 [line   11] 0x84810089  SETTABLE   R2[K[9]='mClientLastTTL'] = R4
+    0020 [line   12] 0x01424106  GETTABLE   R4 = R2[K[9]='mClientLastTTL']
+    0021 [line   12] 0x02428018  LT         A=0 B=R4 C=K[10]=0.0
+    0022 [line   12] 0x80008016  JMP        A=0 sBx=3
+    0023 [line   12] 0x01424106  GETTABLE   R4 = R2[K[9]='mClientLastTTL']
+    0024 [line   12] 0x0242010C  ADD        A=4 B=R4 C=K[8]=60000.0
+    0025 [line   12] 0x84810089  SETTABLE   R2[K[9]='mClientLastTTL'] = R4
+    0026 [line   15] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 26
+    'msg': 0 -> 26
+    'game': 3 -> 26
+    'cur_time': 17 -> 26

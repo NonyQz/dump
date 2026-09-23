@@ -1,0 +1,778 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\test\test_net_common.lua
+SIZE: 6419
+PARSED: 6419
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\test\\test_net_common.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 6
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'PB.net_common'
+K[003] = 'warn'
+K[004] = 'test begin'
+K[005] = 'test_end'
+K[006] = 'error'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    3] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    3] 0x00008081  LOADK      R2 = K[2]='PB.net_common'
+0005 [line    3] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    5] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='warn'
+0007 [line    5] 0x000100C1  LOADK      R3 = K[4]='test begin'
+0008 [line    5] 0x0100409C  CALL       A=2 B=2 C=1
+0009 [line   35] 0x000000A4  CLOSURE    R2 = PROTO[0]
+0010 [line   35] 0x00800000  MOVE       R0 = R1
+0011 [line   35] 0x00000000  MOVE       R0 = R0
+0012 [line   51] 0x000040E4  CLOSURE    R3 = PROTO[1]
+0013 [line   51] 0x00800000  MOVE       R0 = R1
+0014 [line   52] 0x01800100  MOVE       R4 = R3
+0015 [line   52] 0x0080411C  CALL       A=4 B=1 C=1
+0016 [line   54] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='warn'
+0017 [line   54] 0x00014141  LOADK      R5 = K[5]='test_end'
+0018 [line   54] 0x0100411C  CALL       A=4 B=2 C=1
+0019 [line   55] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='error'
+0020 [line   55] 0x0080411C  CALL       A=4 B=1 C=1
+0021 [line   55] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 21
+'net_common': 6 -> 21
+'testBasic': 12 -> 21
+'testProtocol': 14 -> 21
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x103
+    Source : '@lua\\test\\test_net_common.lua'
+    Lines  : 7 - 35
+    Params : 0
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'NET_PROTOCBUF_TYPE'
+    K[001] = 'C2S_GS_PROTOC_TYPE'
+    K[002] = 'S2C_GS_PROTOC_TYPE'
+    K[003] = 'pairs'
+    K[004] = 'type'
+    K[005] = 'table'
+    K[006] = 'GetFieldDescriptor'
+    K[007] = 'enum_type'
+    K[008] = 'AddHandler'
+    K[009] = 'RemoveHandler'
+
+    ----- INSTRUCTIONS -----
+    0000 [line    8] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line    8] 0x00400006  GETTABLE   R0 = R0[K[0]='NET_PROTOCBUF_TYPE']
+    0002 [line    9] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0003 [line    9] 0x00C04046  GETTABLE   R1 = R1[K[1]='C2S_GS_PROTOC_TYPE']
+    0004 [line   10] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0005 [line   10] 0x01408086  GETTABLE   R2 = R2[K[2]='S2C_GS_PROTOC_TYPE']
+    0006 [line   14] 0x000000E4  CLOSURE    R3 = PROTO[0]
+    0007 [line   16] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='pairs'
+    0008 [line   16] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0009 [line   16] 0x0101011C  CALL       A=4 B=2 C=4
+    0010 [line   16] 0x800CC016  JMP        A=0 sBx=52
+    0011 [line   17] 0x00010245  GETGLOBAL  R9 = GLOBAL K[4]='type'
+    0012 [line   17] 0x04000280  MOVE       R10 = R8
+    0013 [line   17] 0x0100825C  CALL       A=9 B=2 C=2
+    0014 [line   17] 0x04C14017  EQ         A=0 B=R9 C=K[5]='table'
+    0015 [line   17] 0x800B8016  JMP        A=0 sBx=47
+    0016 [line   17] 0x04418246  GETTABLE   R9 = R8[K[6]='GetFieldDescriptor']
+    0017 [line   17] 0x0000025A  TEST       A=9 B=0 C=0
+    0018 [line   17] 0x800AC016  JMP        A=0 sBx=44
+    0019 [line   18] 0x04418246  GETTABLE   R9 = R8[K[6]='GetFieldDescriptor']
+    0020 [line   18] 0x00010281  LOADK      R10 = K[4]='type'
+    0021 [line   18] 0x0100825C  CALL       A=9 B=2 C=2
+    0022 [line   19] 0x0000025A  TEST       A=9 B=0 C=0
+    0023 [line   19] 0x80098016  JMP        A=0 sBx=39
+    0024 [line   20] 0x04C1C286  GETTABLE   R10 = R9[K[7]='enum_type']
+    0025 [line   21] 0x05000017  EQ         A=0 B=R10 C=R0
+    0026 [line   21] 0x8003C016  JMP        A=0 sBx=16
+    0027 [line   22] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0028 [line   22] 0x05C202C6  GETTABLE   R11 = R11[K[8]='AddHandler']
+    0029 [line   22] 0x03800300  MOVE       R12 = R7
+    0030 [line   22] 0x01800340  MOVE       R13 = R3
+    0031 [line   22] 0x018042DC  CALL       A=11 B=3 C=1
+    0032 [line   23] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0033 [line   23] 0x05C202C6  GETTABLE   R11 = R11[K[8]='AddHandler']
+    0034 [line   23] 0x03800300  MOVE       R12 = R7
+    0035 [line   23] 0x01800340  MOVE       R13 = R3
+    0036 [line   23] 0x018042DC  CALL       A=11 B=3 C=1
+    0037 [line   24] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0038 [line   24] 0x05C242C6  GETTABLE   R11 = R11[K[9]='RemoveHandler']
+    0039 [line   24] 0x03800300  MOVE       R12 = R7
+    0040 [line   24] 0x01800340  MOVE       R13 = R3
+    0041 [line   24] 0x018042DC  CALL       A=11 B=3 C=1
+    0042 [line   24] 0x8004C016  JMP        A=0 sBx=20
+    0043 [line   25] 0x05004017  EQ         A=0 B=R10 C=R1
+    0044 [line   25] 0x80000016  JMP        A=0 sBx=1
+    0045 [line   25] 0x80040016  JMP        A=0 sBx=17
+    0046 [line   27] 0x05008017  EQ         A=0 B=R10 C=R2
+    0047 [line   27] 0x80038016  JMP        A=0 sBx=15
+    0048 [line   28] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0049 [line   28] 0x05C202C6  GETTABLE   R11 = R11[K[8]='AddHandler']
+    0050 [line   28] 0x03800300  MOVE       R12 = R7
+    0051 [line   28] 0x01800340  MOVE       R13 = R3
+    0052 [line   28] 0x018042DC  CALL       A=11 B=3 C=1
+    0053 [line   29] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0054 [line   29] 0x05C202C6  GETTABLE   R11 = R11[K[8]='AddHandler']
+    0055 [line   29] 0x03800300  MOVE       R12 = R7
+    0056 [line   29] 0x01800340  MOVE       R13 = R3
+    0057 [line   29] 0x018042DC  CALL       A=11 B=3 C=1
+    0058 [line   30] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0059 [line   30] 0x05C242C6  GETTABLE   R11 = R11[K[9]='RemoveHandler']
+    0060 [line   30] 0x03800300  MOVE       R12 = R7
+    0061 [line   30] 0x01800340  MOVE       R13 = R3
+    0062 [line   30] 0x018042DC  CALL       A=11 B=3 C=1
+    0063 [line   16] 0x00008121  TFORLOOP   A=4 B=0 C=2
+    0064 [line   33] 0x7FF24016  JMP        A=0 sBx=-54
+    0065 [line   35] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'NET_PROTOCBUF_TYPE': 2 -> 65
+    'C2S_GS_PROTOC_TYPE': 4 -> 65
+    'S2C_GS_PROTOC_TYPE': 6 -> 65
+    'handler': 7 -> 65
+    '(for generator)': 10 -> 65
+    '(for state)': 10 -> 65
+    '(for control)': 10 -> 65
+    'cmd_name': 11 -> 63
+    'pb_class': 11 -> 63
+    'field': 22 -> 63
+    'theType': 25 -> 63
+
+        ============================================================
+        PROTO ROOT.0.0
+        Offset : 0x2D9
+        Source : '@lua\\test\\test_net_common.lua'
+        Lines  : 12 - 14
+        Params : 2
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'warn'
+        K[001] = 'msg'
+
+        ----- INSTRUCTIONS -----
+        0000 [line   13] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='warn'
+        0001 [line   13] 0x000040C1  LOADK      R3 = K[1]='msg'
+        0002 [line   13] 0x00800100  MOVE       R4 = R1
+        0003 [line   13] 0x0180409C  CALL       A=2 B=3 C=1
+        0004 [line   14] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 4
+        'msg': 0 -> 4
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x59F
+    Source : '@lua\\test\\test_net_common.lua'
+    Lines  : 37 - 51
+    Params : 0
+    Stack  : 67
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'string'
+    K[001] = 'char'
+    K[002] = 16.0
+    K[003] = 209.0
+    K[004] = 143.0
+    K[005] = 192.0
+    K[006] = 3.0
+    K[007] = 26.0
+    K[008] = 220.0
+    K[009] = 1.0
+    K[010] = 0.0
+    K[011] = 112.0
+    K[012] = 7.0
+    K[013] = 10.0
+    K[014] = 22.0
+    K[015] = 33.0
+    K[016] = 55.0
+    K[017] = 140.0
+    K[018] = 129.0
+    K[019] = 104.0
+    K[020] = 47.0
+    K[021] = 85.0
+    K[022] = 84.0
+    K[023] = 153.0
+    K[024] = 31.0
+    K[025] = 32.0
+    K[026] = 45.0
+    K[027] = 23.0
+    K[028] = 19.0
+    K[029] = 34.0
+    K[030] = 146.0
+    K[031] = 24.0
+    K[032] = 154.0
+    K[033] = 39.0
+    K[034] = 132.0
+    K[035] = 6.0
+    K[036] = 2.0
+    K[037] = 208.0
+    K[038] = 200.0
+    K[039] = 38.0
+    K[040] = 4.0
+    K[041] = 25.0
+    K[042] = 150.0
+    K[043] = 5.0
+    K[044] = 20.0
+    K[045] = 160.0
+    K[046] = 64.0
+    K[047] = 66.0
+    K[048] = 8.0
+    K[049] = 29.0
+    K[050] = 42.0
+    K[051] = 83.0
+    K[052] = 244.0
+    K[053] = 63.0
+    K[054] = 59.0
+    K[055] = 111.0
+    K[056] = 70.0
+    K[057] = 87.0
+    K[058] = 51.0
+    K[059] = 50.0
+    K[060] = 12.0
+    K[061] = 18.0
+    K[062] = 40.0
+    K[063] = 'npt_get_player_profile'
+    K[064] = 'ParseFromString'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   39] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='string'
+    0001 [line   39] 0x00404006  GETTABLE   R0 = R0[K[1]='char']
+    0002 [line   39] 0x00008041  LOADK      R1 = K[2]=16.0
+    0003 [line   39] 0x0000C081  LOADK      R2 = K[3]=209.0
+    0004 [line   39] 0x000100C1  LOADK      R3 = K[4]=143.0
+    0005 [line   39] 0x00014101  LOADK      R4 = K[5]=192.0
+    0006 [line   39] 0x00018141  LOADK      R5 = K[6]=3.0
+    0007 [line   39] 0x0001C181  LOADK      R6 = K[7]=26.0
+    0008 [line   39] 0x000201C1  LOADK      R7 = K[8]=220.0
+    0009 [line   39] 0x00024201  LOADK      R8 = K[9]=1.0
+    0010 [line   39] 0x00028241  LOADK      R9 = K[10]=0.0
+    0011 [line   39] 0x00028281  LOADK      R10 = K[10]=0.0
+    0012 [line   39] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0013 [line   39] 0x00028301  LOADK      R12 = K[10]=0.0
+    0014 [line   39] 0x00028341  LOADK      R13 = K[10]=0.0
+    0015 [line   39] 0x0002C381  LOADK      R14 = K[11]=112.0
+    0016 [line   39] 0x000303C1  LOADK      R15 = K[12]=7.0
+    0017 [line   39] 0x0000C401  LOADK      R16 = K[3]=209.0
+    0018 [line   39] 0x00034441  LOADK      R17 = K[13]=10.0
+    0019 [line   39] 0x00038481  LOADK      R18 = K[14]=22.0
+    0020 [line   39] 0x0003C4C1  LOADK      R19 = K[15]=33.0
+    0021 [line   39] 0x00040501  LOADK      R20 = K[16]=55.0
+    0022 [line   39] 0x00044541  LOADK      R21 = K[17]=140.0
+    0023 [line   39] 0x00048581  LOADK      R22 = K[18]=129.0
+    0024 [line   39] 0x0004C5C1  LOADK      R23 = K[19]=104.0
+    0025 [line   39] 0x00050601  LOADK      R24 = K[20]=47.0
+    0026 [line   39] 0x00054641  LOADK      R25 = K[21]=85.0
+    0027 [line   39] 0x00018681  LOADK      R26 = K[6]=3.0
+    0028 [line   39] 0x0003C6C1  LOADK      R27 = K[15]=33.0
+    0029 [line   39] 0x00024701  LOADK      R28 = K[9]=1.0
+    0030 [line   39] 0x00028741  LOADK      R29 = K[10]=0.0
+    0031 [line   39] 0x00028781  LOADK      R30 = K[10]=0.0
+    0032 [line   39] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0033 [line   39] 0x00028801  LOADK      R32 = K[10]=0.0
+    0034 [line   39] 0x00058841  LOADK      R33 = K[22]=84.0
+    0035 [line   39] 0x0005C881  LOADK      R34 = K[23]=153.0
+    0036 [line   39] 0x0001C8C1  LOADK      R35 = K[7]=26.0
+    0037 [line   39] 0x00010901  LOADK      R36 = K[4]=143.0
+    0038 [line   39] 0x00028941  LOADK      R37 = K[10]=0.0
+    0039 [line   39] 0x00060981  LOADK      R38 = K[24]=31.0
+    0040 [line   39] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0041 [line   39] 0x00024A01  LOADK      R40 = K[9]=1.0
+    0042 [line   39] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0043 [line   39] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0044 [line   39] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0045 [line   39] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0046 [line   39] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0047 [line   39] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0048 [line   39] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0049 [line   39] 0x1800801C  CALL       A=0 B=48 C=2
+    0050 [line   40] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='string'
+    0051 [line   40] 0x00C04046  GETTABLE   R1 = R1[K[1]='char']
+    0052 [line   40] 0x00028081  LOADK      R2 = K[10]=0.0
+    0053 [line   40] 0x000280C1  LOADK      R3 = K[10]=0.0
+    0054 [line   40] 0x00028101  LOADK      R4 = K[10]=0.0
+    0055 [line   40] 0x00028141  LOADK      R5 = K[10]=0.0
+    0056 [line   40] 0x00028181  LOADK      R6 = K[10]=0.0
+    0057 [line   40] 0x000281C1  LOADK      R7 = K[10]=0.0
+    0058 [line   40] 0x00028201  LOADK      R8 = K[10]=0.0
+    0059 [line   40] 0x00028241  LOADK      R9 = K[10]=0.0
+    0060 [line   40] 0x00028281  LOADK      R10 = K[10]=0.0
+    0061 [line   40] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0062 [line   40] 0x00028301  LOADK      R12 = K[10]=0.0
+    0063 [line   40] 0x00028341  LOADK      R13 = K[10]=0.0
+    0064 [line   40] 0x00028381  LOADK      R14 = K[10]=0.0
+    0065 [line   40] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0066 [line   40] 0x00028401  LOADK      R16 = K[10]=0.0
+    0067 [line   40] 0x00028441  LOADK      R17 = K[10]=0.0
+    0068 [line   40] 0x00028481  LOADK      R18 = K[10]=0.0
+    0069 [line   40] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0070 [line   40] 0x00028501  LOADK      R20 = K[10]=0.0
+    0071 [line   40] 0x00028541  LOADK      R21 = K[10]=0.0
+    0072 [line   40] 0x00028581  LOADK      R22 = K[10]=0.0
+    0073 [line   40] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0074 [line   40] 0x00028601  LOADK      R24 = K[10]=0.0
+    0075 [line   40] 0x00028641  LOADK      R25 = K[10]=0.0
+    0076 [line   40] 0x00028681  LOADK      R26 = K[10]=0.0
+    0077 [line   40] 0x000286C1  LOADK      R27 = K[10]=0.0
+    0078 [line   40] 0x00028701  LOADK      R28 = K[10]=0.0
+    0079 [line   40] 0x00028741  LOADK      R29 = K[10]=0.0
+    0080 [line   40] 0x00028781  LOADK      R30 = K[10]=0.0
+    0081 [line   40] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0082 [line   40] 0x00028801  LOADK      R32 = K[10]=0.0
+    0083 [line   40] 0x00028841  LOADK      R33 = K[10]=0.0
+    0084 [line   40] 0x00028881  LOADK      R34 = K[10]=0.0
+    0085 [line   40] 0x000288C1  LOADK      R35 = K[10]=0.0
+    0086 [line   40] 0x00028901  LOADK      R36 = K[10]=0.0
+    0087 [line   40] 0x00028941  LOADK      R37 = K[10]=0.0
+    0088 [line   40] 0x00028981  LOADK      R38 = K[10]=0.0
+    0089 [line   40] 0x000649C1  LOADK      R39 = K[25]=32.0
+    0090 [line   40] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0091 [line   40] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0092 [line   40] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0093 [line   40] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0094 [line   40] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0095 [line   40] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0096 [line   40] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0097 [line   40] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0098 [line   40] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0099 [line   40] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0100 [line   40] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0101 [line   40] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0102 [line   40] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0103 [line   40] 0x00028D41  LOADK      R53 = K[10]=0.0
+    0104 [line   40] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0105 [line   40] 0x00028DC1  LOADK      R55 = K[10]=0.0
+    0106 [line   40] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0107 [line   40] 0x00028E41  LOADK      R57 = K[10]=0.0
+    0108 [line   40] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0109 [line   40] 0x00028EC1  LOADK      R59 = K[10]=0.0
+    0110 [line   40] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0111 [line   40] 0x00028F41  LOADK      R61 = K[10]=0.0
+    0112 [line   40] 0x00028F81  LOADK      R62 = K[10]=0.0
+    0113 [line   40] 0x00028FC1  LOADK      R63 = K[10]=0.0
+    0114 [line   40] 0x00029001  LOADK      R64 = K[10]=0.0
+    0115 [line   40] 0x00029041  LOADK      R65 = K[10]=0.0
+    0116 [line   40] 0x2080805C  CALL       A=1 B=65 C=2
+    0117 [line   41] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0118 [line   41] 0x01404086  GETTABLE   R2 = R2[K[1]='char']
+    0119 [line   41] 0x000280C1  LOADK      R3 = K[10]=0.0
+    0120 [line   41] 0x00028101  LOADK      R4 = K[10]=0.0
+    0121 [line   41] 0x00028141  LOADK      R5 = K[10]=0.0
+    0122 [line   41] 0x00028181  LOADK      R6 = K[10]=0.0
+    0123 [line   41] 0x000281C1  LOADK      R7 = K[10]=0.0
+    0124 [line   41] 0x00028201  LOADK      R8 = K[10]=0.0
+    0125 [line   41] 0x00028241  LOADK      R9 = K[10]=0.0
+    0126 [line   41] 0x00028281  LOADK      R10 = K[10]=0.0
+    0127 [line   41] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0128 [line   41] 0x00028301  LOADK      R12 = K[10]=0.0
+    0129 [line   41] 0x00028341  LOADK      R13 = K[10]=0.0
+    0130 [line   41] 0x00028381  LOADK      R14 = K[10]=0.0
+    0131 [line   41] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0132 [line   41] 0x00028401  LOADK      R16 = K[10]=0.0
+    0133 [line   41] 0x00028441  LOADK      R17 = K[10]=0.0
+    0134 [line   41] 0x00028481  LOADK      R18 = K[10]=0.0
+    0135 [line   41] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0136 [line   41] 0x00028501  LOADK      R20 = K[10]=0.0
+    0137 [line   41] 0x00028541  LOADK      R21 = K[10]=0.0
+    0138 [line   41] 0x00028581  LOADK      R22 = K[10]=0.0
+    0139 [line   41] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0140 [line   41] 0x00028601  LOADK      R24 = K[10]=0.0
+    0141 [line   41] 0x00028641  LOADK      R25 = K[10]=0.0
+    0142 [line   41] 0x00028681  LOADK      R26 = K[10]=0.0
+    0143 [line   41] 0x000286C1  LOADK      R27 = K[10]=0.0
+    0144 [line   41] 0x00068701  LOADK      R28 = K[26]=45.0
+    0145 [line   41] 0x00028741  LOADK      R29 = K[10]=0.0
+    0146 [line   41] 0x00028781  LOADK      R30 = K[10]=0.0
+    0147 [line   41] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0148 [line   41] 0x00068801  LOADK      R32 = K[26]=45.0
+    0149 [line   41] 0x00028841  LOADK      R33 = K[10]=0.0
+    0150 [line   41] 0x00028881  LOADK      R34 = K[10]=0.0
+    0151 [line   41] 0x0006C8C1  LOADK      R35 = K[27]=23.0
+    0152 [line   41] 0x0002C901  LOADK      R36 = K[11]=112.0
+    0153 [line   41] 0x00028941  LOADK      R37 = K[10]=0.0
+    0154 [line   41] 0x00028981  LOADK      R38 = K[10]=0.0
+    0155 [line   41] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0156 [line   41] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0157 [line   41] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0158 [line   41] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0159 [line   41] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0160 [line   41] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0161 [line   41] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0162 [line   41] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0163 [line   41] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0164 [line   41] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0165 [line   41] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0166 [line   41] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0167 [line   41] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0168 [line   41] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0169 [line   41] 0x00028D41  LOADK      R53 = K[10]=0.0
+    0170 [line   41] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0171 [line   41] 0x00028DC1  LOADK      R55 = K[10]=0.0
+    0172 [line   41] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0173 [line   41] 0x00028E41  LOADK      R57 = K[10]=0.0
+    0174 [line   41] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0175 [line   41] 0x00028EC1  LOADK      R59 = K[10]=0.0
+    0176 [line   41] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0177 [line   41] 0x00028F41  LOADK      R61 = K[10]=0.0
+    0178 [line   41] 0x00028F81  LOADK      R62 = K[10]=0.0
+    0179 [line   41] 0x00028FC1  LOADK      R63 = K[10]=0.0
+    0180 [line   41] 0x00029001  LOADK      R64 = K[10]=0.0
+    0181 [line   41] 0x1F80809C  CALL       A=2 B=63 C=2
+    0182 [line   42] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='string'
+    0183 [line   42] 0x01C040C6  GETTABLE   R3 = R3[K[1]='char']
+    0184 [line   42] 0x00028101  LOADK      R4 = K[10]=0.0
+    0185 [line   42] 0x00028141  LOADK      R5 = K[10]=0.0
+    0186 [line   42] 0x00028181  LOADK      R6 = K[10]=0.0
+    0187 [line   42] 0x000281C1  LOADK      R7 = K[10]=0.0
+    0188 [line   42] 0x00028201  LOADK      R8 = K[10]=0.0
+    0189 [line   42] 0x00028241  LOADK      R9 = K[10]=0.0
+    0190 [line   42] 0x00028281  LOADK      R10 = K[10]=0.0
+    0191 [line   42] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0192 [line   42] 0x00028301  LOADK      R12 = K[10]=0.0
+    0193 [line   42] 0x00028341  LOADK      R13 = K[10]=0.0
+    0194 [line   42] 0x00028381  LOADK      R14 = K[10]=0.0
+    0195 [line   42] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0196 [line   42] 0x00028401  LOADK      R16 = K[10]=0.0
+    0197 [line   42] 0x00028441  LOADK      R17 = K[10]=0.0
+    0198 [line   42] 0x00028481  LOADK      R18 = K[10]=0.0
+    0199 [line   42] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0200 [line   42] 0x00028501  LOADK      R20 = K[10]=0.0
+    0201 [line   42] 0x00028541  LOADK      R21 = K[10]=0.0
+    0202 [line   42] 0x00028581  LOADK      R22 = K[10]=0.0
+    0203 [line   42] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0204 [line   42] 0x00028601  LOADK      R24 = K[10]=0.0
+    0205 [line   42] 0x00028641  LOADK      R25 = K[10]=0.0
+    0206 [line   42] 0x00028681  LOADK      R26 = K[10]=0.0
+    0207 [line   42] 0x000286C1  LOADK      R27 = K[10]=0.0
+    0208 [line   42] 0x00028701  LOADK      R28 = K[10]=0.0
+    0209 [line   42] 0x00028741  LOADK      R29 = K[10]=0.0
+    0210 [line   42] 0x00028781  LOADK      R30 = K[10]=0.0
+    0211 [line   42] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0212 [line   42] 0x00028801  LOADK      R32 = K[10]=0.0
+    0213 [line   42] 0x00028841  LOADK      R33 = K[10]=0.0
+    0214 [line   42] 0x00028881  LOADK      R34 = K[10]=0.0
+    0215 [line   42] 0x000288C1  LOADK      R35 = K[10]=0.0
+    0216 [line   42] 0x00028901  LOADK      R36 = K[10]=0.0
+    0217 [line   42] 0x00028941  LOADK      R37 = K[10]=0.0
+    0218 [line   42] 0x00028981  LOADK      R38 = K[10]=0.0
+    0219 [line   42] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0220 [line   42] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0221 [line   42] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0222 [line   42] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0223 [line   42] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0224 [line   42] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0225 [line   42] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0226 [line   42] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0227 [line   42] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0228 [line   42] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0229 [line   42] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0230 [line   42] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0231 [line   42] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0232 [line   42] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0233 [line   42] 0x00028D41  LOADK      R53 = K[10]=0.0
+    0234 [line   42] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0235 [line   42] 0x00070DC1  LOADK      R55 = K[28]=19.0
+    0236 [line   42] 0x00010E01  LOADK      R56 = K[4]=143.0
+    0237 [line   42] 0x00028E41  LOADK      R57 = K[10]=0.0
+    0238 [line   42] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0239 [line   42] 0x00074EC1  LOADK      R59 = K[29]=34.0
+    0240 [line   42] 0x00078F01  LOADK      R60 = K[30]=146.0
+    0241 [line   42] 0x00024F41  LOADK      R61 = K[9]=1.0
+    0242 [line   42] 0x00008F81  LOADK      R62 = K[2]=16.0
+    0243 [line   42] 0x00028FC1  LOADK      R63 = K[10]=0.0
+    0244 [line   42] 0x0007D001  LOADK      R64 = K[31]=24.0
+    0245 [line   42] 0x1F0080DC  CALL       A=3 B=62 C=2
+    0246 [line   43] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='string'
+    0247 [line   43] 0x02404106  GETTABLE   R4 = R4[K[1]='char']
+    0248 [line   43] 0x00080141  LOADK      R5 = K[32]=154.0
+    0249 [line   43] 0x00084181  LOADK      R6 = K[33]=39.0
+    0250 [line   43] 0x000741C1  LOADK      R7 = K[29]=34.0
+    0251 [line   43] 0x00088201  LOADK      R8 = K[34]=132.0
+    0252 [line   43] 0x00024241  LOADK      R9 = K[9]=1.0
+    0253 [line   43] 0x0008C281  LOADK      R10 = K[35]=6.0
+    0254 [line   43] 0x000902C1  LOADK      R11 = K[36]=2.0
+    0255 [line   43] 0x00028301  LOADK      R12 = K[10]=0.0
+    0256 [line   43] 0x00028341  LOADK      R13 = K[10]=0.0
+    0257 [line   43] 0x00094381  LOADK      R14 = K[37]=208.0
+    0258 [line   43] 0x000303C1  LOADK      R15 = K[12]=7.0
+    0259 [line   43] 0x00028401  LOADK      R16 = K[10]=0.0
+    0260 [line   43] 0x00028441  LOADK      R17 = K[10]=0.0
+    0261 [line   43] 0x00028481  LOADK      R18 = K[10]=0.0
+    0262 [line   43] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0263 [line   43] 0x00028501  LOADK      R20 = K[10]=0.0
+    0264 [line   43] 0x00028541  LOADK      R21 = K[10]=0.0
+    0265 [line   43] 0x0008C581  LOADK      R22 = K[35]=6.0
+    0266 [line   43] 0x000905C1  LOADK      R23 = K[36]=2.0
+    0267 [line   43] 0x00028601  LOADK      R24 = K[10]=0.0
+    0268 [line   43] 0x00028641  LOADK      R25 = K[10]=0.0
+    0269 [line   43] 0x00094681  LOADK      R26 = K[37]=208.0
+    0270 [line   43] 0x000306C1  LOADK      R27 = K[12]=7.0
+    0271 [line   43] 0x00028701  LOADK      R28 = K[10]=0.0
+    0272 [line   43] 0x00028741  LOADK      R29 = K[10]=0.0
+    0273 [line   43] 0x00098781  LOADK      R30 = K[38]=200.0
+    0274 [line   43] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0275 [line   43] 0x00028801  LOADK      R32 = K[10]=0.0
+    0276 [line   43] 0x00028841  LOADK      R33 = K[10]=0.0
+    0277 [line   43] 0x0009C881  LOADK      R34 = K[39]=38.0
+    0278 [line   43] 0x000288C1  LOADK      R35 = K[10]=0.0
+    0279 [line   43] 0x00028901  LOADK      R36 = K[10]=0.0
+    0280 [line   43] 0x00028941  LOADK      R37 = K[10]=0.0
+    0281 [line   43] 0x00024981  LOADK      R38 = K[9]=1.0
+    0282 [line   43] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0283 [line   43] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0284 [line   43] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0285 [line   43] 0x00024A81  LOADK      R42 = K[9]=1.0
+    0286 [line   43] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0287 [line   43] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0288 [line   43] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0289 [line   43] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0290 [line   43] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0291 [line   43] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0292 [line   43] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0293 [line   43] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0294 [line   43] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0295 [line   43] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0296 [line   43] 0x00028D41  LOADK      R53 = K[10]=0.0
+    0297 [line   43] 0x000A0D81  LOADK      R54 = K[40]=4.0
+    0298 [line   43] 0x00028DC1  LOADK      R55 = K[10]=0.0
+    0299 [line   43] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0300 [line   43] 0x00028E41  LOADK      R57 = K[10]=0.0
+    0301 [line   43] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0302 [line   43] 0x00028EC1  LOADK      R59 = K[10]=0.0
+    0303 [line   43] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0304 [line   43] 0x00028F41  LOADK      R61 = K[10]=0.0
+    0305 [line   43] 0x00028F81  LOADK      R62 = K[10]=0.0
+    0306 [line   43] 0x1D80811C  CALL       A=4 B=59 C=2
+    0307 [line   44] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='string'
+    0308 [line   44] 0x02C04146  GETTABLE   R5 = R5[K[1]='char']
+    0309 [line   44] 0x00028181  LOADK      R6 = K[10]=0.0
+    0310 [line   44] 0x000281C1  LOADK      R7 = K[10]=0.0
+    0311 [line   44] 0x00028201  LOADK      R8 = K[10]=0.0
+    0312 [line   44] 0x00028241  LOADK      R9 = K[10]=0.0
+    0313 [line   44] 0x00028281  LOADK      R10 = K[10]=0.0
+    0314 [line   44] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0315 [line   44] 0x00028301  LOADK      R12 = K[10]=0.0
+    0316 [line   44] 0x00028341  LOADK      R13 = K[10]=0.0
+    0317 [line   44] 0x00028381  LOADK      R14 = K[10]=0.0
+    0318 [line   44] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0319 [line   44] 0x00028401  LOADK      R16 = K[10]=0.0
+    0320 [line   44] 0x00028441  LOADK      R17 = K[10]=0.0
+    0321 [line   44] 0x00028481  LOADK      R18 = K[10]=0.0
+    0322 [line   44] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0323 [line   44] 0x00028501  LOADK      R20 = K[10]=0.0
+    0324 [line   44] 0x00028541  LOADK      R21 = K[10]=0.0
+    0325 [line   44] 0x00028581  LOADK      R22 = K[10]=0.0
+    0326 [line   44] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0327 [line   44] 0x00028601  LOADK      R24 = K[10]=0.0
+    0328 [line   44] 0x0008C641  LOADK      R25 = K[35]=6.0
+    0329 [line   44] 0x00028681  LOADK      R26 = K[10]=0.0
+    0330 [line   44] 0x000286C1  LOADK      R27 = K[10]=0.0
+    0331 [line   44] 0x00028701  LOADK      R28 = K[10]=0.0
+    0332 [line   44] 0x000A4741  LOADK      R29 = K[41]=25.0
+    0333 [line   44] 0x00028781  LOADK      R30 = K[10]=0.0
+    0334 [line   44] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0335 [line   44] 0x00028801  LOADK      R32 = K[10]=0.0
+    0336 [line   44] 0x000A8841  LOADK      R33 = K[42]=150.0
+    0337 [line   44] 0x00028881  LOADK      R34 = K[10]=0.0
+    0338 [line   44] 0x000288C1  LOADK      R35 = K[10]=0.0
+    0339 [line   44] 0x00028901  LOADK      R36 = K[10]=0.0
+    0340 [line   44] 0x000AC941  LOADK      R37 = K[43]=5.0
+    0341 [line   44] 0x00028981  LOADK      R38 = K[10]=0.0
+    0342 [line   44] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0343 [line   44] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0344 [line   44] 0x000B0A41  LOADK      R41 = K[44]=20.0
+    0345 [line   44] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0346 [line   44] 0x00028AC1  LOADK      R43 = K[10]=0.0
+    0347 [line   44] 0x00028B01  LOADK      R44 = K[10]=0.0
+    0348 [line   44] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0349 [line   44] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0350 [line   44] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0351 [line   44] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0352 [line   44] 0x00034C41  LOADK      R49 = K[13]=10.0
+    0353 [line   44] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0354 [line   44] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0355 [line   44] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0356 [line   44] 0x000B0D41  LOADK      R53 = K[44]=20.0
+    0357 [line   44] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0358 [line   44] 0x00028DC1  LOADK      R55 = K[10]=0.0
+    0359 [line   44] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0360 [line   44] 0x00034E41  LOADK      R57 = K[13]=10.0
+    0361 [line   44] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0362 [line   44] 0x00028EC1  LOADK      R59 = K[10]=0.0
+    0363 [line   44] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0364 [line   44] 0x000B0F41  LOADK      R61 = K[44]=20.0
+    0365 [line   44] 0x00028F81  LOADK      R62 = K[10]=0.0
+    0366 [line   44] 0x00028FC1  LOADK      R63 = K[10]=0.0
+    0367 [line   44] 0x00029001  LOADK      R64 = K[10]=0.0
+    0368 [line   44] 0x00029041  LOADK      R65 = K[10]=0.0
+    0369 [line   44] 0x00029081  LOADK      R66 = K[10]=0.0
+    0370 [line   44] 0x1F00815C  CALL       A=5 B=62 C=2
+    0371 [line   45] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='string'
+    0372 [line   45] 0x03404186  GETTABLE   R6 = R6[K[1]='char']
+    0373 [line   45] 0x000B41C1  LOADK      R7 = K[45]=160.0
+    0374 [line   45] 0x000B8201  LOADK      R8 = K[46]=64.0
+    0375 [line   45] 0x00090241  LOADK      R9 = K[36]=2.0
+    0376 [line   45] 0x00028281  LOADK      R10 = K[10]=0.0
+    0377 [line   45] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0378 [line   45] 0x00028301  LOADK      R12 = K[10]=0.0
+    0379 [line   45] 0x00028341  LOADK      R13 = K[10]=0.0
+    0380 [line   45] 0x00028381  LOADK      R14 = K[10]=0.0
+    0381 [line   45] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0382 [line   45] 0x00028401  LOADK      R16 = K[10]=0.0
+    0383 [line   45] 0x00028441  LOADK      R17 = K[10]=0.0
+    0384 [line   45] 0x00028481  LOADK      R18 = K[10]=0.0
+    0385 [line   45] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0386 [line   45] 0x00028501  LOADK      R20 = K[10]=0.0
+    0387 [line   45] 0x00080541  LOADK      R21 = K[32]=154.0
+    0388 [line   45] 0x00070581  LOADK      R22 = K[28]=19.0
+    0389 [line   45] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0390 [line   45] 0x00028601  LOADK      R24 = K[10]=0.0
+    0391 [line   45] 0x000BC641  LOADK      R25 = K[47]=66.0
+    0392 [line   45] 0x000A0681  LOADK      R26 = K[40]=4.0
+    0393 [line   45] 0x000C06C1  LOADK      R27 = K[48]=8.0
+    0394 [line   45] 0x000C4701  LOADK      R28 = K[49]=29.0
+    0395 [line   45] 0x00008741  LOADK      R29 = K[2]=16.0
+    0396 [line   45] 0x0008C781  LOADK      R30 = K[35]=6.0
+    0397 [line   45] 0x000C87C1  LOADK      R31 = K[50]=42.0
+    0398 [line   45] 0x000CC801  LOADK      R32 = K[51]=83.0
+    0399 [line   45] 0x00024841  LOADK      R33 = K[9]=1.0
+    0400 [line   45] 0x00028881  LOADK      R34 = K[10]=0.0
+    0401 [line   45] 0x000288C1  LOADK      R35 = K[10]=0.0
+    0402 [line   45] 0x00024901  LOADK      R36 = K[9]=1.0
+    0403 [line   45] 0x000D0941  LOADK      R37 = K[52]=244.0
+    0404 [line   45] 0x00028981  LOADK      R38 = K[10]=0.0
+    0405 [line   45] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0406 [line   45] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0407 [line   45] 0x00028A41  LOADK      R41 = K[10]=0.0
+    0408 [line   45] 0x00028A81  LOADK      R42 = K[10]=0.0
+    0409 [line   45] 0x00024AC1  LOADK      R43 = K[9]=1.0
+    0410 [line   45] 0x000D4B01  LOADK      R44 = K[53]=63.0
+    0411 [line   45] 0x000D4B41  LOADK      R45 = K[53]=63.0
+    0412 [line   45] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0413 [line   45] 0x000A0BC1  LOADK      R47 = K[40]=4.0
+    0414 [line   45] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0415 [line   45] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0416 [line   45] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0417 [line   45] 0x000B0CC1  LOADK      R51 = K[44]=20.0
+    0418 [line   45] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0419 [line   45] 0x00024D41  LOADK      R53 = K[9]=1.0
+    0420 [line   45] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0421 [line   45] 0x00084DC1  LOADK      R55 = K[33]=39.0
+    0422 [line   45] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0423 [line   45] 0x000A0E41  LOADK      R57 = K[40]=4.0
+    0424 [line   45] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0425 [line   45] 0x00040EC1  LOADK      R59 = K[16]=55.0
+    0426 [line   45] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0427 [line   45] 0x000ACF41  LOADK      R61 = K[43]=5.0
+    0428 [line   45] 0x00028F81  LOADK      R62 = K[10]=0.0
+    0429 [line   45] 0x1C80819C  CALL       A=6 B=57 C=2
+    0430 [line   46] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='string'
+    0431 [line   46] 0x03C041C6  GETTABLE   R7 = R7[K[1]='char']
+    0432 [line   46] 0x000D8201  LOADK      R8 = K[54]=59.0
+    0433 [line   46] 0x00028241  LOADK      R9 = K[10]=0.0
+    0434 [line   46] 0x00090281  LOADK      R10 = K[36]=2.0
+    0435 [line   46] 0x000282C1  LOADK      R11 = K[10]=0.0
+    0436 [line   46] 0x00028301  LOADK      R12 = K[10]=0.0
+    0437 [line   46] 0x00028341  LOADK      R13 = K[10]=0.0
+    0438 [line   46] 0x00028381  LOADK      R14 = K[10]=0.0
+    0439 [line   46] 0x000283C1  LOADK      R15 = K[10]=0.0
+    0440 [line   46] 0x00028401  LOADK      R16 = K[10]=0.0
+    0441 [line   46] 0x00028441  LOADK      R17 = K[10]=0.0
+    0442 [line   46] 0x00028481  LOADK      R18 = K[10]=0.0
+    0443 [line   46] 0x000284C1  LOADK      R19 = K[10]=0.0
+    0444 [line   46] 0x00028501  LOADK      R20 = K[10]=0.0
+    0445 [line   46] 0x00028541  LOADK      R21 = K[10]=0.0
+    0446 [line   46] 0x00028581  LOADK      R22 = K[10]=0.0
+    0447 [line   46] 0x000285C1  LOADK      R23 = K[10]=0.0
+    0448 [line   46] 0x00028601  LOADK      R24 = K[10]=0.0
+    0449 [line   46] 0x00028641  LOADK      R25 = K[10]=0.0
+    0450 [line   46] 0x00028681  LOADK      R26 = K[10]=0.0
+    0451 [line   46] 0x000286C1  LOADK      R27 = K[10]=0.0
+    0452 [line   46] 0x00028701  LOADK      R28 = K[10]=0.0
+    0453 [line   46] 0x000DC741  LOADK      R29 = K[55]=111.0
+    0454 [line   46] 0x00028781  LOADK      R30 = K[10]=0.0
+    0455 [line   46] 0x000287C1  LOADK      R31 = K[10]=0.0
+    0456 [line   46] 0x00028801  LOADK      R32 = K[10]=0.0
+    0457 [line   46] 0x00090841  LOADK      R33 = K[36]=2.0
+    0458 [line   46] 0x00024881  LOADK      R34 = K[9]=1.0
+    0459 [line   46] 0x000E08C1  LOADK      R35 = K[56]=70.0
+    0460 [line   46] 0x000E4901  LOADK      R36 = K[57]=87.0
+    0461 [line   46] 0x000DC941  LOADK      R37 = K[55]=111.0
+    0462 [line   46] 0x00028981  LOADK      R38 = K[10]=0.0
+    0463 [line   46] 0x000289C1  LOADK      R39 = K[10]=0.0
+    0464 [line   46] 0x00028A01  LOADK      R40 = K[10]=0.0
+    0465 [line   46] 0x00090A41  LOADK      R41 = K[36]=2.0
+    0466 [line   46] 0x00024A81  LOADK      R42 = K[9]=1.0
+    0467 [line   46] 0x00048AC1  LOADK      R43 = K[18]=129.0
+    0468 [line   46] 0x000E8B01  LOADK      R44 = K[58]=51.0
+    0469 [line   46] 0x00028B41  LOADK      R45 = K[10]=0.0
+    0470 [line   46] 0x00028B81  LOADK      R46 = K[10]=0.0
+    0471 [line   46] 0x00028BC1  LOADK      R47 = K[10]=0.0
+    0472 [line   46] 0x00028C01  LOADK      R48 = K[10]=0.0
+    0473 [line   46] 0x00028C41  LOADK      R49 = K[10]=0.0
+    0474 [line   46] 0x00028C81  LOADK      R50 = K[10]=0.0
+    0475 [line   46] 0x00028CC1  LOADK      R51 = K[10]=0.0
+    0476 [line   46] 0x00028D01  LOADK      R52 = K[10]=0.0
+    0477 [line   46] 0x00028D41  LOADK      R53 = K[10]=0.0
+    0478 [line   46] 0x00028D81  LOADK      R54 = K[10]=0.0
+    0479 [line   46] 0x00028DC1  LOADK      R55 = K[10]=0.0
+    0480 [line   46] 0x00028E01  LOADK      R56 = K[10]=0.0
+    0481 [line   46] 0x00028E41  LOADK      R57 = K[10]=0.0
+    0482 [line   46] 0x00028E81  LOADK      R58 = K[10]=0.0
+    0483 [line   46] 0x00028EC1  LOADK      R59 = K[10]=0.0
+    0484 [line   46] 0x00028F01  LOADK      R60 = K[10]=0.0
+    0485 [line   46] 0x000ECF41  LOADK      R61 = K[59]=50.0
+    0486 [line   46] 0x000F0F81  LOADK      R62 = K[60]=12.0
+    0487 [line   46] 0x00034FC1  LOADK      R63 = K[13]=10.0
+    0488 [line   46] 0x0008D001  LOADK      R64 = K[35]=6.0
+    0489 [line   46] 0x000F5041  LOADK      R65 = K[61]=18.0
+    0490 [line   46] 0x1D8081DC  CALL       A=7 B=59 C=2
+    0491 [line   47] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='string'
+    0492 [line   47] 0x04404206  GETTABLE   R8 = R8[K[1]='char']
+    0493 [line   47] 0x000A0241  LOADK      R9 = K[40]=4.0
+    0494 [line   47] 0x000C0281  LOADK      R10 = K[48]=8.0
+    0495 [line   47] 0x0000C2C1  LOADK      R11 = K[3]=209.0
+    0496 [line   47] 0x00010301  LOADK      R12 = K[4]=143.0
+    0497 [line   47] 0x000F8341  LOADK      R13 = K[62]=40.0
+    0498 [line   47] 0x00008381  LOADK      R14 = K[2]=16.0
+    0499 [line   47] 0x000243C1  LOADK      R15 = K[9]=1.0
+    0500 [line   47] 0x0007C401  LOADK      R16 = K[31]=24.0
+    0501 [line   47] 0x00028441  LOADK      R17 = K[10]=0.0
+    0502 [line   47] 0x0500821C  CALL       A=8 B=10 C=2
+    0503 [line   47] 0x00020015  CONCAT     A=0 B=0 C=8 Bx=8
+    0504 [line   48] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0505 [line   48] 0x00CFC046  GETTABLE   R1 = R1[K[63]='npt_get_player_profile']
+    0506 [line   49] 0x00D0008B  SELF       A=2 B=1 C=320 Bx=832
+    0507 [line   49] 0x00000100  MOVE       R4 = R0
+    0508 [line   49] 0x0180409C  CALL       A=2 B=3 C=1
+    0509 [line   51] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'data': 504 -> 509
+    'msg': 506 -> 509

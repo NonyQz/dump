@@ -1,0 +1,201 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\utility\enum.lua
+SIZE: 1882
+PARSED: 1882
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\utility\\enum.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 10
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'type'
+K[003] = 'string'
+K[004] = 'match'
+K[005] = 'Class'
+K[006] = 'define'
+K[007] = 'static'
+K[008] = 'table'
+K[009] = '=>'
+K[010] = 'make'
+K[011] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='type'
+0004 [line    3] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='string'
+0005 [line    4] 0x014100C6  GETTABLE   R3 = R2[K[4]='match']
+0006 [line    6] 0x00414106  GETTABLE   R4 = R0[K[5]='Class']
+0007 [line    6] 0x0080811C  CALL       A=4 B=1 C=2
+0008 [line    8] 0x02418146  GETTABLE   R5 = R4[K[6]='define']
+0009 [line   20] 0x02C1C186  GETTABLE   R6 = R5[K[7]='static']
+0010 [line   20] 0x000201C1  LOADK      R7 = K[8]='table'
+0011 [line   20] 0x00024201  LOADK      R8 = K[9]='=>'
+0012 [line   20] 0x00020241  LOADK      R9 = K[8]='table'
+0013 [line   20] 0x0200819C  CALL       A=6 B=4 C=2
+0014 [line   68] 0x000001E4  CLOSURE    R7 = PROTO[0]
+0015 [line   68] 0x00800000  MOVE       R0 = R1
+0016 [line   68] 0x01800000  MOVE       R0 = R3
+0017 [line   68] 0x8501C189  SETTABLE   R6[K[10]='make'] = R7
+0018 [line   70] 0x0242C146  GETTABLE   R5 = R4[K[11]='Commit']
+0019 [line   70] 0x0080015D  TAILCALL   A=5 B=1 C=0
+0020 [line   70] 0x0000015E  RETURN     A=5 B=0 C=0
+0021 [line   70] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 21
+'type': 4 -> 21
+'string': 5 -> 21
+'stringmatch': 6 -> 21
+'Enum': 8 -> 21
+'def': 9 -> 18
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x11B
+    Source : '@lua\\utility\\enum.lua'
+    Lines  : 20 - 68
+    Params : 1
+    Stack  : 15
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 0.0
+    K[002] = 'string'
+    K[003] = 'error'
+    K[004] = 'bad enumerate #%d item name (string expected, got %s)'
+    K[005] = 'format'
+    K[006] = 'duplicated enumerate #%d item name (%s)'
+    K[007] = '^[%a_][%w_]*$'
+    K[008] = "invalid enumerate #%d item name ('%s')"
+    K[009] = '='
+    K[010] = 2.0
+    K[011] = 'number'
+    K[012] = None
+    K[013] = "enumerate #%d item assigning value not found ('%s')"
+    K[014] = 'bad assigning value to enumerate #%d item (string expected, got %s)'
+    K[015] = 3.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   21] 0x00000054  LEN        A=1 B=0 C=0 Bx=0
+    0001 [line   22] 0x00000081  LOADK      R2 = K[0]=1.0
+    0002 [line   23] 0x000040C1  LOADK      R3 = K[1]=0.0
+    0003 [line   24] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line   25] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0005 [line   27] 0x01004019  LE         A=0 B=R2 C=R1
+    0006 [line   27] 0x80150016  JMP        A=0 sBx=85
+    0007 [line   29] 0x00008186  GETTABLE   R6 = R0[R2]
+    0008 [line   30] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0009 [line   30] 0x03000200  MOVE       R8 = R6
+    0010 [line   30] 0x010081DC  CALL       A=7 B=2 C=2
+    0011 [line   30] 0x03C08057  EQ         A=1 B=R7 C=K[2]='string'
+    0012 [line   30] 0x80020016  JMP        A=0 sBx=9
+    0013 [line   31] 0x0000C1C5  GETGLOBAL  R7 = GLOBAL K[3]='error'
+    0014 [line   31] 0x00010201  LOADK      R8 = K[4]='bad enumerate #%d item name (string expected, got %s)'
+    0015 [line   31] 0x0441420B  SELF       A=8 B=8 C=261 Bx=4357
+    0016 [line   31] 0x02000280  MOVE       R10 = R4
+    0017 [line   31] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0018 [line   31] 0x03000300  MOVE       R12 = R6
+    0019 [line   31] 0x010002DC  CALL       A=11 B=2 C=0
+    0020 [line   31] 0x0000021C  CALL       A=8 B=0 C=0
+    0021 [line   31] 0x000041DC  CALL       A=7 B=0 C=1
+    0022 [line   33] 0x028181C6  GETTABLE   R7 = R5[R6]
+    0023 [line   33] 0x000001DA  TEST       A=7 B=0 C=0
+    0024 [line   33] 0x80018016  JMP        A=0 sBx=7
+    0025 [line   34] 0x0000C1C5  GETGLOBAL  R7 = GLOBAL K[3]='error'
+    0026 [line   34] 0x00018201  LOADK      R8 = K[6]='duplicated enumerate #%d item name (%s)'
+    0027 [line   34] 0x0441420B  SELF       A=8 B=8 C=261 Bx=4357
+    0028 [line   34] 0x02000280  MOVE       R10 = R4
+    0029 [line   34] 0x030002C0  MOVE       R11 = R6
+    0030 [line   34] 0x0200021C  CALL       A=8 B=4 C=0
+    0031 [line   34] 0x000041DC  CALL       A=7 B=0 C=1
+    0032 [line   36] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0033 [line   36] 0x03000200  MOVE       R8 = R6
+    0034 [line   36] 0x0001C241  LOADK      R9 = K[7]='^[%a_][%w_]*$'
+    0035 [line   36] 0x018081DC  CALL       A=7 B=3 C=2
+    0036 [line   36] 0x000041DA  TEST       A=7 B=0 C=1
+    0037 [line   36] 0x80018016  JMP        A=0 sBx=7
+    0038 [line   37] 0x0000C1C5  GETGLOBAL  R7 = GLOBAL K[3]='error'
+    0039 [line   37] 0x00020201  LOADK      R8 = K[8]="invalid enumerate #%d item name ('%s')"
+    0040 [line   37] 0x0441420B  SELF       A=8 B=8 C=261 Bx=4357
+    0041 [line   37] 0x02000280  MOVE       R10 = R4
+    0042 [line   37] 0x030002C0  MOVE       R11 = R6
+    0043 [line   37] 0x0200021C  CALL       A=8 B=4 C=0
+    0044 [line   37] 0x000041DC  CALL       A=7 B=0 C=1
+    0045 [line   40] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0046 [line   42] 0x0140020C  ADD        A=8 B=R2 C=K[0]=1.0
+    0047 [line   42] 0x00020206  GETTABLE   R8 = R0[R8]
+    0048 [line   42] 0x04424017  EQ         A=0 B=R8 C=K[9]='='
+    0049 [line   42] 0x8008C016  JMP        A=0 sBx=36
+    0050 [line   43] 0x0142820C  ADD        A=8 B=R2 C=K[10]=2.0
+    0051 [line   43] 0x00020206  GETTABLE   R8 = R0[R8]
+    0052 [line   44] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0053 [line   44] 0x04000280  MOVE       R10 = R8
+    0054 [line   44] 0x0100825C  CALL       A=9 B=2 C=2
+    0055 [line   44] 0x04C2C017  EQ         A=0 B=R9 C=K[11]='number'
+    0056 [line   44] 0x80004016  JMP        A=0 sBx=2
+    0057 [line   45] 0x040001C0  MOVE       R7 = R8
+    0058 [line   45] 0x80060016  JMP        A=0 sBx=25
+    0059 [line   46] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0060 [line   46] 0x04000280  MOVE       R10 = R8
+    0061 [line   46] 0x0100825C  CALL       A=9 B=2 C=2
+    0062 [line   46] 0x04C08017  EQ         A=0 B=R9 C=K[2]='string'
+    0063 [line   46] 0x80028016  JMP        A=0 sBx=11
+    0064 [line   47] 0x028201C6  GETTABLE   R7 = R5[R8]
+    0065 [line   48] 0x03C30017  EQ         A=0 B=R7 C=K[12]=None
+    0066 [line   48] 0x80040016  JMP        A=0 sBx=17
+    0067 [line   49] 0x0000C245  GETGLOBAL  R9 = GLOBAL K[3]='error'
+    0068 [line   49] 0x00034281  LOADK      R10 = K[13]="enumerate #%d item assigning value not found ('%s')"
+    0069 [line   49] 0x0541428B  SELF       A=10 B=10 C=261 Bx=5381
+    0070 [line   49] 0x02000300  MOVE       R12 = R4
+    0071 [line   49] 0x04000340  MOVE       R13 = R8
+    0072 [line   49] 0x0200029C  CALL       A=10 B=4 C=0
+    0073 [line   49] 0x0000425C  CALL       A=9 B=0 C=1
+    0074 [line   50] 0x80020016  JMP        A=0 sBx=9
+    0075 [line   52] 0x0000C245  GETGLOBAL  R9 = GLOBAL K[3]='error'
+    0076 [line   52] 0x00038281  LOADK      R10 = K[14]='bad assigning value to enumerate #%d item (string expected, got %s)'
+    0077 [line   52] 0x0541428B  SELF       A=10 B=10 C=261 Bx=5381
+    0078 [line   52] 0x02000300  MOVE       R12 = R4
+    0079 [line   52] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0080 [line   52] 0x04000380  MOVE       R14 = R8
+    0081 [line   52] 0x0100035C  CALL       A=13 B=2 C=0
+    0082 [line   52] 0x0000029C  CALL       A=10 B=0 C=0
+    0083 [line   52] 0x0000425C  CALL       A=9 B=0 C=1
+    0084 [line   55] 0x0143C08C  ADD        A=2 B=R2 C=K[15]=3.0
+    0085 [line   55] 0x80004016  JMP        A=0 sBx=2
+    0086 [line   57] 0x018001C0  MOVE       R7 = R3
+    0087 [line   59] 0x0140008C  ADD        A=2 B=R2 C=K[0]=1.0
+    0088 [line   62] 0x0301C149  SETTABLE   R5[R6] = R7
+    0089 [line   63] 0x03C000CC  ADD        A=3 B=R7 C=K[0]=1.0
+    0090 [line   64] 0x0240010C  ADD        A=4 B=R4 C=K[0]=1.0
+    0091 [line   64] 0x7FEA0016  JMP        A=0 sBx=-87
+    0092 [line   67] 0x0100015E  RETURN     A=5 B=2 C=0
+    0093 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'definition': 0 -> 93
+    'defLen': 1 -> 93
+    'curPos': 2 -> 93
+    'curValue': 3 -> 93
+    'curIndex': 4 -> 93
+    'result': 5 -> 93
+    'name': 8 -> 91
+    'value': 46 -> 91
+    'assignedValue': 52 -> 85

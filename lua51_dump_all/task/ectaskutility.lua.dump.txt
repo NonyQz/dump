@@ -1,0 +1,4115 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\task\ectaskutility.lua
+SIZE: 38992
+PARSED: 38992
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\task\\ectaskutility.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 33
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Task.TaskListItem'
+K[003] = 'Task.ECTaskInterface'
+K[004] = 'Data.ElementData'
+K[005] = 'Utility.ECUIUtility'
+K[006] = 'Configs.TaskTargetList'
+K[007] = 'Configs.npc_list'
+K[008] = 'Players.ECAutoMove'
+K[009] = 'Players.ECAutoMoveUtility'
+K[010] = 'Main.ECGame'
+K[011] = 'Task.ECTaskDef'
+K[012] = 'NPCs.ECServerNPC'
+K[013] = 'Configs.DistanceConfig'
+K[014] = 'Data.Exptypes'
+K[015] = 'Data.ECEleDataReader'
+K[016] = 'Utility.GcCallbacks'
+K[017] = 'Event.TaskEvents'
+K[018] = 'Class'
+K[019] = 'ECTaskUtility'
+K[020] = 'define'
+K[021] = 'static'
+K[022] = 'number'
+K[023] = '=>'
+K[024] = 'string'
+K[025] = 'FormateTaskBaseName'
+K[026] = 'FormateTaskName'
+K[027] = 'FormatTaskSubfixName'
+K[028] = 'FunctionType'
+K[029] = 'INVALID'
+K[030] = 'table'
+K[031] = 'GetNPCTaskList'
+K[032] = 'GetNPCTaskIcon'
+K[033] = 'GetNPCTaskIconPath'
+K[034] = '_calcNPCTaskList'
+K[035] = 'GetTaskTypeInfoTaskOut'
+K[036] = 'GetTaskTypeInfoTaskIn'
+K[037] = 'FormatTargetMonster'
+K[038] = 'FormatTargetMonsterNum'
+K[039] = 'FormatTargetItem'
+K[040] = 'FormatTargetItemNum'
+K[041] = 'FormatTargetEvent'
+K[042] = 'FormatTargetEventNum'
+K[043] = 'FormatLeftTime'
+K[044] = 'FormatTaskTimeLeft'
+K[045] = 'FormatTaskIdleTimeLeft'
+K[046] = 'boolean'
+K[047] = 'IsTaskActivityOver'
+K[048] = 'IsTaskActivityControl'
+K[049] = 'GetTaskTarget'
+K[050] = 'BeginTaskTargetAutomove'
+K[051] = 'BeginTaskTargetAutomoveWithNoAutoTarget'
+K[052] = 'TASK_NATION_RANGE'
+K[053] = 'GetTaskAutoMoveNation'
+K[054] = 'BeginTaskDeliverNPCAutomove'
+K[055] = 'BeginTaskAwardNPCAutomove'
+K[056] = 'BeginTaskAutomove'
+K[057] = 'GetTaskErrorDesc'
+K[058] = 'TASK_ERR_CODE'
+K[059] = 'GetTaskErrorDescEx'
+K[060] = 'AcceptTask'
+K[061] = 'AcceptTaskEx'
+K[062] = 'FinishTask'
+K[063] = 'FinishTaskEx'
+K[064] = 'ManualAcceptTask'
+K[065] = 'ManualFinishTask'
+K[066] = 'ManualAcceptAndFinishTask'
+K[067] = 'GetStorageAllConfig'
+K[068] = 'GetStorageConfig'
+K[069] = 'ShouldFinishTaskWithStorageUI'
+K[070] = 'function'
+K[071] = 'startTaskTick'
+K[072] = 'stopTaskTick'
+K[073] = 'Event.LeaveGameLogicEvent'
+K[074] = 'EventManager'
+K[075] = 'addHandler'
+K[076] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    2] 0x00008081  LOADK      R2 = K[2]='Task.TaskListItem'
+0005 [line    2] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    3] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    3] 0x0000C0C1  LOADK      R3 = K[3]='Task.ECTaskInterface'
+0008 [line    3] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    4] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    4] 0x00010101  LOADK      R4 = K[4]='Data.ElementData'
+0011 [line    4] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    5] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    5] 0x00014141  LOADK      R5 = K[5]='Utility.ECUIUtility'
+0014 [line    5] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    6] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    6] 0x00018181  LOADK      R6 = K[6]='Configs.TaskTargetList'
+0017 [line    6] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    7] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line    7] 0x0001C1C1  LOADK      R7 = K[7]='Configs.npc_list'
+0020 [line    7] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    8] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    8] 0x00020201  LOADK      R8 = K[8]='Players.ECAutoMove'
+0023 [line    8] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line    9] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line    9] 0x00024241  LOADK      R9 = K[9]='Players.ECAutoMoveUtility'
+0026 [line    9] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   10] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   10] 0x00028281  LOADK      R10 = K[10]='Main.ECGame'
+0029 [line   10] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   11] 0x00000285  GETGLOBAL  R10 = GLOBAL K[0]='require'
+0031 [line   11] 0x0002C2C1  LOADK      R11 = K[11]='Task.ECTaskDef'
+0032 [line   11] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   12] 0x000002C5  GETGLOBAL  R11 = GLOBAL K[0]='require'
+0034 [line   12] 0x00030301  LOADK      R12 = K[12]='NPCs.ECServerNPC'
+0035 [line   12] 0x010082DC  CALL       A=11 B=2 C=2
+0036 [line   13] 0x00000305  GETGLOBAL  R12 = GLOBAL K[0]='require'
+0037 [line   13] 0x00034341  LOADK      R13 = K[13]='Configs.DistanceConfig'
+0038 [line   13] 0x0100831C  CALL       A=12 B=2 C=2
+0039 [line   14] 0x00000345  GETGLOBAL  R13 = GLOBAL K[0]='require'
+0040 [line   14] 0x00038381  LOADK      R14 = K[14]='Data.Exptypes'
+0041 [line   14] 0x0100835C  CALL       A=13 B=2 C=2
+0042 [line   15] 0x00000385  GETGLOBAL  R14 = GLOBAL K[0]='require'
+0043 [line   15] 0x0003C3C1  LOADK      R15 = K[15]='Data.ECEleDataReader'
+0044 [line   15] 0x0100839C  CALL       A=14 B=2 C=2
+0045 [line   16] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+0046 [line   16] 0x00040401  LOADK      R16 = K[16]='Utility.GcCallbacks'
+0047 [line   16] 0x010083DC  CALL       A=15 B=2 C=2
+0048 [line   17] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+0049 [line   17] 0x00044441  LOADK      R17 = K[17]='Event.TaskEvents'
+0050 [line   17] 0x0100841C  CALL       A=16 B=2 C=2
+0051 [line   19] 0x00448446  GETTABLE   R17 = R0[K[18]='Class']
+0052 [line   19] 0x0004C481  LOADK      R18 = K[19]='ECTaskUtility'
+0053 [line   19] 0x0100845C  CALL       A=17 B=2 C=2
+0054 [line   20] 0x08C50486  GETTABLE   R18 = R17[K[20]='define']
+0055 [line   23] 0x094544C6  GETTABLE   R19 = R18[K[21]='static']
+0056 [line   23] 0x00058501  LOADK      R20 = K[22]='number'
+0057 [line   23] 0x0005C541  LOADK      R21 = K[23]='=>'
+0058 [line   23] 0x00060581  LOADK      R22 = K[24]='string'
+0059 [line   23] 0x020084DC  CALL       A=19 B=4 C=2
+0060 [line   29] 0x00000524  CLOSURE    R20 = PROTO[0]
+0061 [line   29] 0x01000000  MOVE       R0 = R2
+0062 [line   29] 0x8C8504C9  SETTABLE   R19[K[25]='FormateTaskBaseName'] = R20
+0063 [line   32] 0x094544C6  GETTABLE   R19 = R18[K[21]='static']
+0064 [line   32] 0x00058501  LOADK      R20 = K[22]='number'
+0065 [line   32] 0x0005C541  LOADK      R21 = K[23]='=>'
+0066 [line   32] 0x00060581  LOADK      R22 = K[24]='string'
+0067 [line   32] 0x020084DC  CALL       A=19 B=4 C=2
+0068 [line   46] 0x00004524  CLOSURE    R20 = PROTO[1]
+0069 [line   46] 0x01000000  MOVE       R0 = R2
+0070 [line   46] 0x08800000  MOVE       R0 = R17
+0071 [line   46] 0x8D0504C9  SETTABLE   R19[K[26]='FormateTaskName'] = R20
+0072 [line   49] 0x094544C6  GETTABLE   R19 = R18[K[21]='static']
+0073 [line   49] 0x00058501  LOADK      R20 = K[22]='number'
+0074 [line   49] 0x0005C541  LOADK      R21 = K[23]='=>'
+0075 [line   49] 0x00060581  LOADK      R22 = K[24]='string'
+0076 [line   49] 0x020084DC  CALL       A=19 B=4 C=2
+0077 [line   56] 0x00008524  CLOSURE    R20 = PROTO[2]
+0078 [line   56] 0x01000000  MOVE       R0 = R2
+0079 [line   56] 0x8D8504C9  SETTABLE   R19[K[27]='FormatTaskSubfixName'] = R20
+0080 [line   62] 0x0000C4E4  CLOSURE    R19 = PROTO[3]
+0081 [line   64] 0x00C70506  GETTABLE   R20 = R1[K[28]='FunctionType']
+0082 [line   64] 0x0A474506  GETTABLE   R20 = R20[K[29]='INVALID']
+0083 [line   75] 0x00010564  CLOSURE    R21 = PROTO[4]
+0084 [line   75] 0x0A000000  MOVE       R0 = R20
+0085 [line   75] 0x09800000  MOVE       R0 = R19
+0086 [line   83] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0087 [line   83] 0x000785C1  LOADK      R23 = K[30]='table'
+0088 [line   83] 0x0005C601  LOADK      R24 = K[23]='=>'
+0089 [line   83] 0x00078641  LOADK      R25 = K[30]='table'
+0090 [line   83] 0x00058681  LOADK      R26 = K[22]='number'
+0091 [line   83] 0x0280859C  CALL       A=22 B=5 C=2
+0092 [line   87] 0x000145E4  CLOSURE    R23 = PROTO[5]
+0093 [line   87] 0x08800000  MOVE       R0 = R17
+0094 [line   87] 0x8F85C589  SETTABLE   R22[K[31]='GetNPCTaskList'] = R23
+0095 [line   90] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0096 [line   90] 0x000785C1  LOADK      R23 = K[30]='table'
+0097 [line   90] 0x0005C601  LOADK      R24 = K[23]='=>'
+0098 [line   90] 0x00058641  LOADK      R25 = K[22]='number'
+0099 [line   90] 0x00058681  LOADK      R26 = K[22]='number'
+0100 [line   90] 0x0280859C  CALL       A=22 B=5 C=2
+0101 [line   93] 0x000185E4  CLOSURE    R23 = PROTO[6]
+0102 [line   93] 0x08800000  MOVE       R0 = R17
+0103 [line   93] 0x9005C589  SETTABLE   R22[K[32]='GetNPCTaskIcon'] = R23
+0104 [line   96] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0105 [line   96] 0x000785C1  LOADK      R23 = K[30]='table'
+0106 [line   96] 0x0005C601  LOADK      R24 = K[23]='=>'
+0107 [line   96] 0x00060641  LOADK      R25 = K[24]='string'
+0108 [line   96] 0x0200859C  CALL       A=22 B=4 C=2
+0109 [line  123] 0x0001C5E4  CLOSURE    R23 = PROTO[7]
+0110 [line  123] 0x08800000  MOVE       R0 = R17
+0111 [line  123] 0x00800000  MOVE       R0 = R1
+0112 [line  123] 0x9085C589  SETTABLE   R22[K[33]='GetNPCTaskIconPath'] = R23
+0113 [line  127] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0114 [line  127] 0x000785C1  LOADK      R23 = K[30]='table'
+0115 [line  127] 0x00078601  LOADK      R24 = K[30]='table'
+0116 [line  127] 0x0005C641  LOADK      R25 = K[23]='=>'
+0117 [line  127] 0x00058681  LOADK      R26 = K[22]='number'
+0118 [line  127] 0x000586C1  LOADK      R27 = K[22]='number'
+0119 [line  127] 0x00058701  LOADK      R28 = K[22]='number'
+0120 [line  127] 0x0380859C  CALL       A=22 B=7 C=2
+0121 [line  199] 0x000205E4  CLOSURE    R23 = PROTO[8]
+0122 [line  199] 0x01800000  MOVE       R0 = R3
+0123 [line  199] 0x08800000  MOVE       R0 = R17
+0124 [line  199] 0x00800000  MOVE       R0 = R1
+0125 [line  199] 0x0A800000  MOVE       R0 = R21
+0126 [line  199] 0x9105C589  SETTABLE   R22[K[34]='_calcNPCTaskList'] = R23
+0127 [line  201] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0128 [line  201] 0x000585C1  LOADK      R23 = K[22]='number'
+0129 [line  201] 0x00058601  LOADK      R24 = K[22]='number'
+0130 [line  201] 0x0005C641  LOADK      R25 = K[23]='=>'
+0131 [line  201] 0x00058681  LOADK      R26 = K[22]='number'
+0132 [line  201] 0x000586C1  LOADK      R27 = K[22]='number'
+0133 [line  201] 0x0300859C  CALL       A=22 B=6 C=2
+0134 [line  239] 0x000245E4  CLOSURE    R23 = PROTO[9]
+0135 [line  239] 0x01000000  MOVE       R0 = R2
+0136 [line  239] 0x00800000  MOVE       R0 = R1
+0137 [line  239] 0x05000000  MOVE       R0 = R10
+0138 [line  239] 0x9185C589  SETTABLE   R22[K[35]='GetTaskTypeInfoTaskOut'] = R23
+0139 [line  241] 0x09454586  GETTABLE   R22 = R18[K[21]='static']
+0140 [line  241] 0x000585C1  LOADK      R23 = K[22]='number'
+0141 [line  241] 0x00058601  LOADK      R24 = K[22]='number'
+0142 [line  241] 0x0005C641  LOADK      R25 = K[23]='=>'
+0143 [line  241] 0x00058681  LOADK      R26 = K[22]='number'
+0144 [line  241] 0x000586C1  LOADK      R27 = K[22]='number'
+0145 [line  241] 0x0300859C  CALL       A=22 B=6 C=2
+0146 [line  266] 0x000285E4  CLOSURE    R23 = PROTO[10]
+0147 [line  266] 0x01000000  MOVE       R0 = R2
+0148 [line  266] 0x00800000  MOVE       R0 = R1
+0149 [line  266] 0x04800000  MOVE       R0 = R9
+0150 [line  266] 0x9205C589  SETTABLE   R22[K[36]='GetTaskTypeInfoTaskIn'] = R23
+0151 [line  276] 0x0002C5A4  CLOSURE    R22 = PROTO[11]
+0152 [line  276] 0x01800000  MOVE       R0 = R3
+0153 [line  283] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0154 [line  283] 0x00058601  LOADK      R24 = K[22]='number'
+0155 [line  283] 0x00078641  LOADK      R25 = K[30]='table'
+0156 [line  283] 0x0005C681  LOADK      R26 = K[23]='=>'
+0157 [line  283] 0x000606C1  LOADK      R27 = K[24]='string'
+0158 [line  283] 0x028085DC  CALL       A=23 B=5 C=2
+0159 [line  306] 0x00030624  CLOSURE    R24 = PROTO[12]
+0160 [line  306] 0x02000000  MOVE       R0 = R4
+0161 [line  306] 0x928605C9  SETTABLE   R23[K[37]='FormatTargetMonster'] = R24
+0162 [line  313] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0163 [line  313] 0x00058601  LOADK      R24 = K[22]='number'
+0164 [line  313] 0x00078641  LOADK      R25 = K[30]='table'
+0165 [line  313] 0x0005C681  LOADK      R26 = K[23]='=>'
+0166 [line  313] 0x000606C1  LOADK      R27 = K[24]='string'
+0167 [line  313] 0x028085DC  CALL       A=23 B=5 C=2
+0168 [line  336] 0x00034624  CLOSURE    R24 = PROTO[13]
+0169 [line  336] 0x930605C9  SETTABLE   R23[K[38]='FormatTargetMonsterNum'] = R24
+0170 [line  343] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0171 [line  343] 0x00058601  LOADK      R24 = K[22]='number'
+0172 [line  343] 0x00078641  LOADK      R25 = K[30]='table'
+0173 [line  343] 0x0005C681  LOADK      R26 = K[23]='=>'
+0174 [line  343] 0x000606C1  LOADK      R27 = K[24]='string'
+0175 [line  343] 0x028085DC  CALL       A=23 B=5 C=2
+0176 [line  356] 0x00038624  CLOSURE    R24 = PROTO[14]
+0177 [line  356] 0x02000000  MOVE       R0 = R4
+0178 [line  356] 0x938605C9  SETTABLE   R23[K[39]='FormatTargetItem'] = R24
+0179 [line  363] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0180 [line  363] 0x00058601  LOADK      R24 = K[22]='number'
+0181 [line  363] 0x00078641  LOADK      R25 = K[30]='table'
+0182 [line  363] 0x0005C681  LOADK      R26 = K[23]='=>'
+0183 [line  363] 0x000606C1  LOADK      R27 = K[24]='string'
+0184 [line  363] 0x028085DC  CALL       A=23 B=5 C=2
+0185 [line  376] 0x0003C624  CLOSURE    R24 = PROTO[15]
+0186 [line  376] 0x940605C9  SETTABLE   R23[K[40]='FormatTargetItemNum'] = R24
+0187 [line  383] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0188 [line  383] 0x00058601  LOADK      R24 = K[22]='number'
+0189 [line  383] 0x00078641  LOADK      R25 = K[30]='table'
+0190 [line  383] 0x0005C681  LOADK      R26 = K[23]='=>'
+0191 [line  383] 0x000606C1  LOADK      R27 = K[24]='string'
+0192 [line  383] 0x028085DC  CALL       A=23 B=5 C=2
+0193 [line  400] 0x00040624  CLOSURE    R24 = PROTO[16]
+0194 [line  400] 0x948605C9  SETTABLE   R23[K[41]='FormatTargetEvent'] = R24
+0195 [line  407] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0196 [line  407] 0x00058601  LOADK      R24 = K[22]='number'
+0197 [line  407] 0x00078641  LOADK      R25 = K[30]='table'
+0198 [line  407] 0x0005C681  LOADK      R26 = K[23]='=>'
+0199 [line  407] 0x000606C1  LOADK      R27 = K[24]='string'
+0200 [line  407] 0x028085DC  CALL       A=23 B=5 C=2
+0201 [line  424] 0x00044624  CLOSURE    R24 = PROTO[17]
+0202 [line  424] 0x950605C9  SETTABLE   R23[K[42]='FormatTargetEventNum'] = R24
+0203 [line  429] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0204 [line  429] 0x00058601  LOADK      R24 = K[22]='number'
+0205 [line  429] 0x0005C641  LOADK      R25 = K[23]='=>'
+0206 [line  429] 0x00060681  LOADK      R26 = K[24]='string'
+0207 [line  429] 0x020085DC  CALL       A=23 B=4 C=2
+0208 [line  450] 0x00048624  CLOSURE    R24 = PROTO[18]
+0209 [line  450] 0x958605C9  SETTABLE   R23[K[43]='FormatLeftTime'] = R24
+0210 [line  455] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0211 [line  455] 0x00078601  LOADK      R24 = K[30]='table'
+0212 [line  455] 0x0005C641  LOADK      R25 = K[23]='=>'
+0213 [line  455] 0x00060681  LOADK      R26 = K[24]='string'
+0214 [line  455] 0x020085DC  CALL       A=23 B=4 C=2
+0215 [line  462] 0x0004C624  CLOSURE    R24 = PROTO[19]
+0216 [line  462] 0x08800000  MOVE       R0 = R17
+0217 [line  462] 0x960605C9  SETTABLE   R23[K[44]='FormatTaskTimeLeft'] = R24
+0218 [line  467] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0219 [line  467] 0x00078601  LOADK      R24 = K[30]='table'
+0220 [line  467] 0x0005C641  LOADK      R25 = K[23]='=>'
+0221 [line  467] 0x00060681  LOADK      R26 = K[24]='string'
+0222 [line  467] 0x020085DC  CALL       A=23 B=4 C=2
+0223 [line  474] 0x00050624  CLOSURE    R24 = PROTO[20]
+0224 [line  474] 0x08800000  MOVE       R0 = R17
+0225 [line  474] 0x968605C9  SETTABLE   R23[K[45]='FormatTaskIdleTimeLeft'] = R24
+0226 [line  477] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0227 [line  477] 0x00058601  LOADK      R24 = K[22]='number'
+0228 [line  477] 0x0005C641  LOADK      R25 = K[23]='=>'
+0229 [line  477] 0x000B8681  LOADK      R26 = K[46]='boolean'
+0230 [line  477] 0x020085DC  CALL       A=23 B=4 C=2
+0231 [line  493] 0x00054624  CLOSURE    R24 = PROTO[21]
+0232 [line  493] 0x02800000  MOVE       R0 = R5
+0233 [line  493] 0x978605C9  SETTABLE   R23[K[47]='IsTaskActivityOver'] = R24
+0234 [line  495] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0235 [line  495] 0x00058601  LOADK      R24 = K[22]='number'
+0236 [line  495] 0x0005C641  LOADK      R25 = K[23]='=>'
+0237 [line  495] 0x000B8681  LOADK      R26 = K[46]='boolean'
+0238 [line  495] 0x020085DC  CALL       A=23 B=4 C=2
+0239 [line  506] 0x00058624  CLOSURE    R24 = PROTO[22]
+0240 [line  506] 0x02800000  MOVE       R0 = R5
+0241 [line  506] 0x980605C9  SETTABLE   R23[K[48]='IsTaskActivityControl'] = R24
+0242 [line  514] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0243 [line  514] 0x00058601  LOADK      R24 = K[22]='number'
+0244 [line  514] 0x0005C641  LOADK      R25 = K[23]='=>'
+0245 [line  514] 0x00078681  LOADK      R26 = K[30]='table'
+0246 [line  514] 0x000786C1  LOADK      R27 = K[30]='table'
+0247 [line  514] 0x028085DC  CALL       A=23 B=5 C=2
+0248 [line  542] 0x0005C624  CLOSURE    R24 = PROTO[23]
+0249 [line  542] 0x02800000  MOVE       R0 = R5
+0250 [line  542] 0x01000000  MOVE       R0 = R2
+0251 [line  542] 0x05000000  MOVE       R0 = R10
+0252 [line  542] 0x03000000  MOVE       R0 = R6
+0253 [line  542] 0x988605C9  SETTABLE   R23[K[49]='GetTaskTarget'] = R24
+0254 [line  549] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0255 [line  549] 0x00058601  LOADK      R24 = K[22]='number'
+0256 [line  549] 0x0005C641  LOADK      R25 = K[23]='=>'
+0257 [line  549] 0x000B8681  LOADK      R26 = K[46]='boolean'
+0258 [line  549] 0x020085DC  CALL       A=23 B=4 C=2
+0259 [line  556] 0x00060624  CLOSURE    R24 = PROTO[24]
+0260 [line  556] 0x08800000  MOVE       R0 = R17
+0261 [line  556] 0x03800000  MOVE       R0 = R7
+0262 [line  556] 0x990605C9  SETTABLE   R23[K[50]='BeginTaskTargetAutomove'] = R24
+0263 [line  563] 0x094545C6  GETTABLE   R23 = R18[K[21]='static']
+0264 [line  563] 0x00058601  LOADK      R24 = K[22]='number'
+0265 [line  563] 0x0005C641  LOADK      R25 = K[23]='=>'
+0266 [line  563] 0x000B8681  LOADK      R26 = K[46]='boolean'
+0267 [line  563] 0x020085DC  CALL       A=23 B=4 C=2
+0268 [line  570] 0x00064624  CLOSURE    R24 = PROTO[25]
+0269 [line  570] 0x02800000  MOVE       R0 = R5
+0270 [line  570] 0x03800000  MOVE       R0 = R7
+0271 [line  570] 0x998605C9  SETTABLE   R23[K[51]='BeginTaskTargetAutomoveWithNoAutoTarget'] = R24
+0272 [line  579] 0x000685E4  CLOSURE    R23 = PROTO[26]
+0273 [line  579] 0x04800000  MOVE       R0 = R9
+0274 [line  579] 0x05800000  MOVE       R0 = R11
+0275 [line  581] 0x054D0606  GETTABLE   R24 = R10[K[52]='TASK_NATION_RANGE']
+0276 [line  594] 0x09454646  GETTABLE   R25 = R18[K[21]='static']
+0277 [line  594] 0x00058681  LOADK      R26 = K[22]='number'
+0278 [line  594] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0279 [line  594] 0x00058701  LOADK      R28 = K[22]='number'
+0280 [line  594] 0x0200865C  CALL       A=25 B=4 C=2
+0281 [line  610] 0x0006C6A4  CLOSURE    R26 = PROTO[27]
+0282 [line  610] 0x01000000  MOVE       R0 = R2
+0283 [line  610] 0x0C000000  MOVE       R0 = R24
+0284 [line  610] 0x9A868649  SETTABLE   R25[K[53]='GetTaskAutoMoveNation'] = R26
+0285 [line  617] 0x09454646  GETTABLE   R25 = R18[K[21]='static']
+0286 [line  617] 0x00058681  LOADK      R26 = K[22]='number'
+0287 [line  617] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0288 [line  617] 0x000B8701  LOADK      R28 = K[46]='boolean'
+0289 [line  617] 0x0200865C  CALL       A=25 B=4 C=2
+0290 [line  649] 0x000706A4  CLOSURE    R26 = PROTO[28]
+0291 [line  649] 0x01000000  MOVE       R0 = R2
+0292 [line  649] 0x03000000  MOVE       R0 = R6
+0293 [line  649] 0x0B800000  MOVE       R0 = R23
+0294 [line  649] 0x04800000  MOVE       R0 = R9
+0295 [line  649] 0x08800000  MOVE       R0 = R17
+0296 [line  649] 0x03800000  MOVE       R0 = R7
+0297 [line  649] 0x06000000  MOVE       R0 = R12
+0298 [line  649] 0x9B068649  SETTABLE   R25[K[54]='BeginTaskDeliverNPCAutomove'] = R26
+0299 [line  656] 0x09454646  GETTABLE   R25 = R18[K[21]='static']
+0300 [line  656] 0x00058681  LOADK      R26 = K[22]='number'
+0301 [line  656] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0302 [line  656] 0x000B8701  LOADK      R28 = K[46]='boolean'
+0303 [line  656] 0x0200865C  CALL       A=25 B=4 C=2
+0304 [line  720] 0x000746A4  CLOSURE    R26 = PROTO[29]
+0305 [line  720] 0x01000000  MOVE       R0 = R2
+0306 [line  720] 0x08800000  MOVE       R0 = R17
+0307 [line  720] 0x03000000  MOVE       R0 = R6
+0308 [line  720] 0x04800000  MOVE       R0 = R9
+0309 [line  720] 0x0B800000  MOVE       R0 = R23
+0310 [line  720] 0x03800000  MOVE       R0 = R7
+0311 [line  720] 0x06000000  MOVE       R0 = R12
+0312 [line  720] 0x9B868649  SETTABLE   R25[K[55]='BeginTaskAwardNPCAutomove'] = R26
+0313 [line  727] 0x09454646  GETTABLE   R25 = R18[K[21]='static']
+0314 [line  727] 0x00058681  LOADK      R26 = K[22]='number'
+0315 [line  727] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0316 [line  727] 0x000B8701  LOADK      R28 = K[46]='boolean'
+0317 [line  727] 0x0200865C  CALL       A=25 B=4 C=2
+0318 [line  764] 0x000786A4  CLOSURE    R26 = PROTO[30]
+0319 [line  764] 0x04800000  MOVE       R0 = R9
+0320 [line  764] 0x01000000  MOVE       R0 = R2
+0321 [line  764] 0x08800000  MOVE       R0 = R17
+0322 [line  764] 0x9C068649  SETTABLE   R25[K[56]='BeginTaskAutomove'] = R26
+0323 [line  766] 0x09454646  GETTABLE   R25 = R18[K[21]='static']
+0324 [line  766] 0x00058681  LOADK      R26 = K[22]='number'
+0325 [line  766] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0326 [line  766] 0x00060701  LOADK      R28 = K[24]='string'
+0327 [line  766] 0x0200865C  CALL       A=25 B=4 C=2
+0328 [line  768] 0x0007C6A4  CLOSURE    R26 = PROTO[31]
+0329 [line  768] 0x9C868649  SETTABLE   R25[K[57]='GetTaskErrorDesc'] = R26
+0330 [line  770] 0x054E8646  GETTABLE   R25 = R10[K[58]='TASK_ERR_CODE']
+0331 [line  771] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0332 [line  771] 0x000586C1  LOADK      R27 = K[22]='number'
+0333 [line  771] 0x00058701  LOADK      R28 = K[22]='number'
+0334 [line  771] 0x0005C741  LOADK      R29 = K[23]='=>'
+0335 [line  771] 0x00060781  LOADK      R30 = K[24]='string'
+0336 [line  771] 0x0280869C  CALL       A=26 B=5 C=2
+0337 [line  795] 0x000806E4  CLOSURE    R27 = PROTO[32]
+0338 [line  795] 0x08800000  MOVE       R0 = R17
+0339 [line  795] 0x0C800000  MOVE       R0 = R25
+0340 [line  795] 0x9D86C689  SETTABLE   R26[K[59]='GetTaskErrorDescEx'] = R27
+0341 [line  802] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0342 [line  802] 0x000586C1  LOADK      R27 = K[22]='number'
+0343 [line  802] 0x0005C701  LOADK      R28 = K[23]='=>'
+0344 [line  802] 0x000B8741  LOADK      R29 = K[46]='boolean'
+0345 [line  802] 0x0200869C  CALL       A=26 B=4 C=2
+0346 [line  804] 0x000846E4  CLOSURE    R27 = PROTO[33]
+0347 [line  804] 0x08800000  MOVE       R0 = R17
+0348 [line  804] 0x9E06C689  SETTABLE   R26[K[60]='AcceptTask'] = R27
+0349 [line  806] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0350 [line  806] 0x000586C1  LOADK      R27 = K[22]='number'
+0351 [line  806] 0x00058701  LOADK      R28 = K[22]='number'
+0352 [line  806] 0x000B8741  LOADK      R29 = K[46]='boolean'
+0353 [line  806] 0x0005C781  LOADK      R30 = K[23]='=>'
+0354 [line  806] 0x000B87C1  LOADK      R31 = K[46]='boolean'
+0355 [line  806] 0x0300869C  CALL       A=26 B=6 C=2
+0356 [line  821] 0x000886E4  CLOSURE    R27 = PROTO[34]
+0357 [line  821] 0x01000000  MOVE       R0 = R2
+0358 [line  821] 0x08800000  MOVE       R0 = R17
+0359 [line  821] 0x9E86C689  SETTABLE   R26[K[61]='AcceptTaskEx'] = R27
+0360 [line  826] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0361 [line  826] 0x000586C1  LOADK      R27 = K[22]='number'
+0362 [line  826] 0x00058701  LOADK      R28 = K[22]='number'
+0363 [line  826] 0x0005C741  LOADK      R29 = K[23]='=>'
+0364 [line  826] 0x000B8781  LOADK      R30 = K[46]='boolean'
+0365 [line  826] 0x0280869C  CALL       A=26 B=5 C=2
+0366 [line  828] 0x0008C6E4  CLOSURE    R27 = PROTO[35]
+0367 [line  828] 0x08800000  MOVE       R0 = R17
+0368 [line  828] 0x9F06C689  SETTABLE   R26[K[62]='FinishTask'] = R27
+0369 [line  830] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0370 [line  830] 0x000586C1  LOADK      R27 = K[22]='number'
+0371 [line  830] 0x00058701  LOADK      R28 = K[22]='number'
+0372 [line  830] 0x000B8741  LOADK      R29 = K[46]='boolean'
+0373 [line  830] 0x0005C781  LOADK      R30 = K[23]='=>'
+0374 [line  830] 0x000B87C1  LOADK      R31 = K[46]='boolean'
+0375 [line  830] 0x0300869C  CALL       A=26 B=6 C=2
+0376 [line  845] 0x000906E4  CLOSURE    R27 = PROTO[36]
+0377 [line  845] 0x04800000  MOVE       R0 = R9
+0378 [line  845] 0x01000000  MOVE       R0 = R2
+0379 [line  845] 0x08800000  MOVE       R0 = R17
+0380 [line  845] 0x9F86C689  SETTABLE   R26[K[63]='FinishTaskEx'] = R27
+0381 [line  850] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0382 [line  850] 0x000586C1  LOADK      R27 = K[22]='number'
+0383 [line  850] 0x0005C701  LOADK      R28 = K[23]='=>'
+0384 [line  850] 0x000B8741  LOADK      R29 = K[46]='boolean'
+0385 [line  850] 0x0200869C  CALL       A=26 B=4 C=2
+0386 [line  865] 0x000946E4  CLOSURE    R27 = PROTO[37]
+0387 [line  865] 0x01000000  MOVE       R0 = R2
+0388 [line  865] 0x08800000  MOVE       R0 = R17
+0389 [line  865] 0xA006C689  SETTABLE   R26[K[64]='ManualAcceptTask'] = R27
+0390 [line  870] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0391 [line  870] 0x000586C1  LOADK      R27 = K[22]='number'
+0392 [line  870] 0x0005C701  LOADK      R28 = K[23]='=>'
+0393 [line  870] 0x000B8741  LOADK      R29 = K[46]='boolean'
+0394 [line  870] 0x0200869C  CALL       A=26 B=4 C=2
+0395 [line  882] 0x000986E4  CLOSURE    R27 = PROTO[38]
+0396 [line  882] 0x01000000  MOVE       R0 = R2
+0397 [line  882] 0x08800000  MOVE       R0 = R17
+0398 [line  882] 0xA086C689  SETTABLE   R26[K[65]='ManualFinishTask'] = R27
+0399 [line  887] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0400 [line  887] 0x000586C1  LOADK      R27 = K[22]='number'
+0401 [line  887] 0x07800700  MOVE       R28 = R15
+0402 [line  887] 0x0180869C  CALL       A=26 B=3 C=2
+0403 [line  906] 0x0009C6E4  CLOSURE    R27 = PROTO[39]
+0404 [line  906] 0x08800000  MOVE       R0 = R17
+0405 [line  906] 0x01000000  MOVE       R0 = R2
+0406 [line  906] 0x05000000  MOVE       R0 = R10
+0407 [line  906] 0x04800000  MOVE       R0 = R9
+0408 [line  906] 0x08000000  MOVE       R0 = R16
+0409 [line  906] 0xA106C689  SETTABLE   R26[K[66]='ManualAcceptAndFinishTask'] = R27
+0410 [line  909] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0411 [line  909] 0x0005C6C1  LOADK      R27 = K[23]='=>'
+0412 [line  909] 0x00078701  LOADK      R28 = K[30]='table'
+0413 [line  909] 0x0180869C  CALL       A=26 B=3 C=2
+0414 [line  914] 0x000A06E4  CLOSURE    R27 = PROTO[40]
+0415 [line  914] 0x01800000  MOVE       R0 = R3
+0416 [line  914] 0xA186C689  SETTABLE   R26[K[67]='GetStorageAllConfig'] = R27
+0417 [line  917] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0418 [line  917] 0x000586C1  LOADK      R27 = K[22]='number'
+0419 [line  917] 0x0005C701  LOADK      R28 = K[23]='=>'
+0420 [line  917] 0x00078741  LOADK      R29 = K[30]='table'
+0421 [line  917] 0x0200869C  CALL       A=26 B=4 C=2
+0422 [line  924] 0x000A46E4  CLOSURE    R27 = PROTO[41]
+0423 [line  924] 0x08800000  MOVE       R0 = R17
+0424 [line  924] 0xA206C689  SETTABLE   R26[K[68]='GetStorageConfig'] = R27
+0425 [line  926] 0x09454686  GETTABLE   R26 = R18[K[21]='static']
+0426 [line  926] 0x000586C1  LOADK      R27 = K[22]='number'
+0427 [line  926] 0x00058701  LOADK      R28 = K[22]='number'
+0428 [line  926] 0x0005C741  LOADK      R29 = K[23]='=>'
+0429 [line  926] 0x000B8781  LOADK      R30 = K[46]='boolean'
+0430 [line  926] 0x0280869C  CALL       A=26 B=5 C=2
+0431 [line  939] 0x000A86E4  CLOSURE    R27 = PROTO[42]
+0432 [line  939] 0x01800000  MOVE       R0 = R3
+0433 [line  939] 0x06800000  MOVE       R0 = R13
+0434 [line  939] 0xA286C689  SETTABLE   R26[K[69]='ShouldFinishTaskWithStorageUI'] = R27
+0435 [line  944] 0x0000068A  NEWTABLE   A=26 B=0 C=0 Bx=0
+0436 [line  956] 0x000AC6E4  CLOSURE    R27 = PROTO[43]
+0437 [line  956] 0x01000000  MOVE       R0 = R2
+0438 [line  962] 0x09454706  GETTABLE   R28 = R18[K[21]='static']
+0439 [line  962] 0x00058741  LOADK      R29 = K[22]='number'
+0440 [line  962] 0x00118781  LOADK      R30 = K[70]='function'
+0441 [line  962] 0x000587C1  LOADK      R31 = K[22]='number'
+0442 [line  962] 0x000B8801  LOADK      R32 = K[46]='boolean'
+0443 [line  962] 0x0280871C  CALL       A=28 B=5 C=2
+0444 [line  980] 0x000B0764  CLOSURE    R29 = PROTO[44]
+0445 [line  980] 0x08800000  MOVE       R0 = R17
+0446 [line  980] 0x0D800000  MOVE       R0 = R27
+0447 [line  980] 0x07800000  MOVE       R0 = R15
+0448 [line  980] 0x0D000000  MOVE       R0 = R26
+0449 [line  980] 0x04800000  MOVE       R0 = R9
+0450 [line  980] 0xA3874709  SETTABLE   R28[K[71]='startTaskTick'] = R29
+0451 [line  985] 0x09454706  GETTABLE   R28 = R18[K[21]='static']
+0452 [line  985] 0x00058741  LOADK      R29 = K[22]='number'
+0453 [line  985] 0x0100871C  CALL       A=28 B=2 C=2
+0454 [line  991] 0x000B4764  CLOSURE    R29 = PROTO[45]
+0455 [line  991] 0x0D000000  MOVE       R0 = R26
+0456 [line  991] 0xA4074709  SETTABLE   R28[K[72]='stopTaskTick'] = R29
+0457 [line  996] 0x00000705  GETGLOBAL  R28 = GLOBAL K[0]='require'
+0458 [line  996] 0x00124741  LOADK      R29 = K[73]='Event.LeaveGameLogicEvent'
+0459 [line  996] 0x0100871C  CALL       A=28 B=2 C=2
+0460 [line  997] 0x04D28746  GETTABLE   R29 = R9[K[74]='EventManager']
+0461 [line  997] 0x0ED2C74B  SELF       A=29 B=29 C=331 Bx=15179
+0462 [line  997] 0x0E0007C0  MOVE       R31 = R28
+0463 [line 1001] 0x000B8824  CLOSURE    R32 = PROTO[46]
+0464 [line 1001] 0x0D000000  MOVE       R0 = R26
+0465 [line 1001] 0x08800000  MOVE       R0 = R17
+0466 [line  997] 0x0200475C  CALL       A=29 B=4 C=1
+0467 [line 1003] 0x08D30746  GETTABLE   R29 = R17[K[76]='Commit']
+0468 [line 1003] 0x0080475C  CALL       A=29 B=1 C=1
+0469 [line 1004] 0x0100045E  RETURN     A=17 B=2 C=0
+0470 [line 1004] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 470
+'TaskListItem': 6 -> 470
+'ECTaskInterface': 9 -> 470
+'ElementData': 12 -> 470
+'ECUIUtility': 15 -> 470
+'TaskTargetList': 18 -> 470
+'NPCList': 21 -> 470
+'ECAutoMove': 24 -> 470
+'ECAutoMoveUtility': 27 -> 470
+'ECGame': 30 -> 470
+'ECTaskDef': 33 -> 470
+'ECServerNPC': 36 -> 470
+'DistanceConfig': 39 -> 470
+'Exptypes': 42 -> 470
+'ECEleDataReader': 45 -> 470
+'GcCallbacks': 48 -> 470
+'TaskEvents': 51 -> 470
+'ECTaskUtility': 54 -> 470
+'def': 55 -> 470
+'taskIconLess': 81 -> 470
+'FunctionType_INVALID': 83 -> 470
+'selectTask': 86 -> 470
+'GetEssenceName': 153 -> 470
+'getNPCEssence': 275 -> 470
+'TASK_NATION_RANGE': 276 -> 470
+'TASK_ERR_CODE': 331 -> 470
+'l_taskTickMap': 436 -> 470
+'shouldTaskTick': 438 -> 470
+'LeaveGameLogicEvent': 460 -> 470
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xE2E
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 23 - 29
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = None
+    K[003] = '[Bad task id '
+    K[004] = ']'
+    K[005] = 'name'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   24] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   24] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   24] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   25] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0004 [line   25] 0x00000100  MOVE       R4 = R0
+    0005 [line   25] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line   27] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0007 [line   27] 0x80010016  JMP        A=0 sBx=5
+    0008 [line   27] 0x0000C0C1  LOADK      R3 = K[3]='[Bad task id '
+    0009 [line   27] 0x00000100  MOVE       R4 = R0
+    0010 [line   27] 0x00010141  LOADK      R5 = K[4]=']'
+    0011 [line   27] 0x018140D5  CONCAT     A=3 B=3 C=5 Bx=1541
+    0012 [line   27] 0x010000DE  RETURN     A=3 B=2 C=0
+    0013 [line   28] 0x014140C6  GETTABLE   R3 = R2[K[5]='name']
+    0014 [line   28] 0x010000DE  RETURN     A=3 B=2 C=0
+    0015 [line   29] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'task_id': 0 -> 15
+    'task_interface': 3 -> 15
+    'taskView': 6 -> 15
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xF72
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 32 - 46
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = None
+    K[003] = '[Bad task id '
+    K[004] = ']'
+    K[005] = 'serialName'
+    K[006] = ''
+    K[007] = '['
+    K[008] = 'FormatTaskSubfixName'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   33] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   33] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   33] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   34] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0004 [line   34] 0x00000100  MOVE       R4 = R0
+    0005 [line   34] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line   36] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0007 [line   36] 0x80010016  JMP        A=0 sBx=5
+    0008 [line   36] 0x0000C0C1  LOADK      R3 = K[3]='[Bad task id '
+    0009 [line   36] 0x00000100  MOVE       R4 = R0
+    0010 [line   36] 0x00010141  LOADK      R5 = K[4]=']'
+    0011 [line   36] 0x018140D5  CONCAT     A=3 B=3 C=5 Bx=1541
+    0012 [line   36] 0x010000DE  RETURN     A=3 B=2 C=0
+    0013 [line   38] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0014 [line   39] 0x01414106  GETTABLE   R4 = R2[K[5]='serialName']
+    0015 [line   39] 0x02418017  EQ         A=0 B=R4 C=K[6]=''
+    0016 [line   39] 0x80004016  JMP        A=0 sBx=2
+    0017 [line   40] 0x000180C1  LOADK      R3 = K[6]=''
+    0018 [line   40] 0x8000C016  JMP        A=0 sBx=4
+    0019 [line   42] 0x0001C101  LOADK      R4 = K[7]='['
+    0020 [line   42] 0x01414146  GETTABLE   R5 = R2[K[5]='serialName']
+    0021 [line   42] 0x00010181  LOADK      R6 = K[4]=']'
+    0022 [line   42] 0x020180D5  CONCAT     A=3 B=4 C=6 Bx=2054
+    0023 [line   45] 0x01800100  MOVE       R4 = R3
+    0024 [line   45] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0025 [line   45] 0x02C20146  GETTABLE   R5 = R5[K[8]='FormatTaskSubfixName']
+    0026 [line   45] 0x00000180  MOVE       R6 = R0
+    0027 [line   45] 0x0100815C  CALL       A=5 B=2 C=2
+    0028 [line   45] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0029 [line   45] 0x0100011E  RETURN     A=4 B=2 C=0
+    0030 [line   46] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'task_id': 0 -> 30
+    'task_interface': 3 -> 30
+    'taskView': 6 -> 30
+    'prefix': 14 -> 30
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x1180
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 49 - 56
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = None
+    K[003] = '[Bad task id '
+    K[004] = ']'
+    K[005] = 'name'
+    K[006] = 'nameSubfix'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   50] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   50] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   50] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   51] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0004 [line   51] 0x00000100  MOVE       R4 = R0
+    0005 [line   51] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line   53] 0x01408017  EQ         A=0 B=R2 C=K[2]=None
+    0007 [line   53] 0x80010016  JMP        A=0 sBx=5
+    0008 [line   53] 0x0000C0C1  LOADK      R3 = K[3]='[Bad task id '
+    0009 [line   53] 0x00000100  MOVE       R4 = R0
+    0010 [line   53] 0x00010141  LOADK      R5 = K[4]=']'
+    0011 [line   53] 0x018140D5  CONCAT     A=3 B=3 C=5 Bx=1541
+    0012 [line   53] 0x010000DE  RETURN     A=3 B=2 C=0
+    0013 [line   55] 0x014140C6  GETTABLE   R3 = R2[K[5]='name']
+    0014 [line   55] 0x01418106  GETTABLE   R4 = R2[K[6]='nameSubfix']
+    0015 [line   55] 0x0080811C  CALL       A=4 B=1 C=2
+    0016 [line   55] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0017 [line   55] 0x010000DE  RETURN     A=3 B=2 C=0
+    0018 [line   56] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'task_id': 0 -> 18
+    'task_interface': 3 -> 18
+    'taskView': 6 -> 18
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x12EC
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 59 - 62
+    Params : 4
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   60] 0x0080C058  LT         A=1 B=R1 C=R3
+    0001 [line   60] 0x80010016  JMP        A=0 sBx=5
+    0002 [line   61] 0x0080C017  EQ         A=0 B=R1 C=R3
+    0003 [line   61] 0x80004016  JMP        A=0 sBx=2
+    0004 [line   61] 0x00008058  LT         A=1 B=R0 C=R2
+    0005 [line   61] 0x80000016  JMP        A=0 sBx=1
+    0006 [line   61] 0x00004102  LOADBOOL   A=4 B=0 C=1
+    0007 [line   61] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0008 [line   61] 0x0100011E  RETURN     A=4 B=2 C=0
+    0009 [line   62] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'leftIconType': 0 -> 9
+    'leftFuncType': 0 -> 9
+    'rightIconType': 0 -> 9
+    'rightFuncType': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x13CA
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 66 - 75
+    Params : 4
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   67] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line   67] 0x00810017  EQ         A=0 B=R1 C=R4
+    0002 [line   67] 0x80000016  JMP        A=0 sBx=1
+    0003 [line   67] 0x00004102  LOADBOOL   A=4 B=0 C=1
+    0004 [line   67] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0005 [line   68] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0006 [line   68] 0x01814017  EQ         A=0 B=R3 C=R5
+    0007 [line   68] 0x80000016  JMP        A=0 sBx=1
+    0008 [line   68] 0x00004142  LOADBOOL   A=5 B=0 C=1
+    0009 [line   68] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0010 [line   70] 0x0000011A  TEST       A=4 B=0 C=0
+    0011 [line   70] 0x80024016  JMP        A=0 sBx=10
+    0012 [line   70] 0x0000015A  TEST       A=5 B=0 C=0
+    0013 [line   70] 0x8001C016  JMP        A=0 sBx=8
+    0014 [line   70] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0015 [line   70] 0x000001C0  MOVE       R7 = R0
+    0016 [line   70] 0x00800200  MOVE       R8 = R1
+    0017 [line   70] 0x01000240  MOVE       R9 = R2
+    0018 [line   70] 0x01800280  MOVE       R10 = R3
+    0019 [line   70] 0x0280819C  CALL       A=6 B=5 C=2
+    0020 [line   70] 0x0000419A  TEST       A=6 B=0 C=1
+    0021 [line   70] 0x8000C016  JMP        A=0 sBx=4
+    0022 [line   70] 0x0000011A  TEST       A=4 B=0 C=0
+    0023 [line   70] 0x80014016  JMP        A=0 sBx=6
+    0024 [line   70] 0x0000415A  TEST       A=5 B=0 C=1
+    0025 [line   70] 0x8000C016  JMP        A=0 sBx=4
+    0026 [line   71] 0x00000180  MOVE       R6 = R0
+    0027 [line   71] 0x008001C0  MOVE       R7 = R1
+    0028 [line   71] 0x0180019E  RETURN     A=6 B=3 C=0
+    0029 [line   71] 0x80008016  JMP        A=0 sBx=3
+    0030 [line   73] 0x01000180  MOVE       R6 = R2
+    0031 [line   73] 0x018001C0  MOVE       R7 = R3
+    0032 [line   73] 0x0180019E  RETURN     A=6 B=3 C=0
+    0033 [line   75] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'leftIconType': 0 -> 33
+    'leftFuncType': 0 -> 33
+    'rightIconType': 0 -> 33
+    'rightFuncType': 0 -> 33
+    'bLeftValid': 5 -> 33
+    'bRightValid': 10 -> 33
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x15C1
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 83 - 87
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_calcNPCTaskList'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   84] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0001 [line   85] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line   85] 0x01400086  GETTABLE   R2 = R2[K[0]='_calcNPCTaskList']
+    0003 [line   85] 0x000000C0  MOVE       R3 = R0
+    0004 [line   85] 0x00800100  MOVE       R4 = R1
+    0005 [line   85] 0x0181009C  CALL       A=2 B=3 C=4
+    0006 [line   86] 0x00800140  MOVE       R5 = R1
+    0007 [line   86] 0x01000180  MOVE       R6 = R2
+    0008 [line   86] 0x0180015E  RETURN     A=5 B=3 C=0
+    0009 [line   87] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npc_ess': 0 -> 9
+    'task_list': 1 -> 9
+    'storageIndex': 6 -> 9
+    '_': 6 -> 9
+    '_': 6 -> 9
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x16C0
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 90 - 93
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_calcNPCTaskList'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   91] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   91] 0x00C00046  GETTABLE   R1 = R1[K[0]='_calcNPCTaskList']
+    0002 [line   91] 0x00000080  MOVE       R2 = R0
+    0003 [line   91] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0004 [line   91] 0x0181005C  CALL       A=1 B=3 C=4
+    0005 [line   92] 0x01000100  MOVE       R4 = R2
+    0006 [line   92] 0x01800140  MOVE       R5 = R3
+    0007 [line   92] 0x0180011E  RETURN     A=4 B=3 C=0
+    0008 [line   93] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npc_ess': 0 -> 8
+    '_': 5 -> 8
+    'iconType': 5 -> 8
+    'funcType': 5 -> 8
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x17A4
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 96 - 123
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetNPCTaskIcon'
+    K[001] = 'IconType'
+    K[002] = 'FunctionType'
+    K[003] = 'RECEIVE'
+    K[004] = 'REPEAT'
+    K[005] = 'RESPATH'
+    K[006] = 'task_status_fx_repeat_receive'
+    K[007] = 'TALK'
+    K[008] = 'task_icon_talk'
+    K[009] = 'task_status_fx_normal_receive'
+    K[010] = 'FINISH'
+    K[011] = 'task_status_fx_repeat_finish'
+    K[012] = 'task_status_fx_normal_finish'
+    K[013] = ''
+
+    ----- INSTRUCTIONS -----
+    0000 [line   97] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   97] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetNPCTaskIcon']
+    0002 [line   97] 0x00000080  MOVE       R2 = R0
+    0003 [line   97] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line   99] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0005 [line   99] 0x01C040C6  GETTABLE   R3 = R3[K[1]='IconType']
+    0006 [line  100] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0007 [line  100] 0x02408106  GETTABLE   R4 = R4[K[2]='FunctionType']
+    0008 [line  102] 0x0240C146  GETTABLE   R5 = R4[K[3]='RECEIVE']
+    0009 [line  102] 0x01014017  EQ         A=0 B=R2 C=R5
+    0010 [line  102] 0x80044016  JMP        A=0 sBx=18
+    0011 [line  103] 0x01C10146  GETTABLE   R5 = R3[K[4]='REPEAT']
+    0012 [line  103] 0x00814017  EQ         A=0 B=R1 C=R5
+    0013 [line  103] 0x8000C016  JMP        A=0 sBx=4
+    0014 [line  104] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0015 [line  104] 0x02C18146  GETTABLE   R5 = R5[K[6]='task_status_fx_repeat_receive']
+    0016 [line  104] 0x0100015E  RETURN     A=5 B=2 C=0
+    0017 [line  104] 0x80094016  JMP        A=0 sBx=38
+    0018 [line  105] 0x01C1C146  GETTABLE   R5 = R3[K[7]='TALK']
+    0019 [line  105] 0x00814017  EQ         A=0 B=R1 C=R5
+    0020 [line  105] 0x8000C016  JMP        A=0 sBx=4
+    0021 [line  106] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0022 [line  106] 0x02C20146  GETTABLE   R5 = R5[K[8]='task_icon_talk']
+    0023 [line  106] 0x0100015E  RETURN     A=5 B=2 C=0
+    0024 [line  106] 0x80078016  JMP        A=0 sBx=31
+    0025 [line  108] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0026 [line  108] 0x02C24146  GETTABLE   R5 = R5[K[9]='task_status_fx_normal_receive']
+    0027 [line  108] 0x0100015E  RETURN     A=5 B=2 C=0
+    0028 [line  109] 0x80068016  JMP        A=0 sBx=27
+    0029 [line  110] 0x02428146  GETTABLE   R5 = R4[K[10]='FINISH']
+    0030 [line  110] 0x01014017  EQ         A=0 B=R2 C=R5
+    0031 [line  110] 0x80044016  JMP        A=0 sBx=18
+    0032 [line  111] 0x01C10146  GETTABLE   R5 = R3[K[4]='REPEAT']
+    0033 [line  111] 0x00814017  EQ         A=0 B=R1 C=R5
+    0034 [line  111] 0x8000C016  JMP        A=0 sBx=4
+    0035 [line  112] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0036 [line  112] 0x02C2C146  GETTABLE   R5 = R5[K[11]='task_status_fx_repeat_finish']
+    0037 [line  112] 0x0100015E  RETURN     A=5 B=2 C=0
+    0038 [line  112] 0x80040016  JMP        A=0 sBx=17
+    0039 [line  113] 0x01C1C146  GETTABLE   R5 = R3[K[7]='TALK']
+    0040 [line  113] 0x00814017  EQ         A=0 B=R1 C=R5
+    0041 [line  113] 0x8000C016  JMP        A=0 sBx=4
+    0042 [line  114] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0043 [line  114] 0x02C20146  GETTABLE   R5 = R5[K[8]='task_icon_talk']
+    0044 [line  114] 0x0100015E  RETURN     A=5 B=2 C=0
+    0045 [line  114] 0x80024016  JMP        A=0 sBx=10
+    0046 [line  116] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0047 [line  116] 0x02C30146  GETTABLE   R5 = R5[K[12]='task_status_fx_normal_finish']
+    0048 [line  116] 0x0100015E  RETURN     A=5 B=2 C=0
+    0049 [line  117] 0x80014016  JMP        A=0 sBx=6
+    0050 [line  118] 0x0241C146  GETTABLE   R5 = R4[K[7]='TALK']
+    0051 [line  118] 0x01014017  EQ         A=0 B=R2 C=R5
+    0052 [line  118] 0x80008016  JMP        A=0 sBx=3
+    0053 [line  119] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='RESPATH'
+    0054 [line  119] 0x02C20146  GETTABLE   R5 = R5[K[8]='task_icon_talk']
+    0055 [line  119] 0x0100015E  RETURN     A=5 B=2 C=0
+    0056 [line  122] 0x00034141  LOADK      R5 = K[13]=''
+    0057 [line  122] 0x0100015E  RETURN     A=5 B=2 C=0
+    0058 [line  123] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npc_ess': 0 -> 58
+    'iconType': 4 -> 58
+    'funcType': 4 -> 58
+    'IconType': 6 -> 58
+    'FunctionType': 8 -> 58
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x1B47
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 127 - 199
+    Params : 2
+    Stack  : 21
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.Exptypes'
+    K[002] = None
+    K[003] = 0.0
+    K[004] = -1.0
+    K[005] = 'id_task_in_service'
+    K[006] = 'getData'
+    K[007] = 'NPC_TASK_IN_SERVICE'
+    K[008] = 1.0
+    K[009] = 'id_tasks'
+    K[010] = 'len'
+    K[011] = 'GetTaskTypeInfoTaskIn'
+    K[012] = 'id'
+    K[013] = 'FunctionType'
+    K[014] = 'INVALID'
+    K[015] = 'new'
+    K[016] = 'icon_type'
+    K[017] = 'function_type'
+    K[018] = 'id_task_out_service'
+    K[019] = 'NPC_TASK_OUT_SERVICE'
+    K[020] = 'id_task_set'
+    K[021] = 'GetTaskTypeInfoTaskOut'
+    K[022] = 'table'
+    K[023] = 'sort'
+    K[024] = 'LessPred'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  128] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line  128] 0x000040C1  LOADK      R3 = K[1]='Data.Exptypes'
+    0002 [line  128] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line  129] 0x00408017  EQ         A=0 B=R0 C=K[2]=None
+    0004 [line  129] 0x8000C016  JMP        A=0 sBx=4
+    0005 [line  130] 0x0000C0C1  LOADK      R3 = K[3]=0.0
+    0006 [line  130] 0x0000C101  LOADK      R4 = K[3]=0.0
+    0007 [line  130] 0x0000C141  LOADK      R5 = K[3]=0.0
+    0008 [line  130] 0x020000DE  RETURN     A=3 B=4 C=0
+    0009 [line  133] 0x000100C1  LOADK      R3 = K[4]=-1.0
+    0010 [line  134] 0x0000C101  LOADK      R4 = K[3]=0.0
+    0011 [line  136] 0x0000C141  LOADK      R5 = K[3]=0.0
+    0012 [line  136] 0x0000C181  LOADK      R6 = K[3]=0.0
+    0013 [line  139] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0014 [line  140] 0x00414206  GETTABLE   R8 = R0[K[5]='id_task_in_service']
+    0015 [line  140] 0x0440C057  EQ         A=1 B=R8 C=K[3]=0.0
+    0016 [line  140] 0x800B8016  JMP        A=0 sBx=47
+    0017 [line  141] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0018 [line  141] 0x04418206  GETTABLE   R8 = R8[K[6]='getData']
+    0019 [line  141] 0x0141C246  GETTABLE   R9 = R2[K[7]='NPC_TASK_IN_SERVICE']
+    0020 [line  141] 0x00414286  GETTABLE   R10 = R0[K[5]='id_task_in_service']
+    0021 [line  141] 0x0180821C  CALL       A=8 B=3 C=2
+    0022 [line  141] 0x040001C0  MOVE       R7 = R8
+    0023 [line  143] 0x03C08057  EQ         A=1 B=R7 C=K[2]=None
+    0024 [line  143] 0x80098016  JMP        A=0 sBx=39
+    0025 [line  145] 0x00020201  LOADK      R8 = K[8]=1.0
+    0026 [line  145] 0x03C24246  GETTABLE   R9 = R7[K[9]='id_tasks']
+    0027 [line  145] 0x04C28246  GETTABLE   R9 = R9[K[10]='len']
+    0028 [line  145] 0x00020281  LOADK      R10 = K[8]=1.0
+    0029 [line  145] 0x80080220  FORPREP    A=8 sBx=33
+    0030 [line  146] 0x03C24306  GETTABLE   R12 = R7[K[9]='id_tasks']
+    0031 [line  146] 0x0602C306  GETTABLE   R12 = R12[R11]
+    0032 [line  147] 0x0640C057  EQ         A=1 B=R12 C=K[3]=0.0
+    0033 [line  147] 0x80070016  JMP        A=0 sBx=29
+    0034 [line  148] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0035 [line  148] 0x06C2C346  GETTABLE   R13 = R13[K[11]='GetTaskTypeInfoTaskIn']
+    0036 [line  148] 0x06000380  MOVE       R14 = R12
+    0037 [line  148] 0x004303C6  GETTABLE   R15 = R0[K[12]='id']
+    0038 [line  148] 0x0180C35C  CALL       A=13 B=3 C=3
+    0039 [line  149] 0x010003C4  GETUPVAL   A=15 B=2 C=0 Bx=1024
+    0040 [line  149] 0x07C343C6  GETTABLE   R15 = R15[K[13]='FunctionType']
+    0041 [line  149] 0x07C383C6  GETTABLE   R15 = R15[K[14]='INVALID']
+    0042 [line  149] 0x0703C057  EQ         A=1 B=R14 C=R15
+    0043 [line  149] 0x80048016  JMP        A=0 sBx=19
+    0044 [line  150] 0x0242010C  ADD        A=4 B=R4 C=K[8]=1.0
+    0045 [line  152] 0x0000005A  TEST       A=1 B=0 C=0
+    0046 [line  152] 0x8001C016  JMP        A=0 sBx=8
+    0047 [line  153] 0x010003C4  GETUPVAL   A=15 B=2 C=0 Bx=1024
+    0048 [line  153] 0x07C3C3C6  GETTABLE   R15 = R15[K[15]='new']
+    0049 [line  153] 0x06000400  MOVE       R16 = R12
+    0050 [line  153] 0x01800440  MOVE       R17 = R3
+    0051 [line  153] 0x018083DC  CALL       A=15 B=3 C=2
+    0052 [line  154] 0x880343C9  SETTABLE   R15[K[16]='icon_type'] = R13
+    0053 [line  155] 0x888383C9  SETTABLE   R15[K[17]='function_type'] = R14
+    0054 [line  156] 0x0203C049  SETTABLE   R1[R4] = R15
+    0055 [line  159] 0x018003C4  GETUPVAL   A=15 B=3 C=0 Bx=1536
+    0056 [line  159] 0x02800400  MOVE       R16 = R5
+    0057 [line  159] 0x03000440  MOVE       R17 = R6
+    0058 [line  159] 0x06800480  MOVE       R18 = R13
+    0059 [line  159] 0x070004C0  MOVE       R19 = R14
+    0060 [line  159] 0x0280C3DC  CALL       A=15 B=5 C=3
+    0061 [line  159] 0x08000180  MOVE       R6 = R16
+    0062 [line  159] 0x07800140  MOVE       R5 = R15
+    0063 [line  145] 0x7FF7421F  FORLOOP    A=8 sBx=-34
+    0064 [line  167] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0065 [line  168] 0x00448246  GETTABLE   R9 = R0[K[18]='id_task_out_service']
+    0066 [line  168] 0x04C0C057  EQ         A=1 B=R9 C=K[3]=0.0
+    0067 [line  168] 0x800C0016  JMP        A=0 sBx=49
+    0068 [line  169] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0069 [line  169] 0x04C18246  GETTABLE   R9 = R9[K[6]='getData']
+    0070 [line  169] 0x0144C286  GETTABLE   R10 = R2[K[19]='NPC_TASK_OUT_SERVICE']
+    0071 [line  169] 0x004482C6  GETTABLE   R11 = R0[K[18]='id_task_out_service']
+    0072 [line  169] 0x0180825C  CALL       A=9 B=3 C=2
+    0073 [line  169] 0x04800200  MOVE       R8 = R9
+    0074 [line  171] 0x04408057  EQ         A=1 B=R8 C=K[2]=None
+    0075 [line  171] 0x800A0016  JMP        A=0 sBx=41
+    0076 [line  172] 0x04450246  GETTABLE   R9 = R8[K[20]='id_task_set']
+    0077 [line  172] 0x04C200CD  SUB        A=3 B=R9 C=K[8]=1.0
+    0078 [line  174] 0x00020241  LOADK      R9 = K[8]=1.0
+    0079 [line  174] 0x04424286  GETTABLE   R10 = R8[K[9]='id_tasks']
+    0080 [line  174] 0x05428286  GETTABLE   R10 = R10[K[10]='len']
+    0081 [line  174] 0x000202C1  LOADK      R11 = K[8]=1.0
+    0082 [line  174] 0x80080260  FORPREP    A=9 sBx=33
+    0083 [line  175] 0x04424346  GETTABLE   R13 = R8[K[9]='id_tasks']
+    0084 [line  175] 0x06830346  GETTABLE   R13 = R13[R12]
+    0085 [line  176] 0x06C0C057  EQ         A=1 B=R13 C=K[3]=0.0
+    0086 [line  176] 0x80070016  JMP        A=0 sBx=29
+    0087 [line  177] 0x00800384  GETUPVAL   A=14 B=1 C=0 Bx=512
+    0088 [line  177] 0x07454386  GETTABLE   R14 = R14[K[21]='GetTaskTypeInfoTaskOut']
+    0089 [line  177] 0x068003C0  MOVE       R15 = R13
+    0090 [line  177] 0x01800400  MOVE       R16 = R3
+    0091 [line  177] 0x0180C39C  CALL       A=14 B=3 C=3
+    0092 [line  178] 0x01000404  GETUPVAL   A=16 B=2 C=0 Bx=1024
+    0093 [line  178] 0x08434406  GETTABLE   R16 = R16[K[13]='FunctionType']
+    0094 [line  178] 0x08438406  GETTABLE   R16 = R16[K[14]='INVALID']
+    0095 [line  178] 0x07840057  EQ         A=1 B=R15 C=R16
+    0096 [line  178] 0x80048016  JMP        A=0 sBx=19
+    0097 [line  179] 0x0242010C  ADD        A=4 B=R4 C=K[8]=1.0
+    0098 [line  181] 0x0000005A  TEST       A=1 B=0 C=0
+    0099 [line  181] 0x8001C016  JMP        A=0 sBx=8
+    0100 [line  182] 0x01000404  GETUPVAL   A=16 B=2 C=0 Bx=1024
+    0101 [line  182] 0x0843C406  GETTABLE   R16 = R16[K[15]='new']
+    0102 [line  182] 0x06800440  MOVE       R17 = R13
+    0103 [line  182] 0x01800480  MOVE       R18 = R3
+    0104 [line  182] 0x0180841C  CALL       A=16 B=3 C=2
+    0105 [line  183] 0x88038409  SETTABLE   R16[K[16]='icon_type'] = R14
+    0106 [line  184] 0x8883C409  SETTABLE   R16[K[17]='function_type'] = R15
+    0107 [line  185] 0x02040049  SETTABLE   R1[R4] = R16
+    0108 [line  188] 0x01800404  GETUPVAL   A=16 B=3 C=0 Bx=1536
+    0109 [line  188] 0x02800440  MOVE       R17 = R5
+    0110 [line  188] 0x03000480  MOVE       R18 = R6
+    0111 [line  188] 0x070004C0  MOVE       R19 = R14
+    0112 [line  188] 0x07800500  MOVE       R20 = R15
+    0113 [line  188] 0x0280C41C  CALL       A=16 B=5 C=3
+    0114 [line  188] 0x08800180  MOVE       R6 = R17
+    0115 [line  188] 0x08000140  MOVE       R5 = R16
+    0116 [line  174] 0x7FF7425F  FORLOOP    A=9 sBx=-34
+    0117 [line  195] 0x0000005A  TEST       A=1 B=0 C=0
+    0118 [line  195] 0x80014016  JMP        A=0 sBx=6
+    0119 [line  196] 0x00058245  GETGLOBAL  R9 = GLOBAL K[22]='table'
+    0120 [line  196] 0x04C5C246  GETTABLE   R9 = R9[K[23]='sort']
+    0121 [line  196] 0x00800280  MOVE       R10 = R1
+    0122 [line  196] 0x010002C4  GETUPVAL   A=11 B=2 C=0 Bx=1024
+    0123 [line  196] 0x05C602C6  GETTABLE   R11 = R11[K[24]='LessPred']
+    0124 [line  196] 0x0180425C  CALL       A=9 B=3 C=1
+    0125 [line  198] 0x01800240  MOVE       R9 = R3
+    0126 [line  198] 0x02800280  MOVE       R10 = R5
+    0127 [line  198] 0x030002C0  MOVE       R11 = R6
+    0128 [line  198] 0x0200025E  RETURN     A=9 B=4 C=0
+    0129 [line  199] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npc_ess': 0 -> 129
+    'task_list': 0 -> 129
+    'Exptypes': 3 -> 129
+    'storageIndex': 10 -> 129
+    'list_count': 11 -> 129
+    'topIcon': 13 -> 129
+    'topFunc': 13 -> 129
+    'task_in': 14 -> 129
+    '(for index)': 29 -> 64
+    '(for limit)': 29 -> 64
+    '(for step)': 29 -> 64
+    'i': 30 -> 63
+    'task_id': 32 -> 63
+    'icon_type': 39 -> 63
+    'function_type': 39 -> 63
+    'task_item': 52 -> 55
+    'task_out': 65 -> 129
+    '(for index)': 82 -> 117
+    '(for limit)': 82 -> 117
+    '(for step)': 82 -> 117
+    'i': 83 -> 116
+    'task_id': 85 -> 116
+    'icon_type': 92 -> 116
+    'function_type': 92 -> 116
+    'task_item': 105 -> 108
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x2360
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 201 - 239
+    Params : 2
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'IconType'
+    K[002] = 'FunctionType'
+    K[003] = 'GetTaskView'
+    K[004] = None
+    K[005] = 'bHidden'
+    K[006] = True
+    K[007] = 'INVALID'
+    K[008] = 0.0
+    K[009] = 'CanShowTask'
+    K[010] = 'RECEIVE'
+    K[011] = 'CanTryDeliverTask'
+    K[012] = 'TASK_ERR_CODE'
+    K[013] = 'TASK_PREREQU_FAIL_DELIVER_TIME'
+    K[014] = 'GetTaskDeliverWaitTime'
+    K[015] = 'WAIT_TO_RECEIVE'
+    K[016] = 'RECEIVE_LATER'
+    K[017] = 'icon'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  202] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  202] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  202] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  203] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line  203] 0x01C040C6  GETTABLE   R3 = R3[K[1]='IconType']
+    0005 [line  204] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0006 [line  204] 0x02408106  GETTABLE   R4 = R4[K[2]='FunctionType']
+    0007 [line  205] 0x0140C14B  SELF       A=5 B=2 C=259 Bx=1283
+    0008 [line  205] 0x000001C0  MOVE       R7 = R0
+    0009 [line  205] 0x0180815C  CALL       A=5 B=3 C=2
+    0010 [line  207] 0x02C10057  EQ         A=1 B=R5 C=K[4]=None
+    0011 [line  207] 0x80008016  JMP        A=0 sBx=3
+    0012 [line  207] 0x02C14186  GETTABLE   R6 = R5[K[5]='bHidden']
+    0013 [line  207] 0x03418017  EQ         A=0 B=R6 C=K[6]=True
+    0014 [line  207] 0x80008016  JMP        A=0 sBx=3
+    0015 [line  208] 0x01C1C186  GETTABLE   R6 = R3[K[7]='INVALID']
+    0016 [line  208] 0x0241C1C6  GETTABLE   R7 = R4[K[7]='INVALID']
+    0017 [line  208] 0x0180019E  RETURN     A=6 B=3 C=0
+    0018 [line  211] 0x84004019  LE         A=0 B=K[8]=0.0 C=R1
+    0019 [line  211] 0x80008016  JMP        A=0 sBx=3
+    0020 [line  215] 0x01C1C186  GETTABLE   R6 = R3[K[7]='INVALID']
+    0021 [line  215] 0x0241C1C6  GETTABLE   R7 = R4[K[7]='INVALID']
+    0022 [line  215] 0x0180019E  RETURN     A=6 B=3 C=0
+    0023 [line  218] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0024 [line  219] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0025 [line  219] 0x03C241C6  GETTABLE   R7 = R7[K[9]='CanShowTask']
+    0026 [line  219] 0x00000200  MOVE       R8 = R0
+    0027 [line  219] 0x010081DC  CALL       A=7 B=2 C=2
+    0028 [line  219] 0x000001DA  TEST       A=7 B=0 C=0
+    0029 [line  219] 0x80004016  JMP        A=0 sBx=2
+    0030 [line  220] 0x02428186  GETTABLE   R6 = R4[K[10]='RECEIVE']
+    0031 [line  220] 0x80064016  JMP        A=0 sBx=26
+    0032 [line  222] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0033 [line  222] 0x03C2C1C6  GETTABLE   R7 = R7[K[11]='CanTryDeliverTask']
+    0034 [line  222] 0x00000200  MOVE       R8 = R0
+    0035 [line  222] 0x010101DC  CALL       A=7 B=2 C=4
+    0036 [line  223] 0x03C20017  EQ         A=0 B=R7 C=K[8]=0.0
+    0037 [line  223] 0x80004016  JMP        A=0 sBx=2
+    0038 [line  224] 0x02428186  GETTABLE   R6 = R4[K[10]='RECEIVE']
+    0039 [line  224] 0x80044016  JMP        A=0 sBx=18
+    0040 [line  226] 0x04C20017  EQ         A=0 B=R9 C=K[8]=0.0
+    0041 [line  226] 0x80038016  JMP        A=0 sBx=15
+    0042 [line  226] 0x01000284  GETUPVAL   A=10 B=2 C=0 Bx=1024
+    0043 [line  226] 0x05430286  GETTABLE   R10 = R10[K[12]='TASK_ERR_CODE']
+    0044 [line  226] 0x05434286  GETTABLE   R10 = R10[K[13]='TASK_PREREQU_FAIL_DELIVER_TIME']
+    0045 [line  226] 0x03828017  EQ         A=0 B=R7 C=R10
+    0046 [line  226] 0x80024016  JMP        A=0 sBx=10
+    0047 [line  227] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0048 [line  227] 0x05438286  GETTABLE   R10 = R10[K[14]='GetTaskDeliverWaitTime']
+    0049 [line  227] 0x000002C0  MOVE       R11 = R0
+    0050 [line  227] 0x0100829C  CALL       A=10 B=2 C=2
+    0051 [line  227] 0x0000029A  TEST       A=10 B=0 C=0
+    0052 [line  227] 0x80004016  JMP        A=0 sBx=2
+    0053 [line  228] 0x0243C186  GETTABLE   R6 = R4[K[15]='WAIT_TO_RECEIVE']
+    0054 [line  228] 0x80008016  JMP        A=0 sBx=3
+    0055 [line  230] 0x02440186  GETTABLE   R6 = R4[K[16]='RECEIVE_LATER']
+    0056 [line  231] 0x80000016  JMP        A=0 sBx=1
+    0057 [line  233] 0x02440186  GETTABLE   R6 = R4[K[16]='RECEIVE_LATER']
+    0058 [line  238] 0x02C441C6  GETTABLE   R7 = R5[K[17]='icon']
+    0059 [line  238] 0x03000200  MOVE       R8 = R6
+    0060 [line  238] 0x018001DE  RETURN     A=7 B=3 C=0
+    0061 [line  239] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 61
+    'storageIndex': 0 -> 61
+    'task_interface': 3 -> 61
+    'IconType': 5 -> 61
+    'FunctionType': 7 -> 61
+    'taskView': 10 -> 61
+    'type': 24 -> 61
+    'errCode': 36 -> 58
+    'errParam': 36 -> 58
+    'secondErrCode': 36 -> 58
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x27A8
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 241 - 266
+    Params : 2
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'IconType'
+    K[002] = 'FunctionType'
+    K[003] = 'GetTaskView'
+    K[004] = None
+    K[005] = 'bHidden'
+    K[006] = True
+    K[007] = 'INVALID'
+    K[008] = 'm_CurWorld'
+    K[009] = 'm_SceneInfo'
+    K[010] = 'nationmirror'
+    K[011] = 0.0
+    K[012] = 'CanFinishTaskAtNpc'
+    K[013] = 'FINISH'
+    K[014] = 'CanFinishTask'
+    K[015] = 'awardNPC'
+    K[016] = 'HasTask'
+    K[017] = 'FINISH_LATER'
+    K[018] = 'icon'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  242] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  242] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  242] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  243] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line  243] 0x01C040C6  GETTABLE   R3 = R3[K[1]='IconType']
+    0005 [line  244] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0006 [line  244] 0x02408106  GETTABLE   R4 = R4[K[2]='FunctionType']
+    0007 [line  245] 0x0140C14B  SELF       A=5 B=2 C=259 Bx=1283
+    0008 [line  245] 0x000001C0  MOVE       R7 = R0
+    0009 [line  245] 0x0180815C  CALL       A=5 B=3 C=2
+    0010 [line  247] 0x02C10057  EQ         A=1 B=R5 C=K[4]=None
+    0011 [line  247] 0x80008016  JMP        A=0 sBx=3
+    0012 [line  247] 0x02C14186  GETTABLE   R6 = R5[K[5]='bHidden']
+    0013 [line  247] 0x03418017  EQ         A=0 B=R6 C=K[6]=True
+    0014 [line  247] 0x80008016  JMP        A=0 sBx=3
+    0015 [line  248] 0x01C1C186  GETTABLE   R6 = R3[K[7]='INVALID']
+    0016 [line  248] 0x0241C1C6  GETTABLE   R7 = R4[K[7]='INVALID']
+    0017 [line  248] 0x0180019E  RETURN     A=6 B=3 C=0
+    0018 [line  251] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0019 [line  253] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0020 [line  253] 0x03C001C6  GETTABLE   R7 = R7[K[0]='Instance']
+    0021 [line  253] 0x008081DC  CALL       A=7 B=1 C=2
+    0022 [line  253] 0x03C201C6  GETTABLE   R7 = R7[K[8]='m_CurWorld']
+    0023 [line  253] 0x03C241C6  GETTABLE   R7 = R7[K[9]='m_SceneInfo']
+    0024 [line  253] 0x03C281C6  GETTABLE   R7 = R7[K[10]='nationmirror']
+    0025 [line  253] 0x000041DA  TEST       A=7 B=0 C=1
+    0026 [line  253] 0x80000016  JMP        A=0 sBx=1
+    0027 [line  253] 0x0002C1C1  LOADK      R7 = K[11]=0.0
+    0028 [line  254] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0029 [line  254] 0x04430206  GETTABLE   R8 = R8[K[12]='CanFinishTaskAtNpc']
+    0030 [line  254] 0x00000240  MOVE       R9 = R0
+    0031 [line  254] 0x0002C281  LOADK      R10 = K[11]=0.0
+    0032 [line  254] 0x038002C0  MOVE       R11 = R7
+    0033 [line  254] 0x0200821C  CALL       A=8 B=4 C=2
+    0034 [line  254] 0x0000021A  TEST       A=8 B=0 C=0
+    0035 [line  254] 0x80004016  JMP        A=0 sBx=2
+    0036 [line  255] 0x02434186  GETTABLE   R6 = R4[K[13]='FINISH']
+    0037 [line  255] 0x80058016  JMP        A=0 sBx=23
+    0038 [line  257] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0039 [line  257] 0x04438206  GETTABLE   R8 = R8[K[14]='CanFinishTask']
+    0040 [line  257] 0x00000240  MOVE       R9 = R0
+    0041 [line  257] 0x0100821C  CALL       A=8 B=2 C=2
+    0042 [line  258] 0x0000421A  TEST       A=8 B=0 C=1
+    0043 [line  258] 0x8003C016  JMP        A=0 sBx=16
+    0044 [line  258] 0x02C3C246  GETTABLE   R9 = R5[K[15]='awardNPC']
+    0045 [line  258] 0x04C2C057  EQ         A=1 B=R9 C=K[11]=0.0
+    0046 [line  258] 0x80010016  JMP        A=0 sBx=5
+    0047 [line  258] 0x00C2C057  EQ         A=1 B=R1 C=K[11]=0.0
+    0048 [line  258] 0x80008016  JMP        A=0 sBx=3
+    0049 [line  258] 0x02C3C246  GETTABLE   R9 = R5[K[15]='awardNPC']
+    0050 [line  258] 0x04804017  EQ         A=0 B=R9 C=R1
+    0051 [line  258] 0x8001C016  JMP        A=0 sBx=8
+    0052 [line  258] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0053 [line  258] 0x04C40246  GETTABLE   R9 = R9[K[16]='HasTask']
+    0054 [line  258] 0x00000280  MOVE       R10 = R0
+    0055 [line  258] 0x0100825C  CALL       A=9 B=2 C=2
+    0056 [line  258] 0x0000025A  TEST       A=9 B=0 C=0
+    0057 [line  258] 0x80004016  JMP        A=0 sBx=2
+    0058 [line  259] 0x02444186  GETTABLE   R6 = R4[K[17]='FINISH_LATER']
+    0059 [line  259] 0x80000016  JMP        A=0 sBx=1
+    0060 [line  261] 0x0241C186  GETTABLE   R6 = R4[K[7]='INVALID']
+    0061 [line  265] 0x02C48206  GETTABLE   R8 = R5[K[18]='icon']
+    0062 [line  265] 0x03000240  MOVE       R9 = R6
+    0063 [line  265] 0x0180021E  RETURN     A=8 B=3 C=0
+    0064 [line  266] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 64
+    'npcTid': 0 -> 64
+    'task_interface': 3 -> 64
+    'IconType': 5 -> 64
+    'FunctionType': 7 -> 64
+    'taskView': 10 -> 64
+    'type': 19 -> 64
+    'currentNation': 28 -> 64
+    'canFinish': 42 -> 61
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x2BD3
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 269 - 276
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getEssence'
+    K[001] = 'name'
+    K[002] = 'unknown '
+    K[003] = ' tid('
+    K[004] = ')'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  270] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  270] 0x01400086  GETTABLE   R2 = R2[K[0]='getEssence']
+    0002 [line  270] 0x000000C0  MOVE       R3 = R0
+    0003 [line  270] 0x0100809C  CALL       A=2 B=2 C=2
+    0004 [line  271] 0x0000009A  TEST       A=2 B=0 C=0
+    0005 [line  271] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  272] 0x014040C6  GETTABLE   R3 = R2[K[1]='name']
+    0007 [line  272] 0x010000DE  RETURN     A=3 B=2 C=0
+    0008 [line  272] 0x80018016  JMP        A=0 sBx=7
+    0009 [line  274] 0x000080C1  LOADK      R3 = K[2]='unknown '
+    0010 [line  274] 0x00800100  MOVE       R4 = R1
+    0011 [line  274] 0x0000C141  LOADK      R5 = K[3]=' tid('
+    0012 [line  274] 0x00000180  MOVE       R6 = R0
+    0013 [line  274] 0x000101C1  LOADK      R7 = K[4]=')'
+    0014 [line  274] 0x0181C0D5  CONCAT     A=3 B=3 C=7 Bx=1543
+    0015 [line  274] 0x010000DE  RETURN     A=3 B=2 C=0
+    0016 [line  276] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'tid': 0 -> 16
+    'whatType': 0 -> 16
+    'data': 4 -> 16
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x2D03
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 283 - 306
+    Params : 2
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 1.0
+    K[002] = 'view'
+    K[003] = 'target_monsterArr'
+    K[004] = 'monsterTid'
+    K[005] = 'itemTid'
+    K[006] = 'count'
+    K[007] = 'entry'
+    K[008] = 'killedMonsterCountArr'
+    K[009] = 'math'
+    K[010] = 'min'
+    K[011] = 'string'
+    K[012] = 'format'
+    K[013] = '%s(%d/%d)'
+    K[014] = 'FormatMonsterName'
+    K[015] = 'LuaTaskInterface'
+    K[016] = 'GetCanTakeAwayItemCount'
+    K[017] = 'FormatItemName'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  284] 0x00000081  LOADK      R2 = K[0]=0.0
+    0001 [line  285] 0x000000C1  LOADK      R3 = K[0]=0.0
+    0002 [line  286] 0x00000101  LOADK      R4 = K[0]=0.0
+    0003 [line  287] 0x80800019  LE         A=0 B=K[1]=1.0 C=R0
+    0004 [line  287] 0x80040016  JMP        A=0 sBx=17
+    0005 [line  287] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0006 [line  287] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0007 [line  287] 0x02800154  LEN        A=5 B=5 C=0 Bx=2560
+    0008 [line  287] 0x00014019  LE         A=0 B=R0 C=R5
+    0009 [line  287] 0x8002C016  JMP        A=0 sBx=12
+    0010 [line  288] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0011 [line  288] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0012 [line  288] 0x02800146  GETTABLE   R5 = R5[R0]
+    0013 [line  288] 0x02C10086  GETTABLE   R2 = R5[K[4]='monsterTid']
+    0014 [line  289] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0015 [line  289] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0016 [line  289] 0x02800146  GETTABLE   R5 = R5[R0]
+    0017 [line  289] 0x02C140C6  GETTABLE   R3 = R5[K[5]='itemTid']
+    0018 [line  290] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0019 [line  290] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0020 [line  290] 0x02800146  GETTABLE   R5 = R5[R0]
+    0021 [line  290] 0x02C18106  GETTABLE   R4 = R5[K[6]='count']
+    0022 [line  293] 0x01C00017  EQ         A=0 B=R3 C=K[0]=0.0
+    0023 [line  293] 0x8007C016  JMP        A=0 sBx=32
+    0024 [line  294] 0x00000141  LOADK      R5 = K[0]=0.0
+    0025 [line  295] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0026 [line  295] 0x0000019A  TEST       A=6 B=0 C=0
+    0027 [line  295] 0x80024016  JMP        A=0 sBx=10
+    0028 [line  295] 0x80000018  LT         A=0 B=K[0]=0.0 C=R0
+    0029 [line  295] 0x8001C016  JMP        A=0 sBx=8
+    0030 [line  295] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0031 [line  295] 0x03420186  GETTABLE   R6 = R6[K[8]='killedMonsterCountArr']
+    0032 [line  295] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0033 [line  295] 0x00018019  LE         A=0 B=R0 C=R6
+    0034 [line  295] 0x80008016  JMP        A=0 sBx=3
+    0035 [line  296] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0036 [line  296] 0x03420186  GETTABLE   R6 = R6[K[8]='killedMonsterCountArr']
+    0037 [line  296] 0x03000146  GETTABLE   R5 = R6[R0]
+    0038 [line  299] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='math'
+    0039 [line  299] 0x03428186  GETTABLE   R6 = R6[K[10]='min']
+    0040 [line  299] 0x028001C0  MOVE       R7 = R5
+    0041 [line  299] 0x02000200  MOVE       R8 = R4
+    0042 [line  299] 0x0180819C  CALL       A=6 B=3 C=2
+    0043 [line  299] 0x03000140  MOVE       R5 = R6
+    0044 [line  301] 0x0002C185  GETGLOBAL  R6 = GLOBAL K[11]='string'
+    0045 [line  301] 0x03430186  GETTABLE   R6 = R6[K[12]='format']
+    0046 [line  301] 0x000341C1  LOADK      R7 = K[13]='%s(%d/%d)'
+    0047 [line  301] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0048 [line  301] 0x04438206  GETTABLE   R8 = R8[K[14]='FormatMonsterName']
+    0049 [line  301] 0x01000240  MOVE       R9 = R2
+    0050 [line  301] 0x0100821C  CALL       A=8 B=2 C=2
+    0051 [line  301] 0x02800240  MOVE       R9 = R5
+    0052 [line  301] 0x02000280  MOVE       R10 = R4
+    0053 [line  301] 0x0280019D  TAILCALL   A=6 B=5 C=0
+    0054 [line  301] 0x0000019E  RETURN     A=6 B=0 C=0
+    0055 [line  301] 0x80038016  JMP        A=0 sBx=15
+    0056 [line  303] 0x0003C145  GETGLOBAL  R5 = GLOBAL K[15]='LuaTaskInterface'
+    0057 [line  303] 0x02C40146  GETTABLE   R5 = R5[K[16]='GetCanTakeAwayItemCount']
+    0058 [line  303] 0x01800180  MOVE       R6 = R3
+    0059 [line  303] 0x0100815C  CALL       A=5 B=2 C=2
+    0060 [line  304] 0x0002C185  GETGLOBAL  R6 = GLOBAL K[11]='string'
+    0061 [line  304] 0x03430186  GETTABLE   R6 = R6[K[12]='format']
+    0062 [line  304] 0x000341C1  LOADK      R7 = K[13]='%s(%d/%d)'
+    0063 [line  304] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0064 [line  304] 0x04444206  GETTABLE   R8 = R8[K[17]='FormatItemName']
+    0065 [line  304] 0x01800240  MOVE       R9 = R3
+    0066 [line  304] 0x0100821C  CALL       A=8 B=2 C=2
+    0067 [line  304] 0x02800240  MOVE       R9 = R5
+    0068 [line  304] 0x02000280  MOVE       R10 = R4
+    0069 [line  304] 0x0280019D  TAILCALL   A=6 B=5 C=0
+    0070 [line  304] 0x0000019E  RETURN     A=6 B=0 C=0
+    0071 [line  306] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'monsterIndex': 0 -> 71
+    'info': 0 -> 71
+    'monsterTid': 1 -> 71
+    'itemTid': 2 -> 71
+    'maxValue': 3 -> 71
+    'monsterCount': 25 -> 55
+    'itemCount': 60 -> 71
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x312D
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 313 - 336
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 1.0
+    K[002] = 'view'
+    K[003] = 'target_monsterArr'
+    K[004] = 'monsterTid'
+    K[005] = 'itemTid'
+    K[006] = 'count'
+    K[007] = 'entry'
+    K[008] = 'killedMonsterCountArr'
+    K[009] = 'math'
+    K[010] = 'min'
+    K[011] = 'string'
+    K[012] = 'format'
+    K[013] = '(%d/%d)'
+    K[014] = 'LuaTaskInterface'
+    K[015] = 'GetCanTakeAwayItemCount'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  314] 0x00000081  LOADK      R2 = K[0]=0.0
+    0001 [line  315] 0x000000C1  LOADK      R3 = K[0]=0.0
+    0002 [line  316] 0x00000101  LOADK      R4 = K[0]=0.0
+    0003 [line  317] 0x80800019  LE         A=0 B=K[1]=1.0 C=R0
+    0004 [line  317] 0x80040016  JMP        A=0 sBx=17
+    0005 [line  317] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0006 [line  317] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0007 [line  317] 0x02800154  LEN        A=5 B=5 C=0 Bx=2560
+    0008 [line  317] 0x00014019  LE         A=0 B=R0 C=R5
+    0009 [line  317] 0x8002C016  JMP        A=0 sBx=12
+    0010 [line  318] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0011 [line  318] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0012 [line  318] 0x02800146  GETTABLE   R5 = R5[R0]
+    0013 [line  318] 0x02C10086  GETTABLE   R2 = R5[K[4]='monsterTid']
+    0014 [line  319] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0015 [line  319] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0016 [line  319] 0x02800146  GETTABLE   R5 = R5[R0]
+    0017 [line  319] 0x02C140C6  GETTABLE   R3 = R5[K[5]='itemTid']
+    0018 [line  320] 0x00C08146  GETTABLE   R5 = R1[K[2]='view']
+    0019 [line  320] 0x02C0C146  GETTABLE   R5 = R5[K[3]='target_monsterArr']
+    0020 [line  320] 0x02800146  GETTABLE   R5 = R5[R0]
+    0021 [line  320] 0x02C18106  GETTABLE   R4 = R5[K[6]='count']
+    0022 [line  323] 0x01C00017  EQ         A=0 B=R3 C=K[0]=0.0
+    0023 [line  323] 0x8006C016  JMP        A=0 sBx=28
+    0024 [line  324] 0x00000141  LOADK      R5 = K[0]=0.0
+    0025 [line  325] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0026 [line  325] 0x0000019A  TEST       A=6 B=0 C=0
+    0027 [line  325] 0x80024016  JMP        A=0 sBx=10
+    0028 [line  325] 0x80000018  LT         A=0 B=K[0]=0.0 C=R0
+    0029 [line  325] 0x8001C016  JMP        A=0 sBx=8
+    0030 [line  325] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0031 [line  325] 0x03420186  GETTABLE   R6 = R6[K[8]='killedMonsterCountArr']
+    0032 [line  325] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0033 [line  325] 0x00018019  LE         A=0 B=R0 C=R6
+    0034 [line  325] 0x80008016  JMP        A=0 sBx=3
+    0035 [line  326] 0x00C1C186  GETTABLE   R6 = R1[K[7]='entry']
+    0036 [line  326] 0x03420186  GETTABLE   R6 = R6[K[8]='killedMonsterCountArr']
+    0037 [line  326] 0x03000146  GETTABLE   R5 = R6[R0]
+    0038 [line  329] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='math'
+    0039 [line  329] 0x03428186  GETTABLE   R6 = R6[K[10]='min']
+    0040 [line  329] 0x028001C0  MOVE       R7 = R5
+    0041 [line  329] 0x02000200  MOVE       R8 = R4
+    0042 [line  329] 0x0180819C  CALL       A=6 B=3 C=2
+    0043 [line  329] 0x03000140  MOVE       R5 = R6
+    0044 [line  331] 0x0002C185  GETGLOBAL  R6 = GLOBAL K[11]='string'
+    0045 [line  331] 0x03430186  GETTABLE   R6 = R6[K[12]='format']
+    0046 [line  331] 0x000341C1  LOADK      R7 = K[13]='(%d/%d)'
+    0047 [line  331] 0x02800200  MOVE       R8 = R5
+    0048 [line  331] 0x02000240  MOVE       R9 = R4
+    0049 [line  331] 0x0200019D  TAILCALL   A=6 B=4 C=0
+    0050 [line  331] 0x0000019E  RETURN     A=6 B=0 C=0
+    0051 [line  331] 0x80028016  JMP        A=0 sBx=11
+    0052 [line  333] 0x00038145  GETGLOBAL  R5 = GLOBAL K[14]='LuaTaskInterface'
+    0053 [line  333] 0x02C3C146  GETTABLE   R5 = R5[K[15]='GetCanTakeAwayItemCount']
+    0054 [line  333] 0x01800180  MOVE       R6 = R3
+    0055 [line  333] 0x0100815C  CALL       A=5 B=2 C=2
+    0056 [line  334] 0x0002C185  GETGLOBAL  R6 = GLOBAL K[11]='string'
+    0057 [line  334] 0x03430186  GETTABLE   R6 = R6[K[12]='format']
+    0058 [line  334] 0x000341C1  LOADK      R7 = K[13]='(%d/%d)'
+    0059 [line  334] 0x02800200  MOVE       R8 = R5
+    0060 [line  334] 0x02000240  MOVE       R9 = R4
+    0061 [line  334] 0x0200019D  TAILCALL   A=6 B=4 C=0
+    0062 [line  334] 0x0000019E  RETURN     A=6 B=0 C=0
+    0063 [line  336] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'monsterIndex': 0 -> 63
+    'info': 0 -> 63
+    'monsterTid': 1 -> 63
+    'itemTid': 2 -> 63
+    'maxValue': 3 -> 63
+    'monsterCount': 25 -> 51
+    'itemCount': 56 -> 63
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x34DA
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 343 - 356
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 1.0
+    K[002] = 'view'
+    K[003] = 'target_itemArr'
+    K[004] = 'tid'
+    K[005] = 'count'
+    K[006] = 'LuaTaskInterface'
+    K[007] = 'GetCanTakeAwayItemCount'
+    K[008] = 'math'
+    K[009] = 'min'
+    K[010] = 'string'
+    K[011] = 'format'
+    K[012] = '%s(%d/%d)'
+    K[013] = 'FormatItemName'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  344] 0x00000081  LOADK      R2 = K[0]=0.0
+    0001 [line  345] 0x000000C1  LOADK      R3 = K[0]=0.0
+    0002 [line  347] 0x80800019  LE         A=0 B=K[1]=1.0 C=R0
+    0003 [line  347] 0x80030016  JMP        A=0 sBx=13
+    0004 [line  347] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0005 [line  347] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0006 [line  347] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0007 [line  347] 0x00010019  LE         A=0 B=R0 C=R4
+    0008 [line  347] 0x8001C016  JMP        A=0 sBx=8
+    0009 [line  348] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0010 [line  348] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0011 [line  348] 0x02000106  GETTABLE   R4 = R4[R0]
+    0012 [line  348] 0x02410086  GETTABLE   R2 = R4[K[4]='tid']
+    0013 [line  349] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0014 [line  349] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0015 [line  349] 0x02000106  GETTABLE   R4 = R4[R0]
+    0016 [line  349] 0x024140C6  GETTABLE   R3 = R4[K[5]='count']
+    0017 [line  352] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='LuaTaskInterface'
+    0018 [line  352] 0x0241C106  GETTABLE   R4 = R4[K[7]='GetCanTakeAwayItemCount']
+    0019 [line  352] 0x01000140  MOVE       R5 = R2
+    0020 [line  352] 0x0100811C  CALL       A=4 B=2 C=2
+    0021 [line  353] 0x00020145  GETGLOBAL  R5 = GLOBAL K[8]='math'
+    0022 [line  353] 0x02C24146  GETTABLE   R5 = R5[K[9]='min']
+    0023 [line  353] 0x02000180  MOVE       R6 = R4
+    0024 [line  353] 0x018001C0  MOVE       R7 = R3
+    0025 [line  353] 0x0180815C  CALL       A=5 B=3 C=2
+    0026 [line  353] 0x02800100  MOVE       R4 = R5
+    0027 [line  355] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='string'
+    0028 [line  355] 0x02C2C146  GETTABLE   R5 = R5[K[11]='format']
+    0029 [line  355] 0x00030181  LOADK      R6 = K[12]='%s(%d/%d)'
+    0030 [line  355] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0031 [line  355] 0x03C341C6  GETTABLE   R7 = R7[K[13]='FormatItemName']
+    0032 [line  355] 0x01000200  MOVE       R8 = R2
+    0033 [line  355] 0x010081DC  CALL       A=7 B=2 C=2
+    0034 [line  355] 0x02000200  MOVE       R8 = R4
+    0035 [line  355] 0x01800240  MOVE       R9 = R3
+    0036 [line  355] 0x0280015D  TAILCALL   A=5 B=5 C=0
+    0037 [line  355] 0x0000015E  RETURN     A=5 B=0 C=0
+    0038 [line  356] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'itemIndex': 0 -> 38
+    'info': 0 -> 38
+    'itemTid': 1 -> 38
+    'maxValue': 2 -> 38
+    'itemCount': 21 -> 38
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x3775
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 363 - 376
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 1.0
+    K[002] = 'view'
+    K[003] = 'target_itemArr'
+    K[004] = 'tid'
+    K[005] = 'count'
+    K[006] = 'LuaTaskInterface'
+    K[007] = 'GetCanTakeAwayItemCount'
+    K[008] = 'math'
+    K[009] = 'min'
+    K[010] = 'string'
+    K[011] = 'format'
+    K[012] = '(%d/%d)'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  364] 0x00000081  LOADK      R2 = K[0]=0.0
+    0001 [line  365] 0x000000C1  LOADK      R3 = K[0]=0.0
+    0002 [line  367] 0x80800019  LE         A=0 B=K[1]=1.0 C=R0
+    0003 [line  367] 0x80030016  JMP        A=0 sBx=13
+    0004 [line  367] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0005 [line  367] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0006 [line  367] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0007 [line  367] 0x00010019  LE         A=0 B=R0 C=R4
+    0008 [line  367] 0x8001C016  JMP        A=0 sBx=8
+    0009 [line  368] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0010 [line  368] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0011 [line  368] 0x02000106  GETTABLE   R4 = R4[R0]
+    0012 [line  368] 0x02410086  GETTABLE   R2 = R4[K[4]='tid']
+    0013 [line  369] 0x00C08106  GETTABLE   R4 = R1[K[2]='view']
+    0014 [line  369] 0x0240C106  GETTABLE   R4 = R4[K[3]='target_itemArr']
+    0015 [line  369] 0x02000106  GETTABLE   R4 = R4[R0]
+    0016 [line  369] 0x024140C6  GETTABLE   R3 = R4[K[5]='count']
+    0017 [line  372] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='LuaTaskInterface'
+    0018 [line  372] 0x0241C106  GETTABLE   R4 = R4[K[7]='GetCanTakeAwayItemCount']
+    0019 [line  372] 0x01000140  MOVE       R5 = R2
+    0020 [line  372] 0x0100811C  CALL       A=4 B=2 C=2
+    0021 [line  373] 0x00020145  GETGLOBAL  R5 = GLOBAL K[8]='math'
+    0022 [line  373] 0x02C24146  GETTABLE   R5 = R5[K[9]='min']
+    0023 [line  373] 0x02000180  MOVE       R6 = R4
+    0024 [line  373] 0x018001C0  MOVE       R7 = R3
+    0025 [line  373] 0x0180815C  CALL       A=5 B=3 C=2
+    0026 [line  373] 0x02800100  MOVE       R4 = R5
+    0027 [line  375] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='string'
+    0028 [line  375] 0x02C2C146  GETTABLE   R5 = R5[K[11]='format']
+    0029 [line  375] 0x00030181  LOADK      R6 = K[12]='(%d/%d)'
+    0030 [line  375] 0x020001C0  MOVE       R7 = R4
+    0031 [line  375] 0x01800200  MOVE       R8 = R3
+    0032 [line  375] 0x0200015D  TAILCALL   A=5 B=4 C=0
+    0033 [line  375] 0x0000015E  RETURN     A=5 B=0 C=0
+    0034 [line  376] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'itemIndex': 0 -> 34
+    'info': 0 -> 34
+    'itemTid': 1 -> 34
+    'maxValue': 2 -> 34
+    'itemCount': 21 -> 34
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x39CA
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 383 - 400
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = ''
+    K[001] = 0.0
+    K[002] = 1.0
+    K[003] = 'view'
+    K[004] = 'target_eventArr'
+    K[005] = 'bValid'
+    K[006] = 'desc'
+    K[007] = 'count'
+    K[008] = 'entry'
+    K[009] = 'eventCountArr'
+    K[010] = 'math'
+    K[011] = 'min'
+    K[012] = 'string'
+    K[013] = 'format'
+    K[014] = '%s(%d/%d)'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  384] 0x00000081  LOADK      R2 = K[0]=''
+    0001 [line  385] 0x000040C1  LOADK      R3 = K[1]=0.0
+    0002 [line  387] 0x81000019  LE         A=0 B=K[2]=1.0 C=R0
+    0003 [line  387] 0x80048016  JMP        A=0 sBx=19
+    0004 [line  387] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0005 [line  387] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0006 [line  387] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0007 [line  387] 0x00010019  LE         A=0 B=R0 C=R4
+    0008 [line  387] 0x80034016  JMP        A=0 sBx=14
+    0009 [line  387] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0010 [line  387] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0011 [line  387] 0x02000106  GETTABLE   R4 = R4[R0]
+    0012 [line  387] 0x02414106  GETTABLE   R4 = R4[K[5]='bValid']
+    0013 [line  387] 0x0000011A  TEST       A=4 B=0 C=0
+    0014 [line  387] 0x8001C016  JMP        A=0 sBx=8
+    0015 [line  388] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0016 [line  388] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0017 [line  388] 0x02000106  GETTABLE   R4 = R4[R0]
+    0018 [line  388] 0x02418086  GETTABLE   R2 = R4[K[6]='desc']
+    0019 [line  389] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0020 [line  389] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0021 [line  389] 0x02000106  GETTABLE   R4 = R4[R0]
+    0022 [line  389] 0x0241C0C6  GETTABLE   R3 = R4[K[7]='count']
+    0023 [line  392] 0x00004101  LOADK      R4 = K[1]=0.0
+    0024 [line  393] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0025 [line  393] 0x0000015A  TEST       A=5 B=0 C=0
+    0026 [line  393] 0x80024016  JMP        A=0 sBx=10
+    0027 [line  393] 0x80800018  LT         A=0 B=K[1]=0.0 C=R0
+    0028 [line  393] 0x8001C016  JMP        A=0 sBx=8
+    0029 [line  393] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0030 [line  393] 0x02C24146  GETTABLE   R5 = R5[K[9]='eventCountArr']
+    0031 [line  393] 0x02800154  LEN        A=5 B=5 C=0 Bx=2560
+    0032 [line  393] 0x00014019  LE         A=0 B=R0 C=R5
+    0033 [line  393] 0x80008016  JMP        A=0 sBx=3
+    0034 [line  394] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0035 [line  394] 0x02C24146  GETTABLE   R5 = R5[K[9]='eventCountArr']
+    0036 [line  394] 0x02800106  GETTABLE   R4 = R5[R0]
+    0037 [line  397] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='math'
+    0038 [line  397] 0x02C2C146  GETTABLE   R5 = R5[K[11]='min']
+    0039 [line  397] 0x02000180  MOVE       R6 = R4
+    0040 [line  397] 0x018001C0  MOVE       R7 = R3
+    0041 [line  397] 0x0180815C  CALL       A=5 B=3 C=2
+    0042 [line  397] 0x02800100  MOVE       R4 = R5
+    0043 [line  399] 0x00030145  GETGLOBAL  R5 = GLOBAL K[12]='string'
+    0044 [line  399] 0x02C34146  GETTABLE   R5 = R5[K[13]='format']
+    0045 [line  399] 0x00038181  LOADK      R6 = K[14]='%s(%d/%d)'
+    0046 [line  399] 0x010001C0  MOVE       R7 = R2
+    0047 [line  399] 0x02000200  MOVE       R8 = R4
+    0048 [line  399] 0x01800240  MOVE       R9 = R3
+    0049 [line  399] 0x0280015D  TAILCALL   A=5 B=5 C=0
+    0050 [line  399] 0x0000015E  RETURN     A=5 B=0 C=0
+    0051 [line  400] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'eventIndex': 0 -> 51
+    'info': 0 -> 51
+    'eventDesc': 1 -> 51
+    'maxValue': 2 -> 51
+    'eventCount': 24 -> 51
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x3CAC
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 407 - 424
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = ''
+    K[001] = 0.0
+    K[002] = 1.0
+    K[003] = 'view'
+    K[004] = 'target_eventArr'
+    K[005] = 'bValid'
+    K[006] = 'desc'
+    K[007] = 'count'
+    K[008] = 'entry'
+    K[009] = 'eventCountArr'
+    K[010] = 'math'
+    K[011] = 'min'
+    K[012] = 'string'
+    K[013] = 'format'
+    K[014] = '(%d/%d)'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  408] 0x00000081  LOADK      R2 = K[0]=''
+    0001 [line  409] 0x000040C1  LOADK      R3 = K[1]=0.0
+    0002 [line  411] 0x81000019  LE         A=0 B=K[2]=1.0 C=R0
+    0003 [line  411] 0x80048016  JMP        A=0 sBx=19
+    0004 [line  411] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0005 [line  411] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0006 [line  411] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0007 [line  411] 0x00010019  LE         A=0 B=R0 C=R4
+    0008 [line  411] 0x80034016  JMP        A=0 sBx=14
+    0009 [line  411] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0010 [line  411] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0011 [line  411] 0x02000106  GETTABLE   R4 = R4[R0]
+    0012 [line  411] 0x02414106  GETTABLE   R4 = R4[K[5]='bValid']
+    0013 [line  411] 0x0000011A  TEST       A=4 B=0 C=0
+    0014 [line  411] 0x8001C016  JMP        A=0 sBx=8
+    0015 [line  412] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0016 [line  412] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0017 [line  412] 0x02000106  GETTABLE   R4 = R4[R0]
+    0018 [line  412] 0x02418086  GETTABLE   R2 = R4[K[6]='desc']
+    0019 [line  413] 0x00C0C106  GETTABLE   R4 = R1[K[3]='view']
+    0020 [line  413] 0x02410106  GETTABLE   R4 = R4[K[4]='target_eventArr']
+    0021 [line  413] 0x02000106  GETTABLE   R4 = R4[R0]
+    0022 [line  413] 0x0241C0C6  GETTABLE   R3 = R4[K[7]='count']
+    0023 [line  416] 0x00004101  LOADK      R4 = K[1]=0.0
+    0024 [line  417] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0025 [line  417] 0x0000015A  TEST       A=5 B=0 C=0
+    0026 [line  417] 0x80024016  JMP        A=0 sBx=10
+    0027 [line  417] 0x80800018  LT         A=0 B=K[1]=0.0 C=R0
+    0028 [line  417] 0x8001C016  JMP        A=0 sBx=8
+    0029 [line  417] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0030 [line  417] 0x02C24146  GETTABLE   R5 = R5[K[9]='eventCountArr']
+    0031 [line  417] 0x02800154  LEN        A=5 B=5 C=0 Bx=2560
+    0032 [line  417] 0x00014019  LE         A=0 B=R0 C=R5
+    0033 [line  417] 0x80008016  JMP        A=0 sBx=3
+    0034 [line  418] 0x00C20146  GETTABLE   R5 = R1[K[8]='entry']
+    0035 [line  418] 0x02C24146  GETTABLE   R5 = R5[K[9]='eventCountArr']
+    0036 [line  418] 0x02800106  GETTABLE   R4 = R5[R0]
+    0037 [line  421] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='math'
+    0038 [line  421] 0x02C2C146  GETTABLE   R5 = R5[K[11]='min']
+    0039 [line  421] 0x02000180  MOVE       R6 = R4
+    0040 [line  421] 0x018001C0  MOVE       R7 = R3
+    0041 [line  421] 0x0180815C  CALL       A=5 B=3 C=2
+    0042 [line  421] 0x02800100  MOVE       R4 = R5
+    0043 [line  423] 0x00030145  GETGLOBAL  R5 = GLOBAL K[12]='string'
+    0044 [line  423] 0x02C34146  GETTABLE   R5 = R5[K[13]='format']
+    0045 [line  423] 0x00038181  LOADK      R6 = K[14]='(%d/%d)'
+    0046 [line  423] 0x020001C0  MOVE       R7 = R4
+    0047 [line  423] 0x01800200  MOVE       R8 = R3
+    0048 [line  423] 0x0200015D  TAILCALL   A=5 B=4 C=0
+    0049 [line  423] 0x0000015E  RETURN     A=5 B=0 C=0
+    0050 [line  424] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'eventIndex': 0 -> 50
+    'info': 0 -> 50
+    'eventDesc': 1 -> 50
+    'maxValue': 2 -> 50
+    'eventCount': 24 -> 50
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x3F84
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 429 - 450
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'math'
+    K[001] = 'floor'
+    K[002] = 0.0
+    K[003] = 3600.0
+    K[004] = 60.0
+    K[005] = 'string'
+    K[006] = 'format'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 612.0
+    K[010] = 613.0
+    K[011] = 603.0
+    K[012] = 611.0
+    K[013] = '--'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  430] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='math'
+    0001 [line  430] 0x00C04046  GETTABLE   R1 = R1[K[1]='floor']
+    0002 [line  430] 0x00000080  MOVE       R2 = R0
+    0003 [line  430] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  430] 0x00800000  MOVE       R0 = R1
+    0005 [line  431] 0x00408018  LT         A=0 B=R0 C=K[2]=0.0
+    0006 [line  431] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  432] 0x00008001  LOADK      R0 = K[2]=0.0
+    0008 [line  435] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='math'
+    0009 [line  435] 0x00C04046  GETTABLE   R1 = R1[K[1]='floor']
+    0010 [line  435] 0x0040C08F  DIV        A=2 B=R0 C=K[3]=3600.0
+    0011 [line  435] 0x0100805C  CALL       A=1 B=2 C=2
+    0012 [line  436] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='math'
+    0013 [line  436] 0x01404086  GETTABLE   R2 = R2[K[1]='floor']
+    0014 [line  436] 0x818040CE  MUL        A=3 B=K[3]=3600.0 C=R1
+    0015 [line  436] 0x0000C0CD  SUB        A=3 B=R0 C=R3
+    0016 [line  436] 0x01C100CF  DIV        A=3 B=R3 C=K[4]=60.0
+    0017 [line  436] 0x0100809C  CALL       A=2 B=2 C=2
+    0018 [line  437] 0x81004018  LT         A=0 B=K[2]=0.0 C=R1
+    0019 [line  437] 0x80058016  JMP        A=0 sBx=23
+    0020 [line  438] 0x81008018  LT         A=0 B=K[2]=0.0 C=R2
+    0021 [line  438] 0x80028016  JMP        A=0 sBx=11
+    0022 [line  439] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='string'
+    0023 [line  439] 0x01C180C6  GETTABLE   R3 = R3[K[6]='format']
+    0024 [line  439] 0x0001C105  GETGLOBAL  R4 = GLOBAL K[7]='StringTable'
+    0025 [line  439] 0x02420106  GETTABLE   R4 = R4[K[8]='Get']
+    0026 [line  439] 0x00024141  LOADK      R5 = K[9]=612.0
+    0027 [line  439] 0x0100811C  CALL       A=4 B=2 C=2
+    0028 [line  439] 0x00800140  MOVE       R5 = R1
+    0029 [line  439] 0x01000180  MOVE       R6 = R2
+    0030 [line  439] 0x020000DD  TAILCALL   A=3 B=4 C=0
+    0031 [line  439] 0x000000DE  RETURN     A=3 B=0 C=0
+    0032 [line  439] 0x8007C016  JMP        A=0 sBx=32
+    0033 [line  441] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='string'
+    0034 [line  441] 0x01C180C6  GETTABLE   R3 = R3[K[6]='format']
+    0035 [line  441] 0x0001C105  GETGLOBAL  R4 = GLOBAL K[7]='StringTable'
+    0036 [line  441] 0x02420106  GETTABLE   R4 = R4[K[8]='Get']
+    0037 [line  441] 0x00028141  LOADK      R5 = K[10]=613.0
+    0038 [line  441] 0x0100811C  CALL       A=4 B=2 C=2
+    0039 [line  441] 0x00800140  MOVE       R5 = R1
+    0040 [line  441] 0x018000DD  TAILCALL   A=3 B=3 C=0
+    0041 [line  441] 0x000000DE  RETURN     A=3 B=0 C=0
+    0042 [line  442] 0x80054016  JMP        A=0 sBx=22
+    0043 [line  443] 0x81008018  LT         A=0 B=K[2]=0.0 C=R2
+    0044 [line  443] 0x80024016  JMP        A=0 sBx=10
+    0045 [line  444] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='string'
+    0046 [line  444] 0x01C180C6  GETTABLE   R3 = R3[K[6]='format']
+    0047 [line  444] 0x0001C105  GETGLOBAL  R4 = GLOBAL K[7]='StringTable'
+    0048 [line  444] 0x02420106  GETTABLE   R4 = R4[K[8]='Get']
+    0049 [line  444] 0x0002C141  LOADK      R5 = K[11]=603.0
+    0050 [line  444] 0x0100811C  CALL       A=4 B=2 C=2
+    0051 [line  444] 0x01000140  MOVE       R5 = R2
+    0052 [line  444] 0x018000DD  TAILCALL   A=3 B=3 C=0
+    0053 [line  444] 0x000000DE  RETURN     A=3 B=0 C=0
+    0054 [line  444] 0x80024016  JMP        A=0 sBx=10
+    0055 [line  445] 0x00410018  LT         A=0 B=R0 C=K[4]=60.0
+    0056 [line  445] 0x80014016  JMP        A=0 sBx=6
+    0057 [line  446] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='StringTable'
+    0058 [line  446] 0x01C200C6  GETTABLE   R3 = R3[K[8]='Get']
+    0059 [line  446] 0x00030101  LOADK      R4 = K[12]=611.0
+    0060 [line  446] 0x010000DD  TAILCALL   A=3 B=2 C=0
+    0061 [line  446] 0x000000DE  RETURN     A=3 B=0 C=0
+    0062 [line  446] 0x80004016  JMP        A=0 sBx=2
+    0063 [line  448] 0x000340C1  LOADK      R3 = K[13]='--'
+    0064 [line  448] 0x010000DE  RETURN     A=3 B=2 C=0
+    0065 [line  450] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'seconds': 0 -> 65
+    'hour': 12 -> 65
+    'min': 18 -> 65
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x427F
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 455 - 462
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'task'
+    K[001] = 'Task_GetTimeLimit'
+    K[002] = 'view'
+    K[003] = 'id'
+    K[004] = 'FormatLeftTime'
+    K[005] = '--'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  456] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='task'
+    0001 [line  456] 0x00C04046  GETTABLE   R1 = R1[K[1]='Task_GetTimeLimit']
+    0002 [line  456] 0x00408086  GETTABLE   R2 = R0[K[2]='view']
+    0003 [line  456] 0x0140C086  GETTABLE   R2 = R2[K[3]='id']
+    0004 [line  456] 0x0100C05C  CALL       A=1 B=2 C=3
+    0005 [line  457] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  457] 0x80014016  JMP        A=0 sBx=6
+    0007 [line  458] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0008 [line  458] 0x01C100C6  GETTABLE   R3 = R3[K[4]='FormatLeftTime']
+    0009 [line  458] 0x01000100  MOVE       R4 = R2
+    0010 [line  458] 0x010000DD  TAILCALL   A=3 B=2 C=0
+    0011 [line  458] 0x000000DE  RETURN     A=3 B=0 C=0
+    0012 [line  458] 0x80004016  JMP        A=0 sBx=2
+    0013 [line  460] 0x000140C1  LOADK      R3 = K[5]='--'
+    0014 [line  460] 0x010000DE  RETURN     A=3 B=2 C=0
+    0015 [line  462] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'info': 0 -> 15
+    'hasTimeLimit': 5 -> 15
+    'leftTime': 5 -> 15
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x43C7
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 467 - 474
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'task'
+    K[001] = 'Task_GetFinishOnIdleInfo'
+    K[002] = 'view'
+    K[003] = 'id'
+    K[004] = 'FormatLeftTime'
+    K[005] = '--'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  468] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='task'
+    0001 [line  468] 0x00C04046  GETTABLE   R1 = R1[K[1]='Task_GetFinishOnIdleInfo']
+    0002 [line  468] 0x00408086  GETTABLE   R2 = R0[K[2]='view']
+    0003 [line  468] 0x0140C086  GETTABLE   R2 = R2[K[3]='id']
+    0004 [line  468] 0x0101005C  CALL       A=1 B=2 C=4
+    0005 [line  469] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  469] 0x80014016  JMP        A=0 sBx=6
+    0007 [line  470] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0008 [line  470] 0x02410106  GETTABLE   R4 = R4[K[4]='FormatLeftTime']
+    0009 [line  470] 0x01000140  MOVE       R5 = R2
+    0010 [line  470] 0x0100011D  TAILCALL   A=4 B=2 C=0
+    0011 [line  470] 0x0000011E  RETURN     A=4 B=0 C=0
+    0012 [line  470] 0x80004016  JMP        A=0 sBx=2
+    0013 [line  472] 0x00014101  LOADK      R4 = K[5]='--'
+    0014 [line  472] 0x0100011E  RETURN     A=4 B=2 C=0
+    0015 [line  474] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'info': 0 -> 15
+    'bCanFinishOnIdle': 5 -> 15
+    'time': 5 -> 15
+    'price': 5 -> 15
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x4528
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 477 - 493
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskInfo'
+    K[001] = 'activity'
+    K[002] = 'require'
+    K[003] = 'Social.ECActivityInfo'
+    K[004] = 'IsOpen'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  478] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  478] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTaskInfo']
+    0002 [line  478] 0x00000080  MOVE       R2 = R0
+    0003 [line  478] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  479] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line  479] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  480] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0007 [line  480] 0x0100009E  RETURN     A=2 B=2 C=0
+    0008 [line  482] 0x00C04086  GETTABLE   R2 = R1[K[1]='activity']
+    0009 [line  483] 0x0000409A  TEST       A=2 B=0 C=1
+    0010 [line  483] 0x80004016  JMP        A=0 sBx=2
+    0011 [line  484] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0012 [line  484] 0x010000DE  RETURN     A=3 B=2 C=0
+    0013 [line  486] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='require'
+    0014 [line  486] 0x0000C101  LOADK      R4 = K[3]='Social.ECActivityInfo'
+    0015 [line  486] 0x010080DC  CALL       A=3 B=2 C=2
+    0016 [line  487] 0x01C10106  GETTABLE   R4 = R3[K[4]='IsOpen']
+    0017 [line  487] 0x01000140  MOVE       R5 = R2
+    0018 [line  487] 0x0100811C  CALL       A=4 B=2 C=2
+    0019 [line  489] 0x0000411A  TEST       A=4 B=0 C=1
+    0020 [line  489] 0x80004016  JMP        A=0 sBx=2
+    0021 [line  490] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0022 [line  490] 0x0100015E  RETURN     A=5 B=2 C=0
+    0023 [line  492] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0024 [line  492] 0x0100015E  RETURN     A=5 B=2 C=0
+    0025 [line  493] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskID': 0 -> 25
+    'taskInfo': 4 -> 25
+    'activityId': 9 -> 25
+    'ECActivityInfo': 16 -> 25
+    'bInnerOpen': 19 -> 25
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x46F7
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 495 - 506
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskInfo'
+    K[001] = 'activity'
+    K[002] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  496] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  496] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTaskInfo']
+    0002 [line  496] 0x00000080  MOVE       R2 = R0
+    0003 [line  496] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  497] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line  497] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  498] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0007 [line  498] 0x0100009E  RETURN     A=2 B=2 C=0
+    0008 [line  500] 0x00C04086  GETTABLE   R2 = R1[K[1]='activity']
+    0009 [line  501] 0x0000409A  TEST       A=2 B=0 C=1
+    0010 [line  501] 0x80004016  JMP        A=0 sBx=2
+    0011 [line  502] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0012 [line  502] 0x010000DE  RETURN     A=3 B=2 C=0
+    0013 [line  505] 0x81008058  LT         A=1 B=K[2]=0.0 C=R2
+    0014 [line  505] 0x80000016  JMP        A=0 sBx=1
+    0015 [line  505] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+    0016 [line  505] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0017 [line  505] 0x010000DE  RETURN     A=3 B=2 C=0
+    0018 [line  506] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskID': 0 -> 18
+    'taskInfo': 4 -> 18
+    'activityId': 9 -> 18
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x4831
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 514 - 542
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskTarget'
+    K[001] = 'Instance'
+    K[002] = 'GetTaskView'
+    K[003] = 'method'
+    K[004] = 'TaskMethodEnum'
+    K[005] = 'KillNumMonster'
+    K[006] = 'target_monsterArr'
+    K[007] = 1.0
+    K[008] = 'monsterTid'
+    K[009] = 'nation'
+    K[010] = 0.0
+    K[011] = 'scene'
+    K[012] = 'sid'
+    K[013] = 'x'
+    K[014] = 'pos_x'
+    K[015] = 'z'
+    K[016] = 'pos_z'
+    K[017] = 'type'
+    K[018] = 'kill'
+    K[019] = 'target'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  515] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  515] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTaskTarget']
+    0002 [line  515] 0x00000080  MOVE       R2 = R0
+    0003 [line  515] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  516] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  516] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  517] 0x008000C0  MOVE       R3 = R1
+    0007 [line  517] 0x01000100  MOVE       R4 = R2
+    0008 [line  517] 0x018000DE  RETURN     A=3 B=3 C=0
+    0009 [line  521] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0010 [line  521] 0x01C040C6  GETTABLE   R3 = R3[K[1]='Instance']
+    0011 [line  521] 0x008080DC  CALL       A=3 B=1 C=2
+    0012 [line  522] 0x01C0810B  SELF       A=4 B=3 C=258 Bx=1794
+    0013 [line  522] 0x00000180  MOVE       R6 = R0
+    0014 [line  522] 0x0180811C  CALL       A=4 B=3 C=2
+    0015 [line  524] 0x0000411A  TEST       A=4 B=0 C=1
+    0016 [line  524] 0x80004016  JMP        A=0 sBx=2
+    0017 [line  525] 0x03000143  LOADNIL    A=5 B=6 C=0 Bx=3072
+    0018 [line  525] 0x0180015E  RETURN     A=5 B=3 C=0
+    0019 [line  528] 0x0240C146  GETTABLE   R5 = R4[K[3]='method']
+    0020 [line  529] 0x01000184  GETUPVAL   A=6 B=2 C=0 Bx=1024
+    0021 [line  529] 0x03410186  GETTABLE   R6 = R6[K[4]='TaskMethodEnum']
+    0022 [line  531] 0x034141C6  GETTABLE   R7 = R6[K[5]='KillNumMonster']
+    0023 [line  531] 0x0281C017  EQ         A=0 B=R5 C=R7
+    0024 [line  531] 0x80058016  JMP        A=0 sBx=23
+    0025 [line  532] 0x024181C6  GETTABLE   R7 = R4[K[6]='target_monsterArr']
+    0026 [line  532] 0x03C1C1C6  GETTABLE   R7 = R7[K[7]=1.0]
+    0027 [line  532] 0x03C201C6  GETTABLE   R7 = R7[K[8]='monsterTid']
+    0028 [line  533] 0x01800204  GETUPVAL   A=8 B=3 C=0 Bx=1536
+    0029 [line  533] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0030 [line  534] 0x0000021A  TEST       A=8 B=0 C=0
+    0031 [line  534] 0x80030016  JMP        A=0 sBx=13
+    0032 [line  535] 0x0001024A  NEWTABLE   A=9 B=0 C=4 Bx=4
+    0033 [line  535] 0x84C28249  SETTABLE   R9[K[9]='nation'] = K[10]=0.0
+    0034 [line  535] 0x04430286  GETTABLE   R10 = R8[K[12]='sid']
+    0035 [line  535] 0x85828249  SETTABLE   R9[K[11]='scene'] = R10
+    0036 [line  535] 0x04438286  GETTABLE   R10 = R8[K[14]='pos_x']
+    0037 [line  535] 0x86828249  SETTABLE   R9[K[13]='x'] = R10
+    0038 [line  535] 0x04440286  GETTABLE   R10 = R8[K[16]='pos_z']
+    0039 [line  535] 0x87828249  SETTABLE   R9[K[15]='z'] = R10
+    0040 [line  535] 0x0000828A  NEWTABLE   A=10 B=0 C=2 Bx=2
+    0041 [line  535] 0x88C48289  SETTABLE   R10[K[17]='type'] = K[18]='kill'
+    0042 [line  535] 0x8981C289  SETTABLE   R10[K[19]='target'] = R7
+    0043 [line  535] 0x0180025E  RETURN     A=9 B=3 C=0
+    0044 [line  535] 0x80010016  JMP        A=0 sBx=5
+    0045 [line  537] 0x05000243  LOADNIL    A=9 B=10 C=0 Bx=5120
+    0046 [line  537] 0x0180025E  RETURN     A=9 B=3 C=0
+    0047 [line  538] 0x80004016  JMP        A=0 sBx=2
+    0048 [line  540] 0x040001C3  LOADNIL    A=7 B=8 C=0 Bx=4096
+    0049 [line  540] 0x018001DE  RETURN     A=7 B=3 C=0
+    0050 [line  542] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 50
+    'position': 4 -> 50
+    'action': 4 -> 50
+    'task_interface': 12 -> 50
+    'taskView': 15 -> 50
+    'method': 20 -> 50
+    'TaskMethodEnum': 22 -> 50
+    'monsterTid': 28 -> 47
+    'info': 30 -> 47
+
+    ============================================================
+    PROTO ROOT.24
+    Offset : 0x4BF6
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 549 - 556
+    Params : 1
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskTarget'
+    K[001] = 'BeginAutoMoveWithNation'
+    K[002] = 'nation'
+    K[003] = 'scene'
+    K[004] = 'x'
+    K[005] = 'z'
+    K[006] = 'GenTaskCallbacks'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  550] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  550] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTaskTarget']
+    0002 [line  550] 0x00000080  MOVE       R2 = R0
+    0003 [line  550] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  551] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  551] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  551] 0x0000409A  TEST       A=2 B=0 C=1
+    0007 [line  551] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  552] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  552] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  555] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0011 [line  555] 0x01C040C6  GETTABLE   R3 = R3[K[1]='BeginAutoMoveWithNation']
+    0012 [line  555] 0x00C08106  GETTABLE   R4 = R1[K[2]='nation']
+    0013 [line  555] 0x00C0C146  GETTABLE   R5 = R1[K[3]='scene']
+    0014 [line  555] 0x00C10186  GETTABLE   R6 = R1[K[4]='x']
+    0015 [line  555] 0x00C141C6  GETTABLE   R7 = R1[K[5]='z']
+    0016 [line  555] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0017 [line  555] 0x04418206  GETTABLE   R8 = R8[K[6]='GenTaskCallbacks']
+    0018 [line  555] 0x00000240  MOVE       R9 = R0
+    0019 [line  555] 0x01000280  MOVE       R10 = R2
+    0020 [line  555] 0x00C0C2C6  GETTABLE   R11 = R1[K[3]='scene']
+    0021 [line  555] 0x00C10306  GETTABLE   R12 = R1[K[4]='x']
+    0022 [line  555] 0x00C14346  GETTABLE   R13 = R1[K[5]='z']
+    0023 [line  555] 0x0300021C  CALL       A=8 B=6 C=0
+    0024 [line  555] 0x000000DD  TAILCALL   A=3 B=0 C=0
+    0025 [line  555] 0x000000DE  RETURN     A=3 B=0 C=0
+    0026 [line  556] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 26
+    'pos': 4 -> 26
+    'action': 4 -> 26
+
+    ============================================================
+    PROTO ROOT.25
+    Offset : 0x4DB8
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 563 - 570
+    Params : 1
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskTarget'
+    K[001] = 'BeginAutoMoveWithNation'
+    K[002] = 'nation'
+    K[003] = 'scene'
+    K[004] = 'x'
+    K[005] = 'z'
+    K[006] = 'GenTaskCallbacks'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  564] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  564] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetTaskTarget']
+    0002 [line  564] 0x00000080  MOVE       R2 = R0
+    0003 [line  564] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  565] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  565] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  565] 0x0000409A  TEST       A=2 B=0 C=1
+    0007 [line  565] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  566] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  566] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  569] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0011 [line  569] 0x01C040C6  GETTABLE   R3 = R3[K[1]='BeginAutoMoveWithNation']
+    0012 [line  569] 0x00C08106  GETTABLE   R4 = R1[K[2]='nation']
+    0013 [line  569] 0x00C0C146  GETTABLE   R5 = R1[K[3]='scene']
+    0014 [line  569] 0x00C10186  GETTABLE   R6 = R1[K[4]='x']
+    0015 [line  569] 0x00C141C6  GETTABLE   R7 = R1[K[5]='z']
+    0016 [line  569] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0017 [line  569] 0x04418206  GETTABLE   R8 = R8[K[6]='GenTaskCallbacks']
+    0018 [line  569] 0x00000240  MOVE       R9 = R0
+    0019 [line  569] 0x01000280  MOVE       R10 = R2
+    0020 [line  569] 0x00C0C2C6  GETTABLE   R11 = R1[K[3]='scene']
+    0021 [line  569] 0x00C10306  GETTABLE   R12 = R1[K[4]='x']
+    0022 [line  569] 0x00C14346  GETTABLE   R13 = R1[K[5]='z']
+    0023 [line  569] 0x0300021C  CALL       A=8 B=6 C=0
+    0024 [line  569] 0x000000DD  TAILCALL   A=3 B=0 C=0
+    0025 [line  569] 0x000000DE  RETURN     A=3 B=0 C=0
+    0026 [line  570] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 26
+    'pos': 4 -> 26
+    'action': 4 -> 26
+
+    ============================================================
+    PROTO ROOT.26
+    Offset : 0x4F7B
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 572 - 579
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_CurWorld'
+    K[002] = 'm_NPCMan'
+    K[003] = 'GetNPC'
+    K[004] = 'is'
+    K[005] = 'ServerEssence'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  573] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  573] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  573] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  573] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_CurWorld']
+    0004 [line  573] 0x00C08046  GETTABLE   R1 = R1[K[2]='m_NPCMan']
+    0005 [line  573] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0006 [line  573] 0x000000C0  MOVE       R3 = R0
+    0007 [line  573] 0x0180805C  CALL       A=1 B=3 C=2
+    0008 [line  574] 0x0000005A  TEST       A=1 B=0 C=0
+    0009 [line  574] 0x80018016  JMP        A=0 sBx=7
+    0010 [line  574] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0011 [line  574] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0012 [line  574] 0x0180809C  CALL       A=2 B=3 C=2
+    0013 [line  574] 0x0000009A  TEST       A=2 B=0 C=0
+    0014 [line  574] 0x80004016  JMP        A=0 sBx=2
+    0015 [line  575] 0x00C14086  GETTABLE   R2 = R1[K[5]='ServerEssence']
+    0016 [line  575] 0x0100009E  RETURN     A=2 B=2 C=0
+    0017 [line  578] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0018 [line  578] 0x0100009E  RETURN     A=2 B=2 C=0
+    0019 [line  579] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npc_id': 0 -> 19
+    'npc': 8 -> 19
+
+    ============================================================
+    PROTO ROOT.27
+    Offset : 0x50D4
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 594 - 610
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = 'belongToCountry'
+    K[003] = 'TASK_NATION_OTHERS'
+    K[004] = -2.0
+    K[005] = 'TASK_NATION_OWN'
+    K[006] = 0.0
+    K[007] = 'TASK_NATION_ALL'
+    K[008] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  595] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  595] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  595] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  595] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0004 [line  595] 0x000000C0  MOVE       R3 = R0
+    0005 [line  595] 0x0180805C  CALL       A=1 B=3 C=2
+    0006 [line  596] 0x0000005A  TEST       A=1 B=0 C=0
+    0007 [line  596] 0x8005C016  JMP        A=0 sBx=24
+    0008 [line  597] 0x00C08086  GETTABLE   R2 = R1[K[2]='belongToCountry']
+    0009 [line  598] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0010 [line  598] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='TASK_NATION_OTHERS']
+    0011 [line  598] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0012 [line  598] 0x80008016  JMP        A=0 sBx=3
+    0013 [line  599] 0x000100C1  LOADK      R3 = K[4]=-2.0
+    0014 [line  599] 0x010000DE  RETURN     A=3 B=2 C=0
+    0015 [line  599] 0x80044016  JMP        A=0 sBx=18
+    0016 [line  600] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0017 [line  600] 0x01C140C6  GETTABLE   R3 = R3[K[5]='TASK_NATION_OWN']
+    0018 [line  600] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0019 [line  600] 0x80008016  JMP        A=0 sBx=3
+    0020 [line  601] 0x000180C1  LOADK      R3 = K[6]=0.0
+    0021 [line  601] 0x010000DE  RETURN     A=3 B=2 C=0
+    0022 [line  601] 0x80028016  JMP        A=0 sBx=11
+    0023 [line  602] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0024 [line  602] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='TASK_NATION_ALL']
+    0025 [line  602] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0026 [line  602] 0x80008016  JMP        A=0 sBx=3
+    0027 [line  603] 0x000200C1  LOADK      R3 = K[8]=-1.0
+    0028 [line  603] 0x010000DE  RETURN     A=3 B=2 C=0
+    0029 [line  603] 0x8000C016  JMP        A=0 sBx=4
+    0030 [line  605] 0x0100009E  RETURN     A=2 B=2 C=0
+    0031 [line  606] 0x80004016  JMP        A=0 sBx=2
+    0032 [line  608] 0x00018081  LOADK      R2 = K[6]=0.0
+    0033 [line  608] 0x0100009E  RETURN     A=2 B=2 C=0
+    0034 [line  610] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'task_id': 0 -> 34
+    'taskView': 6 -> 34
+    'belongToCountry': 9 -> 31
+
+    ============================================================
+    PROTO ROOT.28
+    Offset : 0x5314
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 617 - 649
+    Params : 1
+    Stack  : 15
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = 'deliverNPC'
+    K[003] = 'GetTaskAutoMoveNation'
+    K[004] = 'BeginAutoMoveWithNation'
+    K[005] = 'sid'
+    K[006] = 'pos_x'
+    K[007] = 'pos_z'
+    K[008] = 'NPC_TALK_STOP_DISTANCE'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  618] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  618] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  618] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  619] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0004 [line  619] 0x00000100  MOVE       R4 = R0
+    0005 [line  619] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line  620] 0x0000409A  TEST       A=2 B=0 C=1
+    0007 [line  620] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  621] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  621] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  624] 0x014080C6  GETTABLE   R3 = R2[K[2]='deliverNPC']
+    0011 [line  625] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0012 [line  625] 0x0200C106  GETTABLE   R4 = R4[R3]
+    0013 [line  626] 0x0000411A  TEST       A=4 B=0 C=1
+    0014 [line  626] 0x80004016  JMP        A=0 sBx=2
+    0015 [line  627] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0016 [line  627] 0x0100015E  RETURN     A=5 B=2 C=0
+    0017 [line  645] 0x00000164  CLOSURE    R5 = PROTO[0]
+    0018 [line  645] 0x01800000  MOVE       R0 = R3
+    0019 [line  645] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0020 [line  645] 0x00000000  MOVE       R0 = R0
+    0021 [line  645] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0022 [line  645] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0023 [line  647] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+    0024 [line  647] 0x0340C186  GETTABLE   R6 = R6[K[3]='GetTaskAutoMoveNation']
+    0025 [line  647] 0x000001C0  MOVE       R7 = R0
+    0026 [line  647] 0x0100819C  CALL       A=6 B=2 C=2
+    0027 [line  648] 0x028001C4  GETUPVAL   A=7 B=5 C=0 Bx=2560
+    0028 [line  648] 0x03C101C6  GETTABLE   R7 = R7[K[4]='BeginAutoMoveWithNation']
+    0029 [line  648] 0x03000200  MOVE       R8 = R6
+    0030 [line  648] 0x02414246  GETTABLE   R9 = R4[K[5]='sid']
+    0031 [line  648] 0x02418286  GETTABLE   R10 = R4[K[6]='pos_x']
+    0032 [line  648] 0x0241C2C6  GETTABLE   R11 = R4[K[7]='pos_z']
+    0033 [line  648] 0x03000304  GETUPVAL   A=12 B=6 C=0 Bx=3072
+    0034 [line  648] 0x06420306  GETTABLE   R12 = R12[K[8]='NPC_TALK_STOP_DISTANCE']
+    0035 [line  648] 0x02800340  MOVE       R13 = R5
+    0036 [line  648] 0x07000383  LOADNIL    A=14 B=14 C=0 Bx=7168
+    0037 [line  648] 0x040001DD  TAILCALL   A=7 B=8 C=0
+    0038 [line  648] 0x000001DE  RETURN     A=7 B=0 C=0
+    0039 [line  649] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 39
+    'task_interface': 3 -> 39
+    'taskView': 6 -> 39
+    'tid': 11 -> 39
+    'info': 13 -> 39
+    'onAutoMoveFinish': 23 -> 39
+    'nationId': 27 -> 39
+
+        ============================================================
+        PROTO ROOT.28.0
+        Offset : 0x5472
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 630 - 645
+        Params : 0
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostAsyncTask'
+        K[002] = 'BeginNPCService'
+        K[003] = 'completeWith'
+        K[004] = 'start'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  631] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  631] 0x00004041  LOADK      R1 = K[1]='Players.ECHostAsyncTask'
+        0002 [line  631] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  632] 0x00408046  GETTABLE   R1 = R0[K[2]='BeginNPCService']
+        0004 [line  632] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  632] 0x0100805C  CALL       A=1 B=2 C=2
+        0006 [line  633] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+        0007 [line  643] 0x00000124  CLOSURE    R4 = PROTO[0]
+        0008 [line  643] 0x00800000  MOVE       R0 = R1
+        0009 [line  643] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0010 [line  643] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0011 [line  643] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+        0012 [line  643] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+        0013 [line  633] 0x0180409C  CALL       A=2 B=3 C=1
+        0014 [line  644] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+        0015 [line  644] 0x0100409C  CALL       A=2 B=2 C=1
+        0016 [line  645] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECHostAsyncTask': 3 -> 16
+        'task': 6 -> 16
+
+            ============================================================
+            PROTO ROOT.28.0.0
+            Offset : 0x552E
+            Source : '@lua\\task\\ectaskutility.lua'
+            Lines  : 633 - 643
+            Params : 0
+            Stack  : 6
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'getResult'
+            K[001] = 'CanTryDeliverTask'
+            K[002] = 'Instance'
+            K[003] = 'm_HostPlayer'
+            K[004] = 'SkillHdl'
+            K[005] = 'SelectTarget'
+            K[006] = 'require'
+            K[007] = 'GUI.ECPanelNPCQuest'
+            K[008] = 'PopForReceiveTask'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  634] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+            0001 [line  634] 0x0040000B  SELF       A=0 B=0 C=256 Bx=256
+            0002 [line  634] 0x0100801C  CALL       A=0 B=2 C=2
+            0003 [line  635] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+            0004 [line  635] 0x00C04046  GETTABLE   R1 = R1[K[1]='CanTryDeliverTask']
+            0005 [line  635] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0006 [line  635] 0x0100805C  CALL       A=1 B=2 C=2
+            0007 [line  635] 0x0000005A  TEST       A=1 B=0 C=0
+            0008 [line  635] 0x8004C016  JMP        A=0 sBx=20
+            0009 [line  636] 0x01800044  GETUPVAL   A=1 B=3 C=0 Bx=1536
+            0010 [line  636] 0x00000080  MOVE       R2 = R0
+            0011 [line  636] 0x0100805C  CALL       A=1 B=2 C=2
+            0012 [line  637] 0x0000005A  TEST       A=1 B=0 C=0
+            0013 [line  637] 0x80038016  JMP        A=0 sBx=15
+            0014 [line  638] 0x02000084  GETUPVAL   A=2 B=4 C=0 Bx=2048
+            0015 [line  638] 0x01408086  GETTABLE   R2 = R2[K[2]='Instance']
+            0016 [line  638] 0x0080809C  CALL       A=2 B=1 C=2
+            0017 [line  638] 0x0140C086  GETTABLE   R2 = R2[K[3]='m_HostPlayer']
+            0018 [line  638] 0x01410086  GETTABLE   R2 = R2[K[4]='SkillHdl']
+            0019 [line  638] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+            0020 [line  638] 0x00000100  MOVE       R4 = R0
+            0021 [line  638] 0x0180409C  CALL       A=2 B=3 C=1
+            0022 [line  639] 0x00018085  GETGLOBAL  R2 = GLOBAL K[6]='require'
+            0023 [line  639] 0x0001C0C1  LOADK      R3 = K[7]='GUI.ECPanelNPCQuest'
+            0024 [line  639] 0x0100809C  CALL       A=2 B=2 C=2
+            0025 [line  640] 0x014200C6  GETTABLE   R3 = R2[K[8]='PopForReceiveTask']
+            0026 [line  640] 0x00800100  MOVE       R4 = R1
+            0027 [line  640] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+            0028 [line  640] 0x018040DC  CALL       A=3 B=3 C=1
+            0029 [line  643] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'npc_id': 3 -> 29
+            'npc_ess': 12 -> 29
+            'ECPanelNPCQuest': 25 -> 29
+
+    ============================================================
+    PROTO ROOT.29
+    Offset : 0x59E5
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 656 - 720
+    Params : 1
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = 'awardNPC'
+    K[003] = 'storageIndex'
+    K[004] = 0.0
+    K[005] = 'require'
+    K[006] = 'GUI.ECPanelLotteryGame'
+    K[007] = 'FindTask'
+    K[008] = 'ShowPanelWithTaskId'
+    K[009] = 'GUI.ECPanelTaskQuest'
+    K[010] = 'IsTaskActivityOver'
+    K[011] = 'ShowPanel'
+    K[012] = 'GUI.ECPanelQuestSeriesNew'
+    K[013] = 'OpenSelfServe'
+    K[014] = 'GetTaskAutoMoveNation'
+    K[015] = 'ShouldFinishTaskWithStorageUI'
+    K[016] = 'BeginAutoMoveWithNation'
+    K[017] = 'sid'
+    K[018] = 'pos_x'
+    K[019] = 'pos_z'
+    K[020] = 'NPC_TALK_STOP_DISTANCE'
+    K[021] = 'ClickNPCCallbacks'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  657] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  657] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  657] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  658] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0004 [line  658] 0x00000100  MOVE       R4 = R0
+    0005 [line  658] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line  659] 0x0000409A  TEST       A=2 B=0 C=1
+    0007 [line  659] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  660] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  660] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  663] 0x014080C6  GETTABLE   R3 = R2[K[2]='awardNPC']
+    0011 [line  664] 0x0140C106  GETTABLE   R4 = R2[K[3]='storageIndex']
+    0012 [line  665] 0x82010019  LE         A=0 B=K[4]=0.0 C=R4
+    0013 [line  665] 0x800B8016  JMP        A=0 sBx=47
+    0014 [line  667] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='require'
+    0015 [line  667] 0x00018181  LOADK      R6 = K[6]='GUI.ECPanelLotteryGame'
+    0016 [line  667] 0x0100815C  CALL       A=5 B=2 C=2
+    0017 [line  668] 0x02C1C186  GETTABLE   R6 = R5[K[7]='FindTask']
+    0018 [line  668] 0x000001C0  MOVE       R7 = R0
+    0019 [line  668] 0x0100819C  CALL       A=6 B=2 C=2
+    0020 [line  668] 0x0000019A  TEST       A=6 B=0 C=0
+    0021 [line  668] 0x80018016  JMP        A=0 sBx=7
+    0022 [line  669] 0x02C00186  GETTABLE   R6 = R5[K[0]='Instance']
+    0023 [line  669] 0x0080819C  CALL       A=6 B=1 C=2
+    0024 [line  669] 0x0342018B  SELF       A=6 B=6 C=264 Bx=3336
+    0025 [line  669] 0x00000200  MOVE       R8 = R0
+    0026 [line  669] 0x0180419C  CALL       A=6 B=3 C=1
+    0027 [line  670] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0028 [line  670] 0x0100019E  RETURN     A=6 B=2 C=0
+    0029 [line  673] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='require'
+    0030 [line  673] 0x000241C1  LOADK      R7 = K[9]='GUI.ECPanelTaskQuest'
+    0031 [line  673] 0x0100819C  CALL       A=6 B=2 C=2
+    0032 [line  674] 0x0341C1C6  GETTABLE   R7 = R6[K[7]='FindTask']
+    0033 [line  674] 0x00000200  MOVE       R8 = R0
+    0034 [line  674] 0x010081DC  CALL       A=7 B=2 C=2
+    0035 [line  674] 0x000001DA  TEST       A=7 B=0 C=0
+    0036 [line  674] 0x8003C016  JMP        A=0 sBx=16
+    0037 [line  675] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0038 [line  675] 0x03C281C6  GETTABLE   R7 = R7[K[10]='IsTaskActivityOver']
+    0039 [line  675] 0x00000200  MOVE       R8 = R0
+    0040 [line  675] 0x010081DC  CALL       A=7 B=2 C=2
+    0041 [line  675] 0x000001DA  TEST       A=7 B=0 C=0
+    0042 [line  675] 0x80008016  JMP        A=0 sBx=3
+    0043 [line  676] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0044 [line  676] 0x010001DE  RETURN     A=7 B=2 C=0
+    0045 [line  676] 0x80018016  JMP        A=0 sBx=7
+    0046 [line  678] 0x034001C6  GETTABLE   R7 = R6[K[0]='Instance']
+    0047 [line  678] 0x008081DC  CALL       A=7 B=1 C=2
+    0048 [line  678] 0x03C2C1CB  SELF       A=7 B=7 C=267 Bx=3851
+    0049 [line  678] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0050 [line  678] 0x018041DC  CALL       A=7 B=3 C=1
+    0051 [line  679] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0052 [line  679] 0x010001DE  RETURN     A=7 B=2 C=0
+    0053 [line  683] 0x000141C5  GETGLOBAL  R7 = GLOBAL K[5]='require'
+    0054 [line  683] 0x00030201  LOADK      R8 = K[12]='GUI.ECPanelQuestSeriesNew'
+    0055 [line  683] 0x010081DC  CALL       A=7 B=2 C=2
+    0056 [line  684] 0x03C34206  GETTABLE   R8 = R7[K[13]='OpenSelfServe']
+    0057 [line  684] 0x02000240  MOVE       R9 = R4
+    0058 [line  684] 0x0100421C  CALL       A=8 B=2 C=1
+    0059 [line  685] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0060 [line  685] 0x0100021E  RETURN     A=8 B=2 C=0
+    0061 [line  688] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0062 [line  688] 0x0280C146  GETTABLE   R5 = R5[R3]
+    0063 [line  689] 0x0000415A  TEST       A=5 B=0 C=1
+    0064 [line  689] 0x80004016  JMP        A=0 sBx=2
+    0065 [line  690] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0066 [line  690] 0x0100019E  RETURN     A=6 B=2 C=0
+    0067 [line  711] 0x000001A4  CLOSURE    R6 = PROTO[0]
+    0068 [line  711] 0x01800000  MOVE       R0 = R3
+    0069 [line  711] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0070 [line  711] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0071 [line  711] 0x00000000  MOVE       R0 = R0
+    0072 [line  711] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+    0073 [line  713] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0074 [line  713] 0x03C381C6  GETTABLE   R7 = R7[K[14]='GetTaskAutoMoveNation']
+    0075 [line  713] 0x00000200  MOVE       R8 = R0
+    0076 [line  713] 0x010081DC  CALL       A=7 B=2 C=2
+    0077 [line  714] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0078 [line  714] 0x0443C206  GETTABLE   R8 = R8[K[15]='ShouldFinishTaskWithStorageUI']
+    0079 [line  714] 0x00000240  MOVE       R9 = R0
+    0080 [line  714] 0x01800280  MOVE       R10 = R3
+    0081 [line  714] 0x0180821C  CALL       A=8 B=3 C=2
+    0082 [line  714] 0x0000021A  TEST       A=8 B=0 C=0
+    0083 [line  714] 0x80038016  JMP        A=0 sBx=15
+    0084 [line  716] 0x02800204  GETUPVAL   A=8 B=5 C=0 Bx=2560
+    0085 [line  716] 0x04440206  GETTABLE   R8 = R8[K[16]='BeginAutoMoveWithNation']
+    0086 [line  716] 0x03800240  MOVE       R9 = R7
+    0087 [line  716] 0x02C44286  GETTABLE   R10 = R5[K[17]='sid']
+    0088 [line  716] 0x02C482C6  GETTABLE   R11 = R5[K[18]='pos_x']
+    0089 [line  716] 0x02C4C306  GETTABLE   R12 = R5[K[19]='pos_z']
+    0090 [line  716] 0x03000344  GETUPVAL   A=13 B=6 C=0 Bx=3072
+    0091 [line  716] 0x06C50346  GETTABLE   R13 = R13[K[20]='NPC_TALK_STOP_DISTANCE']
+    0092 [line  716] 0x02800384  GETUPVAL   A=14 B=5 C=0 Bx=2560
+    0093 [line  716] 0x07454386  GETTABLE   R14 = R14[K[21]='ClickNPCCallbacks']
+    0094 [line  716] 0x018003C0  MOVE       R15 = R3
+    0095 [line  716] 0x0100039C  CALL       A=14 B=2 C=0
+    0096 [line  716] 0x0000021D  TAILCALL   A=8 B=0 C=0
+    0097 [line  716] 0x0000021E  RETURN     A=8 B=0 C=0
+    0098 [line  716] 0x8002C016  JMP        A=0 sBx=12
+    0099 [line  718] 0x02800204  GETUPVAL   A=8 B=5 C=0 Bx=2560
+    0100 [line  718] 0x04440206  GETTABLE   R8 = R8[K[16]='BeginAutoMoveWithNation']
+    0101 [line  718] 0x03800240  MOVE       R9 = R7
+    0102 [line  718] 0x02C44286  GETTABLE   R10 = R5[K[17]='sid']
+    0103 [line  718] 0x02C482C6  GETTABLE   R11 = R5[K[18]='pos_x']
+    0104 [line  718] 0x02C4C306  GETTABLE   R12 = R5[K[19]='pos_z']
+    0105 [line  718] 0x03000344  GETUPVAL   A=13 B=6 C=0 Bx=3072
+    0106 [line  718] 0x06C50346  GETTABLE   R13 = R13[K[20]='NPC_TALK_STOP_DISTANCE']
+    0107 [line  718] 0x03000380  MOVE       R14 = R6
+    0108 [line  718] 0x078003C3  LOADNIL    A=15 B=15 C=0 Bx=7680
+    0109 [line  718] 0x0400021D  TAILCALL   A=8 B=8 C=0
+    0110 [line  718] 0x0000021E  RETURN     A=8 B=0 C=0
+    0111 [line  720] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 111
+    'task_interface': 3 -> 111
+    'taskView': 6 -> 111
+    'tid': 11 -> 111
+    'storageIndex': 12 -> 111
+    'ECPanelLotteryGame': 17 -> 61
+    'ECPanelTaskQuest': 32 -> 61
+    'ECPanelQuestSeriesNew': 56 -> 61
+    'info': 63 -> 111
+    'onAutoMoveFinish': 73 -> 111
+    'nationId': 77 -> 111
+
+        ============================================================
+        PROTO ROOT.29.0
+        Offset : 0x5D79
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 693 - 711
+        Params : 0
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'require'
+        K[001] = 'Players.ECHostAsyncTask'
+        K[002] = 'BeginNPCService'
+        K[003] = 'completeWith'
+        K[004] = 'start'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  694] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+        0001 [line  694] 0x00004041  LOADK      R1 = K[1]='Players.ECHostAsyncTask'
+        0002 [line  694] 0x0100801C  CALL       A=0 B=2 C=2
+        0003 [line  695] 0x00408046  GETTABLE   R1 = R0[K[2]='BeginNPCService']
+        0004 [line  695] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  695] 0x0100805C  CALL       A=1 B=2 C=2
+        0006 [line  696] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+        0007 [line  709] 0x00000124  CLOSURE    R4 = PROTO[0]
+        0008 [line  709] 0x00800000  MOVE       R0 = R1
+        0009 [line  709] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0010 [line  709] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0011 [line  709] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+        0012 [line  709] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0013 [line  709] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+        0014 [line  696] 0x0180409C  CALL       A=2 B=3 C=1
+        0015 [line  710] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+        0016 [line  710] 0x0100409C  CALL       A=2 B=2 C=1
+        0017 [line  711] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ECHostAsyncTask': 3 -> 17
+        'task': 6 -> 17
+
+            ============================================================
+            PROTO ROOT.29.0.0
+            Offset : 0x5E39
+            Source : '@lua\\task\\ectaskutility.lua'
+            Lines  : 696 - 709
+            Params : 0
+            Stack  : 7
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'getResult'
+            K[001] = 'Instance'
+            K[002] = 'm_CurWorld'
+            K[003] = 'm_SceneInfo'
+            K[004] = 'nationmirror'
+            K[005] = 0.0
+            K[006] = 'CanFinishTaskAtNpc'
+            K[007] = 'm_HostPlayer'
+            K[008] = 'SkillHdl'
+            K[009] = 'SelectTarget'
+            K[010] = 'require'
+            K[011] = 'GUI.ECPanelNPCQuest'
+            K[012] = 'PopForFinishTask'
+
+            ----- INSTRUCTIONS -----
+            0000 [line  697] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+            0001 [line  697] 0x0040000B  SELF       A=0 B=0 C=256 Bx=256
+            0002 [line  697] 0x0100801C  CALL       A=0 B=2 C=2
+            0003 [line  699] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+            0004 [line  699] 0x00C04046  GETTABLE   R1 = R1[K[1]='Instance']
+            0005 [line  699] 0x0080805C  CALL       A=1 B=1 C=2
+            0006 [line  699] 0x00C08046  GETTABLE   R1 = R1[K[2]='m_CurWorld']
+            0007 [line  699] 0x00C0C046  GETTABLE   R1 = R1[K[3]='m_SceneInfo']
+            0008 [line  699] 0x00C10046  GETTABLE   R1 = R1[K[4]='nationmirror']
+            0009 [line  699] 0x0000405A  TEST       A=1 B=0 C=1
+            0010 [line  699] 0x80000016  JMP        A=0 sBx=1
+            0011 [line  699] 0x00014041  LOADK      R1 = K[5]=0.0
+            0012 [line  700] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+            0013 [line  700] 0x01418086  GETTABLE   R2 = R2[K[6]='CanFinishTaskAtNpc']
+            0014 [line  700] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+            0015 [line  700] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+            0016 [line  700] 0x00800140  MOVE       R5 = R1
+            0017 [line  700] 0x0200809C  CALL       A=2 B=4 C=2
+            0018 [line  700] 0x0000009A  TEST       A=2 B=0 C=0
+            0019 [line  700] 0x8004C016  JMP        A=0 sBx=20
+            0020 [line  701] 0x02800084  GETUPVAL   A=2 B=5 C=0 Bx=2560
+            0021 [line  701] 0x000000C0  MOVE       R3 = R0
+            0022 [line  701] 0x0100809C  CALL       A=2 B=2 C=2
+            0023 [line  702] 0x0000009A  TEST       A=2 B=0 C=0
+            0024 [line  702] 0x80038016  JMP        A=0 sBx=15
+            0025 [line  703] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+            0026 [line  703] 0x01C040C6  GETTABLE   R3 = R3[K[1]='Instance']
+            0027 [line  703] 0x008080DC  CALL       A=3 B=1 C=2
+            0028 [line  703] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='m_HostPlayer']
+            0029 [line  703] 0x01C200C6  GETTABLE   R3 = R3[K[8]='SkillHdl']
+            0030 [line  703] 0x01C240CB  SELF       A=3 B=3 C=265 Bx=1801
+            0031 [line  703] 0x00000140  MOVE       R5 = R0
+            0032 [line  703] 0x018040DC  CALL       A=3 B=3 C=1
+            0033 [line  705] 0x000280C5  GETGLOBAL  R3 = GLOBAL K[10]='require'
+            0034 [line  705] 0x0002C101  LOADK      R4 = K[11]='GUI.ECPanelNPCQuest'
+            0035 [line  705] 0x010080DC  CALL       A=3 B=2 C=2
+            0036 [line  706] 0x01C30106  GETTABLE   R4 = R3[K[12]='PopForFinishTask']
+            0037 [line  706] 0x01000140  MOVE       R5 = R2
+            0038 [line  706] 0x01800184  GETUPVAL   A=6 B=3 C=0 Bx=1536
+            0039 [line  706] 0x0180411C  CALL       A=4 B=3 C=1
+            0040 [line  709] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'npc_id': 3 -> 40
+            'currentNation': 12 -> 40
+            'npc_ess': 23 -> 40
+            'ECPanelNPCQuest': 36 -> 40
+
+    ============================================================
+    PROTO ROOT.30
+    Offset : 0x6541
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 727 - 764
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'IsInFollowing'
+    K[003] = 'FlashTipMan'
+    K[004] = 'FlashTip'
+    K[005] = 'StringTable'
+    K[006] = 'Get'
+    K[007] = 2410.0
+    K[008] = 'GetTaskView'
+    K[009] = 'IsTaskActivityOver'
+    K[010] = 'MsgBox'
+    K[011] = 'ShowMsgBox'
+    K[012] = 1243.0
+    K[013] = 'MsgBoxType'
+    K[014] = 'MBBT_YESNO'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  728] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  728] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  728] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  728] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  729] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  729] 0x80030016  JMP        A=0 sBx=13
+    0006 [line  729] 0x00C0808B  SELF       A=2 B=1 C=258 Bx=770
+    0007 [line  729] 0x0100809C  CALL       A=2 B=2 C=2
+    0008 [line  729] 0x0000009A  TEST       A=2 B=0 C=0
+    0009 [line  729] 0x80020016  JMP        A=0 sBx=9
+    0010 [line  730] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='FlashTipMan'
+    0011 [line  730] 0x01410086  GETTABLE   R2 = R2[K[4]='FlashTip']
+    0012 [line  730] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='StringTable'
+    0013 [line  730] 0x01C180C6  GETTABLE   R3 = R3[K[6]='Get']
+    0014 [line  730] 0x0001C101  LOADK      R4 = K[7]=2410.0
+    0015 [line  730] 0x010000DC  CALL       A=3 B=2 C=0
+    0016 [line  730] 0x0000409C  CALL       A=2 B=0 C=1
+    0017 [line  731] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0018 [line  731] 0x0100009E  RETURN     A=2 B=2 C=0
+    0019 [line  733] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0020 [line  733] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0021 [line  733] 0x0080809C  CALL       A=2 B=1 C=2
+    0022 [line  734] 0x014200CB  SELF       A=3 B=2 C=264 Bx=1288
+    0023 [line  734] 0x00000140  MOVE       R5 = R0
+    0024 [line  734] 0x018080DC  CALL       A=3 B=3 C=2
+    0025 [line  735] 0x000040DA  TEST       A=3 B=0 C=1
+    0026 [line  735] 0x80004016  JMP        A=0 sBx=2
+    0027 [line  736] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0028 [line  736] 0x0100011E  RETURN     A=4 B=2 C=0
+    0029 [line  749] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0030 [line  749] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0031 [line  749] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0032 [line  752] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0033 [line  752] 0x02C24146  GETTABLE   R5 = R5[K[9]='IsTaskActivityOver']
+    0034 [line  752] 0x00000180  MOVE       R6 = R0
+    0035 [line  752] 0x0100815C  CALL       A=5 B=2 C=2
+    0036 [line  752] 0x0000015A  TEST       A=5 B=0 C=0
+    0037 [line  752] 0x80040016  JMP        A=0 sBx=17
+    0038 [line  753] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='MsgBox'
+    0039 [line  753] 0x02C2C146  GETTABLE   R5 = R5[K[11]='ShowMsgBox']
+    0040 [line  753] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0041 [line  753] 0x000141C5  GETGLOBAL  R7 = GLOBAL K[5]='StringTable'
+    0042 [line  753] 0x03C181C6  GETTABLE   R7 = R7[K[6]='Get']
+    0043 [line  753] 0x00030201  LOADK      R8 = K[12]=1243.0
+    0044 [line  753] 0x010081DC  CALL       A=7 B=2 C=2
+    0045 [line  753] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0046 [line  753] 0x00034245  GETGLOBAL  R9 = GLOBAL K[13]='MsgBoxType'
+    0047 [line  753] 0x04C38246  GETTABLE   R9 = R9[K[14]='MBBT_YESNO']
+    0048 [line  759] 0x000042A4  CLOSURE    R10 = PROTO[1]
+    0049 [line  759] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0050 [line  759] 0x00000000  MOVE       R0 = R0
+    0051 [line  759] 0x02000000  MOVE       R0 = R4
+    0052 [line  753] 0x0300415C  CALL       A=5 B=6 C=1
+    0053 [line  760] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0054 [line  760] 0x0100015E  RETURN     A=5 B=2 C=0
+    0055 [line  763] 0x02000140  MOVE       R5 = R4
+    0056 [line  763] 0x00000180  MOVE       R6 = R0
+    0057 [line  763] 0x0100015D  TAILCALL   A=5 B=2 C=0
+    0058 [line  763] 0x0000015E  RETURN     A=5 B=0 C=0
+    0059 [line  764] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 59
+    'hp': 4 -> 59
+    'task_interface': 22 -> 59
+    'taskView': 25 -> 59
+    'inner_call': 32 -> 59
+
+        ============================================================
+        PROTO ROOT.30.0
+        Offset : 0x6730
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 739 - 749
+        Params : 1
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'HasTask'
+        K[001] = 'CanFinishTask'
+        K[002] = 'BeginTaskAwardNPCAutomove'
+        K[003] = 'BeginTaskTargetAutomove'
+        K[004] = 'BeginTaskDeliverNPCAutomove'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  740] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0001 [line  740] 0x00C00046  GETTABLE   R1 = R1[K[0]='HasTask']
+        0002 [line  740] 0x00000080  MOVE       R2 = R0
+        0003 [line  740] 0x0100805C  CALL       A=1 B=2 C=2
+        0004 [line  740] 0x0000005A  TEST       A=1 B=0 C=0
+        0005 [line  740] 0x80044016  JMP        A=0 sBx=18
+        0006 [line  741] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0007 [line  741] 0x00C04046  GETTABLE   R1 = R1[K[1]='CanFinishTask']
+        0008 [line  741] 0x00000080  MOVE       R2 = R0
+        0009 [line  741] 0x0100805C  CALL       A=1 B=2 C=2
+        0010 [line  741] 0x0000005A  TEST       A=1 B=0 C=0
+        0011 [line  741] 0x80014016  JMP        A=0 sBx=6
+        0012 [line  742] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0013 [line  742] 0x00C08046  GETTABLE   R1 = R1[K[2]='BeginTaskAwardNPCAutomove']
+        0014 [line  742] 0x00000080  MOVE       R2 = R0
+        0015 [line  742] 0x0100005D  TAILCALL   A=1 B=2 C=0
+        0016 [line  742] 0x0000005E  RETURN     A=1 B=0 C=0
+        0017 [line  742] 0x80028016  JMP        A=0 sBx=11
+        0018 [line  744] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0019 [line  744] 0x00C0C046  GETTABLE   R1 = R1[K[3]='BeginTaskTargetAutomove']
+        0020 [line  744] 0x00000080  MOVE       R2 = R0
+        0021 [line  744] 0x0100005D  TAILCALL   A=1 B=2 C=0
+        0022 [line  744] 0x0000005E  RETURN     A=1 B=0 C=0
+        0023 [line  745] 0x80010016  JMP        A=0 sBx=5
+        0024 [line  747] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0025 [line  747] 0x00C10046  GETTABLE   R1 = R1[K[4]='BeginTaskDeliverNPCAutomove']
+        0026 [line  747] 0x00000080  MOVE       R2 = R0
+        0027 [line  747] 0x0100005D  TAILCALL   A=1 B=2 C=0
+        0028 [line  747] 0x0000005E  RETURN     A=1 B=0 C=0
+        0029 [line  749] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'taskId': 0 -> 29
+
+        ============================================================
+        PROTO ROOT.30.1
+        Offset : 0x68FE
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 753 - 759
+        Params : 2
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'MsgBoxRetT'
+        K[001] = 'MBRT_OK'
+        K[002] = 'GiveUpTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  754] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='MsgBoxRetT'
+        0001 [line  754] 0x01404086  GETTABLE   R2 = R2[K[1]='MBRT_OK']
+        0002 [line  754] 0x00808017  EQ         A=0 B=R1 C=R2
+        0003 [line  754] 0x80010016  JMP        A=0 sBx=5
+        0004 [line  755] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  755] 0x01408086  GETTABLE   R2 = R2[K[2]='GiveUpTask']
+        0006 [line  755] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0007 [line  755] 0x0100409C  CALL       A=2 B=2 C=1
+        0008 [line  755] 0x80008016  JMP        A=0 sBx=3
+        0009 [line  757] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0010 [line  757] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0011 [line  757] 0x0100409C  CALL       A=2 B=2 C=1
+        0012 [line  759] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        '_': 0 -> 12
+        'ret': 0 -> 12
+
+    ============================================================
+    PROTO ROOT.31
+    Offset : 0x6B9D
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 766 - 768
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'StringTable'
+    K[001] = 'Get'
+    K[002] = 4000.0
+    K[003] = ''
+
+    ----- INSTRUCTIONS -----
+    0000 [line  767] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='StringTable'
+    0001 [line  767] 0x00C04046  GETTABLE   R1 = R1[K[1]='Get']
+    0002 [line  767] 0x8100008C  ADD        A=2 B=K[2]=4000.0 C=R0
+    0003 [line  767] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  767] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line  767] 0x80000016  JMP        A=0 sBx=1
+    0006 [line  767] 0x0000C041  LOADK      R1 = K[3]=''
+    0007 [line  767] 0x0100005E  RETURN     A=1 B=2 C=0
+    0008 [line  768] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'errCode': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.32
+    Offset : 0x6C4A
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 771 - 795
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetTaskErrorDesc'
+    K[001] = 'require'
+    K[002] = 'Configs.ReputationDesc'
+    K[003] = 'TASK_PREREQU_FAIL_GROUPSTATE'
+    K[004] = 'TASK_PREREQU_FAIL_MUTEX_TASK'
+    K[005] = 'format'
+    K[006] = 'FormateTaskName'
+    K[007] = 'TASK_PREREQU_FAIL_BELOW_REPU'
+    K[008] = 'REPUID'
+    K[009] = 'FORCE'
+    K[010] = 'StringTable'
+    K[011] = 'Get'
+    K[012] = 4951.0
+    K[013] = 'DAY_DUKE'
+    K[014] = 4953.0
+    K[015] = 'KILLED_NIEN_SCORE'
+    K[016] = 'GetDesc'
+    K[017] = 'string'
+    K[018] = 4954.0
+    K[019] = 'name'
+    K[020] = 'EXP_TIME_LIMIT'
+    K[021] = 4078.0
+    K[022] = 'TASK_PREREQU_FAIL_NO_ITEM'
+    K[023] = 0.0
+    K[024] = 'Inventory.ECItemTools'
+    K[025] = 4952.0
+    K[026] = 'GetDefaultQualityName'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  772] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  772] 0x01400086  GETTABLE   R2 = R2[K[0]='GetTaskErrorDesc']
+    0002 [line  772] 0x000000C0  MOVE       R3 = R0
+    0003 [line  772] 0x0100809C  CALL       A=2 B=2 C=2
+    0004 [line  773] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='require'
+    0005 [line  773] 0x00008101  LOADK      R4 = K[2]='Configs.ReputationDesc'
+    0006 [line  773] 0x010080DC  CALL       A=3 B=2 C=2
+    0007 [line  774] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0008 [line  774] 0x0240C106  GETTABLE   R4 = R4[K[3]='TASK_PREREQU_FAIL_GROUPSTATE']
+    0009 [line  774] 0x00010057  EQ         A=1 B=R0 C=R4
+    0010 [line  774] 0x8000C016  JMP        A=0 sBx=4
+    0011 [line  774] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0012 [line  774] 0x02410106  GETTABLE   R4 = R4[K[4]='TASK_PREREQU_FAIL_MUTEX_TASK']
+    0013 [line  774] 0x00010017  EQ         A=0 B=R0 C=R4
+    0014 [line  774] 0x8001C016  JMP        A=0 sBx=8
+    0015 [line  775] 0x0141410B  SELF       A=4 B=2 C=261 Bx=1285
+    0016 [line  775] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0017 [line  775] 0x03418186  GETTABLE   R6 = R6[K[6]='FormateTaskName']
+    0018 [line  775] 0x008001C0  MOVE       R7 = R1
+    0019 [line  775] 0x0100019C  CALL       A=6 B=2 C=0
+    0020 [line  775] 0x0000011D  TAILCALL   A=4 B=0 C=0
+    0021 [line  775] 0x0000011E  RETURN     A=4 B=0 C=0
+    0022 [line  775] 0x80114016  JMP        A=0 sBx=70
+    0023 [line  776] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0024 [line  776] 0x0241C106  GETTABLE   R4 = R4[K[7]='TASK_PREREQU_FAIL_BELOW_REPU']
+    0025 [line  776] 0x00010017  EQ         A=0 B=R0 C=R4
+    0026 [line  776] 0x800B8016  JMP        A=0 sBx=47
+    0027 [line  777] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='REPUID'
+    0028 [line  777] 0x02424106  GETTABLE   R4 = R4[K[9]='FORCE']
+    0029 [line  777] 0x00810017  EQ         A=0 B=R1 C=R4
+    0030 [line  777] 0x80014016  JMP        A=0 sBx=6
+    0031 [line  778] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='StringTable'
+    0032 [line  778] 0x0242C106  GETTABLE   R4 = R4[K[11]='Get']
+    0033 [line  778] 0x00030141  LOADK      R5 = K[12]=4951.0
+    0034 [line  778] 0x0100011D  TAILCALL   A=4 B=2 C=0
+    0035 [line  778] 0x0000011E  RETURN     A=4 B=0 C=0
+    0036 [line  778] 0x800DC016  JMP        A=0 sBx=56
+    0037 [line  779] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='REPUID'
+    0038 [line  779] 0x02434106  GETTABLE   R4 = R4[K[13]='DAY_DUKE']
+    0039 [line  779] 0x00810017  EQ         A=0 B=R1 C=R4
+    0040 [line  779] 0x80014016  JMP        A=0 sBx=6
+    0041 [line  780] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='StringTable'
+    0042 [line  780] 0x0242C106  GETTABLE   R4 = R4[K[11]='Get']
+    0043 [line  780] 0x00038141  LOADK      R5 = K[14]=4953.0
+    0044 [line  780] 0x0100011D  TAILCALL   A=4 B=2 C=0
+    0045 [line  780] 0x0000011E  RETURN     A=4 B=0 C=0
+    0046 [line  780] 0x800B4016  JMP        A=0 sBx=46
+    0047 [line  781] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='REPUID'
+    0048 [line  781] 0x0243C106  GETTABLE   R4 = R4[K[15]='KILLED_NIEN_SCORE']
+    0049 [line  781] 0x00810017  EQ         A=0 B=R1 C=R4
+    0050 [line  781] 0x80030016  JMP        A=0 sBx=13
+    0051 [line  782] 0x01C40106  GETTABLE   R4 = R3[K[16]='GetDesc']
+    0052 [line  782] 0x00800140  MOVE       R5 = R1
+    0053 [line  782] 0x0100811C  CALL       A=4 B=2 C=2
+    0054 [line  783] 0x00044145  GETGLOBAL  R5 = GLOBAL K[17]='string'
+    0055 [line  783] 0x02C14146  GETTABLE   R5 = R5[K[5]='format']
+    0056 [line  783] 0x00028185  GETGLOBAL  R6 = GLOBAL K[10]='StringTable'
+    0057 [line  783] 0x0342C186  GETTABLE   R6 = R6[K[11]='Get']
+    0058 [line  783] 0x000481C1  LOADK      R7 = K[18]=4954.0
+    0059 [line  783] 0x0100819C  CALL       A=6 B=2 C=2
+    0060 [line  783] 0x0244C1C6  GETTABLE   R7 = R4[K[19]='name']
+    0061 [line  783] 0x0180015D  TAILCALL   A=5 B=3 C=0
+    0062 [line  783] 0x0000015E  RETURN     A=5 B=0 C=0
+    0063 [line  783] 0x80070016  JMP        A=0 sBx=29
+    0064 [line  784] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='REPUID'
+    0065 [line  784] 0x02450106  GETTABLE   R4 = R4[K[20]='EXP_TIME_LIMIT']
+    0066 [line  784] 0x00810017  EQ         A=0 B=R1 C=R4
+    0067 [line  784] 0x80060016  JMP        A=0 sBx=25
+    0068 [line  785] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='StringTable'
+    0069 [line  785] 0x0242C106  GETTABLE   R4 = R4[K[11]='Get']
+    0070 [line  785] 0x00054141  LOADK      R5 = K[21]=4078.0
+    0071 [line  785] 0x0100011D  TAILCALL   A=4 B=2 C=0
+    0072 [line  785] 0x0000011E  RETURN     A=4 B=0 C=0
+    0073 [line  786] 0x80048016  JMP        A=0 sBx=19
+    0074 [line  787] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0075 [line  787] 0x02458106  GETTABLE   R4 = R4[K[22]='TASK_PREREQU_FAIL_NO_ITEM']
+    0076 [line  787] 0x00010017  EQ         A=0 B=R0 C=R4
+    0077 [line  787] 0x80038016  JMP        A=0 sBx=15
+    0078 [line  788] 0x00C5C057  EQ         A=1 B=R1 C=K[23]=0.0
+    0079 [line  788] 0x80030016  JMP        A=0 sBx=13
+    0080 [line  789] 0x00004105  GETGLOBAL  R4 = GLOBAL K[1]='require'
+    0081 [line  789] 0x00060141  LOADK      R5 = K[24]='Inventory.ECItemTools'
+    0082 [line  789] 0x0100811C  CALL       A=4 B=2 C=2
+    0083 [line  790] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='StringTable'
+    0084 [line  790] 0x02C2C146  GETTABLE   R5 = R5[K[11]='Get']
+    0085 [line  790] 0x00064181  LOADK      R6 = K[25]=4952.0
+    0086 [line  790] 0x0100815C  CALL       A=5 B=2 C=2
+    0087 [line  790] 0x02C1414B  SELF       A=5 B=5 C=261 Bx=2821
+    0088 [line  790] 0x024681C6  GETTABLE   R7 = R4[K[26]='GetDefaultQualityName']
+    0089 [line  790] 0x00800200  MOVE       R8 = R1
+    0090 [line  790] 0x010001DC  CALL       A=7 B=2 C=0
+    0091 [line  790] 0x0000015D  TAILCALL   A=5 B=0 C=0
+    0092 [line  790] 0x0000015E  RETURN     A=5 B=0 C=0
+    0093 [line  794] 0x0100009E  RETURN     A=2 B=2 C=0
+    0094 [line  795] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'errCode': 0 -> 94
+    'errParam': 0 -> 94
+    'basicDesc': 4 -> 94
+    'ReputationDesc': 7 -> 94
+    'repuDesc': 54 -> 63
+    'ECItemTools': 83 -> 93
+
+    ============================================================
+    PROTO ROOT.33
+    Offset : 0x71F3
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 802 - 804
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'AcceptTaskEx'
+    K[001] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  803] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  803] 0x00C00046  GETTABLE   R1 = R1[K[0]='AcceptTaskEx']
+    0002 [line  803] 0x00000080  MOVE       R2 = R0
+    0003 [line  803] 0x000040C1  LOADK      R3 = K[1]=-1.0
+    0004 [line  803] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0005 [line  803] 0x0200005D  TAILCALL   A=1 B=4 C=0
+    0006 [line  803] 0x0000005E  RETURN     A=1 B=0 C=0
+    0007 [line  804] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.34
+    Offset : 0x729B
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 806 - 821
+    Params : 3
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'CanDeliverTask'
+    K[001] = 0.0
+    K[002] = 'Instance'
+    K[003] = 'AcceptTaskEx'
+    K[004] = 'print'
+    K[005] = 'AcceptTaskEx failed: '
+    K[006] = 'GetTaskErrorDescEx'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 4901.0
+    K[010] = 'FlashTipMan'
+    K[011] = 'FlashTip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  807] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  807] 0x01C000C6  GETTABLE   R3 = R3[K[0]='CanDeliverTask']
+    0002 [line  807] 0x00000100  MOVE       R4 = R0
+    0003 [line  807] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0004 [line  808] 0x01C04017  EQ         A=0 B=R3 C=K[1]=0.0
+    0005 [line  808] 0x80028016  JMP        A=0 sBx=11
+    0006 [line  809] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0007 [line  809] 0x02C08146  GETTABLE   R5 = R5[K[2]='Instance']
+    0008 [line  809] 0x0080815C  CALL       A=5 B=1 C=2
+    0009 [line  809] 0x02C0C14B  SELF       A=5 B=5 C=259 Bx=2819
+    0010 [line  809] 0x000001C0  MOVE       R7 = R0
+    0011 [line  809] 0x00800200  MOVE       R8 = R1
+    0012 [line  809] 0x01000240  MOVE       R9 = R2
+    0013 [line  809] 0x0280415C  CALL       A=5 B=5 C=1
+    0014 [line  810] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0015 [line  810] 0x0100015E  RETURN     A=5 B=2 C=0
+    0016 [line  810] 0x80058016  JMP        A=0 sBx=23
+    0017 [line  812] 0x00010145  GETGLOBAL  R5 = GLOBAL K[4]='print'
+    0018 [line  812] 0x00014181  LOADK      R6 = K[5]='AcceptTaskEx failed: '
+    0019 [line  812] 0x018001C0  MOVE       R7 = R3
+    0020 [line  812] 0x0180415C  CALL       A=5 B=3 C=1
+    0021 [line  813] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0022 [line  813] 0x02C18146  GETTABLE   R5 = R5[K[6]='GetTaskErrorDescEx']
+    0023 [line  813] 0x01800180  MOVE       R6 = R3
+    0024 [line  813] 0x020001C0  MOVE       R7 = R4
+    0025 [line  813] 0x0180815C  CALL       A=5 B=3 C=2
+    0026 [line  814] 0x02800194  LEN        A=6 B=5 C=0 Bx=2560
+    0027 [line  814] 0x03404017  EQ         A=0 B=R6 C=K[1]=0.0
+    0028 [line  814] 0x80010016  JMP        A=0 sBx=5
+    0029 [line  815] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='StringTable'
+    0030 [line  815] 0x03420186  GETTABLE   R6 = R6[K[8]='Get']
+    0031 [line  815] 0x000241C1  LOADK      R7 = K[9]=4901.0
+    0032 [line  815] 0x0100819C  CALL       A=6 B=2 C=2
+    0033 [line  815] 0x03000140  MOVE       R5 = R6
+    0034 [line  817] 0x00028185  GETGLOBAL  R6 = GLOBAL K[10]='FlashTipMan'
+    0035 [line  817] 0x0342C186  GETTABLE   R6 = R6[K[11]='FlashTip']
+    0036 [line  817] 0x028001C0  MOVE       R7 = R5
+    0037 [line  817] 0x0100419C  CALL       A=6 B=2 C=1
+    0038 [line  819] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0039 [line  819] 0x0100019E  RETURN     A=6 B=2 C=0
+    0040 [line  821] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 40
+    'storage_index': 0 -> 40
+    'bSelfServe': 0 -> 40
+    'errCode': 4 -> 40
+    'errParam': 4 -> 40
+    'msg': 26 -> 40
+
+    ============================================================
+    PROTO ROOT.35
+    Offset : 0x756B
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 826 - 828
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'FinishTaskEx'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  827] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  827] 0x01400086  GETTABLE   R2 = R2[K[0]='FinishTaskEx']
+    0002 [line  827] 0x000000C0  MOVE       R3 = R0
+    0003 [line  827] 0x00800100  MOVE       R4 = R1
+    0004 [line  827] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0005 [line  827] 0x0200009D  TAILCALL   A=2 B=4 C=0
+    0006 [line  827] 0x0000009E  RETURN     A=2 B=0 C=0
+    0007 [line  828] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 7
+    'selectItemIndex': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.36
+    Offset : 0x7626
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 830 - 845
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'SkillHdl'
+    K[003] = 'UnselectTarget'
+    K[004] = 'FinishTaskEx'
+    K[005] = 'print'
+    K[006] = 'FinishTaskEx failed: '
+    K[007] = 'GetTaskErrorDesc'
+    K[008] = 0.0
+    K[009] = 'StringTable'
+    K[010] = 'Get'
+    K[011] = 4901.0
+    K[012] = 'FlashTipMan'
+    K[013] = 'FlashTip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  831] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  831] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+    0002 [line  831] 0x008080DC  CALL       A=3 B=1 C=2
+    0003 [line  831] 0x01C040C6  GETTABLE   R3 = R3[K[1]='m_HostPlayer']
+    0004 [line  831] 0x01C080C6  GETTABLE   R3 = R3[K[2]='SkillHdl']
+    0005 [line  831] 0x01C0C0CB  SELF       A=3 B=3 C=259 Bx=1795
+    0006 [line  831] 0x010040DC  CALL       A=3 B=2 C=1
+    0007 [line  832] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0008 [line  832] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+    0009 [line  832] 0x008080DC  CALL       A=3 B=1 C=2
+    0010 [line  832] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+    0011 [line  832] 0x00000140  MOVE       R5 = R0
+    0012 [line  832] 0x00800180  MOVE       R6 = R1
+    0013 [line  832] 0x010001C0  MOVE       R7 = R2
+    0014 [line  832] 0x0280C0DC  CALL       A=3 B=5 C=3
+    0015 [line  833] 0x000000DA  TEST       A=3 B=0 C=0
+    0016 [line  833] 0x80008016  JMP        A=0 sBx=3
+    0017 [line  834] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0018 [line  834] 0x0100015E  RETURN     A=5 B=2 C=0
+    0019 [line  834] 0x80054016  JMP        A=0 sBx=22
+    0020 [line  836] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='print'
+    0021 [line  836] 0x00018181  LOADK      R6 = K[6]='FinishTaskEx failed: '
+    0022 [line  836] 0x020001C0  MOVE       R7 = R4
+    0023 [line  836] 0x0180415C  CALL       A=5 B=3 C=1
+    0024 [line  837] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0025 [line  837] 0x02C1C146  GETTABLE   R5 = R5[K[7]='GetTaskErrorDesc']
+    0026 [line  837] 0x02000180  MOVE       R6 = R4
+    0027 [line  837] 0x0100815C  CALL       A=5 B=2 C=2
+    0028 [line  838] 0x02800194  LEN        A=6 B=5 C=0 Bx=2560
+    0029 [line  838] 0x03420017  EQ         A=0 B=R6 C=K[8]=0.0
+    0030 [line  838] 0x80010016  JMP        A=0 sBx=5
+    0031 [line  839] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='StringTable'
+    0032 [line  839] 0x03428186  GETTABLE   R6 = R6[K[10]='Get']
+    0033 [line  839] 0x0002C1C1  LOADK      R7 = K[11]=4901.0
+    0034 [line  839] 0x0100819C  CALL       A=6 B=2 C=2
+    0035 [line  839] 0x03000140  MOVE       R5 = R6
+    0036 [line  841] 0x00030185  GETGLOBAL  R6 = GLOBAL K[12]='FlashTipMan'
+    0037 [line  841] 0x03434186  GETTABLE   R6 = R6[K[13]='FlashTip']
+    0038 [line  841] 0x028001C0  MOVE       R7 = R5
+    0039 [line  841] 0x0100419C  CALL       A=6 B=2 C=1
+    0040 [line  843] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0041 [line  843] 0x0100019E  RETURN     A=6 B=2 C=0
+    0042 [line  845] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 42
+    'selectItemIndex': 0 -> 42
+    'bSelfServe': 0 -> 42
+    'bRet': 15 -> 42
+    'errCode': 15 -> 42
+    'msg': 28 -> 42
+
+    ============================================================
+    PROTO ROOT.37
+    Offset : 0x792D
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 850 - 865
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'CanDeliverTask'
+    K[001] = 0.0
+    K[002] = 'task'
+    K[003] = 'TaskInterface_ManualDeliverTask'
+    K[004] = 'print'
+    K[005] = 'ManualAcceptTask failed: '
+    K[006] = 'GetTaskErrorDescEx'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 4901.0
+    K[010] = 'FlashTipMan'
+    K[011] = 'FlashTip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  851] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  851] 0x00C00046  GETTABLE   R1 = R1[K[0]='CanDeliverTask']
+    0002 [line  851] 0x00000080  MOVE       R2 = R0
+    0003 [line  851] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  852] 0x00C04017  EQ         A=0 B=R1 C=K[1]=0.0
+    0005 [line  852] 0x80018016  JMP        A=0 sBx=7
+    0006 [line  853] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='task'
+    0007 [line  853] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='TaskInterface_ManualDeliverTask']
+    0008 [line  853] 0x00000100  MOVE       R4 = R0
+    0009 [line  853] 0x010040DC  CALL       A=3 B=2 C=1
+    0010 [line  854] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0011 [line  854] 0x010000DE  RETURN     A=3 B=2 C=0
+    0012 [line  854] 0x80058016  JMP        A=0 sBx=23
+    0013 [line  856] 0x000100C5  GETGLOBAL  R3 = GLOBAL K[4]='print'
+    0014 [line  856] 0x00014101  LOADK      R4 = K[5]='ManualAcceptTask failed: '
+    0015 [line  856] 0x00800140  MOVE       R5 = R1
+    0016 [line  856] 0x018040DC  CALL       A=3 B=3 C=1
+    0017 [line  857] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0018 [line  857] 0x01C180C6  GETTABLE   R3 = R3[K[6]='GetTaskErrorDescEx']
+    0019 [line  857] 0x00800100  MOVE       R4 = R1
+    0020 [line  857] 0x01000140  MOVE       R5 = R2
+    0021 [line  857] 0x018080DC  CALL       A=3 B=3 C=2
+    0022 [line  858] 0x01800114  LEN        A=4 B=3 C=0 Bx=1536
+    0023 [line  858] 0x02404017  EQ         A=0 B=R4 C=K[1]=0.0
+    0024 [line  858] 0x80010016  JMP        A=0 sBx=5
+    0025 [line  859] 0x0001C105  GETGLOBAL  R4 = GLOBAL K[7]='StringTable'
+    0026 [line  859] 0x02420106  GETTABLE   R4 = R4[K[8]='Get']
+    0027 [line  859] 0x00024141  LOADK      R5 = K[9]=4901.0
+    0028 [line  859] 0x0100811C  CALL       A=4 B=2 C=2
+    0029 [line  859] 0x020000C0  MOVE       R3 = R4
+    0030 [line  861] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='FlashTipMan'
+    0031 [line  861] 0x0242C106  GETTABLE   R4 = R4[K[11]='FlashTip']
+    0032 [line  861] 0x01800140  MOVE       R5 = R3
+    0033 [line  861] 0x0100411C  CALL       A=4 B=2 C=1
+    0034 [line  863] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0035 [line  863] 0x0100011E  RETURN     A=4 B=2 C=0
+    0036 [line  865] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 36
+    'errCode': 4 -> 36
+    'errParam': 4 -> 36
+    'msg': 22 -> 36
+
+    ============================================================
+    PROTO ROOT.38
+    Offset : 0x7BBF
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 870 - 882
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'ManualFinishTask'
+    K[002] = 'print'
+    K[003] = 'ManualFinishTask failed: '
+    K[004] = 'GetTaskErrorDesc'
+    K[005] = 'StringTable'
+    K[006] = 'Get'
+    K[007] = 4902.0
+    K[008] = 0.0
+    K[009] = 'FlashTipMan'
+    K[010] = 'FlashTip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  871] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  871] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  871] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  871] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0004 [line  871] 0x000000C0  MOVE       R3 = R0
+    0005 [line  871] 0x0180C05C  CALL       A=1 B=3 C=3
+    0006 [line  872] 0x0000005A  TEST       A=1 B=0 C=0
+    0007 [line  872] 0x80008016  JMP        A=0 sBx=3
+    0008 [line  873] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0009 [line  873] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  873] 0x80058016  JMP        A=0 sBx=23
+    0011 [line  875] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='print'
+    0012 [line  875] 0x0000C101  LOADK      R4 = K[3]='ManualFinishTask failed: '
+    0013 [line  875] 0x01000140  MOVE       R5 = R2
+    0014 [line  875] 0x018040DC  CALL       A=3 B=3 C=1
+    0015 [line  876] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0016 [line  876] 0x01C100C6  GETTABLE   R3 = R3[K[4]='GetTaskErrorDesc']
+    0017 [line  876] 0x01000100  MOVE       R4 = R2
+    0018 [line  876] 0x010080DC  CALL       A=3 B=2 C=2
+    0019 [line  876] 0x000040DA  TEST       A=3 B=0 C=1
+    0020 [line  876] 0x8000C016  JMP        A=0 sBx=4
+    0021 [line  876] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='StringTable'
+    0022 [line  876] 0x01C180C6  GETTABLE   R3 = R3[K[6]='Get']
+    0023 [line  876] 0x0001C101  LOADK      R4 = K[7]=4902.0
+    0024 [line  876] 0x010080DC  CALL       A=3 B=2 C=2
+    0025 [line  877] 0x01800114  LEN        A=4 B=3 C=0 Bx=1536
+    0026 [line  877] 0x84010018  LT         A=0 B=K[8]=0.0 C=R4
+    0027 [line  877] 0x8000C016  JMP        A=0 sBx=4
+    0028 [line  878] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='FlashTipMan'
+    0029 [line  878] 0x02428106  GETTABLE   R4 = R4[K[10]='FlashTip']
+    0030 [line  878] 0x01800140  MOVE       R5 = R3
+    0031 [line  878] 0x0100411C  CALL       A=4 B=2 C=1
+    0032 [line  880] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0033 [line  880] 0x0100011E  RETURN     A=4 B=2 C=0
+    0034 [line  882] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 34
+    'bRet': 6 -> 34
+    'errCode': 6 -> 34
+    'msg': 25 -> 34
+
+    ============================================================
+    PROTO ROOT.39
+    Offset : 0x7E1C
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 887 - 906
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'HasTask'
+    K[001] = 'ManualAcceptTask'
+    K[002] = 'EventManager'
+    K[003] = 'addHandlerWithCleaner'
+    K[004] = 'SimpleNotifyEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  890] 0x000000A4  CLOSURE    R2 = PROTO[0]
+    0001 [line  890] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0002 [line  890] 0x00000000  MOVE       R0 = R0
+    0003 [line  892] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line  892] 0x01C000C6  GETTABLE   R3 = R3[K[0]='HasTask']
+    0005 [line  892] 0x00000100  MOVE       R4 = R0
+    0006 [line  892] 0x010080DC  CALL       A=3 B=2 C=2
+    0007 [line  892] 0x000000DA  TEST       A=3 B=0 C=0
+    0008 [line  892] 0x80008016  JMP        A=0 sBx=3
+    0009 [line  893] 0x010000C0  MOVE       R3 = R2
+    0010 [line  893] 0x008040DC  CALL       A=3 B=1 C=1
+    0011 [line  893] 0x8004C016  JMP        A=0 sBx=20
+    0012 [line  895] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0013 [line  895] 0x01C040C6  GETTABLE   R3 = R3[K[1]='ManualAcceptTask']
+    0014 [line  895] 0x00000100  MOVE       R4 = R0
+    0015 [line  895] 0x010040DC  CALL       A=3 B=2 C=1
+    0016 [line  902] 0x000040E4  CLOSURE    R3 = PROTO[1]
+    0017 [line  902] 0x00000000  MOVE       R0 = R0
+    0018 [line  902] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0019 [line  902] 0x01000000  MOVE       R0 = R2
+    0020 [line  902] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0021 [line  902] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+    0022 [line  902] 0x01800000  MOVE       R0 = R3
+    0023 [line  904] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+    0024 [line  904] 0x02408106  GETTABLE   R4 = R4[K[2]='EventManager']
+    0025 [line  904] 0x0240C10B  SELF       A=4 B=4 C=259 Bx=2307
+    0026 [line  904] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+    0027 [line  904] 0x03410186  GETTABLE   R6 = R6[K[4]='SimpleNotifyEvent']
+    0028 [line  904] 0x018001C0  MOVE       R7 = R3
+    0029 [line  904] 0x00800200  MOVE       R8 = R1
+    0030 [line  904] 0x0280411C  CALL       A=4 B=5 C=1
+    0031 [line  904] 0x000000E3  CLOSE      A=3 B=0 C=0 Bx=0
+    0032 [line  906] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 32
+    'cleaner': 0 -> 32
+    'afterReceiveTask': 3 -> 32
+    'onReceiveTask': 23 -> 31
+
+        ============================================================
+        PROTO ROOT.39.0
+        Offset : 0x7F23
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 888 - 890
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'ManualFinishTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  889] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  889] 0x00400006  GETTABLE   R0 = R0[K[0]='ManualFinishTask']
+        0002 [line  889] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0003 [line  889] 0x0100801C  CALL       A=0 B=2 C=2
+        0004 [line  890] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'ret': 4 -> 4
+
+        ============================================================
+        PROTO ROOT.39.1
+        Offset : 0x7FB6
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 897 - 902
+        Params : 2
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'taskId'
+        K[001] = 'notifyType'
+        K[002] = 'TASK_SERVER_NOTIFY'
+        K[003] = 'TASK_SVR_NOTIFY_NEW'
+        K[004] = 'EventManager'
+        K[005] = 'removeHandler'
+        K[006] = 'SimpleNotifyEvent'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  898] 0x00C00086  GETTABLE   R2 = R1[K[0]='taskId']
+        0001 [line  898] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0002 [line  898] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0003 [line  898] 0x80038016  JMP        A=0 sBx=15
+        0004 [line  898] 0x00C04086  GETTABLE   R2 = R1[K[1]='notifyType']
+        0005 [line  898] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0006 [line  898] 0x01C080C6  GETTABLE   R3 = R3[K[2]='TASK_SERVER_NOTIFY']
+        0007 [line  898] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='TASK_SVR_NOTIFY_NEW']
+        0008 [line  898] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0009 [line  898] 0x80020016  JMP        A=0 sBx=9
+        0010 [line  899] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+        0011 [line  899] 0x0080409C  CALL       A=2 B=1 C=1
+        0012 [line  900] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+        0013 [line  900] 0x01410086  GETTABLE   R2 = R2[K[4]='EventManager']
+        0014 [line  900] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+        0015 [line  900] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+        0016 [line  900] 0x02418106  GETTABLE   R4 = R4[K[6]='SimpleNotifyEvent']
+        0017 [line  900] 0x02800144  GETUPVAL   A=5 B=5 C=0 Bx=2560
+        0018 [line  900] 0x0200409C  CALL       A=2 B=4 C=1
+        0019 [line  902] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 19
+        'event': 0 -> 19
+
+    ============================================================
+    PROTO ROOT.40
+    Offset : 0x82C2
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 909 - 914
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 4.0
+    K[001] = 'getConfig'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  910] 0x00000001  LOADK      R0 = K[0]=4.0
+    0001 [line  912] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0002 [line  912] 0x00C04046  GETTABLE   R1 = R1[K[1]='getConfig']
+    0003 [line  912] 0x00000080  MOVE       R2 = R0
+    0004 [line  912] 0x0100805C  CALL       A=1 B=2 C=2
+    0005 [line  913] 0x0100005E  RETURN     A=1 B=2 C=0
+    0006 [line  914] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'configId': 1 -> 6
+    'ret': 5 -> 6
+
+    ============================================================
+    PROTO ROOT.41
+    Offset : 0x836F
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 917 - 924
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetStorageAllConfig'
+    K[001] = 0.0
+    K[002] = 'each_lib'
+    K[003] = 'len'
+    K[004] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  918] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  918] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetStorageAllConfig']
+    0002 [line  918] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  919] 0x00404058  LT         A=1 B=R0 C=K[1]=0.0
+    0004 [line  919] 0x8000C016  JMP        A=0 sBx=4
+    0005 [line  919] 0x00C08086  GETTABLE   R2 = R1[K[2]='each_lib']
+    0006 [line  919] 0x0140C086  GETTABLE   R2 = R2[K[3]='len']
+    0007 [line  919] 0x01000019  LE         A=0 B=R2 C=R0
+    0008 [line  919] 0x80004016  JMP        A=0 sBx=2
+    0009 [line  920] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0010 [line  920] 0x0100009E  RETURN     A=2 B=2 C=0
+    0011 [line  923] 0x00C08086  GETTABLE   R2 = R1[K[2]='each_lib']
+    0012 [line  923] 0x004100CC  ADD        A=3 B=R0 C=K[4]=1.0
+    0013 [line  923] 0x0100C086  GETTABLE   R2 = R2[R3]
+    0014 [line  923] 0x0100009E  RETURN     A=2 B=2 C=0
+    0015 [line  924] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'storageIndex': 0 -> 15
+    'cfg': 3 -> 15
+
+    ============================================================
+    PROTO ROOT.42
+    Offset : 0x8494
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 926 - 939
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getData'
+    K[001] = 'NPC_ESSENCE'
+    K[002] = 'task'
+    K[003] = 'Task_GetTaskStorageIndex'
+    K[004] = 0.0
+    K[005] = 'NPC_TASK_OUT_SERVICE'
+    K[006] = 'id_task_out_service'
+    K[007] = 'id_task_set'
+    K[008] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  927] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  927] 0x01400086  GETTABLE   R2 = R2[K[0]='getData']
+    0002 [line  927] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0003 [line  927] 0x01C040C6  GETTABLE   R3 = R3[K[1]='NPC_ESSENCE']
+    0004 [line  927] 0x00800100  MOVE       R4 = R1
+    0005 [line  927] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line  928] 0x0000409A  TEST       A=2 B=0 C=1
+    0007 [line  928] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  929] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  929] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  932] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='task'
+    0011 [line  932] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='Task_GetTaskStorageIndex']
+    0012 [line  932] 0x00000100  MOVE       R4 = R0
+    0013 [line  932] 0x010080DC  CALL       A=3 B=2 C=2
+    0014 [line  933] 0x01C10018  LT         A=0 B=R3 C=K[4]=0.0
+    0015 [line  933] 0x80004016  JMP        A=0 sBx=2
+    0016 [line  934] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0017 [line  934] 0x0100011E  RETURN     A=4 B=2 C=0
+    0018 [line  937] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0019 [line  937] 0x02400106  GETTABLE   R4 = R4[K[0]='getData']
+    0020 [line  937] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0021 [line  937] 0x02C14146  GETTABLE   R5 = R5[K[5]='NPC_TASK_OUT_SERVICE']
+    0022 [line  937] 0x01418186  GETTABLE   R6 = R2[K[6]='id_task_out_service']
+    0023 [line  937] 0x0180811C  CALL       A=4 B=3 C=2
+    0024 [line  938] 0x0241C146  GETTABLE   R5 = R4[K[7]='id_task_set']
+    0025 [line  938] 0x01C2018C  ADD        A=6 B=R3 C=K[8]=1.0
+    0026 [line  938] 0x02818057  EQ         A=1 B=R5 C=R6
+    0027 [line  938] 0x80000016  JMP        A=0 sBx=1
+    0028 [line  938] 0x00004142  LOADBOOL   A=5 B=0 C=1
+    0029 [line  938] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0030 [line  938] 0x0100015E  RETURN     A=5 B=2 C=0
+    0031 [line  939] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 31
+    'npcTid': 0 -> 31
+    'npc_ess': 6 -> 31
+    'storageIndex': 14 -> 31
+    'task_out': 24 -> 31
+
+    ============================================================
+    PROTO ROOT.43
+    Offset : 0x86DD
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 946 - 956
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'HasTask'
+    K[001] = 'CanFinishTask'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  947] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  947] 0x01400086  GETTABLE   R2 = R2[K[0]='HasTask']
+    0002 [line  947] 0x000000C0  MOVE       R3 = R0
+    0003 [line  947] 0x0100809C  CALL       A=2 B=2 C=2
+    0004 [line  947] 0x0000409A  TEST       A=2 B=0 C=1
+    0005 [line  947] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  948] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0007 [line  948] 0x0100009E  RETURN     A=2 B=2 C=0
+    0008 [line  951] 0x0000405A  TEST       A=1 B=0 C=1
+    0009 [line  951] 0x8001C016  JMP        A=0 sBx=8
+    0010 [line  951] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0011 [line  951] 0x01404086  GETTABLE   R2 = R2[K[1]='CanFinishTask']
+    0012 [line  951] 0x000000C0  MOVE       R3 = R0
+    0013 [line  951] 0x0100809C  CALL       A=2 B=2 C=2
+    0014 [line  951] 0x0000009A  TEST       A=2 B=0 C=0
+    0015 [line  951] 0x80004016  JMP        A=0 sBx=2
+    0016 [line  952] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0017 [line  952] 0x0100009E  RETURN     A=2 B=2 C=0
+    0018 [line  955] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0019 [line  955] 0x0100009E  RETURN     A=2 B=2 C=0
+    0020 [line  956] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 20
+    'bTickWhenCanFinish': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.44
+    Offset : 0x8813
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 962 - 980
+    Params : 4
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'stopTaskTick'
+    K[001] = 'AddGlobalTimerWithCleaner'
+    K[002] = 'require'
+    K[003] = 'Event.TaskEvents'
+    K[004] = 'SimpleNotifyEvent'
+    K[005] = 'EventManager'
+    K[006] = 'addHandler'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  963] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line  963] 0x02400106  GETTABLE   R4 = R4[K[0]='stopTaskTick']
+    0002 [line  963] 0x00000140  MOVE       R5 = R0
+    0003 [line  963] 0x0100411C  CALL       A=4 B=2 C=1
+    0004 [line  965] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0005 [line  965] 0x00000140  MOVE       R5 = R0
+    0006 [line  965] 0x01800180  MOVE       R6 = R3
+    0007 [line  965] 0x0180811C  CALL       A=4 B=3 C=2
+    0008 [line  965] 0x0000011A  TEST       A=4 B=0 C=0
+    0009 [line  965] 0x8006C016  JMP        A=0 sBx=28
+    0010 [line  966] 0x00800100  MOVE       R4 = R1
+    0011 [line  966] 0x0080411C  CALL       A=4 B=1 C=1
+    0012 [line  967] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0013 [line  967] 0x0080811C  CALL       A=4 B=1 C=2
+    0014 [line  968] 0x00004145  GETGLOBAL  R5 = GLOBAL K[1]='AddGlobalTimerWithCleaner'
+    0015 [line  968] 0x01000180  MOVE       R6 = R2
+    0016 [line  968] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0017 [line  968] 0x00800200  MOVE       R8 = R1
+    0018 [line  968] 0x02000240  MOVE       R9 = R4
+    0019 [line  968] 0x0280415C  CALL       A=5 B=5 C=1
+    0020 [line  970] 0x01800144  GETUPVAL   A=5 B=3 C=0 Bx=1536
+    0021 [line  970] 0x00010149  SETTABLE   R5[R0] = R4
+    0022 [line  972] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='require'
+    0023 [line  972] 0x0000C181  LOADK      R6 = K[3]='Event.TaskEvents'
+    0024 [line  972] 0x0100815C  CALL       A=5 B=2 C=2
+    0025 [line  972] 0x02C10146  GETTABLE   R5 = R5[K[4]='SimpleNotifyEvent']
+    0026 [line  973] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+    0027 [line  973] 0x03414186  GETTABLE   R6 = R6[K[5]='EventManager']
+    0028 [line  973] 0x0341818B  SELF       A=6 B=6 C=262 Bx=3334
+    0029 [line  973] 0x02800200  MOVE       R8 = R5
+    0030 [line  978] 0x00000264  CLOSURE    R9 = PROTO[0]
+    0031 [line  978] 0x00000000  MOVE       R0 = R0
+    0032 [line  978] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0033 [line  978] 0x01800000  MOVE       R0 = R3
+    0034 [line  978] 0x02000000  MOVE       R0 = R4
+    0035 [line  978] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0036 [line  973] 0x0200419C  CALL       A=6 B=4 C=1
+    0037 [line  978] 0x00000123  CLOSE      A=4 B=0 C=0 Bx=0
+    0038 [line  980] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 38
+    'tickFunc': 0 -> 38
+    'intervalTime': 0 -> 38
+    'bTickWhenCanFinish': 0 -> 38
+    'cleaner': 14 -> 37
+    'SimpleNotifyEvent': 26 -> 37
+
+        ============================================================
+        PROTO ROOT.44.0
+        Offset : 0x8958
+        Source : '@lua\\task\\ectaskutility.lua'
+        Lines  : 973 - 978
+        Params : 2
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'taskId'
+        K[001] = 'dispose'
+        K[002] = None
+
+        ----- INSTRUCTIONS -----
+        0000 [line  974] 0x00C00086  GETTABLE   R2 = R1[K[0]='taskId']
+        0001 [line  974] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0002 [line  974] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0003 [line  974] 0x8002C016  JMP        A=0 sBx=12
+        0004 [line  974] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0005 [line  974] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0006 [line  974] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+        0007 [line  974] 0x0180809C  CALL       A=2 B=3 C=2
+        0008 [line  974] 0x0000409A  TEST       A=2 B=0 C=1
+        0009 [line  974] 0x80014016  JMP        A=0 sBx=6
+        0010 [line  975] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+        0011 [line  975] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+        0012 [line  975] 0x0100409C  CALL       A=2 B=2 C=1
+        0013 [line  976] 0x02000084  GETUPVAL   A=2 B=4 C=0 Bx=2048
+        0014 [line  976] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0015 [line  976] 0x01C08089  SETTABLE   R2[R3] = K[2]=None
+        0016 [line  978] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'sender': 0 -> 16
+        'event': 0 -> 16
+
+    ============================================================
+    PROTO ROOT.45
+    Offset : 0x8C26
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 985 - 991
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'dispose'
+    K[001] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line  986] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  986] 0x00800046  GETTABLE   R1 = R1[R0]
+    0002 [line  987] 0x0000005A  TEST       A=1 B=0 C=0
+    0003 [line  987] 0x8000C016  JMP        A=0 sBx=4
+    0004 [line  988] 0x00C0008B  SELF       A=2 B=1 C=256 Bx=768
+    0005 [line  988] 0x0100409C  CALL       A=2 B=2 C=1
+    0006 [line  989] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0007 [line  989] 0x00404089  SETTABLE   R2[R0] = K[1]=None
+    0008 [line  991] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 8
+    'cleaner': 2 -> 8
+
+    ============================================================
+    PROTO ROOT.46
+    Offset : 0x8CDD
+    Source : '@lua\\task\\ectaskutility.lua'
+    Lines  : 997 - 1001
+    Params : 0
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'pairs'
+    K[001] = 'stopTaskTick'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  998] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='pairs'
+    0001 [line  998] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0002 [line  998] 0x0101001C  CALL       A=0 B=2 C=4
+    0003 [line  998] 0x8000C016  JMP        A=0 sBx=4
+    0004 [line  999] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0005 [line  999] 0x02C04146  GETTABLE   R5 = R5[K[1]='stopTaskTick']
+    0006 [line  999] 0x01800180  MOVE       R6 = R3
+    0007 [line  999] 0x0100415C  CALL       A=5 B=2 C=1
+    0008 [line  998] 0x00008021  TFORLOOP   A=0 B=0 C=2
+    0009 [line  999] 0x7FFE4016  JMP        A=0 sBx=-6
+    0010 [line 1001] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    '(for generator)': 3 -> 10
+    '(for state)': 3 -> 10
+    '(for control)': 3 -> 10
+    'taskId': 4 -> 8
+    'tickFunc': 4 -> 8

@@ -1,0 +1,1885 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\inventory\ecivtrequip.lua
+SIZE: 17544
+PARSED: 17544
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\inventory\\ecivtrequip.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 24
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'bit'
+K[003] = 'band'
+K[004] = 'S2C.item_data'
+K[005] = 'item_data'
+K[006] = 'Data.Exptypes'
+K[007] = 'Data.ElementData'
+K[008] = 'Data.Expdef'
+K[009] = 'MISCELLANEOUS'
+K[010] = 5.0
+K[011] = 'PM_PRODUCER'
+K[012] = 1.0
+K[013] = 'PM_IDENTIFY'
+K[014] = 2.0
+K[015] = 'PM_ENGRAVED_NAME'
+K[016] = 4.0
+K[017] = 'PM_BASE_ADDON_GROUP'
+K[018] = 8.0
+K[019] = 'PM_REINFORCE_ADDON_GROUP'
+K[020] = 16.0
+K[021] = 'PM_KAIGUANG_ADDON_GROUP'
+K[022] = 32.0
+K[023] = 'PM_HOLE'
+K[024] = 64.0
+K[025] = 'PM_RUNE_WORD_ADDON_GROUP'
+K[026] = 128.0
+K[027] = 'PM_PRODUCER_LIFEPROF_LEVEL'
+K[028] = 256.0
+K[029] = 'PM_MAGIC_STONE_ADDON_GROUP'
+K[030] = 512.0
+K[031] = 'PM_UPGRADE_ADDON_GROUP'
+K[032] = 1024.0
+K[033] = 'PM_FUSION_ADDON_GROUP'
+K[034] = 2048.0
+K[035] = 'Class'
+K[036] = 'equipmentfixed_essence'
+K[037] = 'define'
+K[038] = 'const'
+K[039] = 'table'
+K[040] = 'PROP_MASK'
+K[041] = 'field'
+K[042] = 'number'
+K[043] = 'prop_mask'
+K[044] = 0.0
+K[045] = 'reserved'
+K[046] = 'grade'
+K[047] = 'quality'
+K[048] = 'star'
+K[049] = 'base_addon_count'
+K[050] = 'static'
+K[051] = '=>'
+K[052] = 'new'
+K[053] = 'method'
+K[054] = 'Reset'
+K[055] = 'Commit'
+K[056] = 'equipment_dynamic_essence'
+K[057] = '_producer_id'
+K[058] = 'string'
+K[059] = '_producer_name'
+K[060] = ''
+K[061] = '_engraved_id'
+K[062] = '_engraved_name'
+K[063] = 'userdata'
+K[064] = 'boolean'
+K[065] = 'FillData'
+K[066] = 'fusion_group_data'
+K[067] = 'tid'
+K[068] = 'addon_data'
+K[069] = 'id'
+K[070] = 'rand'
+K[071] = 'GetType'
+K[072] = 'GetQuality'
+K[073] = 'GetValue'
+K[074] = 'skillprop_data_t'
+K[075] = 'level'
+K[076] = 'PM_BASE'
+K[077] = 'PM_RANDOM'
+K[078] = 'PM_SKILL'
+K[079] = 'addon_group_data'
+K[080] = 'basic_addon_count'
+K[081] = 'base_addon_rand'
+K[082] = 'random_addon_count'
+K[083] = 'random_addon_flag'
+K[084] = 'random_addon_rand'
+K[085] = 'skillprop_count'
+K[086] = 'skillprop_data'
+K[087] = 'Init'
+K[088] = 'GetAllAddons'
+K[089] = 'IVTR_ESSENCE_EQUIPMENT'
+K[090] = '_fixed_ess'
+K[091] = None
+K[092] = '_base_addon_group'
+K[093] = '_base_addon_group_refresh_backup'
+K[094] = 'm_gems'
+K[095] = '_train_num'
+K[096] = '_train_level'
+K[097] = '_current_equip_surface'
+K[098] = '_wing_dyn_surfaces'
+K[099] = '_wing_soul_data'
+K[100] = '_rank'
+K[101] = 'm_wingwens'
+K[102] = 'm_petequip_souls'
+K[103] = 'm_duanzao'
+
+----- INSTRUCTIONS -----
+0000 [line    2] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    2] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    2] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    3] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    3] 0x00008081  LOADK      R2 = K[2]='bit'
+0005 [line    3] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    4] 0x00C0C086  GETTABLE   R2 = R1[K[3]='band']
+0007 [line    5] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0008 [line    5] 0x00010101  LOADK      R4 = K[4]='S2C.item_data'
+0009 [line    5] 0x010080DC  CALL       A=3 B=2 C=2
+0010 [line    6] 0x01C14106  GETTABLE   R4 = R3[K[5]='item_data']
+0011 [line    7] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0012 [line    7] 0x00018181  LOADK      R6 = K[6]='Data.Exptypes'
+0013 [line    7] 0x0100815C  CALL       A=5 B=2 C=2
+0014 [line    8] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0015 [line    8] 0x0001C1C1  LOADK      R7 = K[7]='Data.ElementData'
+0016 [line    8] 0x0100819C  CALL       A=6 B=2 C=2
+0017 [line    9] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0018 [line    9] 0x00020201  LOADK      R8 = K[8]='Data.Expdef'
+0019 [line    9] 0x010081DC  CALL       A=7 B=2 C=2
+0020 [line   10] 0x03C24206  GETTABLE   R8 = R7[K[9]='MISCELLANEOUS']
+0021 [line   13] 0x00028241  LOADK      R9 = K[10]=5.0
+0022 [line   15] 0x05000283  LOADNIL    A=10 B=10 C=0 Bx=5120
+0023 [line   17] 0x000302CA  NEWTABLE   A=11 B=0 C=12 Bx=12
+0024 [line   19] 0x85C302C9  SETTABLE   R11[K[11]='PM_PRODUCER'] = K[12]=1.0
+0025 [line   20] 0x86C382C9  SETTABLE   R11[K[13]='PM_IDENTIFY'] = K[14]=2.0
+0026 [line   21] 0x87C402C9  SETTABLE   R11[K[15]='PM_ENGRAVED_NAME'] = K[16]=4.0
+0027 [line   22] 0x88C482C9  SETTABLE   R11[K[17]='PM_BASE_ADDON_GROUP'] = K[18]=8.0
+0028 [line   23] 0x89C502C9  SETTABLE   R11[K[19]='PM_REINFORCE_ADDON_GROUP'] = K[20]=16.0
+0029 [line   24] 0x8AC582C9  SETTABLE   R11[K[21]='PM_KAIGUANG_ADDON_GROUP'] = K[22]=32.0
+0030 [line   25] 0x8BC602C9  SETTABLE   R11[K[23]='PM_HOLE'] = K[24]=64.0
+0031 [line   26] 0x8CC682C9  SETTABLE   R11[K[25]='PM_RUNE_WORD_ADDON_GROUP'] = K[26]=128.0
+0032 [line   27] 0x8DC702C9  SETTABLE   R11[K[27]='PM_PRODUCER_LIFEPROF_LEVEL'] = K[28]=256.0
+0033 [line   28] 0x8EC782C9  SETTABLE   R11[K[29]='PM_MAGIC_STONE_ADDON_GROUP'] = K[30]=512.0
+0034 [line   29] 0x8FC802C9  SETTABLE   R11[K[31]='PM_UPGRADE_ADDON_GROUP'] = K[32]=1024.0
+0035 [line   30] 0x90C882C9  SETTABLE   R11[K[33]='PM_FUSION_ADDON_GROUP'] = K[34]=2048.0
+0036 [line   33] 0x0048C306  GETTABLE   R12 = R0[K[35]='Class']
+0037 [line   33] 0x00090341  LOADK      R13 = K[36]='equipmentfixed_essence'
+0038 [line   33] 0x0100831C  CALL       A=12 B=2 C=2
+0039 [line   33] 0x06000280  MOVE       R10 = R12
+0040 [line   34] 0x05494306  GETTABLE   R12 = R10[K[37]='define']
+0041 [line   36] 0x06498346  GETTABLE   R13 = R12[K[38]='const']
+0042 [line   36] 0x0009C381  LOADK      R14 = K[39]='table'
+0043 [line   36] 0x0100835C  CALL       A=13 B=2 C=2
+0044 [line   36] 0x9402C349  SETTABLE   R13[K[40]='PROP_MASK'] = R11
+0045 [line   37] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0046 [line   37] 0x000A8381  LOADK      R14 = K[42]='number'
+0047 [line   37] 0x0100835C  CALL       A=13 B=2 C=2
+0048 [line   37] 0x95CB0349  SETTABLE   R13[K[43]='prop_mask'] = K[44]=0.0
+0049 [line   38] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0050 [line   38] 0x0009C381  LOADK      R14 = K[39]='table'
+0051 [line   38] 0x0100835C  CALL       A=13 B=2 C=2
+0052 [line   38] 0x000003A4  CLOSURE    R14 = PROTO[0]
+0053 [line   38] 0x96838349  SETTABLE   R13[K[45]='reserved'] = R14
+0054 [line   39] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0055 [line   39] 0x000A8381  LOADK      R14 = K[42]='number'
+0056 [line   39] 0x0100835C  CALL       A=13 B=2 C=2
+0057 [line   39] 0x974B0349  SETTABLE   R13[K[46]='grade'] = K[44]=0.0
+0058 [line   40] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0059 [line   40] 0x000A8381  LOADK      R14 = K[42]='number'
+0060 [line   40] 0x0100835C  CALL       A=13 B=2 C=2
+0061 [line   40] 0x97CB0349  SETTABLE   R13[K[47]='quality'] = K[44]=0.0
+0062 [line   41] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0063 [line   41] 0x000A8381  LOADK      R14 = K[42]='number'
+0064 [line   41] 0x0100835C  CALL       A=13 B=2 C=2
+0065 [line   41] 0x984B0349  SETTABLE   R13[K[48]='star'] = K[44]=0.0
+0066 [line   42] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0067 [line   42] 0x000A8381  LOADK      R14 = K[42]='number'
+0068 [line   42] 0x0100835C  CALL       A=13 B=2 C=2
+0069 [line   42] 0x98CB0349  SETTABLE   R13[K[49]='base_addon_count'] = K[44]=0.0
+0070 [line   45] 0x064C8346  GETTABLE   R13 = R12[K[50]='static']
+0071 [line   45] 0x000CC381  LOADK      R14 = K[51]='=>'
+0072 [line   45] 0x050003C0  MOVE       R15 = R10
+0073 [line   45] 0x0180835C  CALL       A=13 B=3 C=2
+0074 [line   48] 0x000043A4  CLOSURE    R14 = PROTO[1]
+0075 [line   48] 0x05000000  MOVE       R0 = R10
+0076 [line   48] 0x9A038349  SETTABLE   R13[K[52]='new'] = R14
+0077 [line   50] 0x064D4346  GETTABLE   R13 = R12[K[53]='method']
+0078 [line   50] 0x0080835C  CALL       A=13 B=1 C=2
+0079 [line   51] 0x000083A4  CLOSURE    R14 = PROTO[2]
+0080 [line   51] 0x9B038349  SETTABLE   R13[K[54]='Reset'] = R14
+0081 [line   53] 0x054DC346  GETTABLE   R13 = R10[K[55]='Commit']
+0082 [line   53] 0x0080435C  CALL       A=13 B=1 C=1
+0083 [line   56] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+0084 [line   58] 0x0048C306  GETTABLE   R12 = R0[K[35]='Class']
+0085 [line   58] 0x000E0341  LOADK      R13 = K[56]='equipment_dynamic_essence'
+0086 [line   58] 0x0100831C  CALL       A=12 B=2 C=2
+0087 [line   58] 0x060002C0  MOVE       R11 = R12
+0088 [line   59] 0x05C94306  GETTABLE   R12 = R11[K[37]='define']
+0089 [line   60] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0090 [line   60] 0x000A8381  LOADK      R14 = K[42]='number'
+0091 [line   60] 0x0100835C  CALL       A=13 B=2 C=2
+0092 [line   60] 0x9CCB0349  SETTABLE   R13[K[57]='_producer_id'] = K[44]=0.0
+0093 [line   61] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0094 [line   61] 0x000E8381  LOADK      R14 = K[58]='string'
+0095 [line   61] 0x0100835C  CALL       A=13 B=2 C=2
+0096 [line   61] 0x9DCF0349  SETTABLE   R13[K[59]='_producer_name'] = K[60]=''
+0097 [line   62] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0098 [line   62] 0x000A8381  LOADK      R14 = K[42]='number'
+0099 [line   62] 0x0100835C  CALL       A=13 B=2 C=2
+0100 [line   62] 0x9ECB0349  SETTABLE   R13[K[61]='_engraved_id'] = K[44]=0.0
+0101 [line   63] 0x064A4346  GETTABLE   R13 = R12[K[41]='field']
+0102 [line   63] 0x000E8381  LOADK      R14 = K[58]='string'
+0103 [line   63] 0x0100835C  CALL       A=13 B=2 C=2
+0104 [line   63] 0x9F4F0349  SETTABLE   R13[K[62]='_engraved_name'] = K[60]=''
+0105 [line   65] 0x064C8346  GETTABLE   R13 = R12[K[50]='static']
+0106 [line   65] 0x000CC381  LOADK      R14 = K[51]='=>'
+0107 [line   65] 0x058003C0  MOVE       R15 = R11
+0108 [line   65] 0x0180835C  CALL       A=13 B=3 C=2
+0109 [line   68] 0x0000C3A4  CLOSURE    R14 = PROTO[3]
+0110 [line   68] 0x05800000  MOVE       R0 = R11
+0111 [line   68] 0x9A038349  SETTABLE   R13[K[52]='new'] = R14
+0112 [line   70] 0x064D4346  GETTABLE   R13 = R12[K[53]='method']
+0113 [line   70] 0x000A8381  LOADK      R14 = K[42]='number'
+0114 [line   70] 0x000FC3C1  LOADK      R15 = K[63]='userdata'
+0115 [line   70] 0x000CC401  LOADK      R16 = K[51]='=>'
+0116 [line   70] 0x00100441  LOADK      R17 = K[64]='boolean'
+0117 [line   70] 0x0280835C  CALL       A=13 B=5 C=2
+0118 [line   88] 0x000103A4  CLOSURE    R14 = PROTO[4]
+0119 [line   88] 0x01000000  MOVE       R0 = R2
+0120 [line   88] 0x05000000  MOVE       R0 = R10
+0121 [line   88] 0xA0838349  SETTABLE   R13[K[65]='FillData'] = R14
+0122 [line   89] 0x05CDC346  GETTABLE   R13 = R11[K[55]='Commit']
+0123 [line   89] 0x0080435C  CALL       A=13 B=1 C=1
+0124 [line   92] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+0125 [line   94] 0x0048C346  GETTABLE   R13 = R0[K[35]='Class']
+0126 [line   94] 0x00108381  LOADK      R14 = K[66]='fusion_group_data'
+0127 [line   94] 0x0100835C  CALL       A=13 B=2 C=2
+0128 [line   94] 0x06800300  MOVE       R12 = R13
+0129 [line   95] 0x06494346  GETTABLE   R13 = R12[K[37]='define']
+0130 [line   96] 0x06CA4386  GETTABLE   R14 = R13[K[41]='field']
+0131 [line   96] 0x000A83C1  LOADK      R15 = K[42]='number'
+0132 [line   96] 0x0100839C  CALL       A=14 B=2 C=2
+0133 [line   96] 0xA1CB0389  SETTABLE   R14[K[67]='tid'] = K[44]=0.0
+0134 [line  100] 0x064DC386  GETTABLE   R14 = R12[K[55]='Commit']
+0135 [line  100] 0x0080439C  CALL       A=14 B=1 C=1
+0136 [line  105] 0x06800343  LOADNIL    A=13 B=13 C=0 Bx=6656
+0137 [line  107] 0x0048C386  GETTABLE   R14 = R0[K[35]='Class']
+0138 [line  107] 0x001103C1  LOADK      R15 = K[68]='addon_data'
+0139 [line  107] 0x0100839C  CALL       A=14 B=2 C=2
+0140 [line  107] 0x07000340  MOVE       R13 = R14
+0141 [line  108] 0x06C94386  GETTABLE   R14 = R13[K[37]='define']
+0142 [line  110] 0x074C83C6  GETTABLE   R15 = R14[K[50]='static']
+0143 [line  110] 0x000CC401  LOADK      R16 = K[51]='=>'
+0144 [line  110] 0x06800440  MOVE       R17 = R13
+0145 [line  110] 0x018083DC  CALL       A=15 B=3 C=2
+0146 [line  110] 0x00014424  CLOSURE    R16 = PROTO[5]
+0147 [line  110] 0x06800000  MOVE       R0 = R13
+0148 [line  110] 0x9A0403C9  SETTABLE   R15[K[52]='new'] = R16
+0149 [line  112] 0x074A43C6  GETTABLE   R15 = R14[K[41]='field']
+0150 [line  112] 0x000A8401  LOADK      R16 = K[42]='number'
+0151 [line  112] 0x010083DC  CALL       A=15 B=2 C=2
+0152 [line  112] 0xA2CB03C9  SETTABLE   R15[K[69]='id'] = K[44]=0.0
+0153 [line  113] 0x074A43C6  GETTABLE   R15 = R14[K[41]='field']
+0154 [line  113] 0x000A8401  LOADK      R16 = K[42]='number'
+0155 [line  113] 0x010083DC  CALL       A=15 B=2 C=2
+0156 [line  113] 0xA34B03C9  SETTABLE   R15[K[70]='rand'] = K[44]=0.0
+0157 [line  115] 0x074D43C6  GETTABLE   R15 = R14[K[53]='method']
+0158 [line  115] 0x000CC401  LOADK      R16 = K[51]='=>'
+0159 [line  115] 0x000A8441  LOADK      R17 = K[42]='number'
+0160 [line  115] 0x018083DC  CALL       A=15 B=3 C=2
+0161 [line  118] 0x00018424  CLOSURE    R16 = PROTO[6]
+0162 [line  118] 0x03000000  MOVE       R0 = R6
+0163 [line  118] 0xA38403C9  SETTABLE   R15[K[71]='GetType'] = R16
+0164 [line  120] 0x074D43C6  GETTABLE   R15 = R14[K[53]='method']
+0165 [line  120] 0x000CC401  LOADK      R16 = K[51]='=>'
+0166 [line  120] 0x000A8441  LOADK      R17 = K[42]='number'
+0167 [line  120] 0x018083DC  CALL       A=15 B=3 C=2
+0168 [line  124] 0x0001C424  CLOSURE    R16 = PROTO[7]
+0169 [line  124] 0x03000000  MOVE       R0 = R6
+0170 [line  124] 0xA40403C9  SETTABLE   R15[K[72]='GetQuality'] = R16
+0171 [line  126] 0x074D43C6  GETTABLE   R15 = R14[K[53]='method']
+0172 [line  126] 0x000CC401  LOADK      R16 = K[51]='=>'
+0173 [line  126] 0x000A8441  LOADK      R17 = K[42]='number'
+0174 [line  126] 0x018083DC  CALL       A=15 B=3 C=2
+0175 [line  132] 0x00020424  CLOSURE    R16 = PROTO[8]
+0176 [line  132] 0x03000000  MOVE       R0 = R6
+0177 [line  132] 0xA48403C9  SETTABLE   R15[K[73]='GetValue'] = R16
+0178 [line  134] 0x06CDC3C6  GETTABLE   R15 = R13[K[55]='Commit']
+0179 [line  134] 0x008043DC  CALL       A=15 B=1 C=1
+0180 [line  138] 0x07000383  LOADNIL    A=14 B=14 C=0 Bx=7168
+0181 [line  140] 0x0048C3C6  GETTABLE   R15 = R0[K[35]='Class']
+0182 [line  140] 0x00128401  LOADK      R16 = K[74]='skillprop_data_t'
+0183 [line  140] 0x010083DC  CALL       A=15 B=2 C=2
+0184 [line  140] 0x07800380  MOVE       R14 = R15
+0185 [line  141] 0x074943C6  GETTABLE   R15 = R14[K[37]='define']
+0186 [line  143] 0x07CA4406  GETTABLE   R16 = R15[K[41]='field']
+0187 [line  143] 0x000A8441  LOADK      R17 = K[42]='number'
+0188 [line  143] 0x0100841C  CALL       A=16 B=2 C=2
+0189 [line  143] 0xA2CB0409  SETTABLE   R16[K[69]='id'] = K[44]=0.0
+0190 [line  144] 0x07CA4406  GETTABLE   R16 = R15[K[41]='field']
+0191 [line  144] 0x000A8441  LOADK      R17 = K[42]='number'
+0192 [line  144] 0x0100841C  CALL       A=16 B=2 C=2
+0193 [line  144] 0xA5CB0409  SETTABLE   R16[K[75]='level'] = K[44]=0.0
+0194 [line  146] 0x07CC8406  GETTABLE   R16 = R15[K[50]='static']
+0195 [line  146] 0x000CC441  LOADK      R17 = K[51]='=>'
+0196 [line  146] 0x07000480  MOVE       R18 = R14
+0197 [line  146] 0x0180841C  CALL       A=16 B=3 C=2
+0198 [line  151] 0x00024464  CLOSURE    R17 = PROTO[9]
+0199 [line  151] 0x07000000  MOVE       R0 = R14
+0200 [line  151] 0x9A044409  SETTABLE   R16[K[52]='new'] = R17
+0201 [line  153] 0x074DC406  GETTABLE   R16 = R14[K[55]='Commit']
+0202 [line  153] 0x0080441C  CALL       A=16 B=1 C=1
+0203 [line  157] 0x078003C3  LOADNIL    A=15 B=15 C=0 Bx=7680
+0204 [line  159] 0x0000C40A  NEWTABLE   A=16 B=0 C=3 Bx=3
+0205 [line  161] 0xA6430409  SETTABLE   R16[K[76]='PM_BASE'] = K[12]=1.0
+0206 [line  162] 0xA6C38409  SETTABLE   R16[K[77]='PM_RANDOM'] = K[14]=2.0
+0207 [line  163] 0xA7440409  SETTABLE   R16[K[78]='PM_SKILL'] = K[16]=4.0
+0208 [line  166] 0x0048C446  GETTABLE   R17 = R0[K[35]='Class']
+0209 [line  166] 0x0013C481  LOADK      R18 = K[79]='addon_group_data'
+0210 [line  166] 0x0100845C  CALL       A=17 B=2 C=2
+0211 [line  166] 0x088003C0  MOVE       R15 = R17
+0212 [line  167] 0x07C94446  GETTABLE   R17 = R15[K[37]='define']
+0213 [line  169] 0x08C98486  GETTABLE   R18 = R17[K[38]='const']
+0214 [line  169] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0215 [line  169] 0x0100849C  CALL       A=18 B=2 C=2
+0216 [line  169] 0x94040489  SETTABLE   R18[K[40]='PROP_MASK'] = R16
+0217 [line  170] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0218 [line  170] 0x000A84C1  LOADK      R19 = K[42]='number'
+0219 [line  170] 0x0100849C  CALL       A=18 B=2 C=2
+0220 [line  170] 0xA2CB0489  SETTABLE   R18[K[69]='id'] = K[44]=0.0
+0221 [line  171] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0222 [line  171] 0x000A84C1  LOADK      R19 = K[42]='number'
+0223 [line  171] 0x0100849C  CALL       A=18 B=2 C=2
+0224 [line  171] 0x95CB0489  SETTABLE   R18[K[43]='prop_mask'] = K[44]=0.0
+0225 [line  172] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0226 [line  172] 0x000A84C1  LOADK      R19 = K[42]='number'
+0227 [line  172] 0x0100849C  CALL       A=18 B=2 C=2
+0228 [line  172] 0xA84B0489  SETTABLE   R18[K[80]='basic_addon_count'] = K[44]=0.0
+0229 [line  173] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0230 [line  173] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0231 [line  173] 0x0100849C  CALL       A=18 B=2 C=2
+0232 [line  173] 0x000284E4  CLOSURE    R19 = PROTO[10]
+0233 [line  173] 0xA884C489  SETTABLE   R18[K[81]='base_addon_rand'] = R19
+0234 [line  174] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0235 [line  174] 0x000A84C1  LOADK      R19 = K[42]='number'
+0236 [line  174] 0x0100849C  CALL       A=18 B=2 C=2
+0237 [line  174] 0xA94B0489  SETTABLE   R18[K[82]='random_addon_count'] = K[44]=0.0
+0238 [line  175] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0239 [line  175] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0240 [line  175] 0x0100849C  CALL       A=18 B=2 C=2
+0241 [line  175] 0x0002C4E4  CLOSURE    R19 = PROTO[11]
+0242 [line  175] 0xA984C489  SETTABLE   R18[K[83]='random_addon_flag'] = R19
+0243 [line  176] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0244 [line  176] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0245 [line  176] 0x0100849C  CALL       A=18 B=2 C=2
+0246 [line  176] 0x000304E4  CLOSURE    R19 = PROTO[12]
+0247 [line  176] 0xAA04C489  SETTABLE   R18[K[84]='random_addon_rand'] = R19
+0248 [line  177] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0249 [line  177] 0x000A84C1  LOADK      R19 = K[42]='number'
+0250 [line  177] 0x0100849C  CALL       A=18 B=2 C=2
+0251 [line  177] 0xAACB0489  SETTABLE   R18[K[85]='skillprop_count'] = K[44]=0.0
+0252 [line  178] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0253 [line  178] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0254 [line  178] 0x0100849C  CALL       A=18 B=2 C=2
+0255 [line  178] 0x000344E4  CLOSURE    R19 = PROTO[13]
+0256 [line  178] 0xAB04C489  SETTABLE   R18[K[86]='skillprop_data'] = R19
+0257 [line  180] 0x08CC8486  GETTABLE   R18 = R17[K[50]='static']
+0258 [line  180] 0x000CC4C1  LOADK      R19 = K[51]='=>'
+0259 [line  180] 0x07800500  MOVE       R20 = R15
+0260 [line  180] 0x0180849C  CALL       A=18 B=3 C=2
+0261 [line  184] 0x000384E4  CLOSURE    R19 = PROTO[14]
+0262 [line  184] 0x07800000  MOVE       R0 = R15
+0263 [line  184] 0x9A04C489  SETTABLE   R18[K[52]='new'] = R19
+0264 [line  186] 0x08CD4486  GETTABLE   R18 = R17[K[53]='method']
+0265 [line  186] 0x0080849C  CALL       A=18 B=1 C=2
+0266 [line  201] 0x0003C4E4  CLOSURE    R19 = PROTO[15]
+0267 [line  201] 0x04000000  MOVE       R0 = R8
+0268 [line  201] 0x07000000  MOVE       R0 = R14
+0269 [line  201] 0xAB84C489  SETTABLE   R18[K[87]='Init'] = R19
+0270 [line  203] 0x08CD4486  GETTABLE   R18 = R17[K[53]='method']
+0271 [line  203] 0x000FC4C1  LOADK      R19 = K[63]='userdata'
+0272 [line  203] 0x0100849C  CALL       A=18 B=2 C=2
+0273 [line  238] 0x000404E4  CLOSURE    R19 = PROTO[16]
+0274 [line  238] 0x01000000  MOVE       R0 = R2
+0275 [line  238] 0x08000000  MOVE       R0 = R16
+0276 [line  238] 0x04000000  MOVE       R0 = R8
+0277 [line  238] 0xA084C489  SETTABLE   R18[K[65]='FillData'] = R19
+0278 [line  242] 0x08CD4486  GETTABLE   R18 = R17[K[53]='method']
+0279 [line  242] 0x000CC4C1  LOADK      R19 = K[51]='=>'
+0280 [line  242] 0x0009C501  LOADK      R20 = K[39]='table'
+0281 [line  242] 0x0180849C  CALL       A=18 B=3 C=2
+0282 [line  270] 0x000444E4  CLOSURE    R19 = PROTO[17]
+0283 [line  270] 0x03000000  MOVE       R0 = R6
+0284 [line  270] 0x04000000  MOVE       R0 = R8
+0285 [line  270] 0x06800000  MOVE       R0 = R13
+0286 [line  270] 0xAC04C489  SETTABLE   R18[K[88]='GetAllAddons'] = R19
+0287 [line  272] 0x07CDC486  GETTABLE   R18 = R15[K[55]='Commit']
+0288 [line  272] 0x0080449C  CALL       A=18 B=1 C=1
+0289 [line  272] 0x00000423  CLOSE      A=16 B=0 C=0 Bx=0
+0290 [line  276] 0x08000403  LOADNIL    A=16 B=16 C=0 Bx=8192
+0291 [line  278] 0x0048C446  GETTABLE   R17 = R0[K[35]='Class']
+0292 [line  278] 0x00164481  LOADK      R18 = K[89]='IVTR_ESSENCE_EQUIPMENT'
+0293 [line  278] 0x0100845C  CALL       A=17 B=2 C=2
+0294 [line  278] 0x08800400  MOVE       R16 = R17
+0295 [line  279] 0x08494446  GETTABLE   R17 = R16[K[37]='define']
+0296 [line  281] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0297 [line  281] 0x050004C0  MOVE       R19 = R10
+0298 [line  281] 0x0100849C  CALL       A=18 B=2 C=2
+0299 [line  281] 0xAD56C489  SETTABLE   R18[K[90]='_fixed_ess'] = K[91]=None
+0300 [line  283] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0301 [line  283] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0302 [line  283] 0x0100849C  CALL       A=18 B=2 C=2
+0303 [line  283] 0x000484E4  CLOSURE    R19 = PROTO[18]
+0304 [line  283] 0xAE04C489  SETTABLE   R18[K[92]='_base_addon_group'] = R19
+0305 [line  284] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0306 [line  284] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0307 [line  284] 0x0100849C  CALL       A=18 B=2 C=2
+0308 [line  284] 0x0004C4E4  CLOSURE    R19 = PROTO[19]
+0309 [line  284] 0xAE84C489  SETTABLE   R18[K[93]='_base_addon_group_refresh_backup'] = R19
+0310 [line  285] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0311 [line  285] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0312 [line  285] 0x0100849C  CALL       A=18 B=2 C=2
+0313 [line  285] 0x000504E4  CLOSURE    R19 = PROTO[20]
+0314 [line  285] 0xAF04C489  SETTABLE   R18[K[94]='m_gems'] = R19
+0315 [line  286] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0316 [line  286] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0317 [line  286] 0x0100849C  CALL       A=18 B=2 C=2
+0318 [line  286] 0x000544E4  CLOSURE    R19 = PROTO[21]
+0319 [line  286] 0xAF84C489  SETTABLE   R18[K[95]='_train_num'] = R19
+0320 [line  287] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0321 [line  287] 0x000A84C1  LOADK      R19 = K[42]='number'
+0322 [line  287] 0x0100849C  CALL       A=18 B=2 C=2
+0323 [line  287] 0xB04B0489  SETTABLE   R18[K[96]='_train_level'] = K[44]=0.0
+0324 [line  288] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0325 [line  288] 0x000A84C1  LOADK      R19 = K[42]='number'
+0326 [line  288] 0x0100849C  CALL       A=18 B=2 C=2
+0327 [line  288] 0xB0CB0489  SETTABLE   R18[K[97]='_current_equip_surface'] = K[44]=0.0
+0328 [line  289] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0329 [line  289] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0330 [line  289] 0x0100849C  CALL       A=18 B=2 C=2
+0331 [line  289] 0x000584E4  CLOSURE    R19 = PROTO[22]
+0332 [line  289] 0xB104C489  SETTABLE   R18[K[98]='_wing_dyn_surfaces'] = R19
+0333 [line  290] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0334 [line  290] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0335 [line  290] 0x0100849C  CALL       A=18 B=2 C=2
+0336 [line  290] 0xB1D6C489  SETTABLE   R18[K[99]='_wing_soul_data'] = K[91]=None
+0337 [line  291] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0338 [line  291] 0x000A84C1  LOADK      R19 = K[42]='number'
+0339 [line  291] 0x0100849C  CALL       A=18 B=2 C=2
+0340 [line  291] 0xB24B0489  SETTABLE   R18[K[100]='_rank'] = K[44]=0.0
+0341 [line  292] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0342 [line  292] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0343 [line  292] 0x0100849C  CALL       A=18 B=2 C=2
+0344 [line  292] 0x0005C4E4  CLOSURE    R19 = PROTO[23]
+0345 [line  292] 0xB284C489  SETTABLE   R18[K[101]='m_wingwens'] = R19
+0346 [line  293] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0347 [line  293] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0348 [line  293] 0x0100849C  CALL       A=18 B=2 C=2
+0349 [line  293] 0x000604E4  CLOSURE    R19 = PROTO[24]
+0350 [line  293] 0xB304C489  SETTABLE   R18[K[102]='m_petequip_souls'] = R19
+0351 [line  294] 0x08CA4486  GETTABLE   R18 = R17[K[41]='field']
+0352 [line  294] 0x0009C4C1  LOADK      R19 = K[39]='table'
+0353 [line  294] 0x0100849C  CALL       A=18 B=2 C=2
+0354 [line  294] 0x000644E4  CLOSURE    R19 = PROTO[25]
+0355 [line  294] 0xB384C489  SETTABLE   R18[K[103]='m_duanzao'] = R19
+0356 [line  296] 0x08CC8486  GETTABLE   R18 = R17[K[50]='static']
+0357 [line  296] 0x000CC4C1  LOADK      R19 = K[51]='=>'
+0358 [line  296] 0x08000500  MOVE       R20 = R16
+0359 [line  296] 0x0180849C  CALL       A=18 B=3 C=2
+0360 [line  310] 0x000684E4  CLOSURE    R19 = PROTO[26]
+0361 [line  310] 0x08000000  MOVE       R0 = R16
+0362 [line  310] 0x05000000  MOVE       R0 = R10
+0363 [line  310] 0x04000000  MOVE       R0 = R8
+0364 [line  310] 0x07800000  MOVE       R0 = R15
+0365 [line  310] 0x9A04C489  SETTABLE   R18[K[52]='new'] = R19
+0366 [line  312] 0x08CD4486  GETTABLE   R18 = R17[K[53]='method']
+0367 [line  312] 0x0080849C  CALL       A=18 B=1 C=2
+0368 [line  313] 0x0006C4E4  CLOSURE    R19 = PROTO[27]
+0369 [line  313] 0x9B04C489  SETTABLE   R18[K[54]='Reset'] = R19
+0370 [line  315] 0x08CD4486  GETTABLE   R18 = R17[K[53]='method']
+0371 [line  315] 0x000E84C1  LOADK      R19 = K[58]='string'
+0372 [line  315] 0x000A8501  LOADK      R20 = K[42]='number'
+0373 [line  315] 0x000A8541  LOADK      R21 = K[42]='number'
+0374 [line  315] 0x000CC581  LOADK      R22 = K[51]='=>'
+0375 [line  315] 0x001005C1  LOADK      R23 = K[64]='boolean'
+0376 [line  315] 0x0300849C  CALL       A=18 B=6 C=2
+0377 [line  413] 0x000704E4  CLOSURE    R19 = PROTO[28]
+0378 [line  413] 0x01800000  MOVE       R0 = R3
+0379 [line  413] 0x02000000  MOVE       R0 = R4
+0380 [line  413] 0x04000000  MOVE       R0 = R8
+0381 [line  413] 0x04800000  MOVE       R0 = R9
+0382 [line  413] 0xA084C489  SETTABLE   R18[K[65]='FillData'] = R19
+0383 [line  415] 0x084DC486  GETTABLE   R18 = R16[K[55]='Commit']
+0384 [line  415] 0x0080449C  CALL       A=18 B=1 C=1
+0385 [line  420] 0x0001844A  NEWTABLE   A=17 B=0 C=6 Bx=6
+0386 [line  422] 0xAC840449  SETTABLE   R17[K[89]='IVTR_ESSENCE_EQUIPMENT'] = R16
+0387 [line  423] 0x92028449  SETTABLE   R17[K[36]='equipmentfixed_essence'] = R10
+0388 [line  424] 0x9C02C449  SETTABLE   R17[K[56]='equipment_dynamic_essence'] = R11
+0389 [line  425] 0xA783C449  SETTABLE   R17[K[79]='addon_group_data'] = R15
+0390 [line  426] 0xA2034449  SETTABLE   R17[K[68]='addon_data'] = R13
+0391 [line  427] 0xA5038449  SETTABLE   R17[K[74]='skillprop_data_t'] = R14
+0392 [line  428] 0x0100045E  RETURN     A=17 B=2 C=0
+0393 [line  428] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 393
+'bit': 6 -> 393
+'band': 7 -> 393
+'itemdata': 10 -> 393
+'item_data': 11 -> 393
+'Exptypes': 14 -> 393
+'ElementData': 17 -> 393
+'Expdef': 20 -> 393
+'MISCELLANEOUS': 21 -> 393
+'TRAIN_ATTR_COUNT': 22 -> 393
+'equipmentfixed_essence': 23 -> 393
+'PROP_MASK': 36 -> 83
+'def': 41 -> 83
+'equipment_dynamic_essence': 84 -> 393
+'def': 89 -> 124
+'fusion_group_data': 125 -> 393
+'def': 130 -> 136
+'addon_data': 137 -> 393
+'def': 142 -> 180
+'skillprop_data_t': 181 -> 393
+'def': 186 -> 203
+'addon_group_data': 204 -> 393
+'PROP_MASK': 208 -> 289
+'def': 213 -> 289
+'IVTR_ESSENCE_EQUIPMENT': 291 -> 393
+'def': 296 -> 385
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xD05
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 38 - 38
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   38] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   38] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   38] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xD45
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 45 - 48
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   46] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   46] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line   47] 0x0100001E  RETURN     A=0 B=2 C=0
+    0003 [line   48] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 3
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xDB8
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 50 - 51
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   51] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 0
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xDF9
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 65 - 68
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   66] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   66] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line   67] 0x0100001E  RETURN     A=0 B=2 C=0
+    0003 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 3
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xE6F
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 70 - 88
+    Params : 3
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'PROP_MASK'
+    K[001] = 'PM_PRODUCER'
+    K[002] = '_producer_id'
+    K[003] = 'ReadInt64'
+    K[004] = 'ReadByte'
+    K[005] = 0.0
+    K[006] = 'ReadBytes'
+    K[007] = '_producer_name'
+    K[008] = 'tostring'
+    K[009] = 'PM_ENGRAVED_NAME'
+    K[010] = '_engraved_id'
+    K[011] = '_engraved_name'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   71] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line   71] 0x00800100  MOVE       R4 = R1
+    0002 [line   71] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0003 [line   71] 0x02C00146  GETTABLE   R5 = R5[K[0]='PROP_MASK']
+    0004 [line   71] 0x02C04146  GETTABLE   R5 = R5[K[1]='PM_PRODUCER']
+    0005 [line   71] 0x018080DC  CALL       A=3 B=3 C=2
+    0006 [line   71] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0007 [line   71] 0x02400106  GETTABLE   R4 = R4[K[0]='PROP_MASK']
+    0008 [line   71] 0x02404106  GETTABLE   R4 = R4[K[1]='PM_PRODUCER']
+    0009 [line   71] 0x01810017  EQ         A=0 B=R3 C=R4
+    0010 [line   71] 0x80034016  JMP        A=0 sBx=14
+    0011 [line   72] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0012 [line   72] 0x010080DC  CALL       A=3 B=2 C=2
+    0013 [line   72] 0x8100C009  SETTABLE   R0[K[2]='_producer_id'] = R3
+    0014 [line   73] 0x014100CB  SELF       A=3 B=2 C=260 Bx=1284
+    0015 [line   73] 0x010080DC  CALL       A=3 B=2 C=2
+    0016 [line   74] 0x8280C018  LT         A=0 B=K[5]=0.0 C=R3
+    0017 [line   74] 0x80018016  JMP        A=0 sBx=7
+    0018 [line   75] 0x0141810B  SELF       A=4 B=2 C=262 Bx=1286
+    0019 [line   75] 0x01800180  MOVE       R6 = R3
+    0020 [line   75] 0x0180811C  CALL       A=4 B=3 C=2
+    0021 [line   76] 0x00020145  GETGLOBAL  R5 = GLOBAL K[8]='tostring'
+    0022 [line   76] 0x02000180  MOVE       R6 = R4
+    0023 [line   76] 0x0100815C  CALL       A=5 B=2 C=2
+    0024 [line   76] 0x83814009  SETTABLE   R0[K[7]='_producer_name'] = R5
+    0025 [line   79] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0026 [line   79] 0x00800100  MOVE       R4 = R1
+    0027 [line   79] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0028 [line   79] 0x02C00146  GETTABLE   R5 = R5[K[0]='PROP_MASK']
+    0029 [line   79] 0x02C24146  GETTABLE   R5 = R5[K[9]='PM_ENGRAVED_NAME']
+    0030 [line   79] 0x018080DC  CALL       A=3 B=3 C=2
+    0031 [line   79] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0032 [line   79] 0x02400106  GETTABLE   R4 = R4[K[0]='PROP_MASK']
+    0033 [line   79] 0x02424106  GETTABLE   R4 = R4[K[9]='PM_ENGRAVED_NAME']
+    0034 [line   79] 0x01810017  EQ         A=0 B=R3 C=R4
+    0035 [line   79] 0x80034016  JMP        A=0 sBx=14
+    0036 [line   80] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0037 [line   80] 0x010080DC  CALL       A=3 B=2 C=2
+    0038 [line   80] 0x8500C009  SETTABLE   R0[K[10]='_engraved_id'] = R3
+    0039 [line   81] 0x014100CB  SELF       A=3 B=2 C=260 Bx=1284
+    0040 [line   81] 0x010080DC  CALL       A=3 B=2 C=2
+    0041 [line   82] 0x8280C018  LT         A=0 B=K[5]=0.0 C=R3
+    0042 [line   82] 0x80018016  JMP        A=0 sBx=7
+    0043 [line   83] 0x0141810B  SELF       A=4 B=2 C=262 Bx=1286
+    0044 [line   83] 0x01800180  MOVE       R6 = R3
+    0045 [line   83] 0x0180811C  CALL       A=4 B=3 C=2
+    0046 [line   84] 0x00020145  GETGLOBAL  R5 = GLOBAL K[8]='tostring'
+    0047 [line   84] 0x02000180  MOVE       R6 = R4
+    0048 [line   84] 0x0100815C  CALL       A=5 B=2 C=2
+    0049 [line   84] 0x85814009  SETTABLE   R0[K[11]='_engraved_name'] = R5
+    0050 [line   87] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0051 [line   87] 0x010000DE  RETURN     A=3 B=2 C=0
+    0052 [line   88] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 52
+    'prop_mask': 0 -> 52
+    'br': 0 -> 52
+    'nameSize': 16 -> 25
+    'bytes': 21 -> 25
+    'nameSize': 41 -> 50
+    'bytes': 46 -> 50
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x11AC
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 110 - 110
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  110] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  110] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line  110] 0x0100001E  RETURN     A=0 B=2 C=0
+    0003 [line  110] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 3
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x1213
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 115 - 118
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getAddon'
+    K[001] = 'id'
+    K[002] = 'type'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  116] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  116] 0x00C00046  GETTABLE   R1 = R1[K[0]='getAddon']
+    0002 [line  116] 0x00404086  GETTABLE   R2 = R0[K[1]='id']
+    0003 [line  116] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  117] 0x00C080C6  GETTABLE   R3 = R1[K[2]='type']
+    0005 [line  117] 0x010000DE  RETURN     A=3 B=2 C=0
+    0006 [line  118] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 6
+    'addonTemplate': 4 -> 6
+    '_': 4 -> 6
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x12DC
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 120 - 124
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getAddon'
+    K[001] = 'id'
+    K[002] = 'quality'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  121] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  121] 0x00C00046  GETTABLE   R1 = R1[K[0]='getAddon']
+    0002 [line  121] 0x00404086  GETTABLE   R2 = R0[K[1]='id']
+    0003 [line  121] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  123] 0x00C080C6  GETTABLE   R3 = R1[K[2]='quality']
+    0005 [line  123] 0x010000DE  RETURN     A=3 B=2 C=0
+    0006 [line  124] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 6
+    'addonTemplate': 4 -> 6
+    '_': 4 -> 6
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x13A8
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 126 - 132
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getAddon'
+    K[001] = 'id'
+    K[002] = 'rand'
+    K[003] = 'param2'
+    K[004] = 'param1'
+    K[005] = 0.999999
+    K[006] = 'math'
+    K[007] = 'floor'
+    K[008] = 100.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  127] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  127] 0x00C00046  GETTABLE   R1 = R1[K[0]='getAddon']
+    0002 [line  127] 0x00404086  GETTABLE   R2 = R0[K[1]='id']
+    0003 [line  127] 0x0100C05C  CALL       A=1 B=2 C=3
+    0004 [line  129] 0x004080C6  GETTABLE   R3 = R0[K[2]='rand']
+    0005 [line  129] 0x00C0C106  GETTABLE   R4 = R1[K[3]='param2']
+    0006 [line  129] 0x00C10146  GETTABLE   R5 = R1[K[4]='param1']
+    0007 [line  129] 0x0201410D  SUB        A=4 B=R4 C=R5
+    0008 [line  129] 0x0241410C  ADD        A=4 B=R4 C=K[5]=0.999999
+    0009 [line  129] 0x018100CE  MUL        A=3 B=R3 C=R4
+    0010 [line  130] 0x00018105  GETGLOBAL  R4 = GLOBAL K[6]='math'
+    0011 [line  130] 0x0241C106  GETTABLE   R4 = R4[K[7]='floor']
+    0012 [line  130] 0x01C2014F  DIV        A=5 B=R3 C=K[8]=100.0
+    0013 [line  130] 0x0100811C  CALL       A=4 B=2 C=2
+    0014 [line  130] 0x020000C0  MOVE       R3 = R4
+    0015 [line  131] 0x00C10106  GETTABLE   R4 = R1[K[4]='param1']
+    0016 [line  131] 0x0181010C  ADD        A=4 B=R3 C=R4
+    0017 [line  131] 0x0100011E  RETURN     A=4 B=2 C=0
+    0018 [line  132] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 18
+    'addonTemplate': 4 -> 18
+    '_': 4 -> 18
+    'value': 10 -> 18
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x1522
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 146 - 151
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'id'
+    K[001] = 0.0
+    K[002] = 'level'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  147] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  147] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line  148] 0x80404009  SETTABLE   R0[K[0]='id'] = K[1]=0.0
+    0003 [line  149] 0x81404009  SETTABLE   R0[K[2]='level'] = K[1]=0.0
+    0004 [line  150] 0x0100001E  RETURN     A=0 B=2 C=0
+    0005 [line  151] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 5
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x15BB
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 173 - 173
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  173] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  173] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  173] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x15FB
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 175 - 175
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  175] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  175] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  175] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x163B
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 176 - 176
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  176] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  176] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  176] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x167B
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 178 - 178
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  178] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  178] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  178] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x16BB
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 180 - 184
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Init'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  181] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  181] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line  182] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0003 [line  182] 0x0100405C  CALL       A=1 B=2 C=1
+    0004 [line  183] 0x0100001E  RETURN     A=0 B=2 C=0
+    0005 [line  184] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 5
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x1742
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 186 - 201
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'EXP_ADDONGRP_BASIC_COUNT'
+    K[002] = 'base_addon_rand'
+    K[003] = 0.0
+    K[004] = 'EXP_ADDON_GROUP_ADDON_COUNT'
+    K[005] = 'random_addon_flag'
+    K[006] = False
+    K[007] = 'random_addon_rand'
+    K[008] = 'EXP_SKILLPROPGRP_GEN_COUNT'
+    K[009] = 'skillprop_data'
+    K[010] = 'new'
+    K[011] = 'id'
+    K[012] = 'level'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  187] 0x00000041  LOADK      R1 = K[0]=1.0
+    0001 [line  187] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  187] 0x01404086  GETTABLE   R2 = R2[K[1]='EXP_ADDONGRP_BASIC_COUNT']
+    0003 [line  187] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0004 [line  187] 0x80004060  FORPREP    A=1 sBx=2
+    0005 [line  188] 0x00408146  GETTABLE   R5 = R0[K[2]='base_addon_rand']
+    0006 [line  188] 0x0240C149  SETTABLE   R5[R4] = K[3]=0.0
+    0007 [line  187] 0x7FFF005F  FORLOOP    A=1 sBx=-3
+    0008 [line  191] 0x00000041  LOADK      R1 = K[0]=1.0
+    0009 [line  191] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0010 [line  191] 0x01410086  GETTABLE   R2 = R2[K[4]='EXP_ADDON_GROUP_ADDON_COUNT']
+    0011 [line  191] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0012 [line  191] 0x8000C060  FORPREP    A=1 sBx=4
+    0013 [line  192] 0x00414146  GETTABLE   R5 = R0[K[5]='random_addon_flag']
+    0014 [line  192] 0x02418149  SETTABLE   R5[R4] = K[6]=False
+    0015 [line  193] 0x0041C146  GETTABLE   R5 = R0[K[7]='random_addon_rand']
+    0016 [line  193] 0x0240C149  SETTABLE   R5[R4] = K[3]=0.0
+    0017 [line  191] 0x7FFE805F  FORLOOP    A=1 sBx=-5
+    0018 [line  196] 0x00000041  LOADK      R1 = K[0]=1.0
+    0019 [line  196] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0020 [line  196] 0x01420086  GETTABLE   R2 = R2[K[8]='EXP_SKILLPROPGRP_GEN_COUNT']
+    0021 [line  196] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0022 [line  196] 0x80028060  FORPREP    A=1 sBx=11
+    0023 [line  197] 0x00424146  GETTABLE   R5 = R0[K[9]='skillprop_data']
+    0024 [line  197] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0025 [line  197] 0x03428186  GETTABLE   R6 = R6[K[10]='new']
+    0026 [line  197] 0x0080819C  CALL       A=6 B=1 C=2
+    0027 [line  197] 0x02018149  SETTABLE   R5[R4] = R6
+    0028 [line  198] 0x00424146  GETTABLE   R5 = R0[K[9]='skillprop_data']
+    0029 [line  198] 0x02810146  GETTABLE   R5 = R5[R4]
+    0030 [line  198] 0x85C0C149  SETTABLE   R5[K[11]='id'] = K[3]=0.0
+    0031 [line  199] 0x00424146  GETTABLE   R5 = R0[K[9]='skillprop_data']
+    0032 [line  199] 0x02810146  GETTABLE   R5 = R5[R4]
+    0033 [line  199] 0x8640C149  SETTABLE   R5[K[12]='level'] = K[3]=0.0
+    0034 [line  196] 0x7FFCC05F  FORLOOP    A=1 sBx=-12
+    0035 [line  201] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+    '(for index)': 4 -> 8
+    '(for limit)': 4 -> 8
+    '(for step)': 4 -> 8
+    'i': 5 -> 7
+    '(for index)': 12 -> 18
+    '(for limit)': 12 -> 18
+    '(for step)': 12 -> 18
+    'i': 13 -> 17
+    '(for index)': 22 -> 35
+    '(for limit)': 22 -> 35
+    '(for step)': 22 -> 35
+    'i': 23 -> 34
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x1AA7
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 203 - 238
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'id'
+    K[001] = 'ReadInt32'
+    K[002] = 'prop_mask'
+    K[003] = 'ReadByte'
+    K[004] = 'PM_BASE'
+    K[005] = 0.0
+    K[006] = 'basic_addon_count'
+    K[007] = 1.0
+    K[008] = 'basic_addon_rand'
+    K[009] = 'PM_RANDOM'
+    K[010] = 'random_addon_count'
+    K[011] = 'EXP_ADDON_GROUP_ADDON_COUNT'
+    K[012] = 'random_addon_flag'
+    K[013] = True
+    K[014] = 'random_addon_rand'
+    K[015] = 'PM_SKILL'
+    K[016] = 'skillprop_count'
+    K[017] = 'EXP_SKILLPROPGRP_GEN_COUNT'
+    K[018] = 'skillprop_data'
+    K[019] = 'level'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  204] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0001 [line  204] 0x0100809C  CALL       A=2 B=2 C=2
+    0002 [line  204] 0x80008009  SETTABLE   R0[K[0]='id'] = R2
+    0003 [line  205] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0004 [line  205] 0x0100809C  CALL       A=2 B=2 C=2
+    0005 [line  205] 0x81008009  SETTABLE   R0[K[2]='prop_mask'] = R2
+    0006 [line  207] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0007 [line  207] 0x004080C6  GETTABLE   R3 = R0[K[2]='prop_mask']
+    0008 [line  207] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0009 [line  207] 0x02410106  GETTABLE   R4 = R4[K[4]='PM_BASE']
+    0010 [line  207] 0x0180809C  CALL       A=2 B=3 C=2
+    0011 [line  207] 0x01414057  EQ         A=1 B=R2 C=K[5]=0.0
+    0012 [line  207] 0x8002C016  JMP        A=0 sBx=12
+    0013 [line  208] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0014 [line  208] 0x0100809C  CALL       A=2 B=2 C=2
+    0015 [line  208] 0x83008009  SETTABLE   R0[K[6]='basic_addon_count'] = R2
+    0016 [line  210] 0x0001C081  LOADK      R2 = K[7]=1.0
+    0017 [line  210] 0x004180C6  GETTABLE   R3 = R0[K[6]='basic_addon_count']
+    0018 [line  210] 0x0001C101  LOADK      R4 = K[7]=1.0
+    0019 [line  210] 0x8000C0A0  FORPREP    A=2 sBx=4
+    0020 [line  211] 0x00420186  GETTABLE   R6 = R0[K[8]='basic_addon_rand']
+    0021 [line  211] 0x00C0C1CB  SELF       A=7 B=1 C=259 Bx=771
+    0022 [line  211] 0x010081DC  CALL       A=7 B=2 C=2
+    0023 [line  211] 0x0281C189  SETTABLE   R6[R5] = R7
+    0024 [line  210] 0x7FFE809F  FORLOOP    A=2 sBx=-5
+    0025 [line  215] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0026 [line  215] 0x004080C6  GETTABLE   R3 = R0[K[2]='prop_mask']
+    0027 [line  215] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0028 [line  215] 0x02424106  GETTABLE   R4 = R4[K[9]='PM_RANDOM']
+    0029 [line  215] 0x0180809C  CALL       A=2 B=3 C=2
+    0030 [line  215] 0x01414057  EQ         A=1 B=R2 C=K[5]=0.0
+    0031 [line  215] 0x8005C016  JMP        A=0 sBx=24
+    0032 [line  216] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0033 [line  216] 0x0100809C  CALL       A=2 B=2 C=2
+    0034 [line  216] 0x85008009  SETTABLE   R0[K[10]='random_addon_count'] = R2
+    0035 [line  218] 0x0001C081  LOADK      R2 = K[7]=1.0
+    0036 [line  218] 0x004280C6  GETTABLE   R3 = R0[K[10]='random_addon_count']
+    0037 [line  218] 0x0001C101  LOADK      R4 = K[7]=1.0
+    0038 [line  218] 0x8003C0A0  FORPREP    A=2 sBx=16
+    0039 [line  219] 0x00C0C18B  SELF       A=6 B=1 C=259 Bx=771
+    0040 [line  219] 0x0100819C  CALL       A=6 B=2 C=2
+    0041 [line  220] 0x00C0C1CB  SELF       A=7 B=1 C=259 Bx=771
+    0042 [line  220] 0x010081DC  CALL       A=7 B=2 C=2
+    0043 [line  221] 0x82818019  LE         A=0 B=K[5]=0.0 C=R6
+    0044 [line  221] 0x80024016  JMP        A=0 sBx=10
+    0045 [line  221] 0x01000204  GETUPVAL   A=8 B=2 C=0 Bx=1024
+    0046 [line  221] 0x0442C206  GETTABLE   R8 = R8[K[11]='EXP_ADDON_GROUP_ADDON_COUNT']
+    0047 [line  221] 0x03020018  LT         A=0 B=R6 C=R8
+    0048 [line  221] 0x80014016  JMP        A=0 sBx=6
+    0049 [line  222] 0x00430206  GETTABLE   R8 = R0[K[12]='random_addon_flag']
+    0050 [line  222] 0x0341C24C  ADD        A=9 B=R6 C=K[7]=1.0
+    0051 [line  222] 0x04C34209  SETTABLE   R8[R9] = K[13]=True
+    0052 [line  223] 0x00438206  GETTABLE   R8 = R0[K[14]='random_addon_rand']
+    0053 [line  223] 0x0341C24C  ADD        A=9 B=R6 C=K[7]=1.0
+    0054 [line  223] 0x0481C209  SETTABLE   R8[R9] = R7
+    0055 [line  218] 0x7FFB809F  FORLOOP    A=2 sBx=-17
+    0056 [line  228] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0057 [line  228] 0x004080C6  GETTABLE   R3 = R0[K[2]='prop_mask']
+    0058 [line  228] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0059 [line  228] 0x0243C106  GETTABLE   R4 = R4[K[15]='PM_SKILL']
+    0060 [line  228] 0x0180809C  CALL       A=2 B=3 C=2
+    0061 [line  228] 0x01414057  EQ         A=1 B=R2 C=K[5]=0.0
+    0062 [line  228] 0x80058016  JMP        A=0 sBx=23
+    0063 [line  229] 0x00C0C08B  SELF       A=2 B=1 C=259 Bx=771
+    0064 [line  229] 0x0100809C  CALL       A=2 B=2 C=2
+    0065 [line  229] 0x88008009  SETTABLE   R0[K[16]='skillprop_count'] = R2
+    0066 [line  231] 0x00440086  GETTABLE   R2 = R0[K[16]='skillprop_count']
+    0067 [line  231] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0068 [line  231] 0x01C440C6  GETTABLE   R3 = R3[K[17]='EXP_SKILLPROPGRP_GEN_COUNT']
+    0069 [line  231] 0x0100C019  LE         A=0 B=R2 C=R3
+    0070 [line  231] 0x80038016  JMP        A=0 sBx=15
+    0071 [line  232] 0x0001C081  LOADK      R2 = K[7]=1.0
+    0072 [line  232] 0x004400C6  GETTABLE   R3 = R0[K[16]='skillprop_count']
+    0073 [line  232] 0x0001C101  LOADK      R4 = K[7]=1.0
+    0074 [line  232] 0x800240A0  FORPREP    A=2 sBx=10
+    0075 [line  233] 0x00448186  GETTABLE   R6 = R0[K[18]='skillprop_data']
+    0076 [line  233] 0x03014186  GETTABLE   R6 = R6[R5]
+    0077 [line  233] 0x00C041CB  SELF       A=7 B=1 C=257 Bx=769
+    0078 [line  233] 0x010081DC  CALL       A=7 B=2 C=2
+    0079 [line  233] 0x8001C189  SETTABLE   R6[K[0]='id'] = R7
+    0080 [line  234] 0x00448186  GETTABLE   R6 = R0[K[18]='skillprop_data']
+    0081 [line  234] 0x03014186  GETTABLE   R6 = R6[R5]
+    0082 [line  234] 0x00C0C1CB  SELF       A=7 B=1 C=259 Bx=771
+    0083 [line  234] 0x010081DC  CALL       A=7 B=2 C=2
+    0084 [line  234] 0x8981C189  SETTABLE   R6[K[19]='level'] = R7
+    0085 [line  232] 0x7FFD009F  FORLOOP    A=2 sBx=-11
+    0086 [line  238] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 86
+    'dr': 0 -> 86
+    '(for index)': 19 -> 25
+    '(for limit)': 19 -> 25
+    '(for step)': 19 -> 25
+    'i': 20 -> 24
+    '(for index)': 38 -> 56
+    '(for limit)': 38 -> 56
+    '(for step)': 38 -> 56
+    'i': 39 -> 55
+    'index': 41 -> 55
+    'addon_rand': 43 -> 55
+    '(for index)': 74 -> 86
+    '(for limit)': 74 -> 86
+    '(for step)': 74 -> 86
+    'i': 75 -> 85
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x2052
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 242 - 270
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'getAddonGroup'
+    K[001] = 'id'
+    K[002] = 1.0
+    K[003] = 'EXP_ADDONGRP_BASIC_COUNT'
+    K[004] = 'id_basic_addon'
+    K[005] = 0.0
+    K[006] = 'new'
+    K[007] = 'rand'
+    K[008] = 'basic_addon_rand'
+    K[009] = 'table'
+    K[010] = 'insert'
+    K[011] = 'EXP_ADDON_GROUP_ADDON_COUNT'
+    K[012] = 'random_addon_flag'
+    K[013] = 'addons'
+    K[014] = 'random_addon_rand'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  243] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0001 [line  244] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  244] 0x01400086  GETTABLE   R2 = R2[K[0]='getAddonGroup']
+    0003 [line  244] 0x004040C6  GETTABLE   R3 = R0[K[1]='id']
+    0004 [line  244] 0x0100C09C  CALL       A=2 B=2 C=3
+    0005 [line  246] 0x0000409A  TEST       A=2 B=0 C=1
+    0006 [line  246] 0x80004016  JMP        A=0 sBx=2
+    0007 [line  246] 0x0000010A  NEWTABLE   A=4 B=0 C=0 Bx=0
+    0008 [line  246] 0x0100011E  RETURN     A=4 B=2 C=0
+    0009 [line  249] 0x00008101  LOADK      R4 = K[2]=1.0
+    0010 [line  249] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0011 [line  249] 0x02C0C146  GETTABLE   R5 = R5[K[3]='EXP_ADDONGRP_BASIC_COUNT']
+    0012 [line  249] 0x00008181  LOADK      R6 = K[2]=1.0
+    0013 [line  249] 0x8003C120  FORPREP    A=4 sBx=16
+    0014 [line  250] 0x01410206  GETTABLE   R8 = R2[K[4]='id_basic_addon']
+    0015 [line  250] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0016 [line  251] 0x04414057  EQ         A=1 B=R8 C=K[5]=0.0
+    0017 [line  251] 0x8002C016  JMP        A=0 sBx=12
+    0018 [line  252] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0019 [line  252] 0x04C18246  GETTABLE   R9 = R9[K[6]='new']
+    0020 [line  252] 0x0080825C  CALL       A=9 B=1 C=2
+    0021 [line  253] 0x80820249  SETTABLE   R9[K[1]='id'] = R8
+    0022 [line  254] 0x00420286  GETTABLE   R10 = R0[K[8]='basic_addon_rand']
+    0023 [line  254] 0x0501C286  GETTABLE   R10 = R10[R7]
+    0024 [line  254] 0x83828249  SETTABLE   R9[K[7]='rand'] = R10
+    0025 [line  255] 0x00024285  GETGLOBAL  R10 = GLOBAL K[9]='table'
+    0026 [line  255] 0x05428286  GETTABLE   R10 = R10[K[10]='insert']
+    0027 [line  255] 0x008002C0  MOVE       R11 = R1
+    0028 [line  255] 0x04800300  MOVE       R12 = R9
+    0029 [line  255] 0x0180429C  CALL       A=10 B=3 C=1
+    0030 [line  249] 0x7FFB811F  FORLOOP    A=4 sBx=-17
+    0031 [line  258] 0x00008101  LOADK      R4 = K[2]=1.0
+    0032 [line  258] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0033 [line  258] 0x02C2C146  GETTABLE   R5 = R5[K[11]='EXP_ADDON_GROUP_ADDON_COUNT']
+    0034 [line  258] 0x00008181  LOADK      R6 = K[2]=1.0
+    0035 [line  258] 0x80050120  FORPREP    A=4 sBx=21
+    0036 [line  259] 0x00430206  GETTABLE   R8 = R0[K[12]='random_addon_flag']
+    0037 [line  259] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0038 [line  259] 0x0000021A  TEST       A=8 B=0 C=0
+    0039 [line  259] 0x80040016  JMP        A=0 sBx=17
+    0040 [line  260] 0x01434206  GETTABLE   R8 = R2[K[13]='addons']
+    0041 [line  260] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0042 [line  260] 0x04404206  GETTABLE   R8 = R8[K[1]='id']
+    0043 [line  261] 0x04414057  EQ         A=1 B=R8 C=K[5]=0.0
+    0044 [line  261] 0x8002C016  JMP        A=0 sBx=12
+    0045 [line  262] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0046 [line  262] 0x04C18246  GETTABLE   R9 = R9[K[6]='new']
+    0047 [line  262] 0x0080825C  CALL       A=9 B=1 C=2
+    0048 [line  263] 0x80820249  SETTABLE   R9[K[1]='id'] = R8
+    0049 [line  264] 0x00438286  GETTABLE   R10 = R0[K[14]='random_addon_rand']
+    0050 [line  264] 0x0501C286  GETTABLE   R10 = R10[R7]
+    0051 [line  264] 0x83828249  SETTABLE   R9[K[7]='rand'] = R10
+    0052 [line  265] 0x00024285  GETGLOBAL  R10 = GLOBAL K[9]='table'
+    0053 [line  265] 0x05428286  GETTABLE   R10 = R10[K[10]='insert']
+    0054 [line  265] 0x008002C0  MOVE       R11 = R1
+    0055 [line  265] 0x04800300  MOVE       R12 = R9
+    0056 [line  265] 0x0180429C  CALL       A=10 B=3 C=1
+    0057 [line  258] 0x7FFA411F  FORLOOP    A=4 sBx=-22
+    0058 [line  269] 0x0100005E  RETURN     A=1 B=2 C=0
+    0059 [line  270] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 59
+    'allAddons': 1 -> 59
+    'addonGroupTemplate': 5 -> 59
+    '_': 5 -> 59
+    '(for index)': 13 -> 31
+    '(for limit)': 13 -> 31
+    '(for step)': 13 -> 31
+    'i': 14 -> 30
+    'addonId': 16 -> 30
+    'data': 21 -> 30
+    '(for index)': 35 -> 58
+    '(for limit)': 35 -> 58
+    '(for step)': 35 -> 58
+    'i': 36 -> 57
+    'addonId': 43 -> 57
+    'data': 48 -> 57
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x24CD
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 283 - 283
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  283] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  283] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  283] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x250D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 284 - 284
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  284] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  284] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  284] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x254D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 285 - 285
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  285] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  285] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  285] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x258D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 286 - 286
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  286] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  286] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  286] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x25CD
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 289 - 289
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  289] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  289] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  289] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x260D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 292 - 292
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  292] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  292] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  292] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.24
+    Offset : 0x264D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 293 - 293
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  293] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  293] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  293] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.25
+    Offset : 0x268D
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 294 - 294
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  294] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line  294] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  294] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.26
+    Offset : 0x26CD
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 296 - 310
+    Params : 0
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_fixed_ess'
+    K[001] = 'new'
+    K[002] = 1.0
+    K[003] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[004] = '_base_addon_group'
+    K[005] = 'EQUIP_MULTI_REFRESH_COUNT'
+    K[006] = '_base_addon_group_refresh_backup'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  297] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  297] 0x0080801C  CALL       A=0 B=1 C=2
+    0002 [line  298] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0003 [line  298] 0x00C04046  GETTABLE   R1 = R1[K[1]='new']
+    0004 [line  298] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line  298] 0x80004009  SETTABLE   R0[K[0]='_fixed_ess'] = R1
+    0006 [line  299] 0x00008041  LOADK      R1 = K[2]=1.0
+    0007 [line  299] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+    0008 [line  299] 0x0140C086  GETTABLE   R2 = R2[K[3]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0009 [line  299] 0x000080C1  LOADK      R3 = K[2]=1.0
+    0010 [line  299] 0x80010060  FORPREP    A=1 sBx=5
+    0011 [line  300] 0x00410146  GETTABLE   R5 = R0[K[4]='_base_addon_group']
+    0012 [line  300] 0x01800184  GETUPVAL   A=6 B=3 C=0 Bx=1536
+    0013 [line  300] 0x03404186  GETTABLE   R6 = R6[K[1]='new']
+    0014 [line  300] 0x0080819C  CALL       A=6 B=1 C=2
+    0015 [line  300] 0x02018149  SETTABLE   R5[R4] = R6
+    0016 [line  299] 0x7FFE405F  FORLOOP    A=1 sBx=-6
+    0017 [line  302] 0x00008041  LOADK      R1 = K[2]=1.0
+    0018 [line  302] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+    0019 [line  302] 0x01414086  GETTABLE   R2 = R2[K[5]='EQUIP_MULTI_REFRESH_COUNT']
+    0020 [line  302] 0x000080C1  LOADK      R3 = K[2]=1.0
+    0021 [line  302] 0x80030060  FORPREP    A=1 sBx=13
+    0022 [line  303] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0023 [line  304] 0x00008181  LOADK      R6 = K[2]=1.0
+    0024 [line  304] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0025 [line  304] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0026 [line  304] 0x00008201  LOADK      R8 = K[2]=1.0
+    0027 [line  304] 0x8000C1A0  FORPREP    A=6 sBx=4
+    0028 [line  305] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0029 [line  305] 0x05404286  GETTABLE   R10 = R10[K[1]='new']
+    0030 [line  305] 0x0080829C  CALL       A=10 B=1 C=2
+    0031 [line  305] 0x04828149  SETTABLE   R5[R9] = R10
+    0032 [line  304] 0x7FFE819F  FORLOOP    A=6 sBx=-5
+    0033 [line  307] 0x00418186  GETTABLE   R6 = R0[K[6]='_base_addon_group_refresh_backup']
+    0034 [line  307] 0x02014189  SETTABLE   R6[R4] = R5
+    0035 [line  302] 0x7FFC405F  FORLOOP    A=1 sBx=-14
+    0036 [line  309] 0x0100001E  RETURN     A=0 B=2 C=0
+    0037 [line  310] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'obj': 2 -> 37
+    '(for index)': 10 -> 17
+    '(for limit)': 10 -> 17
+    '(for step)': 10 -> 17
+    'i': 11 -> 16
+    '(for index)': 21 -> 36
+    '(for limit)': 21 -> 36
+    '(for step)': 21 -> 36
+    'i': 22 -> 35
+    'temp': 23 -> 35
+    '(for index)': 27 -> 33
+    '(for limit)': 27 -> 33
+    '(for step)': 27 -> 33
+    'j': 28 -> 32
+
+    ============================================================
+    PROTO ROOT.27
+    Offset : 0x2A4A
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 312 - 313
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  313] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 0
+
+    ============================================================
+    PROTO ROOT.28
+    Offset : 0x2A8B
+    Source : '@lua\\inventory\\ecivtrequip.lua'
+    Lines  : 315 - 413
+    Params : 4
+    Stack  : 22
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'EssenceContainerRep'
+    K[001] = 'new'
+    K[002] = 'UnmarshalBytes'
+    K[003] = 'pairs'
+    K[004] = 'entries'
+    K[005] = 'id'
+    K[006] = 'buf_type'
+    K[007] = 'ITEM_ESSENCE_ID_EQUIP_FIXED_1'
+    K[008] = 'equip_fixed_data'
+    K[009] = 'bytes'
+    K[010] = '_fixed_ess'
+    K[011] = 'grade'
+    K[012] = 'quality'
+    K[013] = 'star'
+    K[014] = 'base_addon_count'
+    K[015] = 'ITEM_ESSENCE_ID_EQUIP_ADDON_1'
+    K[016] = 'BinaryReader'
+    K[017] = 'CreateFromLuaString'
+    K[018] = 1.0
+    K[019] = '_base_addon_group'
+    K[020] = 'FillData'
+    K[021] = 'EQUIP_MULTI_REFRESH_COUNT'
+    K[022] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[023] = '_base_addon_group_refresh_backup'
+    K[024] = 'ITEM_ESSENCE_ESTONE_DATA_1'
+    K[025] = 'ReadByte'
+    K[026] = 'm_gems'
+    K[027] = 'ReadInt32'
+    K[028] = 'ITEM_ESSENCE_ID_EQUIP_WING'
+    K[029] = '_train_num'
+    K[030] = '_train_level'
+    K[031] = '_current_equip_surface'
+    K[032] = '_wing_dyn_surfaces'
+    K[033] = 'table'
+    K[034] = 'insert'
+    K[035] = 'ITEM_ESSENCE_DELAY_GIFT'
+    K[036] = 'ITEM_ESSENCE_WING_REFINE_SOUL'
+    K[037] = 'require'
+    K[038] = 'PB.pb_helper'
+    K[039] = 'PB.net_common'
+    K[040] = 'db_refine_surfaces'
+    K[041] = 'ParseFromString'
+    K[042] = '_wing_soul_data'
+    K[043] = 'surfaces'
+    K[044] = 'ITEM_ESSENCE_EQUIP_FIX_DATA'
+    K[045] = 'db_equip_fixed_data'
+    K[046] = '_rank'
+    K[047] = 'rank'
+    K[048] = 'ipairs'
+    K[049] = 'mingwens'
+    K[050] = 'm_wingwens'
+    K[051] = 'm_petequip_souls'
+    K[052] = 'souls'
+    K[053] = 'ITEM_ESSENCE_EQUIP_DUANZAO'
+    K[054] = 'db_equip_forging'
+    K[055] = 'soul'
+    K[056] = 'm_duanzao'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  316] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line  316] 0x02400106  GETTABLE   R4 = R4[K[0]='EssenceContainerRep']
+    0002 [line  316] 0x02404106  GETTABLE   R4 = R4[K[1]='new']
+    0003 [line  316] 0x0080811C  CALL       A=4 B=1 C=2
+    0004 [line  317] 0x0240814B  SELF       A=5 B=4 C=258 Bx=2306
+    0005 [line  317] 0x008001C0  MOVE       R7 = R1
+    0006 [line  317] 0x0180415C  CALL       A=5 B=3 C=1
+    0007 [line  318] 0x0000C145  GETGLOBAL  R5 = GLOBAL K[3]='pairs'
+    0008 [line  318] 0x02410186  GETTABLE   R6 = R4[K[4]='entries']
+    0009 [line  318] 0x0101015C  CALL       A=5 B=2 C=4
+    0010 [line  318] 0x8036C016  JMP        A=0 sBx=220
+    0011 [line  320] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0012 [line  320] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0013 [line  320] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0014 [line  320] 0x05C1C2C6  GETTABLE   R11 = R11[K[7]='ITEM_ESSENCE_ID_EQUIP_FIXED_1']
+    0015 [line  320] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0016 [line  320] 0x8004C016  JMP        A=0 sBx=20
+    0017 [line  321] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0018 [line  321] 0x05420286  GETTABLE   R10 = R10[K[8]='equip_fixed_data']
+    0019 [line  321] 0x05404286  GETTABLE   R10 = R10[K[1]='new']
+    0020 [line  321] 0x0080829C  CALL       A=10 B=1 C=2
+    0021 [line  322] 0x054082CB  SELF       A=11 B=10 C=258 Bx=5378
+    0022 [line  322] 0x04C24346  GETTABLE   R13 = R9[K[9]='bytes']
+    0023 [line  322] 0x018042DC  CALL       A=11 B=3 C=1
+    0024 [line  323] 0x004282C6  GETTABLE   R11 = R0[K[10]='_fixed_ess']
+    0025 [line  323] 0x0542C306  GETTABLE   R12 = R10[K[11]='grade']
+    0026 [line  323] 0x858302C9  SETTABLE   R11[K[11]='grade'] = R12
+    0027 [line  324] 0x004282C6  GETTABLE   R11 = R0[K[10]='_fixed_ess']
+    0028 [line  324] 0x05430306  GETTABLE   R12 = R10[K[12]='quality']
+    0029 [line  324] 0x860302C9  SETTABLE   R11[K[12]='quality'] = R12
+    0030 [line  325] 0x004282C6  GETTABLE   R11 = R0[K[10]='_fixed_ess']
+    0031 [line  325] 0x05434306  GETTABLE   R12 = R10[K[13]='star']
+    0032 [line  325] 0x868302C9  SETTABLE   R11[K[13]='star'] = R12
+    0033 [line  326] 0x004282C6  GETTABLE   R11 = R0[K[10]='_fixed_ess']
+    0034 [line  326] 0x05438306  GETTABLE   R12 = R10[K[14]='base_addon_count']
+    0035 [line  326] 0x870302C9  SETTABLE   R11[K[14]='base_addon_count'] = R12
+    0036 [line  326] 0x80304016  JMP        A=0 sBx=194
+    0037 [line  327] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0038 [line  327] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0039 [line  327] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0040 [line  327] 0x05C3C2C6  GETTABLE   R11 = R11[K[15]='ITEM_ESSENCE_ID_EQUIP_ADDON_1']
+    0041 [line  327] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0042 [line  327] 0x80084016  JMP        A=0 sBx=34
+    0043 [line  328] 0x00040285  GETGLOBAL  R10 = GLOBAL K[16]='BinaryReader'
+    0044 [line  328] 0x05444286  GETTABLE   R10 = R10[K[17]='CreateFromLuaString']
+    0045 [line  328] 0x04C242C6  GETTABLE   R11 = R9[K[9]='bytes']
+    0046 [line  328] 0x0100829C  CALL       A=10 B=2 C=2
+    0047 [line  329] 0x000482C1  LOADK      R11 = K[18]=1.0
+    0048 [line  329] 0x00428306  GETTABLE   R12 = R0[K[10]='_fixed_ess']
+    0049 [line  329] 0x06438306  GETTABLE   R12 = R12[K[14]='base_addon_count']
+    0050 [line  329] 0x00048341  LOADK      R13 = K[18]=1.0
+    0051 [line  329] 0x800102E0  FORPREP    A=11 sBx=5
+    0052 [line  330] 0x0044C3C6  GETTABLE   R15 = R0[K[19]='_base_addon_group']
+    0053 [line  330] 0x078383C6  GETTABLE   R15 = R15[R14]
+    0054 [line  330] 0x07C503CB  SELF       A=15 B=15 C=276 Bx=7956
+    0055 [line  330] 0x05000440  MOVE       R17 = R10
+    0056 [line  330] 0x018043DC  CALL       A=15 B=3 C=1
+    0057 [line  329] 0x7FFE42DF  FORLOOP    A=11 sBx=-6
+    0058 [line  332] 0x000482C1  LOADK      R11 = K[18]=1.0
+    0059 [line  332] 0x01000304  GETUPVAL   A=12 B=2 C=0 Bx=1024
+    0060 [line  332] 0x06454306  GETTABLE   R12 = R12[K[21]='EQUIP_MULTI_REFRESH_COUNT']
+    0061 [line  332] 0x00048341  LOADK      R13 = K[18]=1.0
+    0062 [line  332] 0x8002C2E0  FORPREP    A=11 sBx=12
+    0063 [line  333] 0x000483C1  LOADK      R15 = K[18]=1.0
+    0064 [line  333] 0x01000404  GETUPVAL   A=16 B=2 C=0 Bx=1024
+    0065 [line  333] 0x08458406  GETTABLE   R16 = R16[K[22]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0066 [line  333] 0x00048441  LOADK      R17 = K[18]=1.0
+    0067 [line  333] 0x800143E0  FORPREP    A=15 sBx=6
+    0068 [line  334] 0x0045C4C6  GETTABLE   R19 = R0[K[23]='_base_addon_group_refresh_backup']
+    0069 [line  334] 0x098384C6  GETTABLE   R19 = R19[R14]
+    0070 [line  334] 0x098484C6  GETTABLE   R19 = R19[R18]
+    0071 [line  334] 0x09C504CB  SELF       A=19 B=19 C=276 Bx=10004
+    0072 [line  334] 0x05000540  MOVE       R21 = R10
+    0073 [line  334] 0x018044DC  CALL       A=19 B=3 C=1
+    0074 [line  333] 0x7FFE03DF  FORLOOP    A=15 sBx=-7
+    0075 [line  332] 0x7FFC82DF  FORLOOP    A=11 sBx=-13
+    0076 [line  336] 0x80264016  JMP        A=0 sBx=154
+    0077 [line  337] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0078 [line  337] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0079 [line  337] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0080 [line  337] 0x05C602C6  GETTABLE   R11 = R11[K[24]='ITEM_ESSENCE_ESTONE_DATA_1']
+    0081 [line  337] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0082 [line  337] 0x80044016  JMP        A=0 sBx=18
+    0083 [line  338] 0x00040285  GETGLOBAL  R10 = GLOBAL K[16]='BinaryReader'
+    0084 [line  338] 0x05444286  GETTABLE   R10 = R10[K[17]='CreateFromLuaString']
+    0085 [line  338] 0x04C242C6  GETTABLE   R11 = R9[K[9]='bytes']
+    0086 [line  338] 0x0100829C  CALL       A=10 B=2 C=2
+    0087 [line  339] 0x054642CB  SELF       A=11 B=10 C=281 Bx=5401
+    0088 [line  339] 0x010082DC  CALL       A=11 B=2 C=2
+    0089 [line  340] 0x0000030A  NEWTABLE   A=12 B=0 C=0 Bx=0
+    0090 [line  340] 0x8D030009  SETTABLE   R0[K[26]='m_gems'] = R12
+    0091 [line  341] 0x00048301  LOADK      R12 = K[18]=1.0
+    0092 [line  341] 0x05800340  MOVE       R13 = R11
+    0093 [line  341] 0x00048381  LOADK      R14 = K[18]=1.0
+    0094 [line  341] 0x8000C320  FORPREP    A=12 sBx=4
+    0095 [line  342] 0x0546C40B  SELF       A=16 B=10 C=283 Bx=5403
+    0096 [line  342] 0x0100841C  CALL       A=16 B=2 C=2
+    0097 [line  343] 0x00468446  GETTABLE   R17 = R0[K[26]='m_gems']
+    0098 [line  343] 0x07840449  SETTABLE   R17[R15] = R16
+    0099 [line  341] 0x7FFE831F  FORLOOP    A=12 sBx=-5
+    0100 [line  344] 0x80204016  JMP        A=0 sBx=130
+    0101 [line  345] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0102 [line  345] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0103 [line  345] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0104 [line  345] 0x05C702C6  GETTABLE   R11 = R11[K[28]='ITEM_ESSENCE_ID_EQUIP_WING']
+    0105 [line  345] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0106 [line  345] 0x80098016  JMP        A=0 sBx=39
+    0107 [line  346] 0x00040285  GETGLOBAL  R10 = GLOBAL K[16]='BinaryReader'
+    0108 [line  346] 0x05444286  GETTABLE   R10 = R10[K[17]='CreateFromLuaString']
+    0109 [line  346] 0x04C242C6  GETTABLE   R11 = R9[K[9]='bytes']
+    0110 [line  346] 0x0100829C  CALL       A=10 B=2 C=2
+    0111 [line  347] 0x000482C1  LOADK      R11 = K[18]=1.0
+    0112 [line  347] 0x01800304  GETUPVAL   A=12 B=3 C=0 Bx=1536
+    0113 [line  347] 0x00048341  LOADK      R13 = K[18]=1.0
+    0114 [line  347] 0x8000C2E0  FORPREP    A=11 sBx=4
+    0115 [line  348] 0x004743C6  GETTABLE   R15 = R0[K[29]='_train_num']
+    0116 [line  348] 0x0546C40B  SELF       A=16 B=10 C=283 Bx=5403
+    0117 [line  348] 0x0100841C  CALL       A=16 B=2 C=2
+    0118 [line  348] 0x070403C9  SETTABLE   R15[R14] = R16
+    0119 [line  347] 0x7FFE82DF  FORLOOP    A=11 sBx=-5
+    0120 [line  350] 0x0546C2CB  SELF       A=11 B=10 C=283 Bx=5403
+    0121 [line  350] 0x010082DC  CALL       A=11 B=2 C=2
+    0122 [line  350] 0x8F02C009  SETTABLE   R0[K[30]='_train_level'] = R11
+    0123 [line  351] 0x0546C2CB  SELF       A=11 B=10 C=283 Bx=5403
+    0124 [line  351] 0x010082DC  CALL       A=11 B=2 C=2
+    0125 [line  351] 0x8F82C009  SETTABLE   R0[K[31]='_current_equip_surface'] = R11
+    0126 [line  352] 0x054642CB  SELF       A=11 B=10 C=281 Bx=5401
+    0127 [line  352] 0x010082DC  CALL       A=11 B=2 C=2
+    0128 [line  353] 0x0000030A  NEWTABLE   A=12 B=0 C=0 Bx=0
+    0129 [line  353] 0x90030009  SETTABLE   R0[K[32]='_wing_dyn_surfaces'] = R12
+    0130 [line  354] 0x00048301  LOADK      R12 = K[18]=1.0
+    0131 [line  354] 0x05800340  MOVE       R13 = R11
+    0132 [line  354] 0x00048381  LOADK      R14 = K[18]=1.0
+    0133 [line  354] 0x80024320  FORPREP    A=12 sBx=10
+    0134 [line  355] 0x0546C40B  SELF       A=16 B=10 C=283 Bx=5403
+    0135 [line  355] 0x0100841C  CALL       A=16 B=2 C=2
+    0136 [line  356] 0x0546C44B  SELF       A=17 B=10 C=283 Bx=5403
+    0137 [line  356] 0x0100845C  CALL       A=17 B=2 C=2
+    0138 [line  357] 0x00084485  GETGLOBAL  R18 = GLOBAL K[33]='table'
+    0139 [line  357] 0x09488486  GETTABLE   R18 = R18[K[34]='insert']
+    0140 [line  357] 0x004804C6  GETTABLE   R19 = R0[K[32]='_wing_dyn_surfaces']
+    0141 [line  357] 0x08000500  MOVE       R20 = R16
+    0142 [line  357] 0x08800540  MOVE       R21 = R17
+    0143 [line  357] 0x0200449C  CALL       A=18 B=4 C=1
+    0144 [line  354] 0x7FFD031F  FORLOOP    A=12 sBx=-11
+    0145 [line  358] 0x80150016  JMP        A=0 sBx=85
+    0146 [line  359] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0147 [line  359] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0148 [line  359] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0149 [line  359] 0x05C8C2C6  GETTABLE   R11 = R11[K[35]='ITEM_ESSENCE_DELAY_GIFT']
+    0150 [line  359] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0151 [line  359] 0x80000016  JMP        A=0 sBx=1
+    0152 [line  359] 0x80134016  JMP        A=0 sBx=78
+    0153 [line  361] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0154 [line  361] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0155 [line  361] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0156 [line  361] 0x05C902C6  GETTABLE   R11 = R11[K[36]='ITEM_ESSENCE_WING_REFINE_SOUL']
+    0157 [line  361] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0158 [line  361] 0x80038016  JMP        A=0 sBx=15
+    0159 [line  364] 0x00094285  GETGLOBAL  R10 = GLOBAL K[37]='require'
+    0160 [line  364] 0x000982C1  LOADK      R11 = K[38]='PB.pb_helper'
+    0161 [line  364] 0x0100829C  CALL       A=10 B=2 C=2
+    0162 [line  365] 0x000942C5  GETGLOBAL  R11 = GLOBAL K[37]='require'
+    0163 [line  365] 0x0009C301  LOADK      R12 = K[39]='PB.net_common'
+    0164 [line  365] 0x010082DC  CALL       A=11 B=2 C=2
+    0165 [line  366] 0x05CA0306  GETTABLE   R12 = R11[K[40]='db_refine_surfaces']
+    0166 [line  367] 0x06000340  MOVE       R13 = R12
+    0167 [line  367] 0x0080835C  CALL       A=13 B=1 C=2
+    0168 [line  368] 0x06CA438B  SELF       A=14 B=13 C=297 Bx=6953
+    0169 [line  368] 0x04C24406  GETTABLE   R16 = R9[K[9]='bytes']
+    0170 [line  368] 0x0180439C  CALL       A=14 B=3 C=1
+    0171 [line  369] 0x06CAC386  GETTABLE   R14 = R13[K[43]='surfaces']
+    0172 [line  369] 0x95038009  SETTABLE   R0[K[42]='_wing_soul_data'] = R14
+    0173 [line  369] 0x800E0016  JMP        A=0 sBx=57
+    0174 [line  373] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0175 [line  373] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0176 [line  373] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0177 [line  373] 0x05CB02C6  GETTABLE   R11 = R11[K[44]='ITEM_ESSENCE_EQUIP_FIX_DATA']
+    0178 [line  373] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0179 [line  373] 0x80060016  JMP        A=0 sBx=25
+    0180 [line  375] 0x00094285  GETGLOBAL  R10 = GLOBAL K[37]='require'
+    0181 [line  375] 0x000982C1  LOADK      R11 = K[38]='PB.pb_helper'
+    0182 [line  375] 0x0100829C  CALL       A=10 B=2 C=2
+    0183 [line  376] 0x000942C5  GETGLOBAL  R11 = GLOBAL K[37]='require'
+    0184 [line  376] 0x0009C301  LOADK      R12 = K[39]='PB.net_common'
+    0185 [line  376] 0x010082DC  CALL       A=11 B=2 C=2
+    0186 [line  377] 0x05CB4306  GETTABLE   R12 = R11[K[45]='db_equip_fixed_data']
+    0187 [line  378] 0x06000340  MOVE       R13 = R12
+    0188 [line  378] 0x0080835C  CALL       A=13 B=1 C=2
+    0189 [line  379] 0x06CA438B  SELF       A=14 B=13 C=297 Bx=6953
+    0190 [line  379] 0x04C24406  GETTABLE   R16 = R9[K[9]='bytes']
+    0191 [line  379] 0x0180439C  CALL       A=14 B=3 C=1
+    0192 [line  380] 0x06CBC386  GETTABLE   R14 = R13[K[47]='rank']
+    0193 [line  380] 0x97038009  SETTABLE   R0[K[46]='_rank'] = R14
+    0194 [line  381] 0x000C0385  GETGLOBAL  R14 = GLOBAL K[48]='ipairs'
+    0195 [line  381] 0x06CC43C6  GETTABLE   R15 = R13[K[49]='mingwens']
+    0196 [line  381] 0x0101039C  CALL       A=14 B=2 C=4
+    0197 [line  381] 0x80004016  JMP        A=0 sBx=2
+    0198 [line  382] 0x004C84C6  GETTABLE   R19 = R0[K[50]='m_wingwens']
+    0199 [line  382] 0x088484C9  SETTABLE   R19[R17] = R18
+    0200 [line  381] 0x000083A1  TFORLOOP   A=14 B=0 C=2
+    0201 [line  382] 0x7FFEC016  JMP        A=0 sBx=-4
+    0202 [line  384] 0x06CD0386  GETTABLE   R14 = R13[K[52]='souls']
+    0203 [line  384] 0x99838009  SETTABLE   R0[K[51]='m_petequip_souls'] = R14
+    0204 [line  384] 0x80064016  JMP        A=0 sBx=26
+    0205 [line  385] 0x04C14286  GETTABLE   R10 = R9[K[5]='id']
+    0206 [line  385] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0207 [line  385] 0x05C182C6  GETTABLE   R11 = R11[K[6]='buf_type']
+    0208 [line  385] 0x05CD42C6  GETTABLE   R11 = R11[K[53]='ITEM_ESSENCE_EQUIP_DUANZAO']
+    0209 [line  385] 0x0502C017  EQ         A=0 B=R10 C=R11
+    0210 [line  385] 0x8004C016  JMP        A=0 sBx=20
+    0211 [line  386] 0x00094285  GETGLOBAL  R10 = GLOBAL K[37]='require'
+    0212 [line  386] 0x000982C1  LOADK      R11 = K[38]='PB.pb_helper'
+    0213 [line  386] 0x0100829C  CALL       A=10 B=2 C=2
+    0214 [line  387] 0x000942C5  GETGLOBAL  R11 = GLOBAL K[37]='require'
+    0215 [line  387] 0x0009C301  LOADK      R12 = K[39]='PB.net_common'
+    0216 [line  387] 0x010082DC  CALL       A=11 B=2 C=2
+    0217 [line  388] 0x05CD8306  GETTABLE   R12 = R11[K[54]='db_equip_forging']
+    0218 [line  389] 0x06000340  MOVE       R13 = R12
+    0219 [line  389] 0x0080835C  CALL       A=13 B=1 C=2
+    0220 [line  390] 0x06CA438B  SELF       A=14 B=13 C=297 Bx=6953
+    0221 [line  390] 0x04C24406  GETTABLE   R16 = R9[K[9]='bytes']
+    0222 [line  390] 0x0180439C  CALL       A=14 B=3 C=1
+    0223 [line  391] 0x000C0385  GETGLOBAL  R14 = GLOBAL K[48]='ipairs'
+    0224 [line  391] 0x06CDC3C6  GETTABLE   R15 = R13[K[55]='soul']
+    0225 [line  391] 0x0101039C  CALL       A=14 B=2 C=4
+    0226 [line  391] 0x80004016  JMP        A=0 sBx=2
+    0227 [line  392] 0x004E04C6  GETTABLE   R19 = R0[K[56]='m_duanzao']
+    0228 [line  392] 0x088484C9  SETTABLE   R19[R17] = R18
+    0229 [line  391] 0x000083A1  TFORLOOP   A=14 B=0 C=2
+    0230 [line  392] 0x7FFEC016  JMP        A=0 sBx=-4
+    0231 [line  318] 0x00008161  TFORLOOP   A=5 B=0 C=2
+    0232 [line  410] 0x7FC84016  JMP        A=0 sBx=-222
+    0233 [line  412] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0234 [line  412] 0x0100015E  RETURN     A=5 B=2 C=0
+    0235 [line  413] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 235
+    'pData': 0 -> 235
+    'iBufLen': 0 -> 235
+    'piRealLen': 0 -> 235
+    'container': 4 -> 235
+    '(for generator)': 10 -> 233
+    '(for state)': 10 -> 233
+    '(for control)': 10 -> 233
+    'k': 11 -> 231
+    'v': 11 -> 231
+    'fixed_data': 21 -> 36
+    'dr': 47 -> 76
+    '(for index)': 51 -> 58
+    '(for limit)': 51 -> 58
+    '(for step)': 51 -> 58
+    'i': 52 -> 57
+    '(for index)': 62 -> 76
+    '(for limit)': 62 -> 76
+    '(for step)': 62 -> 76
+    'i': 63 -> 75
+    '(for index)': 67 -> 75
+    '(for limit)': 67 -> 75
+    '(for step)': 67 -> 75
+    'j': 68 -> 74
+    'dr': 87 -> 100
+    'gemCount': 89 -> 100
+    '(for index)': 94 -> 100
+    '(for limit)': 94 -> 100
+    '(for step)': 94 -> 100
+    'i': 95 -> 99
+    'gemTid': 97 -> 99
+    'dr': 111 -> 145
+    '(for index)': 114 -> 120
+    '(for limit)': 114 -> 120
+    '(for step)': 114 -> 120
+    'i': 115 -> 119
+    'count': 128 -> 145
+    '(for index)': 133 -> 145
+    '(for limit)': 133 -> 145
+    '(for step)': 133 -> 145
+    'i': 134 -> 144
+    'tid': 136 -> 144
+    'expire_timestamp': 138 -> 144
+    'pb_helper': 162 -> 173
+    'net_common': 165 -> 173
+    'db_refine_surfaces': 166 -> 173
+    'm': 168 -> 173
+    'pb_helper': 183 -> 204
+    'net_common': 186 -> 204
+    'db_equip_fixed_data': 187 -> 204
+    'm': 189 -> 204
+    '(for generator)': 197 -> 202
+    '(for state)': 197 -> 202
+    '(for control)': 197 -> 202
+    'i': 198 -> 200
+    'v': 198 -> 200
+    'pb_helper': 214 -> 231
+    'net_common': 217 -> 231
+    'db_equip_forging': 218 -> 231
+    'm': 220 -> 231
+    '(for generator)': 226 -> 231
+    '(for state)': 226 -> 231
+    '(for control)': 226 -> 231
+    'i': 227 -> 229
+    'v': 227 -> 229

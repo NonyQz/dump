@@ -1,0 +1,138 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_broadcast_value_change.lua
+SIZE: 1266
+PARSED: 1266
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_broadcast_value_change.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 7
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'Main.ECGame'
+K[003] = 'Event.DukeUpGradeEvent'
+K[004] = 'AddHandler'
+K[005] = 'gp_broadcast_value_change'
+
+----- INSTRUCTIONS -----
+0000 [line    8] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    8] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    8] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    9] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    9] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    9] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   10] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line   10] 0x0000C0C1  LOADK      R3 = K[3]='Event.DukeUpGradeEvent'
+0008 [line   10] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line   52] 0x000000E4  CLOSURE    R3 = PROTO[0]
+0010 [line   52] 0x00800000  MOVE       R0 = R1
+0011 [line   52] 0x01000000  MOVE       R0 = R2
+0012 [line   54] 0x00410106  GETTABLE   R4 = R0[K[4]='AddHandler']
+0013 [line   54] 0x00014141  LOADK      R5 = K[5]='gp_broadcast_value_change'
+0014 [line   54] 0x01800180  MOVE       R6 = R3
+0015 [line   54] 0x0180411C  CALL       A=4 B=3 C=1
+0016 [line   54] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 16
+'ECGame': 6 -> 16
+'DukeUpGradeEvent': 9 -> 16
+'on_broadcast_value_change': 12 -> 16
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x10D
+    Source : '@lua\\pb\\pb_broadcast_value_change.lua'
+    Lines  : 25 - 52
+    Params : 2
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'value_type'
+    K[001] = 1.0
+    K[002] = 'roleid'
+    K[003] = 'new_value'
+    K[004] = 'Instance'
+    K[005] = 'm_CurWorld'
+    K[006] = 'm_HostPlayer'
+    K[007] = 'ID'
+    K[008] = 'InfoData'
+    K[009] = 'DukeLv'
+    K[010] = 'm_PlayerMan'
+    K[011] = 'GetElsePlayer'
+    K[012] = 'EventManager'
+    K[013] = 'raiseEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   28] 0x00C00086  GETTABLE   R2 = R1[K[0]='value_type']
+    0001 [line   28] 0x01404017  EQ         A=0 B=R2 C=K[1]=1.0
+    0002 [line   28] 0x800A4016  JMP        A=0 sBx=42
+    0003 [line   29] 0x00C08086  GETTABLE   R2 = R1[K[2]='roleid']
+    0004 [line   30] 0x00C0C0C6  GETTABLE   R3 = R1[K[3]='new_value']
+    0005 [line   32] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0006 [line   32] 0x02410106  GETTABLE   R4 = R4[K[4]='Instance']
+    0007 [line   32] 0x0080811C  CALL       A=4 B=1 C=2
+    0008 [line   33] 0x02414146  GETTABLE   R5 = R4[K[5]='m_CurWorld']
+    0009 [line   34] 0x02418186  GETTABLE   R6 = R4[K[6]='m_HostPlayer']
+    0010 [line   35] 0x00C081C6  GETTABLE   R7 = R1[K[2]='roleid']
+    0011 [line   35] 0x0341C206  GETTABLE   R8 = R6[K[7]='ID']
+    0012 [line   35] 0x03820017  EQ         A=0 B=R7 C=R8
+    0013 [line   35] 0x80014016  JMP        A=0 sBx=6
+    0014 [line   36] 0x034201C6  GETTABLE   R7 = R6[K[8]='InfoData']
+    0015 [line   36] 0x000001DA  TEST       A=7 B=0 C=0
+    0016 [line   36] 0x80044016  JMP        A=0 sBx=18
+    0017 [line   37] 0x034201C6  GETTABLE   R7 = R6[K[8]='InfoData']
+    0018 [line   37] 0x8480C1C9  SETTABLE   R7[K[9]='DukeLv'] = R3
+    0019 [line   39] 0x80038016  JMP        A=0 sBx=15
+    0020 [line   41] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0021 [line   41] 0x03C101C6  GETTABLE   R7 = R7[K[4]='Instance']
+    0022 [line   41] 0x008081DC  CALL       A=7 B=1 C=2
+    0023 [line   41] 0x03C141C6  GETTABLE   R7 = R7[K[5]='m_CurWorld']
+    0024 [line   41] 0x03C281C6  GETTABLE   R7 = R7[K[10]='m_PlayerMan']
+    0025 [line   41] 0x03C2C1CB  SELF       A=7 B=7 C=267 Bx=3851
+    0026 [line   41] 0x00C08246  GETTABLE   R9 = R1[K[2]='roleid']
+    0027 [line   41] 0x018081DC  CALL       A=7 B=3 C=2
+    0028 [line   42] 0x000001DA  TEST       A=7 B=0 C=0
+    0029 [line   42] 0x80010016  JMP        A=0 sBx=5
+    0030 [line   42] 0x03C20206  GETTABLE   R8 = R7[K[8]='InfoData']
+    0031 [line   42] 0x0000021A  TEST       A=8 B=0 C=0
+    0032 [line   42] 0x80004016  JMP        A=0 sBx=2
+    0033 [line   43] 0x03C20206  GETTABLE   R8 = R7[K[8]='InfoData']
+    0034 [line   43] 0x8480C209  SETTABLE   R8[K[9]='DukeLv'] = R3
+    0035 [line   48] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0036 [line   48] 0x008081DC  CALL       A=7 B=1 C=2
+    0037 [line   49] 0x00C08206  GETTABLE   R8 = R1[K[2]='roleid']
+    0038 [line   49] 0x810201C9  SETTABLE   R7[K[2]='roleid'] = R8
+    0039 [line   50] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0040 [line   50] 0x04430206  GETTABLE   R8 = R8[K[12]='EventManager']
+    0041 [line   50] 0x0443420B  SELF       A=8 B=8 C=269 Bx=4365
+    0042 [line   50] 0x05000283  LOADNIL    A=10 B=10 C=0 Bx=5120
+    0043 [line   50] 0x038002C0  MOVE       R11 = R7
+    0044 [line   50] 0x0200421C  CALL       A=8 B=4 C=1
+    0045 [line   52] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 45
+    'msg': 0 -> 45
+    'roleid': 4 -> 45
+    'new_value': 5 -> 45
+    'game': 8 -> 45
+    'world': 9 -> 45
+    'host': 10 -> 45
+    'player': 28 -> 35
+    'event': 37 -> 45

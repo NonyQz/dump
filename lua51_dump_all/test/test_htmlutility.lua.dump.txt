@@ -1,0 +1,188 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\test\test_htmlutility.lua
+SIZE: 1906
+PARSED: 1906
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\test\\test_htmlutility.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 5
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Utility.HtmlUtility'
+K[002] = 'HtmlToNguiText'
+K[003] = 'assert'
+K[004] = 'hello'
+K[005] = '<span>hello</span>'
+K[006] = '<span >hello</span>'
+K[007] = '<b>outter bold <i>inner italic</i></b>'
+K[008] = '[b]outter bold [i]inner italic[/i][/b]'
+K[009] = '&lt;&gt;&#x27;&#x2F;&#39;&#47;'
+K[010] = "<>'/'/"
+K[011] = '<font>hello</font>'
+K[012] = '<font size=9 color=#ff0000>outter red <font size=9 color=#000000>inner black</font></font>'
+K[013] = '[ff0000]outter red [000000]inner black[-][-]'
+K[014] = '<font color=#ff0000>red</font>'
+K[015] = '[ff0000]red[-]'
+K[016] = '<font color = #ff0000 >red</font >'
+K[017] = "<font color='#ff0000'>red</font>"
+K[018] = '<font color="#ff0000">red</font>'
+K[019] = 'line<br>break'
+K[020] = 'line\nbreak'
+K[021] = 'line<br/>break'
+K[022] = 'line<br />break'
+K[023] = 'print'
+K[024] = 'succeeded'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Utility.HtmlUtility'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    3] 0x00408046  GETTABLE   R1 = R0[K[2]='HtmlToNguiText']
+0004 [line    5] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0005 [line    5] 0x008000C0  MOVE       R3 = R1
+0006 [line    5] 0x00010101  LOADK      R4 = K[4]='hello'
+0007 [line    5] 0x010080DC  CALL       A=3 B=2 C=2
+0008 [line    5] 0x01C10057  EQ         A=1 B=R3 C=K[4]='hello'
+0009 [line    5] 0x80000016  JMP        A=0 sBx=1
+0010 [line    5] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0011 [line    5] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0012 [line    5] 0x0100409C  CALL       A=2 B=2 C=1
+0013 [line    6] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0014 [line    6] 0x008000C0  MOVE       R3 = R1
+0015 [line    6] 0x00014101  LOADK      R4 = K[5]='<span>hello</span>'
+0016 [line    6] 0x010080DC  CALL       A=3 B=2 C=2
+0017 [line    6] 0x01C10057  EQ         A=1 B=R3 C=K[4]='hello'
+0018 [line    6] 0x80000016  JMP        A=0 sBx=1
+0019 [line    6] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0020 [line    6] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0021 [line    6] 0x0100409C  CALL       A=2 B=2 C=1
+0022 [line    7] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0023 [line    7] 0x008000C0  MOVE       R3 = R1
+0024 [line    7] 0x00018101  LOADK      R4 = K[6]='<span >hello</span>'
+0025 [line    7] 0x010080DC  CALL       A=3 B=2 C=2
+0026 [line    7] 0x01C10057  EQ         A=1 B=R3 C=K[4]='hello'
+0027 [line    7] 0x80000016  JMP        A=0 sBx=1
+0028 [line    7] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0029 [line    7] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0030 [line    7] 0x0100409C  CALL       A=2 B=2 C=1
+0031 [line    8] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0032 [line    8] 0x008000C0  MOVE       R3 = R1
+0033 [line    8] 0x0001C101  LOADK      R4 = K[7]='<b>outter bold <i>inner italic</i></b>'
+0034 [line    8] 0x010080DC  CALL       A=3 B=2 C=2
+0035 [line    8] 0x01C20057  EQ         A=1 B=R3 C=K[8]='[b]outter bold [i]inner italic[/i][/b]'
+0036 [line    8] 0x80000016  JMP        A=0 sBx=1
+0037 [line    8] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0038 [line    8] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0039 [line    8] 0x0100409C  CALL       A=2 B=2 C=1
+0040 [line    9] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0041 [line    9] 0x008000C0  MOVE       R3 = R1
+0042 [line    9] 0x00024101  LOADK      R4 = K[9]='&lt;&gt;&#x27;&#x2F;&#39;&#47;'
+0043 [line    9] 0x010080DC  CALL       A=3 B=2 C=2
+0044 [line    9] 0x01C28057  EQ         A=1 B=R3 C=K[10]="<>'/'/"
+0045 [line    9] 0x80000016  JMP        A=0 sBx=1
+0046 [line    9] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0047 [line    9] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0048 [line    9] 0x0100409C  CALL       A=2 B=2 C=1
+0049 [line   10] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0050 [line   10] 0x008000C0  MOVE       R3 = R1
+0051 [line   10] 0x0002C101  LOADK      R4 = K[11]='<font>hello</font>'
+0052 [line   10] 0x010080DC  CALL       A=3 B=2 C=2
+0053 [line   10] 0x01C10057  EQ         A=1 B=R3 C=K[4]='hello'
+0054 [line   10] 0x80000016  JMP        A=0 sBx=1
+0055 [line   10] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0056 [line   10] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0057 [line   10] 0x0100409C  CALL       A=2 B=2 C=1
+0058 [line   11] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0059 [line   11] 0x008000C0  MOVE       R3 = R1
+0060 [line   11] 0x00030101  LOADK      R4 = K[12]='<font size=9 color=#ff0000>outter red <font size=9 color=#000000>inner black</font></font>'
+0061 [line   11] 0x010080DC  CALL       A=3 B=2 C=2
+0062 [line   11] 0x01C34057  EQ         A=1 B=R3 C=K[13]='[ff0000]outter red [000000]inner black[-][-]'
+0063 [line   11] 0x80000016  JMP        A=0 sBx=1
+0064 [line   11] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0065 [line   11] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0066 [line   11] 0x0100409C  CALL       A=2 B=2 C=1
+0067 [line   12] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0068 [line   12] 0x008000C0  MOVE       R3 = R1
+0069 [line   12] 0x00038101  LOADK      R4 = K[14]='<font color=#ff0000>red</font>'
+0070 [line   12] 0x010080DC  CALL       A=3 B=2 C=2
+0071 [line   12] 0x01C3C057  EQ         A=1 B=R3 C=K[15]='[ff0000]red[-]'
+0072 [line   12] 0x80000016  JMP        A=0 sBx=1
+0073 [line   12] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0074 [line   12] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0075 [line   12] 0x0100409C  CALL       A=2 B=2 C=1
+0076 [line   13] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0077 [line   13] 0x008000C0  MOVE       R3 = R1
+0078 [line   13] 0x00040101  LOADK      R4 = K[16]='<font color = #ff0000 >red</font >'
+0079 [line   13] 0x010080DC  CALL       A=3 B=2 C=2
+0080 [line   13] 0x01C3C057  EQ         A=1 B=R3 C=K[15]='[ff0000]red[-]'
+0081 [line   13] 0x80000016  JMP        A=0 sBx=1
+0082 [line   13] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0083 [line   13] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0084 [line   13] 0x0100409C  CALL       A=2 B=2 C=1
+0085 [line   14] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0086 [line   14] 0x008000C0  MOVE       R3 = R1
+0087 [line   14] 0x00044101  LOADK      R4 = K[17]="<font color='#ff0000'>red</font>"
+0088 [line   14] 0x010080DC  CALL       A=3 B=2 C=2
+0089 [line   14] 0x01C3C057  EQ         A=1 B=R3 C=K[15]='[ff0000]red[-]'
+0090 [line   14] 0x80000016  JMP        A=0 sBx=1
+0091 [line   14] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0092 [line   14] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0093 [line   14] 0x0100409C  CALL       A=2 B=2 C=1
+0094 [line   15] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0095 [line   15] 0x008000C0  MOVE       R3 = R1
+0096 [line   15] 0x00048101  LOADK      R4 = K[18]='<font color="#ff0000">red</font>'
+0097 [line   15] 0x010080DC  CALL       A=3 B=2 C=2
+0098 [line   15] 0x01C3C057  EQ         A=1 B=R3 C=K[15]='[ff0000]red[-]'
+0099 [line   15] 0x80000016  JMP        A=0 sBx=1
+0100 [line   15] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0101 [line   15] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0102 [line   15] 0x0100409C  CALL       A=2 B=2 C=1
+0103 [line   16] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0104 [line   16] 0x008000C0  MOVE       R3 = R1
+0105 [line   16] 0x0004C101  LOADK      R4 = K[19]='line<br>break'
+0106 [line   16] 0x010080DC  CALL       A=3 B=2 C=2
+0107 [line   16] 0x01C50057  EQ         A=1 B=R3 C=K[20]='line\nbreak'
+0108 [line   16] 0x80000016  JMP        A=0 sBx=1
+0109 [line   16] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0110 [line   16] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0111 [line   16] 0x0100409C  CALL       A=2 B=2 C=1
+0112 [line   17] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0113 [line   17] 0x008000C0  MOVE       R3 = R1
+0114 [line   17] 0x00054101  LOADK      R4 = K[21]='line<br/>break'
+0115 [line   17] 0x010080DC  CALL       A=3 B=2 C=2
+0116 [line   17] 0x01C50057  EQ         A=1 B=R3 C=K[20]='line\nbreak'
+0117 [line   17] 0x80000016  JMP        A=0 sBx=1
+0118 [line   17] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0119 [line   17] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0120 [line   17] 0x0100409C  CALL       A=2 B=2 C=1
+0121 [line   18] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='assert'
+0122 [line   18] 0x008000C0  MOVE       R3 = R1
+0123 [line   18] 0x00058101  LOADK      R4 = K[22]='line<br />break'
+0124 [line   18] 0x010080DC  CALL       A=3 B=2 C=2
+0125 [line   18] 0x01C50057  EQ         A=1 B=R3 C=K[20]='line\nbreak'
+0126 [line   18] 0x80000016  JMP        A=0 sBx=1
+0127 [line   18] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+0128 [line   18] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+0129 [line   18] 0x0100409C  CALL       A=2 B=2 C=1
+0130 [line   20] 0x0005C085  GETGLOBAL  R2 = GLOBAL K[23]='print'
+0131 [line   20] 0x000600C1  LOADK      R3 = K[24]='succeeded'
+0132 [line   20] 0x0100409C  CALL       A=2 B=2 C=1
+0133 [line   20] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'HtmlUtility': 3 -> 133
+'Text': 4 -> 133

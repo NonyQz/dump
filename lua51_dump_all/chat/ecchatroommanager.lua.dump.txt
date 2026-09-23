@@ -1,0 +1,1909 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\chat\ecchatroommanager.lua
+SIZE: 17882
+PARSED: 17882
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\chat\\ecchatroommanager.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 13
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'ForwardDeclare'
+K[003] = 'ECGame'
+K[004] = 'Class'
+K[005] = 'ECChatRoomManager'
+K[006] = 'define'
+K[007] = 'field'
+K[008] = 'string'
+K[009] = 'mHostID'
+K[010] = 'ZeroUInt64'
+K[011] = 'table'
+K[012] = 'm_MsgList'
+K[013] = 'BLANK_TABLE_INIT'
+K[014] = 'm_ChatRoomList'
+K[015] = 'static'
+K[016] = '=>'
+K[017] = 'Instance'
+K[018] = 'method'
+K[019] = 'AnalysisMsg'
+K[020] = 'boolean'
+K[021] = 'AddChatRoom'
+K[022] = 'DeleteChatRoom'
+K[023] = 'LeaveChatRoom'
+K[024] = 'UpdateChatRoomOwner'
+K[025] = 'UpdateChatRoomMemberListByNewOwner'
+K[026] = 'UpdateChatRoomName'
+K[027] = 'UpdateChatRoomRemarkName'
+K[028] = 'UpdateChatRoomAuthSet'
+K[029] = 'AddChatRoomMemberList'
+K[030] = 'DeletChatRoomMember'
+K[031] = 'GetChatRoomInfo'
+K[032] = 'IsChatRoomOwner'
+K[033] = 'number'
+K[034] = 'GetChatRoomNum'
+K[035] = 'GetChatRoomMemberNum'
+K[036] = 'CreateInviteFriendMsg'
+K[037] = 'ReConnectClearData'
+K[038] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    5] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    5] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    5] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    6] 0x00408046  GETTABLE   R1 = R0[K[2]='ForwardDeclare']
+0004 [line    6] 0x0000C081  LOADK      R2 = K[3]='ECGame'
+0005 [line    6] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    8] 0x00410086  GETTABLE   R2 = R0[K[4]='Class']
+0007 [line    8] 0x000140C1  LOADK      R3 = K[5]='ECChatRoomManager'
+0008 [line    8] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line   10] 0x014180C6  GETTABLE   R3 = R2[K[6]='define']
+0010 [line   12] 0x01C1C106  GETTABLE   R4 = R3[K[7]='field']
+0011 [line   12] 0x00020141  LOADK      R5 = K[8]='string'
+0012 [line   12] 0x0100811C  CALL       A=4 B=2 C=2
+0013 [line   12] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='ZeroUInt64'
+0014 [line   12] 0x84814109  SETTABLE   R4[K[9]='mHostID'] = R5
+0015 [line   13] 0x01C1C106  GETTABLE   R4 = R3[K[7]='field']
+0016 [line   13] 0x0002C141  LOADK      R5 = K[11]='table'
+0017 [line   13] 0x0100811C  CALL       A=4 B=2 C=2
+0018 [line   13] 0x00034145  GETGLOBAL  R5 = GLOBAL K[13]='BLANK_TABLE_INIT'
+0019 [line   13] 0x86014109  SETTABLE   R4[K[12]='m_MsgList'] = R5
+0020 [line   14] 0x01C1C106  GETTABLE   R4 = R3[K[7]='field']
+0021 [line   14] 0x0002C141  LOADK      R5 = K[11]='table'
+0022 [line   14] 0x0100811C  CALL       A=4 B=2 C=2
+0023 [line   14] 0x00034145  GETGLOBAL  R5 = GLOBAL K[13]='BLANK_TABLE_INIT'
+0024 [line   14] 0x87014109  SETTABLE   R4[K[14]='m_ChatRoomList'] = R5
+0025 [line   16] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+0026 [line   17] 0x01C3C146  GETTABLE   R5 = R3[K[15]='static']
+0027 [line   17] 0x00040181  LOADK      R6 = K[16]='=>'
+0028 [line   17] 0x010001C0  MOVE       R7 = R2
+0029 [line   17] 0x0180815C  CALL       A=5 B=3 C=2
+0030 [line   22] 0x000001A4  CLOSURE    R6 = PROTO[0]
+0031 [line   22] 0x02000000  MOVE       R0 = R4
+0032 [line   22] 0x01000000  MOVE       R0 = R2
+0033 [line   22] 0x88818149  SETTABLE   R5[K[17]='Instance'] = R6
+0034 [line   24] 0x01C48146  GETTABLE   R5 = R3[K[18]='method']
+0035 [line   24] 0x0002C181  LOADK      R6 = K[11]='table'
+0036 [line   24] 0x0100815C  CALL       A=5 B=2 C=2
+0037 [line  196] 0x000041A4  CLOSURE    R6 = PROTO[1]
+0038 [line  196] 0x00800000  MOVE       R0 = R1
+0039 [line  196] 0x89818149  SETTABLE   R5[K[19]='AnalysisMsg'] = R6
+0040 [line  208] 0x00008164  CLOSURE    R5 = PROTO[2]
+0041 [line  210] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0042 [line  210] 0x000201C1  LOADK      R7 = K[8]='string'
+0043 [line  210] 0x00020201  LOADK      R8 = K[8]='string'
+0044 [line  210] 0x00020241  LOADK      R9 = K[8]='string'
+0045 [line  210] 0x0002C281  LOADK      R10 = K[11]='table'
+0046 [line  210] 0x0002C2C1  LOADK      R11 = K[11]='table'
+0047 [line  210] 0x00050301  LOADK      R12 = K[20]='boolean'
+0048 [line  210] 0x0380819C  CALL       A=6 B=7 C=2
+0049 [line  234] 0x0000C1E4  CLOSURE    R7 = PROTO[3]
+0050 [line  234] 0x00800000  MOVE       R0 = R1
+0051 [line  234] 0x02800000  MOVE       R0 = R5
+0052 [line  234] 0x8A81C189  SETTABLE   R6[K[21]='AddChatRoom'] = R7
+0053 [line  236] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0054 [line  236] 0x000201C1  LOADK      R7 = K[8]='string'
+0055 [line  236] 0x0100819C  CALL       A=6 B=2 C=2
+0056 [line  243] 0x000101E4  CLOSURE    R7 = PROTO[4]
+0057 [line  243] 0x8B01C189  SETTABLE   R6[K[22]='DeleteChatRoom'] = R7
+0058 [line  245] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0059 [line  245] 0x000201C1  LOADK      R7 = K[8]='string'
+0060 [line  245] 0x0100819C  CALL       A=6 B=2 C=2
+0061 [line  252] 0x000141E4  CLOSURE    R7 = PROTO[5]
+0062 [line  252] 0x8B81C189  SETTABLE   R6[K[23]='LeaveChatRoom'] = R7
+0063 [line  254] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0064 [line  254] 0x000201C1  LOADK      R7 = K[8]='string'
+0065 [line  254] 0x0002C201  LOADK      R8 = K[11]='table'
+0066 [line  254] 0x0180819C  CALL       A=6 B=3 C=2
+0067 [line  262] 0x000181E4  CLOSURE    R7 = PROTO[6]
+0068 [line  262] 0x00800000  MOVE       R0 = R1
+0069 [line  262] 0x8C01C189  SETTABLE   R6[K[24]='UpdateChatRoomOwner'] = R7
+0070 [line  264] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0071 [line  264] 0x000201C1  LOADK      R7 = K[8]='string'
+0072 [line  264] 0x0002C201  LOADK      R8 = K[11]='table'
+0073 [line  264] 0x0180819C  CALL       A=6 B=3 C=2
+0074 [line  272] 0x0001C1E4  CLOSURE    R7 = PROTO[7]
+0075 [line  272] 0x02800000  MOVE       R0 = R5
+0076 [line  272] 0x8C81C189  SETTABLE   R6[K[25]='UpdateChatRoomMemberListByNewOwner'] = R7
+0077 [line  274] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0078 [line  274] 0x000201C1  LOADK      R7 = K[8]='string'
+0079 [line  274] 0x00020201  LOADK      R8 = K[8]='string'
+0080 [line  274] 0x00020241  LOADK      R9 = K[8]='string'
+0081 [line  274] 0x0200819C  CALL       A=6 B=4 C=2
+0082 [line  282] 0x000201E4  CLOSURE    R7 = PROTO[8]
+0083 [line  282] 0x8D01C189  SETTABLE   R6[K[26]='UpdateChatRoomName'] = R7
+0084 [line  284] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0085 [line  284] 0x000201C1  LOADK      R7 = K[8]='string'
+0086 [line  284] 0x00020201  LOADK      R8 = K[8]='string'
+0087 [line  284] 0x0180819C  CALL       A=6 B=3 C=2
+0088 [line  291] 0x000241E4  CLOSURE    R7 = PROTO[9]
+0089 [line  291] 0x8D81C189  SETTABLE   R6[K[27]='UpdateChatRoomRemarkName'] = R7
+0090 [line  293] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0091 [line  293] 0x000201C1  LOADK      R7 = K[8]='string'
+0092 [line  293] 0x00050201  LOADK      R8 = K[20]='boolean'
+0093 [line  293] 0x0180819C  CALL       A=6 B=3 C=2
+0094 [line  300] 0x000281E4  CLOSURE    R7 = PROTO[10]
+0095 [line  300] 0x8E01C189  SETTABLE   R6[K[28]='UpdateChatRoomAuthSet'] = R7
+0096 [line  302] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0097 [line  302] 0x000201C1  LOADK      R7 = K[8]='string'
+0098 [line  302] 0x0002C201  LOADK      R8 = K[11]='table'
+0099 [line  302] 0x0180819C  CALL       A=6 B=3 C=2
+0100 [line  311] 0x0002C1E4  CLOSURE    R7 = PROTO[11]
+0101 [line  311] 0x8E81C189  SETTABLE   R6[K[29]='AddChatRoomMemberList'] = R7
+0102 [line  313] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0103 [line  313] 0x000201C1  LOADK      R7 = K[8]='string'
+0104 [line  313] 0x00020201  LOADK      R8 = K[8]='string'
+0105 [line  313] 0x0180819C  CALL       A=6 B=3 C=2
+0106 [line  325] 0x000301E4  CLOSURE    R7 = PROTO[12]
+0107 [line  325] 0x8F01C189  SETTABLE   R6[K[30]='DeletChatRoomMember'] = R7
+0108 [line  327] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0109 [line  327] 0x000201C1  LOADK      R7 = K[8]='string'
+0110 [line  327] 0x00040201  LOADK      R8 = K[16]='=>'
+0111 [line  327] 0x0002C241  LOADK      R9 = K[11]='table'
+0112 [line  327] 0x0200819C  CALL       A=6 B=4 C=2
+0113 [line  334] 0x000341E4  CLOSURE    R7 = PROTO[13]
+0114 [line  334] 0x8F81C189  SETTABLE   R6[K[31]='GetChatRoomInfo'] = R7
+0115 [line  336] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0116 [line  336] 0x000201C1  LOADK      R7 = K[8]='string'
+0117 [line  336] 0x00040201  LOADK      R8 = K[16]='=>'
+0118 [line  336] 0x00050241  LOADK      R9 = K[20]='boolean'
+0119 [line  336] 0x0200819C  CALL       A=6 B=4 C=2
+0120 [line  343] 0x000381E4  CLOSURE    R7 = PROTO[14]
+0121 [line  343] 0x9001C189  SETTABLE   R6[K[32]='IsChatRoomOwner'] = R7
+0122 [line  345] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0123 [line  345] 0x000401C1  LOADK      R7 = K[16]='=>'
+0124 [line  345] 0x00084201  LOADK      R8 = K[33]='number'
+0125 [line  345] 0x0180819C  CALL       A=6 B=3 C=2
+0126 [line  353] 0x0003C1E4  CLOSURE    R7 = PROTO[15]
+0127 [line  353] 0x9101C189  SETTABLE   R6[K[34]='GetChatRoomNum'] = R7
+0128 [line  355] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0129 [line  355] 0x000201C1  LOADK      R7 = K[8]='string'
+0130 [line  355] 0x00040201  LOADK      R8 = K[16]='=>'
+0131 [line  355] 0x00084241  LOADK      R9 = K[33]='number'
+0132 [line  355] 0x0200819C  CALL       A=6 B=4 C=2
+0133 [line  364] 0x000401E4  CLOSURE    R7 = PROTO[16]
+0134 [line  364] 0x9181C189  SETTABLE   R6[K[35]='GetChatRoomMemberNum'] = R7
+0135 [line  366] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0136 [line  366] 0x000201C1  LOADK      R7 = K[8]='string'
+0137 [line  366] 0x00020201  LOADK      R8 = K[8]='string'
+0138 [line  366] 0x00020241  LOADK      R9 = K[8]='string'
+0139 [line  366] 0x0200819C  CALL       A=6 B=4 C=2
+0140 [line  370] 0x000441E4  CLOSURE    R7 = PROTO[17]
+0141 [line  370] 0x9201C189  SETTABLE   R6[K[36]='CreateInviteFriendMsg'] = R7
+0142 [line  372] 0x01C48186  GETTABLE   R6 = R3[K[18]='method']
+0143 [line  372] 0x0080819C  CALL       A=6 B=1 C=2
+0144 [line  378] 0x000481E4  CLOSURE    R7 = PROTO[18]
+0145 [line  378] 0x9281C189  SETTABLE   R6[K[37]='ReConnectClearData'] = R7
+0146 [line  380] 0x01498186  GETTABLE   R6 = R2[K[38]='Commit']
+0147 [line  380] 0x0080419C  CALL       A=6 B=1 C=1
+0148 [line  381] 0x0100009E  RETURN     A=2 B=2 C=0
+0149 [line  381] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 149
+'ECGame': 6 -> 149
+'ECChatRoomManager': 9 -> 149
+'def': 10 -> 149
+'m_Instance': 26 -> 149
+'sort_member_list': 41 -> 149
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x56B
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 17 - 22
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line   18] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   18] 0x00400017  EQ         A=0 B=R0 C=K[0]=None
+    0002 [line   18] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   19] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   19] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   19] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   21] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   21] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   22] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x601
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 24 - 196
+    Params : 2
+    Stack  : 33
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'ret_code'
+    K[001] = 0.0
+    K[002] = 'op_type'
+    K[003] = 1.0
+    K[004] = 'roleid'
+    K[005] = 'GameUtil'
+    K[006] = 'UnicodeToUtf8'
+    K[007] = 'role_name'
+    K[008] = 'room_id'
+    K[009] = 'room_name'
+    K[010] = 'roles'
+    K[011] = 'owner_info'
+    K[012] = 'auth_set'
+    K[013] = 'remark_room_name'
+    K[014] = 'AddChatRoom'
+    K[015] = 'require'
+    K[016] = 'Chat.ECPanelChat'
+    K[017] = ''
+    K[018] = 'Instance'
+    K[019] = 'm_HostPlayer'
+    K[020] = 'ID'
+    K[021] = 'SetCurChatRoomID'
+    K[022] = 'CreateInviteFriendMsg'
+    K[023] = 'InfoData'
+    K[024] = 'Name'
+    K[025] = 'FlashTipMan'
+    K[026] = 'FlashTip'
+    K[027] = 'StringTable'
+    K[028] = 'Get'
+    K[029] = 881.0
+    K[030] = 'format'
+    K[031] = 'UpdateChatRoomPage'
+    K[032] = 2.0
+    K[033] = 868.0
+    K[034] = 869.0
+    K[035] = 'LeaveChatRoom'
+    K[036] = 3.0
+    K[037] = 'AddChatRoomMemberList'
+    K[038] = 'UpdateChatRoomMemberUI'
+    K[039] = 30209.0
+    K[040] = 'rolename'
+    K[041] = 4.0
+    K[042] = 'ZeroUInt64'
+    K[043] = 874.0
+    K[044] = 'DeletChatRoomMember'
+    K[045] = 5.0
+    K[046] = 'UpdateChatRoomAuthSet'
+    K[047] = 6.0
+    K[048] = 'UpdateChatRoomName'
+    K[049] = 'UpdateChatRoomNameUI'
+    K[050] = 7.0
+    K[051] = 'UpdateChatRoomOwner'
+    K[052] = 'UpdateChatRoomMemberListByNewOwner'
+    K[053] = 875.0
+    K[054] = 'UpdateChatRoomUI'
+    K[055] = 876.0
+    K[056] = 'm_CurChatRoomID'
+    K[057] = 8.0
+    K[058] = 9.0
+    K[059] = 'historys'
+    K[060] = 'chat_time'
+    K[061] = 'Chat.ECChatManager'
+    K[062] = 'name'
+    K[063] = 'gender'
+    K[064] = 'prof'
+    K[065] = 'chat_info'
+    K[066] = 'AddChatRoomHistoryMessage'
+    K[067] = 'AddChatRoomOnLogin'
+    K[068] = 968.0
+    K[069] = 30201.0
+    K[070] = 969.0
+    K[071] = 30202.0
+    K[072] = 970.0
+    K[073] = 30203.0
+    K[074] = 971.0
+    K[075] = 30204.0
+    K[076] = 972.0
+    K[077] = 30205.0
+    K[078] = 974.0
+    K[079] = 30206.0
+    K[080] = 975.0
+    K[081] = 30207.0
+    K[082] = 977.0
+    K[083] = 30208.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   25] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0001 [line   25] 0x01404017  EQ         A=0 B=R2 C=K[1]=0.0
+    0002 [line   25] 0x807E4016  JMP        A=0 sBx=506
+    0003 [line   26] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0004 [line   26] 0x0140C017  EQ         A=0 B=R2 C=K[3]=1.0
+    0005 [line   26] 0x80140016  JMP        A=0 sBx=81
+    0006 [line   27] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0007 [line   28] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='GameUtil'
+    0008 [line   28] 0x01C180C6  GETTABLE   R3 = R3[K[6]='UnicodeToUtf8']
+    0009 [line   28] 0x00C1C106  GETTABLE   R4 = R1[K[7]='role_name']
+    0010 [line   28] 0x010080DC  CALL       A=3 B=2 C=2
+    0011 [line   29] 0x00C20106  GETTABLE   R4 = R1[K[8]='room_id']
+    0012 [line   30] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='GameUtil'
+    0013 [line   30] 0x02C18146  GETTABLE   R5 = R5[K[6]='UnicodeToUtf8']
+    0014 [line   30] 0x00C24186  GETTABLE   R6 = R1[K[9]='room_name']
+    0015 [line   30] 0x0100815C  CALL       A=5 B=2 C=2
+    0016 [line   31] 0x00C28186  GETTABLE   R6 = R1[K[10]='roles']
+    0017 [line   32] 0x00C2C1C6  GETTABLE   R7 = R1[K[11]='owner_info']
+    0018 [line   33] 0x00C30206  GETTABLE   R8 = R1[K[12]='auth_set']
+    0019 [line   34] 0x00014245  GETGLOBAL  R9 = GLOBAL K[5]='GameUtil'
+    0020 [line   34] 0x04C18246  GETTABLE   R9 = R9[K[6]='UnicodeToUtf8']
+    0021 [line   34] 0x00C34286  GETTABLE   R10 = R1[K[13]='remark_room_name']
+    0022 [line   34] 0x0100825C  CALL       A=9 B=2 C=2
+    0023 [line   35] 0x0043828B  SELF       A=10 B=0 C=270 Bx=270
+    0024 [line   35] 0x02000300  MOVE       R12 = R4
+    0025 [line   35] 0x02800340  MOVE       R13 = R5
+    0026 [line   35] 0x04800380  MOVE       R14 = R9
+    0027 [line   35] 0x030003C0  MOVE       R15 = R6
+    0028 [line   35] 0x03800400  MOVE       R16 = R7
+    0029 [line   35] 0x04000440  MOVE       R17 = R8
+    0030 [line   35] 0x0400429C  CALL       A=10 B=8 C=1
+    0031 [line   36] 0x0003C285  GETGLOBAL  R10 = GLOBAL K[15]='require'
+    0032 [line   36] 0x000402C1  LOADK      R11 = K[16]='Chat.ECPanelChat'
+    0033 [line   36] 0x0100829C  CALL       A=10 B=2 C=2
+    0034 [line   37] 0x04C44057  EQ         A=1 B=R9 C=K[17]=''
+    0035 [line   37] 0x80018016  JMP        A=0 sBx=7
+    0036 [line   38] 0x054482C6  GETTABLE   R11 = R10[K[18]='Instance']
+    0037 [line   38] 0x008082DC  CALL       A=11 B=1 C=2
+    0038 [line   38] 0x05C382CB  SELF       A=11 B=11 C=270 Bx=5902
+    0039 [line   38] 0x02000340  MOVE       R13 = R4
+    0040 [line   38] 0x04800380  MOVE       R14 = R9
+    0041 [line   38] 0x020042DC  CALL       A=11 B=4 C=1
+    0042 [line   38] 0x80098016  JMP        A=0 sBx=39
+    0043 [line   40] 0x054482C6  GETTABLE   R11 = R10[K[18]='Instance']
+    0044 [line   40] 0x008082DC  CALL       A=11 B=1 C=2
+    0045 [line   40] 0x05C382CB  SELF       A=11 B=11 C=270 Bx=5902
+    0046 [line   40] 0x02000340  MOVE       R13 = R4
+    0047 [line   40] 0x02800380  MOVE       R14 = R5
+    0048 [line   40] 0x020042DC  CALL       A=11 B=4 C=1
+    0049 [line   41] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0050 [line   41] 0x05C482C6  GETTABLE   R11 = R11[K[18]='Instance']
+    0051 [line   41] 0x008082DC  CALL       A=11 B=1 C=2
+    0052 [line   41] 0x05C4C2C6  GETTABLE   R11 = R11[K[19]='m_HostPlayer']
+    0053 [line   41] 0x05C502C6  GETTABLE   R11 = R11[K[20]='ID']
+    0054 [line   41] 0x0102C017  EQ         A=0 B=R2 C=R11
+    0055 [line   41] 0x80014016  JMP        A=0 sBx=6
+    0056 [line   42] 0x054482C6  GETTABLE   R11 = R10[K[18]='Instance']
+    0057 [line   42] 0x008082DC  CALL       A=11 B=1 C=2
+    0058 [line   42] 0x05C542CB  SELF       A=11 B=11 C=277 Bx=5909
+    0059 [line   42] 0x02000340  MOVE       R13 = R4
+    0060 [line   42] 0x018042DC  CALL       A=11 B=3 C=1
+    0061 [line   42] 0x8004C016  JMP        A=0 sBx=20
+    0062 [line   44] 0x004582CB  SELF       A=11 B=0 C=278 Bx=278
+    0063 [line   44] 0x01800340  MOVE       R13 = R3
+    0064 [line   44] 0x00000384  GETUPVAL   A=14 B=0 C=0 Bx=0
+    0065 [line   44] 0x07448386  GETTABLE   R14 = R14[K[18]='Instance']
+    0066 [line   44] 0x0080839C  CALL       A=14 B=1 C=2
+    0067 [line   44] 0x0744C386  GETTABLE   R14 = R14[K[19]='m_HostPlayer']
+    0068 [line   44] 0x0745C386  GETTABLE   R14 = R14[K[23]='InfoData']
+    0069 [line   44] 0x07460386  GETTABLE   R14 = R14[K[24]='Name']
+    0070 [line   44] 0x020003C0  MOVE       R15 = R4
+    0071 [line   44] 0x028042DC  CALL       A=11 B=5 C=1
+    0072 [line   45] 0x000642C5  GETGLOBAL  R11 = GLOBAL K[25]='FlashTipMan'
+    0073 [line   45] 0x05C682C6  GETTABLE   R11 = R11[K[26]='FlashTip']
+    0074 [line   45] 0x0006C305  GETGLOBAL  R12 = GLOBAL K[27]='StringTable'
+    0075 [line   45] 0x06470306  GETTABLE   R12 = R12[K[28]='Get']
+    0076 [line   45] 0x00074341  LOADK      R13 = K[29]=881.0
+    0077 [line   45] 0x0100831C  CALL       A=12 B=2 C=2
+    0078 [line   45] 0x0647830B  SELF       A=12 B=12 C=286 Bx=6430
+    0079 [line   45] 0x02800380  MOVE       R14 = R5
+    0080 [line   45] 0x0180031C  CALL       A=12 B=3 C=0
+    0081 [line   45] 0x000042DC  CALL       A=11 B=0 C=1
+    0082 [line   48] 0x054482C6  GETTABLE   R11 = R10[K[18]='Instance']
+    0083 [line   48] 0x008082DC  CALL       A=11 B=1 C=2
+    0084 [line   48] 0x05C7C2CB  SELF       A=11 B=11 C=287 Bx=5919
+    0085 [line   48] 0x010042DC  CALL       A=11 B=2 C=1
+    0086 [line   48] 0x807F0016  JMP        A=0 sBx=509
+    0087 [line   49] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0088 [line   49] 0x01480017  EQ         A=0 B=R2 C=K[32]=2.0
+    0089 [line   49] 0x80088016  JMP        A=0 sBx=35
+    0090 [line   50] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0091 [line   51] 0x00C200C6  GETTABLE   R3 = R1[K[8]='room_id']
+    0092 [line   52] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='GameUtil'
+    0093 [line   52] 0x02418106  GETTABLE   R4 = R4[K[6]='UnicodeToUtf8']
+    0094 [line   52] 0x00C24146  GETTABLE   R5 = R1[K[9]='room_name']
+    0095 [line   52] 0x0100811C  CALL       A=4 B=2 C=2
+    0096 [line   53] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0097 [line   53] 0x02C48146  GETTABLE   R5 = R5[K[18]='Instance']
+    0098 [line   53] 0x0080815C  CALL       A=5 B=1 C=2
+    0099 [line   53] 0x02C4C146  GETTABLE   R5 = R5[K[19]='m_HostPlayer']
+    0100 [line   53] 0x02C50146  GETTABLE   R5 = R5[K[20]='ID']
+    0101 [line   53] 0x01014017  EQ         A=0 B=R2 C=R5
+    0102 [line   53] 0x8001C016  JMP        A=0 sBx=8
+    0103 [line   54] 0x00064145  GETGLOBAL  R5 = GLOBAL K[25]='FlashTipMan'
+    0104 [line   54] 0x02C68146  GETTABLE   R5 = R5[K[26]='FlashTip']
+    0105 [line   54] 0x0006C185  GETGLOBAL  R6 = GLOBAL K[27]='StringTable'
+    0106 [line   54] 0x03470186  GETTABLE   R6 = R6[K[28]='Get']
+    0107 [line   54] 0x000841C1  LOADK      R7 = K[33]=868.0
+    0108 [line   54] 0x0100019C  CALL       A=6 B=2 C=0
+    0109 [line   54] 0x0000415C  CALL       A=5 B=0 C=1
+    0110 [line   54] 0x80024016  JMP        A=0 sBx=10
+    0111 [line   56] 0x00064145  GETGLOBAL  R5 = GLOBAL K[25]='FlashTipMan'
+    0112 [line   56] 0x02C68146  GETTABLE   R5 = R5[K[26]='FlashTip']
+    0113 [line   56] 0x0006C185  GETGLOBAL  R6 = GLOBAL K[27]='StringTable'
+    0114 [line   56] 0x03470186  GETTABLE   R6 = R6[K[28]='Get']
+    0115 [line   56] 0x000881C1  LOADK      R7 = K[34]=869.0
+    0116 [line   56] 0x0100819C  CALL       A=6 B=2 C=2
+    0117 [line   56] 0x0347818B  SELF       A=6 B=6 C=286 Bx=3358
+    0118 [line   56] 0x02000200  MOVE       R8 = R4
+    0119 [line   56] 0x0180019C  CALL       A=6 B=3 C=0
+    0120 [line   56] 0x0000415C  CALL       A=5 B=0 C=1
+    0121 [line   58] 0x0048C14B  SELF       A=5 B=0 C=291 Bx=291
+    0122 [line   58] 0x018001C0  MOVE       R7 = R3
+    0123 [line   58] 0x0180415C  CALL       A=5 B=3 C=1
+    0124 [line   58] 0x80758016  JMP        A=0 sBx=471
+    0125 [line   59] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0126 [line   59] 0x01490017  EQ         A=0 B=R2 C=K[36]=3.0
+    0127 [line   59] 0x800C4016  JMP        A=0 sBx=50
+    0128 [line   60] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0129 [line   61] 0x00C200C6  GETTABLE   R3 = R1[K[8]='room_id']
+    0130 [line   62] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='GameUtil'
+    0131 [line   62] 0x02418106  GETTABLE   R4 = R4[K[6]='UnicodeToUtf8']
+    0132 [line   62] 0x00C1C146  GETTABLE   R5 = R1[K[7]='role_name']
+    0133 [line   62] 0x0100811C  CALL       A=4 B=2 C=2
+    0134 [line   63] 0x00C28146  GETTABLE   R5 = R1[K[10]='roles']
+    0135 [line   64] 0x0049418B  SELF       A=6 B=0 C=293 Bx=293
+    0136 [line   64] 0x01800200  MOVE       R8 = R3
+    0137 [line   64] 0x02800240  MOVE       R9 = R5
+    0138 [line   64] 0x0200419C  CALL       A=6 B=4 C=1
+    0139 [line   65] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0140 [line   65] 0x03448186  GETTABLE   R6 = R6[K[18]='Instance']
+    0141 [line   65] 0x0080819C  CALL       A=6 B=1 C=2
+    0142 [line   65] 0x0344C186  GETTABLE   R6 = R6[K[19]='m_HostPlayer']
+    0143 [line   65] 0x03450186  GETTABLE   R6 = R6[K[20]='ID']
+    0144 [line   65] 0x01018017  EQ         A=0 B=R2 C=R6
+    0145 [line   65] 0x80034016  JMP        A=0 sBx=14
+    0146 [line   66] 0x0003C185  GETGLOBAL  R6 = GLOBAL K[15]='require'
+    0147 [line   66] 0x000401C1  LOADK      R7 = K[16]='Chat.ECPanelChat'
+    0148 [line   66] 0x0100819C  CALL       A=6 B=2 C=2
+    0149 [line   67] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0150 [line   67] 0x008081DC  CALL       A=7 B=1 C=2
+    0151 [line   67] 0x03C981CB  SELF       A=7 B=7 C=294 Bx=3878
+    0152 [line   67] 0x010041DC  CALL       A=7 B=2 C=1
+    0153 [line   68] 0x000641C5  GETGLOBAL  R7 = GLOBAL K[25]='FlashTipMan'
+    0154 [line   68] 0x03C681C6  GETTABLE   R7 = R7[K[26]='FlashTip']
+    0155 [line   68] 0x0006C205  GETGLOBAL  R8 = GLOBAL K[27]='StringTable'
+    0156 [line   68] 0x04470206  GETTABLE   R8 = R8[K[28]='Get']
+    0157 [line   68] 0x0009C241  LOADK      R9 = K[39]=30209.0
+    0158 [line   68] 0x0100021C  CALL       A=8 B=2 C=0
+    0159 [line   68] 0x000041DC  CALL       A=7 B=0 C=1
+    0160 [line   70] 0x0000C181  LOADK      R6 = K[3]=1.0
+    0161 [line   70] 0x028001D4  LEN        A=7 B=5 C=0 Bx=2560
+    0162 [line   70] 0x0000C201  LOADK      R8 = K[3]=1.0
+    0163 [line   70] 0x8002C1A0  FORPREP    A=6 sBx=12
+    0164 [line   71] 0x02824286  GETTABLE   R10 = R5[R9]
+    0165 [line   71] 0x0000029A  TEST       A=10 B=0 C=0
+    0166 [line   71] 0x80020016  JMP        A=0 sBx=9
+    0167 [line   72] 0x0045828B  SELF       A=10 B=0 C=278 Bx=278
+    0168 [line   72] 0x02000300  MOVE       R12 = R4
+    0169 [line   72] 0x00014345  GETGLOBAL  R13 = GLOBAL K[5]='GameUtil'
+    0170 [line   72] 0x06C18346  GETTABLE   R13 = R13[K[6]='UnicodeToUtf8']
+    0171 [line   72] 0x02824386  GETTABLE   R14 = R5[R9]
+    0172 [line   72] 0x074A0386  GETTABLE   R14 = R14[K[40]='rolename']
+    0173 [line   72] 0x0100835C  CALL       A=13 B=2 C=2
+    0174 [line   72] 0x01800380  MOVE       R14 = R3
+    0175 [line   72] 0x0280429C  CALL       A=10 B=5 C=1
+    0176 [line   70] 0x7FFC819F  FORLOOP    A=6 sBx=-13
+    0177 [line   74] 0x80684016  JMP        A=0 sBx=418
+    0178 [line   75] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0179 [line   75] 0x014A4017  EQ         A=0 B=R2 C=K[41]=4.0
+    0180 [line   75] 0x800F8016  JMP        A=0 sBx=63
+    0181 [line   76] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0182 [line   77] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='GameUtil'
+    0183 [line   77] 0x01C180C6  GETTABLE   R3 = R3[K[6]='UnicodeToUtf8']
+    0184 [line   77] 0x00C1C106  GETTABLE   R4 = R1[K[7]='role_name']
+    0185 [line   77] 0x010080DC  CALL       A=3 B=2 C=2
+    0186 [line   78] 0x00C20106  GETTABLE   R4 = R1[K[8]='room_id']
+    0187 [line   79] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='GameUtil'
+    0188 [line   79] 0x02C18146  GETTABLE   R5 = R5[K[6]='UnicodeToUtf8']
+    0189 [line   79] 0x00C24186  GETTABLE   R6 = R1[K[9]='room_name']
+    0190 [line   79] 0x0100815C  CALL       A=5 B=2 C=2
+    0191 [line   80] 0x00C28186  GETTABLE   R6 = R1[K[10]='roles']
+    0192 [line   81] 0x0340C1C6  GETTABLE   R7 = R6[K[3]=1.0]
+    0193 [line   81] 0x000001DA  TEST       A=7 B=0 C=0
+    0194 [line   81] 0x80640016  JMP        A=0 sBx=401
+    0195 [line   81] 0x0340C1C6  GETTABLE   R7 = R6[K[3]=1.0]
+    0196 [line   81] 0x03C101C6  GETTABLE   R7 = R7[K[4]='roleid']
+    0197 [line   81] 0x000A8205  GETGLOBAL  R8 = GLOBAL K[42]='ZeroUInt64'
+    0198 [line   81] 0x03820057  EQ         A=1 B=R7 C=R8
+    0199 [line   81] 0x8062C016  JMP        A=0 sBx=396
+    0200 [line   82] 0x0340C1C6  GETTABLE   R7 = R6[K[3]=1.0]
+    0201 [line   82] 0x03C101C6  GETTABLE   R7 = R7[K[4]='roleid']
+    0202 [line   82] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0203 [line   82] 0x04448206  GETTABLE   R8 = R8[K[18]='Instance']
+    0204 [line   82] 0x0080821C  CALL       A=8 B=1 C=2
+    0205 [line   82] 0x0444C206  GETTABLE   R8 = R8[K[19]='m_HostPlayer']
+    0206 [line   82] 0x04450206  GETTABLE   R8 = R8[K[20]='ID']
+    0207 [line   82] 0x03820017  EQ         A=0 B=R7 C=R8
+    0208 [line   82] 0x80038016  JMP        A=0 sBx=15
+    0209 [line   83] 0x0048C1CB  SELF       A=7 B=0 C=291 Bx=291
+    0210 [line   83] 0x02000240  MOVE       R9 = R4
+    0211 [line   83] 0x018041DC  CALL       A=7 B=3 C=1
+    0212 [line   84] 0x000641C5  GETGLOBAL  R7 = GLOBAL K[25]='FlashTipMan'
+    0213 [line   84] 0x03C681C6  GETTABLE   R7 = R7[K[26]='FlashTip']
+    0214 [line   84] 0x0006C205  GETGLOBAL  R8 = GLOBAL K[27]='StringTable'
+    0215 [line   84] 0x04470206  GETTABLE   R8 = R8[K[28]='Get']
+    0216 [line   84] 0x000AC241  LOADK      R9 = K[43]=874.0
+    0217 [line   84] 0x0100821C  CALL       A=8 B=2 C=2
+    0218 [line   84] 0x0447820B  SELF       A=8 B=8 C=286 Bx=4382
+    0219 [line   84] 0x01800280  MOVE       R10 = R3
+    0220 [line   84] 0x028002C0  MOVE       R11 = R5
+    0221 [line   84] 0x0200021C  CALL       A=8 B=4 C=0
+    0222 [line   84] 0x000041DC  CALL       A=7 B=0 C=1
+    0223 [line   84] 0x805CC016  JMP        A=0 sBx=372
+    0224 [line   86] 0x004B01CB  SELF       A=7 B=0 C=300 Bx=300
+    0225 [line   86] 0x02000240  MOVE       R9 = R4
+    0226 [line   86] 0x0340C286  GETTABLE   R10 = R6[K[3]=1.0]
+    0227 [line   86] 0x05410286  GETTABLE   R10 = R10[K[4]='roleid']
+    0228 [line   86] 0x020041DC  CALL       A=7 B=4 C=1
+    0229 [line   87] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0230 [line   87] 0x03C481C6  GETTABLE   R7 = R7[K[18]='Instance']
+    0231 [line   87] 0x008081DC  CALL       A=7 B=1 C=2
+    0232 [line   87] 0x03C4C1C6  GETTABLE   R7 = R7[K[19]='m_HostPlayer']
+    0233 [line   87] 0x03C501C6  GETTABLE   R7 = R7[K[20]='ID']
+    0234 [line   87] 0x0101C017  EQ         A=0 B=R2 C=R7
+    0235 [line   87] 0x8059C016  JMP        A=0 sBx=360
+    0236 [line   88] 0x0003C1C5  GETGLOBAL  R7 = GLOBAL K[15]='require'
+    0237 [line   88] 0x00040201  LOADK      R8 = K[16]='Chat.ECPanelChat'
+    0238 [line   88] 0x010081DC  CALL       A=7 B=2 C=2
+    0239 [line   89] 0x03C48206  GETTABLE   R8 = R7[K[18]='Instance']
+    0240 [line   89] 0x0080821C  CALL       A=8 B=1 C=2
+    0241 [line   89] 0x0449820B  SELF       A=8 B=8 C=294 Bx=4390
+    0242 [line   89] 0x0100421C  CALL       A=8 B=2 C=1
+    0243 [line   92] 0x8057C016  JMP        A=0 sBx=352
+    0244 [line   93] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0245 [line   93] 0x014B4017  EQ         A=0 B=R2 C=K[45]=5.0
+    0246 [line   93] 0x80034016  JMP        A=0 sBx=14
+    0247 [line   94] 0x00C20086  GETTABLE   R2 = R1[K[8]='room_id']
+    0248 [line   95] 0x00C300C6  GETTABLE   R3 = R1[K[12]='auth_set']
+    0249 [line   96] 0x004B810B  SELF       A=4 B=0 C=302 Bx=302
+    0250 [line   96] 0x01000180  MOVE       R6 = R2
+    0251 [line   96] 0x018001C0  MOVE       R7 = R3
+    0252 [line   96] 0x0200411C  CALL       A=4 B=4 C=1
+    0253 [line   97] 0x0003C105  GETGLOBAL  R4 = GLOBAL K[15]='require'
+    0254 [line   97] 0x00040141  LOADK      R5 = K[16]='Chat.ECPanelChat'
+    0255 [line   97] 0x0100811C  CALL       A=4 B=2 C=2
+    0256 [line   98] 0x02448146  GETTABLE   R5 = R4[K[18]='Instance']
+    0257 [line   98] 0x0080815C  CALL       A=5 B=1 C=2
+    0258 [line   98] 0x02C9814B  SELF       A=5 B=5 C=294 Bx=2854
+    0259 [line   98] 0x0100415C  CALL       A=5 B=2 C=1
+    0260 [line   98] 0x80538016  JMP        A=0 sBx=335
+    0261 [line   99] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0262 [line   99] 0x014BC017  EQ         A=0 B=R2 C=K[47]=6.0
+    0263 [line   99] 0x800A0016  JMP        A=0 sBx=41
+    0264 [line  100] 0x00C20086  GETTABLE   R2 = R1[K[8]='room_id']
+    0265 [line  101] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='GameUtil'
+    0266 [line  101] 0x01C180C6  GETTABLE   R3 = R3[K[6]='UnicodeToUtf8']
+    0267 [line  101] 0x00C24106  GETTABLE   R4 = R1[K[9]='room_name']
+    0268 [line  101] 0x010080DC  CALL       A=3 B=2 C=2
+    0269 [line  102] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='GameUtil'
+    0270 [line  102] 0x02418106  GETTABLE   R4 = R4[K[6]='UnicodeToUtf8']
+    0271 [line  102] 0x00C34146  GETTABLE   R5 = R1[K[13]='remark_room_name']
+    0272 [line  102] 0x0100811C  CALL       A=4 B=2 C=2
+    0273 [line  103] 0x004C014B  SELF       A=5 B=0 C=304 Bx=304
+    0274 [line  103] 0x010001C0  MOVE       R7 = R2
+    0275 [line  103] 0x01800200  MOVE       R8 = R3
+    0276 [line  103] 0x02000240  MOVE       R9 = R4
+    0277 [line  103] 0x0280415C  CALL       A=5 B=5 C=1
+    0278 [line  104] 0x0003C145  GETGLOBAL  R5 = GLOBAL K[15]='require'
+    0279 [line  104] 0x00040181  LOADK      R6 = K[16]='Chat.ECPanelChat'
+    0280 [line  104] 0x0100815C  CALL       A=5 B=2 C=2
+    0281 [line  105] 0x02444057  EQ         A=1 B=R4 C=K[17]=''
+    0282 [line  105] 0x80018016  JMP        A=0 sBx=7
+    0283 [line  106] 0x02C48186  GETTABLE   R6 = R5[K[18]='Instance']
+    0284 [line  106] 0x0080819C  CALL       A=6 B=1 C=2
+    0285 [line  106] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0286 [line  106] 0x01000200  MOVE       R8 = R2
+    0287 [line  106] 0x02000240  MOVE       R9 = R4
+    0288 [line  106] 0x0200419C  CALL       A=6 B=4 C=1
+    0289 [line  106] 0x80014016  JMP        A=0 sBx=6
+    0290 [line  108] 0x02C48186  GETTABLE   R6 = R5[K[18]='Instance']
+    0291 [line  108] 0x0080819C  CALL       A=6 B=1 C=2
+    0292 [line  108] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0293 [line  108] 0x01000200  MOVE       R8 = R2
+    0294 [line  108] 0x01800240  MOVE       R9 = R3
+    0295 [line  108] 0x0200419C  CALL       A=6 B=4 C=1
+    0296 [line  110] 0x02C48186  GETTABLE   R6 = R5[K[18]='Instance']
+    0297 [line  110] 0x0080819C  CALL       A=6 B=1 C=2
+    0298 [line  110] 0x0347C18B  SELF       A=6 B=6 C=287 Bx=3359
+    0299 [line  110] 0x0100419C  CALL       A=6 B=2 C=1
+    0300 [line  111] 0x02C48186  GETTABLE   R6 = R5[K[18]='Instance']
+    0301 [line  111] 0x0080819C  CALL       A=6 B=1 C=2
+    0302 [line  111] 0x034C418B  SELF       A=6 B=6 C=305 Bx=3377
+    0303 [line  111] 0x0100419C  CALL       A=6 B=2 C=1
+    0304 [line  111] 0x80488016  JMP        A=0 sBx=291
+    0305 [line  112] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0306 [line  112] 0x014C8017  EQ         A=0 B=R2 C=K[50]=7.0
+    0307 [line  112] 0x80148016  JMP        A=0 sBx=83
+    0308 [line  113] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0309 [line  114] 0x00C200C6  GETTABLE   R3 = R1[K[8]='room_id']
+    0310 [line  115] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='GameUtil'
+    0311 [line  115] 0x02418106  GETTABLE   R4 = R4[K[6]='UnicodeToUtf8']
+    0312 [line  115] 0x00C24146  GETTABLE   R5 = R1[K[9]='room_name']
+    0313 [line  115] 0x0100811C  CALL       A=4 B=2 C=2
+    0314 [line  116] 0x00C2C146  GETTABLE   R5 = R1[K[11]='owner_info']
+    0315 [line  117] 0x004CC18B  SELF       A=6 B=0 C=307 Bx=307
+    0316 [line  117] 0x01800200  MOVE       R8 = R3
+    0317 [line  117] 0x02800240  MOVE       R9 = R5
+    0318 [line  117] 0x0200419C  CALL       A=6 B=4 C=1
+    0319 [line  118] 0x004D018B  SELF       A=6 B=0 C=308 Bx=308
+    0320 [line  118] 0x01800200  MOVE       R8 = R3
+    0321 [line  118] 0x02800240  MOVE       R9 = R5
+    0322 [line  118] 0x0200419C  CALL       A=6 B=4 C=1
+    0323 [line  119] 0x0003C185  GETGLOBAL  R6 = GLOBAL K[15]='require'
+    0324 [line  119] 0x000401C1  LOADK      R7 = K[16]='Chat.ECPanelChat'
+    0325 [line  119] 0x0100819C  CALL       A=6 B=2 C=2
+    0326 [line  120] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0327 [line  120] 0x03C481C6  GETTABLE   R7 = R7[K[18]='Instance']
+    0328 [line  120] 0x008081DC  CALL       A=7 B=1 C=2
+    0329 [line  120] 0x03C4C1C6  GETTABLE   R7 = R7[K[19]='m_HostPlayer']
+    0330 [line  120] 0x03C501C6  GETTABLE   R7 = R7[K[20]='ID']
+    0331 [line  120] 0x0101C017  EQ         A=0 B=R2 C=R7
+    0332 [line  120] 0x8003C016  JMP        A=0 sBx=16
+    0333 [line  121] 0x000641C5  GETGLOBAL  R7 = GLOBAL K[25]='FlashTipMan'
+    0334 [line  121] 0x03C681C6  GETTABLE   R7 = R7[K[26]='FlashTip']
+    0335 [line  121] 0x0006C205  GETGLOBAL  R8 = GLOBAL K[27]='StringTable'
+    0336 [line  121] 0x04470206  GETTABLE   R8 = R8[K[28]='Get']
+    0337 [line  121] 0x000D4241  LOADK      R9 = K[53]=875.0
+    0338 [line  121] 0x0100021C  CALL       A=8 B=2 C=0
+    0339 [line  121] 0x000041DC  CALL       A=7 B=0 C=1
+    0340 [line  122] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0341 [line  122] 0x008081DC  CALL       A=7 B=1 C=2
+    0342 [line  122] 0x03CD81CB  SELF       A=7 B=7 C=310 Bx=3894
+    0343 [line  122] 0x010041DC  CALL       A=7 B=2 C=1
+    0344 [line  123] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0345 [line  123] 0x008081DC  CALL       A=7 B=1 C=2
+    0346 [line  123] 0x03C981CB  SELF       A=7 B=7 C=294 Bx=3878
+    0347 [line  123] 0x010041DC  CALL       A=7 B=2 C=1
+    0348 [line  123] 0x803D8016  JMP        A=0 sBx=247
+    0349 [line  124] 0x02C101C6  GETTABLE   R7 = R5[K[4]='roleid']
+    0350 [line  124] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0351 [line  124] 0x04448206  GETTABLE   R8 = R8[K[18]='Instance']
+    0352 [line  124] 0x0080821C  CALL       A=8 B=1 C=2
+    0353 [line  124] 0x0444C206  GETTABLE   R8 = R8[K[19]='m_HostPlayer']
+    0354 [line  124] 0x04450206  GETTABLE   R8 = R8[K[20]='ID']
+    0355 [line  124] 0x03820017  EQ         A=0 B=R7 C=R8
+    0356 [line  124] 0x8005C016  JMP        A=0 sBx=24
+    0357 [line  125] 0x000641C5  GETGLOBAL  R7 = GLOBAL K[25]='FlashTipMan'
+    0358 [line  125] 0x03C681C6  GETTABLE   R7 = R7[K[26]='FlashTip']
+    0359 [line  125] 0x0006C205  GETGLOBAL  R8 = GLOBAL K[27]='StringTable'
+    0360 [line  125] 0x04470206  GETTABLE   R8 = R8[K[28]='Get']
+    0361 [line  125] 0x000DC241  LOADK      R9 = K[55]=876.0
+    0362 [line  125] 0x0100821C  CALL       A=8 B=2 C=2
+    0363 [line  125] 0x0447820B  SELF       A=8 B=8 C=286 Bx=4382
+    0364 [line  125] 0x02000280  MOVE       R10 = R4
+    0365 [line  125] 0x0180021C  CALL       A=8 B=3 C=0
+    0366 [line  125] 0x000041DC  CALL       A=7 B=0 C=1
+    0367 [line  126] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0368 [line  126] 0x008081DC  CALL       A=7 B=1 C=2
+    0369 [line  126] 0x03CE01C6  GETTABLE   R7 = R7[K[56]='m_CurChatRoomID']
+    0370 [line  126] 0x0181C017  EQ         A=0 B=R3 C=R7
+    0371 [line  126] 0x8037C016  JMP        A=0 sBx=224
+    0372 [line  127] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0373 [line  127] 0x008081DC  CALL       A=7 B=1 C=2
+    0374 [line  127] 0x03CD81CB  SELF       A=7 B=7 C=310 Bx=3894
+    0375 [line  127] 0x010041DC  CALL       A=7 B=2 C=1
+    0376 [line  128] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0377 [line  128] 0x008081DC  CALL       A=7 B=1 C=2
+    0378 [line  128] 0x03C981CB  SELF       A=7 B=7 C=294 Bx=3878
+    0379 [line  128] 0x010041DC  CALL       A=7 B=2 C=1
+    0380 [line  129] 0x80358016  JMP        A=0 sBx=215
+    0381 [line  131] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0382 [line  131] 0x008081DC  CALL       A=7 B=1 C=2
+    0383 [line  131] 0x03CE01C6  GETTABLE   R7 = R7[K[56]='m_CurChatRoomID']
+    0384 [line  131] 0x0181C017  EQ         A=0 B=R3 C=R7
+    0385 [line  131] 0x80344016  JMP        A=0 sBx=210
+    0386 [line  132] 0x034481C6  GETTABLE   R7 = R6[K[18]='Instance']
+    0387 [line  132] 0x008081DC  CALL       A=7 B=1 C=2
+    0388 [line  132] 0x03C981CB  SELF       A=7 B=7 C=294 Bx=3878
+    0389 [line  132] 0x010041DC  CALL       A=7 B=2 C=1
+    0390 [line  134] 0x80330016  JMP        A=0 sBx=205
+    0391 [line  135] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0392 [line  135] 0x014E4017  EQ         A=0 B=R2 C=K[57]=8.0
+    0393 [line  135] 0x80044016  JMP        A=0 sBx=18
+    0394 [line  136] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0395 [line  137] 0x00C200C6  GETTABLE   R3 = R1[K[8]='room_id']
+    0396 [line  138] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0397 [line  138] 0x02448106  GETTABLE   R4 = R4[K[18]='Instance']
+    0398 [line  138] 0x0080811C  CALL       A=4 B=1 C=2
+    0399 [line  138] 0x0244C106  GETTABLE   R4 = R4[K[19]='m_HostPlayer']
+    0400 [line  138] 0x02450106  GETTABLE   R4 = R4[K[20]='ID']
+    0401 [line  138] 0x01010017  EQ         A=0 B=R2 C=R4
+    0402 [line  138] 0x8000C016  JMP        A=0 sBx=4
+    0403 [line  139] 0x0048C10B  SELF       A=4 B=0 C=291 Bx=291
+    0404 [line  139] 0x01800180  MOVE       R6 = R3
+    0405 [line  139] 0x0180411C  CALL       A=4 B=3 C=1
+    0406 [line  139] 0x802F0016  JMP        A=0 sBx=189
+    0407 [line  141] 0x004B010B  SELF       A=4 B=0 C=300 Bx=300
+    0408 [line  141] 0x01800180  MOVE       R6 = R3
+    0409 [line  141] 0x010001C0  MOVE       R7 = R2
+    0410 [line  141] 0x0200411C  CALL       A=4 B=4 C=1
+    0411 [line  142] 0x802DC016  JMP        A=0 sBx=184
+    0412 [line  143] 0x00C08086  GETTABLE   R2 = R1[K[2]='op_type']
+    0413 [line  143] 0x014E8017  EQ         A=0 B=R2 C=K[58]=9.0
+    0414 [line  143] 0x802D0016  JMP        A=0 sBx=181
+    0415 [line  144] 0x00C10086  GETTABLE   R2 = R1[K[4]='roleid']
+    0416 [line  145] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='GameUtil'
+    0417 [line  145] 0x01C180C6  GETTABLE   R3 = R3[K[6]='UnicodeToUtf8']
+    0418 [line  145] 0x00C1C106  GETTABLE   R4 = R1[K[7]='role_name']
+    0419 [line  145] 0x010080DC  CALL       A=3 B=2 C=2
+    0420 [line  146] 0x00C20106  GETTABLE   R4 = R1[K[8]='room_id']
+    0421 [line  147] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='GameUtil'
+    0422 [line  147] 0x02C18146  GETTABLE   R5 = R5[K[6]='UnicodeToUtf8']
+    0423 [line  147] 0x00C24186  GETTABLE   R6 = R1[K[9]='room_name']
+    0424 [line  147] 0x0100815C  CALL       A=5 B=2 C=2
+    0425 [line  148] 0x00C28186  GETTABLE   R6 = R1[K[10]='roles']
+    0426 [line  149] 0x00C2C1C6  GETTABLE   R7 = R1[K[11]='owner_info']
+    0427 [line  150] 0x00C30206  GETTABLE   R8 = R1[K[12]='auth_set']
+    0428 [line  151] 0x00014245  GETGLOBAL  R9 = GLOBAL K[5]='GameUtil'
+    0429 [line  151] 0x04C18246  GETTABLE   R9 = R9[K[6]='UnicodeToUtf8']
+    0430 [line  151] 0x00C34286  GETTABLE   R10 = R1[K[13]='remark_room_name']
+    0431 [line  151] 0x0100825C  CALL       A=9 B=2 C=2
+    0432 [line  152] 0x0043828B  SELF       A=10 B=0 C=270 Bx=270
+    0433 [line  152] 0x02000300  MOVE       R12 = R4
+    0434 [line  152] 0x02800340  MOVE       R13 = R5
+    0435 [line  152] 0x04800380  MOVE       R14 = R9
+    0436 [line  152] 0x030003C0  MOVE       R15 = R6
+    0437 [line  152] 0x03800400  MOVE       R16 = R7
+    0438 [line  152] 0x04000440  MOVE       R17 = R8
+    0439 [line  152] 0x0400429C  CALL       A=10 B=8 C=1
+    0440 [line  153] 0x00CEC286  GETTABLE   R10 = R1[K[59]='historys']
+    0441 [line  154] 0x050002D4  LEN        A=11 B=10 C=0 Bx=5120
+    0442 [line  155] 0x00004301  LOADK      R12 = K[1]=0.0
+    0443 [line  156] 0x8082C018  LT         A=0 B=K[1]=0.0 C=R11
+    0444 [line  156] 0x80098016  JMP        A=0 sBx=39
+    0445 [line  157] 0x0502C346  GETTABLE   R13 = R10[R11]
+    0446 [line  157] 0x06CF0306  GETTABLE   R12 = R13[K[60]='chat_time']
+    0447 [line  158] 0x0003C345  GETGLOBAL  R13 = GLOBAL K[15]='require'
+    0448 [line  158] 0x000F4381  LOADK      R14 = K[61]='Chat.ECChatManager'
+    0449 [line  158] 0x0100835C  CALL       A=13 B=2 C=2
+    0450 [line  159] 0x0000C381  LOADK      R14 = K[3]=1.0
+    0451 [line  159] 0x058003C0  MOVE       R15 = R11
+    0452 [line  159] 0x0000C401  LOADK      R16 = K[3]=1.0
+    0453 [line  159] 0x800703A0  FORPREP    A=14 sBx=29
+    0454 [line  160] 0x05044486  GETTABLE   R18 = R10[R17]
+    0455 [line  160] 0x09410486  GETTABLE   R18 = R18[K[4]='roleid']
+    0456 [line  161] 0x000144C5  GETGLOBAL  R19 = GLOBAL K[5]='GameUtil'
+    0457 [line  161] 0x09C184C6  GETTABLE   R19 = R19[K[6]='UnicodeToUtf8']
+    0458 [line  161] 0x05044506  GETTABLE   R20 = R10[R17]
+    0459 [line  161] 0x0A4F8506  GETTABLE   R20 = R20[K[62]='name']
+    0460 [line  161] 0x010084DC  CALL       A=19 B=2 C=2
+    0461 [line  162] 0x05044506  GETTABLE   R20 = R10[R17]
+    0462 [line  162] 0x0A4FC506  GETTABLE   R20 = R20[K[63]='gender']
+    0463 [line  163] 0x05044546  GETTABLE   R21 = R10[R17]
+    0464 [line  163] 0x0AD00546  GETTABLE   R21 = R21[K[64]='prof']
+    0465 [line  164] 0x05044586  GETTABLE   R22 = R10[R17]
+    0466 [line  164] 0x0B4F0586  GETTABLE   R22 = R22[K[60]='chat_time']
+    0467 [line  165] 0x000145C5  GETGLOBAL  R23 = GLOBAL K[5]='GameUtil'
+    0468 [line  165] 0x0BC185C6  GETTABLE   R23 = R23[K[6]='UnicodeToUtf8']
+    0469 [line  165] 0x05044606  GETTABLE   R24 = R10[R17]
+    0470 [line  165] 0x0C504606  GETTABLE   R24 = R24[K[65]='chat_info']
+    0471 [line  165] 0x010085DC  CALL       A=23 B=2 C=2
+    0472 [line  166] 0x06C48606  GETTABLE   R24 = R13[K[18]='Instance']
+    0473 [line  166] 0x0080861C  CALL       A=24 B=1 C=2
+    0474 [line  166] 0x0C50860B  SELF       A=24 B=24 C=322 Bx=12610
+    0475 [line  166] 0x09000680  MOVE       R26 = R18
+    0476 [line  166] 0x098006C0  MOVE       R27 = R19
+    0477 [line  166] 0x0A000700  MOVE       R28 = R20
+    0478 [line  166] 0x0A800740  MOVE       R29 = R21
+    0479 [line  166] 0x0B000780  MOVE       R30 = R22
+    0480 [line  166] 0x0B8007C0  MOVE       R31 = R23
+    0481 [line  166] 0x02000800  MOVE       R32 = R4
+    0482 [line  166] 0x0480461C  CALL       A=24 B=9 C=1
+    0483 [line  159] 0x7FF8439F  FORLOOP    A=14 sBx=-30
+    0484 [line  169] 0x0003C345  GETGLOBAL  R13 = GLOBAL K[15]='require'
+    0485 [line  169] 0x00040381  LOADK      R14 = K[16]='Chat.ECPanelChat'
+    0486 [line  169] 0x0100835C  CALL       A=13 B=2 C=2
+    0487 [line  170] 0x04C44057  EQ         A=1 B=R9 C=K[17]=''
+    0488 [line  170] 0x8001C016  JMP        A=0 sBx=8
+    0489 [line  171] 0x06C48386  GETTABLE   R14 = R13[K[18]='Instance']
+    0490 [line  171] 0x0080839C  CALL       A=14 B=1 C=2
+    0491 [line  171] 0x0750C38B  SELF       A=14 B=14 C=323 Bx=7491
+    0492 [line  171] 0x02000400  MOVE       R16 = R4
+    0493 [line  171] 0x04800440  MOVE       R17 = R9
+    0494 [line  171] 0x06000480  MOVE       R18 = R12
+    0495 [line  171] 0x0280439C  CALL       A=14 B=5 C=1
+    0496 [line  171] 0x80018016  JMP        A=0 sBx=7
+    0497 [line  173] 0x06C48386  GETTABLE   R14 = R13[K[18]='Instance']
+    0498 [line  173] 0x0080839C  CALL       A=14 B=1 C=2
+    0499 [line  173] 0x0750C38B  SELF       A=14 B=14 C=323 Bx=7491
+    0500 [line  173] 0x02000400  MOVE       R16 = R4
+    0501 [line  173] 0x02800440  MOVE       R17 = R5
+    0502 [line  173] 0x06000480  MOVE       R18 = R12
+    0503 [line  173] 0x0280439C  CALL       A=14 B=5 C=1
+    0504 [line  175] 0x06C48386  GETTABLE   R14 = R13[K[18]='Instance']
+    0505 [line  175] 0x0080839C  CALL       A=14 B=1 C=2
+    0506 [line  175] 0x0747C38B  SELF       A=14 B=14 C=287 Bx=7455
+    0507 [line  175] 0x0100439C  CALL       A=14 B=2 C=1
+    0508 [line  176] 0x80158016  JMP        A=0 sBx=87
+    0509 [line  178] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0510 [line  178] 0x01510017  EQ         A=0 B=R2 C=K[68]=968.0
+    0511 [line  178] 0x8001C016  JMP        A=0 sBx=8
+    0512 [line  179] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0513 [line  179] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0514 [line  179] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0515 [line  179] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0516 [line  179] 0x00114101  LOADK      R4 = K[69]=30201.0
+    0517 [line  179] 0x010000DC  CALL       A=3 B=2 C=0
+    0518 [line  179] 0x0000409C  CALL       A=2 B=0 C=1
+    0519 [line  179] 0x8012C016  JMP        A=0 sBx=76
+    0520 [line  180] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0521 [line  180] 0x01518017  EQ         A=0 B=R2 C=K[70]=969.0
+    0522 [line  180] 0x8001C016  JMP        A=0 sBx=8
+    0523 [line  181] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0524 [line  181] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0525 [line  181] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0526 [line  181] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0527 [line  181] 0x0011C101  LOADK      R4 = K[71]=30202.0
+    0528 [line  181] 0x010000DC  CALL       A=3 B=2 C=0
+    0529 [line  181] 0x0000409C  CALL       A=2 B=0 C=1
+    0530 [line  181] 0x80100016  JMP        A=0 sBx=65
+    0531 [line  182] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0532 [line  182] 0x01520017  EQ         A=0 B=R2 C=K[72]=970.0
+    0533 [line  182] 0x8001C016  JMP        A=0 sBx=8
+    0534 [line  183] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0535 [line  183] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0536 [line  183] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0537 [line  183] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0538 [line  183] 0x00124101  LOADK      R4 = K[73]=30203.0
+    0539 [line  183] 0x010000DC  CALL       A=3 B=2 C=0
+    0540 [line  183] 0x0000409C  CALL       A=2 B=0 C=1
+    0541 [line  183] 0x800D4016  JMP        A=0 sBx=54
+    0542 [line  184] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0543 [line  184] 0x01528017  EQ         A=0 B=R2 C=K[74]=971.0
+    0544 [line  184] 0x8001C016  JMP        A=0 sBx=8
+    0545 [line  185] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0546 [line  185] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0547 [line  185] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0548 [line  185] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0549 [line  185] 0x0012C101  LOADK      R4 = K[75]=30204.0
+    0550 [line  185] 0x010000DC  CALL       A=3 B=2 C=0
+    0551 [line  185] 0x0000409C  CALL       A=2 B=0 C=1
+    0552 [line  185] 0x800A8016  JMP        A=0 sBx=43
+    0553 [line  186] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0554 [line  186] 0x01530017  EQ         A=0 B=R2 C=K[76]=972.0
+    0555 [line  186] 0x8001C016  JMP        A=0 sBx=8
+    0556 [line  187] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0557 [line  187] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0558 [line  187] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0559 [line  187] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0560 [line  187] 0x00134101  LOADK      R4 = K[77]=30205.0
+    0561 [line  187] 0x010000DC  CALL       A=3 B=2 C=0
+    0562 [line  187] 0x0000409C  CALL       A=2 B=0 C=1
+    0563 [line  187] 0x8007C016  JMP        A=0 sBx=32
+    0564 [line  188] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0565 [line  188] 0x01538017  EQ         A=0 B=R2 C=K[78]=974.0
+    0566 [line  188] 0x8001C016  JMP        A=0 sBx=8
+    0567 [line  189] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0568 [line  189] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0569 [line  189] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0570 [line  189] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0571 [line  189] 0x0013C101  LOADK      R4 = K[79]=30206.0
+    0572 [line  189] 0x010000DC  CALL       A=3 B=2 C=0
+    0573 [line  189] 0x0000409C  CALL       A=2 B=0 C=1
+    0574 [line  189] 0x80050016  JMP        A=0 sBx=21
+    0575 [line  190] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0576 [line  190] 0x01540017  EQ         A=0 B=R2 C=K[80]=975.0
+    0577 [line  190] 0x8001C016  JMP        A=0 sBx=8
+    0578 [line  191] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0579 [line  191] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0580 [line  191] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0581 [line  191] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0582 [line  191] 0x00144101  LOADK      R4 = K[81]=30207.0
+    0583 [line  191] 0x010000DC  CALL       A=3 B=2 C=0
+    0584 [line  191] 0x0000409C  CALL       A=2 B=0 C=1
+    0585 [line  191] 0x80024016  JMP        A=0 sBx=10
+    0586 [line  192] 0x00C00086  GETTABLE   R2 = R1[K[0]='ret_code']
+    0587 [line  192] 0x01548017  EQ         A=0 B=R2 C=K[82]=977.0
+    0588 [line  192] 0x80018016  JMP        A=0 sBx=7
+    0589 [line  193] 0x00064085  GETGLOBAL  R2 = GLOBAL K[25]='FlashTipMan'
+    0590 [line  193] 0x01468086  GETTABLE   R2 = R2[K[26]='FlashTip']
+    0591 [line  193] 0x0006C0C5  GETGLOBAL  R3 = GLOBAL K[27]='StringTable'
+    0592 [line  193] 0x01C700C6  GETTABLE   R3 = R3[K[28]='Get']
+    0593 [line  193] 0x0014C101  LOADK      R4 = K[83]=30208.0
+    0594 [line  193] 0x010000DC  CALL       A=3 B=2 C=0
+    0595 [line  193] 0x0000409C  CALL       A=2 B=0 C=1
+    0596 [line  196] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 596
+    'msg': 0 -> 596
+    'roleid': 7 -> 86
+    'role_name': 11 -> 86
+    'room_id': 12 -> 86
+    'room_name': 16 -> 86
+    'member_list': 17 -> 86
+    'owner_info': 18 -> 86
+    'auth_set': 19 -> 86
+    'remark_room_name': 23 -> 86
+    'ECPanelChat': 34 -> 86
+    'roleid': 91 -> 124
+    'room_id': 92 -> 124
+    'room_name': 96 -> 124
+    'roleid': 129 -> 177
+    'room_id': 130 -> 177
+    'role_name': 134 -> 177
+    'member_list': 135 -> 177
+    'ECPanelChat': 149 -> 160
+    '(for index)': 163 -> 177
+    '(for limit)': 163 -> 177
+    '(for step)': 163 -> 177
+    'i': 164 -> 176
+    'roleid': 182 -> 243
+    'role_name': 186 -> 243
+    'room_id': 187 -> 243
+    'room_name': 191 -> 243
+    'member_list': 192 -> 243
+    'ECPanelChat': 239 -> 243
+    'room_id': 248 -> 260
+    'auth_set': 249 -> 260
+    'ECPanelChat': 256 -> 260
+    'room_id': 265 -> 304
+    'room_name': 269 -> 304
+    'remark_room_name': 273 -> 304
+    'ECPanelChat': 281 -> 304
+    'roleid': 309 -> 390
+    'room_id': 310 -> 390
+    'room_name': 314 -> 390
+    'owner_info': 315 -> 390
+    'ECPanelChat': 326 -> 390
+    'roleid': 395 -> 411
+    'room_id': 396 -> 411
+    'roleid': 416 -> 508
+    'role_name': 420 -> 508
+    'room_id': 421 -> 508
+    'room_name': 425 -> 508
+    'member_list': 426 -> 508
+    'owner_info': 427 -> 508
+    'auth_set': 428 -> 508
+    'remark_room_name': 432 -> 508
+    'historys': 441 -> 508
+    'historys_count': 442 -> 508
+    'last_time': 443 -> 508
+    'ECChatManager': 450 -> 484
+    '(for index)': 453 -> 484
+    '(for limit)': 453 -> 484
+    '(for step)': 453 -> 484
+    'i': 454 -> 483
+    'id': 456 -> 483
+    'name': 461 -> 483
+    'gender': 463 -> 483
+    'prof': 465 -> 483
+    'time': 467 -> 483
+    'str_msg': 472 -> 483
+    'ECPanelChat': 487 -> 508
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x2320
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 199 - 208
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'table'
+    K[001] = 'insert'
+    K[002] = 1.0
+    K[003] = 'roleid'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  200] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0001 [line  201] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='table'
+    0002 [line  201] 0x01C040C6  GETTABLE   R3 = R3[K[1]='insert']
+    0003 [line  201] 0x01000100  MOVE       R4 = R2
+    0004 [line  201] 0x00800140  MOVE       R5 = R1
+    0005 [line  201] 0x018040DC  CALL       A=3 B=3 C=1
+    0006 [line  202] 0x000080C1  LOADK      R3 = K[2]=1.0
+    0007 [line  202] 0x00000114  LEN        A=4 B=0 C=0 Bx=0
+    0008 [line  202] 0x00008141  LOADK      R5 = K[2]=1.0
+    0009 [line  202] 0x800240E0  FORPREP    A=3 sBx=10
+    0010 [line  203] 0x000181C6  GETTABLE   R7 = R0[R6]
+    0011 [line  203] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='roleid']
+    0012 [line  203] 0x00C0C206  GETTABLE   R8 = R1[K[3]='roleid']
+    0013 [line  203] 0x03820057  EQ         A=1 B=R7 C=R8
+    0014 [line  203] 0x80010016  JMP        A=0 sBx=5
+    0015 [line  204] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='table'
+    0016 [line  204] 0x03C041C6  GETTABLE   R7 = R7[K[1]='insert']
+    0017 [line  204] 0x01000200  MOVE       R8 = R2
+    0018 [line  204] 0x00018246  GETTABLE   R9 = R0[R6]
+    0019 [line  204] 0x018041DC  CALL       A=7 B=3 C=1
+    0020 [line  202] 0x7FFD00DF  FORLOOP    A=3 sBx=-11
+    0021 [line  207] 0x0100009E  RETURN     A=2 B=2 C=0
+    0022 [line  208] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'member_list': 0 -> 22
+    'owner_info': 0 -> 22
+    'list': 1 -> 22
+    '(for index)': 9 -> 21
+    '(for limit)': 9 -> 21
+    '(for step)': 9 -> 21
+    'i': 10 -> 20
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x24C1
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 210 - 234
+    Params : 7
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 1.0
+    K[003] = 'm_ChatRoomList'
+    K[004] = 'id'
+    K[005] = 'GameUtil'
+    K[006] = 'GetServerGMTTime'
+    K[007] = 'roleid'
+    K[008] = 'ID'
+    K[009] = 'name'
+    K[010] = 'remark_name'
+    K[011] = 'time'
+    K[012] = 'member_list'
+    K[013] = 'isOwner'
+    K[014] = 'auth_set'
+    K[015] = 'table'
+    K[016] = 'insert'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  211] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0001 [line  212] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0002 [line  213] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0003 [line  213] 0x04C00246  GETTABLE   R9 = R9[K[0]='Instance']
+    0004 [line  213] 0x0080825C  CALL       A=9 B=1 C=2
+    0005 [line  213] 0x04C04246  GETTABLE   R9 = R9[K[1]='m_HostPlayer']
+    0006 [line  214] 0x00008281  LOADK      R10 = K[2]=1.0
+    0007 [line  214] 0x0040C2C6  GETTABLE   R11 = R0[K[3]='m_ChatRoomList']
+    0008 [line  214] 0x058002D4  LEN        A=11 B=11 C=0 Bx=5632
+    0009 [line  214] 0x00008301  LOADK      R12 = K[2]=1.0
+    0010 [line  214] 0x8007C2A0  FORPREP    A=10 sBx=32
+    0011 [line  215] 0x0040C386  GETTABLE   R14 = R0[K[3]='m_ChatRoomList']
+    0012 [line  215] 0x07034386  GETTABLE   R14 = R14[R13]
+    0013 [line  215] 0x07410386  GETTABLE   R14 = R14[K[4]='id']
+    0014 [line  215] 0x07004017  EQ         A=0 B=R14 C=R1
+    0015 [line  215] 0x80068016  JMP        A=0 sBx=27
+    0016 [line  216] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0017 [line  217] 0x00014385  GETGLOBAL  R14 = GLOBAL K[5]='GameUtil'
+    0018 [line  217] 0x07418386  GETTABLE   R14 = R14[K[6]='GetServerGMTTime']
+    0019 [line  217] 0x0080839C  CALL       A=14 B=1 C=2
+    0020 [line  218] 0x0000025A  TEST       A=9 B=0 C=0
+    0021 [line  218] 0x80014016  JMP        A=0 sBx=6
+    0022 [line  219] 0x02C1C3C6  GETTABLE   R15 = R5[K[7]='roleid']
+    0023 [line  219] 0x04C20406  GETTABLE   R16 = R9[K[8]='ID']
+    0024 [line  219] 0x07840057  EQ         A=1 B=R15 C=R16
+    0025 [line  219] 0x80000016  JMP        A=0 sBx=1
+    0026 [line  219] 0x00004202  LOADBOOL   A=8 B=0 C=1
+    0027 [line  219] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0028 [line  221] 0x008003C4  GETUPVAL   A=15 B=1 C=0 Bx=512
+    0029 [line  221] 0x02000400  MOVE       R16 = R4
+    0030 [line  221] 0x02800440  MOVE       R17 = R5
+    0031 [line  221] 0x018083DC  CALL       A=15 B=3 C=2
+    0032 [line  222] 0x0040C406  GETTABLE   R16 = R0[K[3]='m_ChatRoomList']
+    0033 [line  222] 0x0001C44A  NEWTABLE   A=17 B=0 C=7 Bx=7
+    0034 [line  222] 0x82004449  SETTABLE   R17[K[4]='id'] = R1
+    0035 [line  222] 0x84808449  SETTABLE   R17[K[9]='name'] = R2
+    0036 [line  222] 0x8500C449  SETTABLE   R17[K[10]='remark_name'] = R3
+    0037 [line  222] 0x85838449  SETTABLE   R17[K[11]='time'] = R14
+    0038 [line  222] 0x8603C449  SETTABLE   R17[K[12]='member_list'] = R15
+    0039 [line  222] 0x86820449  SETTABLE   R17[K[13]='isOwner'] = R8
+    0040 [line  222] 0x87018449  SETTABLE   R17[K[14]='auth_set'] = R6
+    0041 [line  222] 0x06844409  SETTABLE   R16[R13] = R17
+    0042 [line  223] 0x80000016  JMP        A=0 sBx=1
+    0043 [line  214] 0x7FF7829F  FORLOOP    A=10 sBx=-33
+    0044 [line  226] 0x000041DA  TEST       A=7 B=0 C=1
+    0045 [line  226] 0x8006C016  JMP        A=0 sBx=28
+    0046 [line  227] 0x00014285  GETGLOBAL  R10 = GLOBAL K[5]='GameUtil'
+    0047 [line  227] 0x05418286  GETTABLE   R10 = R10[K[6]='GetServerGMTTime']
+    0048 [line  227] 0x0080829C  CALL       A=10 B=1 C=2
+    0049 [line  228] 0x0000025A  TEST       A=9 B=0 C=0
+    0050 [line  228] 0x80014016  JMP        A=0 sBx=6
+    0051 [line  229] 0x02C1C2C6  GETTABLE   R11 = R5[K[7]='roleid']
+    0052 [line  229] 0x04C20306  GETTABLE   R12 = R9[K[8]='ID']
+    0053 [line  229] 0x05830057  EQ         A=1 B=R11 C=R12
+    0054 [line  229] 0x80000016  JMP        A=0 sBx=1
+    0055 [line  229] 0x00004202  LOADBOOL   A=8 B=0 C=1
+    0056 [line  229] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0057 [line  231] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0058 [line  231] 0x02000300  MOVE       R12 = R4
+    0059 [line  231] 0x02800340  MOVE       R13 = R5
+    0060 [line  231] 0x018082DC  CALL       A=11 B=3 C=2
+    0061 [line  232] 0x0003C305  GETGLOBAL  R12 = GLOBAL K[15]='table'
+    0062 [line  232] 0x06440306  GETTABLE   R12 = R12[K[16]='insert']
+    0063 [line  232] 0x0040C346  GETTABLE   R13 = R0[K[3]='m_ChatRoomList']
+    0064 [line  232] 0x00008381  LOADK      R14 = K[2]=1.0
+    0065 [line  232] 0x0001C3CA  NEWTABLE   A=15 B=0 C=7 Bx=7
+    0066 [line  232] 0x820043C9  SETTABLE   R15[K[4]='id'] = R1
+    0067 [line  232] 0x848083C9  SETTABLE   R15[K[9]='name'] = R2
+    0068 [line  232] 0x8500C3C9  SETTABLE   R15[K[10]='remark_name'] = R3
+    0069 [line  232] 0x858283C9  SETTABLE   R15[K[11]='time'] = R10
+    0070 [line  232] 0x8602C3C9  SETTABLE   R15[K[12]='member_list'] = R11
+    0071 [line  232] 0x868203C9  SETTABLE   R15[K[13]='isOwner'] = R8
+    0072 [line  232] 0x870183C9  SETTABLE   R15[K[14]='auth_set'] = R6
+    0073 [line  232] 0x0200431C  CALL       A=12 B=4 C=1
+    0074 [line  234] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 74
+    'id': 0 -> 74
+    'name': 0 -> 74
+    'remark_name': 0 -> 74
+    'member_list': 0 -> 74
+    'owner_info': 0 -> 74
+    'auth_set': 0 -> 74
+    'hasChatRoom': 1 -> 74
+    'isOwner': 2 -> 74
+    'hp': 6 -> 74
+    '(for index)': 10 -> 44
+    '(for limit)': 10 -> 44
+    '(for step)': 10 -> 44
+    'i': 11 -> 43
+    'time': 20 -> 43
+    'tempList': 32 -> 43
+    'time': 49 -> 74
+    'tempList': 61 -> 74
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x29AF
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 236 - 243
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'table'
+    K[004] = 'remove'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  237] 0x00000081  LOADK      R2 = K[0]=1.0
+    0001 [line  237] 0x004040C6  GETTABLE   R3 = R0[K[1]='m_ChatRoomList']
+    0002 [line  237] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0003 [line  237] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line  237] 0x800280A0  FORPREP    A=2 sBx=11
+    0005 [line  238] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0006 [line  238] 0x03014186  GETTABLE   R6 = R6[R5]
+    0007 [line  238] 0x03408186  GETTABLE   R6 = R6[K[2]='id']
+    0008 [line  238] 0x03004017  EQ         A=0 B=R6 C=R1
+    0009 [line  238] 0x80014016  JMP        A=0 sBx=6
+    0010 [line  239] 0x0000C185  GETGLOBAL  R6 = GLOBAL K[3]='table'
+    0011 [line  239] 0x03410186  GETTABLE   R6 = R6[K[4]='remove']
+    0012 [line  239] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0013 [line  239] 0x02800200  MOVE       R8 = R5
+    0014 [line  239] 0x0180419C  CALL       A=6 B=3 C=1
+    0015 [line  240] 0x80000016  JMP        A=0 sBx=1
+    0016 [line  237] 0x7FFCC09F  FORLOOP    A=2 sBx=-12
+    0017 [line  243] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'id': 0 -> 17
+    '(for index)': 4 -> 17
+    '(for limit)': 4 -> 17
+    '(for step)': 4 -> 17
+    'i': 5 -> 16
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x2B18
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 245 - 252
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'DeleteChatRoom'
+    K[001] = 'require'
+    K[002] = 'Chat.ECPanelChat'
+    K[003] = 'Instance'
+    K[004] = 'UpdateChatRoomPage'
+    K[005] = 'Chat.ECChatManager'
+    K[006] = 'RemoveMsgWithSomeChatRoom'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  246] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+    0001 [line  246] 0x00800100  MOVE       R4 = R1
+    0002 [line  246] 0x0180409C  CALL       A=2 B=3 C=1
+    0003 [line  247] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='require'
+    0004 [line  247] 0x000080C1  LOADK      R3 = K[2]='Chat.ECPanelChat'
+    0005 [line  247] 0x0100809C  CALL       A=2 B=2 C=2
+    0006 [line  248] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='Instance']
+    0007 [line  248] 0x008080DC  CALL       A=3 B=1 C=2
+    0008 [line  248] 0x01C000CB  SELF       A=3 B=3 C=256 Bx=1792
+    0009 [line  248] 0x00800140  MOVE       R5 = R1
+    0010 [line  248] 0x018040DC  CALL       A=3 B=3 C=1
+    0011 [line  249] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='Instance']
+    0012 [line  249] 0x008080DC  CALL       A=3 B=1 C=2
+    0013 [line  249] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+    0014 [line  249] 0x010040DC  CALL       A=3 B=2 C=1
+    0015 [line  250] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='require'
+    0016 [line  250] 0x00014101  LOADK      R4 = K[5]='Chat.ECChatManager'
+    0017 [line  250] 0x010080DC  CALL       A=3 B=2 C=2
+    0018 [line  251] 0x01C0C106  GETTABLE   R4 = R3[K[3]='Instance']
+    0019 [line  251] 0x0080811C  CALL       A=4 B=1 C=2
+    0020 [line  251] 0x0241810B  SELF       A=4 B=4 C=262 Bx=2310
+    0021 [line  251] 0x00800180  MOVE       R6 = R1
+    0022 [line  251] 0x0180411C  CALL       A=4 B=3 C=1
+    0023 [line  252] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 23
+    'id': 0 -> 23
+    'ECPanelChat': 6 -> 23
+    'ECChatManager': 18 -> 23
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x2CE6
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 254 - 262
+    Params : 3
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'roleid'
+    K[004] = 'Instance'
+    K[005] = 'm_HostPlayer'
+    K[006] = 'ID'
+    K[007] = 'isOwner'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  255] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  255] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  255] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  255] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  255] 0x800480E0  FORPREP    A=3 sBx=19
+    0005 [line  256] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  256] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  256] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  256] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  256] 0x80034016  JMP        A=0 sBx=14
+    0010 [line  257] 0x0140C1C6  GETTABLE   R7 = R2[K[3]='roleid']
+    0011 [line  257] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0012 [line  257] 0x04410206  GETTABLE   R8 = R8[K[4]='Instance']
+    0013 [line  257] 0x0080821C  CALL       A=8 B=1 C=2
+    0014 [line  257] 0x04414206  GETTABLE   R8 = R8[K[5]='m_HostPlayer']
+    0015 [line  257] 0x04418206  GETTABLE   R8 = R8[K[6]='ID']
+    0016 [line  257] 0x03820057  EQ         A=1 B=R7 C=R8
+    0017 [line  257] 0x80000016  JMP        A=0 sBx=1
+    0018 [line  257] 0x000041C2  LOADBOOL   A=7 B=0 C=1
+    0019 [line  257] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0020 [line  258] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0021 [line  258] 0x04018206  GETTABLE   R8 = R8[R6]
+    0022 [line  258] 0x8381C209  SETTABLE   R8[K[7]='isOwner'] = R7
+    0023 [line  259] 0x80000016  JMP        A=0 sBx=1
+    0024 [line  255] 0x7FFAC0DF  FORLOOP    A=3 sBx=-20
+    0025 [line  262] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 25
+    'id': 0 -> 25
+    'owner_info': 0 -> 25
+    '(for index)': 4 -> 25
+    '(for limit)': 4 -> 25
+    '(for step)': 4 -> 25
+    'i': 5 -> 24
+    'isOwner': 20 -> 24
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x2EEF
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 264 - 272
+    Params : 3
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'member_list'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  265] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  265] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  265] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  265] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  265] 0x800380E0  FORPREP    A=3 sBx=15
+    0005 [line  266] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  266] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  266] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  266] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  266] 0x80024016  JMP        A=0 sBx=10
+    0010 [line  267] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0011 [line  267] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0012 [line  267] 0x04018206  GETTABLE   R8 = R8[R6]
+    0013 [line  267] 0x0440C206  GETTABLE   R8 = R8[K[3]='member_list']
+    0014 [line  267] 0x01000240  MOVE       R9 = R2
+    0015 [line  267] 0x018081DC  CALL       A=7 B=3 C=2
+    0016 [line  268] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0017 [line  268] 0x04018206  GETTABLE   R8 = R8[R6]
+    0018 [line  268] 0x8181C209  SETTABLE   R8[K[3]='member_list'] = R7
+    0019 [line  269] 0x80000016  JMP        A=0 sBx=1
+    0020 [line  265] 0x7FFBC0DF  FORLOOP    A=3 sBx=-16
+    0021 [line  272] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 21
+    'id': 0 -> 21
+    'owner_info': 0 -> 21
+    '(for index)': 4 -> 21
+    '(for limit)': 4 -> 21
+    '(for step)': 4 -> 21
+    'i': 5 -> 20
+    'member_list': 16 -> 20
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x30B6
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 274 - 282
+    Params : 4
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'name'
+    K[004] = 'remark_name'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  275] 0x00000101  LOADK      R4 = K[0]=1.0
+    0001 [line  275] 0x00404146  GETTABLE   R5 = R0[K[1]='m_ChatRoomList']
+    0002 [line  275] 0x02800154  LEN        A=5 B=5 C=0 Bx=2560
+    0003 [line  275] 0x00000181  LOADK      R6 = K[0]=1.0
+    0004 [line  275] 0x8002C120  FORPREP    A=4 sBx=12
+    0005 [line  276] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0006 [line  276] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0007 [line  276] 0x04408206  GETTABLE   R8 = R8[K[2]='id']
+    0008 [line  276] 0x04004017  EQ         A=0 B=R8 C=R1
+    0009 [line  276] 0x80018016  JMP        A=0 sBx=7
+    0010 [line  277] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0011 [line  277] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0012 [line  277] 0x81808209  SETTABLE   R8[K[3]='name'] = R2
+    0013 [line  278] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0014 [line  278] 0x0401C206  GETTABLE   R8 = R8[R7]
+    0015 [line  278] 0x8200C209  SETTABLE   R8[K[4]='remark_name'] = R3
+    0016 [line  279] 0x80000016  JMP        A=0 sBx=1
+    0017 [line  275] 0x7FFC811F  FORLOOP    A=4 sBx=-13
+    0018 [line  282] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 18
+    'id': 0 -> 18
+    'name': 0 -> 18
+    'remark_name': 0 -> 18
+    '(for index)': 4 -> 18
+    '(for limit)': 4 -> 18
+    '(for step)': 4 -> 18
+    'i': 5 -> 17
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x3254
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 284 - 291
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'remark_name'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  285] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  285] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  285] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  285] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  285] 0x800200E0  FORPREP    A=3 sBx=9
+    0005 [line  286] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  286] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  286] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  286] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  286] 0x8000C016  JMP        A=0 sBx=4
+    0010 [line  287] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0011 [line  287] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0012 [line  287] 0x818081C9  SETTABLE   R7[K[3]='remark_name'] = R2
+    0013 [line  288] 0x80000016  JMP        A=0 sBx=1
+    0014 [line  285] 0x7FFD40DF  FORLOOP    A=3 sBx=-10
+    0015 [line  291] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 15
+    'id': 0 -> 15
+    'remark_name': 0 -> 15
+    '(for index)': 4 -> 15
+    '(for limit)': 4 -> 15
+    '(for step)': 4 -> 15
+    'i': 5 -> 14
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x33BF
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 293 - 300
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'auth_set'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  294] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  294] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  294] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  294] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  294] 0x800200E0  FORPREP    A=3 sBx=9
+    0005 [line  295] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  295] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  295] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  295] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  295] 0x8000C016  JMP        A=0 sBx=4
+    0010 [line  296] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0011 [line  296] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0012 [line  296] 0x818081C9  SETTABLE   R7[K[3]='auth_set'] = R2
+    0013 [line  297] 0x80000016  JMP        A=0 sBx=1
+    0014 [line  294] 0x7FFD40DF  FORLOOP    A=3 sBx=-10
+    0015 [line  300] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 15
+    'id': 0 -> 15
+    'auth_set': 0 -> 15
+    '(for index)': 4 -> 15
+    '(for limit)': 4 -> 15
+    '(for step)': 4 -> 15
+    'i': 5 -> 14
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x3524
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 302 - 311
+    Params : 3
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'table'
+    K[004] = 'insert'
+    K[005] = 'member_list'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  303] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  303] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  303] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  303] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  303] 0x800440E0  FORPREP    A=3 sBx=18
+    0005 [line  304] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  304] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  304] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  304] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  304] 0x80030016  JMP        A=0 sBx=13
+    0010 [line  305] 0x000001C1  LOADK      R7 = K[0]=1.0
+    0011 [line  305] 0x01000214  LEN        A=8 B=2 C=0 Bx=1024
+    0012 [line  305] 0x00000241  LOADK      R9 = K[0]=1.0
+    0013 [line  305] 0x800181E0  FORPREP    A=7 sBx=7
+    0014 [line  306] 0x0000C2C5  GETGLOBAL  R11 = GLOBAL K[3]='table'
+    0015 [line  306] 0x05C102C6  GETTABLE   R11 = R11[K[4]='insert']
+    0016 [line  306] 0x00404306  GETTABLE   R12 = R0[K[1]='m_ChatRoomList']
+    0017 [line  306] 0x06018306  GETTABLE   R12 = R12[R6]
+    0018 [line  306] 0x06414306  GETTABLE   R12 = R12[K[5]='member_list']
+    0019 [line  306] 0x01028346  GETTABLE   R13 = R2[R10]
+    0020 [line  306] 0x018042DC  CALL       A=11 B=3 C=1
+    0021 [line  305] 0x7FFDC1DF  FORLOOP    A=7 sBx=-8
+    0022 [line  308] 0x80000016  JMP        A=0 sBx=1
+    0023 [line  303] 0x7FFB00DF  FORLOOP    A=3 sBx=-19
+    0024 [line  311] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 24
+    'id': 0 -> 24
+    'member_list': 0 -> 24
+    '(for index)': 4 -> 24
+    '(for limit)': 4 -> 24
+    '(for step)': 4 -> 24
+    'i': 5 -> 23
+    '(for index)': 13 -> 22
+    '(for limit)': 13 -> 22
+    '(for step)': 13 -> 22
+    'j': 14 -> 21
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x3743
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 313 - 325
+    Params : 3
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'member_list'
+    K[004] = 'roleid'
+    K[005] = 'table'
+    K[006] = 'remove'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  314] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0001 [line  314] 0x00404106  GETTABLE   R4 = R0[K[1]='m_ChatRoomList']
+    0002 [line  314] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0003 [line  314] 0x00000141  LOADK      R5 = K[0]=1.0
+    0004 [line  314] 0x800700E0  FORPREP    A=3 sBx=29
+    0005 [line  315] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_ChatRoomList']
+    0006 [line  315] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0007 [line  315] 0x03C081C6  GETTABLE   R7 = R7[K[2]='id']
+    0008 [line  315] 0x03804017  EQ         A=0 B=R7 C=R1
+    0009 [line  315] 0x8005C016  JMP        A=0 sBx=24
+    0010 [line  316] 0x000001C1  LOADK      R7 = K[0]=1.0
+    0011 [line  316] 0x00404206  GETTABLE   R8 = R0[K[1]='m_ChatRoomList']
+    0012 [line  316] 0x04018206  GETTABLE   R8 = R8[R6]
+    0013 [line  316] 0x0440C206  GETTABLE   R8 = R8[K[3]='member_list']
+    0014 [line  316] 0x04000214  LEN        A=8 B=8 C=0 Bx=4096
+    0015 [line  316] 0x00000241  LOADK      R9 = K[0]=1.0
+    0016 [line  316] 0x800381E0  FORPREP    A=7 sBx=15
+    0017 [line  317] 0x004042C6  GETTABLE   R11 = R0[K[1]='m_ChatRoomList']
+    0018 [line  317] 0x058182C6  GETTABLE   R11 = R11[R6]
+    0019 [line  317] 0x05C0C2C6  GETTABLE   R11 = R11[K[3]='member_list']
+    0020 [line  317] 0x058282C6  GETTABLE   R11 = R11[R10]
+    0021 [line  317] 0x05C102C6  GETTABLE   R11 = R11[K[4]='roleid']
+    0022 [line  317] 0x05808017  EQ         A=0 B=R11 C=R2
+    0023 [line  317] 0x8001C016  JMP        A=0 sBx=8
+    0024 [line  318] 0x000142C5  GETGLOBAL  R11 = GLOBAL K[5]='table'
+    0025 [line  318] 0x05C182C6  GETTABLE   R11 = R11[K[6]='remove']
+    0026 [line  318] 0x00404306  GETTABLE   R12 = R0[K[1]='m_ChatRoomList']
+    0027 [line  318] 0x06018306  GETTABLE   R12 = R12[R6]
+    0028 [line  318] 0x0640C306  GETTABLE   R12 = R12[K[3]='member_list']
+    0029 [line  318] 0x05000340  MOVE       R13 = R10
+    0030 [line  318] 0x018042DC  CALL       A=11 B=3 C=1
+    0031 [line  319] 0x80008016  JMP        A=0 sBx=3
+    0032 [line  316] 0x7FFBC1DF  FORLOOP    A=7 sBx=-16
+    0033 [line  322] 0x80000016  JMP        A=0 sBx=1
+    0034 [line  314] 0x7FF840DF  FORLOOP    A=3 sBx=-30
+    0035 [line  325] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+    'id': 0 -> 35
+    'roleid': 0 -> 35
+    '(for index)': 4 -> 35
+    '(for limit)': 4 -> 35
+    '(for step)': 4 -> 35
+    'i': 5 -> 34
+    '(for index)': 16 -> 33
+    '(for limit)': 16 -> 33
+    '(for step)': 16 -> 33
+    'j': 17 -> 32
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x39C1
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 327 - 334
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  328] 0x00000081  LOADK      R2 = K[0]=1.0
+    0001 [line  328] 0x004040C6  GETTABLE   R3 = R0[K[1]='m_ChatRoomList']
+    0002 [line  328] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0003 [line  328] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line  328] 0x8001C0A0  FORPREP    A=2 sBx=8
+    0005 [line  329] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0006 [line  329] 0x03014186  GETTABLE   R6 = R6[R5]
+    0007 [line  329] 0x03408186  GETTABLE   R6 = R6[K[2]='id']
+    0008 [line  329] 0x03004017  EQ         A=0 B=R6 C=R1
+    0009 [line  329] 0x80008016  JMP        A=0 sBx=3
+    0010 [line  330] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0011 [line  330] 0x03014186  GETTABLE   R6 = R6[R5]
+    0012 [line  330] 0x0100019E  RETURN     A=6 B=2 C=0
+    0013 [line  328] 0x7FFD809F  FORLOOP    A=2 sBx=-9
+    0014 [line  333] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0015 [line  333] 0x0100009E  RETURN     A=2 B=2 C=0
+    0016 [line  334] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 16
+    'id': 0 -> 16
+    '(for index)': 4 -> 14
+    '(for limit)': 4 -> 14
+    '(for step)': 4 -> 14
+    'i': 5 -> 13
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x3B0B
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 336 - 343
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'isOwner'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  337] 0x00000081  LOADK      R2 = K[0]=1.0
+    0001 [line  337] 0x004040C6  GETTABLE   R3 = R0[K[1]='m_ChatRoomList']
+    0002 [line  337] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0003 [line  337] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line  337] 0x800200A0  FORPREP    A=2 sBx=9
+    0005 [line  338] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0006 [line  338] 0x03014186  GETTABLE   R6 = R6[R5]
+    0007 [line  338] 0x03408186  GETTABLE   R6 = R6[K[2]='id']
+    0008 [line  338] 0x03004017  EQ         A=0 B=R6 C=R1
+    0009 [line  338] 0x8000C016  JMP        A=0 sBx=4
+    0010 [line  339] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0011 [line  339] 0x03014186  GETTABLE   R6 = R6[R5]
+    0012 [line  339] 0x0340C186  GETTABLE   R6 = R6[K[3]='isOwner']
+    0013 [line  339] 0x0100019E  RETURN     A=6 B=2 C=0
+    0014 [line  337] 0x7FFD409F  FORLOOP    A=2 sBx=-10
+    0015 [line  342] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0016 [line  342] 0x0100009E  RETURN     A=2 B=2 C=0
+    0017 [line  343] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'id': 0 -> 17
+    '(for index)': 4 -> 15
+    '(for limit)': 4 -> 15
+    '(for step)': 4 -> 15
+    'i': 5 -> 14
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x3C6A
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 345 - 353
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 0.0
+    K[001] = 1.0
+    K[002] = 'm_ChatRoomList'
+    K[003] = 'isOwner'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  346] 0x00000041  LOADK      R1 = K[0]=0.0
+    0001 [line  347] 0x00004081  LOADK      R2 = K[1]=1.0
+    0002 [line  347] 0x004080C6  GETTABLE   R3 = R0[K[2]='m_ChatRoomList']
+    0003 [line  347] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0004 [line  347] 0x00004101  LOADK      R4 = K[1]=1.0
+    0005 [line  347] 0x800140A0  FORPREP    A=2 sBx=6
+    0006 [line  348] 0x00408186  GETTABLE   R6 = R0[K[2]='m_ChatRoomList']
+    0007 [line  348] 0x03014186  GETTABLE   R6 = R6[R5]
+    0008 [line  348] 0x0340C186  GETTABLE   R6 = R6[K[3]='isOwner']
+    0009 [line  348] 0x0000019A  TEST       A=6 B=0 C=0
+    0010 [line  348] 0x80000016  JMP        A=0 sBx=1
+    0011 [line  349] 0x00C0404C  ADD        A=1 B=R1 C=K[1]=1.0
+    0012 [line  347] 0x7FFE009F  FORLOOP    A=2 sBx=-7
+    0013 [line  352] 0x0100005E  RETURN     A=1 B=2 C=0
+    0014 [line  353] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+    'num': 1 -> 14
+    '(for index)': 5 -> 13
+    '(for limit)': 5 -> 13
+    '(for step)': 5 -> 13
+    'i': 6 -> 12
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x3DB3
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 355 - 364
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'm_ChatRoomList'
+    K[002] = 'id'
+    K[003] = 'member_list'
+    K[004] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  356] 0x00000081  LOADK      R2 = K[0]=1.0
+    0001 [line  356] 0x004040C6  GETTABLE   R3 = R0[K[1]='m_ChatRoomList']
+    0002 [line  356] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0003 [line  356] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line  356] 0x800380A0  FORPREP    A=2 sBx=15
+    0005 [line  357] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0006 [line  357] 0x03014186  GETTABLE   R6 = R6[R5]
+    0007 [line  357] 0x03408186  GETTABLE   R6 = R6[K[2]='id']
+    0008 [line  357] 0x03004017  EQ         A=0 B=R6 C=R1
+    0009 [line  357] 0x80024016  JMP        A=0 sBx=10
+    0010 [line  358] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0011 [line  358] 0x03014186  GETTABLE   R6 = R6[R5]
+    0012 [line  358] 0x0340C186  GETTABLE   R6 = R6[K[3]='member_list']
+    0013 [line  358] 0x0000019A  TEST       A=6 B=0 C=0
+    0014 [line  358] 0x80010016  JMP        A=0 sBx=5
+    0015 [line  359] 0x00404186  GETTABLE   R6 = R0[K[1]='m_ChatRoomList']
+    0016 [line  359] 0x03014186  GETTABLE   R6 = R6[R5]
+    0017 [line  359] 0x0340C186  GETTABLE   R6 = R6[K[3]='member_list']
+    0018 [line  359] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0019 [line  359] 0x0100019E  RETURN     A=6 B=2 C=0
+    0020 [line  356] 0x7FFBC09F  FORLOOP    A=2 sBx=-16
+    0021 [line  363] 0x00010081  LOADK      R2 = K[4]=0.0
+    0022 [line  363] 0x0100009E  RETURN     A=2 B=2 C=0
+    0023 [line  364] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 23
+    'id': 0 -> 23
+    '(for index)': 4 -> 21
+    '(for limit)': 4 -> 21
+    '(for step)': 4 -> 21
+    'i': 5 -> 20
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x3F4F
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 366 - 370
+    Params : 4
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Chat.ECChatManager'
+    K[002] = 'StringTable'
+    K[003] = 'Get'
+    K[004] = 882.0
+    K[005] = 'format'
+    K[006] = 'Instance'
+    K[007] = 'AddSimpleChatRoomMessage'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  367] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+    0001 [line  367] 0x00004141  LOADK      R5 = K[1]='Chat.ECChatManager'
+    0002 [line  367] 0x0100811C  CALL       A=4 B=2 C=2
+    0003 [line  368] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='StringTable'
+    0004 [line  368] 0x02C0C146  GETTABLE   R5 = R5[K[3]='Get']
+    0005 [line  368] 0x00010181  LOADK      R6 = K[4]=882.0
+    0006 [line  368] 0x0100815C  CALL       A=5 B=2 C=2
+    0007 [line  368] 0x02C1414B  SELF       A=5 B=5 C=261 Bx=2821
+    0008 [line  368] 0x008001C0  MOVE       R7 = R1
+    0009 [line  368] 0x01000200  MOVE       R8 = R2
+    0010 [line  368] 0x0200815C  CALL       A=5 B=4 C=2
+    0011 [line  369] 0x02418186  GETTABLE   R6 = R4[K[6]='Instance']
+    0012 [line  369] 0x0080819C  CALL       A=6 B=1 C=2
+    0013 [line  369] 0x0341C18B  SELF       A=6 B=6 C=263 Bx=3335
+    0014 [line  369] 0x02800200  MOVE       R8 = R5
+    0015 [line  369] 0x01800240  MOVE       R9 = R3
+    0016 [line  369] 0x0200419C  CALL       A=6 B=4 C=1
+    0017 [line  370] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'inviter_name': 0 -> 17
+    'invitee_name': 0 -> 17
+    'room_id': 0 -> 17
+    'ECChatManager': 3 -> 17
+    'strMsg': 11 -> 17
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x410B
+    Source : '@lua\\chat\\ecchatroommanager.lua'
+    Lines  : 372 - 378
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Chat.ECPanelChat'
+    K[002] = 'Instance'
+    K[003] = 'ClearChatRoomData'
+    K[004] = 'Chat.ECChatManager'
+    K[005] = 'Data.Expdef'
+    K[006] = 'CHAT_CHANNEL_ENUM'
+    K[007] = 'EmptyMsgByChannel'
+    K[008] = 'CHAT_CHANNEL_CHAT_ROOM'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  373] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+    0001 [line  373] 0x00004081  LOADK      R2 = K[1]='Chat.ECPanelChat'
+    0002 [line  373] 0x0100805C  CALL       A=1 B=2 C=2
+    0003 [line  374] 0x00C08086  GETTABLE   R2 = R1[K[2]='Instance']
+    0004 [line  374] 0x0080809C  CALL       A=2 B=1 C=2
+    0005 [line  374] 0x0140C08B  SELF       A=2 B=2 C=259 Bx=1283
+    0006 [line  374] 0x0100409C  CALL       A=2 B=2 C=1
+    0007 [line  375] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0008 [line  375] 0x000100C1  LOADK      R3 = K[4]='Chat.ECChatManager'
+    0009 [line  375] 0x0100809C  CALL       A=2 B=2 C=2
+    0010 [line  376] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0011 [line  376] 0x00014101  LOADK      R4 = K[5]='Data.Expdef'
+    0012 [line  376] 0x010080DC  CALL       A=3 B=2 C=2
+    0013 [line  376] 0x01C180C6  GETTABLE   R3 = R3[K[6]='CHAT_CHANNEL_ENUM']
+    0014 [line  377] 0x01408106  GETTABLE   R4 = R2[K[2]='Instance']
+    0015 [line  377] 0x0080811C  CALL       A=4 B=1 C=2
+    0016 [line  377] 0x0241C10B  SELF       A=4 B=4 C=263 Bx=2311
+    0017 [line  377] 0x01C20186  GETTABLE   R6 = R3[K[8]='CHAT_CHANNEL_CHAT_ROOM']
+    0018 [line  377] 0x0180411C  CALL       A=4 B=3 C=1
+    0019 [line  378] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 19
+    'ECPanelChat': 3 -> 19
+    'ECChatManager': 10 -> 19
+    'CHAT_CHANNEL_ENUM': 14 -> 19

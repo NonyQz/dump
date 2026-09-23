@@ -1,0 +1,1631 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpaneldanmaku.lua
+SIZE: 13859
+PARSED: 13859
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpaneldanmaku.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 24
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'GUI.ECPanelBase'
+K[003] = 'ForwardDeclare'
+K[004] = 'ECGame'
+K[005] = 'Chat.ECSpeechUtil'
+K[006] = 'Chat.ECRecordTip'
+K[007] = 'Types.Vector3'
+K[008] = 'Utility.HtmlUtility'
+K[009] = 'GUI.ECGUITools'
+K[010] = 'Extend'
+K[011] = 'ECPanelDanmaKu'
+K[012] = 'define'
+K[013] = 'static'
+K[014] = '=>'
+K[015] = 'Instance'
+K[016] = 8.0
+K[017] = 9.0
+K[018] = 30.0
+K[019] = 65000.0
+K[020] = 'field'
+K[021] = 'userdata'
+K[022] = '_danmaGo'
+K[023] = None
+K[024] = '_spriteBg'
+K[025] = 'number'
+K[026] = '_timerId'
+K[027] = 0.0
+K[028] = 'table'
+K[029] = '_cacheList'
+K[030] = '_danmaList'
+K[031] = '_callbacks'
+K[032] = '_rows'
+K[033] = '_rowcount'
+K[034] = 10.0
+K[035] = '_rowHeight'
+K[036] = 36.0
+K[037] = '_localCorners'
+K[038] = '_screenHeight'
+K[039] = '_screenWidth'
+K[040] = '_checkTimer'
+K[041] = '_waitList'
+K[042] = '_verts_count'
+K[043] = 'override'
+K[044] = 'OnDestroy'
+K[045] = 'OnCreate'
+K[046] = 'method'
+K[047] = 'RemoveAll'
+K[048] = 'GetDanmaCount'
+K[049] = 'NewDanmuObj'
+K[050] = 'CalcRowInfo'
+K[051] = 'CalcTweenPosition'
+K[052] = 'function'
+K[053] = 'AddOpenCallback'
+K[054] = 'AddOneDanmu'
+K[055] = 'StartTimer'
+K[056] = 'StopTimer'
+K[057] = 'boolean'
+K[058] = 'CanShowDanmu'
+K[059] = 'const'
+K[060] = 'TestDanmu'
+K[061] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    2] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    2] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    2] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    3] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    3] 0x00008081  LOADK      R2 = K[2]='GUI.ECPanelBase'
+0005 [line    3] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    4] 0x0040C086  GETTABLE   R2 = R0[K[3]='ForwardDeclare']
+0007 [line    4] 0x000100C1  LOADK      R3 = K[4]='ECGame'
+0008 [line    4] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    5] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    5] 0x00014101  LOADK      R4 = K[5]='Chat.ECSpeechUtil'
+0011 [line    5] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    6] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    6] 0x00018141  LOADK      R5 = K[6]='Chat.ECRecordTip'
+0014 [line    6] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    7] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    7] 0x0001C181  LOADK      R6 = K[7]='Types.Vector3'
+0017 [line    7] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    8] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line    8] 0x000201C1  LOADK      R7 = K[8]='Utility.HtmlUtility'
+0020 [line    8] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    9] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    9] 0x00024201  LOADK      R8 = K[9]='GUI.ECGUITools'
+0023 [line    9] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   11] 0x00428206  GETTABLE   R8 = R0[K[10]='Extend']
+0025 [line   11] 0x00800240  MOVE       R9 = R1
+0026 [line   11] 0x0002C281  LOADK      R10 = K[11]='ECPanelDanmaKu'
+0027 [line   11] 0x0180821C  CALL       A=8 B=3 C=2
+0028 [line   12] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+0029 [line   13] 0x04430286  GETTABLE   R10 = R8[K[12]='define']
+0030 [line   15] 0x054342C6  GETTABLE   R11 = R10[K[13]='static']
+0031 [line   15] 0x00038301  LOADK      R12 = K[14]='=>'
+0032 [line   15] 0x04000340  MOVE       R13 = R8
+0033 [line   15] 0x018082DC  CALL       A=11 B=3 C=2
+0034 [line   22] 0x00000324  CLOSURE    R12 = PROTO[0]
+0035 [line   22] 0x04800000  MOVE       R0 = R9
+0036 [line   22] 0x04000000  MOVE       R0 = R8
+0037 [line   22] 0x878302C9  SETTABLE   R11[K[15]='Instance'] = R12
+0038 [line   24] 0x000402C1  LOADK      R11 = K[16]=8.0
+0039 [line   25] 0x00044301  LOADK      R12 = K[17]=9.0
+0040 [line   26] 0x00048341  LOADK      R13 = K[18]=30.0
+0041 [line   27] 0x0004C381  LOADK      R14 = K[19]=65000.0
+0042 [line   29] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0043 [line   29] 0x00054401  LOADK      R16 = K[21]='userdata'
+0044 [line   29] 0x010083DC  CALL       A=15 B=2 C=2
+0045 [line   29] 0x8B45C3C9  SETTABLE   R15[K[22]='_danmaGo'] = K[23]=None
+0046 [line   30] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0047 [line   30] 0x00054401  LOADK      R16 = K[21]='userdata'
+0048 [line   30] 0x010083DC  CALL       A=15 B=2 C=2
+0049 [line   30] 0x8C45C3C9  SETTABLE   R15[K[24]='_spriteBg'] = K[23]=None
+0050 [line   31] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0051 [line   31] 0x00064401  LOADK      R16 = K[25]='number'
+0052 [line   31] 0x010083DC  CALL       A=15 B=2 C=2
+0053 [line   31] 0x8D46C3C9  SETTABLE   R15[K[26]='_timerId'] = K[27]=0.0
+0054 [line   32] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0055 [line   32] 0x00070401  LOADK      R16 = K[28]='table'
+0056 [line   32] 0x010083DC  CALL       A=15 B=2 C=2
+0057 [line   32] 0x00004424  CLOSURE    R16 = PROTO[1]
+0058 [line   32] 0x8E8403C9  SETTABLE   R15[K[29]='_cacheList'] = R16
+0059 [line   33] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0060 [line   33] 0x00070401  LOADK      R16 = K[28]='table'
+0061 [line   33] 0x010083DC  CALL       A=15 B=2 C=2
+0062 [line   33] 0x00008424  CLOSURE    R16 = PROTO[2]
+0063 [line   33] 0x8F0403C9  SETTABLE   R15[K[30]='_danmaList'] = R16
+0064 [line   34] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0065 [line   34] 0x00070401  LOADK      R16 = K[28]='table'
+0066 [line   34] 0x010083DC  CALL       A=15 B=2 C=2
+0067 [line   34] 0x0000C424  CLOSURE    R16 = PROTO[3]
+0068 [line   34] 0x8F8403C9  SETTABLE   R15[K[31]='_callbacks'] = R16
+0069 [line   35] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0070 [line   35] 0x00070401  LOADK      R16 = K[28]='table'
+0071 [line   35] 0x010083DC  CALL       A=15 B=2 C=2
+0072 [line   35] 0x00010424  CLOSURE    R16 = PROTO[4]
+0073 [line   35] 0x900403C9  SETTABLE   R15[K[32]='_rows'] = R16
+0074 [line   36] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0075 [line   36] 0x00064401  LOADK      R16 = K[25]='number'
+0076 [line   36] 0x010083DC  CALL       A=15 B=2 C=2
+0077 [line   36] 0x90C883C9  SETTABLE   R15[K[33]='_rowcount'] = K[34]=10.0
+0078 [line   37] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0079 [line   37] 0x00064401  LOADK      R16 = K[25]='number'
+0080 [line   37] 0x010083DC  CALL       A=15 B=2 C=2
+0081 [line   37] 0x91C903C9  SETTABLE   R15[K[35]='_rowHeight'] = K[36]=36.0
+0082 [line   38] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0083 [line   38] 0x00070401  LOADK      R16 = K[28]='table'
+0084 [line   38] 0x010083DC  CALL       A=15 B=2 C=2
+0085 [line   38] 0x92C5C3C9  SETTABLE   R15[K[37]='_localCorners'] = K[23]=None
+0086 [line   39] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0087 [line   39] 0x00064401  LOADK      R16 = K[25]='number'
+0088 [line   39] 0x010083DC  CALL       A=15 B=2 C=2
+0089 [line   39] 0x9346C3C9  SETTABLE   R15[K[38]='_screenHeight'] = K[27]=0.0
+0090 [line   40] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0091 [line   40] 0x00064401  LOADK      R16 = K[25]='number'
+0092 [line   40] 0x010083DC  CALL       A=15 B=2 C=2
+0093 [line   40] 0x93C6C3C9  SETTABLE   R15[K[39]='_screenWidth'] = K[27]=0.0
+0094 [line   41] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0095 [line   41] 0x00064401  LOADK      R16 = K[25]='number'
+0096 [line   41] 0x010083DC  CALL       A=15 B=2 C=2
+0097 [line   41] 0x9446C3C9  SETTABLE   R15[K[40]='_checkTimer'] = K[27]=0.0
+0098 [line   42] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0099 [line   42] 0x00070401  LOADK      R16 = K[28]='table'
+0100 [line   42] 0x010083DC  CALL       A=15 B=2 C=2
+0101 [line   42] 0x00014424  CLOSURE    R16 = PROTO[5]
+0102 [line   42] 0x948403C9  SETTABLE   R15[K[41]='_waitList'] = R16
+0103 [line   44] 0x054503C6  GETTABLE   R15 = R10[K[20]='field']
+0104 [line   44] 0x00064401  LOADK      R16 = K[25]='number'
+0105 [line   44] 0x010083DC  CALL       A=15 B=2 C=2
+0106 [line   44] 0x9546C3C9  SETTABLE   R15[K[42]='_verts_count'] = K[27]=0.0
+0107 [line   46] 0x054AC3C6  GETTABLE   R15 = R10[K[43]='override']
+0108 [line   46] 0x008083DC  CALL       A=15 B=1 C=2
+0109 [line   60] 0x00018424  CLOSURE    R16 = PROTO[6]
+0110 [line   60] 0x960403C9  SETTABLE   R15[K[44]='OnDestroy'] = R16
+0111 [line   61] 0x054AC3C6  GETTABLE   R15 = R10[K[43]='override']
+0112 [line   61] 0x008083DC  CALL       A=15 B=1 C=2
+0113 [line   83] 0x0001C424  CLOSURE    R16 = PROTO[7]
+0114 [line   83] 0x968403C9  SETTABLE   R15[K[45]='OnCreate'] = R16
+0115 [line   85] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0116 [line   85] 0x008083DC  CALL       A=15 B=1 C=2
+0117 [line   86] 0x00020424  CLOSURE    R16 = PROTO[8]
+0118 [line   86] 0x978403C9  SETTABLE   R15[K[47]='RemoveAll'] = R16
+0119 [line   88] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0120 [line   88] 0x00038401  LOADK      R16 = K[14]='=>'
+0121 [line   88] 0x00064441  LOADK      R17 = K[25]='number'
+0122 [line   88] 0x018083DC  CALL       A=15 B=3 C=2
+0123 [line   90] 0x00024424  CLOSURE    R16 = PROTO[9]
+0124 [line   90] 0x980403C9  SETTABLE   R15[K[48]='GetDanmaCount'] = R16
+0125 [line   92] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0126 [line   92] 0x00038401  LOADK      R16 = K[14]='=>'
+0127 [line   92] 0x00054441  LOADK      R17 = K[21]='userdata'
+0128 [line   92] 0x018083DC  CALL       A=15 B=3 C=2
+0129 [line  100] 0x00028424  CLOSURE    R16 = PROTO[10]
+0130 [line  100] 0x02800000  MOVE       R0 = R5
+0131 [line  100] 0x988403C9  SETTABLE   R15[K[49]='NewDanmuObj'] = R16
+0132 [line  102] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0133 [line  102] 0x00038401  LOADK      R16 = K[14]='=>'
+0134 [line  102] 0x00064441  LOADK      R17 = K[25]='number'
+0135 [line  102] 0x018083DC  CALL       A=15 B=3 C=2
+0136 [line  117] 0x0002C424  CLOSURE    R16 = PROTO[11]
+0137 [line  117] 0x990403C9  SETTABLE   R15[K[50]='CalcRowInfo'] = R16
+0138 [line  119] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0139 [line  119] 0x00064401  LOADK      R16 = K[25]='number'
+0140 [line  119] 0x00054441  LOADK      R17 = K[21]='userdata'
+0141 [line  119] 0x00038481  LOADK      R18 = K[14]='=>'
+0142 [line  119] 0x000644C1  LOADK      R19 = K[25]='number'
+0143 [line  119] 0x00064501  LOADK      R20 = K[25]='number'
+0144 [line  119] 0x00064541  LOADK      R21 = K[25]='number'
+0145 [line  119] 0x00070581  LOADK      R22 = K[28]='table'
+0146 [line  119] 0x000705C1  LOADK      R23 = K[28]='table'
+0147 [line  119] 0x048083DC  CALL       A=15 B=9 C=2
+0148 [line  135] 0x00030424  CLOSURE    R16 = PROTO[12]
+0149 [line  135] 0x06000000  MOVE       R0 = R12
+0150 [line  135] 0x02800000  MOVE       R0 = R5
+0151 [line  135] 0x998403C9  SETTABLE   R15[K[51]='CalcTweenPosition'] = R16
+0152 [line  137] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0153 [line  137] 0x000D0401  LOADK      R16 = K[52]='function'
+0154 [line  137] 0x010083DC  CALL       A=15 B=2 C=2
+0155 [line  144] 0x00034424  CLOSURE    R16 = PROTO[13]
+0156 [line  144] 0x9A8403C9  SETTABLE   R15[K[53]='AddOpenCallback'] = R16
+0157 [line  146] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0158 [line  146] 0x00070401  LOADK      R16 = K[28]='table'
+0159 [line  146] 0x010083DC  CALL       A=15 B=2 C=2
+0160 [line  237] 0x00038424  CLOSURE    R16 = PROTO[14]
+0161 [line  237] 0x01000000  MOVE       R0 = R2
+0162 [line  237] 0x03000000  MOVE       R0 = R6
+0163 [line  237] 0x07000000  MOVE       R0 = R14
+0164 [line  237] 0x06000000  MOVE       R0 = R12
+0165 [line  237] 0x9B0403C9  SETTABLE   R15[K[54]='AddOneDanmu'] = R16
+0166 [line  240] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0167 [line  240] 0x008083DC  CALL       A=15 B=1 C=2
+0168 [line  272] 0x0003C424  CLOSURE    R16 = PROTO[15]
+0169 [line  272] 0x06000000  MOVE       R0 = R12
+0170 [line  272] 0x9B8403C9  SETTABLE   R15[K[55]='StartTimer'] = R16
+0171 [line  274] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0172 [line  274] 0x008083DC  CALL       A=15 B=1 C=2
+0173 [line  279] 0x00040424  CLOSURE    R16 = PROTO[16]
+0174 [line  279] 0x9C0403C9  SETTABLE   R15[K[56]='StopTimer'] = R16
+0175 [line  281] 0x054B83C6  GETTABLE   R15 = R10[K[46]='method']
+0176 [line  281] 0x00038401  LOADK      R16 = K[14]='=>'
+0177 [line  281] 0x000E4441  LOADK      R17 = K[57]='boolean'
+0178 [line  281] 0x018083DC  CALL       A=15 B=3 C=2
+0179 [line  291] 0x00044424  CLOSURE    R16 = PROTO[17]
+0180 [line  291] 0x01000000  MOVE       R0 = R2
+0181 [line  291] 0x9D0403C9  SETTABLE   R15[K[58]='CanShowDanmu'] = R16
+0182 [line  293] 0x054EC3C6  GETTABLE   R15 = R10[K[59]='const']
+0183 [line  293] 0x000D0401  LOADK      R16 = K[52]='function'
+0184 [line  293] 0x010083DC  CALL       A=15 B=2 C=2
+0185 [line  308] 0x00048424  CLOSURE    R16 = PROTO[18]
+0186 [line  308] 0x04000000  MOVE       R0 = R8
+0187 [line  308] 0x9E0403C9  SETTABLE   R15[K[60]='TestDanmu'] = R16
+0188 [line  312] 0x044F43C6  GETTABLE   R15 = R8[K[61]='Commit']
+0189 [line  312] 0x008043DC  CALL       A=15 B=1 C=1
+0190 [line  314] 0x0100021E  RETURN     A=8 B=2 C=0
+0191 [line  314] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 191
+'ECPanelBase': 6 -> 191
+'ECGame': 9 -> 191
+'ECSpeechUtil': 12 -> 191
+'ECRecordTip': 15 -> 191
+'EC': 18 -> 191
+'HtmlUtility': 21 -> 191
+'ECGUITools': 24 -> 191
+'ECPanelDanmaKu': 28 -> 191
+'l_instance': 29 -> 191
+'def': 30 -> 191
+'_rows': 39 -> 191
+'RUN_TIME': 40 -> 191
+'MAX_NUM_SCREEN': 41 -> 191
+'MAX_VERTS_COUNT': 42 -> 191
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x6D5
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 15 - 22
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_depthLayer'
+    K[001] = 'GUIDEPTH'
+    K[002] = 'TOP'
+    K[003] = 'm_TrigGC'
+    K[004] = True
+
+    ----- INSTRUCTIONS -----
+    0000 [line   16] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   16] 0x0000401A  TEST       A=0 B=0 C=1
+    0002 [line   16] 0x80020016  JMP        A=0 sBx=9
+    0003 [line   17] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   17] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   17] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   18] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   18] 0x00004045  GETGLOBAL  R1 = GLOBAL K[1]='GUIDEPTH'
+    0008 [line   18] 0x00C08046  GETTABLE   R1 = R1[K[2]='TOP']
+    0009 [line   18] 0x80004009  SETTABLE   R0[K[0]='m_depthLayer'] = R1
+    0010 [line   19] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0011 [line   19] 0x81C10009  SETTABLE   R0[K[3]='m_TrigGC'] = K[4]=True
+    0012 [line   21] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0013 [line   21] 0x0100001E  RETURN     A=0 B=2 C=0
+    0014 [line   22] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x7D0
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 32 - 32
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   32] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   32] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   32] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x810
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 33 - 33
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   33] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   33] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   33] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x850
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 34 - 34
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   34] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   34] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   34] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x890
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 35 - 35
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   35] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   35] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   35] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x8D0
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 42 - 42
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   42] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   42] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   42] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x910
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 46 - 60
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_danmaGo'
+    K[001] = None
+    K[002] = '_spriteBg'
+    K[003] = '_callbacks'
+    K[004] = '_danmaList'
+    K[005] = '_cacheList'
+    K[006] = '_rows'
+    K[007] = 'StopTimer'
+    K[008] = '_waitList'
+    K[009] = '_verts_count'
+    K[010] = 0.0
+    K[011] = '_checkTimer'
+    K[012] = 'GameUtil'
+    K[013] = 'RemoveGlobalTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   47] 0x80404009  SETTABLE   R0[K[0]='_danmaGo'] = K[1]=None
+    0001 [line   48] 0x81404009  SETTABLE   R0[K[2]='_spriteBg'] = K[1]=None
+    0002 [line   49] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0003 [line   49] 0x81804009  SETTABLE   R0[K[3]='_callbacks'] = R1
+    0004 [line   50] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0005 [line   50] 0x82004009  SETTABLE   R0[K[4]='_danmaList'] = R1
+    0006 [line   51] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0007 [line   51] 0x82804009  SETTABLE   R0[K[5]='_cacheList'] = R1
+    0008 [line   52] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0009 [line   52] 0x83004009  SETTABLE   R0[K[6]='_rows'] = R1
+    0010 [line   53] 0x0041C04B  SELF       A=1 B=0 C=263 Bx=263
+    0011 [line   53] 0x0100405C  CALL       A=1 B=2 C=1
+    0012 [line   54] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0013 [line   54] 0x84004009  SETTABLE   R0[K[8]='_waitList'] = R1
+    0014 [line   55] 0x84C28009  SETTABLE   R0[K[9]='_verts_count'] = K[10]=0.0
+    0015 [line   56] 0x0042C046  GETTABLE   R1 = R0[K[11]='_checkTimer']
+    0016 [line   56] 0x00C28057  EQ         A=1 B=R1 C=K[10]=0.0
+    0017 [line   56] 0x80010016  JMP        A=0 sBx=5
+    0018 [line   57] 0x00030045  GETGLOBAL  R1 = GLOBAL K[12]='GameUtil'
+    0019 [line   57] 0x00C34046  GETTABLE   R1 = R1[K[13]='RemoveGlobalTimer']
+    0020 [line   57] 0x0042C086  GETTABLE   R2 = R0[K[11]='_checkTimer']
+    0021 [line   57] 0x0100405C  CALL       A=1 B=2 C=1
+    0022 [line   58] 0x85C28009  SETTABLE   R0[K[11]='_checkTimer'] = K[10]=0.0
+    0023 [line   60] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 23
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0xAD1
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 61 - 83
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_danmaGo'
+    K[001] = 'm_panel'
+    K[002] = 'FindDirect'
+    K[003] = 'Widget/Container'
+    K[004] = 'SetActive'
+    K[005] = '_spriteBg'
+    K[006] = 'Bg_Black'
+    K[007] = 'GetComponent'
+    K[008] = 'UIWidget'
+    K[009] = 'GameUtil'
+    K[010] = 'AddGlobalTimer'
+    K[011] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   62] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0001 [line   62] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0002 [line   62] 0x0000C0C1  LOADK      R3 = K[3]='Widget/Container'
+    0003 [line   62] 0x0180805C  CALL       A=1 B=3 C=2
+    0004 [line   62] 0x80004009  SETTABLE   R0[K[0]='_danmaGo'] = R1
+    0005 [line   63] 0x00400046  GETTABLE   R1 = R0[K[0]='_danmaGo']
+    0006 [line   63] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0007 [line   63] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0008 [line   63] 0x0180405C  CALL       A=1 B=3 C=1
+    0009 [line   65] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0010 [line   65] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0011 [line   65] 0x000180C1  LOADK      R3 = K[6]='Bg_Black'
+    0012 [line   65] 0x0180805C  CALL       A=1 B=3 C=2
+    0013 [line   65] 0x00C1C04B  SELF       A=1 B=1 C=263 Bx=775
+    0014 [line   65] 0x000200C1  LOADK      R3 = K[8]='UIWidget'
+    0015 [line   65] 0x0180805C  CALL       A=1 B=3 C=2
+    0016 [line   65] 0x82804009  SETTABLE   R0[K[5]='_spriteBg'] = R1
+    0017 [line   67] 0x00024045  GETGLOBAL  R1 = GLOBAL K[9]='GameUtil'
+    0018 [line   67] 0x00C28046  GETTABLE   R1 = R1[K[10]='AddGlobalTimer']
+    0019 [line   67] 0x0002C081  LOADK      R2 = K[11]=0.0
+    0020 [line   67] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0021 [line   82] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0022 [line   82] 0x00000000  MOVE       R0 = R0
+    0023 [line   67] 0x0200405C  CALL       A=1 B=4 C=1
+    0024 [line   83] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 24
+
+        ============================================================
+        PROTO ROOT.7.0
+        Offset : 0xC09
+        Source : '@lua\\gui\\ecpaneldanmaku.lua'
+        Lines  : 67 - 82
+        Params : 0
+        Stack  : 10
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_panel'
+        K[001] = 'isnil'
+        K[002] = '_localCorners'
+        K[003] = '_spriteBg'
+        K[004] = 'localCorners'
+        K[005] = '_screenHeight'
+        K[006] = 3.0
+        K[007] = 'y'
+        K[008] = 1.0
+        K[009] = '_danmaGo'
+        K[010] = 'FindDirect'
+        K[011] = 'Sprite'
+        K[012] = 'GetComponent'
+        K[013] = 'UIWidget'
+        K[014] = 'width'
+        K[015] = 'height'
+        K[016] = '_rowHeight'
+        K[017] = 8.0
+        K[018] = '_rowcount'
+        K[019] = 'math'
+        K[020] = 'floor'
+        K[021] = 'StartTimer'
+        K[022] = 'ipairs'
+        K[023] = '_callbacks'
+
+        ----- INSTRUCTIONS -----
+        0000 [line   68] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line   68] 0x00400006  GETTABLE   R0 = R0[K[0]='m_panel']
+        0002 [line   68] 0x0000001A  TEST       A=0 B=0 C=0
+        0003 [line   68] 0x80010016  JMP        A=0 sBx=5
+        0004 [line   68] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0005 [line   68] 0x00400006  GETTABLE   R0 = R0[K[0]='m_panel']
+        0006 [line   68] 0x00404006  GETTABLE   R0 = R0[K[1]='isnil']
+        0007 [line   68] 0x0000001A  TEST       A=0 B=0 C=0
+        0008 [line   68] 0x80000016  JMP        A=0 sBx=1
+        0009 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+        0010 [line   69] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0011 [line   69] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0012 [line   69] 0x00C0C046  GETTABLE   R1 = R1[K[3]='_spriteBg']
+        0013 [line   69] 0x00C10046  GETTABLE   R1 = R1[K[4]='localCorners']
+        0014 [line   69] 0x81004009  SETTABLE   R0[K[2]='_localCorners'] = R1
+        0015 [line   70] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0016 [line   70] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0017 [line   70] 0x00C08046  GETTABLE   R1 = R1[K[2]='_localCorners']
+        0018 [line   70] 0x00C18046  GETTABLE   R1 = R1[K[6]=3.0]
+        0019 [line   70] 0x00C1C046  GETTABLE   R1 = R1[K[7]='y']
+        0020 [line   70] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0021 [line   70] 0x01408086  GETTABLE   R2 = R2[K[2]='_localCorners']
+        0022 [line   70] 0x01420086  GETTABLE   R2 = R2[K[8]=1.0]
+        0023 [line   70] 0x0141C086  GETTABLE   R2 = R2[K[7]='y']
+        0024 [line   70] 0x0080804D  SUB        A=1 B=R1 C=R2
+        0025 [line   70] 0x82804009  SETTABLE   R0[K[5]='_screenHeight'] = R1
+        0026 [line   71] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0027 [line   71] 0x00424006  GETTABLE   R0 = R0[K[9]='_danmaGo']
+        0028 [line   71] 0x0042800B  SELF       A=0 B=0 C=266 Bx=266
+        0029 [line   71] 0x0002C081  LOADK      R2 = K[11]='Sprite'
+        0030 [line   71] 0x0180801C  CALL       A=0 B=3 C=2
+        0031 [line   71] 0x0043000B  SELF       A=0 B=0 C=268 Bx=268
+        0032 [line   71] 0x00034081  LOADK      R2 = K[13]='UIWidget'
+        0033 [line   71] 0x0180801C  CALL       A=0 B=3 C=2
+        0034 [line   72] 0x00438046  GETTABLE   R1 = R0[K[14]='width']
+        0035 [line   73] 0x0043C086  GETTABLE   R2 = R0[K[15]='height']
+        0036 [line   74] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0037 [line   74] 0x0144410C  ADD        A=4 B=R2 C=K[17]=8.0
+        0038 [line   74] 0x880100C9  SETTABLE   R3[K[16]='_rowHeight'] = R4
+        0039 [line   75] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0040 [line   75] 0x0004C105  GETGLOBAL  R4 = GLOBAL K[19]='math'
+        0041 [line   75] 0x02450106  GETTABLE   R4 = R4[K[20]='floor']
+        0042 [line   75] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+        0043 [line   75] 0x02C14146  GETTABLE   R5 = R5[K[5]='_screenHeight']
+        0044 [line   75] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0045 [line   75] 0x03440186  GETTABLE   R6 = R6[K[16]='_rowHeight']
+        0046 [line   75] 0x0281814F  DIV        A=5 B=R5 C=R6
+        0047 [line   75] 0x0100811C  CALL       A=4 B=2 C=2
+        0048 [line   75] 0x890100C9  SETTABLE   R3[K[18]='_rowcount'] = R4
+        0049 [line   76] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0050 [line   76] 0x01C540CB  SELF       A=3 B=3 C=277 Bx=1813
+        0051 [line   76] 0x010040DC  CALL       A=3 B=2 C=1
+        0052 [line   78] 0x000580C5  GETGLOBAL  R3 = GLOBAL K[22]='ipairs'
+        0053 [line   78] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+        0054 [line   78] 0x0245C106  GETTABLE   R4 = R4[K[23]='_callbacks']
+        0055 [line   78] 0x010100DC  CALL       A=3 B=2 C=4
+        0056 [line   78] 0x80008016  JMP        A=0 sBx=3
+        0057 [line   79] 0x03800200  MOVE       R8 = R7
+        0058 [line   79] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+        0059 [line   79] 0x0100421C  CALL       A=8 B=2 C=1
+        0060 [line   78] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+        0061 [line   79] 0x7FFE8016  JMP        A=0 sBx=-5
+        0062 [line   81] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0063 [line   81] 0x0000010A  NEWTABLE   A=4 B=0 C=0 Bx=0
+        0064 [line   81] 0x8B8100C9  SETTABLE   R3[K[23]='_callbacks'] = R4
+        0065 [line   82] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'danmaFrame': 34 -> 65
+        'w': 35 -> 65
+        'h': 36 -> 65
+        '(for generator)': 56 -> 62
+        '(for state)': 56 -> 62
+        '(for control)': 56 -> 62
+        'i': 57 -> 60
+        'cb': 57 -> 60
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x10AB
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 85 - 86
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   86] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 0
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x10EC
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 88 - 90
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_danmaList'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   89] 0x00400046  GETTABLE   R1 = R0[K[0]='_danmaList']
+    0001 [line   89] 0x00800054  LEN        A=1 B=1 C=0 Bx=512
+    0002 [line   89] 0x0100005E  RETURN     A=1 B=2 C=0
+    0003 [line   90] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 3
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x1155
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 92 - 100
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'table'
+    K[001] = 'remove'
+    K[002] = '_cacheList'
+    K[003] = 1.0
+    K[004] = 'isnil'
+    K[005] = '_danmaGo'
+    K[006] = 'Instantiate'
+    K[007] = 'parent'
+    K[008] = 'localScale'
+    K[009] = 'Vector3'
+    K[010] = 'one'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   93] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='table'
+    0001 [line   93] 0x00C04046  GETTABLE   R1 = R1[K[1]='remove']
+    0002 [line   93] 0x00408086  GETTABLE   R2 = R0[K[2]='_cacheList']
+    0003 [line   93] 0x0000C0C1  LOADK      R3 = K[3]=1.0
+    0004 [line   93] 0x0180805C  CALL       A=1 B=3 C=2
+    0005 [line   94] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line   94] 0x80008016  JMP        A=0 sBx=3
+    0007 [line   94] 0x00C10086  GETTABLE   R2 = R1[K[4]='isnil']
+    0008 [line   94] 0x0000009A  TEST       A=2 B=0 C=0
+    0009 [line   94] 0x80028016  JMP        A=0 sBx=11
+    0010 [line   95] 0x00414086  GETTABLE   R2 = R0[K[5]='_danmaGo']
+    0011 [line   95] 0x0141808B  SELF       A=2 B=2 C=262 Bx=1286
+    0012 [line   95] 0x0100809C  CALL       A=2 B=2 C=2
+    0013 [line   95] 0x01000040  MOVE       R1 = R2
+    0014 [line   96] 0x00414086  GETTABLE   R2 = R0[K[5]='_danmaGo']
+    0015 [line   96] 0x0141C086  GETTABLE   R2 = R2[K[7]='parent']
+    0016 [line   96] 0x83808049  SETTABLE   R1[K[7]='parent'] = R2
+    0017 [line   97] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0018 [line   97] 0x01424086  GETTABLE   R2 = R2[K[9]='Vector3']
+    0019 [line   97] 0x01428086  GETTABLE   R2 = R2[K[10]='one']
+    0020 [line   97] 0x84008049  SETTABLE   R1[K[8]='localScale'] = R2
+    0021 [line   99] 0x0100005E  RETURN     A=1 B=2 C=0
+    0022 [line  100] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 22
+    'obj': 5 -> 22
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x12E9
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 102 - 117
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'math'
+    K[001] = 'huge'
+    K[002] = 1.0
+    K[003] = '_rowcount'
+    K[004] = '_rows'
+    K[005] = 'nexttime'
+    K[006] = 'Time'
+    K[007] = 'time'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  103] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='math'
+    0001 [line  103] 0x00C04046  GETTABLE   R1 = R1[K[1]='huge']
+    0002 [line  104] 0x00008081  LOADK      R2 = K[2]=1.0
+    0003 [line  105] 0x000080C1  LOADK      R3 = K[2]=1.0
+    0004 [line  105] 0x0040C106  GETTABLE   R4 = R0[K[3]='_rowcount']
+    0005 [line  105] 0x00008141  LOADK      R5 = K[2]=1.0
+    0006 [line  105] 0x800380E0  FORPREP    A=3 sBx=15
+    0007 [line  106] 0x004101C6  GETTABLE   R7 = R0[K[4]='_rows']
+    0008 [line  106] 0x038181C6  GETTABLE   R7 = R7[R6]
+    0009 [line  107] 0x000001DA  TEST       A=7 B=0 C=0
+    0010 [line  107] 0x80010016  JMP        A=0 sBx=5
+    0011 [line  107] 0x03C14206  GETTABLE   R8 = R7[K[5]='nexttime']
+    0012 [line  107] 0x00018245  GETGLOBAL  R9 = GLOBAL K[6]='Time'
+    0013 [line  107] 0x04C1C246  GETTABLE   R9 = R9[K[7]='time']
+    0014 [line  107] 0x04024019  LE         A=0 B=R8 C=R9
+    0015 [line  107] 0x80000016  JMP        A=0 sBx=1
+    0016 [line  108] 0x0100019E  RETURN     A=6 B=2 C=0
+    0017 [line  110] 0x03C14206  GETTABLE   R8 = R7[K[5]='nexttime']
+    0018 [line  110] 0x04004018  LT         A=0 B=R8 C=R1
+    0019 [line  110] 0x80004016  JMP        A=0 sBx=2
+    0020 [line  111] 0x03C14046  GETTABLE   R1 = R7[K[5]='nexttime']
+    0021 [line  112] 0x03000080  MOVE       R2 = R6
+    0022 [line  105] 0x7FFBC0DF  FORLOOP    A=3 sBx=-16
+    0023 [line  116] 0x0100009E  RETURN     A=2 B=2 C=0
+    0024 [line  117] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 24
+    'minTime': 2 -> 24
+    'minIndex': 3 -> 24
+    '(for index)': 6 -> 23
+    '(for limit)': 6 -> 23
+    '(for step)': 6 -> 23
+    'i': 7 -> 22
+    'v': 9 -> 22
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x14CF
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 119 - 135
+    Params : 3
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'FindDirect'
+    K[001] = 'Label'
+    K[002] = 'GetComponent'
+    K[003] = 'UIWidget'
+    K[004] = 'width'
+    K[005] = 4.0
+    K[006] = 'height'
+    K[007] = '_localCorners'
+    K[008] = 3.0
+    K[009] = 'x'
+    K[010] = 1.0
+    K[011] = 'y'
+    K[012] = 2.0
+    K[013] = '_rowHeight'
+    K[014] = 'Vector3'
+    K[015] = 'new'
+    K[016] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  120] 0x014000CB  SELF       A=3 B=2 C=256 Bx=1280
+    0001 [line  120] 0x00004141  LOADK      R5 = K[1]='Label'
+    0002 [line  120] 0x018080DC  CALL       A=3 B=3 C=2
+    0003 [line  120] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+    0004 [line  120] 0x0000C141  LOADK      R5 = K[3]='UIWidget'
+    0005 [line  120] 0x018080DC  CALL       A=3 B=3 C=2
+    0006 [line  121] 0x01C10106  GETTABLE   R4 = R3[K[4]='width']
+    0007 [line  121] 0x0241410C  ADD        A=4 B=R4 C=K[5]=4.0
+    0008 [line  122] 0x01C18146  GETTABLE   R5 = R3[K[6]='height']
+    0009 [line  124] 0x0041C186  GETTABLE   R6 = R0[K[7]='_localCorners']
+    0010 [line  124] 0x03420186  GETTABLE   R6 = R6[K[8]=3.0]
+    0011 [line  124] 0x03424186  GETTABLE   R6 = R6[K[9]='x']
+    0012 [line  124] 0x0041C1C6  GETTABLE   R7 = R0[K[7]='_localCorners']
+    0013 [line  124] 0x03C281C6  GETTABLE   R7 = R7[K[10]=1.0]
+    0014 [line  124] 0x03C241C6  GETTABLE   R7 = R7[K[9]='x']
+    0015 [line  124] 0x0301C18D  SUB        A=6 B=R6 C=R7
+    0016 [line  124] 0x0301018C  ADD        A=6 B=R6 C=R4
+    0017 [line  125] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0018 [line  125] 0x0301C1CF  DIV        A=7 B=R6 C=R7
+    0019 [line  127] 0x0041C206  GETTABLE   R8 = R0[K[7]='_localCorners']
+    0020 [line  127] 0x04420206  GETTABLE   R8 = R8[K[8]=3.0]
+    0021 [line  127] 0x0442C206  GETTABLE   R8 = R8[K[11]='y']
+    0022 [line  127] 0x02C3024F  DIV        A=9 B=R5 C=K[12]=2.0
+    0023 [line  127] 0x0402420D  SUB        A=8 B=R8 C=R9
+    0024 [line  128] 0x0041C246  GETTABLE   R9 = R0[K[7]='_localCorners']
+    0025 [line  128] 0x04C28246  GETTABLE   R9 = R9[K[10]=1.0]
+    0026 [line  128] 0x04C2C246  GETTABLE   R9 = R9[K[11]='y']
+    0027 [line  128] 0x0481424C  ADD        A=9 B=R9 C=R5
+    0028 [line  129] 0x00C2828D  SUB        A=10 B=R1 C=K[10]=1.0
+    0029 [line  129] 0x004342C6  GETTABLE   R11 = R0[K[13]='_rowHeight']
+    0030 [line  129] 0x0502C28E  MUL        A=10 B=R10 C=R11
+    0031 [line  129] 0x0402828D  SUB        A=10 B=R8 C=R10
+    0032 [line  131] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0033 [line  131] 0x05C382C6  GETTABLE   R11 = R11[K[14]='Vector3']
+    0034 [line  131] 0x05C3C2C6  GETTABLE   R11 = R11[K[15]='new']
+    0035 [line  131] 0x0041C306  GETTABLE   R12 = R0[K[7]='_localCorners']
+    0036 [line  131] 0x06420306  GETTABLE   R12 = R12[K[8]=3.0]
+    0037 [line  131] 0x06424306  GETTABLE   R12 = R12[K[9]='x']
+    0038 [line  131] 0x0243034F  DIV        A=13 B=R4 C=K[12]=2.0
+    0039 [line  131] 0x0603430C  ADD        A=12 B=R12 C=R13
+    0040 [line  131] 0x05000340  MOVE       R13 = R10
+    0041 [line  131] 0x00040381  LOADK      R14 = K[16]=0.0
+    0042 [line  131] 0x020082DC  CALL       A=11 B=4 C=2
+    0043 [line  132] 0x00800304  GETUPVAL   A=12 B=1 C=0 Bx=512
+    0044 [line  132] 0x06438306  GETTABLE   R12 = R12[K[14]='Vector3']
+    0045 [line  132] 0x0643C306  GETTABLE   R12 = R12[K[15]='new']
+    0046 [line  132] 0x0041C346  GETTABLE   R13 = R0[K[7]='_localCorners']
+    0047 [line  132] 0x06C28346  GETTABLE   R13 = R13[K[10]=1.0]
+    0048 [line  132] 0x06C24346  GETTABLE   R13 = R13[K[9]='x']
+    0049 [line  132] 0x0243038F  DIV        A=14 B=R4 C=K[12]=2.0
+    0050 [line  132] 0x0683834D  SUB        A=13 B=R13 C=R14
+    0051 [line  132] 0x05000380  MOVE       R14 = R10
+    0052 [line  132] 0x000403C1  LOADK      R15 = K[16]=0.0
+    0053 [line  132] 0x0200831C  CALL       A=12 B=4 C=2
+    0054 [line  134] 0x03800340  MOVE       R13 = R7
+    0055 [line  134] 0x02000380  MOVE       R14 = R4
+    0056 [line  134] 0x050003C0  MOVE       R15 = R10
+    0057 [line  134] 0x05800400  MOVE       R16 = R11
+    0058 [line  134] 0x06000440  MOVE       R17 = R12
+    0059 [line  134] 0x0300035E  RETURN     A=13 B=6 C=0
+    0060 [line  135] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 60
+    'row': 0 -> 60
+    'obj': 0 -> 60
+    'danmaFrame': 6 -> 60
+    'w': 8 -> 60
+    'h': 9 -> 60
+    'moveW': 17 -> 60
+    'speed': 19 -> 60
+    'top': 24 -> 60
+    'bottom': 28 -> 60
+    'y': 32 -> 60
+    'from': 43 -> 60
+    'to': 54 -> 60
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x1892
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 137 - 144
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'table'
+    K[002] = 'insert'
+    K[003] = '_callbacks'
+    K[004] = 'CreatePanel'
+    K[005] = 'RESPATH'
+    K[006] = 'Panel_Danmu'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  138] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  138] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  138] 0x8002C016  JMP        A=0 sBx=12
+    0003 [line  139] 0x0000005A  TEST       A=1 B=0 C=0
+    0004 [line  139] 0x80010016  JMP        A=0 sBx=5
+    0005 [line  139] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='table'
+    0006 [line  139] 0x01408086  GETTABLE   R2 = R2[K[2]='insert']
+    0007 [line  139] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='_callbacks']
+    0008 [line  139] 0x00800100  MOVE       R4 = R1
+    0009 [line  139] 0x0180409C  CALL       A=2 B=3 C=1
+    0010 [line  140] 0x0041008B  SELF       A=2 B=0 C=260 Bx=260
+    0011 [line  140] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='RESPATH'
+    0012 [line  140] 0x02418106  GETTABLE   R4 = R4[K[6]='Panel_Danmu']
+    0013 [line  140] 0x0180409C  CALL       A=2 B=3 C=1
+    0014 [line  140] 0x80010016  JMP        A=0 sBx=5
+    0015 [line  142] 0x0000005A  TEST       A=1 B=0 C=0
+    0016 [line  142] 0x80008016  JMP        A=0 sBx=3
+    0017 [line  142] 0x00800080  MOVE       R2 = R1
+    0018 [line  142] 0x000000C0  MOVE       R3 = R0
+    0019 [line  142] 0x0100409C  CALL       A=2 B=2 C=1
+    0020 [line  144] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 20
+    'cb': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x19E5
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 146 - 237
+    Params : 2
+    Stack  : 25
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'isnil'
+    K[002] = '_localCorners'
+    K[003] = 'Instance'
+    K[004] = 'm_HostPlayer'
+    K[005] = 'roleid'
+    K[006] = 'ID'
+    K[007] = 'HtmlToNguiText'
+    K[008] = 'text'
+    K[009] = '_G'
+    K[010] = 'LuaString'
+    K[011] = 'Len'
+    K[012] = 'isCommandMsg'
+    K[013] = '_verts_count'
+    K[014] = 8.0
+    K[015] = 2.0
+    K[016] = 'table'
+    K[017] = 'remove'
+    K[018] = '_danmaList'
+    K[019] = 1.0
+    K[020] = 'valid'
+    K[021] = False
+    K[022] = 'obj'
+    K[023] = 'SetActive'
+    K[024] = 'verts_count'
+    K[025] = 'insert'
+    K[026] = '_cacheList'
+    K[027] = 'NewDanmuObj'
+    K[028] = 'FindDirect'
+    K[029] = 'Label'
+    K[030] = 'GetComponent'
+    K[031] = 'UILabel'
+    K[032] = 'textColor'
+    K[033] = 'Color'
+    K[034] = 'green'
+    K[035] = 'red'
+    K[036] = 'white'
+    K[037] = 'Sprite'
+    K[038] = 'UIWidget'
+    K[039] = 'width'
+    K[040] = 4.0
+    K[041] = 'height'
+    K[042] = 3.0
+    K[043] = 'x'
+    K[044] = 'msg'
+    K[045] = 'addtime'
+    K[046] = 'Time'
+    K[047] = 'time'
+    K[048] = True
+    K[049] = 'CalcRowInfo'
+    K[050] = '_rows'
+    K[051] = 'nexttime'
+    K[052] = 'CalcTweenPosition'
+    K[053] = 'speed'
+    K[054] = 'from'
+    K[055] = 'to'
+    K[056] = 'y'
+    K[057] = 'TweenPosition'
+    K[058] = 'AddComponent'
+    K[059] = 'enabled'
+    K[060] = 'duration'
+    K[061] = 'set_from'
+    K[062] = 'set_to'
+    K[063] = 'gameObject'
+    K[064] = 'ResetToBeginning'
+    K[065] = 'Begin'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  147] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  147] 0x0000009A  TEST       A=2 B=0 C=0
+    0002 [line  147] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  147] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0004 [line  147] 0x01404086  GETTABLE   R2 = R2[K[1]='isnil']
+    0005 [line  147] 0x0000009A  TEST       A=2 B=0 C=0
+    0006 [line  147] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  147] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  148] 0x00408086  GETTABLE   R2 = R0[K[2]='_localCorners']
+    0009 [line  148] 0x0000409A  TEST       A=2 B=0 C=1
+    0010 [line  148] 0x80000016  JMP        A=0 sBx=1
+    0011 [line  148] 0x0080001E  RETURN     A=0 B=1 C=0
+    0012 [line  150] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0013 [line  151] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0014 [line  151] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='Instance']
+    0015 [line  151] 0x008080DC  CALL       A=3 B=1 C=2
+    0016 [line  151] 0x01C100C6  GETTABLE   R3 = R3[K[4]='m_HostPlayer']
+    0017 [line  151] 0x000000DA  TEST       A=3 B=0 C=0
+    0018 [line  151] 0x80024016  JMP        A=0 sBx=10
+    0019 [line  152] 0x00C140C6  GETTABLE   R3 = R1[K[5]='roleid']
+    0020 [line  152] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0021 [line  152] 0x0240C106  GETTABLE   R4 = R4[K[3]='Instance']
+    0022 [line  152] 0x0080811C  CALL       A=4 B=1 C=2
+    0023 [line  152] 0x02410106  GETTABLE   R4 = R4[K[4]='m_HostPlayer']
+    0024 [line  152] 0x02418106  GETTABLE   R4 = R4[K[6]='ID']
+    0025 [line  152] 0x01810057  EQ         A=1 B=R3 C=R4
+    0026 [line  152] 0x80000016  JMP        A=0 sBx=1
+    0027 [line  152] 0x00004082  LOADBOOL   A=2 B=0 C=1
+    0028 [line  152] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0029 [line  154] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0030 [line  154] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='HtmlToNguiText']
+    0031 [line  154] 0x00C20106  GETTABLE   R4 = R1[K[8]='text']
+    0032 [line  154] 0x010080DC  CALL       A=3 B=2 C=2
+    0033 [line  155] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='_G'
+    0034 [line  155] 0x02428106  GETTABLE   R4 = R4[K[10]='LuaString']
+    0035 [line  155] 0x0242C106  GETTABLE   R4 = R4[K[11]='Len']
+    0036 [line  155] 0x01800140  MOVE       R5 = R3
+    0037 [line  155] 0x0100811C  CALL       A=4 B=2 C=2
+    0038 [line  170] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0039 [line  171] 0x00C30186  GETTABLE   R6 = R1[K[12]='isCommandMsg']
+    0040 [line  171] 0x0000019A  TEST       A=6 B=0 C=0
+    0041 [line  171] 0x80000016  JMP        A=0 sBx=1
+    0042 [line  172] 0x00C30146  GETTABLE   R5 = R1[K[12]='isCommandMsg']
+    0043 [line  175] 0x00434186  GETTABLE   R6 = R0[K[13]='_verts_count']
+    0044 [line  175] 0x024381CE  MUL        A=7 B=R4 C=K[14]=8.0
+    0045 [line  175] 0x0301C18C  ADD        A=6 B=R6 C=R7
+    0046 [line  175] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0047 [line  175] 0x03C3C1CF  DIV        A=7 B=R7 C=K[15]=2.0
+    0048 [line  175] 0x03818019  LE         A=0 B=R7 C=R6
+    0049 [line  175] 0x80054016  JMP        A=0 sBx=22
+    0050 [line  176] 0x00040185  GETGLOBAL  R6 = GLOBAL K[16]='table'
+    0051 [line  176] 0x03444186  GETTABLE   R6 = R6[K[17]='remove']
+    0052 [line  176] 0x004481C6  GETTABLE   R7 = R0[K[18]='_danmaList']
+    0053 [line  176] 0x0004C201  LOADK      R8 = K[19]=1.0
+    0054 [line  176] 0x0180819C  CALL       A=6 B=3 C=2
+    0055 [line  177] 0x0000019A  TEST       A=6 B=0 C=0
+    0056 [line  177] 0x7FFC4016  JMP        A=0 sBx=-14
+    0057 [line  178] 0x8A454189  SETTABLE   R6[K[20]='valid'] = K[21]=False
+    0058 [line  179] 0x034581C6  GETTABLE   R7 = R6[K[22]='obj']
+    0059 [line  179] 0x03C5C1CB  SELF       A=7 B=7 C=279 Bx=3863
+    0060 [line  179] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0061 [line  179] 0x018041DC  CALL       A=7 B=3 C=1
+    0062 [line  180] 0x004341C6  GETTABLE   R7 = R0[K[13]='_verts_count']
+    0063 [line  180] 0x03460206  GETTABLE   R8 = R6[K[24]='verts_count']
+    0064 [line  180] 0x038201CD  SUB        A=7 B=R7 C=R8
+    0065 [line  180] 0x8681C009  SETTABLE   R0[K[13]='_verts_count'] = R7
+    0066 [line  181] 0x000401C5  GETGLOBAL  R7 = GLOBAL K[16]='table'
+    0067 [line  181] 0x03C641C6  GETTABLE   R7 = R7[K[25]='insert']
+    0068 [line  181] 0x00468206  GETTABLE   R8 = R0[K[26]='_cacheList']
+    0069 [line  181] 0x03458246  GETTABLE   R9 = R6[K[22]='obj']
+    0070 [line  181] 0x018041DC  CALL       A=7 B=3 C=1
+    0071 [line  182] 0x7FF88016  JMP        A=0 sBx=-29
+    0072 [line  185] 0x0046C18B  SELF       A=6 B=0 C=283 Bx=283
+    0073 [line  185] 0x0100819C  CALL       A=6 B=2 C=2
+    0074 [line  186] 0x034701CB  SELF       A=7 B=6 C=284 Bx=3356
+    0075 [line  186] 0x00074241  LOADK      R9 = K[29]='Label'
+    0076 [line  186] 0x018081DC  CALL       A=7 B=3 C=2
+    0077 [line  186] 0x03C781CB  SELF       A=7 B=7 C=286 Bx=3870
+    0078 [line  186] 0x0007C241  LOADK      R9 = K[31]='UILabel'
+    0079 [line  186] 0x018081DC  CALL       A=7 B=3 C=2
+    0080 [line  186] 0x8400C1C9  SETTABLE   R7[K[8]='text'] = R3
+    0081 [line  188] 0x0000015A  TEST       A=5 B=0 C=0
+    0082 [line  188] 0x80024016  JMP        A=0 sBx=10
+    0083 [line  189] 0x034701CB  SELF       A=7 B=6 C=284 Bx=3356
+    0084 [line  189] 0x00074241  LOADK      R9 = K[29]='Label'
+    0085 [line  189] 0x018081DC  CALL       A=7 B=3 C=2
+    0086 [line  189] 0x03C781CB  SELF       A=7 B=7 C=286 Bx=3870
+    0087 [line  189] 0x0007C241  LOADK      R9 = K[31]='UILabel'
+    0088 [line  189] 0x018081DC  CALL       A=7 B=3 C=2
+    0089 [line  189] 0x00084205  GETGLOBAL  R8 = GLOBAL K[33]='Color'
+    0090 [line  189] 0x04488206  GETTABLE   R8 = R8[K[34]='green']
+    0091 [line  189] 0x900201C9  SETTABLE   R7[K[32]='textColor'] = R8
+    0092 [line  189] 0x80038016  JMP        A=0 sBx=15
+    0093 [line  191] 0x034701CB  SELF       A=7 B=6 C=284 Bx=3356
+    0094 [line  191] 0x00074241  LOADK      R9 = K[29]='Label'
+    0095 [line  191] 0x018081DC  CALL       A=7 B=3 C=2
+    0096 [line  191] 0x03C781CB  SELF       A=7 B=7 C=286 Bx=3870
+    0097 [line  191] 0x0007C241  LOADK      R9 = K[31]='UILabel'
+    0098 [line  191] 0x018081DC  CALL       A=7 B=3 C=2
+    0099 [line  191] 0x0000009A  TEST       A=2 B=0 C=0
+    0100 [line  191] 0x8000C016  JMP        A=0 sBx=4
+    0101 [line  191] 0x00084205  GETGLOBAL  R8 = GLOBAL K[33]='Color'
+    0102 [line  191] 0x0448C206  GETTABLE   R8 = R8[K[35]='red']
+    0103 [line  191] 0x0000421A  TEST       A=8 B=0 C=1
+    0104 [line  191] 0x80004016  JMP        A=0 sBx=2
+    0105 [line  191] 0x00084205  GETGLOBAL  R8 = GLOBAL K[33]='Color'
+    0106 [line  191] 0x04490206  GETTABLE   R8 = R8[K[36]='white']
+    0107 [line  191] 0x900201C9  SETTABLE   R7[K[32]='textColor'] = R8
+    0108 [line  193] 0x034701CB  SELF       A=7 B=6 C=284 Bx=3356
+    0109 [line  193] 0x00094241  LOADK      R9 = K[37]='Sprite'
+    0110 [line  193] 0x018081DC  CALL       A=7 B=3 C=2
+    0111 [line  193] 0x03C5C1CB  SELF       A=7 B=7 C=279 Bx=3863
+    0112 [line  193] 0x01000240  MOVE       R9 = R2
+    0113 [line  193] 0x018041DC  CALL       A=7 B=3 C=1
+    0114 [line  194] 0x034701CB  SELF       A=7 B=6 C=284 Bx=3356
+    0115 [line  194] 0x00074241  LOADK      R9 = K[29]='Label'
+    0116 [line  194] 0x018081DC  CALL       A=7 B=3 C=2
+    0117 [line  194] 0x03C781CB  SELF       A=7 B=7 C=286 Bx=3870
+    0118 [line  194] 0x00098241  LOADK      R9 = K[38]='UIWidget'
+    0119 [line  194] 0x018081DC  CALL       A=7 B=3 C=2
+    0120 [line  195] 0x03C9C206  GETTABLE   R8 = R7[K[39]='width']
+    0121 [line  195] 0x044A020C  ADD        A=8 B=R8 C=K[40]=4.0
+    0122 [line  196] 0x03CA4246  GETTABLE   R9 = R7[K[41]='height']
+    0123 [line  198] 0x00408286  GETTABLE   R10 = R0[K[2]='_localCorners']
+    0124 [line  198] 0x054A8286  GETTABLE   R10 = R10[K[42]=3.0]
+    0125 [line  198] 0x054AC286  GETTABLE   R10 = R10[K[43]='x']
+    0126 [line  198] 0x004082C6  GETTABLE   R11 = R0[K[2]='_localCorners']
+    0127 [line  198] 0x05C4C2C6  GETTABLE   R11 = R11[K[19]=1.0]
+    0128 [line  198] 0x05CAC2C6  GETTABLE   R11 = R11[K[43]='x']
+    0129 [line  198] 0x0502C28D  SUB        A=10 B=R10 C=R11
+    0130 [line  198] 0x0502028C  ADD        A=10 B=R10 C=R8
+    0131 [line  199] 0x018002C4  GETUPVAL   A=11 B=3 C=0 Bx=1536
+    0132 [line  199] 0x0502C2CF  DIV        A=11 B=R10 C=R11
+    0133 [line  201] 0x0000030A  NEWTABLE   A=12 B=0 C=0 Bx=0
+    0134 [line  202] 0x96004309  SETTABLE   R12[K[44]='msg'] = R1
+    0135 [line  203] 0x8B018309  SETTABLE   R12[K[22]='obj'] = R6
+    0136 [line  204] 0x000B8345  GETGLOBAL  R13 = GLOBAL K[46]='Time'
+    0137 [line  204] 0x06CBC346  GETTABLE   R13 = R13[K[47]='time']
+    0138 [line  204] 0x96834309  SETTABLE   R12[K[45]='addtime'] = R13
+    0139 [line  205] 0x8A4C0309  SETTABLE   R12[K[20]='valid'] = K[48]=True
+    0140 [line  206] 0x0243834E  MUL        A=13 B=R4 C=K[14]=8.0
+    0141 [line  206] 0x8C034309  SETTABLE   R12[K[24]='verts_count'] = R13
+    0142 [line  207] 0x00434346  GETTABLE   R13 = R0[K[13]='_verts_count']
+    0143 [line  207] 0x06460386  GETTABLE   R14 = R12[K[24]='verts_count']
+    0144 [line  207] 0x0683834C  ADD        A=13 B=R13 C=R14
+    0145 [line  207] 0x86834009  SETTABLE   R0[K[13]='_verts_count'] = R13
+    0146 [line  209] 0x004C434B  SELF       A=13 B=0 C=305 Bx=305
+    0147 [line  209] 0x0100835C  CALL       A=13 B=2 C=2
+    0148 [line  211] 0x004C8386  GETTABLE   R14 = R0[K[50]='_rows']
+    0149 [line  211] 0x004C83C6  GETTABLE   R15 = R0[K[50]='_rows']
+    0150 [line  211] 0x078343C6  GETTABLE   R15 = R15[R13]
+    0151 [line  211] 0x000043DA  TEST       A=15 B=0 C=1
+    0152 [line  211] 0x80000016  JMP        A=0 sBx=1
+    0153 [line  211] 0x000003CA  NEWTABLE   A=15 B=0 C=0 Bx=0
+    0154 [line  211] 0x0683C389  SETTABLE   R14[R13] = R15
+    0155 [line  212] 0x004C8386  GETTABLE   R14 = R0[K[50]='_rows']
+    0156 [line  212] 0x07034386  GETTABLE   R14 = R14[R13]
+    0157 [line  212] 0x000B83C5  GETGLOBAL  R15 = GLOBAL K[46]='Time'
+    0158 [line  212] 0x07CBC3C6  GETTABLE   R15 = R15[K[47]='time']
+    0159 [line  212] 0x0402C40F  DIV        A=16 B=R8 C=R11
+    0160 [line  212] 0x078403CC  ADD        A=15 B=R15 C=R16
+    0161 [line  212] 0x07C3C3CC  ADD        A=15 B=R15 C=K[15]=2.0
+    0162 [line  212] 0x9983C389  SETTABLE   R14[K[51]='nexttime'] = R15
+    0163 [line  214] 0x004D038B  SELF       A=14 B=0 C=308 Bx=308
+    0164 [line  214] 0x06800400  MOVE       R16 = R13
+    0165 [line  214] 0x03000440  MOVE       R17 = R6
+    0166 [line  214] 0x0201839C  CALL       A=14 B=4 C=6
+    0167 [line  215] 0x9383C309  SETTABLE   R12[K[39]='width'] = R15
+    0168 [line  216] 0x9A838309  SETTABLE   R12[K[53]='speed'] = R14
+    0169 [line  217] 0x9B044309  SETTABLE   R12[K[54]='from'] = R17
+    0170 [line  218] 0x9B848309  SETTABLE   R12[K[55]='to'] = R18
+    0171 [line  219] 0x9C040309  SETTABLE   R12[K[56]='y'] = R16
+    0172 [line  223] 0x004484C6  GETTABLE   R19 = R0[K[18]='_danmaList']
+    0173 [line  223] 0x098004D4  LEN        A=19 B=19 C=0 Bx=9728
+    0174 [line  224] 0x00448506  GETTABLE   R20 = R0[K[18]='_danmaList']
+    0175 [line  224] 0x09C4C54C  ADD        A=21 B=R19 C=K[19]=1.0
+    0176 [line  224] 0x0A830509  SETTABLE   R20[R21] = R12
+    0177 [line  226] 0x0347850B  SELF       A=20 B=6 C=286 Bx=3358
+    0178 [line  226] 0x000E4581  LOADK      R22 = K[57]='TweenPosition'
+    0179 [line  226] 0x0180851C  CALL       A=20 B=3 C=2
+    0180 [line  227] 0x0000451A  TEST       A=20 B=0 C=1
+    0181 [line  227] 0x8000C016  JMP        A=0 sBx=4
+    0182 [line  228] 0x034E854B  SELF       A=21 B=6 C=314 Bx=3386
+    0183 [line  228] 0x000E45C1  LOADK      R23 = K[57]='TweenPosition'
+    0184 [line  228] 0x0180855C  CALL       A=21 B=3 C=2
+    0185 [line  228] 0x0A800500  MOVE       R20 = R21
+    0186 [line  230] 0x9DCC0509  SETTABLE   R20[K[59]='enabled'] = K[48]=True
+    0187 [line  231] 0x01800544  GETUPVAL   A=21 B=3 C=0 Bx=1536
+    0188 [line  231] 0x9E054509  SETTABLE   R20[K[60]='duration'] = R21
+    0189 [line  232] 0x0A4F454B  SELF       A=21 B=20 C=317 Bx=10557
+    0190 [line  232] 0x088005C0  MOVE       R23 = R17
+    0191 [line  232] 0x0180455C  CALL       A=21 B=3 C=1
+    0192 [line  233] 0x0A4F854B  SELF       A=21 B=20 C=318 Bx=10558
+    0193 [line  233] 0x090005C0  MOVE       R23 = R18
+    0194 [line  233] 0x0180455C  CALL       A=21 B=3 C=1
+    0195 [line  234] 0x0A4FC546  GETTABLE   R21 = R20[K[63]='gameObject']
+    0196 [line  234] 0x0AC5C54B  SELF       A=21 B=21 C=279 Bx=11031
+    0197 [line  234] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0198 [line  234] 0x0180455C  CALL       A=21 B=3 C=1
+    0199 [line  235] 0x0A50054B  SELF       A=21 B=20 C=320 Bx=10560
+    0200 [line  235] 0x0100455C  CALL       A=21 B=2 C=1
+    0201 [line  236] 0x000E4545  GETGLOBAL  R21 = GLOBAL K[57]='TweenPosition'
+    0202 [line  236] 0x0AD04546  GETTABLE   R21 = R21[K[65]='Begin']
+    0203 [line  236] 0x0A4FC586  GETTABLE   R22 = R20[K[63]='gameObject']
+    0204 [line  236] 0x018005C4  GETUPVAL   A=23 B=3 C=0 Bx=1536
+    0205 [line  236] 0x09000600  MOVE       R24 = R18
+    0206 [line  236] 0x0200455C  CALL       A=21 B=4 C=1
+    0207 [line  237] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 207
+    'msg': 0 -> 207
+    'isHp': 13 -> 207
+    'text': 33 -> 207
+    'strlen': 38 -> 207
+    'isCommandMsg': 39 -> 207
+    'cache': 55 -> 71
+    'obj': 74 -> 207
+    'danmaFrame': 120 -> 207
+    'w': 122 -> 207
+    'h': 123 -> 207
+    'moveW': 131 -> 207
+    'speed': 133 -> 207
+    'danma': 134 -> 207
+    'row': 148 -> 207
+    'speed': 167 -> 207
+    'w': 167 -> 207
+    'y': 167 -> 207
+    'from': 167 -> 207
+    'to': 167 -> 207
+    'len': 174 -> 207
+    'tween': 180 -> 207
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x2582
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 240 - 272
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_timerId'
+    K[001] = 0.0
+    K[002] = 'GameUtil'
+    K[003] = 'AddGlobalTimer'
+    K[004] = 0.5
+
+    ----- INSTRUCTIONS -----
+    0000 [line  241] 0x00400046  GETTABLE   R1 = R0[K[0]='_timerId']
+    0001 [line  241] 0x00C04017  EQ         A=0 B=R1 C=K[1]=0.0
+    0002 [line  241] 0x8002C016  JMP        A=0 sBx=12
+    0003 [line  242] 0x00004041  LOADK      R1 = K[1]=0.0
+    0004 [line  243] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='GameUtil'
+    0005 [line  243] 0x0140C086  GETTABLE   R2 = R2[K[3]='AddGlobalTimer']
+    0006 [line  243] 0x000100C1  LOADK      R3 = K[4]=0.5
+    0007 [line  243] 0x00000102  LOADBOOL   A=4 B=0 C=0
+    0008 [line  270] 0x00000164  CLOSURE    R5 = PROTO[0]
+    0009 [line  270] 0x00000000  MOVE       R0 = R0
+    0010 [line  270] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0011 [line  270] 0x00800000  MOVE       R0 = R1
+    0012 [line  243] 0x0200809C  CALL       A=2 B=4 C=2
+    0013 [line  270] 0x80008009  SETTABLE   R0[K[0]='_timerId'] = R2
+    0014 [line  270] 0x00000063  CLOSE      A=1 B=0 C=0 Bx=0
+    0015 [line  272] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 15
+    'zeroCounter': 4 -> 14
+
+        ============================================================
+        PROTO ROOT.15.0
+        Offset : 0x2620
+        Source : '@lua\\gui\\ecpaneldanmaku.lua'
+        Lines  : 243 - 270
+        Params : 0
+        Stack  : 9
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'ipairs'
+        K[001] = '_danmaList'
+        K[002] = 'valid'
+        K[003] = 'addtime'
+        K[004] = 2.0
+        K[005] = 'Time'
+        K[006] = 'time'
+        K[007] = 'table'
+        K[008] = 'remove'
+        K[009] = False
+        K[010] = 'obj'
+        K[011] = 'SetActive'
+        K[012] = '_verts_count'
+        K[013] = 'verts_count'
+        K[014] = 'insert'
+        K[015] = '_cacheList'
+        K[016] = '_waitList'
+        K[017] = 1.0
+        K[018] = 'm_panel'
+        K[019] = 'isnil'
+        K[020] = 'AddOneDanmu'
+        K[021] = 0.0
+        K[022] = 10.0
+        K[023] = 'DestroyPanel'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  244] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='ipairs'
+        0001 [line  244] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0002 [line  244] 0x00C04046  GETTABLE   R1 = R1[K[1]='_danmaList']
+        0003 [line  244] 0x0101001C  CALL       A=0 B=2 C=4
+        0004 [line  244] 0x800A0016  JMP        A=0 sBx=41
+        0005 [line  245] 0x0000011A  TEST       A=4 B=0 C=0
+        0006 [line  245] 0x80028016  JMP        A=0 sBx=11
+        0007 [line  245] 0x02408146  GETTABLE   R5 = R4[K[2]='valid']
+        0008 [line  245] 0x0000015A  TEST       A=5 B=0 C=0
+        0009 [line  245] 0x8001C016  JMP        A=0 sBx=8
+        0010 [line  245] 0x0240C146  GETTABLE   R5 = R4[K[3]='addtime']
+        0011 [line  245] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+        0012 [line  245] 0x0281814C  ADD        A=5 B=R5 C=R6
+        0013 [line  245] 0x02C1014C  ADD        A=5 B=R5 C=K[4]=2.0
+        0014 [line  245] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='Time'
+        0015 [line  245] 0x03418186  GETTABLE   R6 = R6[K[6]='time']
+        0016 [line  245] 0x02818058  LT         A=1 B=R5 C=R6
+        0017 [line  245] 0x80010016  JMP        A=0 sBx=5
+        0018 [line  245] 0x0000011A  TEST       A=4 B=0 C=0
+        0019 [line  245] 0x80064016  JMP        A=0 sBx=26
+        0020 [line  245] 0x02408146  GETTABLE   R5 = R4[K[2]='valid']
+        0021 [line  245] 0x0000415A  TEST       A=5 B=0 C=1
+        0022 [line  245] 0x80058016  JMP        A=0 sBx=23
+        0023 [line  246] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='table'
+        0024 [line  246] 0x02C20146  GETTABLE   R5 = R5[K[8]='remove']
+        0025 [line  246] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0026 [line  246] 0x03404186  GETTABLE   R6 = R6[K[1]='_danmaList']
+        0027 [line  246] 0x018001C0  MOVE       R7 = R3
+        0028 [line  246] 0x0180815C  CALL       A=5 B=3 C=2
+        0029 [line  247] 0x81424149  SETTABLE   R5[K[2]='valid'] = K[9]=False
+        0030 [line  248] 0x02C28186  GETTABLE   R6 = R5[K[10]='obj']
+        0031 [line  248] 0x0342C18B  SELF       A=6 B=6 C=267 Bx=3339
+        0032 [line  248] 0x00000202  LOADBOOL   A=8 B=0 C=0
+        0033 [line  248] 0x0180419C  CALL       A=6 B=3 C=1
+        0034 [line  249] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0035 [line  249] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+        0036 [line  249] 0x03C301C6  GETTABLE   R7 = R7[K[12]='_verts_count']
+        0037 [line  249] 0x02C34206  GETTABLE   R8 = R5[K[13]='verts_count']
+        0038 [line  249] 0x038201CD  SUB        A=7 B=R7 C=R8
+        0039 [line  249] 0x8601C189  SETTABLE   R6[K[12]='_verts_count'] = R7
+        0040 [line  250] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='table'
+        0041 [line  250] 0x03438186  GETTABLE   R6 = R6[K[14]='insert']
+        0042 [line  250] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+        0043 [line  250] 0x03C3C1C6  GETTABLE   R7 = R7[K[15]='_cacheList']
+        0044 [line  250] 0x02C28206  GETTABLE   R8 = R5[K[10]='obj']
+        0045 [line  250] 0x0180419C  CALL       A=6 B=3 C=1
+        0046 [line  244] 0x00008021  TFORLOOP   A=0 B=0 C=2
+        0047 [line  251] 0x7FF50016  JMP        A=0 sBx=-43
+        0048 [line  254] 0x0001C005  GETGLOBAL  R0 = GLOBAL K[7]='table'
+        0049 [line  254] 0x00420006  GETTABLE   R0 = R0[K[8]='remove']
+        0050 [line  254] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0051 [line  254] 0x00C40046  GETTABLE   R1 = R1[K[16]='_waitList']
+        0052 [line  254] 0x00044081  LOADK      R2 = K[17]=1.0
+        0053 [line  254] 0x0180801C  CALL       A=0 B=3 C=2
+        0054 [line  255] 0x0000001A  TEST       A=0 B=0 C=0
+        0055 [line  255] 0x80030016  JMP        A=0 sBx=13
+        0056 [line  256] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0057 [line  256] 0x00C48046  GETTABLE   R1 = R1[K[18]='m_panel']
+        0058 [line  256] 0x0000005A  TEST       A=1 B=0 C=0
+        0059 [line  256] 0x80020016  JMP        A=0 sBx=9
+        0060 [line  256] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0061 [line  256] 0x00C48046  GETTABLE   R1 = R1[K[18]='m_panel']
+        0062 [line  256] 0x00C4C046  GETTABLE   R1 = R1[K[19]='isnil']
+        0063 [line  256] 0x0000405A  TEST       A=1 B=0 C=1
+        0064 [line  256] 0x8000C016  JMP        A=0 sBx=4
+        0065 [line  257] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0066 [line  257] 0x00C5004B  SELF       A=1 B=1 C=276 Bx=788
+        0067 [line  257] 0x000000C0  MOVE       R3 = R0
+        0068 [line  257] 0x0180405C  CALL       A=1 B=3 C=1
+        0069 [line  261] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0070 [line  261] 0x00C04046  GETTABLE   R1 = R1[K[1]='_danmaList']
+        0071 [line  261] 0x00800054  LEN        A=1 B=1 C=0 Bx=512
+        0072 [line  261] 0x00C54017  EQ         A=0 B=R1 C=K[21]=0.0
+        0073 [line  261] 0x8002C016  JMP        A=0 sBx=12
+        0074 [line  262] 0x01000044  GETUPVAL   A=1 B=2 C=0 Bx=1024
+        0075 [line  262] 0x00C4404C  ADD        A=1 B=R1 C=K[17]=1.0
+        0076 [line  262] 0x01000048  SETUPVAL   A=1 B=2 C=0 Bx=1024
+        0077 [line  263] 0x01000044  GETUPVAL   A=1 B=2 C=0 Bx=1024
+        0078 [line  263] 0x8B004019  LE         A=0 B=K[22]=10.0 C=R1
+        0079 [line  263] 0x8001C016  JMP        A=0 sBx=8
+        0080 [line  264] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0081 [line  264] 0x00C5C04B  SELF       A=1 B=1 C=279 Bx=791
+        0082 [line  264] 0x0100405C  CALL       A=1 B=2 C=1
+        0083 [line  265] 0x00054041  LOADK      R1 = K[21]=0.0
+        0084 [line  265] 0x01000048  SETUPVAL   A=1 B=2 C=0 Bx=1024
+        0085 [line  266] 0x80004016  JMP        A=0 sBx=2
+        0086 [line  268] 0x00054041  LOADK      R1 = K[21]=0.0
+        0087 [line  268] 0x01000048  SETUPVAL   A=1 B=2 C=0 Bx=1024
+        0088 [line  270] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        '(for generator)': 4 -> 48
+        '(for state)': 4 -> 48
+        '(for control)': 4 -> 48
+        'i': 5 -> 46
+        'v': 5 -> 46
+        'cache': 29 -> 46
+        'danma': 54 -> 88
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x2B6C
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 274 - 279
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_timerId'
+    K[001] = 0.0
+    K[002] = 'GameUtil'
+    K[003] = 'RemoveGlobalTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  275] 0x00400046  GETTABLE   R1 = R0[K[0]='_timerId']
+    0001 [line  275] 0x00C04057  EQ         A=1 B=R1 C=K[1]=0.0
+    0002 [line  275] 0x80010016  JMP        A=0 sBx=5
+    0003 [line  276] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='GameUtil'
+    0004 [line  276] 0x00C0C046  GETTABLE   R1 = R1[K[3]='RemoveGlobalTimer']
+    0005 [line  276] 0x00400086  GETTABLE   R2 = R0[K[0]='_timerId']
+    0006 [line  276] 0x0100405C  CALL       A=1 B=2 C=1
+    0007 [line  277] 0x80404009  SETTABLE   R0[K[0]='_timerId'] = K[1]=0.0
+    0008 [line  279] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x2C29
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 281 - 291
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'InfoData'
+    K[003] = 'Lv'
+    K[004] = 30.0
+    K[005] = 'require'
+    K[006] = 'Data.UserData'
+    K[007] = 'GetSystemCfg'
+    K[008] = 'ReciveBulletToggle'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  282] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  282] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  282] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  282] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  282] 0x00C08046  GETTABLE   R1 = R1[K[2]='InfoData']
+    0005 [line  282] 0x00C0C046  GETTABLE   R1 = R1[K[3]='Lv']
+    0006 [line  282] 0x00C10018  LT         A=0 B=R1 C=K[4]=30.0
+    0007 [line  282] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  283] 0x00000042  LOADBOOL   A=1 B=0 C=0
+    0009 [line  283] 0x0100005E  RETURN     A=1 B=2 C=0
+    0010 [line  285] 0x00014045  GETGLOBAL  R1 = GLOBAL K[5]='require'
+    0011 [line  285] 0x00018081  LOADK      R2 = K[6]='Data.UserData'
+    0012 [line  285] 0x0100805C  CALL       A=1 B=2 C=2
+    0013 [line  286] 0x00C00086  GETTABLE   R2 = R1[K[0]='Instance']
+    0014 [line  286] 0x0080809C  CALL       A=2 B=1 C=2
+    0015 [line  287] 0x0141C0CB  SELF       A=3 B=2 C=263 Bx=1287
+    0016 [line  287] 0x00020141  LOADK      R5 = K[8]='ReciveBulletToggle'
+    0017 [line  287] 0x018080DC  CALL       A=3 B=3 C=2
+    0018 [line  287] 0x000000DA  TEST       A=3 B=0 C=0
+    0019 [line  287] 0x80004016  JMP        A=0 sBx=2
+    0020 [line  288] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0021 [line  288] 0x010000DE  RETURN     A=3 B=2 C=0
+    0022 [line  290] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0023 [line  290] 0x010000DE  RETURN     A=3 B=2 C=0
+    0024 [line  291] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 24
+    'UserData': 13 -> 24
+    'UserDataTable': 15 -> 24
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x2DED
+    Source : '@lua\\gui\\ecpaneldanmaku.lua'
+    Lines  : 293 - 308
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 1.0
+    K[002] = 0.1
+    K[003] = 'GameUtil'
+    K[004] = 'AddGlobalTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  294] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  294] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  294] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  295] 0x0000401A  TEST       A=0 B=0 C=1
+    0004 [line  295] 0x80000016  JMP        A=0 sBx=1
+    0005 [line  295] 0x00004001  LOADK      R0 = K[1]=1.0
+    0006 [line  296] 0x0000405A  TEST       A=1 B=0 C=1
+    0007 [line  296] 0x80000016  JMP        A=0 sBx=1
+    0008 [line  296] 0x00008041  LOADK      R1 = K[2]=0.1
+    0009 [line  297] 0x000040C1  LOADK      R3 = K[1]=1.0
+    0010 [line  298] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='GameUtil'
+    0011 [line  298] 0x02410106  GETTABLE   R4 = R4[K[4]='AddGlobalTimer']
+    0012 [line  298] 0x00800140  MOVE       R5 = R1
+    0013 [line  298] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0014 [line  307] 0x000001E4  CLOSURE    R7 = PROTO[0]
+    0015 [line  307] 0x01800000  MOVE       R0 = R3
+    0016 [line  307] 0x00000000  MOVE       R0 = R0
+    0017 [line  307] 0x01000000  MOVE       R0 = R2
+    0018 [line  298] 0x0200811C  CALL       A=4 B=4 C=2
+    0019 [line  308] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'n': 0 -> 19
+    'delay': 0 -> 19
+    'self': 3 -> 19
+    'step': 10 -> 19
+    'timer_': 19 -> 19
+
+        ============================================================
+        PROTO ROOT.18.0
+        Offset : 0x2E9B
+        Source : '@lua\\gui\\ecpaneldanmaku.lua'
+        Lines  : 298 - 307
+        Params : 0
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'GameUtil'
+        K[001] = 'RemoveGlobalTimer'
+        K[002] = 'timer_'
+        K[003] = 1.0
+        K[004] = 'AddOpenCallback'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  299] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  299] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0002 [line  299] 0x00800018  LT         A=0 B=R1 C=R0
+        0003 [line  299] 0x80010016  JMP        A=0 sBx=5
+        0004 [line  300] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='GameUtil'
+        0005 [line  300] 0x00404006  GETTABLE   R0 = R0[K[1]='RemoveGlobalTimer']
+        0006 [line  300] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='timer_'
+        0007 [line  300] 0x0100401C  CALL       A=0 B=2 C=1
+        0008 [line  301] 0x0080001E  RETURN     A=0 B=1 C=0
+        0009 [line  303] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0010 [line  303] 0x0040C00C  ADD        A=0 B=R0 C=K[3]=1.0
+        0011 [line  303] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+        0012 [line  304] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0013 [line  304] 0x0041000B  SELF       A=0 B=0 C=260 Bx=260
+        0014 [line  306] 0x000000A4  CLOSURE    R2 = PROTO[0]
+        0015 [line  306] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0016 [line  304] 0x0180401C  CALL       A=0 B=3 C=1
+        0017 [line  307] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+            ============================================================
+            PROTO ROOT.18.0.0
+            Offset : 0x2F4E
+            Source : '@lua\\gui\\ecpaneldanmaku.lua'
+            Lines  : 304 - 306
+            Params : 1
+            Stack  : 9
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'AddOneDanmu'
+            K[001] = 'text'
+            K[002] = 'string'
+            K[003] = 'rep'
+            K[004] = 'StringTable'
+            K[005] = 'Get'
+            K[006] = 17305.0
+            K[007] = ''
+            K[008] = 1.0
+
+            ----- INSTRUCTIONS -----
+            0000 [line  305] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+            0001 [line  305] 0x000040CA  NEWTABLE   A=3 B=0 C=1 Bx=1
+            0002 [line  305] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='string'
+            0003 [line  305] 0x0240C106  GETTABLE   R4 = R4[K[3]='rep']
+            0004 [line  305] 0x00010145  GETGLOBAL  R5 = GLOBAL K[4]='StringTable'
+            0005 [line  305] 0x02C14146  GETTABLE   R5 = R5[K[5]='Get']
+            0006 [line  305] 0x00018181  LOADK      R6 = K[6]=17305.0
+            0007 [line  305] 0x0100815C  CALL       A=5 B=2 C=2
+            0008 [line  305] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='string'
+            0009 [line  305] 0x0340C186  GETTABLE   R6 = R6[K[3]='rep']
+            0010 [line  305] 0x0001C1C1  LOADK      R7 = K[7]=''
+            0011 [line  305] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+            0012 [line  305] 0x038201D5  CONCAT     A=7 B=7 C=8 Bx=3592
+            0013 [line  305] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+            0014 [line  305] 0x0180819C  CALL       A=6 B=3 C=2
+            0015 [line  305] 0x02818155  CONCAT     A=5 B=5 C=6 Bx=2566
+            0016 [line  305] 0x00020181  LOADK      R6 = K[8]=1.0
+            0017 [line  305] 0x0180811C  CALL       A=4 B=3 C=2
+            0018 [line  305] 0x808100C9  SETTABLE   R3[K[1]='text'] = R4
+            0019 [line  305] 0x0180405C  CALL       A=1 B=3 C=1
+            0020 [line  306] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'panel': 0 -> 20

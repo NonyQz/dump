@@ -1,0 +1,2086 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\chat\ecsystemspeak.lua
+SIZE: 20850
+PARSED: 20850
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\chat\\ecsystemspeak.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 40
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'dofile'
+K[003] = 'Configs/speak_data.lua'
+K[004] = 'Utility.Enum'
+K[005] = 'Data.ElementData'
+K[006] = 'Utility.ECUIUtility'
+K[007] = 'Utility.DynamicText'
+K[008] = 'Inventory.ECItemTools'
+K[009] = 'Inventory.ECInventory'
+K[010] = 'Social.ECActivityInfo'
+K[011] = 'ForwardDeclare'
+K[012] = 'ECGame'
+K[013] = 'ECChatManager'
+K[014] = 'Data.Expdef'
+K[015] = 'CHAT_CHANNEL_ENUM'
+K[016] = 'Class'
+K[017] = 'ECSystemSpeak'
+K[018] = 'define'
+K[019] = 'static'
+K[020] = 'number'
+K[021] = '=>'
+K[022] = 'boolean'
+K[023] = 'Speak'
+K[024] = 'SpeakWithChannel'
+K[025] = 'function'
+K[026] = 'SpeakWithCallback'
+K[027] = 'table'
+K[028] = 'SpeakWithParam'
+K[029] = 0.0
+K[030] = 'userdata'
+K[031] = 'string'
+K[032] = 'OnSystemSpeak'
+K[033] = 'make'
+K[034] = 'PLAYER_NAME'
+K[035] = 'NPC_NAME'
+K[036] = 'FACTION_NAME'
+K[037] = 'NATION_NAME'
+K[038] = 'NATION_OFFICER_NAME'
+K[039] = 'RELATION_1'
+K[040] = 'RELATION_2'
+K[041] = 'INT_1'
+K[042] = 'INT_2'
+K[043] = 'SCENE_ID'
+K[044] = 'PLAYER_NAME_2'
+K[045] = 'TITLE_NAME'
+K[046] = 'ACHIEVEMENT_NAME'
+K[047] = 'ITEM_ID'
+K[048] = 'ITEM'
+K[049] = 'NPC_NAME_WITH_TITLE'
+K[050] = 'PLAYER_POS'
+K[051] = 'PLAYER_POS_NATION'
+K[052] = 'CHARIOT_NAME'
+K[053] = 'PET_ID'
+K[054] = 'NATION_NAME_2'
+K[055] = 'NATION_AID'
+K[056] = 'NATION_AID_2'
+K[057] = 'player_name'
+K[058] = 'npc_name'
+K[059] = 'faction_name'
+K[060] = 'nation_name'
+K[061] = 'nation_officer_name'
+K[062] = 'relation_name_1'
+K[063] = 'relation_name_2'
+K[064] = 'int_1'
+K[065] = 'int_2'
+K[066] = 'scene_id'
+K[067] = 'player_name_2'
+K[068] = 'title_name'
+K[069] = 'achievement_name'
+K[070] = 'item_id'
+K[071] = 'item'
+K[072] = 'npc_name_title'
+K[073] = 'player_pos'
+K[074] = 'player_pos_nation'
+K[075] = 'chariot_name'
+K[076] = 'pet_id'
+K[077] = 'nation_name_2'
+K[078] = 'nation_aid'
+K[079] = 'nation_aid_2'
+K[080] = 'dynamic'
+K[081] = 'extractOneSystemWildCard'
+K[082] = 'IsSenderOrTarget'
+K[083] = 'extractSystemWildCards'
+K[084] = 'SpecialHandle'
+K[085] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    5] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    5] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    5] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    6] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='dofile'
+0004 [line    6] 0x0000C081  LOADK      R2 = K[3]='Configs/speak_data.lua'
+0005 [line    6] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    7] 0x000100C1  LOADK      R3 = K[4]='Utility.Enum'
+0008 [line    7] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    8] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    8] 0x00014101  LOADK      R4 = K[5]='Data.ElementData'
+0011 [line    8] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    9] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    9] 0x00018141  LOADK      R5 = K[6]='Utility.ECUIUtility'
+0014 [line    9] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   10] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line   10] 0x0001C181  LOADK      R6 = K[7]='Utility.DynamicText'
+0017 [line   10] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line   11] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line   11] 0x000201C1  LOADK      R7 = K[8]='Inventory.ECItemTools'
+0020 [line   11] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line   12] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line   12] 0x00024201  LOADK      R8 = K[9]='Inventory.ECInventory'
+0023 [line   12] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   13] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line   13] 0x00028241  LOADK      R9 = K[10]='Social.ECActivityInfo'
+0026 [line   13] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   15] 0x0042C246  GETTABLE   R9 = R0[K[11]='ForwardDeclare']
+0028 [line   15] 0x00030281  LOADK      R10 = K[12]='ECGame'
+0029 [line   15] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   16] 0x0042C286  GETTABLE   R10 = R0[K[11]='ForwardDeclare']
+0031 [line   16] 0x000342C1  LOADK      R11 = K[13]='ECChatManager'
+0032 [line   16] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   18] 0x000002C5  GETGLOBAL  R11 = GLOBAL K[0]='require'
+0034 [line   18] 0x00038301  LOADK      R12 = K[14]='Data.Expdef'
+0035 [line   18] 0x010082DC  CALL       A=11 B=2 C=2
+0036 [line   18] 0x05C3C2C6  GETTABLE   R11 = R11[K[15]='CHAT_CHANNEL_ENUM']
+0037 [line   20] 0x00440306  GETTABLE   R12 = R0[K[16]='Class']
+0038 [line   20] 0x00044341  LOADK      R13 = K[17]='ECSystemSpeak'
+0039 [line   20] 0x0100831C  CALL       A=12 B=2 C=2
+0040 [line   22] 0x06448346  GETTABLE   R13 = R12[K[18]='define']
+0041 [line   24] 0x06C4C386  GETTABLE   R14 = R13[K[19]='static']
+0042 [line   24] 0x000503C1  LOADK      R15 = K[20]='number'
+0043 [line   24] 0x00054401  LOADK      R16 = K[21]='=>'
+0044 [line   24] 0x00058441  LOADK      R17 = K[22]='boolean'
+0045 [line   24] 0x0200839C  CALL       A=14 B=4 C=2
+0046 [line   26] 0x000003E4  CLOSURE    R15 = PROTO[0]
+0047 [line   26] 0x06000000  MOVE       R0 = R12
+0048 [line   26] 0x8B83C389  SETTABLE   R14[K[23]='Speak'] = R15
+0049 [line   28] 0x06C4C386  GETTABLE   R14 = R13[K[19]='static']
+0050 [line   28] 0x000503C1  LOADK      R15 = K[20]='number'
+0051 [line   28] 0x00050401  LOADK      R16 = K[20]='number'
+0052 [line   28] 0x00054441  LOADK      R17 = K[21]='=>'
+0053 [line   28] 0x00058481  LOADK      R18 = K[22]='boolean'
+0054 [line   28] 0x0280839C  CALL       A=14 B=5 C=2
+0055 [line   30] 0x000043E4  CLOSURE    R15 = PROTO[1]
+0056 [line   30] 0x06000000  MOVE       R0 = R12
+0057 [line   30] 0x8C03C389  SETTABLE   R14[K[24]='SpeakWithChannel'] = R15
+0058 [line   32] 0x06C4C386  GETTABLE   R14 = R13[K[19]='static']
+0059 [line   32] 0x000503C1  LOADK      R15 = K[20]='number'
+0060 [line   32] 0x00064401  LOADK      R16 = K[25]='function'
+0061 [line   32] 0x00054441  LOADK      R17 = K[21]='=>'
+0062 [line   32] 0x00058481  LOADK      R18 = K[22]='boolean'
+0063 [line   32] 0x0280839C  CALL       A=14 B=5 C=2
+0064 [line   34] 0x000083E4  CLOSURE    R15 = PROTO[2]
+0065 [line   34] 0x06000000  MOVE       R0 = R12
+0066 [line   34] 0x8D03C389  SETTABLE   R14[K[26]='SpeakWithCallback'] = R15
+0067 [line   36] 0x06C4C386  GETTABLE   R14 = R13[K[19]='static']
+0068 [line   36] 0x000503C1  LOADK      R15 = K[20]='number'
+0069 [line   36] 0x0006C401  LOADK      R16 = K[27]='table'
+0070 [line   36] 0x00054441  LOADK      R17 = K[21]='=>'
+0071 [line   36] 0x00058481  LOADK      R18 = K[22]='boolean'
+0072 [line   36] 0x0280839C  CALL       A=14 B=5 C=2
+0073 [line   42] 0x0000C3E4  CLOSURE    R15 = PROTO[3]
+0074 [line   42] 0x06000000  MOVE       R0 = R12
+0075 [line   42] 0x8E03C389  SETTABLE   R14[K[28]='SpeakWithParam'] = R15
+0076 [line   47] 0x00074381  LOADK      R14 = K[29]=0.0
+0077 [line   48] 0x06C4C3C6  GETTABLE   R15 = R13[K[19]='static']
+0078 [line   48] 0x00050401  LOADK      R16 = K[20]='number'
+0079 [line   48] 0x00078441  LOADK      R17 = K[30]='userdata'
+0080 [line   48] 0x00050481  LOADK      R18 = K[20]='number'
+0081 [line   48] 0x000504C1  LOADK      R19 = K[20]='number'
+0082 [line   48] 0x00064501  LOADK      R20 = K[25]='function'
+0083 [line   48] 0x0007C541  LOADK      R21 = K[31]='string'
+0084 [line   48] 0x00054581  LOADK      R22 = K[21]='=>'
+0085 [line   48] 0x000585C1  LOADK      R23 = K[22]='boolean'
+0086 [line   48] 0x048083DC  CALL       A=15 B=9 C=2
+0087 [line  203] 0x00010424  CLOSURE    R16 = PROTO[4]
+0088 [line  203] 0x00800000  MOVE       R0 = R1
+0089 [line  203] 0x04000000  MOVE       R0 = R8
+0090 [line  203] 0x06000000  MOVE       R0 = R12
+0091 [line  203] 0x05000000  MOVE       R0 = R10
+0092 [line  203] 0x02000000  MOVE       R0 = R4
+0093 [line  203] 0x05800000  MOVE       R0 = R11
+0094 [line  203] 0x07000000  MOVE       R0 = R14
+0095 [line  203] 0x900403C9  SETTABLE   R15[K[32]='OnSystemSpeak'] = R16
+0096 [line  205] 0x014843C6  GETTABLE   R15 = R2[K[33]='make']
+0097 [line  205] 0x0A00040A  NEWTABLE   A=16 B=20 C=0 Bx=10240
+0098 [line  207] 0x00088441  LOADK      R17 = K[34]='PLAYER_NAME'
+0099 [line  208] 0x0008C481  LOADK      R18 = K[35]='NPC_NAME'
+0100 [line  209] 0x000904C1  LOADK      R19 = K[36]='FACTION_NAME'
+0101 [line  210] 0x00094501  LOADK      R20 = K[37]='NATION_NAME'
+0102 [line  211] 0x00098541  LOADK      R21 = K[38]='NATION_OFFICER_NAME'
+0103 [line  212] 0x0009C581  LOADK      R22 = K[39]='RELATION_1'
+0104 [line  213] 0x000A05C1  LOADK      R23 = K[40]='RELATION_2'
+0105 [line  214] 0x000A4601  LOADK      R24 = K[41]='INT_1'
+0106 [line  215] 0x000A8641  LOADK      R25 = K[42]='INT_2'
+0107 [line  216] 0x000AC681  LOADK      R26 = K[43]='SCENE_ID'
+0108 [line  217] 0x000B06C1  LOADK      R27 = K[44]='PLAYER_NAME_2'
+0109 [line  218] 0x000B4701  LOADK      R28 = K[45]='TITLE_NAME'
+0110 [line  219] 0x000B8741  LOADK      R29 = K[46]='ACHIEVEMENT_NAME'
+0111 [line  220] 0x000BC781  LOADK      R30 = K[47]='ITEM_ID'
+0112 [line  221] 0x000C07C1  LOADK      R31 = K[48]='ITEM'
+0113 [line  222] 0x000C4801  LOADK      R32 = K[49]='NPC_NAME_WITH_TITLE'
+0114 [line  223] 0x000C8841  LOADK      R33 = K[50]='PLAYER_POS'
+0115 [line  224] 0x000CC881  LOADK      R34 = K[51]='PLAYER_POS_NATION'
+0116 [line  225] 0x000D08C1  LOADK      R35 = K[52]='CHARIOT_NAME'
+0117 [line  226] 0x000D4901  LOADK      R36 = K[53]='PET_ID'
+0118 [line  227] 0x000D8941  LOADK      R37 = K[54]='NATION_NAME_2'
+0119 [line  228] 0x000DC981  LOADK      R38 = K[55]='NATION_AID'
+0120 [line  230] 0x000E09C1  LOADK      R39 = K[56]='NATION_AID_2'
+0121 [line  230] 0x0B804422  SETLIST    A=16 B=23 C=1
+0122 [line  206] 0x010083DC  CALL       A=15 B=2 C=2
+0123 [line  231] 0x0980440A  NEWTABLE   A=16 B=19 C=1 Bx=9729
+0124 [line  233] 0x8ECE4409  SETTABLE   R16[K[29]=0.0] = K[57]='player_name'
+0125 [line  234] 0x000E8441  LOADK      R17 = K[58]='npc_name'
+0126 [line  235] 0x000EC481  LOADK      R18 = K[59]='faction_name'
+0127 [line  236] 0x000F04C1  LOADK      R19 = K[60]='nation_name'
+0128 [line  237] 0x000F4501  LOADK      R20 = K[61]='nation_officer_name'
+0129 [line  238] 0x000F8541  LOADK      R21 = K[62]='relation_name_1'
+0130 [line  239] 0x000FC581  LOADK      R22 = K[63]='relation_name_2'
+0131 [line  240] 0x001005C1  LOADK      R23 = K[64]='int_1'
+0132 [line  241] 0x00104601  LOADK      R24 = K[65]='int_2'
+0133 [line  242] 0x00108641  LOADK      R25 = K[66]='scene_id'
+0134 [line  243] 0x0010C681  LOADK      R26 = K[67]='player_name_2'
+0135 [line  244] 0x001106C1  LOADK      R27 = K[68]='title_name'
+0136 [line  245] 0x00114701  LOADK      R28 = K[69]='achievement_name'
+0137 [line  246] 0x00118741  LOADK      R29 = K[70]='item_id'
+0138 [line  247] 0x0011C781  LOADK      R30 = K[71]='item'
+0139 [line  248] 0x001207C1  LOADK      R31 = K[72]='npc_name_title'
+0140 [line  249] 0x00124801  LOADK      R32 = K[73]='player_pos'
+0141 [line  250] 0x00128841  LOADK      R33 = K[74]='player_pos_nation'
+0142 [line  251] 0x0012C881  LOADK      R34 = K[75]='chariot_name'
+0143 [line  252] 0x001308C1  LOADK      R35 = K[76]='pet_id'
+0144 [line  253] 0x00134901  LOADK      R36 = K[77]='nation_name_2'
+0145 [line  254] 0x00138941  LOADK      R37 = K[78]='nation_aid'
+0146 [line  256] 0x0013C981  LOADK      R38 = K[79]='nation_aid_2'
+0147 [line  256] 0x0B004422  SETLIST    A=16 B=22 C=1
+0148 [line  262] 0x00014464  CLOSURE    R17 = PROTO[5]
+0149 [line  264] 0x06C4C486  GETTABLE   R18 = R13[K[19]='static']
+0150 [line  264] 0x000504C1  LOADK      R19 = K[20]='number'
+0151 [line  264] 0x00078501  LOADK      R20 = K[30]='userdata'
+0152 [line  264] 0x00054541  LOADK      R21 = K[21]='=>'
+0153 [line  264] 0x0007C581  LOADK      R22 = K[31]='string'
+0154 [line  264] 0x001405C1  LOADK      R23 = K[80]='dynamic'
+0155 [line  264] 0x0300849C  CALL       A=18 B=6 C=2
+0156 [line  428] 0x000184E4  CLOSURE    R19 = PROTO[6]
+0157 [line  428] 0x07800000  MOVE       R0 = R15
+0158 [line  428] 0x08800000  MOVE       R0 = R17
+0159 [line  428] 0x01800000  MOVE       R0 = R3
+0160 [line  428] 0x03000000  MOVE       R0 = R6
+0161 [line  428] 0x03800000  MOVE       R0 = R7
+0162 [line  428] 0xA884C489  SETTABLE   R18[K[81]='extractOneSystemWildCard'] = R19
+0163 [line  430] 0x06C4C486  GETTABLE   R18 = R13[K[19]='static']
+0164 [line  430] 0x000504C1  LOADK      R19 = K[20]='number'
+0165 [line  430] 0x00078501  LOADK      R20 = K[30]='userdata'
+0166 [line  430] 0x0007C541  LOADK      R21 = K[31]='string'
+0167 [line  430] 0x00054581  LOADK      R22 = K[21]='=>'
+0168 [line  430] 0x000585C1  LOADK      R23 = K[22]='boolean'
+0169 [line  430] 0x0300849C  CALL       A=18 B=6 C=2
+0170 [line  460] 0x0001C4E4  CLOSURE    R19 = PROTO[7]
+0171 [line  460] 0x04800000  MOVE       R0 = R9
+0172 [line  460] 0x08000000  MOVE       R0 = R16
+0173 [line  460] 0x06000000  MOVE       R0 = R12
+0174 [line  460] 0x07800000  MOVE       R0 = R15
+0175 [line  460] 0xA904C489  SETTABLE   R18[K[82]='IsSenderOrTarget'] = R19
+0176 [line  465] 0x06C4C486  GETTABLE   R18 = R13[K[19]='static']
+0177 [line  465] 0x000784C1  LOADK      R19 = K[30]='userdata'
+0178 [line  465] 0x00054501  LOADK      R20 = K[21]='=>'
+0179 [line  465] 0x0006C541  LOADK      R21 = K[27]='table'
+0180 [line  465] 0x0200849C  CALL       A=18 B=4 C=2
+0181 [line  492] 0x000204E4  CLOSURE    R19 = PROTO[8]
+0182 [line  492] 0x08000000  MOVE       R0 = R16
+0183 [line  492] 0x06000000  MOVE       R0 = R12
+0184 [line  492] 0x07800000  MOVE       R0 = R15
+0185 [line  492] 0xA984C489  SETTABLE   R18[K[83]='extractSystemWildCards'] = R19
+0186 [line  504] 0x06C4C486  GETTABLE   R18 = R13[K[19]='static']
+0187 [line  504] 0x000504C1  LOADK      R19 = K[20]='number'
+0188 [line  504] 0x00078501  LOADK      R20 = K[30]='userdata'
+0189 [line  504] 0x0180849C  CALL       A=18 B=3 C=2
+0190 [line  545] 0x000244E4  CLOSURE    R19 = PROTO[9]
+0191 [line  545] 0x08000000  MOVE       R0 = R16
+0192 [line  545] 0x07800000  MOVE       R0 = R15
+0193 [line  545] 0x06000000  MOVE       R0 = R12
+0194 [line  545] 0x04000000  MOVE       R0 = R8
+0195 [line  545] 0xAA04C489  SETTABLE   R18[K[84]='SpecialHandle'] = R19
+0196 [line  545] 0x00000363  CLOSE      A=13 B=0 C=0 Bx=0
+0197 [line  547] 0x06554346  GETTABLE   R13 = R12[K[85]='Commit']
+0198 [line  547] 0x0080035D  TAILCALL   A=13 B=1 C=0
+0199 [line  547] 0x0000035E  RETURN     A=13 B=0 C=0
+0200 [line  547] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 200
+'speakData': 6 -> 200
+'Enum': 9 -> 200
+'ElementData': 12 -> 200
+'ECUIUtility': 15 -> 200
+'DynamicText': 18 -> 200
+'ECItemTools': 21 -> 200
+'ECInventory': 24 -> 200
+'ECActivityInfo': 27 -> 200
+'ECGame': 30 -> 200
+'ECChatManager': 33 -> 200
+'CHAT_CHANNEL_ENUM': 37 -> 200
+'ECSystemSpeak': 40 -> 200
+'def': 41 -> 196
+'pos_nation_next_speak_time': 77 -> 196
+'WILD_CARD_TYPE': 123 -> 196
+'WILD_CARD_NAME': 148 -> 196
+'readName': 149 -> 196
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x92F
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 24 - 26
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'SpeakWithChannel'
+    K[001] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   25] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   25] 0x00C00046  GETTABLE   R1 = R1[K[0]='SpeakWithChannel']
+    0002 [line   25] 0x00000080  MOVE       R2 = R0
+    0003 [line   25] 0x000040C1  LOADK      R3 = K[1]=-1.0
+    0004 [line   25] 0x0180005D  TAILCALL   A=1 B=3 C=0
+    0005 [line   25] 0x0000005E  RETURN     A=1 B=0 C=0
+    0006 [line   26] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x9D4
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 28 - 30
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'OnSystemSpeak'
+    K[001] = 1.0
+    K[002] = ''
+
+    ----- INSTRUCTIONS -----
+    0000 [line   29] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   29] 0x01400086  GETTABLE   R2 = R2[K[0]='OnSystemSpeak']
+    0002 [line   29] 0x000000C0  MOVE       R3 = R0
+    0003 [line   29] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0004 [line   29] 0x00004141  LOADK      R5 = K[1]=1.0
+    0005 [line   29] 0x00800180  MOVE       R6 = R1
+    0006 [line   29] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0007 [line   29] 0x00008201  LOADK      R8 = K[2]=''
+    0008 [line   29] 0x0380009D  TAILCALL   A=2 B=7 C=0
+    0009 [line   29] 0x0000009E  RETURN     A=2 B=0 C=0
+    0010 [line   30] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 10
+    'channel': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xAB0
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 32 - 34
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'OnSystemSpeak'
+    K[001] = 1.0
+    K[002] = -1.0
+    K[003] = ''
+
+    ----- INSTRUCTIONS -----
+    0000 [line   33] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   33] 0x01400086  GETTABLE   R2 = R2[K[0]='OnSystemSpeak']
+    0002 [line   33] 0x000000C0  MOVE       R3 = R0
+    0003 [line   33] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0004 [line   33] 0x00004141  LOADK      R5 = K[1]=1.0
+    0005 [line   33] 0x00008181  LOADK      R6 = K[2]=-1.0
+    0006 [line   33] 0x008001C0  MOVE       R7 = R1
+    0007 [line   33] 0x0000C201  LOADK      R8 = K[3]=''
+    0008 [line   33] 0x0380009D  TAILCALL   A=2 B=7 C=0
+    0009 [line   33] 0x0000009E  RETURN     A=2 B=0 C=0
+    0010 [line   34] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 10
+    'callback': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xB96
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 36 - 42
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Utility.GameInfo'
+    K[002] = 'set'
+    K[003] = 'param'
+    K[004] = 'OnSystemSpeak'
+    K[005] = 1.0
+    K[006] = -1.0
+    K[007] = 'callback'
+    K[008] = ''
+
+    ----- INSTRUCTIONS -----
+    0000 [line   37] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line   37] 0x000040C1  LOADK      R3 = K[1]='Utility.GameInfo'
+    0002 [line   37] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line   38] 0x014080C6  GETTABLE   R3 = R2[K[2]='set']
+    0004 [line   38] 0x0000C101  LOADK      R4 = K[3]='param'
+    0005 [line   38] 0x00800140  MOVE       R5 = R1
+    0006 [line   38] 0x018040DC  CALL       A=3 B=3 C=1
+    0007 [line   39] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0008 [line   39] 0x01C100C6  GETTABLE   R3 = R3[K[4]='OnSystemSpeak']
+    0009 [line   39] 0x00000100  MOVE       R4 = R0
+    0010 [line   39] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0011 [line   39] 0x00014181  LOADK      R6 = K[5]=1.0
+    0012 [line   39] 0x000181C1  LOADK      R7 = K[6]=-1.0
+    0013 [line   39] 0x0001C205  GETGLOBAL  R8 = GLOBAL K[7]='callback'
+    0014 [line   39] 0x00020241  LOADK      R9 = K[8]=''
+    0015 [line   39] 0x038080DC  CALL       A=3 B=7 C=2
+    0016 [line   40] 0x01408106  GETTABLE   R4 = R2[K[2]='set']
+    0017 [line   40] 0x0000C141  LOADK      R5 = K[3]='param'
+    0018 [line   40] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0019 [line   40] 0x0180411C  CALL       A=4 B=3 C=1
+    0020 [line   41] 0x010000DE  RETURN     A=3 B=2 C=0
+    0021 [line   42] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 21
+    'param': 0 -> 21
+    'GameInfo': 3 -> 21
+    'ret': 16 -> 21
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xD3B
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 48 - 203
+    Params : 6
+    Stack  : 27
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Main.ECDebugOption'
+    K[002] = 'Instance'
+    K[003] = 'speaklog'
+    K[004] = 'warn'
+    K[005] = 'OnSystemSpeak #'
+    K[006] = ': '
+    K[007] = 'Octets'
+    K[008] = 'getBytes'
+    K[009] = 'byte'
+    K[010] = 1.0
+    K[011] = -1.0
+    K[012] = 'Cfg'
+    K[013] = 'IsOpen'
+    K[014] = 7208.0
+    K[015] = 49.0
+    K[016] = 1946.0
+    K[017] = 50.0
+    K[018] = 1947.0
+    K[019] = 'invalid system speak id: '
+    K[020] = 'Main.ECGame'
+    K[021] = 'm_InCenterServer'
+    K[022] = 'm_InOneWorldCenterServer'
+    K[023] = 'server'
+    K[024] = 'ServerDefine'
+    K[025] = 'Default'
+    K[026] = 37.0
+    K[027] = 38.0
+    K[028] = 'OneWorldCenterServer'
+    K[029] = 'CenterServer'
+    K[030] = 'SpecialHandle'
+    K[031] = 'channel'
+    K[032] = 'extractSystemWildCards'
+    K[033] = 'period'
+    K[034] = 'content'
+    K[035] = 'ipairs'
+    K[036] = 'Content'
+    K[037] = 'text'
+    K[038] = 'gsub'
+    K[039] = '#([^#]*)#'
+    K[040] = '<html>(.*)<html/>'
+    K[041] = 'DynamicTextToNguiText'
+    K[042] = 'frametype'
+    K[043] = 'showname'
+    K[044] = 'icon'
+    K[045] = 'DynamicTextToPath'
+    K[046] = 'showimage'
+    K[047] = 'effect'
+    K[048] = 0.0
+    K[049] = 'showuitype'
+    K[050] = 'SpeakTypeDefine'
+    K[051] = 'CALLBOARD'
+    K[052] = 'datapath'
+    K[053] = 'GetPathByID'
+    K[054] = 'utility'
+    K[055] = 'IsFileExist'
+    K[056] = 'math'
+    K[057] = 'floor'
+    K[058] = 1000.0
+    K[059] = 'PlayEffectWithTime'
+    K[060] = 'CHAT'
+    K[061] = 'CHAT_CHANNEL_BROADCAST'
+    K[062] = 'CHAT_CHANNEL_NATION'
+    K[063] = 'CHAT_CHANNEL_POS_NATION'
+    K[064] = 'GameUtil'
+    K[065] = 'GetServerGMTTime'
+    K[066] = 'AddSimpleMessage'
+    K[067] = 'random'
+    K[068] = 10.0
+    K[069] = 20.0
+    K[070] = 'GUI.ECPanelBroadcast'
+    K[071] = 'AddMsg'
+    K[072] = 'BROADCAST'
+    K[073] = 'TIP'
+    K[074] = 'GUI.ECPanelSuperChat'
+    K[075] = 'PopupPanel'
+    K[076] = 'STORY'
+    K[077] = 'GUI.ECPanelStoryChat'
+    K[078] = 'GUI.ECPanelCallBoard'
+    K[079] = 'AddMsgEx'
+    K[080] = 'repeattime'
+    K[081] = 'priority'
+    K[082] = 'IsSenderOrTarget'
+    K[083] = 'FLASHTIP'
+    K[084] = 'FlashTipMan'
+    K[085] = 'FlashTip'
+    K[086] = 'bad showuitype: '
+
+    ----- INSTRUCTIONS -----
+    0000 [line   50] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+    0001 [line   50] 0x000041C1  LOADK      R7 = K[1]='Main.ECDebugOption'
+    0002 [line   50] 0x0100819C  CALL       A=6 B=2 C=2
+    0003 [line   50] 0x03408186  GETTABLE   R6 = R6[K[2]='Instance']
+    0004 [line   50] 0x0080819C  CALL       A=6 B=1 C=2
+    0005 [line   50] 0x0340C186  GETTABLE   R6 = R6[K[3]='speaklog']
+    0006 [line   50] 0x0000019A  TEST       A=6 B=0 C=0
+    0007 [line   50] 0x80040016  JMP        A=0 sBx=17
+    0008 [line   51] 0x00010185  GETGLOBAL  R6 = GLOBAL K[4]='warn'
+    0009 [line   51] 0x000141C1  LOADK      R7 = K[5]='OnSystemSpeak #'
+    0010 [line   51] 0x00000200  MOVE       R8 = R0
+    0011 [line   51] 0x00018241  LOADK      R9 = K[6]=': '
+    0012 [line   51] 0x038241D5  CONCAT     A=7 B=7 C=9 Bx=3593
+    0013 [line   51] 0x0080421B  TESTSET    A=8 B=1 C=1
+    0014 [line   51] 0x80008016  JMP        A=0 sBx=3
+    0015 [line   51] 0x0001C205  GETGLOBAL  R8 = GLOBAL K[7]='Octets'
+    0016 [line   51] 0x0441C206  GETTABLE   R8 = R8[K[7]='Octets']
+    0017 [line   51] 0x0080821C  CALL       A=8 B=1 C=2
+    0018 [line   51] 0x0442020B  SELF       A=8 B=8 C=264 Bx=4360
+    0019 [line   51] 0x0100821C  CALL       A=8 B=2 C=2
+    0020 [line   51] 0x0442420B  SELF       A=8 B=8 C=265 Bx=4361
+    0021 [line   51] 0x00028281  LOADK      R10 = K[10]=1.0
+    0022 [line   51] 0x0002C2C1  LOADK      R11 = K[11]=-1.0
+    0023 [line   51] 0x0200021C  CALL       A=8 B=4 C=0
+    0024 [line   51] 0x0000419C  CALL       A=6 B=0 C=1
+    0025 [line   54] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0026 [line   54] 0x03430186  GETTABLE   R6 = R6[K[12]='Cfg']
+    0027 [line   54] 0x03000186  GETTABLE   R6 = R6[R0]
+    0028 [line   56] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0029 [line   56] 0x03C341C6  GETTABLE   R7 = R7[K[13]='IsOpen']
+    0030 [line   56] 0x00038201  LOADK      R8 = K[14]=7208.0
+    0031 [line   56] 0x010081DC  CALL       A=7 B=2 C=2
+    0032 [line   56] 0x000001DA  TEST       A=7 B=0 C=0
+    0033 [line   56] 0x80028016  JMP        A=0 sBx=11
+    0034 [line   57] 0x0043C017  EQ         A=0 B=R0 C=K[15]=49.0
+    0035 [line   57] 0x8000C016  JMP        A=0 sBx=4
+    0036 [line   58] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0037 [line   58] 0x03C301C6  GETTABLE   R7 = R7[K[12]='Cfg']
+    0038 [line   58] 0x03C40186  GETTABLE   R6 = R7[K[16]=1946.0]
+    0039 [line   58] 0x80010016  JMP        A=0 sBx=5
+    0040 [line   59] 0x00444017  EQ         A=0 B=R0 C=K[17]=50.0
+    0041 [line   59] 0x80008016  JMP        A=0 sBx=3
+    0042 [line   60] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0043 [line   60] 0x03C301C6  GETTABLE   R7 = R7[K[12]='Cfg']
+    0044 [line   60] 0x03C48186  GETTABLE   R6 = R7[K[18]=1947.0]
+    0045 [line   63] 0x0000419A  TEST       A=6 B=0 C=1
+    0046 [line   63] 0x80014016  JMP        A=0 sBx=6
+    0047 [line   64] 0x000101C5  GETGLOBAL  R7 = GLOBAL K[4]='warn'
+    0048 [line   64] 0x0004C201  LOADK      R8 = K[19]='invalid system speak id: '
+    0049 [line   64] 0x00000240  MOVE       R9 = R0
+    0050 [line   64] 0x018041DC  CALL       A=7 B=3 C=1
+    0051 [line   65] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0052 [line   65] 0x010001DE  RETURN     A=7 B=2 C=0
+    0053 [line   67] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+    0054 [line   67] 0x00050201  LOADK      R8 = K[20]='Main.ECGame'
+    0055 [line   67] 0x010081DC  CALL       A=7 B=2 C=2
+    0056 [line   68] 0x03C08206  GETTABLE   R8 = R7[K[2]='Instance']
+    0057 [line   68] 0x0080821C  CALL       A=8 B=1 C=2
+    0058 [line   68] 0x04454206  GETTABLE   R8 = R8[K[21]='m_InCenterServer']
+    0059 [line   69] 0x03C08246  GETTABLE   R9 = R7[K[2]='Instance']
+    0060 [line   69] 0x0080825C  CALL       A=9 B=1 C=2
+    0061 [line   69] 0x04C58246  GETTABLE   R9 = R9[K[22]='m_InOneWorldCenterServer']
+    0062 [line   70] 0x0345C286  GETTABLE   R10 = R6[K[23]='server']
+    0063 [line   71] 0x0000429A  TEST       A=10 B=0 C=1
+    0064 [line   71] 0x80008016  JMP        A=0 sBx=3
+    0065 [line   72] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0066 [line   72] 0x05C602C6  GETTABLE   R11 = R11[K[24]='ServerDefine']
+    0067 [line   72] 0x05C64286  GETTABLE   R10 = R11[K[25]='Default']
+    0068 [line   75] 0x0000025A  TEST       A=9 B=0 C=0
+    0069 [line   75] 0x8002C016  JMP        A=0 sBx=12
+    0070 [line   76] 0x00468057  EQ         A=1 B=R0 C=K[26]=37.0
+    0071 [line   76] 0x80018016  JMP        A=0 sBx=7
+    0072 [line   76] 0x0046C057  EQ         A=1 B=R0 C=K[27]=38.0
+    0073 [line   76] 0x80010016  JMP        A=0 sBx=5
+    0074 [line   76] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0075 [line   76] 0x05C602C6  GETTABLE   R11 = R11[K[24]='ServerDefine']
+    0076 [line   76] 0x05C702C6  GETTABLE   R11 = R11[K[28]='OneWorldCenterServer']
+    0077 [line   76] 0x0502C057  EQ         A=1 B=R10 C=R11
+    0078 [line   76] 0x80038016  JMP        A=0 sBx=15
+    0079 [line   77] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0080 [line   77] 0x010002DE  RETURN     A=11 B=2 C=0
+    0081 [line   78] 0x8002C016  JMP        A=0 sBx=12
+    0082 [line   91] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0083 [line   91] 0x05C602C6  GETTABLE   R11 = R11[K[24]='ServerDefine']
+    0084 [line   91] 0x05C642C6  GETTABLE   R11 = R11[K[25]='Default']
+    0085 [line   91] 0x0502C057  EQ         A=1 B=R10 C=R11
+    0086 [line   91] 0x80018016  JMP        A=0 sBx=7
+    0087 [line   91] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0088 [line   91] 0x05C602C6  GETTABLE   R11 = R11[K[24]='ServerDefine']
+    0089 [line   91] 0x05C742C6  GETTABLE   R11 = R11[K[29]='CenterServer']
+    0090 [line   91] 0x0502C057  EQ         A=1 B=R10 C=R11
+    0091 [line   91] 0x80004016  JMP        A=0 sBx=2
+    0092 [line   92] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0093 [line   92] 0x010002DE  RETURN     A=11 B=2 C=0
+    0094 [line   96] 0x010002C4  GETUPVAL   A=11 B=2 C=0 Bx=1024
+    0095 [line   96] 0x05C782C6  GETTABLE   R11 = R11[K[30]='SpecialHandle']
+    0096 [line   96] 0x00000300  MOVE       R12 = R0
+    0097 [line   96] 0x00800340  MOVE       R13 = R1
+    0098 [line   96] 0x018042DC  CALL       A=11 B=3 C=1
+    0099 [line   98] 0x01C2C017  EQ         A=0 B=R3 C=K[11]=-1.0
+    0100 [line   98] 0x80000016  JMP        A=0 sBx=1
+    0101 [line   99] 0x0347C0C6  GETTABLE   R3 = R6[K[31]='channel']
+    0102 [line  102] 0x010002C4  GETUPVAL   A=11 B=2 C=0 Bx=1024
+    0103 [line  102] 0x05C802C6  GETTABLE   R11 = R11[K[32]='extractSystemWildCards']
+    0104 [line  102] 0x00800300  MOVE       R12 = R1
+    0105 [line  102] 0x010082DC  CALL       A=11 B=2 C=2
+    0106 [line  106] 0x0000030A  NEWTABLE   A=12 B=0 C=0 Bx=0
+    0107 [line  107] 0x03484346  GETTABLE   R13 = R6[K[33]='period']
+    0108 [line  107] 0x90834309  SETTABLE   R12[K[33]='period'] = R13
+    0109 [line  108] 0x0000034A  NEWTABLE   A=13 B=0 C=0 Bx=0
+    0110 [line  108] 0x91034309  SETTABLE   R12[K[34]='content'] = R13
+    0111 [line  109] 0x0008C345  GETGLOBAL  R13 = GLOBAL K[35]='ipairs'
+    0112 [line  109] 0x03490386  GETTABLE   R14 = R6[K[36]='Content']
+    0113 [line  109] 0x0101035C  CALL       A=13 B=2 C=4
+    0114 [line  109] 0x800AC016  JMP        A=0 sBx=44
+    0115 [line  111] 0x06488486  GETTABLE   R18 = R12[K[34]='content']
+    0116 [line  111] 0x000004CA  NEWTABLE   A=19 B=0 C=0 Bx=0
+    0117 [line  111] 0x0804C489  SETTABLE   R18[R16] = R19
+    0118 [line  112] 0x06488486  GETTABLE   R18 = R12[K[34]='content']
+    0119 [line  112] 0x09040486  GETTABLE   R18 = R18[R16]
+    0120 [line  113] 0x08C944C6  GETTABLE   R19 = R17[K[37]='text']
+    0121 [line  113] 0x09C984CB  SELF       A=19 B=19 C=294 Bx=10022
+    0122 [line  113] 0x0009C541  LOADK      R21 = K[39]='#([^#]*)#'
+    0123 [line  115] 0x000005A4  CLOSURE    R22 = PROTO[0]
+    0124 [line  115] 0x05800000  MOVE       R0 = R11
+    0125 [line  113] 0x020084DC  CALL       A=19 B=4 C=2
+    0126 [line  115] 0x9284C489  SETTABLE   R18[K[37]='text'] = R19
+    0127 [line  117] 0x094944C6  GETTABLE   R19 = R18[K[37]='text']
+    0128 [line  117] 0x09C984CB  SELF       A=19 B=19 C=294 Bx=10022
+    0129 [line  117] 0x000A0541  LOADK      R21 = K[40]='<html>(.*)<html/>'
+    0130 [line  119] 0x000045A4  CLOSURE    R22 = PROTO[1]
+    0131 [line  119] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0132 [line  119] 0x05800000  MOVE       R0 = R11
+    0133 [line  117] 0x020084DC  CALL       A=19 B=4 C=2
+    0134 [line  119] 0x9284C489  SETTABLE   R18[K[37]='text'] = R19
+    0135 [line  120] 0x020004C4  GETUPVAL   A=19 B=4 C=0 Bx=2048
+    0136 [line  120] 0x09CA44C6  GETTABLE   R19 = R19[K[41]='DynamicTextToNguiText']
+    0137 [line  120] 0x09494506  GETTABLE   R20 = R18[K[37]='text']
+    0138 [line  120] 0x010084DC  CALL       A=19 B=2 C=2
+    0139 [line  120] 0x9284C489  SETTABLE   R18[K[37]='text'] = R19
+    0140 [line  121] 0x08CA84C6  GETTABLE   R19 = R17[K[42]='frametype']
+    0141 [line  121] 0x9504C489  SETTABLE   R18[K[42]='frametype'] = R19
+    0142 [line  123] 0x08CAC4C6  GETTABLE   R19 = R17[K[43]='showname']
+    0143 [line  123] 0x09C984CB  SELF       A=19 B=19 C=294 Bx=10022
+    0144 [line  123] 0x0009C541  LOADK      R21 = K[39]='#([^#]*)#'
+    0145 [line  125] 0x000085A4  CLOSURE    R22 = PROTO[2]
+    0146 [line  125] 0x05800000  MOVE       R0 = R11
+    0147 [line  123] 0x020084DC  CALL       A=19 B=4 C=2
+    0148 [line  125] 0x9584C489  SETTABLE   R18[K[43]='showname'] = R19
+    0149 [line  126] 0x020004C4  GETUPVAL   A=19 B=4 C=0 Bx=2048
+    0150 [line  126] 0x09CA44C6  GETTABLE   R19 = R19[K[41]='DynamicTextToNguiText']
+    0151 [line  126] 0x094AC506  GETTABLE   R20 = R18[K[43]='showname']
+    0152 [line  126] 0x010084DC  CALL       A=19 B=2 C=2
+    0153 [line  126] 0x9584C489  SETTABLE   R18[K[43]='showname'] = R19
+    0154 [line  128] 0x020004C4  GETUPVAL   A=19 B=4 C=0 Bx=2048
+    0155 [line  128] 0x09CB44C6  GETTABLE   R19 = R19[K[45]='DynamicTextToPath']
+    0156 [line  128] 0x08CB8506  GETTABLE   R20 = R17[K[46]='showimage']
+    0157 [line  128] 0x010084DC  CALL       A=19 B=2 C=2
+    0158 [line  128] 0x9604C489  SETTABLE   R18[K[44]='icon'] = R19
+    0159 [line  109] 0x00008361  TFORLOOP   A=13 B=0 C=2
+    0160 [line  128] 0x7FF44016  JMP        A=0 sBx=-46
+    0161 [line  132] 0x034BC346  GETTABLE   R13 = R6[K[47]='effect']
+    0162 [line  133] 0x06CC0057  EQ         A=1 B=R13 C=K[48]=0.0
+    0163 [line  133] 0x80068016  JMP        A=0 sBx=27
+    0164 [line  134] 0x034C4386  GETTABLE   R14 = R6[K[49]='showuitype']
+    0165 [line  134] 0x000003C4  GETUPVAL   A=15 B=0 C=0 Bx=0
+    0166 [line  134] 0x07CC83C6  GETTABLE   R15 = R15[K[50]='SpeakTypeDefine']
+    0167 [line  134] 0x07CCC3C6  GETTABLE   R15 = R15[K[51]='CALLBOARD']
+    0168 [line  134] 0x0703C057  EQ         A=1 B=R14 C=R15
+    0169 [line  134] 0x80050016  JMP        A=0 sBx=21
+    0170 [line  135] 0x000D0385  GETGLOBAL  R14 = GLOBAL K[52]='datapath'
+    0171 [line  135] 0x074D4386  GETTABLE   R14 = R14[K[53]='GetPathByID']
+    0172 [line  135] 0x068003C0  MOVE       R15 = R13
+    0173 [line  135] 0x0100839C  CALL       A=14 B=2 C=2
+    0174 [line  136] 0x000D83C5  GETGLOBAL  R15 = GLOBAL K[54]='utility'
+    0175 [line  136] 0x07CDC3C6  GETTABLE   R15 = R15[K[55]='IsFileExist']
+    0176 [line  136] 0x07000400  MOVE       R16 = R14
+    0177 [line  136] 0x010083DC  CALL       A=15 B=2 C=2
+    0178 [line  136] 0x000003DA  TEST       A=15 B=0 C=0
+    0179 [line  136] 0x80028016  JMP        A=0 sBx=11
+    0180 [line  137] 0x000E03C5  GETGLOBAL  R15 = GLOBAL K[56]='math'
+    0181 [line  137] 0x07CE43C6  GETTABLE   R15 = R15[K[57]='floor']
+    0182 [line  137] 0x03484406  GETTABLE   R16 = R6[K[33]='period']
+    0183 [line  137] 0x084E840F  DIV        A=16 B=R16 C=K[58]=1000.0
+    0184 [line  137] 0x010083DC  CALL       A=15 B=2 C=2
+    0185 [line  138] 0x02000404  GETUPVAL   A=16 B=4 C=0 Bx=2048
+    0186 [line  138] 0x084EC406  GETTABLE   R16 = R16[K[59]='PlayEffectWithTime']
+    0187 [line  138] 0x07000440  MOVE       R17 = R14
+    0188 [line  138] 0x07000480  MOVE       R18 = R14
+    0189 [line  138] 0x078004C0  MOVE       R19 = R15
+    0190 [line  138] 0x0200441C  CALL       A=16 B=4 C=1
+    0191 [line  147] 0x0000C3A4  CLOSURE    R14 = PROTO[3]
+    0192 [line  147] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0193 [line  149] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0194 [line  149] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0195 [line  149] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0196 [line  149] 0x084F0406  GETTABLE   R16 = R16[K[60]='CHAT']
+    0197 [line  149] 0x07840017  EQ         A=0 B=R15 C=R16
+    0198 [line  149] 0x800FC016  JMP        A=0 sBx=64
+    0199 [line  150] 0x064883C6  GETTABLE   R15 = R12[K[34]='content']
+    0200 [line  150] 0x078083C6  GETTABLE   R15 = R15[R2]
+    0201 [line  150] 0x07C943C6  GETTABLE   R15 = R15[K[37]='text']
+    0202 [line  152] 0x02800404  GETUPVAL   A=16 B=5 C=0 Bx=2560
+    0203 [line  152] 0x084F4406  GETTABLE   R16 = R16[K[61]='CHAT_CHANNEL_BROADCAST']
+    0204 [line  152] 0x01840057  EQ         A=1 B=R3 C=R16
+    0205 [line  152] 0x8000C016  JMP        A=0 sBx=4
+    0206 [line  153] 0x02800404  GETUPVAL   A=16 B=5 C=0 Bx=2560
+    0207 [line  153] 0x084F8406  GETTABLE   R16 = R16[K[62]='CHAT_CHANNEL_NATION']
+    0208 [line  153] 0x01840017  EQ         A=0 B=R3 C=R16
+    0209 [line  153] 0x80098016  JMP        A=0 sBx=39
+    0210 [line  154] 0x0347C406  GETTABLE   R16 = R6[K[31]='channel']
+    0211 [line  154] 0x02800444  GETUPVAL   A=17 B=5 C=0 Bx=2560
+    0212 [line  154] 0x08CFC446  GETTABLE   R17 = R17[K[63]='CHAT_CHANNEL_POS_NATION']
+    0213 [line  154] 0x08044017  EQ         A=0 B=R16 C=R17
+    0214 [line  154] 0x80060016  JMP        A=0 sBx=25
+    0215 [line  155] 0x03000404  GETUPVAL   A=16 B=6 C=0 Bx=3072
+    0216 [line  155] 0x00100445  GETGLOBAL  R17 = GLOBAL K[64]='GameUtil'
+    0217 [line  155] 0x08D04446  GETTABLE   R17 = R17[K[65]='GetServerGMTTime']
+    0218 [line  155] 0x0080845C  CALL       A=17 B=1 C=2
+    0219 [line  155] 0x08044019  LE         A=0 B=R16 C=R17
+    0220 [line  155] 0x80088016  JMP        A=0 sBx=35
+    0221 [line  156] 0x01800404  GETUPVAL   A=16 B=3 C=0 Bx=1536
+    0222 [line  156] 0x08408406  GETTABLE   R16 = R16[K[2]='Instance']
+    0223 [line  156] 0x0080841C  CALL       A=16 B=1 C=2
+    0224 [line  156] 0x0850840B  SELF       A=16 B=16 C=322 Bx=8514
+    0225 [line  156] 0x07800480  MOVE       R18 = R15
+    0226 [line  156] 0x018004C0  MOVE       R19 = R3
+    0227 [line  156] 0x0200441C  CALL       A=16 B=4 C=1
+    0228 [line  157] 0x00100405  GETGLOBAL  R16 = GLOBAL K[64]='GameUtil'
+    0229 [line  157] 0x08504406  GETTABLE   R16 = R16[K[65]='GetServerGMTTime']
+    0230 [line  157] 0x0080841C  CALL       A=16 B=1 C=2
+    0231 [line  157] 0x000E0445  GETGLOBAL  R17 = GLOBAL K[56]='math'
+    0232 [line  157] 0x08D0C446  GETTABLE   R17 = R17[K[67]='random']
+    0233 [line  157] 0x00110481  LOADK      R18 = K[68]=10.0
+    0234 [line  157] 0x001144C1  LOADK      R19 = K[69]=20.0
+    0235 [line  157] 0x0180845C  CALL       A=17 B=3 C=2
+    0236 [line  157] 0x0804440C  ADD        A=16 B=R16 C=R17
+    0237 [line  157] 0x03000408  SETUPVAL   A=16 B=6 C=0 Bx=3072
+    0238 [line  157] 0x80040016  JMP        A=0 sBx=17
+    0239 [line  160] 0x8003C016  JMP        A=0 sBx=16
+    0240 [line  162] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+    0241 [line  162] 0x00118441  LOADK      R17 = K[70]='GUI.ECPanelBroadcast'
+    0242 [line  162] 0x0100841C  CALL       A=16 B=2 C=2
+    0243 [line  163] 0x08408446  GETTABLE   R17 = R16[K[2]='Instance']
+    0244 [line  163] 0x0080845C  CALL       A=17 B=1 C=2
+    0245 [line  163] 0x08D1C44B  SELF       A=17 B=17 C=327 Bx=9031
+    0246 [line  163] 0x078004C0  MOVE       R19 = R15
+    0247 [line  163] 0x0180445C  CALL       A=17 B=3 C=1
+    0248 [line  164] 0x80018016  JMP        A=0 sBx=7
+    0249 [line  166] 0x01800404  GETUPVAL   A=16 B=3 C=0 Bx=1536
+    0250 [line  166] 0x08408406  GETTABLE   R16 = R16[K[2]='Instance']
+    0251 [line  166] 0x0080841C  CALL       A=16 B=1 C=2
+    0252 [line  166] 0x0850840B  SELF       A=16 B=16 C=322 Bx=8514
+    0253 [line  166] 0x07800480  MOVE       R18 = R15
+    0254 [line  166] 0x018004C0  MOVE       R19 = R3
+    0255 [line  166] 0x0200441C  CALL       A=16 B=4 C=1
+    0256 [line  169] 0x0000011A  TEST       A=4 B=0 C=0
+    0257 [line  169] 0x80004016  JMP        A=0 sBx=2
+    0258 [line  170] 0x02000400  MOVE       R16 = R4
+    0259 [line  170] 0x0080441C  CALL       A=16 B=1 C=1
+    0260 [line  172] 0x00800402  LOADBOOL   A=16 B=1 C=0
+    0261 [line  172] 0x0100041E  RETURN     A=16 B=2 C=0
+    0262 [line  172] 0x80200016  JMP        A=0 sBx=129
+    0263 [line  173] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0264 [line  173] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0265 [line  173] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0266 [line  173] 0x08520406  GETTABLE   R16 = R16[K[72]='BROADCAST']
+    0267 [line  173] 0x07840017  EQ         A=0 B=R15 C=R16
+    0268 [line  173] 0x80048016  JMP        A=0 sBx=19
+    0269 [line  174] 0x064883C6  GETTABLE   R15 = R12[K[34]='content']
+    0270 [line  174] 0x078083C6  GETTABLE   R15 = R15[R2]
+    0271 [line  174] 0x07C943C6  GETTABLE   R15 = R15[K[37]='text']
+    0272 [line  175] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+    0273 [line  175] 0x00118441  LOADK      R17 = K[70]='GUI.ECPanelBroadcast'
+    0274 [line  175] 0x0100841C  CALL       A=16 B=2 C=2
+    0275 [line  176] 0x08408446  GETTABLE   R17 = R16[K[2]='Instance']
+    0276 [line  176] 0x0080845C  CALL       A=17 B=1 C=2
+    0277 [line  176] 0x08D1C44B  SELF       A=17 B=17 C=327 Bx=9031
+    0278 [line  176] 0x078004C0  MOVE       R19 = R15
+    0279 [line  176] 0x0180445C  CALL       A=17 B=3 C=1
+    0280 [line  177] 0x07000440  MOVE       R17 = R14
+    0281 [line  177] 0x03000480  MOVE       R18 = R6
+    0282 [line  177] 0x078004C0  MOVE       R19 = R15
+    0283 [line  177] 0x01800500  MOVE       R20 = R3
+    0284 [line  177] 0x0200445C  CALL       A=17 B=4 C=1
+    0285 [line  178] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0286 [line  178] 0x0100045E  RETURN     A=17 B=2 C=0
+    0287 [line  178] 0x8019C016  JMP        A=0 sBx=104
+    0288 [line  179] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0289 [line  179] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0290 [line  179] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0291 [line  179] 0x08524406  GETTABLE   R16 = R16[K[73]='TIP']
+    0292 [line  179] 0x07840017  EQ         A=0 B=R15 C=R16
+    0293 [line  179] 0x8002C016  JMP        A=0 sBx=12
+    0294 [line  180] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+    0295 [line  180] 0x00128401  LOADK      R16 = K[74]='GUI.ECPanelSuperChat'
+    0296 [line  180] 0x010083DC  CALL       A=15 B=2 C=2
+    0297 [line  181] 0x07C08406  GETTABLE   R16 = R15[K[2]='Instance']
+    0298 [line  181] 0x0080841C  CALL       A=16 B=1 C=2
+    0299 [line  181] 0x0852C40B  SELF       A=16 B=16 C=331 Bx=8523
+    0300 [line  181] 0x06000480  MOVE       R18 = R12
+    0301 [line  181] 0x020004C0  MOVE       R19 = R4
+    0302 [line  181] 0x0200441C  CALL       A=16 B=4 C=1
+    0303 [line  183] 0x00800402  LOADBOOL   A=16 B=1 C=0
+    0304 [line  183] 0x0100041E  RETURN     A=16 B=2 C=0
+    0305 [line  183] 0x80154016  JMP        A=0 sBx=86
+    0306 [line  184] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0307 [line  184] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0308 [line  184] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0309 [line  184] 0x08530406  GETTABLE   R16 = R16[K[76]='STORY']
+    0310 [line  184] 0x07840017  EQ         A=0 B=R15 C=R16
+    0311 [line  184] 0x8002C016  JMP        A=0 sBx=12
+    0312 [line  185] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+    0313 [line  185] 0x00134401  LOADK      R16 = K[77]='GUI.ECPanelStoryChat'
+    0314 [line  185] 0x010083DC  CALL       A=15 B=2 C=2
+    0315 [line  186] 0x07C08406  GETTABLE   R16 = R15[K[2]='Instance']
+    0316 [line  186] 0x0080841C  CALL       A=16 B=1 C=2
+    0317 [line  186] 0x0852C40B  SELF       A=16 B=16 C=331 Bx=8523
+    0318 [line  186] 0x06000480  MOVE       R18 = R12
+    0319 [line  186] 0x020004C0  MOVE       R19 = R4
+    0320 [line  186] 0x0200441C  CALL       A=16 B=4 C=1
+    0321 [line  187] 0x00800402  LOADBOOL   A=16 B=1 C=0
+    0322 [line  187] 0x0100041E  RETURN     A=16 B=2 C=0
+    0323 [line  187] 0x8010C016  JMP        A=0 sBx=68
+    0324 [line  188] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0325 [line  188] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0326 [line  188] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0327 [line  188] 0x084CC406  GETTABLE   R16 = R16[K[51]='CALLBOARD']
+    0328 [line  188] 0x07840017  EQ         A=0 B=R15 C=R16
+    0329 [line  188] 0x80088016  JMP        A=0 sBx=35
+    0330 [line  190] 0x064883C6  GETTABLE   R15 = R12[K[34]='content']
+    0331 [line  190] 0x078083C6  GETTABLE   R15 = R15[R2]
+    0332 [line  190] 0x07C943C6  GETTABLE   R15 = R15[K[37]='text']
+    0333 [line  191] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+    0334 [line  191] 0x00138441  LOADK      R17 = K[78]='GUI.ECPanelCallBoard'
+    0335 [line  191] 0x0100841C  CALL       A=16 B=2 C=2
+    0336 [line  191] 0x08408406  GETTABLE   R16 = R16[K[2]='Instance']
+    0337 [line  191] 0x0080841C  CALL       A=16 B=1 C=2
+    0338 [line  191] 0x0853C40B  SELF       A=16 B=16 C=335 Bx=8527
+    0339 [line  191] 0x07800480  MOVE       R18 = R15
+    0340 [line  191] 0x035404C6  GETTABLE   R19 = R6[K[80]='repeattime']
+    0341 [line  191] 0x03544506  GETTABLE   R20 = R6[K[81]='priority']
+    0342 [line  191] 0x034BC546  GETTABLE   R21 = R6[K[47]='effect']
+    0343 [line  191] 0x0000455A  TEST       A=21 B=0 C=1
+    0344 [line  191] 0x80000016  JMP        A=0 sBx=1
+    0345 [line  191] 0x000C0541  LOADK      R21 = K[48]=0.0
+    0346 [line  191] 0x03484586  GETTABLE   R22 = R6[K[33]='period']
+    0347 [line  191] 0x0000459A  TEST       A=22 B=0 C=1
+    0348 [line  191] 0x80000016  JMP        A=0 sBx=1
+    0349 [line  191] 0x000C0581  LOADK      R22 = K[48]=0.0
+    0350 [line  191] 0x010005C4  GETUPVAL   A=23 B=2 C=0 Bx=1024
+    0351 [line  191] 0x0BD485C6  GETTABLE   R23 = R23[K[82]='IsSenderOrTarget']
+    0352 [line  191] 0x00000600  MOVE       R24 = R0
+    0353 [line  191] 0x00800640  MOVE       R25 = R1
+    0354 [line  191] 0x02800680  MOVE       R26 = R5
+    0355 [line  191] 0x020005DC  CALL       A=23 B=4 C=0
+    0356 [line  191] 0x0000441C  CALL       A=16 B=0 C=1
+    0357 [line  192] 0x07000400  MOVE       R16 = R14
+    0358 [line  192] 0x03000440  MOVE       R17 = R6
+    0359 [line  192] 0x07800480  MOVE       R18 = R15
+    0360 [line  192] 0x018004C0  MOVE       R19 = R3
+    0361 [line  192] 0x0200441C  CALL       A=16 B=4 C=1
+    0362 [line  193] 0x00800402  LOADBOOL   A=16 B=1 C=0
+    0363 [line  193] 0x0100041E  RETURN     A=16 B=2 C=0
+    0364 [line  193] 0x80068016  JMP        A=0 sBx=27
+    0365 [line  194] 0x034C43C6  GETTABLE   R15 = R6[K[49]='showuitype']
+    0366 [line  194] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0367 [line  194] 0x084C8406  GETTABLE   R16 = R16[K[50]='SpeakTypeDefine']
+    0368 [line  194] 0x0854C406  GETTABLE   R16 = R16[K[83]='FLASHTIP']
+    0369 [line  194] 0x07840017  EQ         A=0 B=R15 C=R16
+    0370 [line  194] 0x80038016  JMP        A=0 sBx=15
+    0371 [line  195] 0x064883C6  GETTABLE   R15 = R12[K[34]='content']
+    0372 [line  195] 0x078083C6  GETTABLE   R15 = R15[R2]
+    0373 [line  195] 0x07C943C6  GETTABLE   R15 = R15[K[37]='text']
+    0374 [line  196] 0x00150405  GETGLOBAL  R16 = GLOBAL K[84]='FlashTipMan'
+    0375 [line  196] 0x08554406  GETTABLE   R16 = R16[K[85]='FlashTip']
+    0376 [line  196] 0x07800440  MOVE       R17 = R15
+    0377 [line  196] 0x0100441C  CALL       A=16 B=2 C=1
+    0378 [line  197] 0x07000400  MOVE       R16 = R14
+    0379 [line  197] 0x03000440  MOVE       R17 = R6
+    0380 [line  197] 0x07800480  MOVE       R18 = R15
+    0381 [line  197] 0x018004C0  MOVE       R19 = R3
+    0382 [line  197] 0x0200441C  CALL       A=16 B=4 C=1
+    0383 [line  198] 0x00800402  LOADBOOL   A=16 B=1 C=0
+    0384 [line  198] 0x0100041E  RETURN     A=16 B=2 C=0
+    0385 [line  198] 0x80014016  JMP        A=0 sBx=6
+    0386 [line  200] 0x000103C5  GETGLOBAL  R15 = GLOBAL K[4]='warn'
+    0387 [line  200] 0x00158401  LOADK      R16 = K[86]='bad showuitype: '
+    0388 [line  200] 0x034C4446  GETTABLE   R17 = R6[K[49]='showuitype']
+    0389 [line  200] 0x018043DC  CALL       A=15 B=3 C=1
+    0390 [line  201] 0x000003C2  LOADBOOL   A=15 B=0 C=0
+    0391 [line  201] 0x010003DE  RETURN     A=15 B=2 C=0
+    0392 [line  203] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 392
+    'msgData': 0 -> 392
+    'contentIndex': 0 -> 392
+    'channel': 0 -> 392
+    'callback': 0 -> 392
+    'src_id': 0 -> 392
+    'speakConfig': 28 -> 392
+    'ECGame': 56 -> 392
+    'centerserver': 59 -> 392
+    'oneworld_server': 62 -> 392
+    'servercfg': 63 -> 392
+    'wildcardValues': 106 -> 392
+    'finalContentTble': 107 -> 392
+    '(for generator)': 114 -> 161
+    '(for state)': 114 -> 161
+    '(for control)': 114 -> 161
+    'i': 115 -> 159
+    'v': 115 -> 159
+    'content': 120 -> 159
+    'effect': 162 -> 392
+    'path': 174 -> 191
+    'period': 185 -> 191
+    'ansy_panelchat': 193 -> 392
+    'finalContent': 202 -> 262
+    'broadcast': 243 -> 248
+    'finalContent': 272 -> 287
+    'broadcast': 275 -> 287
+    'panel': 297 -> 305
+    'panel': 315 -> 323
+    'finalContent': 333 -> 364
+    'finalContent': 374 -> 385
+
+        ============================================================
+        PROTO ROOT.4.0
+        Offset : 0x18D4
+        Source : '@lua\\chat\\ecsystemspeak.lua'
+        Lines  : 113 - 115
+        Params : 1
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = '#'
+        K[001] = '#(nodata)'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  114] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0001 [line  114] 0x00800046  GETTABLE   R1 = R1[R0]
+        0002 [line  114] 0x0000405A  TEST       A=1 B=0 C=1
+        0003 [line  114] 0x8000C016  JMP        A=0 sBx=4
+        0004 [line  114] 0x00000041  LOADK      R1 = K[0]='#'
+        0005 [line  114] 0x00000080  MOVE       R2 = R0
+        0006 [line  114] 0x000040C1  LOADK      R3 = K[1]='#(nodata)'
+        0007 [line  114] 0x0080C055  CONCAT     A=1 B=1 C=3 Bx=515
+        0008 [line  114] 0x0100005E  RETURN     A=1 B=2 C=0
+        0009 [line  115] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'wildName': 0 -> 9
+
+        ============================================================
+        PROTO ROOT.4.1
+        Offset : 0x198A
+        Source : '@lua\\chat\\ecsystemspeak.lua'
+        Lines  : 117 - 119
+        Params : 1
+        Stack  : 5
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Instance'
+        K[001] = 'MakeSystemSpeak'
+        K[002] = 'player_id'
+        K[003] = '00000000'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  118] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0001 [line  118] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+        0002 [line  118] 0x0080805C  CALL       A=1 B=1 C=2
+        0003 [line  118] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+        0004 [line  118] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0005 [line  118] 0x01C080C6  GETTABLE   R3 = R3[K[2]='player_id']
+        0006 [line  118] 0x000040DA  TEST       A=3 B=0 C=1
+        0007 [line  118] 0x80000016  JMP        A=0 sBx=1
+        0008 [line  118] 0x0000C0C1  LOADK      R3 = K[3]='00000000'
+        0009 [line  118] 0x00000100  MOVE       R4 = R0
+        0010 [line  118] 0x0200005D  TAILCALL   A=1 B=4 C=0
+        0011 [line  118] 0x0000005E  RETURN     A=1 B=0 C=0
+        0012 [line  119] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'wildName': 0 -> 12
+
+        ============================================================
+        PROTO ROOT.4.2
+        Offset : 0x1A94
+        Source : '@lua\\chat\\ecsystemspeak.lua'
+        Lines  : 123 - 125
+        Params : 1
+        Stack  : 4
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = '#'
+        K[001] = '#(nodata)'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  124] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+        0001 [line  124] 0x00800046  GETTABLE   R1 = R1[R0]
+        0002 [line  124] 0x0000405A  TEST       A=1 B=0 C=1
+        0003 [line  124] 0x8000C016  JMP        A=0 sBx=4
+        0004 [line  124] 0x00000041  LOADK      R1 = K[0]='#'
+        0005 [line  124] 0x00000080  MOVE       R2 = R0
+        0006 [line  124] 0x000040C1  LOADK      R3 = K[1]='#(nodata)'
+        0007 [line  124] 0x0080C055  CONCAT     A=1 B=1 C=3 Bx=515
+        0008 [line  124] 0x0100005E  RETURN     A=1 B=2 C=0
+        0009 [line  125] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'wildName': 0 -> 9
+
+        ============================================================
+        PROTO ROOT.4.3
+        Offset : 0x1B4A
+        Source : '@lua\\chat\\ecsystemspeak.lua'
+        Lines  : 143 - 147
+        Params : 3
+        Stack  : 7
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'showinchat'
+        K[001] = 'Instance'
+        K[002] = 'AddSimpleMessage'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  144] 0x004000C6  GETTABLE   R3 = R0[K[0]='showinchat']
+        0001 [line  144] 0x000000DA  TEST       A=3 B=0 C=0
+        0002 [line  144] 0x80018016  JMP        A=0 sBx=7
+        0003 [line  145] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0004 [line  145] 0x01C040C6  GETTABLE   R3 = R3[K[1]='Instance']
+        0005 [line  145] 0x008080DC  CALL       A=3 B=1 C=2
+        0006 [line  145] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+        0007 [line  145] 0x00800140  MOVE       R5 = R1
+        0008 [line  145] 0x01000180  MOVE       R6 = R2
+        0009 [line  145] 0x020040DC  CALL       A=3 B=4 C=1
+        0010 [line  147] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'config': 0 -> 10
+        'str': 0 -> 10
+        'channel_': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x25B1
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 258 - 262
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'ReadByte'
+    K[001] = 'ReadUnicodeString'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  259] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  259] 0x0100805C  CALL       A=1 B=2 C=2
+    0002 [line  260] 0x0040408B  SELF       A=2 B=0 C=257 Bx=257
+    0003 [line  260] 0x00800100  MOVE       R4 = R1
+    0004 [line  260] 0x0180809C  CALL       A=2 B=3 C=2
+    0005 [line  261] 0x0100009E  RETURN     A=2 B=2 C=0
+    0006 [line  262] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'reader': 0 -> 6
+    'count': 2 -> 6
+    'str': 5 -> 6
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x266B
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 264 - 428
+    Params : 2
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'PLAYER_NAME'
+    K[001] = 'PLAYER_NAME_2'
+    K[002] = 'ReadUInt64'
+    K[003] = 'NPC_NAME'
+    K[004] = 'ReadInt32'
+    K[005] = 'require'
+    K[006] = 'Configs.npc_list'
+    K[007] = 'name'
+    K[008] = 'npcTid #'
+    K[009] = 'NPC_NAME_WITH_TITLE'
+    K[010] = 'Data.Exptypes'
+    K[011] = 'Data.ElementData'
+    K[012] = 'getData'
+    K[013] = 'MONSTER_ESSENCE'
+    K[014] = 'title'
+    K[015] = 'FACTION_NAME'
+    K[016] = 'ReadInt64'
+    K[017] = 'NATION_NAME'
+    K[018] = 'NATION_NAME_2'
+    K[019] = 'Social.ECNationMan'
+    K[020] = 'getNationName'
+    K[021] = 'NATION_OFFICER_NAME'
+    K[022] = 'getOfficerName'
+    K[023] = 'RELATION_1'
+    K[024] = 'RELATION_2'
+    K[025] = 'relationId #'
+    K[026] = 'INT_1'
+    K[027] = 'INT_2'
+    K[028] = ''
+    K[029] = 'SCENE_ID'
+    K[030] = 'ReadInt16'
+    K[031] = 'Configs.InstanceInfo'
+    K[032] = 'Instance'
+    K[033] = 'GetData'
+    K[034] = 'sceneId #'
+    K[035] = 'TITLE_NAME'
+    K[036] = 'getConfig'
+    K[037] = 'wrong titleId #'
+    K[038] = 'ACHIEVEMENT_NAME'
+    K[039] = 'getAchievement'
+    K[040] = 'wrong achievement #'
+    K[041] = 'ITEM_ID'
+    K[042] = 'GetDefaultQualityName'
+    K[043] = 'ITEM'
+    K[044] = 'ReadUInt16'
+    K[045] = 'ReadBytes'
+    K[046] = 'CreateItem'
+    K[047] = 1.0
+    K[048] = 0.0
+    K[049] = 'warn'
+    K[050] = 'invalid system speak ivtritem: '
+    K[051] = 'State'
+    K[052] = 'SetEmptyInfo'
+    K[053] = 'PLAYER_POS'
+    K[054] = 'ReadSingle'
+    K[055] = '_G'
+    K[056] = 'GetConfigLua'
+    K[057] = 'Configs/instance_client_data.lua'
+    K[058] = '('
+    K[059] = 'string'
+    K[060] = 'format'
+    K[061] = '%d'
+    K[062] = 'width'
+    K[063] = 2.0
+    K[064] = ','
+    K[065] = 'height'
+    K[066] = ')'
+    K[067] = 'PLAYER_POS_NATION'
+    K[068] = 'nationId #'
+    K[069] = 'CHARIOT_NAME'
+    K[070] = 'math'
+    K[071] = 'max'
+    K[072] = 'getEssence'
+    K[073] = 'props'
+    K[074] = 'chariot #'
+    K[075] = 'PET_ID'
+    K[076] = 'pet_id #'
+    K[077] = 'NATION_AID'
+    K[078] = 'NATION_AID_2'
+    K[079] = 'Main.ECServerWarMan'
+    K[080] = 'GetOneWorldZoneName'
+    K[081] = 'invalid system speak wildcard type: '
+
+    ----- INSTRUCTIONS -----
+    0000 [line  265] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  265] 0x01400086  GETTABLE   R2 = R2[K[0]='PLAYER_NAME']
+    0002 [line  265] 0x00008057  EQ         A=1 B=R0 C=R2
+    0003 [line  265] 0x8000C016  JMP        A=0 sBx=4
+    0004 [line  265] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0005 [line  265] 0x01404086  GETTABLE   R2 = R2[K[1]='PLAYER_NAME_2']
+    0006 [line  265] 0x00008017  EQ         A=0 B=R0 C=R2
+    0007 [line  265] 0x80020016  JMP        A=0 sBx=9
+    0008 [line  267] 0x00C0808B  SELF       A=2 B=1 C=258 Bx=770
+    0009 [line  267] 0x0100809C  CALL       A=2 B=2 C=2
+    0010 [line  268] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0011 [line  268] 0x00800100  MOVE       R4 = R1
+    0012 [line  268] 0x010080DC  CALL       A=3 B=2 C=2
+    0013 [line  270] 0x01800100  MOVE       R4 = R3
+    0014 [line  270] 0x01000140  MOVE       R5 = R2
+    0015 [line  270] 0x0180011E  RETURN     A=4 B=3 C=0
+    0016 [line  270] 0x80674016  JMP        A=0 sBx=414
+    0017 [line  271] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0018 [line  271] 0x0140C086  GETTABLE   R2 = R2[K[3]='NPC_NAME']
+    0019 [line  271] 0x00008017  EQ         A=0 B=R0 C=R2
+    0020 [line  271] 0x80048016  JMP        A=0 sBx=19
+    0021 [line  273] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0022 [line  273] 0x0100809C  CALL       A=2 B=2 C=2
+    0023 [line  274] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0024 [line  274] 0x00018101  LOADK      R4 = K[6]='Configs.npc_list'
+    0025 [line  274] 0x010080DC  CALL       A=3 B=2 C=2
+    0026 [line  275] 0x01808106  GETTABLE   R4 = R3[R2]
+    0027 [line  275] 0x0000011A  TEST       A=4 B=0 C=0
+    0028 [line  275] 0x80010016  JMP        A=0 sBx=5
+    0029 [line  276] 0x01808106  GETTABLE   R4 = R3[R2]
+    0030 [line  276] 0x0241C106  GETTABLE   R4 = R4[K[7]='name']
+    0031 [line  276] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0032 [line  276] 0x0180011E  RETURN     A=4 B=3 C=0
+    0033 [line  276] 0x80630016  JMP        A=0 sBx=397
+    0034 [line  278] 0x00020101  LOADK      R4 = K[8]='npcTid #'
+    0035 [line  278] 0x01000140  MOVE       R5 = R2
+    0036 [line  278] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0037 [line  278] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0038 [line  278] 0x0180011E  RETURN     A=4 B=3 C=0
+    0039 [line  279] 0x80618016  JMP        A=0 sBx=391
+    0040 [line  281] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0041 [line  281] 0x01424086  GETTABLE   R2 = R2[K[9]='NPC_NAME_WITH_TITLE']
+    0042 [line  281] 0x00008017  EQ         A=0 B=R0 C=R2
+    0043 [line  281] 0x80078016  JMP        A=0 sBx=31
+    0044 [line  282] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0045 [line  282] 0x0100809C  CALL       A=2 B=2 C=2
+    0046 [line  283] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0047 [line  283] 0x00018101  LOADK      R4 = K[6]='Configs.npc_list'
+    0048 [line  283] 0x010080DC  CALL       A=3 B=2 C=2
+    0049 [line  284] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='require'
+    0050 [line  284] 0x00028141  LOADK      R5 = K[10]='Data.Exptypes'
+    0051 [line  284] 0x0100811C  CALL       A=4 B=2 C=2
+    0052 [line  285] 0x00014145  GETGLOBAL  R5 = GLOBAL K[5]='require'
+    0053 [line  285] 0x0002C181  LOADK      R6 = K[11]='Data.ElementData'
+    0054 [line  285] 0x0100815C  CALL       A=5 B=2 C=2
+    0055 [line  285] 0x02C30146  GETTABLE   R5 = R5[K[12]='getData']
+    0056 [line  285] 0x02434186  GETTABLE   R6 = R4[K[13]='MONSTER_ESSENCE']
+    0057 [line  285] 0x010001C0  MOVE       R7 = R2
+    0058 [line  285] 0x0180815C  CALL       A=5 B=3 C=2
+    0059 [line  286] 0x01808186  GETTABLE   R6 = R3[R2]
+    0060 [line  286] 0x0000019A  TEST       A=6 B=0 C=0
+    0061 [line  286] 0x80018016  JMP        A=0 sBx=7
+    0062 [line  287] 0x01808186  GETTABLE   R6 = R3[R2]
+    0063 [line  287] 0x0341C186  GETTABLE   R6 = R6[K[7]='name']
+    0064 [line  287] 0x02C381C6  GETTABLE   R7 = R5[K[14]='title']
+    0065 [line  287] 0x0301C195  CONCAT     A=6 B=6 C=7 Bx=3079
+    0066 [line  287] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0067 [line  287] 0x0180019E  RETURN     A=6 B=3 C=0
+    0068 [line  287] 0x805A4016  JMP        A=0 sBx=362
+    0069 [line  289] 0x00020181  LOADK      R6 = K[8]='npcTid #'
+    0070 [line  289] 0x010001C0  MOVE       R7 = R2
+    0071 [line  289] 0x0301C195  CONCAT     A=6 B=6 C=7 Bx=3079
+    0072 [line  289] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0073 [line  289] 0x0180019E  RETURN     A=6 B=3 C=0
+    0074 [line  290] 0x8058C016  JMP        A=0 sBx=356
+    0075 [line  291] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0076 [line  291] 0x0143C086  GETTABLE   R2 = R2[K[15]='FACTION_NAME']
+    0077 [line  291] 0x00008017  EQ         A=0 B=R0 C=R2
+    0078 [line  291] 0x80020016  JMP        A=0 sBx=9
+    0079 [line  293] 0x00C4008B  SELF       A=2 B=1 C=272 Bx=784
+    0080 [line  293] 0x0100809C  CALL       A=2 B=2 C=2
+    0081 [line  294] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0082 [line  294] 0x00800100  MOVE       R4 = R1
+    0083 [line  294] 0x010080DC  CALL       A=3 B=2 C=2
+    0084 [line  295] 0x01800100  MOVE       R4 = R3
+    0085 [line  295] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0086 [line  295] 0x0180011E  RETURN     A=4 B=3 C=0
+    0087 [line  295] 0x80558016  JMP        A=0 sBx=343
+    0088 [line  297] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0089 [line  297] 0x01444086  GETTABLE   R2 = R2[K[17]='NATION_NAME']
+    0090 [line  297] 0x00008057  EQ         A=1 B=R0 C=R2
+    0091 [line  297] 0x8000C016  JMP        A=0 sBx=4
+    0092 [line  297] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0093 [line  297] 0x01448086  GETTABLE   R2 = R2[K[18]='NATION_NAME_2']
+    0094 [line  297] 0x00008017  EQ         A=0 B=R0 C=R2
+    0095 [line  297] 0x80028016  JMP        A=0 sBx=11
+    0096 [line  299] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0097 [line  299] 0x0100809C  CALL       A=2 B=2 C=2
+    0098 [line  301] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0099 [line  301] 0x0004C101  LOADK      R4 = K[19]='Social.ECNationMan'
+    0100 [line  301] 0x010080DC  CALL       A=3 B=2 C=2
+    0101 [line  302] 0x01C50106  GETTABLE   R4 = R3[K[20]='getNationName']
+    0102 [line  302] 0x01000140  MOVE       R5 = R2
+    0103 [line  302] 0x0100811C  CALL       A=4 B=2 C=2
+    0104 [line  302] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0105 [line  302] 0x0180011E  RETURN     A=4 B=3 C=0
+    0106 [line  302] 0x8050C016  JMP        A=0 sBx=324
+    0107 [line  304] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0108 [line  304] 0x01454086  GETTABLE   R2 = R2[K[21]='NATION_OFFICER_NAME']
+    0109 [line  304] 0x00008017  EQ         A=0 B=R0 C=R2
+    0110 [line  304] 0x80028016  JMP        A=0 sBx=11
+    0111 [line  306] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0112 [line  306] 0x0100809C  CALL       A=2 B=2 C=2
+    0113 [line  308] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0114 [line  308] 0x0004C101  LOADK      R4 = K[19]='Social.ECNationMan'
+    0115 [line  308] 0x010080DC  CALL       A=3 B=2 C=2
+    0116 [line  309] 0x01C58106  GETTABLE   R4 = R3[K[22]='getOfficerName']
+    0117 [line  309] 0x01000140  MOVE       R5 = R2
+    0118 [line  309] 0x0100811C  CALL       A=4 B=2 C=2
+    0119 [line  309] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0120 [line  309] 0x0180011E  RETURN     A=4 B=3 C=0
+    0121 [line  309] 0x804D0016  JMP        A=0 sBx=309
+    0122 [line  311] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0123 [line  311] 0x0145C086  GETTABLE   R2 = R2[K[23]='RELATION_1']
+    0124 [line  311] 0x00008057  EQ         A=1 B=R0 C=R2
+    0125 [line  311] 0x8000C016  JMP        A=0 sBx=4
+    0126 [line  311] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0127 [line  311] 0x01460086  GETTABLE   R2 = R2[K[24]='RELATION_2']
+    0128 [line  311] 0x00008017  EQ         A=0 B=R0 C=R2
+    0129 [line  311] 0x8001C016  JMP        A=0 sBx=8
+    0130 [line  312] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0131 [line  312] 0x0100809C  CALL       A=2 B=2 C=2
+    0132 [line  313] 0x000640C1  LOADK      R3 = K[25]='relationId #'
+    0133 [line  313] 0x01000100  MOVE       R4 = R2
+    0134 [line  313] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0135 [line  313] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0136 [line  313] 0x018000DE  RETURN     A=3 B=3 C=0
+    0137 [line  313] 0x80490016  JMP        A=0 sBx=293
+    0138 [line  315] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0139 [line  315] 0x01468086  GETTABLE   R2 = R2[K[26]='INT_1']
+    0140 [line  315] 0x00008057  EQ         A=1 B=R0 C=R2
+    0141 [line  315] 0x8000C016  JMP        A=0 sBx=4
+    0142 [line  315] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0143 [line  315] 0x0146C086  GETTABLE   R2 = R2[K[27]='INT_2']
+    0144 [line  315] 0x00008017  EQ         A=0 B=R0 C=R2
+    0145 [line  315] 0x8001C016  JMP        A=0 sBx=8
+    0146 [line  316] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0147 [line  316] 0x0100809C  CALL       A=2 B=2 C=2
+    0148 [line  318] 0x000700C1  LOADK      R3 = K[28]=''
+    0149 [line  318] 0x01000100  MOVE       R4 = R2
+    0150 [line  318] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0151 [line  318] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0152 [line  318] 0x018000DE  RETURN     A=3 B=3 C=0
+    0153 [line  318] 0x80450016  JMP        A=0 sBx=277
+    0154 [line  320] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0155 [line  320] 0x01474086  GETTABLE   R2 = R2[K[29]='SCENE_ID']
+    0156 [line  320] 0x00008017  EQ         A=0 B=R0 C=R2
+    0157 [line  320] 0x80054016  JMP        A=0 sBx=22
+    0158 [line  321] 0x00C7808B  SELF       A=2 B=1 C=286 Bx=798
+    0159 [line  321] 0x0100809C  CALL       A=2 B=2 C=2
+    0160 [line  322] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0161 [line  322] 0x0007C101  LOADK      R4 = K[31]='Configs.InstanceInfo'
+    0162 [line  322] 0x010080DC  CALL       A=3 B=2 C=2
+    0163 [line  323] 0x01C80106  GETTABLE   R4 = R3[K[32]='Instance']
+    0164 [line  323] 0x0080811C  CALL       A=4 B=1 C=2
+    0165 [line  323] 0x0248410B  SELF       A=4 B=4 C=289 Bx=2337
+    0166 [line  323] 0x01000180  MOVE       R6 = R2
+    0167 [line  323] 0x0180811C  CALL       A=4 B=3 C=2
+    0168 [line  324] 0x0000011A  TEST       A=4 B=0 C=0
+    0169 [line  324] 0x8000C016  JMP        A=0 sBx=4
+    0170 [line  325] 0x0241C146  GETTABLE   R5 = R4[K[7]='name']
+    0171 [line  325] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0172 [line  325] 0x0180015E  RETURN     A=5 B=3 C=0
+    0173 [line  325] 0x80400016  JMP        A=0 sBx=257
+    0174 [line  327] 0x00088141  LOADK      R5 = K[34]='sceneId #'
+    0175 [line  327] 0x01000180  MOVE       R6 = R2
+    0176 [line  327] 0x02818155  CONCAT     A=5 B=5 C=6 Bx=2566
+    0177 [line  327] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0178 [line  327] 0x0180015E  RETURN     A=5 B=3 C=0
+    0179 [line  328] 0x803E8016  JMP        A=0 sBx=251
+    0180 [line  329] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0181 [line  329] 0x0148C086  GETTABLE   R2 = R2[K[35]='TITLE_NAME']
+    0182 [line  329] 0x00008017  EQ         A=0 B=R0 C=R2
+    0183 [line  329] 0x80044016  JMP        A=0 sBx=18
+    0184 [line  331] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0185 [line  331] 0x0100809C  CALL       A=2 B=2 C=2
+    0186 [line  333] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0187 [line  333] 0x01C900C6  GETTABLE   R3 = R3[K[36]='getConfig']
+    0188 [line  333] 0x01000100  MOVE       R4 = R2
+    0189 [line  333] 0x010080DC  CALL       A=3 B=2 C=2
+    0190 [line  334] 0x000000DA  TEST       A=3 B=0 C=0
+    0191 [line  334] 0x8000C016  JMP        A=0 sBx=4
+    0192 [line  335] 0x01C1C106  GETTABLE   R4 = R3[K[7]='name']
+    0193 [line  335] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0194 [line  335] 0x0180011E  RETURN     A=4 B=3 C=0
+    0195 [line  335] 0x803A8016  JMP        A=0 sBx=235
+    0196 [line  337] 0x00094101  LOADK      R4 = K[37]='wrong titleId #'
+    0197 [line  337] 0x01000140  MOVE       R5 = R2
+    0198 [line  337] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0199 [line  337] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0200 [line  337] 0x0180011E  RETURN     A=4 B=3 C=0
+    0201 [line  338] 0x80390016  JMP        A=0 sBx=229
+    0202 [line  340] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0203 [line  340] 0x01498086  GETTABLE   R2 = R2[K[38]='ACHIEVEMENT_NAME']
+    0204 [line  340] 0x00008017  EQ         A=0 B=R0 C=R2
+    0205 [line  340] 0x80044016  JMP        A=0 sBx=18
+    0206 [line  342] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0207 [line  342] 0x0100809C  CALL       A=2 B=2 C=2
+    0208 [line  344] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0209 [line  344] 0x01C9C0C6  GETTABLE   R3 = R3[K[39]='getAchievement']
+    0210 [line  344] 0x01000100  MOVE       R4 = R2
+    0211 [line  344] 0x010080DC  CALL       A=3 B=2 C=2
+    0212 [line  345] 0x000000DA  TEST       A=3 B=0 C=0
+    0213 [line  345] 0x8000C016  JMP        A=0 sBx=4
+    0214 [line  346] 0x01C1C106  GETTABLE   R4 = R3[K[7]='name']
+    0215 [line  346] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0216 [line  346] 0x0180011E  RETURN     A=4 B=3 C=0
+    0217 [line  346] 0x80350016  JMP        A=0 sBx=213
+    0218 [line  348] 0x000A0101  LOADK      R4 = K[40]='wrong achievement #'
+    0219 [line  348] 0x01000140  MOVE       R5 = R2
+    0220 [line  348] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0221 [line  348] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0222 [line  348] 0x0180011E  RETURN     A=4 B=3 C=0
+    0223 [line  349] 0x80338016  JMP        A=0 sBx=207
+    0224 [line  351] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0225 [line  351] 0x014A4086  GETTABLE   R2 = R2[K[41]='ITEM_ID']
+    0226 [line  351] 0x00008017  EQ         A=0 B=R0 C=R2
+    0227 [line  351] 0x80020016  JMP        A=0 sBx=9
+    0228 [line  353] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0229 [line  353] 0x0100809C  CALL       A=2 B=2 C=2
+    0230 [line  354] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+    0231 [line  354] 0x01CA80C6  GETTABLE   R3 = R3[K[42]='GetDefaultQualityName']
+    0232 [line  354] 0x01000100  MOVE       R4 = R2
+    0233 [line  354] 0x010080DC  CALL       A=3 B=2 C=2
+    0234 [line  354] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0235 [line  354] 0x018000DE  RETURN     A=3 B=3 C=0
+    0236 [line  354] 0x80304016  JMP        A=0 sBx=194
+    0237 [line  356] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0238 [line  356] 0x014AC086  GETTABLE   R2 = R2[K[43]='ITEM']
+    0239 [line  356] 0x00008017  EQ         A=0 B=R0 C=R2
+    0240 [line  356] 0x80090016  JMP        A=0 sBx=37
+    0241 [line  358] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0242 [line  358] 0x0100809C  CALL       A=2 B=2 C=2
+    0243 [line  359] 0x00C100CB  SELF       A=3 B=1 C=260 Bx=772
+    0244 [line  359] 0x010080DC  CALL       A=3 B=2 C=2
+    0245 [line  360] 0x00C1010B  SELF       A=4 B=1 C=260 Bx=772
+    0246 [line  360] 0x0100811C  CALL       A=4 B=2 C=2
+    0247 [line  361] 0x00CB014B  SELF       A=5 B=1 C=300 Bx=812
+    0248 [line  361] 0x0100815C  CALL       A=5 B=2 C=2
+    0249 [line  362] 0x00CB418B  SELF       A=6 B=1 C=301 Bx=813
+    0250 [line  362] 0x02800200  MOVE       R8 = R5
+    0251 [line  362] 0x0180819C  CALL       A=6 B=3 C=2
+    0252 [line  364] 0x020001C4  GETUPVAL   A=7 B=4 C=0 Bx=2048
+    0253 [line  364] 0x03CB81C6  GETTABLE   R7 = R7[K[46]='CreateItem']
+    0254 [line  364] 0x01000200  MOVE       R8 = R2
+    0255 [line  364] 0x01800240  MOVE       R9 = R3
+    0256 [line  364] 0x000BC281  LOADK      R10 = K[47]=1.0
+    0257 [line  364] 0x000C02C1  LOADK      R11 = K[48]=0.0
+    0258 [line  364] 0x028081DC  CALL       A=7 B=5 C=2
+    0259 [line  365] 0x000041DA  TEST       A=7 B=0 C=1
+    0260 [line  365] 0x80018016  JMP        A=0 sBx=7
+    0261 [line  366] 0x000C4205  GETGLOBAL  R8 = GLOBAL K[49]='warn'
+    0262 [line  366] 0x000C8241  LOADK      R9 = K[50]='invalid system speak ivtritem: '
+    0263 [line  366] 0x01000280  MOVE       R10 = R2
+    0264 [line  366] 0x0180421C  CALL       A=8 B=3 C=1
+    0265 [line  367] 0x00070201  LOADK      R8 = K[28]=''
+    0266 [line  367] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0267 [line  367] 0x0180021E  RETURN     A=8 B=3 C=0
+    0268 [line  370] 0x998101C9  SETTABLE   R7[K[51]='State'] = R4
+    0269 [line  371] 0x03CD020B  SELF       A=8 B=7 C=308 Bx=3892
+    0270 [line  371] 0x0100421C  CALL       A=8 B=2 C=1
+    0271 [line  373] 0x01800204  GETUPVAL   A=8 B=3 C=0 Bx=1536
+    0272 [line  373] 0x044A8206  GETTABLE   R8 = R8[K[42]='GetDefaultQualityName']
+    0273 [line  373] 0x01000240  MOVE       R9 = R2
+    0274 [line  373] 0x0100821C  CALL       A=8 B=2 C=2
+    0275 [line  373] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0276 [line  373] 0x0180021E  RETURN     A=8 B=3 C=0
+    0277 [line  373] 0x80260016  JMP        A=0 sBx=153
+    0278 [line  374] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0279 [line  374] 0x014D4086  GETTABLE   R2 = R2[K[53]='PLAYER_POS']
+    0280 [line  374] 0x00008017  EQ         A=0 B=R0 C=R2
+    0281 [line  374] 0x800B8016  JMP        A=0 sBx=47
+    0282 [line  376] 0x00C7808B  SELF       A=2 B=1 C=286 Bx=798
+    0283 [line  376] 0x0100809C  CALL       A=2 B=2 C=2
+    0284 [line  377] 0x00CD80CB  SELF       A=3 B=1 C=310 Bx=822
+    0285 [line  377] 0x010080DC  CALL       A=3 B=2 C=2
+    0286 [line  378] 0x00CD810B  SELF       A=4 B=1 C=310 Bx=822
+    0287 [line  378] 0x0100811C  CALL       A=4 B=2 C=2
+    0288 [line  379] 0x00CD814B  SELF       A=5 B=1 C=310 Bx=822
+    0289 [line  379] 0x0100815C  CALL       A=5 B=2 C=2
+    0290 [line  381] 0x00070181  LOADK      R6 = K[28]=''
+    0291 [line  382] 0x000141C5  GETGLOBAL  R7 = GLOBAL K[5]='require'
+    0292 [line  382] 0x0007C201  LOADK      R8 = K[31]='Configs.InstanceInfo'
+    0293 [line  382] 0x010081DC  CALL       A=7 B=2 C=2
+    0294 [line  383] 0x03C80206  GETTABLE   R8 = R7[K[32]='Instance']
+    0295 [line  383] 0x0080821C  CALL       A=8 B=1 C=2
+    0296 [line  383] 0x0448420B  SELF       A=8 B=8 C=289 Bx=4385
+    0297 [line  383] 0x01000280  MOVE       R10 = R2
+    0298 [line  383] 0x0180821C  CALL       A=8 B=3 C=2
+    0299 [line  387] 0x000DC245  GETGLOBAL  R9 = GLOBAL K[55]='_G'
+    0300 [line  387] 0x04CE0246  GETTABLE   R9 = R9[K[56]='GetConfigLua']
+    0301 [line  387] 0x000E4281  LOADK      R10 = K[57]='Configs/instance_client_data.lua'
+    0302 [line  387] 0x0100825C  CALL       A=9 B=2 C=2
+    0303 [line  388] 0x04808286  GETTABLE   R10 = R9[R2]
+    0304 [line  389] 0x0000029A  TEST       A=10 B=0 C=0
+    0305 [line  389] 0x80048016  JMP        A=0 sBx=19
+    0306 [line  390] 0x030002C0  MOVE       R11 = R6
+    0307 [line  390] 0x000E8301  LOADK      R12 = K[58]='('
+    0308 [line  390] 0x000EC345  GETGLOBAL  R13 = GLOBAL K[59]='string'
+    0309 [line  390] 0x06CF0346  GETTABLE   R13 = R13[K[60]='format']
+    0310 [line  390] 0x000F4381  LOADK      R14 = K[61]='%d'
+    0311 [line  390] 0x054F83C6  GETTABLE   R15 = R10[K[62]='width']
+    0312 [line  390] 0x07CFC3CF  DIV        A=15 B=R15 C=K[63]=2.0
+    0313 [line  390] 0x0183C3CC  ADD        A=15 B=R3 C=R15
+    0314 [line  390] 0x0180835C  CALL       A=13 B=3 C=2
+    0315 [line  390] 0x00100381  LOADK      R14 = K[64]=','
+    0316 [line  390] 0x000EC3C5  GETGLOBAL  R15 = GLOBAL K[59]='string'
+    0317 [line  390] 0x07CF03C6  GETTABLE   R15 = R15[K[60]='format']
+    0318 [line  390] 0x000F4401  LOADK      R16 = K[61]='%d'
+    0319 [line  390] 0x05504446  GETTABLE   R17 = R10[K[65]='height']
+    0320 [line  390] 0x08CFC44F  DIV        A=17 B=R17 C=K[63]=2.0
+    0321 [line  390] 0x0284444C  ADD        A=17 B=R5 C=R17
+    0322 [line  390] 0x018083DC  CALL       A=15 B=3 C=2
+    0323 [line  390] 0x00108401  LOADK      R16 = K[66]=')'
+    0324 [line  390] 0x05840195  CONCAT     A=6 B=11 C=16 Bx=5648
+    0325 [line  392] 0x030002C0  MOVE       R11 = R6
+    0326 [line  392] 0x06000303  LOADNIL    A=12 B=12 C=0 Bx=6144
+    0327 [line  392] 0x018002DE  RETURN     A=11 B=3 C=0
+    0328 [line  392] 0x80194016  JMP        A=0 sBx=102
+    0329 [line  393] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0330 [line  393] 0x0150C086  GETTABLE   R2 = R2[K[67]='PLAYER_POS_NATION']
+    0331 [line  393] 0x00008017  EQ         A=0 B=R0 C=R2
+    0332 [line  393] 0x8004C016  JMP        A=0 sBx=20
+    0333 [line  394] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0334 [line  394] 0x0100809C  CALL       A=2 B=2 C=2
+    0335 [line  395] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0336 [line  395] 0x0004C101  LOADK      R4 = K[19]='Social.ECNationMan'
+    0337 [line  395] 0x010080DC  CALL       A=3 B=2 C=2
+    0338 [line  396] 0x01C50106  GETTABLE   R4 = R3[K[20]='getNationName']
+    0339 [line  396] 0x01000140  MOVE       R5 = R2
+    0340 [line  396] 0x0100811C  CALL       A=4 B=2 C=2
+    0341 [line  397] 0x0000011A  TEST       A=4 B=0 C=0
+    0342 [line  397] 0x8000C016  JMP        A=0 sBx=4
+    0343 [line  398] 0x02000140  MOVE       R5 = R4
+    0344 [line  398] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0345 [line  398] 0x0180015E  RETURN     A=5 B=3 C=0
+    0346 [line  398] 0x8014C016  JMP        A=0 sBx=84
+    0347 [line  400] 0x00110141  LOADK      R5 = K[68]='nationId #'
+    0348 [line  400] 0x01000180  MOVE       R6 = R2
+    0349 [line  400] 0x02818155  CONCAT     A=5 B=5 C=6 Bx=2566
+    0350 [line  400] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0351 [line  400] 0x0180015E  RETURN     A=5 B=3 C=0
+    0352 [line  401] 0x80134016  JMP        A=0 sBx=78
+    0353 [line  402] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0354 [line  402] 0x01514086  GETTABLE   R2 = R2[K[69]='CHARIOT_NAME']
+    0355 [line  402] 0x00008017  EQ         A=0 B=R0 C=R2
+    0356 [line  402] 0x80064016  JMP        A=0 sBx=26
+    0357 [line  403] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0358 [line  403] 0x0100809C  CALL       A=2 B=2 C=2
+    0359 [line  404] 0x001180C5  GETGLOBAL  R3 = GLOBAL K[70]='math'
+    0360 [line  404] 0x01D1C0C6  GETTABLE   R3 = R3[K[71]='max']
+    0361 [line  404] 0x000BC101  LOADK      R4 = K[47]=1.0
+    0362 [line  404] 0x00C1014B  SELF       A=5 B=1 C=260 Bx=772
+    0363 [line  404] 0x0100015C  CALL       A=5 B=2 C=0
+    0364 [line  404] 0x000080DC  CALL       A=3 B=0 C=2
+    0365 [line  405] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0366 [line  405] 0x02520106  GETTABLE   R4 = R4[K[72]='getEssence']
+    0367 [line  405] 0x01000140  MOVE       R5 = R2
+    0368 [line  405] 0x0100811C  CALL       A=4 B=2 C=2
+    0369 [line  406] 0x0000011A  TEST       A=4 B=0 C=0
+    0370 [line  406] 0x80014016  JMP        A=0 sBx=6
+    0371 [line  407] 0x02524146  GETTABLE   R5 = R4[K[73]='props']
+    0372 [line  407] 0x0280C146  GETTABLE   R5 = R5[R3]
+    0373 [line  407] 0x02C1C146  GETTABLE   R5 = R5[K[7]='name']
+    0374 [line  407] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0375 [line  407] 0x0180015E  RETURN     A=5 B=3 C=0
+    0376 [line  407] 0x800D4016  JMP        A=0 sBx=54
+    0377 [line  409] 0x00128141  LOADK      R5 = K[74]='chariot #'
+    0378 [line  409] 0x01000180  MOVE       R6 = R2
+    0379 [line  409] 0x02818155  CONCAT     A=5 B=5 C=6 Bx=2566
+    0380 [line  409] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0381 [line  409] 0x0180015E  RETURN     A=5 B=3 C=0
+    0382 [line  410] 0x800BC016  JMP        A=0 sBx=48
+    0383 [line  411] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0384 [line  411] 0x0152C086  GETTABLE   R2 = R2[K[75]='PET_ID']
+    0385 [line  411] 0x00008017  EQ         A=0 B=R0 C=R2
+    0386 [line  411] 0x80044016  JMP        A=0 sBx=18
+    0387 [line  412] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0388 [line  412] 0x0100809C  CALL       A=2 B=2 C=2
+    0389 [line  413] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0390 [line  413] 0x01D200C6  GETTABLE   R3 = R3[K[72]='getEssence']
+    0391 [line  413] 0x01000100  MOVE       R4 = R2
+    0392 [line  413] 0x010080DC  CALL       A=3 B=2 C=2
+    0393 [line  414] 0x000000DA  TEST       A=3 B=0 C=0
+    0394 [line  414] 0x8000C016  JMP        A=0 sBx=4
+    0395 [line  415] 0x01C1C106  GETTABLE   R4 = R3[K[7]='name']
+    0396 [line  415] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0397 [line  415] 0x0180011E  RETURN     A=4 B=3 C=0
+    0398 [line  415] 0x8007C016  JMP        A=0 sBx=32
+    0399 [line  417] 0x00130101  LOADK      R4 = K[76]='pet_id #'
+    0400 [line  417] 0x01000140  MOVE       R5 = R2
+    0401 [line  417] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0402 [line  417] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0403 [line  417] 0x0180011E  RETURN     A=4 B=3 C=0
+    0404 [line  418] 0x80064016  JMP        A=0 sBx=26
+    0405 [line  419] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0406 [line  419] 0x01534086  GETTABLE   R2 = R2[K[77]='NATION_AID']
+    0407 [line  419] 0x00008057  EQ         A=1 B=R0 C=R2
+    0408 [line  419] 0x8000C016  JMP        A=0 sBx=4
+    0409 [line  419] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0410 [line  419] 0x01538086  GETTABLE   R2 = R2[K[78]='NATION_AID_2']
+    0411 [line  419] 0x00008017  EQ         A=0 B=R0 C=R2
+    0412 [line  419] 0x80028016  JMP        A=0 sBx=11
+    0413 [line  421] 0x00C1008B  SELF       A=2 B=1 C=260 Bx=772
+    0414 [line  421] 0x0100809C  CALL       A=2 B=2 C=2
+    0415 [line  422] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='require'
+    0416 [line  422] 0x0013C101  LOADK      R4 = K[79]='Main.ECServerWarMan'
+    0417 [line  422] 0x010080DC  CALL       A=3 B=2 C=2
+    0418 [line  423] 0x01D40106  GETTABLE   R4 = R3[K[80]='GetOneWorldZoneName']
+    0419 [line  423] 0x01000140  MOVE       R5 = R2
+    0420 [line  423] 0x0100811C  CALL       A=4 B=2 C=2
+    0421 [line  423] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0422 [line  423] 0x0180011E  RETURN     A=4 B=3 C=0
+    0423 [line  423] 0x80018016  JMP        A=0 sBx=7
+    0424 [line  425] 0x000C4085  GETGLOBAL  R2 = GLOBAL K[49]='warn'
+    0425 [line  425] 0x001440C1  LOADK      R3 = K[81]='invalid system speak wildcard type: '
+    0426 [line  425] 0x00000100  MOVE       R4 = R0
+    0427 [line  425] 0x0180409C  CALL       A=2 B=3 C=1
+    0428 [line  426] 0x00070081  LOADK      R2 = K[28]=''
+    0429 [line  426] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0430 [line  426] 0x0180009E  RETURN     A=2 B=3 C=0
+    0431 [line  428] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'wildType': 0 -> 431
+    'reader': 0 -> 431
+    'roleId': 10 -> 16
+    'name': 13 -> 16
+    'npcTid': 23 -> 39
+    'npc_list': 26 -> 39
+    'npcTid': 46 -> 74
+    'npc_list': 49 -> 74
+    'Exptypes': 52 -> 74
+    'monsterEssence': 59 -> 74
+    'factionId': 81 -> 87
+    'name': 84 -> 87
+    'nationId': 98 -> 106
+    'ECNationMan': 101 -> 106
+    'officerId': 113 -> 121
+    'ECNationMan': 116 -> 121
+    'relationId': 132 -> 137
+    'value': 148 -> 153
+    'sceneId': 160 -> 179
+    'InstanceInfo': 163 -> 179
+    'instcfg': 168 -> 179
+    'titleId': 186 -> 201
+    'data': 190 -> 201
+    'achieveId': 208 -> 223
+    'data': 212 -> 223
+    'tid': 230 -> 236
+    'tid': 243 -> 277
+    'expire_date': 245 -> 277
+    'state': 247 -> 277
+    'content_length': 249 -> 277
+    'content': 252 -> 277
+    'item': 259 -> 277
+    'sceneId': 284 -> 328
+    'x': 286 -> 328
+    'y': 288 -> 328
+    'z': 290 -> 328
+    'str': 291 -> 328
+    'InstanceInfo': 294 -> 328
+    'instcfg': 299 -> 328
+    'InstInfo_Client': 303 -> 328
+    'info': 304 -> 328
+    'nationId': 335 -> 352
+    'ECNationMan': 338 -> 352
+    'nationName': 341 -> 352
+    'tid': 359 -> 382
+    'chariotLv': 365 -> 382
+    'essChariot': 369 -> 382
+    'pet_tid': 389 -> 404
+    'essPet': 393 -> 404
+    'nation_aid': 415 -> 423
+    'ECServerWarMan': 418 -> 423
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x3DB3
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 430 - 460
+    Params : 3
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 2292.0
+    K[001] = 2293.0
+    K[002] = 2294.0
+    K[003] = 2295.0
+    K[004] = 'Instance'
+    K[005] = 'm_HostPlayer'
+    K[006] = 'ID'
+    K[007] = 'BinaryReader'
+    K[008] = 'Create'
+    K[009] = 'assert'
+    K[010] = 'position'
+    K[011] = 'length'
+    K[012] = 'ReadInt16'
+    K[013] = 'extractOneSystemWildCard'
+    K[014] = 'PLAYER_NAME'
+    K[015] = 'PLAYER_NAME_2'
+    K[016] = 'warn'
+    K[017] = 'unknown system speak wildcard type: '
+    K[018] = 'tostring'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  431] 0x00400057  EQ         A=1 B=R0 C=K[0]=2292.0
+    0001 [line  431] 0x8001C016  JMP        A=0 sBx=8
+    0002 [line  431] 0x00404057  EQ         A=1 B=R0 C=K[1]=2293.0
+    0003 [line  431] 0x80014016  JMP        A=0 sBx=6
+    0004 [line  431] 0x00408057  EQ         A=1 B=R0 C=K[2]=2294.0
+    0005 [line  431] 0x8000C016  JMP        A=0 sBx=4
+    0006 [line  431] 0x0040C057  EQ         A=1 B=R0 C=K[3]=2295.0
+    0007 [line  431] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  432] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  432] 0x010000DE  RETURN     A=3 B=2 C=0
+    0010 [line  434] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0011 [line  434] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+    0012 [line  434] 0x008080DC  CALL       A=3 B=1 C=2
+    0013 [line  434] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostPlayer']
+    0014 [line  434] 0x01C180C6  GETTABLE   R3 = R3[K[6]='ID']
+    0015 [line  434] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0016 [line  434] 0x80004016  JMP        A=0 sBx=2
+    0017 [line  435] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0018 [line  435] 0x010000DE  RETURN     A=3 B=2 C=0
+    0019 [line  437] 0x0000405A  TEST       A=1 B=0 C=1
+    0020 [line  437] 0x80004016  JMP        A=0 sBx=2
+    0021 [line  438] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0022 [line  438] 0x010000DE  RETURN     A=3 B=2 C=0
+    0023 [line  440] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='BinaryReader'
+    0024 [line  440] 0x01C200C6  GETTABLE   R3 = R3[K[8]='Create']
+    0025 [line  440] 0x00800100  MOVE       R4 = R1
+    0026 [line  440] 0x010080DC  CALL       A=3 B=2 C=2
+    0027 [line  441] 0x00024105  GETGLOBAL  R4 = GLOBAL K[9]='assert'
+    0028 [line  441] 0x01800140  MOVE       R5 = R3
+    0029 [line  441] 0x0100411C  CALL       A=4 B=2 C=1
+    0030 [line  443] 0x0000010A  NEWTABLE   A=4 B=0 C=0 Bx=0
+    0031 [line  444] 0x01C28146  GETTABLE   R5 = R3[K[10]='position']
+    0032 [line  444] 0x01C2C186  GETTABLE   R6 = R3[K[11]='length']
+    0033 [line  444] 0x02818018  LT         A=0 B=R5 C=R6
+    0034 [line  444] 0x8008C016  JMP        A=0 sBx=36
+    0035 [line  445] 0x01C3014B  SELF       A=5 B=3 C=268 Bx=1804
+    0036 [line  445] 0x0100815C  CALL       A=5 B=2 C=2
+    0037 [line  446] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0038 [line  446] 0x03014186  GETTABLE   R6 = R6[R5]
+    0039 [line  447] 0x0000019A  TEST       A=6 B=0 C=0
+    0040 [line  447] 0x80058016  JMP        A=0 sBx=23
+    0041 [line  448] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0042 [line  448] 0x03C341C6  GETTABLE   R7 = R7[K[13]='extractOneSystemWildCard']
+    0043 [line  448] 0x02800200  MOVE       R8 = R5
+    0044 [line  448] 0x01800240  MOVE       R9 = R3
+    0045 [line  448] 0x0180C1DC  CALL       A=7 B=3 C=3
+    0046 [line  449] 0x01800244  GETUPVAL   A=9 B=3 C=0 Bx=1536
+    0047 [line  449] 0x04C38246  GETTABLE   R9 = R9[K[14]='PLAYER_NAME']
+    0048 [line  449] 0x02824057  EQ         A=1 B=R5 C=R9
+    0049 [line  449] 0x8000C016  JMP        A=0 sBx=4
+    0050 [line  449] 0x01800244  GETUPVAL   A=9 B=3 C=0 Bx=1536
+    0051 [line  449] 0x04C3C246  GETTABLE   R9 = R9[K[15]='PLAYER_NAME_2']
+    0052 [line  449] 0x02824017  EQ         A=0 B=R5 C=R9
+    0053 [line  449] 0x7FFA0016  JMP        A=0 sBx=-23
+    0054 [line  450] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0055 [line  450] 0x04C10246  GETTABLE   R9 = R9[K[4]='Instance']
+    0056 [line  450] 0x0080825C  CALL       A=9 B=1 C=2
+    0057 [line  450] 0x04C14246  GETTABLE   R9 = R9[K[5]='m_HostPlayer']
+    0058 [line  450] 0x04C18246  GETTABLE   R9 = R9[K[6]='ID']
+    0059 [line  450] 0x04024017  EQ         A=0 B=R8 C=R9
+    0060 [line  450] 0x7FF84016  JMP        A=0 sBx=-30
+    0061 [line  451] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0062 [line  451] 0x0100025E  RETURN     A=9 B=2 C=0
+    0063 [line  453] 0x7FF78016  JMP        A=0 sBx=-33
+    0064 [line  455] 0x000401C5  GETGLOBAL  R7 = GLOBAL K[16]='warn'
+    0065 [line  455] 0x00044201  LOADK      R8 = K[17]='unknown system speak wildcard type: '
+    0066 [line  455] 0x00048245  GETGLOBAL  R9 = GLOBAL K[18]='tostring'
+    0067 [line  455] 0x02800280  MOVE       R10 = R5
+    0068 [line  455] 0x0100025C  CALL       A=9 B=2 C=0
+    0069 [line  455] 0x000041DC  CALL       A=7 B=0 C=1
+    0070 [line  456] 0x7FF5C016  JMP        A=0 sBx=-40
+    0071 [line  459] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0072 [line  459] 0x0100015E  RETURN     A=5 B=2 C=0
+    0073 [line  460] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 73
+    'msgData': 0 -> 73
+    'src_id': 0 -> 73
+    'reader': 27 -> 73
+    'wildCardValueMap': 31 -> 73
+    'wildType': 37 -> 70
+    'typeName': 39 -> 70
+    'temp': 46 -> 63
+    'param': 46 -> 63
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x4249
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 465 - 492
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'BinaryReader'
+    K[001] = 'Create'
+    K[002] = 'assert'
+    K[003] = 'position'
+    K[004] = 'length'
+    K[005] = 'ReadInt16'
+    K[006] = 'extractOneSystemWildCard'
+    K[007] = 'require'
+    K[008] = 'Chat.ECUITextUtility'
+    K[009] = 'HtmlEncodeEscapedString'
+    K[010] = 'PLAYER_NAME'
+    K[011] = 'player_id'
+    K[012] = 'warn'
+    K[013] = 'unknown system speak wildcard type: '
+    K[014] = 'tostring'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  466] 0x0000401A  TEST       A=0 B=0 C=1
+    0001 [line  466] 0x80004016  JMP        A=0 sBx=2
+    0002 [line  467] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0003 [line  467] 0x0100005E  RETURN     A=1 B=2 C=0
+    0004 [line  469] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='BinaryReader'
+    0005 [line  469] 0x00C04046  GETTABLE   R1 = R1[K[1]='Create']
+    0006 [line  469] 0x00000080  MOVE       R2 = R0
+    0007 [line  469] 0x0100805C  CALL       A=1 B=2 C=2
+    0008 [line  470] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='assert'
+    0009 [line  470] 0x008000C0  MOVE       R3 = R1
+    0010 [line  470] 0x0100409C  CALL       A=2 B=2 C=1
+    0011 [line  472] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0012 [line  473] 0x00C0C0C6  GETTABLE   R3 = R1[K[3]='position']
+    0013 [line  473] 0x00C10106  GETTABLE   R4 = R1[K[4]='length']
+    0014 [line  473] 0x01810018  LT         A=0 B=R3 C=R4
+    0015 [line  473] 0x80080016  JMP        A=0 sBx=33
+    0016 [line  474] 0x00C140CB  SELF       A=3 B=1 C=261 Bx=773
+    0017 [line  474] 0x010080DC  CALL       A=3 B=2 C=2
+    0018 [line  475] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0019 [line  475] 0x0200C106  GETTABLE   R4 = R4[R3]
+    0020 [line  476] 0x0000011A  TEST       A=4 B=0 C=0
+    0021 [line  476] 0x8004C016  JMP        A=0 sBx=20
+    0022 [line  477] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0023 [line  477] 0x02C18146  GETTABLE   R5 = R5[K[6]='extractOneSystemWildCard']
+    0024 [line  477] 0x01800180  MOVE       R6 = R3
+    0025 [line  477] 0x008001C0  MOVE       R7 = R1
+    0026 [line  477] 0x0180C15C  CALL       A=5 B=3 C=3
+    0027 [line  478] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='require'
+    0028 [line  478] 0x00020201  LOADK      R8 = K[8]='Chat.ECUITextUtility'
+    0029 [line  478] 0x010081DC  CALL       A=7 B=2 C=2
+    0030 [line  479] 0x03C24206  GETTABLE   R8 = R7[K[9]='HtmlEncodeEscapedString']
+    0031 [line  479] 0x02800240  MOVE       R9 = R5
+    0032 [line  479] 0x0100821C  CALL       A=8 B=2 C=2
+    0033 [line  480] 0x02020089  SETTABLE   R2[R4] = R8
+    0034 [line  481] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0035 [line  481] 0x04C28246  GETTABLE   R9 = R9[K[10]='PLAYER_NAME']
+    0036 [line  481] 0x01824017  EQ         A=0 B=R3 C=R9
+    0037 [line  481] 0x7FF94016  JMP        A=0 sBx=-26
+    0038 [line  482] 0x0000019A  TEST       A=6 B=0 C=0
+    0039 [line  482] 0x7FF8C016  JMP        A=0 sBx=-28
+    0040 [line  483] 0x85818089  SETTABLE   R2[K[11]='player_id'] = R6
+    0041 [line  485] 0x7FF84016  JMP        A=0 sBx=-30
+    0042 [line  487] 0x00030145  GETGLOBAL  R5 = GLOBAL K[12]='warn'
+    0043 [line  487] 0x00034181  LOADK      R6 = K[13]='unknown system speak wildcard type: '
+    0044 [line  487] 0x000381C5  GETGLOBAL  R7 = GLOBAL K[14]='tostring'
+    0045 [line  487] 0x01800200  MOVE       R8 = R3
+    0046 [line  487] 0x010001DC  CALL       A=7 B=2 C=0
+    0047 [line  487] 0x0000415C  CALL       A=5 B=0 C=1
+    0048 [line  488] 0x7FF68016  JMP        A=0 sBx=-37
+    0049 [line  491] 0x0100009E  RETURN     A=2 B=2 C=0
+    0050 [line  492] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'msgData': 0 -> 50
+    'reader': 8 -> 50
+    'wildCardValueMap': 12 -> 50
+    'wildType': 18 -> 48
+    'typeName': 20 -> 48
+    'temp': 27 -> 41
+    'param': 27 -> 41
+    'ECUITextUtility': 30 -> 41
+    'value': 33 -> 41
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x4617
+    Source : '@lua\\chat\\ecsystemspeak.lua'
+    Lines  : 504 - 545
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 5.0
+    K[001] = 'require'
+    K[002] = 'Social.ECNationMan'
+    K[003] = 'Instance'
+    K[004] = 'getMyNationWarStatus'
+    K[005] = 'WAR_STATUS'
+    K[006] = 'XUAN_ZHAN'
+    K[007] = 'BEI_XUAN_ZHAN'
+    K[008] = 'GetNationWarInfo'
+    K[009] = 6.0
+    K[010] = 82.0
+    K[011] = 'GetNationInfo'
+    K[012] = 22.0
+    K[013] = 23.0
+    K[014] = 'GUI.ECNationWarConvTool'
+    K[015] = 'StopCounter'
+    K[016] = 38.0
+    K[017] = 'BinaryReader'
+    K[018] = 'Create'
+    K[019] = 'assert'
+    K[020] = 'position'
+    K[021] = 'length'
+    K[022] = 'ReadInt16'
+    K[023] = 'TITLE_NAME'
+    K[024] = 'extractOneSystemWildCard'
+    K[025] = 'ReadInt32'
+    K[026] = 'IsOpen'
+    K[027] = 7208.0
+    K[028] = 414.0
+    K[029] = 2779.0
+    K[030] = 'Blessing.ECBlessingMan'
+    K[031] = 'PlayFlowerFx'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  505] 0x00400017  EQ         A=0 B=R0 C=K[0]=5.0
+    0001 [line  505] 0x80044016  JMP        A=0 sBx=18
+    0002 [line  506] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='require'
+    0003 [line  506] 0x000080C1  LOADK      R3 = K[2]='Social.ECNationMan'
+    0004 [line  506] 0x0100809C  CALL       A=2 B=2 C=2
+    0005 [line  507] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='Instance']
+    0006 [line  507] 0x008080DC  CALL       A=3 B=1 C=2
+    0007 [line  507] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+    0008 [line  507] 0x010080DC  CALL       A=3 B=2 C=2
+    0009 [line  508] 0x01414106  GETTABLE   R4 = R2[K[5]='WAR_STATUS']
+    0010 [line  508] 0x02418106  GETTABLE   R4 = R4[K[6]='XUAN_ZHAN']
+    0011 [line  508] 0x01810057  EQ         A=1 B=R3 C=R4
+    0012 [line  508] 0x80140016  JMP        A=0 sBx=81
+    0013 [line  508] 0x01414106  GETTABLE   R4 = R2[K[5]='WAR_STATUS']
+    0014 [line  508] 0x0241C106  GETTABLE   R4 = R4[K[7]='BEI_XUAN_ZHAN']
+    0015 [line  508] 0x01810057  EQ         A=1 B=R3 C=R4
+    0016 [line  508] 0x80130016  JMP        A=0 sBx=77
+    0017 [line  509] 0x01420106  GETTABLE   R4 = R2[K[8]='GetNationWarInfo']
+    0018 [line  509] 0x0080411C  CALL       A=4 B=1 C=1
+    0019 [line  510] 0x80124016  JMP        A=0 sBx=74
+    0020 [line  511] 0x00424017  EQ         A=0 B=R0 C=K[9]=6.0
+    0021 [line  511] 0x80000016  JMP        A=0 sBx=1
+    0022 [line  511] 0x80118016  JMP        A=0 sBx=71
+    0023 [line  516] 0x00428017  EQ         A=0 B=R0 C=K[10]=82.0
+    0024 [line  516] 0x80014016  JMP        A=0 sBx=6
+    0025 [line  517] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='require'
+    0026 [line  517] 0x000080C1  LOADK      R3 = K[2]='Social.ECNationMan'
+    0027 [line  517] 0x0100809C  CALL       A=2 B=2 C=2
+    0028 [line  518] 0x0142C0C6  GETTABLE   R3 = R2[K[11]='GetNationInfo']
+    0029 [line  518] 0x008040DC  CALL       A=3 B=1 C=1
+    0030 [line  518] 0x800F8016  JMP        A=0 sBx=63
+    0031 [line  519] 0x00430057  EQ         A=1 B=R0 C=K[12]=22.0
+    0032 [line  519] 0x80004016  JMP        A=0 sBx=2
+    0033 [line  519] 0x00434017  EQ         A=0 B=R0 C=K[13]=23.0
+    0034 [line  519] 0x8001C016  JMP        A=0 sBx=8
+    0035 [line  521] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='require'
+    0036 [line  521] 0x000380C1  LOADK      R3 = K[14]='GUI.ECNationWarConvTool'
+    0037 [line  521] 0x0100809C  CALL       A=2 B=2 C=2
+    0038 [line  522] 0x0140C0C6  GETTABLE   R3 = R2[K[3]='Instance']
+    0039 [line  522] 0x008080DC  CALL       A=3 B=1 C=2
+    0040 [line  522] 0x01C3C0CB  SELF       A=3 B=3 C=271 Bx=1807
+    0041 [line  522] 0x010040DC  CALL       A=3 B=2 C=1
+    0042 [line  522] 0x800C8016  JMP        A=0 sBx=51
+    0043 [line  523] 0x00440017  EQ         A=0 B=R0 C=K[16]=38.0
+    0044 [line  523] 0x800C0016  JMP        A=0 sBx=49
+    0045 [line  523] 0x0000005A  TEST       A=1 B=0 C=0
+    0046 [line  523] 0x800B8016  JMP        A=0 sBx=47
+    0047 [line  524] 0x00044085  GETGLOBAL  R2 = GLOBAL K[17]='BinaryReader'
+    0048 [line  524] 0x01448086  GETTABLE   R2 = R2[K[18]='Create']
+    0049 [line  524] 0x008000C0  MOVE       R3 = R1
+    0050 [line  524] 0x0100809C  CALL       A=2 B=2 C=2
+    0051 [line  525] 0x0004C0C5  GETGLOBAL  R3 = GLOBAL K[19]='assert'
+    0052 [line  525] 0x01000100  MOVE       R4 = R2
+    0053 [line  525] 0x010040DC  CALL       A=3 B=2 C=1
+    0054 [line  526] 0x014500C6  GETTABLE   R3 = R2[K[20]='position']
+    0055 [line  526] 0x01454106  GETTABLE   R4 = R2[K[21]='length']
+    0056 [line  526] 0x01810018  LT         A=0 B=R3 C=R4
+    0057 [line  526] 0x8008C016  JMP        A=0 sBx=36
+    0058 [line  527] 0x014580CB  SELF       A=3 B=2 C=278 Bx=1302
+    0059 [line  527] 0x010080DC  CALL       A=3 B=2 C=2
+    0060 [line  528] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0061 [line  528] 0x0200C106  GETTABLE   R4 = R4[R3]
+    0062 [line  529] 0x0000011A  TEST       A=4 B=0 C=0
+    0063 [line  529] 0x7FFD4016  JMP        A=0 sBx=-10
+    0064 [line  530] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0065 [line  530] 0x02C5C146  GETTABLE   R5 = R5[K[23]='TITLE_NAME']
+    0066 [line  530] 0x01814057  EQ         A=1 B=R3 C=R5
+    0067 [line  530] 0x80014016  JMP        A=0 sBx=6
+    0068 [line  531] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0069 [line  531] 0x02C60146  GETTABLE   R5 = R5[K[24]='extractOneSystemWildCard']
+    0070 [line  531] 0x01800180  MOVE       R6 = R3
+    0071 [line  531] 0x010001C0  MOVE       R7 = R2
+    0072 [line  531] 0x0180815C  CALL       A=5 B=3 C=2
+    0073 [line  531] 0x7FFAC016  JMP        A=0 sBx=-20
+    0074 [line  533] 0x0146414B  SELF       A=5 B=2 C=281 Bx=1305
+    0075 [line  533] 0x0100815C  CALL       A=5 B=2 C=2
+    0076 [line  534] 0x01800184  GETUPVAL   A=6 B=3 C=0 Bx=1536
+    0077 [line  534] 0x03468186  GETTABLE   R6 = R6[K[26]='IsOpen']
+    0078 [line  534] 0x0006C1C1  LOADK      R7 = K[27]=7208.0
+    0079 [line  534] 0x0100819C  CALL       A=6 B=2 C=2
+    0080 [line  535] 0x0000419A  TEST       A=6 B=0 C=1
+    0081 [line  535] 0x7FF8C016  JMP        A=0 sBx=-28
+    0082 [line  536] 0x02C70057  EQ         A=1 B=R5 C=K[28]=414.0
+    0083 [line  536] 0x80004016  JMP        A=0 sBx=2
+    0084 [line  536] 0x02C74017  EQ         A=0 B=R5 C=K[29]=2779.0
+    0085 [line  536] 0x7FF7C016  JMP        A=0 sBx=-32
+    0086 [line  537] 0x000041C5  GETGLOBAL  R7 = GLOBAL K[1]='require'
+    0087 [line  537] 0x00078201  LOADK      R8 = K[30]='Blessing.ECBlessingMan'
+    0088 [line  537] 0x010081DC  CALL       A=7 B=2 C=2
+    0089 [line  538] 0x03C0C206  GETTABLE   R8 = R7[K[3]='Instance']
+    0090 [line  538] 0x0080821C  CALL       A=8 B=1 C=2
+    0091 [line  538] 0x0447C20B  SELF       A=8 B=8 C=287 Bx=4383
+    0092 [line  538] 0x0100421C  CALL       A=8 B=2 C=1
+    0093 [line  542] 0x7FF5C016  JMP        A=0 sBx=-40
+    0094 [line  545] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'speakId': 0 -> 94
+    'msgData': 0 -> 94
+    'ECNationMan': 5 -> 19
+    'mystatus': 9 -> 19
+    'ECNationMan': 28 -> 30
+    'ECNationWarConvTool': 38 -> 42
+    'reader': 51 -> 94
+    'wildType': 60 -> 93
+    'typeName': 62 -> 93
+    'temp': 73 -> 73
+    'titleId': 76 -> 93
+    'isOpen': 80 -> 93
+    'ECBlessingMan': 89 -> 93

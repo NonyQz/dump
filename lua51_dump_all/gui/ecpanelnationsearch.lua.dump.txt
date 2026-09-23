@@ -1,0 +1,1863 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpanelnationsearch.lua
+SIZE: 17114
+PARSED: 17114
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpanelnationsearch.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 20
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Types.Vector3'
+K[003] = 'GUI.ECPanelBase'
+K[004] = 'ForwardDeclare'
+K[005] = 'ECGame'
+K[006] = 'Protocol.NationPeopleSearch_Re'
+K[007] = 'Event.NotifyClick'
+K[008] = 'Utility.HtmlUtility'
+K[009] = 'Social.ECNationMan'
+K[010] = 'GUI.ECGUITools'
+K[011] = 'Extend'
+K[012] = 'ECPanelNationSearch'
+K[013] = 'define'
+K[014] = 'field'
+K[015] = 'boolean'
+K[016] = 'm_continue'
+K[017] = False
+K[018] = 'number'
+K[019] = 'm_remainCount'
+K[020] = 0.0
+K[021] = 'table'
+K[022] = 'm_peopleList'
+K[023] = None
+K[024] = 'string'
+K[025] = 'm_keywords'
+K[026] = ''
+K[027] = 'm_officer_id'
+K[028] = 'm_waitAppoint'
+K[029] = 'm_forselect'
+K[030] = 'm_appoint'
+K[031] = 'function'
+K[032] = 'm_openfunc'
+K[033] = 'm_clickfunc'
+K[034] = 'static'
+K[035] = '=>'
+K[036] = 'Instance'
+K[037] = 'method'
+K[038] = 'Toggle'
+K[039] = 'ShowView'
+K[040] = 'override'
+K[041] = 'OnCreate'
+K[042] = 'OnDestroy'
+K[043] = 'OpenPanel'
+K[044] = 'NotifyPeopleSearch_Re'
+K[045] = 'SearchPeopleInCopy_Re'
+K[046] = 'NeedContinue'
+K[047] = 'SetOfficerId'
+K[048] = 'Update'
+K[049] = 'EnableAddBtn'
+K[050] = 'SetSearchTitle'
+K[051] = 'onClick'
+K[052] = 'onPress'
+K[053] = 'onDrag'
+K[054] = 'onNationConfirm'
+K[055] = 'onNationSearch'
+K[056] = 'IsInCopyHasCommander'
+K[057] = 'NationPeopleSearch'
+K[058] = 'userdata'
+K[059] = 'NationPeopleSearch2'
+K[060] = 'NationAppoint'
+K[061] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    6] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    6] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    6] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    7] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    7] 0x00008081  LOADK      R2 = K[2]='Types.Vector3'
+0005 [line    7] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    8] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    8] 0x0000C0C1  LOADK      R3 = K[3]='GUI.ECPanelBase'
+0008 [line    8] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    9] 0x004100C6  GETTABLE   R3 = R0[K[4]='ForwardDeclare']
+0010 [line    9] 0x00014101  LOADK      R4 = K[5]='ECGame'
+0011 [line    9] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line   10] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line   10] 0x00018141  LOADK      R5 = K[6]='Protocol.NationPeopleSearch_Re'
+0014 [line   10] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   11] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line   11] 0x0001C181  LOADK      R6 = K[7]='Event.NotifyClick'
+0017 [line   11] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line   12] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line   12] 0x000201C1  LOADK      R7 = K[8]='Utility.HtmlUtility'
+0020 [line   12] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line   13] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line   13] 0x00024201  LOADK      R8 = K[9]='Social.ECNationMan'
+0023 [line   13] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   14] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line   14] 0x00028241  LOADK      R9 = K[10]='GUI.ECGUITools'
+0026 [line   14] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   16] 0x0042C246  GETTABLE   R9 = R0[K[11]='Extend']
+0028 [line   16] 0x01000280  MOVE       R10 = R2
+0029 [line   16] 0x000302C1  LOADK      R11 = K[12]='ECPanelNationSearch'
+0030 [line   16] 0x0180825C  CALL       A=9 B=3 C=2
+0031 [line   18] 0x04C34286  GETTABLE   R10 = R9[K[13]='define']
+0032 [line   20] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+0033 [line   21] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0034 [line   21] 0x0003C341  LOADK      R13 = K[15]='boolean'
+0035 [line   21] 0x0100831C  CALL       A=12 B=2 C=2
+0036 [line   21] 0x88444309  SETTABLE   R12[K[16]='m_continue'] = K[17]=False
+0037 [line   22] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0038 [line   22] 0x00048341  LOADK      R13 = K[18]='number'
+0039 [line   22] 0x0100831C  CALL       A=12 B=2 C=2
+0040 [line   22] 0x89C50309  SETTABLE   R12[K[19]='m_remainCount'] = K[20]=0.0
+0041 [line   23] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0042 [line   23] 0x00054341  LOADK      R13 = K[21]='table'
+0043 [line   23] 0x0100831C  CALL       A=12 B=2 C=2
+0044 [line   23] 0x8B45C309  SETTABLE   R12[K[22]='m_peopleList'] = K[23]=None
+0045 [line   24] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0046 [line   24] 0x00060341  LOADK      R13 = K[24]='string'
+0047 [line   24] 0x0100831C  CALL       A=12 B=2 C=2
+0048 [line   24] 0x8CC68309  SETTABLE   R12[K[25]='m_keywords'] = K[26]=''
+0049 [line   25] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0050 [line   25] 0x00048341  LOADK      R13 = K[18]='number'
+0051 [line   25] 0x0100831C  CALL       A=12 B=2 C=2
+0052 [line   25] 0x8DC50309  SETTABLE   R12[K[27]='m_officer_id'] = K[20]=0.0
+0053 [line   26] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0054 [line   26] 0x0003C341  LOADK      R13 = K[15]='boolean'
+0055 [line   26] 0x0100831C  CALL       A=12 B=2 C=2
+0056 [line   26] 0x8E444309  SETTABLE   R12[K[28]='m_waitAppoint'] = K[17]=False
+0057 [line   27] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0058 [line   27] 0x00054341  LOADK      R13 = K[21]='table'
+0059 [line   27] 0x0100831C  CALL       A=12 B=2 C=2
+0060 [line   27] 0x8EC5C309  SETTABLE   R12[K[29]='m_forselect'] = K[23]=None
+0061 [line   28] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0062 [line   28] 0x00054341  LOADK      R13 = K[21]='table'
+0063 [line   28] 0x0100831C  CALL       A=12 B=2 C=2
+0064 [line   28] 0x8F45C309  SETTABLE   R12[K[30]='m_appoint'] = K[23]=None
+0065 [line   29] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0066 [line   29] 0x0007C341  LOADK      R13 = K[31]='function'
+0067 [line   29] 0x0100831C  CALL       A=12 B=2 C=2
+0068 [line   29] 0x9045C309  SETTABLE   R12[K[32]='m_openfunc'] = K[23]=None
+0069 [line   30] 0x05438306  GETTABLE   R12 = R10[K[14]='field']
+0070 [line   30] 0x0007C341  LOADK      R13 = K[31]='function'
+0071 [line   30] 0x0100831C  CALL       A=12 B=2 C=2
+0072 [line   30] 0x90C5C309  SETTABLE   R12[K[33]='m_clickfunc'] = K[23]=None
+0073 [line   32] 0x05488306  GETTABLE   R12 = R10[K[34]='static']
+0074 [line   32] 0x0008C341  LOADK      R13 = K[35]='=>'
+0075 [line   32] 0x04800380  MOVE       R14 = R9
+0076 [line   32] 0x0180831C  CALL       A=12 B=3 C=2
+0077 [line   37] 0x00000364  CLOSURE    R13 = PROTO[0]
+0078 [line   37] 0x05800000  MOVE       R0 = R11
+0079 [line   37] 0x04800000  MOVE       R0 = R9
+0080 [line   37] 0x92034309  SETTABLE   R12[K[36]='Instance'] = R13
+0081 [line   39] 0x05494306  GETTABLE   R12 = R10[K[37]='method']
+0082 [line   39] 0x0080831C  CALL       A=12 B=1 C=2
+0083 [line   45] 0x00004364  CLOSURE    R13 = PROTO[1]
+0084 [line   45] 0x93034309  SETTABLE   R12[K[38]='Toggle'] = R13
+0085 [line   47] 0x05494306  GETTABLE   R12 = R10[K[37]='method']
+0086 [line   47] 0x0080831C  CALL       A=12 B=1 C=2
+0087 [line   59] 0x00008364  CLOSURE    R13 = PROTO[2]
+0088 [line   59] 0x04000000  MOVE       R0 = R8
+0089 [line   59] 0x93834309  SETTABLE   R12[K[39]='ShowView'] = R13
+0090 [line   63] 0x0000C324  CLOSURE    R12 = PROTO[3]
+0091 [line   68] 0x00010364  CLOSURE    R13 = PROTO[4]
+0092 [line   68] 0x04800000  MOVE       R0 = R9
+0093 [line   70] 0x054A0386  GETTABLE   R14 = R10[K[40]='override']
+0094 [line   70] 0x0080839C  CALL       A=14 B=1 C=2
+0095 [line   79] 0x000143E4  CLOSURE    R15 = PROTO[5]
+0096 [line   79] 0x01800000  MOVE       R0 = R3
+0097 [line   79] 0x02000000  MOVE       R0 = R4
+0098 [line   79] 0x06800000  MOVE       R0 = R13
+0099 [line   79] 0x02800000  MOVE       R0 = R5
+0100 [line   79] 0x06000000  MOVE       R0 = R12
+0101 [line   79] 0x04000000  MOVE       R0 = R8
+0102 [line   79] 0x9483C389  SETTABLE   R14[K[41]='OnCreate'] = R15
+0103 [line   81] 0x054A0386  GETTABLE   R14 = R10[K[40]='override']
+0104 [line   81] 0x0080839C  CALL       A=14 B=1 C=2
+0105 [line   93] 0x000183E4  CLOSURE    R15 = PROTO[6]
+0106 [line   93] 0x01800000  MOVE       R0 = R3
+0107 [line   93] 0x02000000  MOVE       R0 = R4
+0108 [line   93] 0x06800000  MOVE       R0 = R13
+0109 [line   93] 0x02800000  MOVE       R0 = R5
+0110 [line   93] 0x06000000  MOVE       R0 = R12
+0111 [line   93] 0x9503C389  SETTABLE   R14[K[42]='OnDestroy'] = R15
+0112 [line   95] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0113 [line   95] 0x0007C3C1  LOADK      R15 = K[31]='function'
+0114 [line   95] 0x0007C401  LOADK      R16 = K[31]='function'
+0115 [line   95] 0x0180839C  CALL       A=14 B=3 C=2
+0116 [line   99] 0x0001C3E4  CLOSURE    R15 = PROTO[7]
+0117 [line   99] 0x9583C389  SETTABLE   R14[K[43]='OpenPanel'] = R15
+0118 [line  101] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0119 [line  101] 0x000543C1  LOADK      R15 = K[21]='table'
+0120 [line  101] 0x0100839C  CALL       A=14 B=2 C=2
+0121 [line  118] 0x000203E4  CLOSURE    R15 = PROTO[8]
+0122 [line  118] 0x9603C389  SETTABLE   R14[K[44]='NotifyPeopleSearch_Re'] = R15
+0123 [line  120] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0124 [line  120] 0x000543C1  LOADK      R15 = K[21]='table'
+0125 [line  120] 0x0100839C  CALL       A=14 B=2 C=2
+0126 [line  133] 0x000243E4  CLOSURE    R15 = PROTO[9]
+0127 [line  133] 0x9683C389  SETTABLE   R14[K[45]='SearchPeopleInCopy_Re'] = R15
+0128 [line  135] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0129 [line  135] 0x0008C3C1  LOADK      R15 = K[35]='=>'
+0130 [line  135] 0x0003C401  LOADK      R16 = K[15]='boolean'
+0131 [line  135] 0x0180839C  CALL       A=14 B=3 C=2
+0132 [line  138] 0x000283E4  CLOSURE    R15 = PROTO[10]
+0133 [line  138] 0x9703C389  SETTABLE   R14[K[46]='NeedContinue'] = R15
+0134 [line  140] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0135 [line  140] 0x000483C1  LOADK      R15 = K[18]='number'
+0136 [line  140] 0x0100839C  CALL       A=14 B=2 C=2
+0137 [line  142] 0x0002C3E4  CLOSURE    R15 = PROTO[11]
+0138 [line  142] 0x9783C389  SETTABLE   R14[K[47]='SetOfficerId'] = R15
+0139 [line  145] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0140 [line  145] 0x0080839C  CALL       A=14 B=1 C=2
+0141 [line  200] 0x000303E4  CLOSURE    R15 = PROTO[12]
+0142 [line  200] 0x00800000  MOVE       R0 = R1
+0143 [line  200] 0x04000000  MOVE       R0 = R8
+0144 [line  200] 0x9803C389  SETTABLE   R14[K[48]='Update'] = R15
+0145 [line  201] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0146 [line  201] 0x0080839C  CALL       A=14 B=1 C=2
+0147 [line  203] 0x000343E4  CLOSURE    R15 = PROTO[13]
+0148 [line  203] 0x04000000  MOVE       R0 = R8
+0149 [line  203] 0x9883C389  SETTABLE   R14[K[49]='EnableAddBtn'] = R15
+0150 [line  204] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0151 [line  204] 0x000603C1  LOADK      R15 = K[24]='string'
+0152 [line  204] 0x0100839C  CALL       A=14 B=2 C=2
+0153 [line  209] 0x000383E4  CLOSURE    R15 = PROTO[14]
+0154 [line  209] 0x04000000  MOVE       R0 = R8
+0155 [line  209] 0x9903C389  SETTABLE   R14[K[50]='SetSearchTitle'] = R15
+0156 [line  210] 0x05494386  GETTABLE   R14 = R10[K[37]='method']
+0157 [line  210] 0x000603C1  LOADK      R15 = K[24]='string'
+0158 [line  210] 0x0100839C  CALL       A=14 B=2 C=2
+0159 [line  239] 0x0003C3E4  CLOSURE    R15 = PROTO[15]
+0160 [line  239] 0x9983C389  SETTABLE   R14[K[51]='onClick'] = R15
+0161 [line  240] 0x00050381  LOADK      R14 = K[20]=0.0
+0162 [line  241] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0163 [line  241] 0x00060401  LOADK      R16 = K[24]='string'
+0164 [line  241] 0x0003C441  LOADK      R17 = K[15]='boolean'
+0165 [line  241] 0x018083DC  CALL       A=15 B=3 C=2
+0166 [line  251] 0x00040424  CLOSURE    R16 = PROTO[16]
+0167 [line  251] 0x07000000  MOVE       R0 = R14
+0168 [line  251] 0x9A0403C9  SETTABLE   R15[K[52]='onPress'] = R16
+0169 [line  252] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0170 [line  252] 0x00060401  LOADK      R16 = K[24]='string'
+0171 [line  252] 0x00048441  LOADK      R17 = K[18]='number'
+0172 [line  252] 0x00048481  LOADK      R18 = K[18]='number'
+0173 [line  252] 0x020083DC  CALL       A=15 B=4 C=2
+0174 [line  262] 0x00044424  CLOSURE    R16 = PROTO[17]
+0175 [line  262] 0x07000000  MOVE       R0 = R14
+0176 [line  262] 0x01800000  MOVE       R0 = R3
+0177 [line  262] 0x9A8403C9  SETTABLE   R15[K[53]='onDrag'] = R16
+0178 [line  264] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0179 [line  264] 0x008083DC  CALL       A=15 B=1 C=2
+0180 [line  299] 0x00048424  CLOSURE    R16 = PROTO[18]
+0181 [line  299] 0x01800000  MOVE       R0 = R3
+0182 [line  299] 0x03800000  MOVE       R0 = R7
+0183 [line  299] 0x9B0403C9  SETTABLE   R15[K[54]='onNationConfirm'] = R16
+0184 [line  301] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0185 [line  301] 0x008083DC  CALL       A=15 B=1 C=2
+0186 [line  321] 0x0004C424  CLOSURE    R16 = PROTO[19]
+0187 [line  321] 0x01800000  MOVE       R0 = R3
+0188 [line  321] 0x9B8403C9  SETTABLE   R15[K[55]='onNationSearch'] = R16
+0189 [line  324] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0190 [line  324] 0x0008C401  LOADK      R16 = K[35]='=>'
+0191 [line  324] 0x0003C441  LOADK      R17 = K[15]='boolean'
+0192 [line  324] 0x018083DC  CALL       A=15 B=3 C=2
+0193 [line  334] 0x00050424  CLOSURE    R16 = PROTO[20]
+0194 [line  334] 0x01800000  MOVE       R0 = R3
+0195 [line  334] 0x9C0403C9  SETTABLE   R15[K[56]='IsInCopyHasCommander'] = R16
+0196 [line  337] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0197 [line  337] 0x00060401  LOADK      R16 = K[24]='string'
+0198 [line  337] 0x00060441  LOADK      R17 = K[24]='string'
+0199 [line  337] 0x018083DC  CALL       A=15 B=3 C=2
+0200 [line  356] 0x00054424  CLOSURE    R16 = PROTO[21]
+0201 [line  356] 0x01800000  MOVE       R0 = R3
+0202 [line  356] 0x9C8403C9  SETTABLE   R15[K[57]='NationPeopleSearch'] = R16
+0203 [line  357] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0204 [line  357] 0x00060401  LOADK      R16 = K[24]='string'
+0205 [line  357] 0x000E8441  LOADK      R17 = K[58]='userdata'
+0206 [line  357] 0x018083DC  CALL       A=15 B=3 C=2
+0207 [line  364] 0x00058424  CLOSURE    R16 = PROTO[22]
+0208 [line  364] 0x01800000  MOVE       R0 = R3
+0209 [line  364] 0x9D8403C9  SETTABLE   R15[K[59]='NationPeopleSearch2'] = R16
+0210 [line  367] 0x054943C6  GETTABLE   R15 = R10[K[37]='method']
+0211 [line  367] 0x00060401  LOADK      R16 = K[24]='string'
+0212 [line  367] 0x00060441  LOADK      R17 = K[24]='string'
+0213 [line  367] 0x00048481  LOADK      R18 = K[18]='number'
+0214 [line  367] 0x000484C1  LOADK      R19 = K[18]='number'
+0215 [line  367] 0x028083DC  CALL       A=15 B=5 C=2
+0216 [line  381] 0x0005C424  CLOSURE    R16 = PROTO[23]
+0217 [line  381] 0x01800000  MOVE       R0 = R3
+0218 [line  381] 0x9E0403C9  SETTABLE   R15[K[60]='NationAppoint'] = R16
+0219 [line  389] 0x04CF43C6  GETTABLE   R15 = R9[K[61]='Commit']
+0220 [line  389] 0x008043DC  CALL       A=15 B=1 C=1
+0221 [line  390] 0x0100025E  RETURN     A=9 B=2 C=0
+0222 [line  390] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 222
+'EC': 6 -> 222
+'ECPanelBase': 9 -> 222
+'ECGame': 12 -> 222
+'NationPeopleSearch_Re': 15 -> 222
+'NotifyClick': 18 -> 222
+'HtmlUtility': 21 -> 222
+'ECNationMan': 24 -> 222
+'ECGUITools': 27 -> 222
+'ECPanelNationSearch': 31 -> 222
+'def': 32 -> 222
+'m_Instance': 33 -> 222
+'OnOtherPanelClick': 91 -> 222
+'NotifyPeopleSearch_Re': 93 -> 222
+'oldPosition': 162 -> 222
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x7B1
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 32 - 37
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   33] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   33] 0x0000401A  TEST       A=0 B=0 C=1
+    0002 [line   33] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   34] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   34] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   34] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   36] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   36] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   37] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x848
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 39 - 45
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'DestroyPanel'
+    K[002] = 'CreatePanel'
+    K[003] = 'RESPATH'
+    K[004] = 'Panel_Nation_Search'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   40] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line   40] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line   40] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   41] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0004 [line   41] 0x0100405C  CALL       A=1 B=2 C=1
+    0005 [line   41] 0x8000C016  JMP        A=0 sBx=4
+    0006 [line   43] 0x0040804B  SELF       A=1 B=0 C=258 Bx=258
+    0007 [line   43] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='RESPATH'
+    0008 [line   43] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Panel_Nation_Search']
+    0009 [line   43] 0x0180405C  CALL       A=1 B=3 C=1
+    0010 [line   45] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x92F
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 47 - 59
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'CreatePanel'
+    K[002] = 'RESPATH'
+    K[003] = 'Panel_Nation_Search'
+    K[004] = 'isnil'
+    K[005] = 'setVisible'
+    K[006] = 'FindChild'
+    K[007] = 'Namelist1'
+    K[008] = 'SetSearchTitle'
+    K[009] = 'StringTable'
+    K[010] = 'Get'
+    K[011] = 8008.0
+    K[012] = 'EnableAddBtn'
+    K[013] = 'm_openfunc'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   48] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line   48] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line   48] 0x80010016  JMP        A=0 sBx=5
+    0003 [line   49] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0004 [line   49] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='RESPATH'
+    0005 [line   49] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='Panel_Nation_Search']
+    0006 [line   49] 0x0180405C  CALL       A=1 B=3 C=1
+    0007 [line   49] 0x80068016  JMP        A=0 sBx=27
+    0008 [line   51] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0009 [line   51] 0x00C10046  GETTABLE   R1 = R1[K[4]='isnil']
+    0010 [line   51] 0x0000005A  TEST       A=1 B=0 C=0
+    0011 [line   51] 0x80000016  JMP        A=0 sBx=1
+    0012 [line   51] 0x0080001E  RETURN     A=0 B=1 C=0
+    0013 [line   52] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0014 [line   52] 0x00C14046  GETTABLE   R1 = R1[K[5]='setVisible']
+    0015 [line   52] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0016 [line   52] 0x0141808B  SELF       A=2 B=2 C=262 Bx=1286
+    0017 [line   52] 0x0001C101  LOADK      R4 = K[7]='Namelist1'
+    0018 [line   52] 0x0180809C  CALL       A=2 B=3 C=2
+    0019 [line   52] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0020 [line   52] 0x0180405C  CALL       A=1 B=3 C=1
+    0021 [line   53] 0x0042004B  SELF       A=1 B=0 C=264 Bx=264
+    0022 [line   53] 0x000240C5  GETGLOBAL  R3 = GLOBAL K[9]='StringTable'
+    0023 [line   53] 0x01C280C6  GETTABLE   R3 = R3[K[10]='Get']
+    0024 [line   53] 0x0002C101  LOADK      R4 = K[11]=8008.0
+    0025 [line   53] 0x010000DC  CALL       A=3 B=2 C=0
+    0026 [line   53] 0x0000405C  CALL       A=1 B=0 C=1
+    0027 [line   54] 0x0043004B  SELF       A=1 B=0 C=268 Bx=268
+    0028 [line   54] 0x0100405C  CALL       A=1 B=2 C=1
+    0029 [line   55] 0x00434046  GETTABLE   R1 = R0[K[13]='m_openfunc']
+    0030 [line   55] 0x0000005A  TEST       A=1 B=0 C=0
+    0031 [line   55] 0x80008016  JMP        A=0 sBx=3
+    0032 [line   56] 0x00434046  GETTABLE   R1 = R0[K[13]='m_openfunc']
+    0033 [line   56] 0x00000080  MOVE       R2 = R0
+    0034 [line   56] 0x0100405C  CALL       A=1 B=2 C=1
+    0035 [line   59] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xB6D
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 61 - 63
+    Params : 2
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   63] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 0
+    'event': 0 -> 0
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xBC2
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 66 - 68
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'NotifyPeopleSearch_Re'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   67] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   67] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line   67] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line   67] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0004 [line   67] 0x00800100  MOVE       R4 = R1
+    0005 [line   67] 0x0180409C  CALL       A=2 B=3 C=1
+    0006 [line   68] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 6
+    'event': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xC88
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 70 - 79
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'EventManager'
+    K[001] = 'addHandler'
+    K[002] = 'setVisible'
+    K[003] = 'm_panel'
+    K[004] = 'FindChild'
+    K[005] = 'Namelist1'
+    K[006] = 'SetSearchTitle'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 8008.0
+    K[010] = 'EnableAddBtn'
+    K[011] = 'm_openfunc'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   71] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   71] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0002 [line   71] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0003 [line   71] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line   71] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0005 [line   71] 0x0200405C  CALL       A=1 B=4 C=1
+    0006 [line   72] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0007 [line   72] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0008 [line   72] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0009 [line   72] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+    0010 [line   72] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+    0011 [line   72] 0x0200405C  CALL       A=1 B=4 C=1
+    0012 [line   73] 0x02800044  GETUPVAL   A=1 B=5 C=0 Bx=2560
+    0013 [line   73] 0x00C08046  GETTABLE   R1 = R1[K[2]='setVisible']
+    0014 [line   73] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0015 [line   73] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0016 [line   73] 0x00014101  LOADK      R4 = K[5]='Namelist1'
+    0017 [line   73] 0x0180809C  CALL       A=2 B=3 C=2
+    0018 [line   73] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0019 [line   73] 0x0180405C  CALL       A=1 B=3 C=1
+    0020 [line   74] 0x0041804B  SELF       A=1 B=0 C=262 Bx=262
+    0021 [line   74] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='StringTable'
+    0022 [line   74] 0x01C200C6  GETTABLE   R3 = R3[K[8]='Get']
+    0023 [line   74] 0x00024101  LOADK      R4 = K[9]=8008.0
+    0024 [line   74] 0x010000DC  CALL       A=3 B=2 C=0
+    0025 [line   74] 0x0000405C  CALL       A=1 B=0 C=1
+    0026 [line   75] 0x0042804B  SELF       A=1 B=0 C=266 Bx=266
+    0027 [line   75] 0x0100405C  CALL       A=1 B=2 C=1
+    0028 [line   76] 0x0042C046  GETTABLE   R1 = R0[K[11]='m_openfunc']
+    0029 [line   76] 0x0000005A  TEST       A=1 B=0 C=0
+    0030 [line   76] 0x80008016  JMP        A=0 sBx=3
+    0031 [line   77] 0x0042C046  GETTABLE   R1 = R0[K[11]='m_openfunc']
+    0032 [line   77] 0x00000080  MOVE       R2 = R0
+    0033 [line   77] 0x0100405C  CALL       A=1 B=2 C=1
+    0034 [line   79] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 34
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xF03
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 81 - 93
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'EventManager'
+    K[001] = 'removeHandler'
+    K[002] = 'm_officer_id'
+    K[003] = 0.0
+    K[004] = 'm_waitAppoint'
+    K[005] = False
+    K[006] = 'm_appoint'
+    K[007] = None
+    K[008] = 'm_peopleList'
+    K[009] = 'm_keywords'
+    K[010] = ''
+    K[011] = 'm_forselect'
+    K[012] = 'm_clickfunc'
+    K[013] = 'm_openfunc'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   82] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   82] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0002 [line   82] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0003 [line   82] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line   82] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0005 [line   82] 0x0200405C  CALL       A=1 B=4 C=1
+    0006 [line   83] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0007 [line   83] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0008 [line   83] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0009 [line   83] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+    0010 [line   83] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+    0011 [line   83] 0x0200405C  CALL       A=1 B=4 C=1
+    0012 [line   85] 0x8140C009  SETTABLE   R0[K[2]='m_officer_id'] = K[3]=0.0
+    0013 [line   86] 0x82414009  SETTABLE   R0[K[4]='m_waitAppoint'] = K[5]=False
+    0014 [line   87] 0x8341C009  SETTABLE   R0[K[6]='m_appoint'] = K[7]=None
+    0015 [line   88] 0x8441C009  SETTABLE   R0[K[8]='m_peopleList'] = K[7]=None
+    0016 [line   89] 0x84C28009  SETTABLE   R0[K[9]='m_keywords'] = K[10]=''
+    0017 [line   90] 0x85C1C009  SETTABLE   R0[K[11]='m_forselect'] = K[7]=None
+    0018 [line   91] 0x8641C009  SETTABLE   R0[K[12]='m_clickfunc'] = K[7]=None
+    0019 [line   92] 0x86C1C009  SETTABLE   R0[K[13]='m_openfunc'] = K[7]=None
+    0020 [line   93] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1108
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 95 - 99
+    Params : 3
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_openfunc'
+    K[001] = 'm_clickfunc'
+    K[002] = 'Toggle'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   96] 0x80004009  SETTABLE   R0[K[0]='m_openfunc'] = R1
+    0001 [line   97] 0x80808009  SETTABLE   R0[K[1]='m_clickfunc'] = R2
+    0002 [line   98] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+    0003 [line   98] 0x010040DC  CALL       A=3 B=2 C=1
+    0004 [line   99] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 4
+    'opencall': 0 -> 4
+    'clickcall': 0 -> 4
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x11C1
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 101 - 118
+    Params : 2
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'qualified_peoples'
+    K[002] = 'm_vec'
+    K[003] = 'm_remainCount'
+    K[004] = 'remain_numbers'
+    K[005] = 'print'
+    K[006] = 'SearchCount:'
+    K[007] = 'RemainCount:'
+    K[008] = 'm_peopleList'
+    K[009] = 'pairs'
+    K[010] = 'table'
+    K[011] = 'insert'
+    K[012] = 'role_id'
+    K[013] = 'role_name'
+    K[014] = 'getStringUnicode'
+    K[015] = 'Update'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  103] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  104] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  104] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  104] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  107] 0x00C040C6  GETTABLE   R3 = R1[K[1]='qualified_peoples']
+    0005 [line  108] 0x01C08106  GETTABLE   R4 = R3[K[2]='m_vec']
+    0006 [line  109] 0x02000154  LEN        A=5 B=4 C=0 Bx=2048
+    0007 [line  110] 0x00C10186  GETTABLE   R6 = R1[K[4]='remain_numbers']
+    0008 [line  110] 0x81818009  SETTABLE   R0[K[3]='m_remainCount'] = R6
+    0009 [line  111] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='print'
+    0010 [line  111] 0x000181C1  LOADK      R7 = K[6]='SearchCount:'
+    0011 [line  111] 0x02800200  MOVE       R8 = R5
+    0012 [line  111] 0x0001C241  LOADK      R9 = K[7]='RemainCount:'
+    0013 [line  111] 0x0040C286  GETTABLE   R10 = R0[K[3]='m_remainCount']
+    0014 [line  111] 0x0280419C  CALL       A=6 B=5 C=1
+    0015 [line  113] 0x00420186  GETTABLE   R6 = R0[K[8]='m_peopleList']
+    0016 [line  113] 0x0000419A  TEST       A=6 B=0 C=1
+    0017 [line  113] 0x80000016  JMP        A=0 sBx=1
+    0018 [line  113] 0x0000018A  NEWTABLE   A=6 B=0 C=0 Bx=0
+    0019 [line  113] 0x84018009  SETTABLE   R0[K[8]='m_peopleList'] = R6
+    0020 [line  114] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='pairs'
+    0021 [line  114] 0x020001C0  MOVE       R7 = R4
+    0022 [line  114] 0x0101019C  CALL       A=6 B=2 C=4
+    0023 [line  114] 0x80028016  JMP        A=0 sBx=11
+    0024 [line  115] 0x000282C5  GETGLOBAL  R11 = GLOBAL K[10]='table'
+    0025 [line  115] 0x05C2C2C6  GETTABLE   R11 = R11[K[11]='insert']
+    0026 [line  115] 0x00420306  GETTABLE   R12 = R0[K[8]='m_peopleList']
+    0027 [line  115] 0x0000834A  NEWTABLE   A=13 B=0 C=2 Bx=2
+    0028 [line  115] 0x05430386  GETTABLE   R14 = R10[K[12]='role_id']
+    0029 [line  115] 0x86038349  SETTABLE   R13[K[12]='role_id'] = R14
+    0030 [line  115] 0x05434386  GETTABLE   R14 = R10[K[13]='role_name']
+    0031 [line  115] 0x0743838B  SELF       A=14 B=14 C=270 Bx=7438
+    0032 [line  115] 0x0100839C  CALL       A=14 B=2 C=2
+    0033 [line  115] 0x86838349  SETTABLE   R13[K[13]='role_name'] = R14
+    0034 [line  115] 0x018042DC  CALL       A=11 B=3 C=1
+    0035 [line  114] 0x000081A1  TFORLOOP   A=6 B=0 C=2
+    0036 [line  115] 0x7FFC8016  JMP        A=0 sBx=-13
+    0037 [line  117] 0x0043C18B  SELF       A=6 B=0 C=271 Bx=271
+    0038 [line  117] 0x0100419C  CALL       A=6 B=2 C=1
+    0039 [line  118] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 39
+    'event': 0 -> 39
+    'panel': 1 -> 39
+    'qualified_peoples': 5 -> 39
+    'people': 6 -> 39
+    'count': 7 -> 39
+    '(for generator)': 23 -> 37
+    '(for state)': 23 -> 37
+    '(for control)': 23 -> 37
+    'k': 24 -> 35
+    'v': 24 -> 35
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x1502
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 120 - 133
+    Params : 2
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'm_peopleList'
+    K[002] = 1.0
+    K[003] = 'roleid'
+    K[004] = 'table'
+    K[005] = 'insert'
+    K[006] = 'role_id'
+    K[007] = 'role_name'
+    K[008] = 'GameUtil'
+    K[009] = 'UnicodeToUtf8'
+    K[010] = 'name'
+    K[011] = 'Update'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  121] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  122] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  122] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  122] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  124] 0x004040C6  GETTABLE   R3 = R0[K[1]='m_peopleList']
+    0005 [line  124] 0x000040DA  TEST       A=3 B=0 C=1
+    0006 [line  124] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  124] 0x000000CA  NEWTABLE   A=3 B=0 C=0 Bx=0
+    0008 [line  124] 0x8080C009  SETTABLE   R0[K[1]='m_peopleList'] = R3
+    0009 [line  125] 0x0000005A  TEST       A=1 B=0 C=0
+    0010 [line  125] 0x80058016  JMP        A=0 sBx=23
+    0011 [line  126] 0x000080C1  LOADK      R3 = K[2]=1.0
+    0012 [line  126] 0x00800114  LEN        A=4 B=1 C=0 Bx=512
+    0013 [line  126] 0x00008141  LOADK      R5 = K[2]=1.0
+    0014 [line  126] 0x800440E0  FORPREP    A=3 sBx=18
+    0015 [line  127] 0x008181C6  GETTABLE   R7 = R1[R6]
+    0016 [line  127] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='roleid']
+    0017 [line  127] 0x000001DA  TEST       A=7 B=0 C=0
+    0018 [line  127] 0x80034016  JMP        A=0 sBx=14
+    0019 [line  128] 0x000101C5  GETGLOBAL  R7 = GLOBAL K[4]='table'
+    0020 [line  128] 0x03C141C6  GETTABLE   R7 = R7[K[5]='insert']
+    0021 [line  128] 0x00404206  GETTABLE   R8 = R0[K[1]='m_peopleList']
+    0022 [line  128] 0x0000824A  NEWTABLE   A=9 B=0 C=2 Bx=2
+    0023 [line  128] 0x00818286  GETTABLE   R10 = R1[R6]
+    0024 [line  128] 0x0540C286  GETTABLE   R10 = R10[K[3]='roleid']
+    0025 [line  128] 0x83028249  SETTABLE   R9[K[6]='role_id'] = R10
+    0026 [line  128] 0x00020285  GETGLOBAL  R10 = GLOBAL K[8]='GameUtil'
+    0027 [line  128] 0x05424286  GETTABLE   R10 = R10[K[9]='UnicodeToUtf8']
+    0028 [line  128] 0x008182C6  GETTABLE   R11 = R1[R6]
+    0029 [line  128] 0x05C282C6  GETTABLE   R11 = R11[K[10]='name']
+    0030 [line  128] 0x0100829C  CALL       A=10 B=2 C=2
+    0031 [line  128] 0x83828249  SETTABLE   R9[K[7]='role_name'] = R10
+    0032 [line  128] 0x018041DC  CALL       A=7 B=3 C=1
+    0033 [line  126] 0x7FFB00DF  FORLOOP    A=3 sBx=-19
+    0034 [line  132] 0x0042C0CB  SELF       A=3 B=0 C=267 Bx=267
+    0035 [line  132] 0x010040DC  CALL       A=3 B=2 C=1
+    0036 [line  133] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 36
+    'peopleList': 0 -> 36
+    'panel': 1 -> 36
+    '(for index)': 14 -> 34
+    '(for limit)': 14 -> 34
+    '(for step)': 14 -> 34
+    'i': 15 -> 33
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x177F
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 135 - 138
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_peopleList'
+    K[001] = 0.0
+    K[002] = 'math'
+    K[003] = 'floor'
+    K[004] = 10.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  136] 0x00400046  GETTABLE   R1 = R0[K[0]='m_peopleList']
+    0001 [line  136] 0x00800054  LEN        A=1 B=1 C=0 Bx=512
+    0002 [line  137] 0x80804018  LT         A=0 B=K[1]=0.0 C=R1
+    0003 [line  137] 0x80018016  JMP        A=0 sBx=7
+    0004 [line  137] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='math'
+    0005 [line  137] 0x0140C086  GETTABLE   R2 = R2[K[3]='floor']
+    0006 [line  137] 0x00C100CF  DIV        A=3 B=R1 C=K[4]=10.0
+    0007 [line  137] 0x0100809C  CALL       A=2 B=2 C=2
+    0008 [line  137] 0x8200808E  MUL        A=2 B=K[4]=10.0 C=R2
+    0009 [line  137] 0x01004057  EQ         A=1 B=R2 C=R1
+    0010 [line  137] 0x80000016  JMP        A=0 sBx=1
+    0011 [line  137] 0x00004082  LOADBOOL   A=2 B=0 C=1
+    0012 [line  137] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0013 [line  137] 0x0100009E  RETURN     A=2 B=2 C=0
+    0014 [line  138] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+    'len': 2 -> 14
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x1879
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 140 - 142
+    Params : 2
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_officer_id'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  141] 0x80004009  SETTABLE   R0[K[0]='m_officer_id'] = R1
+    0001 [line  142] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 1
+    'officer_id': 0 -> 1
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x18EB
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 145 - 200
+    Params : 1
+    Stack  : 19
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'FindChild'
+    K[002] = 'NameList'
+    K[003] = 'DragPanel'
+    K[004] = 'm_peopleList'
+    K[005] = 1.0
+    K[006] = 'pairs'
+    K[007] = 'Namelist'
+    K[008] = 'Namelist1'
+    K[009] = 'Instantiate'
+    K[010] = 'parent'
+    K[011] = 'name'
+    K[012] = 'Txt_NameList1'
+    K[013] = 'Txt_NameList'
+    K[014] = 'localScale'
+    K[015] = 'Vector3'
+    K[016] = 'one'
+    K[017] = 'localPosition'
+    K[018] = 'new'
+    K[019] = 0.0
+    K[020] = -80.0
+    K[021] = 'setVisible'
+    K[022] = 'setEnable'
+    K[023] = 'Txt_ID'
+    K[024] = 'Txt_IDNum'
+    K[025] = 'setTextAndColor'
+    K[026] = 'role_name'
+    K[027] = 'LuaUInt64'
+    K[028] = 'ToString'
+    K[029] = 'role_id'
+    K[030] = 'm_msgHandler'
+    K[031] = 'Touch'
+    K[032] = 'table'
+    K[033] = 'insert'
+    K[034] = 'm_forselect'
+    K[035] = 'string'
+    K[036] = 'format'
+    K[037] = 'StringTable'
+    K[038] = 'Get'
+    K[039] = 33.0
+    K[040] = 'm_keywords'
+    K[041] = 'childCount'
+    K[042] = 'Object'
+    K[043] = 'Destroy'
+    K[044] = 'GetChild'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  146] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  147] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  147] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  147] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  149] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0005 [line  149] 0x00008101  LOADK      R4 = K[2]='NameList'
+    0006 [line  149] 0x0180809C  CALL       A=2 B=3 C=2
+    0007 [line  150] 0x014040CB  SELF       A=3 B=2 C=257 Bx=1281
+    0008 [line  150] 0x0000C141  LOADK      R5 = K[3]='DragPanel'
+    0009 [line  150] 0x018080DC  CALL       A=3 B=3 C=2
+    0010 [line  151] 0x00410106  GETTABLE   R4 = R0[K[4]='m_peopleList']
+    0011 [line  152] 0x00014141  LOADK      R5 = K[5]=1.0
+    0012 [line  153] 0x0000018A  NEWTABLE   A=6 B=0 C=0 Bx=0
+    0013 [line  154] 0x0000011A  TEST       A=4 B=0 C=0
+    0014 [line  154] 0x80194016  JMP        A=0 sBx=102
+    0015 [line  155] 0x000181C5  GETGLOBAL  R7 = GLOBAL K[6]='pairs'
+    0016 [line  155] 0x02000200  MOVE       R8 = R4
+    0017 [line  155] 0x010101DC  CALL       A=7 B=2 C=4
+    0018 [line  155] 0x80178016  JMP        A=0 sBx=95
+    0019 [line  157] 0x01C0430B  SELF       A=12 B=3 C=257 Bx=1793
+    0020 [line  157] 0x0001C381  LOADK      R14 = K[7]='Namelist'
+    0021 [line  157] 0x028003C0  MOVE       R15 = R5
+    0022 [line  157] 0x0703C395  CONCAT     A=14 B=14 C=15 Bx=7183
+    0023 [line  157] 0x0180831C  CALL       A=12 B=3 C=2
+    0024 [line  158] 0x0000431A  TEST       A=12 B=0 C=1
+    0025 [line  158] 0x80088016  JMP        A=0 sBx=35
+    0026 [line  159] 0x01C0434B  SELF       A=13 B=3 C=257 Bx=1793
+    0027 [line  159] 0x000203C1  LOADK      R15 = K[8]='Namelist1'
+    0028 [line  159] 0x0180835C  CALL       A=13 B=3 C=2
+    0029 [line  160] 0x06C2438B  SELF       A=14 B=13 C=265 Bx=6921
+    0030 [line  160] 0x0100839C  CALL       A=14 B=2 C=2
+    0031 [line  160] 0x07000300  MOVE       R12 = R14
+    0032 [line  161] 0x06C28386  GETTABLE   R14 = R13[K[10]='parent']
+    0033 [line  161] 0x85038309  SETTABLE   R12[K[10]='parent'] = R14
+    0034 [line  162] 0x0001C381  LOADK      R14 = K[7]='Namelist'
+    0035 [line  162] 0x028003C0  MOVE       R15 = R5
+    0036 [line  162] 0x0703C395  CONCAT     A=14 B=14 C=15 Bx=7183
+    0037 [line  162] 0x85838309  SETTABLE   R12[K[11]='name'] = R14
+    0038 [line  163] 0x0640438B  SELF       A=14 B=12 C=257 Bx=6401
+    0039 [line  163] 0x00030401  LOADK      R16 = K[12]='Txt_NameList1'
+    0040 [line  163] 0x0180839C  CALL       A=14 B=3 C=2
+    0041 [line  163] 0x000343C1  LOADK      R15 = K[13]='Txt_NameList'
+    0042 [line  163] 0x02800400  MOVE       R16 = R5
+    0043 [line  163] 0x078403D5  CONCAT     A=15 B=15 C=16 Bx=7696
+    0044 [line  163] 0x8583C389  SETTABLE   R14[K[11]='name'] = R15
+    0045 [line  164] 0x00000384  GETUPVAL   A=14 B=0 C=0 Bx=0
+    0046 [line  164] 0x0743C386  GETTABLE   R14 = R14[K[15]='Vector3']
+    0047 [line  164] 0x07440386  GETTABLE   R14 = R14[K[16]='one']
+    0048 [line  164] 0x87038309  SETTABLE   R12[K[14]='localScale'] = R14
+    0049 [line  165] 0x06C44386  GETTABLE   R14 = R13[K[17]='localPosition']
+    0050 [line  165] 0x000003C4  GETUPVAL   A=15 B=0 C=0 Bx=0
+    0051 [line  165] 0x07C3C3C6  GETTABLE   R15 = R15[K[15]='Vector3']
+    0052 [line  165] 0x07C483C6  GETTABLE   R15 = R15[K[18]='new']
+    0053 [line  165] 0x0004C401  LOADK      R16 = K[19]=0.0
+    0054 [line  165] 0x00050441  LOADK      R17 = K[20]=-80.0
+    0055 [line  165] 0x0004C481  LOADK      R18 = K[19]=0.0
+    0056 [line  165] 0x020083DC  CALL       A=15 B=4 C=2
+    0057 [line  165] 0x02C1440D  SUB        A=16 B=R5 C=K[5]=1.0
+    0058 [line  165] 0x078403CE  MUL        A=15 B=R15 C=R16
+    0059 [line  165] 0x0703C38C  ADD        A=14 B=R14 C=R15
+    0060 [line  165] 0x88838309  SETTABLE   R12[K[17]='localPosition'] = R14
+    0061 [line  168] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0062 [line  168] 0x06C54346  GETTABLE   R13 = R13[K[21]='setVisible']
+    0063 [line  168] 0x06000380  MOVE       R14 = R12
+    0064 [line  168] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0065 [line  168] 0x0180435C  CALL       A=13 B=3 C=1
+    0066 [line  169] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0067 [line  169] 0x06C58346  GETTABLE   R13 = R13[K[22]='setEnable']
+    0068 [line  169] 0x06000380  MOVE       R14 = R12
+    0069 [line  169] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0070 [line  169] 0x0180435C  CALL       A=13 B=3 C=1
+    0071 [line  170] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0072 [line  170] 0x06C54346  GETTABLE   R13 = R13[K[21]='setVisible']
+    0073 [line  170] 0x0640438B  SELF       A=14 B=12 C=257 Bx=6401
+    0074 [line  170] 0x0005C401  LOADK      R16 = K[23]='Txt_ID'
+    0075 [line  170] 0x0180839C  CALL       A=14 B=3 C=2
+    0076 [line  170] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0077 [line  170] 0x0180435C  CALL       A=13 B=3 C=1
+    0078 [line  171] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0079 [line  171] 0x06C54346  GETTABLE   R13 = R13[K[21]='setVisible']
+    0080 [line  171] 0x0640438B  SELF       A=14 B=12 C=257 Bx=6401
+    0081 [line  171] 0x00060401  LOADK      R16 = K[24]='Txt_IDNum'
+    0082 [line  171] 0x0180839C  CALL       A=14 B=3 C=2
+    0083 [line  171] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0084 [line  171] 0x0180435C  CALL       A=13 B=3 C=1
+    0085 [line  172] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0086 [line  172] 0x06C64346  GETTABLE   R13 = R13[K[25]='setTextAndColor']
+    0087 [line  172] 0x0640438B  SELF       A=14 B=12 C=257 Bx=6401
+    0088 [line  172] 0x00034401  LOADK      R16 = K[13]='Txt_NameList'
+    0089 [line  172] 0x02800440  MOVE       R17 = R5
+    0090 [line  172] 0x08044415  CONCAT     A=16 B=16 C=17 Bx=8209
+    0091 [line  172] 0x0180839C  CALL       A=14 B=3 C=2
+    0092 [line  172] 0x05C683C6  GETTABLE   R15 = R11[K[26]='role_name']
+    0093 [line  172] 0x0180435C  CALL       A=13 B=3 C=1
+    0094 [line  173] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0095 [line  173] 0x06C64346  GETTABLE   R13 = R13[K[25]='setTextAndColor']
+    0096 [line  173] 0x0640438B  SELF       A=14 B=12 C=257 Bx=6401
+    0097 [line  173] 0x00060401  LOADK      R16 = K[24]='Txt_IDNum'
+    0098 [line  173] 0x0180839C  CALL       A=14 B=3 C=2
+    0099 [line  173] 0x0006C3C5  GETGLOBAL  R15 = GLOBAL K[27]='LuaUInt64'
+    0100 [line  173] 0x07C703C6  GETTABLE   R15 = R15[K[28]='ToString']
+    0101 [line  173] 0x05C74406  GETTABLE   R16 = R11[K[29]='role_id']
+    0102 [line  173] 0x010003DC  CALL       A=15 B=2 C=0
+    0103 [line  173] 0x0000435C  CALL       A=13 B=0 C=1
+    0104 [line  175] 0x00478346  GETTABLE   R13 = R0[K[30]='m_msgHandler']
+    0105 [line  175] 0x06C7C34B  SELF       A=13 B=13 C=287 Bx=6943
+    0106 [line  175] 0x060003C0  MOVE       R15 = R12
+    0107 [line  175] 0x0180435C  CALL       A=13 B=3 C=1
+    0108 [line  176] 0x02C1414C  ADD        A=5 B=R5 C=K[5]=1.0
+    0109 [line  178] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='table'
+    0110 [line  178] 0x06C84346  GETTABLE   R13 = R13[K[33]='insert']
+    0111 [line  178] 0x03000380  MOVE       R14 = R6
+    0112 [line  178] 0x058003C0  MOVE       R15 = R11
+    0113 [line  178] 0x0180435C  CALL       A=13 B=3 C=1
+    0114 [line  155] 0x000081E1  TFORLOOP   A=7 B=0 C=2
+    0115 [line  179] 0x7FE78016  JMP        A=0 sBx=-97
+    0116 [line  181] 0x91018009  SETTABLE   R0[K[34]='m_forselect'] = R6
+    0117 [line  183] 0x0000011A  TEST       A=4 B=0 C=0
+    0118 [line  183] 0x80008016  JMP        A=0 sBx=3
+    0119 [line  183] 0x020001D4  LEN        A=7 B=4 C=0 Bx=2048
+    0120 [line  183] 0x03C4C017  EQ         A=0 B=R7 C=K[19]=0.0
+    0121 [line  183] 0x800A4016  JMP        A=0 sBx=42
+    0122 [line  184] 0x0008C1C5  GETGLOBAL  R7 = GLOBAL K[35]='string'
+    0123 [line  184] 0x03C901C6  GETTABLE   R7 = R7[K[36]='format']
+    0124 [line  184] 0x00094205  GETGLOBAL  R8 = GLOBAL K[37]='StringTable'
+    0125 [line  184] 0x04498206  GETTABLE   R8 = R8[K[38]='Get']
+    0126 [line  184] 0x0009C241  LOADK      R9 = K[39]=33.0
+    0127 [line  184] 0x0100821C  CALL       A=8 B=2 C=2
+    0128 [line  184] 0x004A0246  GETTABLE   R9 = R0[K[40]='m_keywords']
+    0129 [line  184] 0x018081DC  CALL       A=7 B=3 C=2
+    0130 [line  185] 0x01C0420B  SELF       A=8 B=3 C=257 Bx=1793
+    0131 [line  185] 0x00020281  LOADK      R10 = K[8]='Namelist1'
+    0132 [line  185] 0x0180821C  CALL       A=8 B=3 C=2
+    0133 [line  187] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0134 [line  187] 0x04C54246  GETTABLE   R9 = R9[K[21]='setVisible']
+    0135 [line  187] 0x04000280  MOVE       R10 = R8
+    0136 [line  187] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0137 [line  187] 0x0180425C  CALL       A=9 B=3 C=1
+    0138 [line  188] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0139 [line  188] 0x04C58246  GETTABLE   R9 = R9[K[22]='setEnable']
+    0140 [line  188] 0x04000280  MOVE       R10 = R8
+    0141 [line  188] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0142 [line  188] 0x0180425C  CALL       A=9 B=3 C=1
+    0143 [line  189] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0144 [line  189] 0x04C64246  GETTABLE   R9 = R9[K[25]='setTextAndColor']
+    0145 [line  189] 0x0440428B  SELF       A=10 B=8 C=257 Bx=4353
+    0146 [line  189] 0x00030301  LOADK      R12 = K[12]='Txt_NameList1'
+    0147 [line  189] 0x0180829C  CALL       A=10 B=3 C=2
+    0148 [line  189] 0x038002C0  MOVE       R11 = R7
+    0149 [line  189] 0x0180425C  CALL       A=9 B=3 C=1
+    0150 [line  190] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0151 [line  190] 0x04C54246  GETTABLE   R9 = R9[K[21]='setVisible']
+    0152 [line  190] 0x0440428B  SELF       A=10 B=8 C=257 Bx=4353
+    0153 [line  190] 0x0005C301  LOADK      R12 = K[23]='Txt_ID'
+    0154 [line  190] 0x0180829C  CALL       A=10 B=3 C=2
+    0155 [line  190] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0156 [line  190] 0x0180425C  CALL       A=9 B=3 C=1
+    0157 [line  191] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0158 [line  191] 0x04C54246  GETTABLE   R9 = R9[K[21]='setVisible']
+    0159 [line  191] 0x0440428B  SELF       A=10 B=8 C=257 Bx=4353
+    0160 [line  191] 0x00060301  LOADK      R12 = K[24]='Txt_IDNum'
+    0161 [line  191] 0x0180829C  CALL       A=10 B=3 C=2
+    0162 [line  191] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0163 [line  191] 0x0180425C  CALL       A=9 B=3 C=1
+    0164 [line  194] 0x01CA41C6  GETTABLE   R7 = R3[K[41]='childCount']
+    0165 [line  195] 0x82814018  LT         A=0 B=K[5]=1.0 C=R5
+    0166 [line  195] 0x80028016  JMP        A=0 sBx=11
+    0167 [line  196] 0x02C1420D  SUB        A=8 B=R5 C=K[5]=1.0
+    0168 [line  196] 0x03C1424D  SUB        A=9 B=R7 C=K[5]=1.0
+    0169 [line  196] 0x00014281  LOADK      R10 = K[5]=1.0
+    0170 [line  196] 0x80014220  FORPREP    A=8 sBx=6
+    0171 [line  197] 0x000A8305  GETGLOBAL  R12 = GLOBAL K[42]='Object'
+    0172 [line  197] 0x064AC306  GETTABLE   R12 = R12[K[43]='Destroy']
+    0173 [line  197] 0x01CB034B  SELF       A=13 B=3 C=300 Bx=1836
+    0174 [line  197] 0x058003C0  MOVE       R15 = R11
+    0175 [line  197] 0x0180035C  CALL       A=13 B=3 C=0
+    0176 [line  197] 0x0000431C  CALL       A=12 B=0 C=1
+    0177 [line  196] 0x7FFE021F  FORLOOP    A=8 sBx=-7
+    0178 [line  200] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 178
+    'panel': 1 -> 178
+    'NationPage': 7 -> 178
+    'NationListObj': 10 -> 178
+    'peopellist': 11 -> 178
+    'nextIndex': 12 -> 178
+    'tmplist': 13 -> 178
+    '(for generator)': 18 -> 116
+    '(for state)': 18 -> 116
+    '(for control)': 18 -> 116
+    'k': 19 -> 114
+    'v': 19 -> 114
+    'Item': 24 -> 114
+    'clone': 29 -> 61
+    'desc': 130 -> 164
+    'Item': 133 -> 164
+    'childCount': 165 -> 178
+    '(for index)': 170 -> 178
+    '(for limit)': 170 -> 178
+    '(for step)': 170 -> 178
+    'i': 171 -> 177
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x22DC
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 201 - 203
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'setEnable'
+    K[001] = 'm_panel'
+    K[002] = 'FindChild'
+    K[003] = 'Btn_Confirm'
+    K[004] = 'm_appoint'
+    K[005] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line  202] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  202] 0x00C00046  GETTABLE   R1 = R1[K[0]='setEnable']
+    0002 [line  202] 0x00404086  GETTABLE   R2 = R0[K[1]='m_panel']
+    0003 [line  202] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0004 [line  202] 0x0000C101  LOADK      R4 = K[3]='Btn_Confirm'
+    0005 [line  202] 0x0180809C  CALL       A=2 B=3 C=2
+    0006 [line  202] 0x004100C6  GETTABLE   R3 = R0[K[4]='m_appoint']
+    0007 [line  202] 0x01C14017  EQ         A=0 B=R3 C=K[5]=None
+    0008 [line  202] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  202] 0x000040C2  LOADBOOL   A=3 B=0 C=1
+    0010 [line  202] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0011 [line  202] 0x0180405C  CALL       A=1 B=3 C=1
+    0012 [line  203] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 12
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x23D8
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 204 - 209
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'setTextAndColor'
+    K[002] = 'FindChild'
+    K[003] = 'Gound_Bg/Label'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  205] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  205] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  205] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  206] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  208] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0005 [line  208] 0x01404086  GETTABLE   R2 = R2[K[1]='setTextAndColor']
+    0006 [line  208] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+    0007 [line  208] 0x0000C141  LOADK      R5 = K[3]='Gound_Bg/Label'
+    0008 [line  208] 0x018080DC  CALL       A=3 B=3 C=2
+    0009 [line  208] 0x00800100  MOVE       R4 = R1
+    0010 [line  208] 0x0180409C  CALL       A=2 B=3 C=1
+    0011 [line  209] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 11
+    'title': 0 -> 11
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x24D7
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 210 - 239
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'string'
+    K[001] = 'find'
+    K[002] = 'Btn_Close'
+    K[003] = 1.0
+    K[004] = 'DestroyPanel'
+    K[005] = 'Btn_Confirm'
+    K[006] = 'm_clickfunc'
+    K[007] = 'm_appoint'
+    K[008] = 'role_id'
+    K[009] = 'onNationConfirm'
+    K[010] = 'Btn_Search'
+    K[011] = 'onNationSearch'
+    K[012] = 'Namelist'
+    K[013] = 'sub'
+    K[014] = 'len'
+    K[015] = 'tonumber'
+    K[016] = 'm_forselect'
+    K[017] = 'EnableAddBtn'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  212] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0001 [line  212] 0x01404086  GETTABLE   R2 = R2[K[1]='find']
+    0002 [line  212] 0x008000C0  MOVE       R3 = R1
+    0003 [line  212] 0x00008101  LOADK      R4 = K[2]='Btn_Close'
+    0004 [line  212] 0x0180809C  CALL       A=2 B=3 C=2
+    0005 [line  212] 0x0140C017  EQ         A=0 B=R2 C=K[3]=1.0
+    0006 [line  212] 0x80008016  JMP        A=0 sBx=3
+    0007 [line  213] 0x0041008B  SELF       A=2 B=0 C=260 Bx=260
+    0008 [line  213] 0x0100409C  CALL       A=2 B=2 C=1
+    0009 [line  214] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  217] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0011 [line  217] 0x01404086  GETTABLE   R2 = R2[K[1]='find']
+    0012 [line  217] 0x008000C0  MOVE       R3 = R1
+    0013 [line  217] 0x00014101  LOADK      R4 = K[5]='Btn_Confirm'
+    0014 [line  217] 0x0180809C  CALL       A=2 B=3 C=2
+    0015 [line  217] 0x0140C017  EQ         A=0 B=R2 C=K[3]=1.0
+    0016 [line  217] 0x8003C016  JMP        A=0 sBx=16
+    0017 [line  218] 0x00418086  GETTABLE   R2 = R0[K[6]='m_clickfunc']
+    0018 [line  218] 0x0000009A  TEST       A=2 B=0 C=0
+    0019 [line  218] 0x80024016  JMP        A=0 sBx=10
+    0020 [line  219] 0x0041C086  GETTABLE   R2 = R0[K[7]='m_appoint']
+    0021 [line  220] 0x0000409A  TEST       A=2 B=0 C=1
+    0022 [line  220] 0x80000016  JMP        A=0 sBx=1
+    0023 [line  220] 0x0080001E  RETURN     A=0 B=1 C=0
+    0024 [line  221] 0x004180C6  GETTABLE   R3 = R0[K[6]='m_clickfunc']
+    0025 [line  221] 0x01420106  GETTABLE   R4 = R2[K[8]='role_id']
+    0026 [line  221] 0x010040DC  CALL       A=3 B=2 C=1
+    0027 [line  222] 0x004100CB  SELF       A=3 B=0 C=260 Bx=260
+    0028 [line  222] 0x010040DC  CALL       A=3 B=2 C=1
+    0029 [line  222] 0x800AC016  JMP        A=0 sBx=44
+    0030 [line  224] 0x0042408B  SELF       A=2 B=0 C=265 Bx=265
+    0031 [line  224] 0x0100409C  CALL       A=2 B=2 C=1
+    0032 [line  225] 0x800A0016  JMP        A=0 sBx=41
+    0033 [line  226] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0034 [line  226] 0x01404086  GETTABLE   R2 = R2[K[1]='find']
+    0035 [line  226] 0x008000C0  MOVE       R3 = R1
+    0036 [line  226] 0x00028101  LOADK      R4 = K[10]='Btn_Search'
+    0037 [line  226] 0x0180809C  CALL       A=2 B=3 C=2
+    0038 [line  226] 0x0140C017  EQ         A=0 B=R2 C=K[3]=1.0
+    0039 [line  226] 0x80008016  JMP        A=0 sBx=3
+    0040 [line  227] 0x0042C08B  SELF       A=2 B=0 C=267 Bx=267
+    0041 [line  227] 0x0100409C  CALL       A=2 B=2 C=1
+    0042 [line  227] 0x80078016  JMP        A=0 sBx=31
+    0043 [line  228] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0044 [line  228] 0x01404086  GETTABLE   R2 = R2[K[1]='find']
+    0045 [line  228] 0x008000C0  MOVE       R3 = R1
+    0046 [line  228] 0x00030101  LOADK      R4 = K[12]='Namelist'
+    0047 [line  228] 0x0180809C  CALL       A=2 B=3 C=2
+    0048 [line  228] 0x0140C017  EQ         A=0 B=R2 C=K[3]=1.0
+    0049 [line  228] 0x8005C016  JMP        A=0 sBx=24
+    0050 [line  229] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0051 [line  229] 0x01434086  GETTABLE   R2 = R2[K[13]='sub']
+    0052 [line  229] 0x008000C0  MOVE       R3 = R1
+    0053 [line  229] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='string'
+    0054 [line  229] 0x02438106  GETTABLE   R4 = R4[K[14]='len']
+    0055 [line  229] 0x00030141  LOADK      R5 = K[12]='Namelist'
+    0056 [line  229] 0x0100811C  CALL       A=4 B=2 C=2
+    0057 [line  229] 0x0240C10C  ADD        A=4 B=R4 C=K[3]=1.0
+    0058 [line  229] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='string'
+    0059 [line  229] 0x02C38146  GETTABLE   R5 = R5[K[14]='len']
+    0060 [line  229] 0x00800180  MOVE       R6 = R1
+    0061 [line  229] 0x0100015C  CALL       A=5 B=2 C=0
+    0062 [line  229] 0x0000809C  CALL       A=2 B=0 C=2
+    0063 [line  230] 0x0003C0C5  GETGLOBAL  R3 = GLOBAL K[15]='tonumber'
+    0064 [line  230] 0x01000100  MOVE       R4 = R2
+    0065 [line  230] 0x010080DC  CALL       A=3 B=2 C=2
+    0066 [line  230] 0x01800080  MOVE       R2 = R3
+    0067 [line  232] 0x004400C6  GETTABLE   R3 = R0[K[16]='m_forselect']
+    0068 [line  233] 0x000000DA  TEST       A=3 B=0 C=0
+    0069 [line  233] 0x80004016  JMP        A=0 sBx=2
+    0070 [line  234] 0x01808106  GETTABLE   R4 = R3[R2]
+    0071 [line  234] 0x83810009  SETTABLE   R0[K[7]='m_appoint'] = R4
+    0072 [line  237] 0x0044410B  SELF       A=4 B=0 C=273 Bx=273
+    0073 [line  237] 0x0100411C  CALL       A=4 B=2 C=1
+    0074 [line  239] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 74
+    'id': 0 -> 74
+    'people': 21 -> 29
+    'index': 63 -> 74
+    'peopleList': 68 -> 74
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x28BB
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 241 - 251
+    Params : 3
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'sub'
+    K[001] = 1.0
+    K[002] = 8.0
+    K[003] = 'Namelist'
+    K[004] = 'm_continue'
+    K[005] = True
+    K[006] = 'm_panel'
+    K[007] = 'FindChild'
+    K[008] = 'DragPanel'
+    K[009] = 'localPosition'
+    K[010] = 'y'
+    K[011] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  242] 0x00C000CB  SELF       A=3 B=1 C=256 Bx=768
+    0001 [line  242] 0x00004141  LOADK      R5 = K[1]=1.0
+    0002 [line  242] 0x00008181  LOADK      R6 = K[2]=8.0
+    0003 [line  242] 0x020080DC  CALL       A=3 B=4 C=2
+    0004 [line  242] 0x01C0C017  EQ         A=0 B=R3 C=K[3]='Namelist'
+    0005 [line  242] 0x80038016  JMP        A=0 sBx=15
+    0006 [line  243] 0x0000009A  TEST       A=2 B=0 C=0
+    0007 [line  243] 0x8002C016  JMP        A=0 sBx=12
+    0008 [line  243] 0x004100C6  GETTABLE   R3 = R0[K[4]='m_continue']
+    0009 [line  243] 0x000040DA  TEST       A=3 B=0 C=1
+    0010 [line  243] 0x80020016  JMP        A=0 sBx=9
+    0011 [line  244] 0x82414009  SETTABLE   R0[K[4]='m_continue'] = K[5]=True
+    0012 [line  245] 0x004180C6  GETTABLE   R3 = R0[K[6]='m_panel']
+    0013 [line  245] 0x01C1C0CB  SELF       A=3 B=3 C=263 Bx=1799
+    0014 [line  245] 0x00020141  LOADK      R5 = K[8]='DragPanel'
+    0015 [line  245] 0x018080DC  CALL       A=3 B=3 C=2
+    0016 [line  246] 0x01C24106  GETTABLE   R4 = R3[K[9]='localPosition']
+    0017 [line  246] 0x02428106  GETTABLE   R4 = R4[K[10]='y']
+    0018 [line  246] 0x00000108  SETUPVAL   A=4 B=0 C=0 Bx=0
+    0019 [line  246] 0x80000016  JMP        A=0 sBx=1
+    0020 [line  248] 0x8242C009  SETTABLE   R0[K[4]='m_continue'] = K[11]=False
+    0021 [line  251] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 21
+    'id': 0 -> 21
+    'state': 0 -> 21
+    'uiPanel': 16 -> 19
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x2A6B
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 252 - 262
+    Params : 4
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'sub'
+    K[001] = 1.0
+    K[002] = 8.0
+    K[003] = 'Namelist'
+    K[004] = 'm_panel'
+    K[005] = 'FindChild'
+    K[006] = 'DragPanel'
+    K[007] = 'localPosition'
+    K[008] = 'y'
+    K[009] = 'math'
+    K[010] = 'floor'
+    K[011] = 'm_continue'
+    K[012] = 'm_remainCount'
+    K[013] = 0.0
+    K[014] = 'Instance'
+    K[015] = 'NationPeopleSearch'
+    K[016] = 'm_HostInfo'
+    K[017] = 'id'
+    K[018] = 'm_keywords'
+    K[019] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  253] 0x00C0010B  SELF       A=4 B=1 C=256 Bx=768
+    0001 [line  253] 0x00004181  LOADK      R6 = K[1]=1.0
+    0002 [line  253] 0x000081C1  LOADK      R7 = K[2]=8.0
+    0003 [line  253] 0x0200811C  CALL       A=4 B=4 C=2
+    0004 [line  253] 0x0240C017  EQ         A=0 B=R4 C=K[3]='Namelist'
+    0005 [line  253] 0x8006C016  JMP        A=0 sBx=28
+    0006 [line  254] 0x00410106  GETTABLE   R4 = R0[K[4]='m_panel']
+    0007 [line  254] 0x0241410B  SELF       A=4 B=4 C=261 Bx=2309
+    0008 [line  254] 0x00018181  LOADK      R6 = K[6]='DragPanel'
+    0009 [line  254] 0x0180811C  CALL       A=4 B=3 C=2
+    0010 [line  255] 0x0241C146  GETTABLE   R5 = R4[K[7]='localPosition']
+    0011 [line  255] 0x02C20146  GETTABLE   R5 = R5[K[8]='y']
+    0012 [line  256] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='math'
+    0013 [line  256] 0x03428186  GETTABLE   R6 = R6[K[10]='floor']
+    0014 [line  256] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0015 [line  256] 0x0281C1CF  DIV        A=7 B=R5 C=R7
+    0016 [line  256] 0x0100819C  CALL       A=6 B=2 C=2
+    0017 [line  256] 0x80818018  LT         A=0 B=K[1]=1.0 C=R6
+    0018 [line  256] 0x80038016  JMP        A=0 sBx=15
+    0019 [line  256] 0x0042C186  GETTABLE   R6 = R0[K[11]='m_continue']
+    0020 [line  256] 0x0000019A  TEST       A=6 B=0 C=0
+    0021 [line  256] 0x8002C016  JMP        A=0 sBx=12
+    0022 [line  256] 0x00430186  GETTABLE   R6 = R0[K[12]='m_remainCount']
+    0023 [line  256] 0x86818018  LT         A=0 B=K[13]=0.0 C=R6
+    0024 [line  256] 0x80020016  JMP        A=0 sBx=9
+    0025 [line  257] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0026 [line  257] 0x03438186  GETTABLE   R6 = R6[K[14]='Instance']
+    0027 [line  257] 0x0080819C  CALL       A=6 B=1 C=2
+    0028 [line  258] 0x0043C1CB  SELF       A=7 B=0 C=271 Bx=271
+    0029 [line  258] 0x03440246  GETTABLE   R9 = R6[K[16]='m_HostInfo']
+    0030 [line  258] 0x04C44246  GETTABLE   R9 = R9[K[17]='id']
+    0031 [line  258] 0x00448286  GETTABLE   R10 = R0[K[18]='m_keywords']
+    0032 [line  258] 0x020041DC  CALL       A=7 B=4 C=1
+    0033 [line  259] 0x85C4C009  SETTABLE   R0[K[11]='m_continue'] = K[19]=False
+    0034 [line  262] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 34
+    'id': 0 -> 34
+    'dx': 0 -> 34
+    'dy': 0 -> 34
+    'uiPanel': 10 -> 34
+    'yOffset': 12 -> 34
+    'game': 28 -> 34
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x2D3C
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 264 - 299
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_appoint'
+    K[001] = 'm_officer_id'
+    K[002] = 0.0
+    K[003] = 'role_id'
+    K[004] = 'Instance'
+    K[005] = 'm_HostInfo'
+    K[006] = 'id'
+    K[007] = 'FlashTipMan'
+    K[008] = 'FlashTip'
+    K[009] = 'StringTable'
+    K[010] = 'Get'
+    K[011] = 15089.0
+    K[012] = 'getOfficerByRoleId'
+    K[013] = 'HasAppointPrivilege'
+    K[014] = 'getOfficerName'
+    K[015] = 'string'
+    K[016] = 'format'
+    K[017] = 32.0
+    K[018] = 31.0
+    K[019] = 'NationAppoint'
+    K[020] = 1.0
+    K[021] = None
+    K[022] = 'm_waitAppoint'
+    K[023] = False
+    K[024] = 'DestroyPanel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  266] 0x00400046  GETTABLE   R1 = R0[K[0]='m_appoint']
+    0001 [line  268] 0x00404086  GETTABLE   R2 = R0[K[1]='m_officer_id']
+    0002 [line  268] 0x01408017  EQ         A=0 B=R2 C=K[2]=0.0
+    0003 [line  268] 0x80000016  JMP        A=0 sBx=1
+    0004 [line  268] 0x0080001E  RETURN     A=0 B=1 C=0
+    0005 [line  269] 0x0000405A  TEST       A=1 B=0 C=1
+    0006 [line  269] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  269] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  270] 0x00C0C086  GETTABLE   R2 = R1[K[3]='role_id']
+    0009 [line  270] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0010 [line  270] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+    0011 [line  270] 0x008080DC  CALL       A=3 B=1 C=2
+    0012 [line  270] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostInfo']
+    0013 [line  270] 0x01C180C6  GETTABLE   R3 = R3[K[6]='id']
+    0014 [line  270] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0015 [line  270] 0x8001C016  JMP        A=0 sBx=8
+    0016 [line  271] 0x0001C085  GETGLOBAL  R2 = GLOBAL K[7]='FlashTipMan'
+    0017 [line  271] 0x01420086  GETTABLE   R2 = R2[K[8]='FlashTip']
+    0018 [line  271] 0x000240C5  GETGLOBAL  R3 = GLOBAL K[9]='StringTable'
+    0019 [line  271] 0x01C280C6  GETTABLE   R3 = R3[K[10]='Get']
+    0020 [line  271] 0x0002C101  LOADK      R4 = K[11]=15089.0
+    0021 [line  271] 0x010000DC  CALL       A=3 B=2 C=0
+    0022 [line  271] 0x0000409C  CALL       A=2 B=0 C=1
+    0023 [line  272] 0x0080001E  RETURN     A=0 B=1 C=0
+    0024 [line  274] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0025 [line  274] 0x01410086  GETTABLE   R2 = R2[K[4]='Instance']
+    0026 [line  274] 0x0080809C  CALL       A=2 B=1 C=2
+    0027 [line  275] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0028 [line  275] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Instance']
+    0029 [line  275] 0x008080DC  CALL       A=3 B=1 C=2
+    0030 [line  275] 0x01C300CB  SELF       A=3 B=3 C=268 Bx=1804
+    0031 [line  275] 0x00C0C146  GETTABLE   R5 = R1[K[3]='role_id']
+    0032 [line  275] 0x018080DC  CALL       A=3 B=3 C=2
+    0033 [line  277] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0034 [line  277] 0x02410106  GETTABLE   R4 = R4[K[4]='Instance']
+    0035 [line  277] 0x0080811C  CALL       A=4 B=1 C=2
+    0036 [line  277] 0x0243410B  SELF       A=4 B=4 C=269 Bx=2317
+    0037 [line  277] 0x01414186  GETTABLE   R6 = R2[K[5]='m_HostInfo']
+    0038 [line  277] 0x03418186  GETTABLE   R6 = R6[K[6]='id']
+    0039 [line  277] 0x004041C6  GETTABLE   R7 = R0[K[1]='m_officer_id']
+    0040 [line  277] 0x0200811C  CALL       A=4 B=4 C=2
+    0041 [line  278] 0x0000411A  TEST       A=4 B=0 C=1
+    0042 [line  278] 0x80040016  JMP        A=0 sBx=17
+    0043 [line  279] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0044 [line  279] 0x02C38146  GETTABLE   R5 = R5[K[14]='getOfficerName']
+    0045 [line  279] 0x00404186  GETTABLE   R6 = R0[K[1]='m_officer_id']
+    0046 [line  279] 0x0100815C  CALL       A=5 B=2 C=2
+    0047 [line  280] 0x0003C185  GETGLOBAL  R6 = GLOBAL K[15]='string'
+    0048 [line  280] 0x03440186  GETTABLE   R6 = R6[K[16]='format']
+    0049 [line  280] 0x000241C5  GETGLOBAL  R7 = GLOBAL K[9]='StringTable'
+    0050 [line  280] 0x03C281C6  GETTABLE   R7 = R7[K[10]='Get']
+    0051 [line  280] 0x00044201  LOADK      R8 = K[17]=32.0
+    0052 [line  280] 0x010081DC  CALL       A=7 B=2 C=2
+    0053 [line  280] 0x02800200  MOVE       R8 = R5
+    0054 [line  280] 0x0180819C  CALL       A=6 B=3 C=2
+    0055 [line  282] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='FlashTipMan'
+    0056 [line  282] 0x03C201C6  GETTABLE   R7 = R7[K[8]='FlashTip']
+    0057 [line  282] 0x03000200  MOVE       R8 = R6
+    0058 [line  282] 0x010041DC  CALL       A=7 B=2 C=1
+    0059 [line  283] 0x0080001E  RETURN     A=0 B=1 C=0
+    0060 [line  286] 0x8100C018  LT         A=0 B=K[2]=0.0 C=R3
+    0061 [line  286] 0x80020016  JMP        A=0 sBx=9
+    0062 [line  287] 0x00024145  GETGLOBAL  R5 = GLOBAL K[9]='StringTable'
+    0063 [line  287] 0x02C28146  GETTABLE   R5 = R5[K[10]='Get']
+    0064 [line  287] 0x00048181  LOADK      R6 = K[18]=31.0
+    0065 [line  287] 0x0100815C  CALL       A=5 B=2 C=2
+    0066 [line  289] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='FlashTipMan'
+    0067 [line  289] 0x03420186  GETTABLE   R6 = R6[K[8]='FlashTip']
+    0068 [line  289] 0x028001C0  MOVE       R7 = R5
+    0069 [line  289] 0x0100419C  CALL       A=6 B=2 C=1
+    0070 [line  290] 0x0080001E  RETURN     A=0 B=1 C=0
+    0071 [line  294] 0x0044C14B  SELF       A=5 B=0 C=275 Bx=275
+    0072 [line  294] 0x014141C6  GETTABLE   R7 = R2[K[5]='m_HostInfo']
+    0073 [line  294] 0x03C181C6  GETTABLE   R7 = R7[K[6]='id']
+    0074 [line  294] 0x00C0C206  GETTABLE   R8 = R1[K[3]='role_id']
+    0075 [line  294] 0x00404246  GETTABLE   R9 = R0[K[1]='m_officer_id']
+    0076 [line  294] 0x00050281  LOADK      R10 = K[20]=1.0
+    0077 [line  294] 0x0300415C  CALL       A=5 B=6 C=1
+    0078 [line  295] 0x80454009  SETTABLE   R0[K[0]='m_appoint'] = K[21]=None
+    0079 [line  296] 0x8B45C009  SETTABLE   R0[K[22]='m_waitAppoint'] = K[23]=False
+    0080 [line  298] 0x0046014B  SELF       A=5 B=0 C=280 Bx=280
+    0081 [line  298] 0x0100415C  CALL       A=5 B=2 C=1
+    0082 [line  299] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 82
+    'people': 1 -> 82
+    'game': 27 -> 82
+    'officer_id': 33 -> 82
+    'can_do': 41 -> 82
+    'officerName': 47 -> 60
+    'tooltip': 55 -> 60
+    'tooltip': 66 -> 71
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x3208
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 301 - 321
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'FindChild'
+    K[002] = 'Input_Name'
+    K[003] = 'GetComponent'
+    K[004] = 'UIInput'
+    K[005] = 'get_value'
+    K[006] = 'len'
+    K[007] = 0.0
+    K[008] = 'FlashTipMan'
+    K[009] = 'FlashTip'
+    K[010] = 'StringTable'
+    K[011] = 'Get'
+    K[012] = 1851.0
+    K[013] = 'm_keywords'
+    K[014] = 'm_peopleList'
+    K[015] = 'm_appoint'
+    K[016] = None
+    K[017] = 'EnableAddBtn'
+    K[018] = 'Instance'
+    K[019] = 'NationPeopleSearch'
+    K[020] = 'm_HostInfo'
+    K[021] = 'id'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  302] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  303] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  303] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  303] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  304] 0x00C0408B  SELF       A=2 B=1 C=257 Bx=769
+    0005 [line  304] 0x00008101  LOADK      R4 = K[2]='Input_Name'
+    0006 [line  304] 0x0180809C  CALL       A=2 B=3 C=2
+    0007 [line  305] 0x0000409A  TEST       A=2 B=0 C=1
+    0008 [line  305] 0x80000016  JMP        A=0 sBx=1
+    0009 [line  305] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line  307] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0011 [line  307] 0x00010141  LOADK      R5 = K[4]='UIInput'
+    0012 [line  307] 0x018080DC  CALL       A=3 B=3 C=2
+    0013 [line  308] 0x01C1410B  SELF       A=4 B=3 C=261 Bx=1797
+    0014 [line  308] 0x0100811C  CALL       A=4 B=2 C=2
+    0015 [line  309] 0x0241814B  SELF       A=5 B=4 C=262 Bx=2310
+    0016 [line  309] 0x0100815C  CALL       A=5 B=2 C=2
+    0017 [line  309] 0x02C1C017  EQ         A=0 B=R5 C=K[7]=0.0
+    0018 [line  309] 0x8001C016  JMP        A=0 sBx=8
+    0019 [line  310] 0x00020145  GETGLOBAL  R5 = GLOBAL K[8]='FlashTipMan'
+    0020 [line  310] 0x02C24146  GETTABLE   R5 = R5[K[9]='FlashTip']
+    0021 [line  310] 0x00028185  GETGLOBAL  R6 = GLOBAL K[10]='StringTable'
+    0022 [line  310] 0x0342C186  GETTABLE   R6 = R6[K[11]='Get']
+    0023 [line  310] 0x000301C1  LOADK      R7 = K[12]=1851.0
+    0024 [line  310] 0x0100019C  CALL       A=6 B=2 C=0
+    0025 [line  310] 0x0000415C  CALL       A=5 B=0 C=1
+    0026 [line  311] 0x0080001E  RETURN     A=0 B=1 C=0
+    0027 [line  314] 0x86810009  SETTABLE   R0[K[13]='m_keywords'] = R4
+    0028 [line  315] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0029 [line  315] 0x87014009  SETTABLE   R0[K[14]='m_peopleList'] = R5
+    0030 [line  316] 0x87C40009  SETTABLE   R0[K[15]='m_appoint'] = K[16]=None
+    0031 [line  317] 0x0044414B  SELF       A=5 B=0 C=273 Bx=273
+    0032 [line  317] 0x0100415C  CALL       A=5 B=2 C=1
+    0033 [line  319] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0034 [line  319] 0x02C48146  GETTABLE   R5 = R5[K[18]='Instance']
+    0035 [line  319] 0x0080815C  CALL       A=5 B=1 C=2
+    0036 [line  320] 0x0044C18B  SELF       A=6 B=0 C=275 Bx=275
+    0037 [line  320] 0x02C50206  GETTABLE   R8 = R5[K[20]='m_HostInfo']
+    0038 [line  320] 0x04454206  GETTABLE   R8 = R8[K[21]='id']
+    0039 [line  320] 0x02000240  MOVE       R9 = R4
+    0040 [line  320] 0x0200419C  CALL       A=6 B=4 C=1
+    0041 [line  321] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 41
+    'panel': 1 -> 41
+    'InputUI': 7 -> 41
+    'UIInputComp': 13 -> 41
+    'keywords': 15 -> 41
+    'game': 36 -> 41
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x3530
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 324 - 334
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_curSceneId'
+    K[002] = 6104.0
+    K[003] = 6108.0
+    K[004] = 6106.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  325] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  325] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  325] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  325] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_curSceneId']
+    0004 [line  325] 0x00C08017  EQ         A=0 B=R1 C=K[2]=6104.0
+    0005 [line  325] 0x80008016  JMP        A=0 sBx=3
+    0006 [line  326] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0007 [line  326] 0x0100005E  RETURN     A=1 B=2 C=0
+    0008 [line  326] 0x8004C016  JMP        A=0 sBx=20
+    0009 [line  327] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0010 [line  327] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0011 [line  327] 0x0080805C  CALL       A=1 B=1 C=2
+    0012 [line  327] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_curSceneId']
+    0013 [line  327] 0x00C0C017  EQ         A=0 B=R1 C=K[3]=6108.0
+    0014 [line  327] 0x80008016  JMP        A=0 sBx=3
+    0015 [line  328] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0016 [line  328] 0x0100005E  RETURN     A=1 B=2 C=0
+    0017 [line  328] 0x80028016  JMP        A=0 sBx=11
+    0018 [line  329] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0019 [line  329] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0020 [line  329] 0x0080805C  CALL       A=1 B=1 C=2
+    0021 [line  329] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_curSceneId']
+    0022 [line  329] 0x00C10017  EQ         A=0 B=R1 C=K[4]=6106.0
+    0023 [line  329] 0x80008016  JMP        A=0 sBx=3
+    0024 [line  330] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0025 [line  330] 0x0100005E  RETURN     A=1 B=2 C=0
+    0026 [line  330] 0x80004016  JMP        A=0 sBx=2
+    0027 [line  332] 0x00000042  LOADBOOL   A=1 B=0 C=0
+    0028 [line  332] 0x0100005E  RETURN     A=1 B=2 C=0
+    0029 [line  334] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 29
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x369F
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 337 - 356
+    Params : 3
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'IsInCopyHasCommander'
+    K[001] = 'require'
+    K[002] = 'PB.net_common'
+    K[003] = 'PB.pb_helper'
+    K[004] = 'npt_command_apply'
+    K[005] = 'op_type'
+    K[006] = 13.0
+    K[007] = 'key_words'
+    K[008] = 'GameUtil'
+    K[009] = 'Utf8ToUnicode'
+    K[010] = 'Send'
+    K[011] = 'Protocol.NationPeopleSearch'
+    K[012] = 'role_id'
+    K[013] = 'OctetsStream'
+    K[014] = 'setStringUnicode'
+    K[015] = 'name_keywords'
+    K[016] = 'Instance'
+    K[017] = 'm_Network'
+    K[018] = 'SendProtocol'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  338] 0x004000CB  SELF       A=3 B=0 C=256 Bx=256
+    0001 [line  338] 0x010080DC  CALL       A=3 B=2 C=2
+    0002 [line  338] 0x000000DA  TEST       A=3 B=0 C=0
+    0003 [line  338] 0x80048016  JMP        A=0 sBx=19
+    0004 [line  339] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='require'
+    0005 [line  339] 0x00008101  LOADK      R4 = K[2]='PB.net_common'
+    0006 [line  339] 0x010080DC  CALL       A=3 B=2 C=2
+    0007 [line  340] 0x00004105  GETGLOBAL  R4 = GLOBAL K[1]='require'
+    0008 [line  340] 0x0000C141  LOADK      R5 = K[3]='PB.pb_helper'
+    0009 [line  340] 0x0100811C  CALL       A=4 B=2 C=2
+    0010 [line  341] 0x01C10146  GETTABLE   R5 = R3[K[4]='npt_command_apply']
+    0011 [line  342] 0x02800180  MOVE       R6 = R5
+    0012 [line  342] 0x0080819C  CALL       A=6 B=1 C=2
+    0013 [line  343] 0x82C18189  SETTABLE   R6[K[5]='op_type'] = K[6]=13.0
+    0014 [line  344] 0x000201C5  GETGLOBAL  R7 = GLOBAL K[8]='GameUtil'
+    0015 [line  344] 0x03C241C6  GETTABLE   R7 = R7[K[9]='Utf8ToUnicode']
+    0016 [line  344] 0x01000200  MOVE       R8 = R2
+    0017 [line  344] 0x010081DC  CALL       A=7 B=2 C=2
+    0018 [line  344] 0x8381C189  SETTABLE   R6[K[7]='key_words'] = R7
+    0019 [line  345] 0x024281C6  GETTABLE   R7 = R4[K[10]='Send']
+    0020 [line  345] 0x03000200  MOVE       R8 = R6
+    0021 [line  345] 0x010041DC  CALL       A=7 B=2 C=1
+    0022 [line  345] 0x8004C016  JMP        A=0 sBx=20
+    0023 [line  347] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='require'
+    0024 [line  347] 0x0002C101  LOADK      R4 = K[11]='Protocol.NationPeopleSearch'
+    0025 [line  347] 0x010080DC  CALL       A=3 B=2 C=2
+    0026 [line  348] 0x01800100  MOVE       R4 = R3
+    0027 [line  348] 0x0080811C  CALL       A=4 B=1 C=2
+    0028 [line  349] 0x86004109  SETTABLE   R4[K[12]='role_id'] = R1
+    0029 [line  350] 0x00034145  GETGLOBAL  R5 = GLOBAL K[13]='OctetsStream'
+    0030 [line  350] 0x02C34146  GETTABLE   R5 = R5[K[13]='OctetsStream']
+    0031 [line  350] 0x0080815C  CALL       A=5 B=1 C=2
+    0032 [line  351] 0x02C3818B  SELF       A=6 B=5 C=270 Bx=2830
+    0033 [line  351] 0x01000200  MOVE       R8 = R2
+    0034 [line  351] 0x0180419C  CALL       A=6 B=3 C=1
+    0035 [line  352] 0x87814109  SETTABLE   R4[K[15]='name_keywords'] = R5
+    0036 [line  354] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0037 [line  354] 0x03440186  GETTABLE   R6 = R6[K[16]='Instance']
+    0038 [line  354] 0x0080819C  CALL       A=6 B=1 C=2
+    0039 [line  354] 0x03444186  GETTABLE   R6 = R6[K[17]='m_Network']
+    0040 [line  354] 0x0344818B  SELF       A=6 B=6 C=274 Bx=3346
+    0041 [line  354] 0x02000200  MOVE       R8 = R4
+    0042 [line  354] 0x0180419C  CALL       A=6 B=3 C=1
+    0043 [line  356] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 43
+    'role_id': 0 -> 43
+    'keywords': 0 -> 43
+    'net_common': 7 -> 22
+    'pb_helper': 10 -> 22
+    'npt_command_apply': 11 -> 22
+    'msg': 13 -> 22
+    '_NationPeopleSearch': 26 -> 43
+    'p': 28 -> 43
+    'oct': 32 -> 43
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x3A50
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 357 - 364
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Protocol.NationPeopleSearch'
+    K[002] = 'role_id'
+    K[003] = 'name_keywords'
+    K[004] = 'Instance'
+    K[005] = 'm_Network'
+    K[006] = 'SendProtocol'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  358] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0001 [line  358] 0x00004101  LOADK      R4 = K[1]='Protocol.NationPeopleSearch'
+    0002 [line  358] 0x010080DC  CALL       A=3 B=2 C=2
+    0003 [line  359] 0x01800100  MOVE       R4 = R3
+    0004 [line  359] 0x0080811C  CALL       A=4 B=1 C=2
+    0005 [line  360] 0x81004109  SETTABLE   R4[K[2]='role_id'] = R1
+    0006 [line  361] 0x81808109  SETTABLE   R4[K[3]='name_keywords'] = R2
+    0007 [line  362] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0008 [line  362] 0x02C10146  GETTABLE   R5 = R5[K[4]='Instance']
+    0009 [line  362] 0x0080815C  CALL       A=5 B=1 C=2
+    0010 [line  362] 0x02C14146  GETTABLE   R5 = R5[K[5]='m_Network']
+    0011 [line  362] 0x02C1814B  SELF       A=5 B=5 C=262 Bx=2822
+    0012 [line  362] 0x020001C0  MOVE       R7 = R4
+    0013 [line  362] 0x0180415C  CALL       A=5 B=3 C=1
+    0014 [line  364] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+    'role_id': 0 -> 14
+    'name_keywords': 0 -> 14
+    '_NationPeopleSearch': 3 -> 14
+    'p': 5 -> 14
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x3BE5
+    Source : '@lua\\gui\\ecpanelnationsearch.lua'
+    Lines  : 367 - 381
+    Params : 5
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Protocol.NationAppoint'
+    K[002] = 'role_id'
+    K[003] = 'dest_roleid'
+    K[004] = 'officer'
+    K[005] = 'oper_type'
+    K[006] = 'Instance'
+    K[007] = 'm_Network'
+    K[008] = 'SendProtocol'
+    K[009] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  368] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+    0001 [line  368] 0x00004181  LOADK      R6 = K[1]='Protocol.NationAppoint'
+    0002 [line  368] 0x0100815C  CALL       A=5 B=2 C=2
+    0003 [line  369] 0x02800180  MOVE       R6 = R5
+    0004 [line  369] 0x0080819C  CALL       A=6 B=1 C=2
+    0005 [line  370] 0x81004189  SETTABLE   R6[K[2]='role_id'] = R1
+    0006 [line  371] 0x81808189  SETTABLE   R6[K[3]='dest_roleid'] = R2
+    0007 [line  372] 0x8200C189  SETTABLE   R6[K[4]='officer'] = R3
+    0008 [line  373] 0x82810189  SETTABLE   R6[K[5]='oper_type'] = R4
+    0009 [line  374] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0010 [line  374] 0x03C181C6  GETTABLE   R7 = R7[K[6]='Instance']
+    0011 [line  374] 0x008081DC  CALL       A=7 B=1 C=2
+    0012 [line  374] 0x03C1C1C6  GETTABLE   R7 = R7[K[7]='m_Network']
+    0013 [line  374] 0x03C201CB  SELF       A=7 B=7 C=264 Bx=3848
+    0014 [line  374] 0x03000240  MOVE       R9 = R6
+    0015 [line  374] 0x018041DC  CALL       A=7 B=3 C=1
+    0016 [line  376] 0x02424017  EQ         A=0 B=R4 C=K[9]=1.0
+    0017 [line  376] 0x80000016  JMP        A=0 sBx=1
+    0018 [line  376] 0x7FFFC016  JMP        A=0 sBx=0
+    0019 [line  381] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 19
+    'role_id': 0 -> 19
+    'dest_roleid': 0 -> 19
+    'officer_id': 0 -> 19
+    'oper_type': 0 -> 19
+    '_NationAppoint': 3 -> 19
+    'p': 5 -> 19

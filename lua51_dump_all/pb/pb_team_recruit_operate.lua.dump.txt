@@ -1,0 +1,162 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_team_recruit_operate.lua
+SIZE: 1433
+PARSED: 1433
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_team_recruit_operate.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 7
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'Main.ECGame'
+K[003] = 'Event.TeamRecruitEvent'
+K[004] = 'AddHandler'
+K[005] = 'npt_team_recruit_operate_reply'
+
+----- INSTRUCTIONS -----
+0000 [line    8] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    8] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    8] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    9] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    9] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    9] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   10] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line   10] 0x0000C0C1  LOADK      R3 = K[3]='Event.TeamRecruitEvent'
+0008 [line   10] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line   44] 0x000000E4  CLOSURE    R3 = PROTO[0]
+0010 [line   44] 0x00800000  MOVE       R0 = R1
+0011 [line   44] 0x01000000  MOVE       R0 = R2
+0012 [line   46] 0x00410106  GETTABLE   R4 = R0[K[4]='AddHandler']
+0013 [line   46] 0x00014141  LOADK      R5 = K[5]='npt_team_recruit_operate_reply'
+0014 [line   46] 0x01800180  MOVE       R6 = R3
+0015 [line   46] 0x0180411C  CALL       A=4 B=3 C=1
+0016 [line   46] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 16
+'ECGame': 6 -> 16
+'TeamRecruitEvent': 9 -> 16
+'on_team_recruit': 12 -> 16
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x110
+    Source : '@lua\\pb\\pb_team_recruit_operate.lua'
+    Lines  : 14 - 44
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_TeamMan'
+    K[002] = 'operate_type'
+    K[003] = 1.0
+    K[004] = 6.0
+    K[005] = 'operate_result'
+    K[006] = 'FlashTipMan'
+    K[007] = 'FlashTip'
+    K[008] = 'StringTable'
+    K[009] = 'Get'
+    K[010] = 13002.0
+    K[011] = 2.0
+    K[012] = 13003.0
+    K[013] = 0.0
+    K[014] = 'OnCmd_TeamRecruit_Operate'
+    K[015] = 3.0
+    K[016] = 4.0
+    K[017] = 'operateType'
+    K[018] = 'resultType'
+    K[019] = 'EventManager'
+    K[020] = 'raiseEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   18] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   18] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line   18] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line   18] 0x01404086  GETTABLE   R2 = R2[K[1]='m_TeamMan']
+    0004 [line   21] 0x00C080C6  GETTABLE   R3 = R1[K[2]='operate_type']
+    0005 [line   21] 0x01C0C057  EQ         A=1 B=R3 C=K[3]=1.0
+    0006 [line   21] 0x80008016  JMP        A=0 sBx=3
+    0007 [line   21] 0x00C080C6  GETTABLE   R3 = R1[K[2]='operate_type']
+    0008 [line   21] 0x01C10017  EQ         A=0 B=R3 C=K[4]=6.0
+    0009 [line   21] 0x80078016  JMP        A=0 sBx=31
+    0010 [line   22] 0x00C140C6  GETTABLE   R3 = R1[K[5]='operate_result']
+    0011 [line   22] 0x01C0C017  EQ         A=0 B=R3 C=K[3]=1.0
+    0012 [line   22] 0x80020016  JMP        A=0 sBx=9
+    0013 [line   23] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='FlashTipMan'
+    0014 [line   23] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='FlashTip']
+    0015 [line   23] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='StringTable'
+    0016 [line   23] 0x02424106  GETTABLE   R4 = R4[K[9]='Get']
+    0017 [line   23] 0x00028141  LOADK      R5 = K[10]=13002.0
+    0018 [line   23] 0x0100011C  CALL       A=4 B=2 C=0
+    0019 [line   23] 0x000040DC  CALL       A=3 B=0 C=1
+    0020 [line   24] 0x0080001E  RETURN     A=0 B=1 C=0
+    0021 [line   24] 0x80074016  JMP        A=0 sBx=30
+    0022 [line   25] 0x00C140C6  GETTABLE   R3 = R1[K[5]='operate_result']
+    0023 [line   25] 0x01C2C017  EQ         A=0 B=R3 C=K[11]=2.0
+    0024 [line   25] 0x80020016  JMP        A=0 sBx=9
+    0025 [line   26] 0x000180C5  GETGLOBAL  R3 = GLOBAL K[6]='FlashTipMan'
+    0026 [line   26] 0x01C1C0C6  GETTABLE   R3 = R3[K[7]='FlashTip']
+    0027 [line   26] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='StringTable'
+    0028 [line   26] 0x02424106  GETTABLE   R4 = R4[K[9]='Get']
+    0029 [line   26] 0x00030141  LOADK      R5 = K[12]=13003.0
+    0030 [line   26] 0x0100011C  CALL       A=4 B=2 C=0
+    0031 [line   26] 0x000040DC  CALL       A=3 B=0 C=1
+    0032 [line   27] 0x0080001E  RETURN     A=0 B=1 C=0
+    0033 [line   27] 0x80044016  JMP        A=0 sBx=18
+    0034 [line   28] 0x00C140C6  GETTABLE   R3 = R1[K[5]='operate_result']
+    0035 [line   28] 0x01C34017  EQ         A=0 B=R3 C=K[13]=0.0
+    0036 [line   28] 0x80038016  JMP        A=0 sBx=15
+    0037 [line   29] 0x014380CB  SELF       A=3 B=2 C=270 Bx=1294
+    0038 [line   29] 0x00800140  MOVE       R5 = R1
+    0039 [line   29] 0x018040DC  CALL       A=3 B=3 C=1
+    0040 [line   30] 0x80028016  JMP        A=0 sBx=11
+    0041 [line   31] 0x00C080C6  GETTABLE   R3 = R1[K[2]='operate_type']
+    0042 [line   31] 0x01C2C017  EQ         A=0 B=R3 C=K[11]=2.0
+    0043 [line   31] 0x80000016  JMP        A=0 sBx=1
+    0044 [line   31] 0x80018016  JMP        A=0 sBx=7
+    0045 [line   32] 0x00C080C6  GETTABLE   R3 = R1[K[2]='operate_type']
+    0046 [line   32] 0x01C3C017  EQ         A=0 B=R3 C=K[15]=3.0
+    0047 [line   32] 0x80000016  JMP        A=0 sBx=1
+    0048 [line   32] 0x80008016  JMP        A=0 sBx=3
+    0049 [line   33] 0x00C080C6  GETTABLE   R3 = R1[K[2]='operate_type']
+    0050 [line   33] 0x01C40017  EQ         A=0 B=R3 C=K[16]=4.0
+    0051 [line   33] 0x7FFFC016  JMP        A=0 sBx=0
+    0052 [line   37] 0x014380CB  SELF       A=3 B=2 C=270 Bx=1294
+    0053 [line   37] 0x00800140  MOVE       R5 = R1
+    0054 [line   37] 0x018040DC  CALL       A=3 B=3 C=1
+    0055 [line   39] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0056 [line   39] 0x008080DC  CALL       A=3 B=1 C=2
+    0057 [line   40] 0x00C08106  GETTABLE   R4 = R1[K[2]='operate_type']
+    0058 [line   40] 0x888100C9  SETTABLE   R3[K[17]='operateType'] = R4
+    0059 [line   41] 0x00C14106  GETTABLE   R4 = R1[K[5]='operate_result']
+    0060 [line   41] 0x890100C9  SETTABLE   R3[K[18]='resultType'] = R4
+    0061 [line   42] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0062 [line   42] 0x0244C106  GETTABLE   R4 = R4[K[19]='EventManager']
+    0063 [line   42] 0x0245010B  SELF       A=4 B=4 C=276 Bx=2324
+    0064 [line   42] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0065 [line   42] 0x018001C0  MOVE       R7 = R3
+    0066 [line   42] 0x0200411C  CALL       A=4 B=4 C=1
+    0067 [line   44] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 67
+    'msg': 0 -> 67
+    'TeamMan': 4 -> 67
+    'event': 57 -> 67

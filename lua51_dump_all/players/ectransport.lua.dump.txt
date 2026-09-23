@@ -1,0 +1,1665 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\players\ectransport.lua
+SIZE: 16643
+PARSED: 16643
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\players\\ectransport.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 50
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Data.ElementData'
+K[003] = 'Data.Exptypes'
+K[004] = 'Utility.TransportHelper'
+K[005] = 'Configs.npc_list'
+K[006] = 'Data.Expdef'
+K[007] = 'Utility.malut'
+K[008] = 'Configs.InstanceInfo'
+K[009] = 'type'
+K[010] = 'pairs'
+K[011] = 'ipairs'
+K[012] = 0.0
+K[013] = 3.0
+K[014] = 'getEssence'
+K[015] = 'error'
+K[016] = 'invalid transport tid: '
+K[017] = 'tostring'
+K[018] = 'DATA_TYPE'
+K[019] = 'DT_NPC_ESSENCE'
+K[020] = 'GetNPCTransmitService'
+K[021] = 'npc %s does not have transmit service'
+K[022] = 'format'
+K[023] = 1.0
+K[024] = 'targets'
+K[025] = 'len'
+K[026] = 'id_scene'
+K[027] = 'MakeTransmitServiceValidator'
+K[028] = 'trans_condition'
+K[029] = 'TRANSMIT_CONDITION_ENUM'
+K[030] = 'TRANSCONDITION_BETWEENWORLD'
+K[031] = 'scene'
+K[032] = 'x'
+K[033] = 'z'
+K[034] = 'option'
+K[035] = 'select'
+K[036] = 'can_use'
+K[037] = 'priority_selector'
+K[038] = 'TRANSCONDITION_JUMPTO_OTHER_COUNTRY'
+K[039] = 'other_country'
+K[040] = -1.0
+K[041] = None
+K[042] = 'DT_TRANSMITBOX_ESSENCE'
+K[043] = 'target_scene'
+K[044] = 'MakeTransmitBoxValidator'
+K[045] = 'target_pos_x'
+K[046] = 'target_pos_z'
+K[047] = 'invalid transport data with tid: '
+K[048] = 'sid'
+K[049] = 'pos_x'
+K[050] = 'pos_z'
+K[051] = 'to'
+K[052] = 'source'
+K[053] = 5.0
+K[054] = 25.0
+K[055] = 'number'
+K[056] = 'pos'
+K[057] = 'Class'
+K[058] = 'ECTransport'
+K[059] = 'define'
+K[060] = 'static'
+K[061] = '=>'
+K[062] = 'table'
+K[063] = 'FindRoute'
+K[064] = 'FindRouteOnce'
+K[065] = 'FindRouteToOtherCountry'
+K[066] = 'FindRouteToOtherCountryOnce'
+K[067] = 'makeNodeList'
+K[068] = 'addSourceNode'
+K[069] = 'addDestNode'
+K[070] = 'searchStep'
+K[071] = 'searchShortestPath'
+K[072] = 'searchRoute'
+K[073] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    5] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    5] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    5] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    6] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    6] 0x00008081  LOADK      R2 = K[2]='Data.ElementData'
+0005 [line    6] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    7] 0x0000C0C1  LOADK      R3 = K[3]='Data.Exptypes'
+0008 [line    7] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    8] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    8] 0x00010101  LOADK      R4 = K[4]='Utility.TransportHelper'
+0011 [line    8] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    9] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    9] 0x00014141  LOADK      R5 = K[5]='Configs.npc_list'
+0014 [line    9] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   10] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line   10] 0x00018181  LOADK      R6 = K[6]='Data.Expdef'
+0017 [line   10] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line   11] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line   11] 0x0001C1C1  LOADK      R7 = K[7]='Utility.malut'
+0020 [line   11] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line   12] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line   12] 0x00020201  LOADK      R8 = K[8]='Configs.InstanceInfo'
+0023 [line   12] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   14] 0x00024205  GETGLOBAL  R8 = GLOBAL K[9]='type'
+0025 [line   15] 0x00028245  GETGLOBAL  R9 = GLOBAL K[10]='pairs'
+0026 [line   16] 0x0002C285  GETGLOBAL  R10 = GLOBAL K[11]='ipairs'
+0027 [line   29] 0x000002E4  CLOSURE    R11 = PROTO[0]
+0028 [line   31] 0x00030301  LOADK      R12 = K[12]=0.0
+0029 [line   32] 0x00030341  LOADK      R13 = K[12]=0.0
+0030 [line   35] 0x000043A4  CLOSURE    R14 = PROTO[1]
+0031 [line   35] 0x06800000  MOVE       R0 = R13
+0032 [line   61] 0x000083E4  CLOSURE    R15 = PROTO[2]
+0033 [line   61] 0x03800000  MOVE       R0 = R7
+0034 [line   61] 0x06000000  MOVE       R0 = R12
+0035 [line   73] 0x0000C424  CLOSURE    R16 = PROTO[3]
+0036 [line   73] 0x03800000  MOVE       R0 = R7
+0037 [line   73] 0x06000000  MOVE       R0 = R12
+0038 [line   80] 0x0000044A  NEWTABLE   A=17 B=0 C=0 Bx=0
+0039 [line   81] 0x04800480  MOVE       R18 = R9
+0040 [line   81] 0x020004C0  MOVE       R19 = R4
+0041 [line   81] 0x0101049C  CALL       A=18 B=2 C=4
+0042 [line   81] 0x80210016  JMP        A=0 sBx=133
+0043 [line   82] 0x0B4245C6  GETTABLE   R23 = R22[K[9]='type']
+0044 [line   82] 0x0BC34017  EQ         A=0 B=R23 C=K[13]=3.0
+0045 [line   82] 0x80204016  JMP        A=0 sBx=130
+0046 [line   83] 0x00C385C6  GETTABLE   R23 = R1[K[14]='getEssence']
+0047 [line   83] 0x0A800600  MOVE       R24 = R21
+0048 [line   83] 0x0100C5DC  CALL       A=23 B=2 C=3
+0049 [line   84] 0x000045DA  TEST       A=23 B=0 C=1
+0050 [line   84] 0x80018016  JMP        A=0 sBx=7
+0051 [line   85] 0x0003C645  GETGLOBAL  R25 = GLOBAL K[15]='error'
+0052 [line   85] 0x00040681  LOADK      R26 = K[16]='invalid transport tid: '
+0053 [line   85] 0x000446C5  GETGLOBAL  R27 = GLOBAL K[17]='tostring'
+0054 [line   85] 0x0A800700  MOVE       R28 = R21
+0055 [line   85] 0x010086DC  CALL       A=27 B=2 C=2
+0056 [line   85] 0x0D06C695  CONCAT     A=26 B=26 C=27 Bx=13339
+0057 [line   85] 0x0100465C  CALL       A=25 B=2 C=1
+0058 [line   87] 0x0000064A  NEWTABLE   A=25 B=0 C=0 Bx=0
+0059 [line   88] 0x01448686  GETTABLE   R26 = R2[K[18]='DATA_TYPE']
+0060 [line   88] 0x0D44C686  GETTABLE   R26 = R26[K[19]='DT_NPC_ESSENCE']
+0061 [line   88] 0x0C068017  EQ         A=0 B=R24 C=R26
+0062 [line   88] 0x80110016  JMP        A=0 sBx=69
+0063 [line   89] 0x01C50686  GETTABLE   R26 = R3[K[20]='GetNPCTransmitService']
+0064 [line   89] 0x0A8006C0  MOVE       R27 = R21
+0065 [line   89] 0x0100869C  CALL       A=26 B=2 C=2
+0066 [line   90] 0x0000469A  TEST       A=26 B=0 C=1
+0067 [line   90] 0x8001C016  JMP        A=0 sBx=8
+0068 [line   91] 0x0003C6C5  GETGLOBAL  R27 = GLOBAL K[15]='error'
+0069 [line   91] 0x00054701  LOADK      R28 = K[21]='npc %s does not have transmit service'
+0070 [line   91] 0x0E45870B  SELF       A=28 B=28 C=278 Bx=14614
+0071 [line   91] 0x00044785  GETGLOBAL  R30 = GLOBAL K[17]='tostring'
+0072 [line   91] 0x0A8007C0  MOVE       R31 = R21
+0073 [line   91] 0x0100079C  CALL       A=30 B=2 C=0
+0074 [line   91] 0x0000071C  CALL       A=28 B=0 C=0
+0075 [line   91] 0x000046DC  CALL       A=27 B=0 C=1
+0076 [line   93] 0x0005C6C1  LOADK      R27 = K[23]=1.0
+0077 [line   93] 0x0D460706  GETTABLE   R28 = R26[K[24]='targets']
+0078 [line   93] 0x0E464706  GETTABLE   R28 = R28[K[25]='len']
+0079 [line   93] 0x0005C741  LOADK      R29 = K[23]=1.0
+0080 [line   93] 0x800C06E0  FORPREP    A=27 sBx=49
+0081 [line   94] 0x0D4607C6  GETTABLE   R31 = R26[K[24]='targets']
+0082 [line   94] 0x0F8787C6  GETTABLE   R31 = R31[R30]
+0083 [line   95] 0x0FC68806  GETTABLE   R32 = R31[K[26]='id_scene']
+0084 [line   96] 0x10430057  EQ         A=1 B=R32 C=K[12]=0.0
+0085 [line   96] 0x800AC016  JMP        A=0 sBx=44
+0086 [line   97] 0x01C6C846  GETTABLE   R33 = R3[K[27]='MakeTransmitServiceValidator']
+0087 [line   97] 0x0B800880  MOVE       R34 = R23
+0088 [line   97] 0x0D0008C0  MOVE       R35 = R26
+0089 [line   97] 0x0F000900  MOVE       R36 = R30
+0090 [line   97] 0x07000940  MOVE       R37 = R14
+0091 [line   97] 0x0280885C  CALL       A=33 B=5 C=2
+0092 [line   99] 0x0FC70886  GETTABLE   R34 = R31[K[28]='trans_condition']
+0093 [line   99] 0x02C748C6  GETTABLE   R35 = R5[K[29]='TRANSMIT_CONDITION_ENUM']
+0094 [line   99] 0x11C788C6  GETTABLE   R35 = R35[K[30]='TRANSCONDITION_BETWEENWORLD']
+0095 [line   99] 0x1108C017  EQ         A=0 B=R34 C=R35
+0096 [line   99] 0x80044016  JMP        A=0 sBx=18
+0097 [line  100] 0x0C800894  LEN        A=34 B=25 C=0 Bx=12800
+0098 [line  100] 0x1145C88C  ADD        A=34 B=R34 C=K[23]=1.0
+0099 [line  100] 0x000108CA  NEWTABLE   A=35 B=0 C=4 Bx=4
+0100 [line  100] 0x8F8808C9  SETTABLE   R35[K[31]='scene'] = R32
+0101 [line  100] 0x0FC80906  GETTABLE   R36 = R31[K[32]='x']
+0102 [line  100] 0x900908C9  SETTABLE   R35[K[32]='x'] = R36
+0103 [line  100] 0x0FC84906  GETTABLE   R36 = R31[K[33]='z']
+0104 [line  100] 0x908908C9  SETTABLE   R35[K[33]='z'] = R36
+0105 [line  100] 0x0000C90A  NEWTABLE   A=36 B=0 C=3 Bx=3
+0106 [line  100] 0x91878909  SETTABLE   R36[K[35]='select'] = R30
+0107 [line  100] 0x92084909  SETTABLE   R36[K[36]='can_use'] = R33
+0108 [line  100] 0x08000940  MOVE       R37 = R16
+0109 [line  100] 0x10000980  MOVE       R38 = R32
+0110 [line  100] 0x0100895C  CALL       A=37 B=2 C=2
+0111 [line  100] 0x92894909  SETTABLE   R36[K[37]='priority_selector'] = R37
+0112 [line  100] 0x910908C9  SETTABLE   R35[K[34]='option'] = R36
+0113 [line  100] 0x1108C649  SETTABLE   R25[R34] = R35
+0114 [line  100] 0x80038016  JMP        A=0 sBx=15
+0115 [line  101] 0x0FC70886  GETTABLE   R34 = R31[K[28]='trans_condition']
+0116 [line  101] 0x02C748C6  GETTABLE   R35 = R5[K[29]='TRANSMIT_CONDITION_ENUM']
+0117 [line  101] 0x11C988C6  GETTABLE   R35 = R35[K[38]='TRANSCONDITION_JUMPTO_OTHER_COUNTRY']
+0118 [line  101] 0x1108C017  EQ         A=0 B=R34 C=R35
+0119 [line  101] 0x80024016  JMP        A=0 sBx=10
+0120 [line  102] 0x0C800894  LEN        A=34 B=25 C=0 Bx=12800
+0121 [line  102] 0x1145C88C  ADD        A=34 B=R34 C=K[23]=1.0
+0122 [line  102] 0x000088CA  NEWTABLE   A=35 B=0 C=2 Bx=2
+0123 [line  102] 0x8FC9C8C9  SETTABLE   R35[K[31]='scene'] = K[39]='other_country'
+0124 [line  102] 0x0000C90A  NEWTABLE   A=36 B=0 C=3 Bx=3
+0125 [line  102] 0x91CA0909  SETTABLE   R36[K[35]='select'] = K[40]=-1.0
+0126 [line  102] 0x92084909  SETTABLE   R36[K[36]='can_use'] = R33
+0127 [line  102] 0x92CA4909  SETTABLE   R36[K[37]='priority_selector'] = K[41]=None
+0128 [line  102] 0x910908C9  SETTABLE   R35[K[34]='option'] = R36
+0129 [line  102] 0x1108C649  SETTABLE   R25[R34] = R35
+0130 [line   93] 0x7FF346DF  FORLOOP    A=27 sBx=-50
+0131 [line  105] 0x80088016  JMP        A=0 sBx=35
+0132 [line  106] 0x01448686  GETTABLE   R26 = R2[K[18]='DATA_TYPE']
+0133 [line  106] 0x0D4A8686  GETTABLE   R26 = R26[K[42]='DT_TRANSMITBOX_ESSENCE']
+0134 [line  106] 0x0C068017  EQ         A=0 B=R24 C=R26
+0135 [line  106] 0x8005C016  JMP        A=0 sBx=24
+0136 [line  107] 0x0BCAC686  GETTABLE   R26 = R23[K[43]='target_scene']
+0137 [line  108] 0x0D430057  EQ         A=1 B=R26 C=K[12]=0.0
+0138 [line  108] 0x8006C016  JMP        A=0 sBx=28
+0139 [line  109] 0x01CB06C6  GETTABLE   R27 = R3[K[44]='MakeTransmitBoxValidator']
+0140 [line  109] 0x0B800700  MOVE       R28 = R23
+0141 [line  109] 0x010086DC  CALL       A=27 B=2 C=2
+0142 [line  111] 0x0C800714  LEN        A=28 B=25 C=0 Bx=12800
+0143 [line  111] 0x0E45C70C  ADD        A=28 B=R28 C=K[23]=1.0
+0144 [line  111] 0x0001074A  NEWTABLE   A=29 B=0 C=4 Bx=4
+0145 [line  111] 0x8F868749  SETTABLE   R29[K[31]='scene'] = R26
+0146 [line  111] 0x0BCB4786  GETTABLE   R30 = R23[K[45]='target_pos_x']
+0147 [line  111] 0x90078749  SETTABLE   R29[K[32]='x'] = R30
+0148 [line  111] 0x0BCB8786  GETTABLE   R30 = R23[K[46]='target_pos_z']
+0149 [line  111] 0x90878749  SETTABLE   R29[K[33]='z'] = R30
+0150 [line  111] 0x0000C78A  NEWTABLE   A=30 B=0 C=3 Bx=3
+0151 [line  111] 0x91C5C789  SETTABLE   R30[K[35]='select'] = K[23]=1.0
+0152 [line  111] 0x9206C789  SETTABLE   R30[K[36]='can_use'] = R27
+0153 [line  111] 0x080007C0  MOVE       R31 = R16
+0154 [line  111] 0x0D000800  MOVE       R32 = R26
+0155 [line  111] 0x010087DC  CALL       A=31 B=2 C=2
+0156 [line  111] 0x9287C789  SETTABLE   R30[K[37]='priority_selector'] = R31
+0157 [line  111] 0x91078749  SETTABLE   R29[K[34]='option'] = R30
+0158 [line  111] 0x0E074649  SETTABLE   R25[R28] = R29
+0159 [line  112] 0x80018016  JMP        A=0 sBx=7
+0160 [line  114] 0x0003C685  GETGLOBAL  R26 = GLOBAL K[15]='error'
+0161 [line  114] 0x000BC6C1  LOADK      R27 = K[47]='invalid transport data with tid: '
+0162 [line  114] 0x00044705  GETGLOBAL  R28 = GLOBAL K[17]='tostring'
+0163 [line  114] 0x0A800740  MOVE       R29 = R21
+0164 [line  114] 0x0100871C  CALL       A=28 B=2 C=2
+0165 [line  114] 0x0D8706D5  CONCAT     A=27 B=27 C=28 Bx=13852
+0166 [line  114] 0x0100469C  CALL       A=26 B=2 C=1
+0167 [line  117] 0x0001068A  NEWTABLE   A=26 B=0 C=4 Bx=4
+0168 [line  119] 0x0B4C06C6  GETTABLE   R27 = R22[K[48]='sid']
+0169 [line  119] 0x8F86C689  SETTABLE   R26[K[31]='scene'] = R27
+0170 [line  119] 0x0B4C46C6  GETTABLE   R27 = R22[K[49]='pos_x']
+0171 [line  119] 0x9006C689  SETTABLE   R26[K[32]='x'] = R27
+0172 [line  119] 0x0B4C86C6  GETTABLE   R27 = R22[K[50]='pos_z']
+0173 [line  119] 0x9086C689  SETTABLE   R26[K[33]='z'] = R27
+0174 [line  120] 0x99864689  SETTABLE   R26[K[51]='to'] = R25
+0175 [line  121] 0x0A868449  SETTABLE   R17[R21] = R26
+0176 [line   81] 0x000084A1  TFORLOOP   A=18 B=0 C=2
+0177 [line  122] 0x7FDE0016  JMP        A=0 sBx=-135
+0178 [line  135] 0x000104A4  CLOSURE    R18 = PROTO[4]
+0179 [line  147] 0x000144E4  CLOSURE    R19 = PROTO[5]
+0180 [line  147] 0x05800000  MOVE       R0 = R11
+0181 [line  151] 0x00018524  CLOSURE    R20 = PROTO[6]
+0182 [line  151] 0x09800000  MOVE       R0 = R19
+0183 [line  156] 0x0000054A  NEWTABLE   A=21 B=0 C=0 Bx=0
+0184 [line  157] 0x000A0581  LOADK      R22 = K[40]=-1.0
+0185 [line  158] 0x000005CA  NEWTABLE   A=23 B=0 C=0 Bx=0
+0186 [line  161] 0x04800600  MOVE       R24 = R9
+0187 [line  161] 0x08800640  MOVE       R25 = R17
+0188 [line  161] 0x0101061C  CALL       A=24 B=2 C=4
+0189 [line  161] 0x80050016  JMP        A=0 sBx=21
+0190 [line  162] 0x0E47C746  GETTABLE   R29 = R28[K[31]='scene']
+0191 [line  163] 0x0001478A  NEWTABLE   A=30 B=0 C=5 Bx=5
+0192 [line  163] 0x9A06C789  SETTABLE   R30[K[52]='source'] = R27
+0193 [line  163] 0x8F874789  SETTABLE   R30[K[31]='scene'] = R29
+0194 [line  163] 0x0E4807C6  GETTABLE   R31 = R28[K[32]='x']
+0195 [line  163] 0x9007C789  SETTABLE   R30[K[32]='x'] = R31
+0196 [line  163] 0x0E4847C6  GETTABLE   R31 = R28[K[33]='z']
+0197 [line  163] 0x9087C789  SETTABLE   R30[K[33]='z'] = R31
+0198 [line  163] 0x000007CA  NEWTABLE   A=31 B=0 C=0 Bx=0
+0199 [line  163] 0x9987C789  SETTABLE   R30[K[51]='to'] = R31
+0200 [line  164] 0x0A8007D4  LEN        A=31 B=21 C=0 Bx=10752
+0201 [line  164] 0x0FC5C7CC  ADD        A=31 B=R31 C=K[23]=1.0
+0202 [line  164] 0x0F878549  SETTABLE   R21[R31] = R30
+0203 [line  165] 0x0A8007D4  LEN        A=31 B=21 C=0 Bx=10752
+0204 [line  168] 0x05800800  MOVE       R32 = R11
+0205 [line  168] 0x0B800840  MOVE       R33 = R23
+0206 [line  168] 0x0E800880  MOVE       R34 = R29
+0207 [line  168] 0x0180881C  CALL       A=32 B=3 C=2
+0208 [line  169] 0x10000854  LEN        A=33 B=32 C=0 Bx=16384
+0209 [line  169] 0x10C5C84C  ADD        A=33 B=R33 C=K[23]=1.0
+0210 [line  169] 0x1087C809  SETTABLE   R32[R33] = R31
+0211 [line  161] 0x00008621  TFORLOOP   A=24 B=0 C=2
+0212 [line  169] 0x7FFA0016  JMP        A=0 sBx=-23
+0213 [line  174] 0x0001460A  NEWTABLE   A=24 B=0 C=5 Bx=5
+0214 [line  174] 0x9A49C609  SETTABLE   R24[K[52]='source'] = K[39]='other_country'
+0215 [line  174] 0x8FC9C609  SETTABLE   R24[K[31]='scene'] = K[39]='other_country'
+0216 [line  174] 0x90430609  SETTABLE   R24[K[32]='x'] = K[12]=0.0
+0217 [line  174] 0x90C30609  SETTABLE   R24[K[33]='z'] = K[12]=0.0
+0218 [line  174] 0x0000064A  NEWTABLE   A=25 B=0 C=0 Bx=0
+0219 [line  174] 0x99864609  SETTABLE   R24[K[51]='to'] = R25
+0220 [line  175] 0x0A800654  LEN        A=25 B=21 C=0 Bx=10752
+0221 [line  175] 0x0CC5C64C  ADD        A=25 B=R25 C=K[23]=1.0
+0222 [line  175] 0x0C860549  SETTABLE   R21[R25] = R24
+0223 [line  176] 0x0A800594  LEN        A=22 B=21 C=0 Bx=10752
+0224 [line  184] 0x000D4601  LOADK      R24 = K[53]=5.0
+0225 [line  185] 0x000D8641  LOADK      R25 = K[54]=25.0
+0226 [line  188] 0x0005C681  LOADK      R26 = K[23]=1.0
+0227 [line  188] 0x0A8006D4  LEN        A=27 B=21 C=0 Bx=10752
+0228 [line  188] 0x0005C701  LOADK      R28 = K[23]=1.0
+0229 [line  188] 0x800F46A0  FORPREP    A=26 sBx=62
+0230 [line  189] 0x0A874786  GETTABLE   R30 = R21[R29]
+0231 [line  190] 0x0F4D07C6  GETTABLE   R31 = R30[K[52]='source']
+0232 [line  191] 0x04000800  MOVE       R32 = R8
+0233 [line  191] 0x0F800840  MOVE       R33 = R31
+0234 [line  191] 0x0100881C  CALL       A=32 B=2 C=2
+0235 [line  191] 0x104DC017  EQ         A=0 B=R32 C=K[55]='number'
+0236 [line  191] 0x800D8016  JMP        A=0 sBx=55
+0237 [line  192] 0x0F47C806  GETTABLE   R32 = R30[K[31]='scene']
+0238 [line  193] 0x0887C846  GETTABLE   R33 = R17[R31]
+0239 [line  194] 0x0F4CC886  GETTABLE   R34 = R30[K[51]='to']
+0240 [line  197] 0x048008C0  MOVE       R35 = R9
+0241 [line  197] 0x10CCC906  GETTABLE   R36 = R33[K[51]='to']
+0242 [line  197] 0x010108DC  CALL       A=35 B=2 C=4
+0243 [line  197] 0x800B4016  JMP        A=0 sBx=46
+0244 [line  198] 0x13C7CA06  GETTABLE   R40 = R39[K[31]='scene']
+0245 [line  199] 0x04000A40  MOVE       R41 = R8
+0246 [line  199] 0x14000A80  MOVE       R42 = R40
+0247 [line  199] 0x01008A5C  CALL       A=41 B=2 C=2
+0248 [line  199] 0x14CDC017  EQ         A=0 B=R41 C=K[55]='number'
+0249 [line  199] 0x8007C016  JMP        A=0 sBx=32
+0250 [line  200] 0x00014A4A  NEWTABLE   A=41 B=0 C=5 Bx=5
+0251 [line  200] 0x9A4E0A49  SETTABLE   R41[K[52]='source'] = K[56]='pos'
+0252 [line  200] 0x8F8A0A49  SETTABLE   R41[K[31]='scene'] = R40
+0253 [line  200] 0x13C80A86  GETTABLE   R42 = R39[K[32]='x']
+0254 [line  200] 0x900A8A49  SETTABLE   R41[K[32]='x'] = R42
+0255 [line  200] 0x13C84A86  GETTABLE   R42 = R39[K[33]='z']
+0256 [line  200] 0x908A8A49  SETTABLE   R41[K[33]='z'] = R42
+0257 [line  200] 0x00000A8A  NEWTABLE   A=42 B=0 C=0 Bx=0
+0258 [line  200] 0x998A8A49  SETTABLE   R41[K[51]='to'] = R42
+0259 [line  201] 0x0A800A94  LEN        A=42 B=21 C=0 Bx=10752
+0260 [line  201] 0x1545CA8C  ADD        A=42 B=R42 C=K[23]=1.0
+0261 [line  201] 0x150A4549  SETTABLE   R21[R42] = R41
+0262 [line  202] 0x0A800A94  LEN        A=42 B=21 C=0 Bx=10752
+0263 [line  203] 0x05800AC0  MOVE       R43 = R11
+0264 [line  203] 0x0B800B00  MOVE       R44 = R23
+0265 [line  203] 0x14000B40  MOVE       R45 = R40
+0266 [line  203] 0x01808ADC  CALL       A=43 B=3 C=2
+0267 [line  204] 0x15800B14  LEN        A=44 B=43 C=0 Bx=22016
+0268 [line  204] 0x1645CB0C  ADD        A=44 B=R44 C=K[23]=1.0
+0269 [line  204] 0x160A8AC9  SETTABLE   R43[R44] = R42
+0270 [line  206] 0x14080017  EQ         A=0 B=R40 C=R32
+0271 [line  206] 0x80004016  JMP        A=0 sBx=2
+0272 [line  206] 0x0C004B1B  TESTSET    A=44 B=24 C=1
+0273 [line  206] 0x80000016  JMP        A=0 sBx=1
+0274 [line  206] 0x0C800B00  MOVE       R44 = R25
+0275 [line  207] 0x09800B40  MOVE       R45 = R19
+0276 [line  207] 0x11000B80  MOVE       R46 = R34
+0277 [line  207] 0x15000BC0  MOVE       R47 = R42
+0278 [line  207] 0x16000C00  MOVE       R48 = R44
+0279 [line  207] 0x13C88C46  GETTABLE   R49 = R39[K[34]='option']
+0280 [line  207] 0x02804B5C  CALL       A=45 B=5 C=1
+0281 [line  207] 0x8001C016  JMP        A=0 sBx=8
+0282 [line  208] 0x1449C017  EQ         A=0 B=R40 C=K[39]='other_country'
+0283 [line  208] 0x80014016  JMP        A=0 sBx=6
+0284 [line  209] 0x09800A40  MOVE       R41 = R19
+0285 [line  209] 0x11000A80  MOVE       R42 = R34
+0286 [line  209] 0x0B000AC0  MOVE       R43 = R22
+0287 [line  209] 0x00030B01  LOADK      R44 = K[12]=0.0
+0288 [line  209] 0x13C88B46  GETTABLE   R45 = R39[K[34]='option']
+0289 [line  209] 0x02804A5C  CALL       A=41 B=5 C=1
+0290 [line  197] 0x000088E1  TFORLOOP   A=35 B=0 C=2
+0291 [line  210] 0x7FF3C016  JMP        A=0 sBx=-48
+0292 [line  188] 0x7FF0069F  FORLOOP    A=26 sBx=-63
+0293 [line  221] 0x04800680  MOVE       R26 = R9
+0294 [line  221] 0x0B8006C0  MOVE       R27 = R23
+0295 [line  221] 0x0101069C  CALL       A=26 B=2 C=4
+0296 [line  221] 0x80058016  JMP        A=0 sBx=23
+0297 [line  222] 0x050007C0  MOVE       R31 = R10
+0298 [line  222] 0x0F000800  MOVE       R32 = R30
+0299 [line  222] 0x010107DC  CALL       A=31 B=2 C=4
+0300 [line  222] 0x80040016  JMP        A=0 sBx=17
+0301 [line  223] 0x0A88C906  GETTABLE   R36 = R21[R35]
+0302 [line  224] 0x124CC946  GETTABLE   R37 = R36[K[51]='to']
+0303 [line  226] 0x05000980  MOVE       R38 = R10
+0304 [line  226] 0x0F0009C0  MOVE       R39 = R30
+0305 [line  226] 0x0101099C  CALL       A=38 B=2 C=4
+0306 [line  226] 0x80020016  JMP        A=0 sBx=9
+0307 [line  227] 0x0A8A8AC6  GETTABLE   R43 = R21[R42]
+0308 [line  228] 0x0A000B00  MOVE       R44 = R20
+0309 [line  228] 0x12800B40  MOVE       R45 = R37
+0310 [line  228] 0x15000B80  MOVE       R46 = R42
+0311 [line  228] 0x09000BC0  MOVE       R47 = R18
+0312 [line  228] 0x12000C00  MOVE       R48 = R36
+0313 [line  228] 0x15800C40  MOVE       R49 = R43
+0314 [line  228] 0x01800BDC  CALL       A=47 B=3 C=0
+0315 [line  228] 0x00004B1C  CALL       A=44 B=0 C=1
+0316 [line  226] 0x000089A1  TFORLOOP   A=38 B=0 C=2
+0317 [line  228] 0x7FFD0016  JMP        A=0 sBx=-11
+0318 [line  222] 0x000087E1  TFORLOOP   A=31 B=0 C=2
+0319 [line  229] 0x7FFB0016  JMP        A=0 sBx=-19
+0320 [line  221] 0x000086A1  TFORLOOP   A=26 B=0 C=2
+0321 [line  230] 0x7FF98016  JMP        A=0 sBx=-25
+0322 [line  242] 0x004E4686  GETTABLE   R26 = R0[K[57]='Class']
+0323 [line  242] 0x000E86C1  LOADK      R27 = K[58]='ECTransport'
+0324 [line  242] 0x0100869C  CALL       A=26 B=2 C=2
+0325 [line  244] 0x0D4EC6C6  GETTABLE   R27 = R26[K[59]='define']
+0326 [line  263] 0x0DCF0706  GETTABLE   R28 = R27[K[60]='static']
+0327 [line  263] 0x000DC741  LOADK      R29 = K[55]='number'
+0328 [line  263] 0x000DC781  LOADK      R30 = K[55]='number'
+0329 [line  263] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0330 [line  263] 0x000DC801  LOADK      R32 = K[55]='number'
+0331 [line  263] 0x000DC841  LOADK      R33 = K[55]='number'
+0332 [line  263] 0x000DC881  LOADK      R34 = K[55]='number'
+0333 [line  263] 0x000DC8C1  LOADK      R35 = K[55]='number'
+0334 [line  263] 0x000F4901  LOADK      R36 = K[61]='=>'
+0335 [line  263] 0x000F8941  LOADK      R37 = K[62]='table'
+0336 [line  263] 0x0500871C  CALL       A=28 B=10 C=2
+0337 [line  272] 0x0001C764  CLOSURE    R29 = PROTO[7]
+0338 [line  272] 0x06800000  MOVE       R0 = R13
+0339 [line  272] 0x07800000  MOVE       R0 = R15
+0340 [line  272] 0x0D000000  MOVE       R0 = R26
+0341 [line  272] 0x9F874709  SETTABLE   R28[K[63]='FindRoute'] = R29
+0342 [line  274] 0x0DCF0706  GETTABLE   R28 = R27[K[60]='static']
+0343 [line  274] 0x000DC741  LOADK      R29 = K[55]='number'
+0344 [line  274] 0x000DC781  LOADK      R30 = K[55]='number'
+0345 [line  274] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0346 [line  274] 0x000DC801  LOADK      R32 = K[55]='number'
+0347 [line  274] 0x000DC841  LOADK      R33 = K[55]='number'
+0348 [line  274] 0x000DC881  LOADK      R34 = K[55]='number'
+0349 [line  274] 0x000F48C1  LOADK      R35 = K[61]='=>'
+0350 [line  274] 0x000F8901  LOADK      R36 = K[62]='table'
+0351 [line  274] 0x0480871C  CALL       A=28 B=9 C=2
+0352 [line  287] 0x00020764  CLOSURE    R29 = PROTO[8]
+0353 [line  287] 0x0D000000  MOVE       R0 = R26
+0354 [line  287] 0xA0074709  SETTABLE   R28[K[64]='FindRouteOnce'] = R29
+0355 [line  289] 0x0DCF0706  GETTABLE   R28 = R27[K[60]='static']
+0356 [line  289] 0x000DC741  LOADK      R29 = K[55]='number'
+0357 [line  289] 0x000DC781  LOADK      R30 = K[55]='number'
+0358 [line  289] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0359 [line  289] 0x000DC801  LOADK      R32 = K[55]='number'
+0360 [line  289] 0x000F4841  LOADK      R33 = K[61]='=>'
+0361 [line  289] 0x000F8881  LOADK      R34 = K[62]='table'
+0362 [line  289] 0x0380871C  CALL       A=28 B=7 C=2
+0363 [line  298] 0x00024764  CLOSURE    R29 = PROTO[9]
+0364 [line  298] 0x06800000  MOVE       R0 = R13
+0365 [line  298] 0x07800000  MOVE       R0 = R15
+0366 [line  298] 0x0D000000  MOVE       R0 = R26
+0367 [line  298] 0xA0874709  SETTABLE   R28[K[65]='FindRouteToOtherCountry'] = R29
+0368 [line  300] 0x0DCF0706  GETTABLE   R28 = R27[K[60]='static']
+0369 [line  300] 0x000DC741  LOADK      R29 = K[55]='number'
+0370 [line  300] 0x000DC781  LOADK      R30 = K[55]='number'
+0371 [line  300] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0372 [line  300] 0x000F4801  LOADK      R32 = K[61]='=>'
+0373 [line  300] 0x000F8841  LOADK      R33 = K[62]='table'
+0374 [line  300] 0x0300871C  CALL       A=28 B=6 C=2
+0375 [line  306] 0x00028764  CLOSURE    R29 = PROTO[10]
+0376 [line  306] 0x0D000000  MOVE       R0 = R26
+0377 [line  306] 0x0B000000  MOVE       R0 = R22
+0378 [line  306] 0xA1074709  SETTABLE   R28[K[66]='FindRouteToOtherCountryOnce'] = R29
+0379 [line  318] 0x0002C724  CLOSURE    R28 = PROTO[11]
+0380 [line  318] 0x04800000  MOVE       R0 = R9
+0381 [line  318] 0x04000000  MOVE       R0 = R8
+0382 [line  318] 0x0E000000  MOVE       R0 = R28
+0383 [line  321] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0384 [line  321] 0x000F4781  LOADK      R30 = K[61]='=>'
+0385 [line  321] 0x000F87C1  LOADK      R31 = K[62]='table'
+0386 [line  321] 0x0180875C  CALL       A=29 B=3 C=2
+0387 [line  342] 0x000307A4  CLOSURE    R30 = PROTO[12]
+0388 [line  342] 0x0E000000  MOVE       R0 = R28
+0389 [line  342] 0x0A800000  MOVE       R0 = R21
+0390 [line  342] 0x05000000  MOVE       R0 = R10
+0391 [line  342] 0x04800000  MOVE       R0 = R9
+0392 [line  342] 0xA1878749  SETTABLE   R29[K[67]='makeNodeList'] = R30
+0393 [line  345] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0394 [line  345] 0x000F8781  LOADK      R30 = K[62]='table'
+0395 [line  345] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0396 [line  345] 0x000DC801  LOADK      R32 = K[55]='number'
+0397 [line  345] 0x000DC841  LOADK      R33 = K[55]='number'
+0398 [line  345] 0x000F4881  LOADK      R34 = K[61]='=>'
+0399 [line  345] 0x000DC8C1  LOADK      R35 = K[55]='number'
+0400 [line  345] 0x0380875C  CALL       A=29 B=7 C=2
+0401 [line  362] 0x000347A4  CLOSURE    R30 = PROTO[13]
+0402 [line  362] 0x0B800000  MOVE       R0 = R23
+0403 [line  362] 0x05000000  MOVE       R0 = R10
+0404 [line  362] 0x04000000  MOVE       R0 = R8
+0405 [line  362] 0x0A000000  MOVE       R0 = R20
+0406 [line  362] 0x09000000  MOVE       R0 = R18
+0407 [line  362] 0xA2078749  SETTABLE   R29[K[68]='addSourceNode'] = R30
+0408 [line  365] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0409 [line  365] 0x000F8781  LOADK      R30 = K[62]='table'
+0410 [line  365] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0411 [line  365] 0x000DC801  LOADK      R32 = K[55]='number'
+0412 [line  365] 0x000DC841  LOADK      R33 = K[55]='number'
+0413 [line  365] 0x000F4881  LOADK      R34 = K[61]='=>'
+0414 [line  365] 0x000DC8C1  LOADK      R35 = K[55]='number'
+0415 [line  365] 0x0380875C  CALL       A=29 B=7 C=2
+0416 [line  377] 0x000387A4  CLOSURE    R30 = PROTO[14]
+0417 [line  377] 0x05000000  MOVE       R0 = R10
+0418 [line  377] 0x0A000000  MOVE       R0 = R20
+0419 [line  377] 0x09000000  MOVE       R0 = R18
+0420 [line  377] 0xA2878749  SETTABLE   R29[K[69]='addDestNode'] = R30
+0421 [line  389] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0422 [line  389] 0x000F8781  LOADK      R30 = K[62]='table'
+0423 [line  389] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0424 [line  389] 0x000F4801  LOADK      R32 = K[61]='=>'
+0425 [line  389] 0x000DC841  LOADK      R33 = K[55]='number'
+0426 [line  389] 0x0280875C  CALL       A=29 B=5 C=2
+0427 [line  427] 0x0003C7A4  CLOSURE    R30 = PROTO[15]
+0428 [line  427] 0x04800000  MOVE       R0 = R9
+0429 [line  427] 0xA3078749  SETTABLE   R29[K[70]='searchStep'] = R30
+0430 [line  430] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0431 [line  430] 0x000F8781  LOADK      R30 = K[62]='table'
+0432 [line  430] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0433 [line  430] 0x000DC801  LOADK      R32 = K[55]='number'
+0434 [line  430] 0x000F4841  LOADK      R33 = K[61]='=>'
+0435 [line  430] 0x000F8881  LOADK      R34 = K[62]='table'
+0436 [line  430] 0x000F88C1  LOADK      R35 = K[62]='table'
+0437 [line  430] 0x0380875C  CALL       A=29 B=7 C=2
+0438 [line  463] 0x000407A4  CLOSURE    R30 = PROTO[16]
+0439 [line  463] 0x0D000000  MOVE       R0 = R26
+0440 [line  463] 0xA3878749  SETTABLE   R29[K[71]='searchShortestPath'] = R30
+0441 [line  466] 0x0DCF0746  GETTABLE   R29 = R27[K[60]='static']
+0442 [line  466] 0x000F8781  LOADK      R30 = K[62]='table'
+0443 [line  466] 0x000DC7C1  LOADK      R31 = K[55]='number'
+0444 [line  466] 0x000DC801  LOADK      R32 = K[55]='number'
+0445 [line  466] 0x000F4841  LOADK      R33 = K[61]='=>'
+0446 [line  466] 0x000F8881  LOADK      R34 = K[62]='table'
+0447 [line  466] 0x0300875C  CALL       A=29 B=6 C=2
+0448 [line  482] 0x000447A4  CLOSURE    R30 = PROTO[17]
+0449 [line  482] 0x0D000000  MOVE       R0 = R26
+0450 [line  482] 0xA4078749  SETTABLE   R29[K[72]='searchRoute'] = R30
+0451 [line  482] 0x000006E3  CLOSE      A=27 B=0 C=0 Bx=0
+0452 [line  484] 0x0D5246C6  GETTABLE   R27 = R26[K[73]='Commit']
+0453 [line  484] 0x008046DC  CALL       A=27 B=1 C=1
+0454 [line  486] 0x0100069E  RETURN     A=26 B=2 C=0
+0455 [line  486] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 455
+'ElementData': 6 -> 455
+'Exptypes': 9 -> 455
+'TransportHelper': 12 -> 455
+'npc_list': 15 -> 455
+'Expdef': 18 -> 455
+'malut': 21 -> 455
+'InstanceInfo': 24 -> 455
+'type': 25 -> 455
+'pairs': 26 -> 455
+'ipairs': 27 -> 455
+'prepareSubTable': 28 -> 455
+'priority_try_host_level': 29 -> 455
+'cur_scene_nation': 30 -> 455
+'getCurSceneNation': 32 -> 455
+'eachPriorityTrial': 35 -> 455
+'makePrioritySelector': 38 -> 455
+'l_transpointMap': 39 -> 455
+'(for generator)': 42 -> 178
+'(for state)': 42 -> 178
+'(for control)': 42 -> 178
+'tid': 43 -> 176
+'npc_info': 43 -> 176
+'transEss': 49 -> 176
+'dataType': 49 -> 176
+'toOptionList': 59 -> 176
+'serviceEss': 66 -> 131
+'(for index)': 80 -> 131
+'(for limit)': 80 -> 131
+'(for step)': 80 -> 131
+'iTarget': 81 -> 130
+'target': 83 -> 130
+'scene': 84 -> 130
+'can_use': 92 -> 130
+'scene': 137 -> 159
+'can_use': 142 -> 159
+'calcDistance': 179 -> 455
+'updateTransDistance': 181 -> 455
+'updateDistance': 183 -> 455
+'l_nodeList': 184 -> 455
+'l_other_country_node_id': 185 -> 455
+'l_sceneToNodeIdListMap': 186 -> 455
+'(for generator)': 189 -> 213
+'(for state)': 189 -> 213
+'(for control)': 189 -> 213
+'tid': 190 -> 211
+'transpoint': 190 -> 211
+'scene': 191 -> 211
+'node': 200 -> 211
+'nodeId': 204 -> 211
+'nodeIdList': 208 -> 211
+'otherCountryNode': 220 -> 224
+'IN_SCENE_TRANSPORT_DIS': 225 -> 455
+'CROSS_SCENE_TRANSPORT_DIS': 226 -> 455
+'(for index)': 229 -> 293
+'(for limit)': 229 -> 293
+'(for step)': 229 -> 293
+'iNode': 230 -> 292
+'node': 231 -> 292
+'source': 232 -> 292
+'scene': 238 -> 292
+'transpoint': 239 -> 292
+'toMap': 240 -> 292
+'(for generator)': 243 -> 292
+'(for state)': 243 -> 292
+'(for control)': 243 -> 292
+'_': 244 -> 290
+'toPos': 244 -> 290
+'toScene': 245 -> 290
+'toNode': 259 -> 281
+'toNodeId': 263 -> 281
+'nodeIdList': 267 -> 281
+'distance': 275 -> 281
+'(for generator)': 296 -> 322
+'(for state)': 296 -> 322
+'(for control)': 296 -> 322
+'scene': 297 -> 320
+'nodeIdList': 297 -> 320
+'(for generator)': 300 -> 320
+'(for state)': 300 -> 320
+'(for control)': 300 -> 320
+'_': 301 -> 318
+'sourceId': 301 -> 318
+'sourceNode': 302 -> 318
+'toMap': 303 -> 318
+'(for generator)': 306 -> 318
+'(for state)': 306 -> 318
+'(for control)': 306 -> 318
+'_': 307 -> 316
+'destId': 307 -> 316
+'destNode': 308 -> 316
+'ECTransport': 325 -> 455
+'def': 326 -> 451
+'simpleCloneTable': 383 -> 451
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xC55
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 22 - 29
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   23] 0x00004086  GETTABLE   R2 = R0[R1]
+    0001 [line   24] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line   24] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   25] 0x000000CA  NEWTABLE   A=3 B=0 C=0 Bx=0
+    0004 [line   25] 0x01800080  MOVE       R2 = R3
+    0005 [line   26] 0x00808009  SETTABLE   R0[R1] = R2
+    0006 [line   28] 0x0100009E  RETURN     A=2 B=2 C=0
+    0007 [line   29] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    't': 0 -> 7
+    'k': 0 -> 7
+    'v': 1 -> 7
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xCE7
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 33 - 35
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   34] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   34] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   35] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xD3C
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 38 - 61
+    Params : 0
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Main.ECGame'
+    K[002] = 'Instance'
+    K[003] = 'm_HostPlayer'
+    K[004] = 'InfoData'
+    K[005] = 'Lv'
+    K[006] = 'm_curSceneId'
+    K[007] = 'GetData'
+    K[008] = 'need_level'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   39] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+    0001 [line   39] 0x00004041  LOADK      R1 = K[1]='Main.ECGame'
+    0002 [line   39] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line   41] 0x00408046  GETTABLE   R1 = R0[K[2]='Instance']
+    0004 [line   41] 0x0080805C  CALL       A=1 B=1 C=2
+    0005 [line   41] 0x00C0C046  GETTABLE   R1 = R1[K[3]='m_HostPlayer']
+    0006 [line   41] 0x00C10046  GETTABLE   R1 = R1[K[4]='InfoData']
+    0007 [line   41] 0x00C14046  GETTABLE   R1 = R1[K[5]='Lv']
+    0008 [line   43] 0x00408086  GETTABLE   R2 = R0[K[2]='Instance']
+    0009 [line   43] 0x0080809C  CALL       A=2 B=1 C=2
+    0010 [line   43] 0x01418086  GETTABLE   R2 = R2[K[6]='m_curSceneId']
+    0011 [line   44] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0012 [line   44] 0x01C080C6  GETTABLE   R3 = R3[K[2]='Instance']
+    0013 [line   44] 0x008080DC  CALL       A=3 B=1 C=2
+    0014 [line   44] 0x01C1C0CB  SELF       A=3 B=3 C=263 Bx=1799
+    0015 [line   44] 0x01000140  MOVE       R5 = R2
+    0016 [line   44] 0x018080DC  CALL       A=3 B=3 C=2
+    0017 [line   45] 0x000000DA  TEST       A=3 B=0 C=0
+    0018 [line   45] 0x80018016  JMP        A=0 sBx=7
+    0019 [line   45] 0x01C20106  GETTABLE   R4 = R3[K[8]='need_level']
+    0020 [line   45] 0x0000011A  TEST       A=4 B=0 C=0
+    0021 [line   45] 0x8000C016  JMP        A=0 sBx=4
+    0022 [line   45] 0x01C20106  GETTABLE   R4 = R3[K[8]='need_level']
+    0023 [line   45] 0x00810019  LE         A=0 B=R1 C=R4
+    0024 [line   45] 0x80000016  JMP        A=0 sBx=1
+    0025 [line   46] 0x01C20046  GETTABLE   R1 = R3[K[8]='need_level']
+    0026 [line   60] 0x000000A4  CLOSURE    R2 = PROTO[0]
+    0027 [line   60] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0028 [line   60] 0x00800000  MOVE       R0 = R1
+    0029 [line   60] 0x020000C3  LOADNIL    A=3 B=4 C=0 Bx=2048
+    0030 [line   60] 0x0200009E  RETURN     A=2 B=4 C=0
+    0031 [line   61] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'ECGame': 3 -> 31
+    'allowLevel': 8 -> 31
+    'curSceneId': 11 -> 26
+    'cfg': 17 -> 26
+
+        ============================================================
+        PROTO ROOT.2.0
+        Offset : 0xE5B
+        Source : '@lua\\players\\ectransport.lua'
+        Lines  : 50 - 60
+        Params : 2
+        Stack  : 3
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = None
+        K[001] = 1.0
+        K[002] = 'math'
+        K[003] = 'huge'
+        K[004] = 2.0
+
+        ----- INSTRUCTIONS -----
+        0000 [line   51] 0x00C00017  EQ         A=0 B=R1 C=K[0]=None
+        0001 [line   51] 0x80010016  JMP        A=0 sBx=5
+        0002 [line   52] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0003 [line   52] 0x00000088  SETUPVAL   A=2 B=0 C=0 Bx=0
+        0004 [line   53] 0x00004081  LOADK      R2 = K[1]=1.0
+        0005 [line   53] 0x0100009E  RETURN     A=2 B=2 C=0
+        0006 [line   53] 0x8002C016  JMP        A=0 sBx=12
+        0007 [line   54] 0x00C04017  EQ         A=0 B=R1 C=K[1]=1.0
+        0008 [line   54] 0x80014016  JMP        A=0 sBx=6
+        0009 [line   55] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='math'
+        0010 [line   55] 0x0140C086  GETTABLE   R2 = R2[K[3]='huge']
+        0011 [line   55] 0x00000088  SETUPVAL   A=2 B=0 C=0 Bx=0
+        0012 [line   56] 0x00010081  LOADK      R2 = K[4]=2.0
+        0013 [line   56] 0x0100009E  RETURN     A=2 B=2 C=0
+        0014 [line   56] 0x8000C016  JMP        A=0 sBx=4
+        0015 [line   57] 0x00C10017  EQ         A=0 B=R1 C=K[4]=2.0
+        0016 [line   57] 0x80004016  JMP        A=0 sBx=2
+        0017 [line   58] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+        0018 [line   58] 0x0100009E  RETURN     A=2 B=2 C=0
+        0019 [line   60] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        's': 0 -> 19
+        'var': 0 -> 19
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x109D
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 63 - 73
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetData'
+    K[002] = 'need_level'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   64] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   64] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line   64] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line   64] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0004 [line   64] 0x000000C0  MOVE       R3 = R0
+    0005 [line   64] 0x0180805C  CALL       A=1 B=3 C=2
+    0006 [line   65] 0x0000005A  TEST       A=1 B=0 C=0
+    0007 [line   65] 0x80008016  JMP        A=0 sBx=3
+    0008 [line   65] 0x00C08086  GETTABLE   R2 = R1[K[2]='need_level']
+    0009 [line   65] 0x0000409A  TEST       A=2 B=0 C=1
+    0010 [line   65] 0x80004016  JMP        A=0 sBx=2
+    0011 [line   66] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0012 [line   66] 0x0100009E  RETURN     A=2 B=2 C=0
+    0013 [line   69] 0x00C08086  GETTABLE   R2 = R1[K[2]='need_level']
+    0014 [line   72] 0x000000E4  CLOSURE    R3 = PROTO[0]
+    0015 [line   72] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0016 [line   72] 0x01000000  MOVE       R0 = R2
+    0017 [line   72] 0x010000DE  RETURN     A=3 B=2 C=0
+    0018 [line   73] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sceneId': 0 -> 18
+    'cfg': 6 -> 18
+    'need_level': 14 -> 18
+
+        ============================================================
+        PROTO ROOT.3.0
+        Offset : 0x1130
+        Source : '@lua\\players\\ectransport.lua'
+        Lines  : 70 - 72
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line   71] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line   71] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+        0002 [line   71] 0x00800059  LE         A=1 B=R1 C=R0
+        0003 [line   71] 0x80000016  JMP        A=0 sBx=1
+        0004 [line   71] 0x00004002  LOADBOOL   A=0 B=0 C=1
+        0005 [line   71] 0x00800002  LOADBOOL   A=0 B=1 C=0
+        0006 [line   71] 0x0100001E  RETURN     A=0 B=2 C=0
+        0007 [line   72] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x1283
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 130 - 135
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'x'
+    K[001] = 'z'
+    K[002] = 'math'
+    K[003] = 'sqrt'
+    K[004] = 1.2
+
+    ----- INSTRUCTIONS -----
+    0000 [line  131] 0x00400086  GETTABLE   R2 = R0[K[0]='x']
+    0001 [line  131] 0x00C000C6  GETTABLE   R3 = R1[K[0]='x']
+    0002 [line  131] 0x0100C08D  SUB        A=2 B=R2 C=R3
+    0003 [line  132] 0x004040C6  GETTABLE   R3 = R0[K[1]='z']
+    0004 [line  132] 0x00C04106  GETTABLE   R4 = R1[K[1]='z']
+    0005 [line  132] 0x018100CD  SUB        A=3 B=R3 C=R4
+    0006 [line  134] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='math'
+    0007 [line  134] 0x0240C106  GETTABLE   R4 = R4[K[3]='sqrt']
+    0008 [line  134] 0x0100814E  MUL        A=5 B=R2 C=R2
+    0009 [line  134] 0x0180C18E  MUL        A=6 B=R3 C=R3
+    0010 [line  134] 0x0281814C  ADD        A=5 B=R5 C=R6
+    0011 [line  134] 0x0100811C  CALL       A=4 B=2 C=2
+    0012 [line  134] 0x0241010E  MUL        A=4 B=R4 C=K[4]=1.2
+    0013 [line  134] 0x0100011E  RETURN     A=4 B=2 C=0
+    0014 [line  135] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'posLeft': 0 -> 14
+    'posRight': 0 -> 14
+    'dx': 3 -> 14
+    'dz': 6 -> 14
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x1395
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 137 - 147
+    Params : 4
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'distance'
+    K[001] = 'option'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  138] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line  138] 0x00000140  MOVE       R5 = R0
+    0002 [line  138] 0x00800180  MOVE       R6 = R1
+    0003 [line  138] 0x0180811C  CALL       A=4 B=3 C=2
+    0004 [line  139] 0x02400146  GETTABLE   R5 = R4[K[0]='distance']
+    0005 [line  140] 0x0000015A  TEST       A=5 B=0 C=0
+    0006 [line  140] 0x80004016  JMP        A=0 sBx=2
+    0007 [line  140] 0x01014018  LT         A=0 B=R2 C=R5
+    0008 [line  140] 0x80010016  JMP        A=0 sBx=5
+    0009 [line  141] 0x80008109  SETTABLE   R4[K[0]='distance'] = R2
+    0010 [line  142] 0x8080C109  SETTABLE   R4[K[1]='option'] = R3
+    0011 [line  143] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0012 [line  143] 0x0100019E  RETURN     A=6 B=2 C=0
+    0013 [line  143] 0x80004016  JMP        A=0 sBx=2
+    0014 [line  145] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0015 [line  145] 0x0100019E  RETURN     A=6 B=2 C=0
+    0016 [line  147] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'toMap': 0 -> 16
+    'toId': 0 -> 16
+    'newDistance': 0 -> 16
+    'option': 0 -> 16
+    'toInfo': 4 -> 16
+    'oldDistance': 5 -> 16
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x14EC
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 149 - 151
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  150] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  150] 0x00000100  MOVE       R4 = R0
+    0002 [line  150] 0x00800140  MOVE       R5 = R1
+    0003 [line  150] 0x01000180  MOVE       R6 = R2
+    0004 [line  150] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0005 [line  150] 0x028000DD  TAILCALL   A=3 B=5 C=0
+    0006 [line  150] 0x000000DE  RETURN     A=3 B=0 C=0
+    0007 [line  151] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'toMap': 0 -> 7
+    'toId': 0 -> 7
+    'newDistance': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x15A7
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 263 - 272
+    Params : 7
+    Stack  : 18
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'FindRouteOnce'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  264] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  265] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0002 [line  265] 0x008101DC  CALL       A=7 B=1 C=4
+    0003 [line  265] 0x8002C016  JMP        A=0 sBx=12
+    0004 [line  266] 0x010002C4  GETUPVAL   A=11 B=2 C=0 Bx=1024
+    0005 [line  266] 0x05C002C6  GETTABLE   R11 = R11[K[0]='FindRouteOnce']
+    0006 [line  266] 0x00800300  MOVE       R12 = R1
+    0007 [line  266] 0x01000340  MOVE       R13 = R2
+    0008 [line  266] 0x01800380  MOVE       R14 = R3
+    0009 [line  266] 0x020003C0  MOVE       R15 = R4
+    0010 [line  266] 0x02800400  MOVE       R16 = R5
+    0011 [line  266] 0x03000440  MOVE       R17 = R6
+    0012 [line  266] 0x038082DC  CALL       A=11 B=7 C=2
+    0013 [line  267] 0x000002DA  TEST       A=11 B=0 C=0
+    0014 [line  267] 0x80000016  JMP        A=0 sBx=1
+    0015 [line  268] 0x010002DE  RETURN     A=11 B=2 C=0
+    0016 [line  265] 0x000041E1  TFORLOOP   A=7 B=0 C=1
+    0017 [line  269] 0x7FFC4016  JMP        A=0 sBx=-14
+    0018 [line  271] 0x038001C3  LOADNIL    A=7 B=7 C=0 Bx=3584
+    0019 [line  271] 0x010001DE  RETURN     A=7 B=2 C=0
+    0020 [line  272] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nation': 0 -> 20
+    'fromScene': 0 -> 20
+    'fromX': 0 -> 20
+    'fromZ': 0 -> 20
+    'toScene': 0 -> 20
+    'toX': 0 -> 20
+    'toZ': 0 -> 20
+    '(for generator)': 3 -> 18
+    '(for state)': 3 -> 18
+    '(for control)': 3 -> 18
+    '_': 4 -> 16
+    'ret': 13 -> 16
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x17B2
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 274 - 287
+    Params : 6
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'makeNodeList'
+    K[001] = 'addSourceNode'
+    K[002] = 'addDestNode'
+    K[003] = 'searchRoute'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  275] 0x0000C017  EQ         A=0 B=R0 C=R3
+    0001 [line  275] 0x80004016  JMP        A=0 sBx=2
+    0002 [line  276] 0x0000018A  NEWTABLE   A=6 B=0 C=0 Bx=0
+    0003 [line  276] 0x0100019E  RETURN     A=6 B=2 C=0
+    0004 [line  279] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0005 [line  279] 0x03400186  GETTABLE   R6 = R6[K[0]='makeNodeList']
+    0006 [line  279] 0x0080819C  CALL       A=6 B=1 C=2
+    0007 [line  281] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0008 [line  281] 0x03C041C6  GETTABLE   R7 = R7[K[1]='addSourceNode']
+    0009 [line  281] 0x03000200  MOVE       R8 = R6
+    0010 [line  281] 0x00000240  MOVE       R9 = R0
+    0011 [line  281] 0x00800280  MOVE       R10 = R1
+    0012 [line  281] 0x010002C0  MOVE       R11 = R2
+    0013 [line  281] 0x028081DC  CALL       A=7 B=5 C=2
+    0014 [line  282] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0015 [line  282] 0x04408206  GETTABLE   R8 = R8[K[2]='addDestNode']
+    0016 [line  282] 0x03000240  MOVE       R9 = R6
+    0017 [line  282] 0x01800280  MOVE       R10 = R3
+    0018 [line  282] 0x020002C0  MOVE       R11 = R4
+    0019 [line  282] 0x02800300  MOVE       R12 = R5
+    0020 [line  282] 0x0280821C  CALL       A=8 B=5 C=2
+    0021 [line  286] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0022 [line  286] 0x04C0C246  GETTABLE   R9 = R9[K[3]='searchRoute']
+    0023 [line  286] 0x03000280  MOVE       R10 = R6
+    0024 [line  286] 0x038002C0  MOVE       R11 = R7
+    0025 [line  286] 0x04000300  MOVE       R12 = R8
+    0026 [line  286] 0x0200025D  TAILCALL   A=9 B=4 C=0
+    0027 [line  286] 0x0000025E  RETURN     A=9 B=0 C=0
+    0028 [line  287] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'fromScene': 0 -> 28
+    'fromX': 0 -> 28
+    'fromZ': 0 -> 28
+    'toScene': 0 -> 28
+    'toX': 0 -> 28
+    'toZ': 0 -> 28
+    'nodeList': 7 -> 28
+    'sourceId': 14 -> 28
+    'destId': 21 -> 28
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x19C4
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 289 - 298
+    Params : 4
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'FindRouteToOtherCountryOnce'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  290] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  291] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0002 [line  291] 0x0081011C  CALL       A=4 B=1 C=4
+    0003 [line  291] 0x80020016  JMP        A=0 sBx=9
+    0004 [line  292] 0x01000204  GETUPVAL   A=8 B=2 C=0 Bx=1024
+    0005 [line  292] 0x04400206  GETTABLE   R8 = R8[K[0]='FindRouteToOtherCountryOnce']
+    0006 [line  292] 0x00800240  MOVE       R9 = R1
+    0007 [line  292] 0x01000280  MOVE       R10 = R2
+    0008 [line  292] 0x018002C0  MOVE       R11 = R3
+    0009 [line  292] 0x0200821C  CALL       A=8 B=4 C=2
+    0010 [line  293] 0x0000021A  TEST       A=8 B=0 C=0
+    0011 [line  293] 0x80000016  JMP        A=0 sBx=1
+    0012 [line  294] 0x0100021E  RETURN     A=8 B=2 C=0
+    0013 [line  291] 0x00004121  TFORLOOP   A=4 B=0 C=1
+    0014 [line  295] 0x7FFD0016  JMP        A=0 sBx=-11
+    0015 [line  297] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0016 [line  297] 0x0100011E  RETURN     A=4 B=2 C=0
+    0017 [line  298] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nation': 0 -> 17
+    'fromScene': 0 -> 17
+    'fromX': 0 -> 17
+    'fromZ': 0 -> 17
+    '(for generator)': 3 -> 15
+    '(for state)': 3 -> 15
+    '(for control)': 3 -> 15
+    '_': 4 -> 13
+    'ret': 10 -> 13
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x1B91
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 300 - 306
+    Params : 3
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'makeNodeList'
+    K[001] = 'addSourceNode'
+    K[002] = 'searchRoute'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  301] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  301] 0x01C000C6  GETTABLE   R3 = R3[K[0]='makeNodeList']
+    0002 [line  301] 0x008080DC  CALL       A=3 B=1 C=2
+    0003 [line  303] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0004 [line  303] 0x02404106  GETTABLE   R4 = R4[K[1]='addSourceNode']
+    0005 [line  303] 0x01800140  MOVE       R5 = R3
+    0006 [line  303] 0x00000180  MOVE       R6 = R0
+    0007 [line  303] 0x008001C0  MOVE       R7 = R1
+    0008 [line  303] 0x01000200  MOVE       R8 = R2
+    0009 [line  303] 0x0280811C  CALL       A=4 B=5 C=2
+    0010 [line  305] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0011 [line  305] 0x02C08146  GETTABLE   R5 = R5[K[2]='searchRoute']
+    0012 [line  305] 0x01800180  MOVE       R6 = R3
+    0013 [line  305] 0x020001C0  MOVE       R7 = R4
+    0014 [line  305] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0015 [line  305] 0x0200015D  TAILCALL   A=5 B=4 C=0
+    0016 [line  305] 0x0000015E  RETURN     A=5 B=0 C=0
+    0017 [line  306] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'fromScene': 0 -> 17
+    'fromX': 0 -> 17
+    'fromZ': 0 -> 17
+    'nodeList': 3 -> 17
+    'sourceId': 10 -> 17
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x1D0F
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 308 - 318
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'table'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  309] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0001 [line  310] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  310] 0x000000C0  MOVE       R3 = R0
+    0003 [line  310] 0x0101009C  CALL       A=2 B=2 C=4
+    0004 [line  310] 0x80028016  JMP        A=0 sBx=11
+    0005 [line  311] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0006 [line  311] 0x03000200  MOVE       R8 = R6
+    0007 [line  311] 0x010081DC  CALL       A=7 B=2 C=2
+    0008 [line  311] 0x03C00017  EQ         A=0 B=R7 C=K[0]='table'
+    0009 [line  311] 0x80010016  JMP        A=0 sBx=5
+    0010 [line  312] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0011 [line  312] 0x03000200  MOVE       R8 = R6
+    0012 [line  312] 0x010081DC  CALL       A=7 B=2 C=2
+    0013 [line  312] 0x0281C049  SETTABLE   R1[R5] = R7
+    0014 [line  312] 0x80000016  JMP        A=0 sBx=1
+    0015 [line  314] 0x02818049  SETTABLE   R1[R5] = R6
+    0016 [line  310] 0x000080A1  TFORLOOP   A=2 B=0 C=2
+    0017 [line  315] 0x7FFC8016  JMP        A=0 sBx=-13
+    0018 [line  317] 0x0100005E  RETURN     A=1 B=2 C=0
+    0019 [line  318] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    't': 0 -> 19
+    'newT': 1 -> 19
+    '(for generator)': 4 -> 18
+    '(for state)': 4 -> 18
+    '(for control)': 4 -> 18
+    'k': 5 -> 16
+    'v': 5 -> 16
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x1E93
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 321 - 342
+    Params : 0
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'to'
+    K[001] = 'option'
+    K[002] = 'can_use'
+    K[003] = None
+    K[004] = 'priority_selector'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  322] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  322] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0002 [line  322] 0x0100801C  CALL       A=0 B=2 C=2
+    0003 [line  325] 0x01000044  GETUPVAL   A=1 B=2 C=0 Bx=1024
+    0004 [line  325] 0x00000080  MOVE       R2 = R0
+    0005 [line  325] 0x0101005C  CALL       A=1 B=2 C=4
+    0006 [line  325] 0x80064016  JMP        A=0 sBx=26
+    0007 [line  326] 0x02C00186  GETTABLE   R6 = R5[K[0]='to']
+    0008 [line  327] 0x018001C4  GETUPVAL   A=7 B=3 C=0 Bx=1536
+    0009 [line  327] 0x03000200  MOVE       R8 = R6
+    0010 [line  327] 0x010101DC  CALL       A=7 B=2 C=4
+    0011 [line  327] 0x80048016  JMP        A=0 sBx=19
+    0012 [line  328] 0x05C04306  GETTABLE   R12 = R11[K[1]='option']
+    0013 [line  329] 0x0000031A  TEST       A=12 B=0 C=0
+    0014 [line  329] 0x8003C016  JMP        A=0 sBx=16
+    0015 [line  330] 0x06408346  GETTABLE   R13 = R12[K[2]='can_use']
+    0016 [line  331] 0x0000035A  TEST       A=13 B=0 C=0
+    0017 [line  331] 0x80010016  JMP        A=0 sBx=5
+    0018 [line  331] 0x06800380  MOVE       R14 = R13
+    0019 [line  331] 0x0080839C  CALL       A=14 B=1 C=2
+    0020 [line  331] 0x0000439A  TEST       A=14 B=0 C=1
+    0021 [line  331] 0x80000016  JMP        A=0 sBx=1
+    0022 [line  332] 0x0540C189  SETTABLE   R6[R10] = K[3]=None
+    0023 [line  334] 0x06410386  GETTABLE   R14 = R12[K[4]='priority_selector']
+    0024 [line  335] 0x0000039A  TEST       A=14 B=0 C=0
+    0025 [line  335] 0x80010016  JMP        A=0 sBx=5
+    0026 [line  335] 0x070003C0  MOVE       R15 = R14
+    0027 [line  335] 0x008083DC  CALL       A=15 B=1 C=2
+    0028 [line  335] 0x000043DA  TEST       A=15 B=0 C=1
+    0029 [line  335] 0x80000016  JMP        A=0 sBx=1
+    0030 [line  336] 0x0540C189  SETTABLE   R6[R10] = K[3]=None
+    0031 [line  327] 0x000081E1  TFORLOOP   A=7 B=0 C=2
+    0032 [line  338] 0x7FFA8016  JMP        A=0 sBx=-21
+    0033 [line  325] 0x00008061  TFORLOOP   A=1 B=0 C=2
+    0034 [line  339] 0x7FF8C016  JMP        A=0 sBx=-28
+    0035 [line  341] 0x0100001E  RETURN     A=0 B=2 C=0
+    0036 [line  342] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 3 -> 36
+    '(for generator)': 6 -> 35
+    '(for state)': 6 -> 35
+    '(for control)': 6 -> 35
+    'nodeId': 7 -> 33
+    'node': 7 -> 33
+    'toMap': 8 -> 33
+    '(for generator)': 11 -> 33
+    '(for state)': 11 -> 33
+    '(for control)': 11 -> 33
+    'toId': 12 -> 31
+    'toInfo': 12 -> 31
+    'toOption': 13 -> 31
+    'can_use': 16 -> 31
+    'priority_selector': 24 -> 31
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x21A7
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 345 - 362
+    Params : 4
+    Stack  : 19
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'source'
+    K[001] = 'pos'
+    K[002] = 'scene'
+    K[003] = 'x'
+    K[004] = 'z'
+    K[005] = 'to'
+    K[006] = 1.0
+    K[007] = 'number'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  347] 0x0001410A  NEWTABLE   A=4 B=0 C=5 Bx=5
+    0001 [line  347] 0x80404109  SETTABLE   R4[K[0]='source'] = K[1]='pos'
+    0002 [line  347] 0x81004109  SETTABLE   R4[K[2]='scene'] = R1
+    0003 [line  347] 0x81808109  SETTABLE   R4[K[3]='x'] = R2
+    0004 [line  347] 0x8200C109  SETTABLE   R4[K[4]='z'] = R3
+    0005 [line  347] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0006 [line  347] 0x82814109  SETTABLE   R4[K[5]='to'] = R5
+    0007 [line  348] 0x00000154  LEN        A=5 B=0 C=0 Bx=0
+    0008 [line  348] 0x02C1814C  ADD        A=5 B=R5 C=K[6]=1.0
+    0009 [line  348] 0x02810009  SETTABLE   R0[R5] = R4
+    0010 [line  349] 0x00000154  LEN        A=5 B=0 C=0 Bx=0
+    0011 [line  351] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0012 [line  351] 0x03004186  GETTABLE   R6 = R6[R1]
+    0013 [line  352] 0x0000019A  TEST       A=6 B=0 C=0
+    0014 [line  352] 0x8004C016  JMP        A=0 sBx=20
+    0015 [line  353] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0016 [line  353] 0x03000200  MOVE       R8 = R6
+    0017 [line  353] 0x010101DC  CALL       A=7 B=2 C=4
+    0018 [line  353] 0x80034016  JMP        A=0 sBx=14
+    0019 [line  354] 0x0002C306  GETTABLE   R12 = R0[R11]
+    0020 [line  355] 0x01000344  GETUPVAL   A=13 B=2 C=0 Bx=1024
+    0021 [line  355] 0x06400386  GETTABLE   R14 = R12[K[0]='source']
+    0022 [line  355] 0x0100835C  CALL       A=13 B=2 C=2
+    0023 [line  355] 0x06C1C017  EQ         A=0 B=R13 C=K[7]='number'
+    0024 [line  355] 0x8001C016  JMP        A=0 sBx=8
+    0025 [line  356] 0x01800344  GETUPVAL   A=13 B=3 C=0 Bx=1536
+    0026 [line  356] 0x02414386  GETTABLE   R14 = R4[K[5]='to']
+    0027 [line  356] 0x058003C0  MOVE       R15 = R11
+    0028 [line  356] 0x02000404  GETUPVAL   A=16 B=4 C=0 Bx=2048
+    0029 [line  356] 0x02000440  MOVE       R17 = R4
+    0030 [line  356] 0x06000480  MOVE       R18 = R12
+    0031 [line  356] 0x0180041C  CALL       A=16 B=3 C=0
+    0032 [line  356] 0x0000435C  CALL       A=13 B=0 C=1
+    0033 [line  353] 0x000081E1  TFORLOOP   A=7 B=0 C=2
+    0034 [line  357] 0x7FFBC016  JMP        A=0 sBx=-16
+    0035 [line  361] 0x0100015E  RETURN     A=5 B=2 C=0
+    0036 [line  362] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 0 -> 36
+    'sourceScene': 0 -> 36
+    'sourceX': 0 -> 36
+    'sourceZ': 0 -> 36
+    'sourceNode': 7 -> 36
+    'sourceId': 11 -> 36
+    'nodeIdList': 13 -> 35
+    '(for generator)': 18 -> 35
+    '(for state)': 18 -> 35
+    '(for control)': 18 -> 35
+    '_': 19 -> 33
+    'nodeId': 19 -> 33
+    'node': 20 -> 33
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x24AD
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 365 - 377
+    Params : 4
+    Stack  : 17
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'source'
+    K[001] = 'pos'
+    K[002] = 'scene'
+    K[003] = 'x'
+    K[004] = 'z'
+    K[005] = 'to'
+    K[006] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  366] 0x0001410A  NEWTABLE   A=4 B=0 C=5 Bx=5
+    0001 [line  366] 0x80404109  SETTABLE   R4[K[0]='source'] = K[1]='pos'
+    0002 [line  366] 0x81004109  SETTABLE   R4[K[2]='scene'] = R1
+    0003 [line  366] 0x81808109  SETTABLE   R4[K[3]='x'] = R2
+    0004 [line  366] 0x8200C109  SETTABLE   R4[K[4]='z'] = R3
+    0005 [line  366] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0006 [line  366] 0x82814109  SETTABLE   R4[K[5]='to'] = R5
+    0007 [line  367] 0x00000154  LEN        A=5 B=0 C=0 Bx=0
+    0008 [line  367] 0x02C1814C  ADD        A=5 B=R5 C=K[6]=1.0
+    0009 [line  367] 0x02810009  SETTABLE   R0[R5] = R4
+    0010 [line  368] 0x00000154  LEN        A=5 B=0 C=0 Bx=0
+    0011 [line  370] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0012 [line  370] 0x000001C0  MOVE       R7 = R0
+    0013 [line  370] 0x0101019C  CALL       A=6 B=2 C=4
+    0014 [line  370] 0x80030016  JMP        A=0 sBx=13
+    0015 [line  371] 0x054082C6  GETTABLE   R11 = R10[K[2]='scene']
+    0016 [line  371] 0x05804017  EQ         A=0 B=R11 C=R1
+    0017 [line  371] 0x80024016  JMP        A=0 sBx=10
+    0018 [line  371] 0x04814057  EQ         A=1 B=R9 C=R5
+    0019 [line  371] 0x8001C016  JMP        A=0 sBx=8
+    0020 [line  372] 0x008002C4  GETUPVAL   A=11 B=1 C=0 Bx=512
+    0021 [line  372] 0x05414306  GETTABLE   R12 = R10[K[5]='to']
+    0022 [line  372] 0x02800340  MOVE       R13 = R5
+    0023 [line  372] 0x01000384  GETUPVAL   A=14 B=2 C=0 Bx=1024
+    0024 [line  372] 0x020003C0  MOVE       R15 = R4
+    0025 [line  372] 0x05000400  MOVE       R16 = R10
+    0026 [line  372] 0x0180039C  CALL       A=14 B=3 C=0
+    0027 [line  372] 0x000042DC  CALL       A=11 B=0 C=1
+    0028 [line  370] 0x000081A1  TFORLOOP   A=6 B=0 C=2
+    0029 [line  373] 0x7FFC0016  JMP        A=0 sBx=-15
+    0030 [line  376] 0x0100015E  RETURN     A=5 B=2 C=0
+    0031 [line  377] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 0 -> 31
+    'destScene': 0 -> 31
+    'destX': 0 -> 31
+    'destZ': 0 -> 31
+    'destNode': 7 -> 31
+    'destId': 11 -> 31
+    '(for generator)': 14 -> 30
+    '(for state)': 14 -> 30
+    '(for control)': 14 -> 30
+    'nodeId': 15 -> 28
+    'node': 15 -> 28
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x272C
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 389 - 427
+    Params : 2
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'to'
+    K[001] = 'distance'
+    K[002] = 'mark'
+    K[003] = 'black'
+    K[004] = 'gray'
+    K[005] = 'prev'
+    K[006] = 'prevOption'
+    K[007] = 'option'
+    K[008] = 'math'
+    K[009] = 'huge'
+    K[010] = -1.0
+    K[011] = 1.0
+    K[012] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  391] 0x00004086  GETTABLE   R2 = R0[R1]
+    0001 [line  392] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0002 [line  392] 0x01400106  GETTABLE   R4 = R2[K[0]='to']
+    0003 [line  392] 0x010100DC  CALL       A=3 B=2 C=4
+    0004 [line  392] 0x80040016  JMP        A=0 sBx=17
+    0005 [line  393] 0x03C04206  GETTABLE   R8 = R7[K[1]='distance']
+    0006 [line  394] 0x00018246  GETTABLE   R9 = R0[R6]
+    0007 [line  395] 0x04C08286  GETTABLE   R10 = R9[K[2]='mark']
+    0008 [line  395] 0x0540C057  EQ         A=1 B=R10 C=K[3]='black'
+    0009 [line  395] 0x8002C016  JMP        A=0 sBx=12
+    0010 [line  396] 0x81410249  SETTABLE   R9[K[2]='mark'] = K[4]='gray'
+    0011 [line  397] 0x04C04286  GETTABLE   R10 = R9[K[1]='distance']
+    0012 [line  398] 0x014042C6  GETTABLE   R11 = R2[K[1]='distance']
+    0013 [line  398] 0x058202CC  ADD        A=11 B=R11 C=R8
+    0014 [line  399] 0x0000029A  TEST       A=10 B=0 C=0
+    0015 [line  399] 0x80004016  JMP        A=0 sBx=2
+    0016 [line  399] 0x05828018  LT         A=0 B=R11 C=R10
+    0017 [line  399] 0x8000C016  JMP        A=0 sBx=4
+    0018 [line  400] 0x8082C249  SETTABLE   R9[K[1]='distance'] = R11
+    0019 [line  401] 0x82804249  SETTABLE   R9[K[5]='prev'] = R1
+    0020 [line  402] 0x03C1C306  GETTABLE   R12 = R7[K[7]='option']
+    0021 [line  402] 0x83030249  SETTABLE   R9[K[6]='prevOption'] = R12
+    0022 [line  392] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0023 [line  404] 0x7FFB0016  JMP        A=0 sBx=-19
+    0024 [line  408] 0x000200C5  GETGLOBAL  R3 = GLOBAL K[8]='math'
+    0025 [line  408] 0x01C240C6  GETTABLE   R3 = R3[K[9]='huge']
+    0026 [line  409] 0x00028101  LOADK      R4 = K[10]=-1.0
+    0027 [line  410] 0x0002C141  LOADK      R5 = K[11]=1.0
+    0028 [line  410] 0x00000194  LEN        A=6 B=0 C=0 Bx=0
+    0029 [line  410] 0x0002C1C1  LOADK      R7 = K[11]=1.0
+    0030 [line  410] 0x80020160  FORPREP    A=5 sBx=9
+    0031 [line  411] 0x00020246  GETTABLE   R9 = R0[R8]
+    0032 [line  412] 0x04C08286  GETTABLE   R10 = R9[K[2]='mark']
+    0033 [line  412] 0x05410017  EQ         A=0 B=R10 C=K[4]='gray'
+    0034 [line  412] 0x80010016  JMP        A=0 sBx=5
+    0035 [line  413] 0x04C04286  GETTABLE   R10 = R9[K[1]='distance']
+    0036 [line  414] 0x0500C018  LT         A=0 B=R10 C=R3
+    0037 [line  414] 0x80004016  JMP        A=0 sBx=2
+    0038 [line  415] 0x050000C0  MOVE       R3 = R10
+    0039 [line  416] 0x04000100  MOVE       R4 = R8
+    0040 [line  410] 0x7FFD415F  FORLOOP    A=5 sBx=-10
+    0041 [line  421] 0x86010019  LE         A=0 B=K[12]=0.0 C=R4
+    0042 [line  421] 0x8000C016  JMP        A=0 sBx=4
+    0043 [line  422] 0x00010146  GETTABLE   R5 = R0[R4]
+    0044 [line  422] 0x8140C149  SETTABLE   R5[K[2]='mark'] = K[3]='black'
+    0045 [line  423] 0x0100011E  RETURN     A=4 B=2 C=0
+    0046 [line  423] 0x80004016  JMP        A=0 sBx=2
+    0047 [line  425] 0x00028141  LOADK      R5 = K[10]=-1.0
+    0048 [line  425] 0x0100015E  RETURN     A=5 B=2 C=0
+    0049 [line  427] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 0 -> 49
+    'newTreeNodeId': 0 -> 49
+    'newTreeNode': 1 -> 49
+    '(for generator)': 4 -> 24
+    '(for state)': 4 -> 24
+    '(for control)': 4 -> 24
+    'id': 5 -> 22
+    'info': 5 -> 22
+    'distance': 6 -> 22
+    'neighbor': 7 -> 22
+    'oldDistance': 12 -> 22
+    'newDistance': 14 -> 22
+    'minDistance': 26 -> 49
+    'minNodeId': 27 -> 49
+    '(for index)': 30 -> 41
+    '(for limit)': 30 -> 41
+    '(for step)': 30 -> 41
+    'i': 31 -> 40
+    'node': 32 -> 40
+    'distance': 36 -> 40
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x2B30
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 430 - 463
+    Params : 3
+    Stack  : 15
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mark'
+    K[001] = 'black'
+    K[002] = 'distance'
+    K[003] = 0.0
+    K[004] = 1.0
+    K[005] = 1000.0
+    K[006] = 'searchStep'
+    K[007] = 'prev'
+    K[008] = 'prevOption'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  432] 0x000040C6  GETTABLE   R3 = R0[R1]
+    0001 [line  433] 0x804040C9  SETTABLE   R3[K[0]='mark'] = K[1]='black'
+    0002 [line  434] 0x8140C0C9  SETTABLE   R3[K[2]='distance'] = K[3]=0.0
+    0003 [line  436] 0x00800100  MOVE       R4 = R1
+    0004 [line  437] 0x00010141  LOADK      R5 = K[4]=1.0
+    0005 [line  437] 0x00014181  LOADK      R6 = K[5]=1000.0
+    0006 [line  437] 0x000101C1  LOADK      R7 = K[4]=1.0
+    0007 [line  437] 0x80030160  FORPREP    A=5 sBx=13
+    0008 [line  438] 0x02008017  EQ         A=0 B=R4 C=R2
+    0009 [line  438] 0x80000016  JMP        A=0 sBx=1
+    0010 [line  439] 0x80028016  JMP        A=0 sBx=11
+    0011 [line  442] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0012 [line  442] 0x04C18246  GETTABLE   R9 = R9[K[6]='searchStep']
+    0013 [line  442] 0x00000280  MOVE       R10 = R0
+    0014 [line  442] 0x020002C0  MOVE       R11 = R4
+    0015 [line  442] 0x0180825C  CALL       A=9 B=3 C=2
+    0016 [line  442] 0x04800100  MOVE       R4 = R9
+    0017 [line  443] 0x0240C018  LT         A=0 B=R4 C=K[3]=0.0
+    0018 [line  443] 0x80004016  JMP        A=0 sBx=2
+    0019 [line  444] 0x05000243  LOADNIL    A=9 B=10 C=0 Bx=5120
+    0020 [line  444] 0x0180025E  RETURN     A=9 B=3 C=0
+    0021 [line  437] 0x7FFC415F  FORLOOP    A=5 sBx=-14
+    0022 [line  448] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0023 [line  449] 0x0000018A  NEWTABLE   A=6 B=0 C=0 Bx=0
+    0024 [line  450] 0x020001C0  MOVE       R7 = R4
+    0025 [line  451] 0x00010201  LOADK      R8 = K[4]=1.0
+    0026 [line  451] 0x00014241  LOADK      R9 = K[5]=1000.0
+    0027 [line  451] 0x00010281  LOADK      R10 = K[4]=1.0
+    0028 [line  451] 0x80028220  FORPREP    A=8 sBx=11
+    0029 [line  452] 0x0001C306  GETTABLE   R12 = R0[R7]
+    0030 [line  453] 0x02800354  LEN        A=13 B=5 C=0 Bx=2560
+    0031 [line  453] 0x06C1034C  ADD        A=13 B=R13 C=K[4]=1.0
+    0032 [line  453] 0x0681C149  SETTABLE   R5[R13] = R7
+    0033 [line  455] 0x0641C1C6  GETTABLE   R7 = R12[K[7]='prev']
+    0034 [line  456] 0x000041DA  TEST       A=7 B=0 C=1
+    0035 [line  456] 0x80000016  JMP        A=0 sBx=1
+    0036 [line  457] 0x8000C016  JMP        A=0 sBx=4
+    0037 [line  460] 0x02800354  LEN        A=13 B=5 C=0 Bx=2560
+    0038 [line  460] 0x06420386  GETTABLE   R14 = R12[K[8]='prevOption']
+    0039 [line  460] 0x06838189  SETTABLE   R6[R13] = R14
+    0040 [line  451] 0x7FFCC21F  FORLOOP    A=8 sBx=-12
+    0041 [line  462] 0x02800200  MOVE       R8 = R5
+    0042 [line  462] 0x03000240  MOVE       R9 = R6
+    0043 [line  462] 0x0180021E  RETURN     A=8 B=3 C=0
+    0044 [line  463] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 0 -> 44
+    'sourceId': 0 -> 44
+    'destId': 0 -> 44
+    'sourceNode': 1 -> 44
+    'newTreeNodeId': 4 -> 44
+    '(for index)': 7 -> 22
+    '(for limit)': 7 -> 22
+    '(for step)': 7 -> 22
+    'i': 8 -> 21
+    'path': 23 -> 44
+    'options': 24 -> 44
+    'curId': 25 -> 44
+    '(for index)': 28 -> 41
+    '(for limit)': 28 -> 41
+    '(for step)': 28 -> 41
+    'i': 29 -> 40
+    'node': 30 -> 40
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x2E98
+    Source : '@lua\\players\\ectransport.lua'
+    Lines  : 466 - 482
+    Params : 3
+    Stack  : 16
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'searchShortestPath'
+    K[001] = 1.0
+    K[002] = 2.0
+    K[003] = -1.0
+    K[004] = 'source'
+    K[005] = 'scene'
+    K[006] = 'x'
+    K[007] = 'z'
+    K[008] = 'option'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  467] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  467] 0x01C000C6  GETTABLE   R3 = R3[K[0]='searchShortestPath']
+    0002 [line  467] 0x00000100  MOVE       R4 = R0
+    0003 [line  467] 0x00800140  MOVE       R5 = R1
+    0004 [line  467] 0x01000180  MOVE       R6 = R2
+    0005 [line  467] 0x0200C0DC  CALL       A=3 B=4 C=3
+    0006 [line  469] 0x000040DA  TEST       A=3 B=0 C=1
+    0007 [line  469] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  470] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0009 [line  470] 0x0100015E  RETURN     A=5 B=2 C=0
+    0010 [line  473] 0x0000014A  NEWTABLE   A=5 B=0 C=0 Bx=0
+    0011 [line  474] 0x01800194  LEN        A=6 B=3 C=0 Bx=1536
+    0012 [line  474] 0x0340418D  SUB        A=6 B=R6 C=K[1]=1.0
+    0013 [line  474] 0x000081C1  LOADK      R7 = K[2]=2.0
+    0014 [line  474] 0x0000C201  LOADK      R8 = K[3]=-1.0
+    0015 [line  474] 0x800401A0  FORPREP    A=6 sBx=17
+    0016 [line  475] 0x01824286  GETTABLE   R10 = R3[R9]
+    0017 [line  476] 0x04C042CD  SUB        A=11 B=R9 C=K[1]=1.0
+    0018 [line  476] 0x0202C2C6  GETTABLE   R11 = R4[R11]
+    0019 [line  477] 0x00028306  GETTABLE   R12 = R0[R10]
+    0020 [line  478] 0x02800354  LEN        A=13 B=5 C=0 Bx=2560
+    0021 [line  478] 0x06C0434C  ADD        A=13 B=R13 C=K[1]=1.0
+    0022 [line  478] 0x0001438A  NEWTABLE   A=14 B=0 C=5 Bx=5
+    0023 [line  478] 0x064103C6  GETTABLE   R15 = R12[K[4]='source']
+    0024 [line  478] 0x8203C389  SETTABLE   R14[K[4]='source'] = R15
+    0025 [line  478] 0x064143C6  GETTABLE   R15 = R12[K[5]='scene']
+    0026 [line  478] 0x8283C389  SETTABLE   R14[K[5]='scene'] = R15
+    0027 [line  478] 0x064183C6  GETTABLE   R15 = R12[K[6]='x']
+    0028 [line  478] 0x8303C389  SETTABLE   R14[K[6]='x'] = R15
+    0029 [line  478] 0x0641C3C6  GETTABLE   R15 = R12[K[7]='z']
+    0030 [line  478] 0x8383C389  SETTABLE   R14[K[7]='z'] = R15
+    0031 [line  478] 0x8402C389  SETTABLE   R14[K[8]='option'] = R11
+    0032 [line  478] 0x06838149  SETTABLE   R5[R13] = R14
+    0033 [line  474] 0x7FFB419F  FORLOOP    A=6 sBx=-18
+    0034 [line  481] 0x0100015E  RETURN     A=5 B=2 C=0
+    0035 [line  482] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'nodeList': 0 -> 35
+    'sourceId': 0 -> 35
+    'destId': 0 -> 35
+    'path': 6 -> 35
+    'options': 6 -> 35
+    'route': 11 -> 35
+    '(for index)': 15 -> 34
+    '(for limit)': 15 -> 34
+    '(for step)': 15 -> 34
+    'i': 16 -> 33
+    'nodeId': 17 -> 33
+    'option': 19 -> 33
+    'node': 20 -> 33

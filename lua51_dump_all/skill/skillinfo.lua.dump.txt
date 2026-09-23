@@ -1,0 +1,1022 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\skill\skillinfo.lua
+SIZE: 9872
+PARSED: 9872
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\skill\\skillinfo.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 41
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Utility.TableProxy'
+K[003] = 'Utility.GameInfo_preload'
+K[004] = 'Utility.GameInfo'
+K[005] = 'getInfo'
+K[006] = 'Skill.SkillExprEnv'
+K[007] = 'Skill.ElementSkill'
+K[008] = 'Skill.SkillExptypes'
+K[009] = 'SID_SPACE'
+K[010] = 'getDataBySpaceAndTid'
+K[011] = 'skillexpr'
+K[012] = '_G'
+K[013] = 'Extend'
+K[014] = 'createEnvClass'
+K[015] = 'Skill.SkillInfo'
+K[016] = 'define'
+K[017] = 'static'
+K[018] = 'number'
+K[019] = 'dynamic'
+K[020] = 'setupCurrentSkill'
+K[021] = 'clearCurrentSkill'
+K[022] = 'table'
+K[023] = 'setupCurrentStatus'
+K[024] = 'clearCurrentStatus'
+K[025] = '=>'
+K[026] = 'varlist'
+K[027] = 'calcExpr'
+K[028] = 'calcExprOnLevel'
+K[029] = 'calcExprOnIdAndLevel'
+K[030] = 'function'
+K[031] = 'compileExpr'
+K[032] = 'Commit'
+K[033] = 'assert'
+K[034] = 'error'
+K[035] = 'ipairs'
+K[036] = 'next'
+K[037] = 'pairs'
+K[038] = 'pcall'
+K[039] = 'print'
+K[040] = 'warn'
+K[041] = 'select'
+K[042] = 'tonumber'
+K[043] = 'tostring'
+K[044] = 'type'
+K[045] = 'unpack'
+K[046] = 'xpcall'
+K[047] = 'math'
+K[048] = 'string'
+K[049] = 1.0
+K[050] = 'set'
+K[051] = 'host'
+K[052] = 'skill_level'
+K[053] = 'skill'
+K[054] = 'SKILL'
+K[055] = 'skill_class'
+K[056] = 'SKLCLASS'
+K[057] = 'skill_source'
+K[058] = 'SKLSOURCE'
+K[059] = 'skill_limit'
+K[060] = 'SKLLIMIT'
+K[061] = 'skill_process'
+K[062] = 'SKLPROCESS'
+K[063] = 'skill_status'
+K[064] = 'SKLSTATUS'
+K[065] = 'skill_effect'
+K[066] = 'SKLEFFECT'
+K[067] = 'skill_display'
+K[068] = 'SKLDISPLAY'
+K[069] = 'skill_subproc'
+K[070] = 'SKLSUBPROC'
+K[071] = 'skill_talent'
+K[072] = 'TALENT'
+K[073] = 'skill_talentproc'
+K[074] = 'TALENTPROC'
+K[075] = 2.0
+K[076] = 'expr'
+K[077] = 'expr_on_level'
+K[078] = 'status_param'
+K[079] = 'status_activate_level'
+K[080] = 'expr_for_status'
+
+----- INSTRUCTIONS -----
+0000 [line   15] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line   15] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line   15] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line   16] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line   16] 0x00008081  LOADK      R2 = K[2]='Utility.TableProxy'
+0005 [line   16] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   17] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line   17] 0x0000C0C1  LOADK      R3 = K[3]='Utility.GameInfo_preload'
+0008 [line   17] 0x0100409C  CALL       A=2 B=2 C=1
+0009 [line   18] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0010 [line   18] 0x000100C1  LOADK      R3 = K[4]='Utility.GameInfo'
+0011 [line   18] 0x0100809C  CALL       A=2 B=2 C=2
+0012 [line   18] 0x01414086  GETTABLE   R2 = R2[K[5]='getInfo']
+0013 [line   18] 0x0080809C  CALL       A=2 B=1 C=2
+0014 [line   19] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0015 [line   19] 0x00018101  LOADK      R4 = K[6]='Skill.SkillExprEnv'
+0016 [line   19] 0x010080DC  CALL       A=3 B=2 C=2
+0017 [line   20] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0018 [line   20] 0x0001C141  LOADK      R5 = K[7]='Skill.ElementSkill'
+0019 [line   20] 0x0100811C  CALL       A=4 B=2 C=2
+0020 [line   21] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0021 [line   21] 0x00020181  LOADK      R6 = K[8]='Skill.SkillExptypes'
+0022 [line   21] 0x0100815C  CALL       A=5 B=2 C=2
+0023 [line   22] 0x02C24186  GETTABLE   R6 = R5[K[9]='SID_SPACE']
+0024 [line   23] 0x024281C6  GETTABLE   R7 = R4[K[10]='getDataBySpaceAndTid']
+0025 [line   24] 0x0002C205  GETGLOBAL  R8 = GLOBAL K[11]='skillexpr'
+0026 [line   25] 0x00030245  GETGLOBAL  R9 = GLOBAL K[12]='_G'
+0027 [line   28] 0x06800283  LOADNIL    A=10 B=13 C=0 Bx=6656
+0028 [line   39] 0x00434386  GETTABLE   R14 = R0[K[13]='Extend']
+0029 [line   39] 0x00C383C6  GETTABLE   R15 = R1[K[14]='createEnvClass']
+0030 [line   39] 0x008083DC  CALL       A=15 B=1 C=2
+0031 [line   39] 0x0003C401  LOADK      R16 = K[15]='Skill.SkillInfo'
+0032 [line   39] 0x0180839C  CALL       A=14 B=3 C=2
+0033 [line   41] 0x074403C6  GETTABLE   R15 = R14[K[16]='define']
+0034 [line   48] 0x07C44406  GETTABLE   R16 = R15[K[17]='static']
+0035 [line   48] 0x00048441  LOADK      R17 = K[18]='number'
+0036 [line   48] 0x0004C481  LOADK      R18 = K[19]='dynamic'
+0037 [line   48] 0x0180841C  CALL       A=16 B=3 C=2
+0038 [line   62] 0x00000464  CLOSURE    R17 = PROTO[0]
+0039 [line   62] 0x01000000  MOVE       R0 = R2
+0040 [line   62] 0x05000000  MOVE       R0 = R10
+0041 [line   62] 0x05800000  MOVE       R0 = R11
+0042 [line   62] 0x06000000  MOVE       R0 = R12
+0043 [line   62] 0x03800000  MOVE       R0 = R7
+0044 [line   62] 0x03000000  MOVE       R0 = R6
+0045 [line   62] 0x07000000  MOVE       R0 = R14
+0046 [line   62] 0x01800000  MOVE       R0 = R3
+0047 [line   62] 0x8A044409  SETTABLE   R16[K[20]='setupCurrentSkill'] = R17
+0048 [line   67] 0x07C44406  GETTABLE   R16 = R15[K[17]='static']
+0049 [line   67] 0x0080841C  CALL       A=16 B=1 C=2
+0050 [line   76] 0x00004464  CLOSURE    R17 = PROTO[1]
+0051 [line   76] 0x05000000  MOVE       R0 = R10
+0052 [line   76] 0x05800000  MOVE       R0 = R11
+0053 [line   76] 0x07000000  MOVE       R0 = R14
+0054 [line   76] 0x01800000  MOVE       R0 = R3
+0055 [line   76] 0x8A844409  SETTABLE   R16[K[21]='clearCurrentSkill'] = R17
+0056 [line   81] 0x07C44406  GETTABLE   R16 = R15[K[17]='static']
+0057 [line   81] 0x00058441  LOADK      R17 = K[22]='table'
+0058 [line   81] 0x0100841C  CALL       A=16 B=2 C=2
+0059 [line   85] 0x00008464  CLOSURE    R17 = PROTO[2]
+0060 [line   85] 0x06800000  MOVE       R0 = R13
+0061 [line   85] 0x07000000  MOVE       R0 = R14
+0062 [line   85] 0x8B844409  SETTABLE   R16[K[23]='setupCurrentStatus'] = R17
+0063 [line   90] 0x07C44406  GETTABLE   R16 = R15[K[17]='static']
+0064 [line   90] 0x0080841C  CALL       A=16 B=1 C=2
+0065 [line   94] 0x0000C464  CLOSURE    R17 = PROTO[3]
+0066 [line   94] 0x06800000  MOVE       R0 = R13
+0067 [line   94] 0x07000000  MOVE       R0 = R14
+0068 [line   94] 0x8C044409  SETTABLE   R16[K[24]='clearCurrentStatus'] = R17
+0069 [line  105] 0x00010424  CLOSURE    R16 = PROTO[4]
+0070 [line  105] 0x04000000  MOVE       R0 = R8
+0071 [line  112] 0x07C44446  GETTABLE   R17 = R15[K[17]='static']
+0072 [line  112] 0x00048481  LOADK      R18 = K[18]='number'
+0073 [line  112] 0x000644C1  LOADK      R19 = K[25]='=>'
+0074 [line  112] 0x00068501  LOADK      R20 = K[26]='varlist'
+0075 [line  112] 0x0200845C  CALL       A=17 B=4 C=2
+0076 [line  114] 0x000144A4  CLOSURE    R18 = PROTO[5]
+0077 [line  114] 0x07000000  MOVE       R0 = R14
+0078 [line  114] 0x05000000  MOVE       R0 = R10
+0079 [line  114] 0x05800000  MOVE       R0 = R11
+0080 [line  114] 0x8D848449  SETTABLE   R17[K[27]='calcExpr'] = R18
+0081 [line  122] 0x07C44446  GETTABLE   R17 = R15[K[17]='static']
+0082 [line  122] 0x00048481  LOADK      R18 = K[18]='number'
+0083 [line  122] 0x000484C1  LOADK      R19 = K[18]='number'
+0084 [line  122] 0x00064501  LOADK      R20 = K[25]='=>'
+0085 [line  122] 0x00068541  LOADK      R21 = K[26]='varlist'
+0086 [line  122] 0x0280845C  CALL       A=17 B=5 C=2
+0087 [line  124] 0x000184A4  CLOSURE    R18 = PROTO[6]
+0088 [line  124] 0x07000000  MOVE       R0 = R14
+0089 [line  124] 0x05000000  MOVE       R0 = R10
+0090 [line  124] 0x8E048449  SETTABLE   R17[K[28]='calcExprOnLevel'] = R18
+0091 [line  133] 0x07C44446  GETTABLE   R17 = R15[K[17]='static']
+0092 [line  133] 0x00048481  LOADK      R18 = K[18]='number'
+0093 [line  133] 0x000484C1  LOADK      R19 = K[18]='number'
+0094 [line  133] 0x00048501  LOADK      R20 = K[18]='number'
+0095 [line  133] 0x00064541  LOADK      R21 = K[25]='=>'
+0096 [line  133] 0x00068581  LOADK      R22 = K[26]='varlist'
+0097 [line  133] 0x0300845C  CALL       A=17 B=6 C=2
+0098 [line  141] 0x0001C4A4  CLOSURE    R18 = PROTO[7]
+0099 [line  141] 0x07000000  MOVE       R0 = R14
+0100 [line  141] 0x01800000  MOVE       R0 = R3
+0101 [line  141] 0x08000000  MOVE       R0 = R16
+0102 [line  141] 0x8E848449  SETTABLE   R17[K[29]='calcExprOnIdAndLevel'] = R18
+0103 [line  148] 0x0000044A  NEWTABLE   A=17 B=0 C=0 Bx=0
+0104 [line  155] 0x07C44486  GETTABLE   R18 = R15[K[17]='static']
+0105 [line  155] 0x000484C1  LOADK      R19 = K[18]='number'
+0106 [line  155] 0x00064501  LOADK      R20 = K[25]='=>'
+0107 [line  155] 0x00078541  LOADK      R21 = K[30]='function'
+0108 [line  155] 0x0200849C  CALL       A=18 B=4 C=2
+0109 [line  177] 0x000204E4  CLOSURE    R19 = PROTO[8]
+0110 [line  177] 0x08800000  MOVE       R0 = R17
+0111 [line  177] 0x04000000  MOVE       R0 = R8
+0112 [line  177] 0x8F84C489  SETTABLE   R18[K[31]='compileExpr'] = R19
+0113 [line  177] 0x000003E3  CLOSE      A=15 B=0 C=0 Bx=0
+0114 [line  179] 0x074803C6  GETTABLE   R15 = R14[K[32]='Commit']
+0115 [line  179] 0x008043DC  CALL       A=15 B=1 C=1
+0116 [line  188] 0x088003CA  NEWTABLE   A=15 B=17 C=0 Bx=8704
+0117 [line  190] 0x00084401  LOADK      R16 = K[33]='assert'
+0118 [line  191] 0x00088441  LOADK      R17 = K[34]='error'
+0119 [line  192] 0x0008C481  LOADK      R18 = K[35]='ipairs'
+0120 [line  193] 0x000904C1  LOADK      R19 = K[36]='next'
+0121 [line  194] 0x00094501  LOADK      R20 = K[37]='pairs'
+0122 [line  195] 0x00098541  LOADK      R21 = K[38]='pcall'
+0123 [line  196] 0x0009C581  LOADK      R22 = K[39]='print'
+0124 [line  197] 0x000A05C1  LOADK      R23 = K[40]='warn'
+0125 [line  198] 0x000A4601  LOADK      R24 = K[41]='select'
+0126 [line  199] 0x000A8641  LOADK      R25 = K[42]='tonumber'
+0127 [line  200] 0x000AC681  LOADK      R26 = K[43]='tostring'
+0128 [line  201] 0x000B06C1  LOADK      R27 = K[44]='type'
+0129 [line  202] 0x000B4701  LOADK      R28 = K[45]='unpack'
+0130 [line  203] 0x000B8741  LOADK      R29 = K[46]='xpcall'
+0131 [line  206] 0x000BC781  LOADK      R30 = K[47]='math'
+0132 [line  207] 0x000C07C1  LOADK      R31 = K[48]='string'
+0133 [line  209] 0x00058801  LOADK      R32 = K[22]='table'
+0134 [line  209] 0x088043E2  SETLIST    A=15 B=17 C=1
+0135 [line  211] 0x000C4401  LOADK      R16 = K[49]=1.0
+0136 [line  211] 0x07800454  LEN        A=17 B=15 C=0 Bx=7680
+0137 [line  211] 0x000C4481  LOADK      R18 = K[49]=1.0
+0138 [line  211] 0x80010420  FORPREP    A=16 sBx=5
+0139 [line  212] 0x0784C506  GETTABLE   R20 = R15[R19]
+0140 [line  213] 0x074C8546  GETTABLE   R21 = R14[K[50]='set']
+0141 [line  213] 0x0A000580  MOVE       R22 = R20
+0142 [line  213] 0x048505C6  GETTABLE   R23 = R9[R20]
+0143 [line  213] 0x0180455C  CALL       A=21 B=3 C=1
+0144 [line  211] 0x7FFE441F  FORLOOP    A=16 sBx=-6
+0145 [line  223] 0x014CC3C6  GETTABLE   R15 = R2[K[51]='host']
+0146 [line  224] 0x07CD0406  GETTABLE   R16 = R15[K[52]='skill_level']
+0147 [line  231] 0x00024464  CLOSURE    R17 = PROTO[9]
+0148 [line  231] 0x08000000  MOVE       R0 = R16
+0149 [line  232] 0x074C8486  GETTABLE   R18 = R14[K[50]='set']
+0150 [line  232] 0x000D04C1  LOADK      R19 = K[52]='skill_level'
+0151 [line  232] 0x08800500  MOVE       R20 = R17
+0152 [line  232] 0x0180449C  CALL       A=18 B=3 C=1
+0153 [line  241] 0x0980048A  NEWTABLE   A=18 B=19 C=0 Bx=9728
+0154 [line  244] 0x000D44C1  LOADK      R19 = K[53]='skill'
+0155 [line  244] 0x034D8506  GETTABLE   R20 = R6[K[54]='SKILL']
+0156 [line  245] 0x000DC541  LOADK      R21 = K[55]='skill_class'
+0157 [line  245] 0x034E0586  GETTABLE   R22 = R6[K[56]='SKLCLASS']
+0158 [line  246] 0x000E45C1  LOADK      R23 = K[57]='skill_source'
+0159 [line  246] 0x034E8606  GETTABLE   R24 = R6[K[58]='SKLSOURCE']
+0160 [line  247] 0x000EC641  LOADK      R25 = K[59]='skill_limit'
+0161 [line  247] 0x034F0686  GETTABLE   R26 = R6[K[60]='SKLLIMIT']
+0162 [line  248] 0x000F46C1  LOADK      R27 = K[61]='skill_process'
+0163 [line  248] 0x034F8706  GETTABLE   R28 = R6[K[62]='SKLPROCESS']
+0164 [line  249] 0x000FC741  LOADK      R29 = K[63]='skill_status'
+0165 [line  249] 0x03500786  GETTABLE   R30 = R6[K[64]='SKLSTATUS']
+0166 [line  250] 0x001047C1  LOADK      R31 = K[65]='skill_effect'
+0167 [line  250] 0x03508806  GETTABLE   R32 = R6[K[66]='SKLEFFECT']
+0168 [line  251] 0x0010C841  LOADK      R33 = K[67]='skill_display'
+0169 [line  251] 0x03510886  GETTABLE   R34 = R6[K[68]='SKLDISPLAY']
+0170 [line  252] 0x001148C1  LOADK      R35 = K[69]='skill_subproc'
+0171 [line  252] 0x03518906  GETTABLE   R36 = R6[K[70]='SKLSUBPROC']
+0172 [line  253] 0x0011C941  LOADK      R37 = K[71]='skill_talent'
+0173 [line  253] 0x03520986  GETTABLE   R38 = R6[K[72]='TALENT']
+0174 [line  254] 0x001249C1  LOADK      R39 = K[73]='skill_talentproc'
+0175 [line  255] 0x03528A06  GETTABLE   R40 = R6[K[74]='TALENTPROC']
+0176 [line  255] 0x0B0044A2  SETLIST    A=18 B=22 C=1
+0177 [line  257] 0x000C44C1  LOADK      R19 = K[49]=1.0
+0178 [line  257] 0x09000514  LEN        A=20 B=18 C=0 Bx=9216
+0179 [line  257] 0x0012C541  LOADK      R21 = K[75]=2.0
+0180 [line  257] 0x800284E0  FORPREP    A=19 sBx=11
+0181 [line  258] 0x090585C6  GETTABLE   R23 = R18[R22]
+0182 [line  259] 0x0B4C460C  ADD        A=24 B=R22 C=K[49]=1.0
+0183 [line  259] 0x09060606  GETTABLE   R24 = R18[R24]
+0184 [line  262] 0x00028664  CLOSURE    R25 = PROTO[10]
+0185 [line  262] 0x03800000  MOVE       R0 = R7
+0186 [line  262] 0x0C000000  MOVE       R0 = R24
+0187 [line  264] 0x074C8686  GETTABLE   R26 = R14[K[50]='set']
+0188 [line  264] 0x0B8006C0  MOVE       R27 = R23
+0189 [line  264] 0x0C800700  MOVE       R28 = R25
+0190 [line  264] 0x0180469C  CALL       A=26 B=3 C=1
+0191 [line  264] 0x000005E3  CLOSE      A=23 B=0 C=0 Bx=0
+0192 [line  257] 0x7FFCC4DF  FORLOOP    A=19 sBx=-12
+0193 [line  273] 0x0002C4A4  CLOSURE    R18 = PROTO[11]
+0194 [line  273] 0x07000000  MOVE       R0 = R14
+0195 [line  274] 0x074C84C6  GETTABLE   R19 = R14[K[50]='set']
+0196 [line  274] 0x00130501  LOADK      R20 = K[76]='expr'
+0197 [line  274] 0x09000540  MOVE       R21 = R18
+0198 [line  274] 0x018044DC  CALL       A=19 B=3 C=1
+0199 [line  281] 0x000304E4  CLOSURE    R19 = PROTO[12]
+0200 [line  281] 0x07000000  MOVE       R0 = R14
+0201 [line  282] 0x074C8506  GETTABLE   R20 = R14[K[50]='set']
+0202 [line  282] 0x00134541  LOADK      R21 = K[77]='expr_on_level'
+0203 [line  282] 0x09800580  MOVE       R22 = R19
+0204 [line  282] 0x0180451C  CALL       A=20 B=3 C=1
+0205 [line  303] 0x00034524  CLOSURE    R20 = PROTO[13]
+0206 [line  303] 0x06000000  MOVE       R0 = R12
+0207 [line  303] 0x02000000  MOVE       R0 = R4
+0208 [line  303] 0x07000000  MOVE       R0 = R14
+0209 [line  303] 0x05000000  MOVE       R0 = R10
+0210 [line  304] 0x074C8546  GETTABLE   R21 = R14[K[50]='set']
+0211 [line  304] 0x00138581  LOADK      R22 = K[78]='status_param'
+0212 [line  304] 0x0A0005C0  MOVE       R23 = R20
+0213 [line  304] 0x0180455C  CALL       A=21 B=3 C=1
+0214 [line  318] 0x00038564  CLOSURE    R21 = PROTO[14]
+0215 [line  318] 0x06000000  MOVE       R0 = R12
+0216 [line  318] 0x07000000  MOVE       R0 = R14
+0217 [line  318] 0x06800000  MOVE       R0 = R13
+0218 [line  319] 0x074C8586  GETTABLE   R22 = R14[K[50]='set']
+0219 [line  319] 0x0013C5C1  LOADK      R23 = K[79]='status_activate_level'
+0220 [line  319] 0x0A800600  MOVE       R24 = R21
+0221 [line  319] 0x0180459C  CALL       A=22 B=3 C=1
+0222 [line  331] 0x0003C5A4  CLOSURE    R22 = PROTO[15]
+0223 [line  331] 0x0A800000  MOVE       R0 = R21
+0224 [line  331] 0x05800000  MOVE       R0 = R11
+0225 [line  331] 0x09800000  MOVE       R0 = R19
+0226 [line  332] 0x074C85C6  GETTABLE   R23 = R14[K[50]='set']
+0227 [line  332] 0x00140601  LOADK      R24 = K[80]='expr_for_status'
+0228 [line  332] 0x0B000640  MOVE       R25 = R22
+0229 [line  332] 0x018045DC  CALL       A=23 B=3 C=1
+0230 [line  334] 0x0100039E  RETURN     A=14 B=2 C=0
+0231 [line  334] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 231
+'TableProxy': 6 -> 231
+'gameinfo': 14 -> 231
+'SkillExprEnv': 17 -> 231
+'ElementSkill': 20 -> 231
+'SkillExptypes': 23 -> 231
+'SID_SPACE': 24 -> 231
+'ElementSkill_getDataBySpaceAndTid': 25 -> 231
+'skillexpr': 26 -> 231
+'_G': 27 -> 231
+'l_currentSkillId': 28 -> 231
+'l_currentSkillLevel': 28 -> 231
+'l_currentSkill': 28 -> 231
+'l_currentStatus': 28 -> 231
+'SkillInfo': 33 -> 231
+'def': 34 -> 113
+'expr_results': 71 -> 113
+'l_exprFuncCache': 104 -> 113
+'globals': 135 -> 145
+'(for index)': 138 -> 145
+'(for limit)': 138 -> 145
+'(for step)': 138 -> 145
+'i': 139 -> 144
+'name': 140 -> 144
+'host': 146 -> 231
+'host_skill_level': 147 -> 231
+'skill_level': 149 -> 231
+'skill_templates': 177 -> 193
+'(for index)': 180 -> 193
+'(for limit)': 180 -> 193
+'(for step)': 180 -> 193
+'i': 181 -> 192
+'function_name': 182 -> 191
+'spaceId': 184 -> 191
+'skill_data': 187 -> 191
+'expr': 195 -> 231
+'expr_on_level': 201 -> 231
+'status_param': 210 -> 231
+'status_activate_level': 218 -> 231
+'expr_for_status': 226 -> 231
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x8D8
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 48 - 62
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'host'
+    K[001] = 'skill_level'
+    K[002] = 'SKILL'
+    K[003] = 'set'
+    K[004] = 'curid'
+    K[005] = 'curlevel'
+    K[006] = 'curskill'
+    K[007] = 'setupCurrentSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   49] 0x0000405A  TEST       A=1 B=0 C=1
+    0001 [line   49] 0x80014016  JMP        A=0 sBx=6
+    0002 [line   50] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0003 [line   50] 0x01400086  GETTABLE   R2 = R2[K[0]='host']
+    0004 [line   50] 0x01404086  GETTABLE   R2 = R2[K[1]='skill_level']
+    0005 [line   50] 0x000000C0  MOVE       R3 = R0
+    0006 [line   50] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line   50] 0x01000040  MOVE       R1 = R2
+    0008 [line   53] 0x00800008  SETUPVAL   A=0 B=1 C=0 Bx=512
+    0009 [line   54] 0x01000048  SETUPVAL   A=1 B=2 C=0 Bx=1024
+    0010 [line   55] 0x02000084  GETUPVAL   A=2 B=4 C=0 Bx=2048
+    0011 [line   55] 0x028000C4  GETUPVAL   A=3 B=5 C=0 Bx=2560
+    0012 [line   55] 0x01C080C6  GETTABLE   R3 = R3[K[2]='SKILL']
+    0013 [line   55] 0x00000100  MOVE       R4 = R0
+    0014 [line   55] 0x0180809C  CALL       A=2 B=3 C=2
+    0015 [line   55] 0x01800088  SETUPVAL   A=2 B=3 C=0 Bx=1536
+    0016 [line   57] 0x03000084  GETUPVAL   A=2 B=6 C=0 Bx=3072
+    0017 [line   57] 0x0140C086  GETTABLE   R2 = R2[K[3]='set']
+    0018 [line   57] 0x000100C1  LOADK      R3 = K[4]='curid'
+    0019 [line   57] 0x00000100  MOVE       R4 = R0
+    0020 [line   57] 0x0180409C  CALL       A=2 B=3 C=1
+    0021 [line   58] 0x03000084  GETUPVAL   A=2 B=6 C=0 Bx=3072
+    0022 [line   58] 0x0140C086  GETTABLE   R2 = R2[K[3]='set']
+    0023 [line   58] 0x000140C1  LOADK      R3 = K[5]='curlevel'
+    0024 [line   58] 0x00800100  MOVE       R4 = R1
+    0025 [line   58] 0x0180409C  CALL       A=2 B=3 C=1
+    0026 [line   59] 0x03000084  GETUPVAL   A=2 B=6 C=0 Bx=3072
+    0027 [line   59] 0x0140C086  GETTABLE   R2 = R2[K[3]='set']
+    0028 [line   59] 0x000180C1  LOADK      R3 = K[6]='curskill'
+    0029 [line   59] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+    0030 [line   59] 0x0180409C  CALL       A=2 B=3 C=1
+    0031 [line   61] 0x03800084  GETUPVAL   A=2 B=7 C=0 Bx=3584
+    0032 [line   61] 0x0141C086  GETTABLE   R2 = R2[K[7]='setupCurrentSkill']
+    0033 [line   61] 0x000000C0  MOVE       R3 = R0
+    0034 [line   61] 0x00800100  MOVE       R4 = R1
+    0035 [line   61] 0x0180409C  CALL       A=2 B=3 C=1
+    0036 [line   62] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'skillId': 0 -> 36
+    'skillLevel': 0 -> 36
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xB60
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 67 - 76
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'set'
+    K[001] = 'curskillid'
+    K[002] = 'curskilllevel'
+    K[003] = 'curskill'
+    K[004] = 'clearCurrentSkill'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   68] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   69] 0x00000003  LOADNIL    A=0 B=0 C=0 Bx=0
+    0002 [line   69] 0x00800008  SETUPVAL   A=0 B=1 C=0 Bx=512
+    0003 [line   71] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0004 [line   71] 0x00400006  GETTABLE   R0 = R0[K[0]='set']
+    0005 [line   71] 0x00004041  LOADK      R1 = K[1]='curskillid'
+    0006 [line   71] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0007 [line   71] 0x0180401C  CALL       A=0 B=3 C=1
+    0008 [line   72] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0009 [line   72] 0x00400006  GETTABLE   R0 = R0[K[0]='set']
+    0010 [line   72] 0x00008041  LOADK      R1 = K[2]='curskilllevel'
+    0011 [line   72] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0012 [line   72] 0x0180401C  CALL       A=0 B=3 C=1
+    0013 [line   73] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0014 [line   73] 0x00400006  GETTABLE   R0 = R0[K[0]='set']
+    0015 [line   73] 0x0000C041  LOADK      R1 = K[3]='curskill'
+    0016 [line   73] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0017 [line   73] 0x0180401C  CALL       A=0 B=3 C=1
+    0018 [line   75] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0019 [line   75] 0x00410006  GETTABLE   R0 = R0[K[4]='clearCurrentSkill']
+    0020 [line   75] 0x0080401C  CALL       A=0 B=1 C=1
+    0021 [line   76] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xCD5
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 81 - 85
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'set'
+    K[001] = 'curstatus'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   82] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   84] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0002 [line   84] 0x00C00046  GETTABLE   R1 = R1[K[0]='set']
+    0003 [line   84] 0x00004081  LOADK      R2 = K[1]='curstatus'
+    0004 [line   84] 0x000000C0  MOVE       R3 = R0
+    0005 [line   84] 0x0180405C  CALL       A=1 B=3 C=1
+    0006 [line   85] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'status': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xD82
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 90 - 94
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'set'
+    K[001] = 'curstatus'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   91] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   93] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0002 [line   93] 0x00400006  GETTABLE   R0 = R0[K[0]='set']
+    0003 [line   93] 0x00004041  LOADK      R1 = K[1]='curstatus'
+    0004 [line   93] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0005 [line   93] 0x0180401C  CALL       A=0 B=3 C=1
+    0006 [line   94] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xE1C
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 97 - 105
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'select'
+    K[001] = 1.0
+    K[002] = 2.0
+    K[003] = 'warn'
+    K[004] = 'failed to compile skill expression #%d: %s\n  exprText: %s'
+    K[005] = 'format'
+    K[006] = 'get_by_id'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   98] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='select'
+    0001 [line   98] 0x000040C1  LOADK      R3 = K[1]=1.0
+    0002 [line   98] 0x00000125  VARARG     A=4 B=0 C=0
+    0003 [line   98] 0x0000809C  CALL       A=2 B=0 C=2
+    0004 [line   99] 0x0000009A  TEST       A=2 B=0 C=0
+    0005 [line   99] 0x80014016  JMP        A=0 sBx=6
+    0006 [line  100] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='select'
+    0007 [line  100] 0x00008101  LOADK      R4 = K[2]=2.0
+    0008 [line  100] 0x00000165  VARARG     A=5 B=0 C=0
+    0009 [line  100] 0x000000DD  TAILCALL   A=3 B=0 C=0
+    0010 [line  100] 0x000000DE  RETURN     A=3 B=0 C=0
+    0011 [line  100] 0x8003C016  JMP        A=0 sBx=16
+    0012 [line  102] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='warn'
+    0013 [line  102] 0x00010101  LOADK      R4 = K[4]='failed to compile skill expression #%d: %s\n  exprText: %s'
+    0014 [line  102] 0x0241410B  SELF       A=4 B=4 C=261 Bx=2309
+    0015 [line  102] 0x00000180  MOVE       R6 = R0
+    0016 [line  102] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='select'
+    0017 [line  102] 0x00008201  LOADK      R8 = K[2]=2.0
+    0018 [line  102] 0x00000265  VARARG     A=9 B=0 C=0
+    0019 [line  102] 0x000081DC  CALL       A=7 B=0 C=2
+    0020 [line  102] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0021 [line  102] 0x04418206  GETTABLE   R8 = R8[K[6]='get_by_id']
+    0022 [line  102] 0x00000240  MOVE       R9 = R0
+    0023 [line  102] 0x0100021C  CALL       A=8 B=2 C=0
+    0024 [line  102] 0x0000011C  CALL       A=4 B=0 C=0
+    0025 [line  102] 0x000040DC  CALL       A=3 B=0 C=1
+    0026 [line  103] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0027 [line  103] 0x010000DE  RETURN     A=3 B=2 C=0
+    0028 [line  105] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 28
+    'arg': 0 -> 28
+    'bSucc': 4 -> 28
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xFF2
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 112 - 114
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'calcExprOnIdAndLevel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  113] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  113] 0x00C00046  GETTABLE   R1 = R1[K[0]='calcExprOnIdAndLevel']
+    0002 [line  113] 0x00000080  MOVE       R2 = R0
+    0003 [line  113] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0004 [line  113] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0005 [line  113] 0x0200005D  TAILCALL   A=1 B=4 C=0
+    0006 [line  113] 0x0000005E  RETURN     A=1 B=0 C=0
+    0007 [line  114] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x10C3
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 122 - 124
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'calcExprOnIdAndLevel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  123] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  123] 0x01400086  GETTABLE   R2 = R2[K[0]='calcExprOnIdAndLevel']
+    0002 [line  123] 0x000000C0  MOVE       R3 = R0
+    0003 [line  123] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0004 [line  123] 0x00800140  MOVE       R5 = R1
+    0005 [line  123] 0x0200009D  TAILCALL   A=2 B=4 C=0
+    0006 [line  123] 0x0000009E  RETURN     A=2 B=0 C=0
+    0007 [line  124] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 7
+    'skill_level': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1194
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 133 - 141
+    Params : 3
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'compileExpr'
+    K[001] = None
+    K[002] = 'setupCurrentSkill'
+    K[003] = 'pcall'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  134] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  134] 0x01C000C6  GETTABLE   R3 = R3[K[0]='compileExpr']
+    0002 [line  134] 0x00000100  MOVE       R4 = R0
+    0003 [line  134] 0x010080DC  CALL       A=3 B=2 C=2
+    0004 [line  135] 0x01C04017  EQ         A=0 B=R3 C=K[1]=None
+    0005 [line  135] 0x80004016  JMP        A=0 sBx=2
+    0006 [line  136] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0007 [line  136] 0x0100011E  RETURN     A=4 B=2 C=0
+    0008 [line  139] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0009 [line  139] 0x02408106  GETTABLE   R4 = R4[K[2]='setupCurrentSkill']
+    0010 [line  139] 0x00800140  MOVE       R5 = R1
+    0011 [line  139] 0x01000180  MOVE       R6 = R2
+    0012 [line  139] 0x0180411C  CALL       A=4 B=3 C=1
+    0013 [line  140] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0014 [line  140] 0x00000140  MOVE       R5 = R0
+    0015 [line  140] 0x0000C185  GETGLOBAL  R6 = GLOBAL K[3]='pcall'
+    0016 [line  140] 0x018001C0  MOVE       R7 = R3
+    0017 [line  140] 0x0100019C  CALL       A=6 B=2 C=0
+    0018 [line  140] 0x0000011D  TAILCALL   A=4 B=0 C=0
+    0019 [line  140] 0x0000011E  RETURN     A=4 B=0 C=0
+    0020 [line  141] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 20
+    'skill_id': 0 -> 20
+    'skill_level': 0 -> 20
+    'expr_func': 4 -> 20
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x131F
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 155 - 177
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+    K[001] = 'get_by_id'
+    K[002] = 'loadstring'
+    K[003] = 'return '
+    K[004] = 'warn'
+    K[005] = 'failed to compile skill expression #%d: %s\n  exprText: %s'
+    K[006] = 'format'
+    K[007] = False
+    K[008] = 'require'
+    K[009] = 'Skill.SkillExprEnv'
+    K[010] = 'setfenv'
+    K[011] = 'getEnv'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  156] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  156] 0x00800046  GETTABLE   R1 = R1[R0]
+    0002 [line  157] 0x00C00017  EQ         A=0 B=R1 C=K[0]=None
+    0003 [line  157] 0x8008C016  JMP        A=0 sBx=36
+    0004 [line  158] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0005 [line  158] 0x01404086  GETTABLE   R2 = R2[K[1]='get_by_id']
+    0006 [line  158] 0x000000C0  MOVE       R3 = R0
+    0007 [line  158] 0x0100809C  CALL       A=2 B=2 C=2
+    0008 [line  159] 0x018000C3  LOADNIL    A=3 B=3 C=0 Bx=1536
+    0009 [line  160] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='loadstring'
+    0010 [line  160] 0x0000C141  LOADK      R5 = K[3]='return '
+    0011 [line  160] 0x01000180  MOVE       R6 = R2
+    0012 [line  160] 0x02818155  CONCAT     A=5 B=5 C=6 Bx=2566
+    0013 [line  160] 0x0100C11C  CALL       A=4 B=2 C=3
+    0014 [line  160] 0x028000C0  MOVE       R3 = R5
+    0015 [line  160] 0x02000040  MOVE       R1 = R4
+    0016 [line  161] 0x00C00017  EQ         A=0 B=R1 C=K[0]=None
+    0017 [line  161] 0x8002C016  JMP        A=0 sBx=12
+    0018 [line  162] 0x00010105  GETGLOBAL  R4 = GLOBAL K[4]='warn'
+    0019 [line  162] 0x00014141  LOADK      R5 = K[5]='failed to compile skill expression #%d: %s\n  exprText: %s'
+    0020 [line  162] 0x02C1814B  SELF       A=5 B=5 C=262 Bx=2822
+    0021 [line  162] 0x000001C0  MOVE       R7 = R0
+    0022 [line  162] 0x01800200  MOVE       R8 = R3
+    0023 [line  162] 0x01000240  MOVE       R9 = R2
+    0024 [line  162] 0x0280015C  CALL       A=5 B=5 C=0
+    0025 [line  162] 0x0000411C  CALL       A=4 B=0 C=1
+    0026 [line  163] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0027 [line  163] 0x0041C109  SETTABLE   R4[R0] = K[7]=False
+    0028 [line  164] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0029 [line  164] 0x0100011E  RETURN     A=4 B=2 C=0
+    0030 [line  166] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0031 [line  166] 0x00004109  SETTABLE   R4[R0] = R1
+    0032 [line  168] 0x00020105  GETGLOBAL  R4 = GLOBAL K[8]='require'
+    0033 [line  168] 0x00024141  LOADK      R5 = K[9]='Skill.SkillExprEnv'
+    0034 [line  168] 0x0100811C  CALL       A=4 B=2 C=2
+    0035 [line  169] 0x00028145  GETGLOBAL  R5 = GLOBAL K[10]='setfenv'
+    0036 [line  169] 0x00800180  MOVE       R6 = R1
+    0037 [line  169] 0x0242C1C6  GETTABLE   R7 = R4[K[11]='getEnv']
+    0038 [line  169] 0x008001DC  CALL       A=7 B=1 C=0
+    0039 [line  169] 0x0000415C  CALL       A=5 B=0 C=1
+    0040 [line  172] 0x0000005A  TEST       A=1 B=0 C=0
+    0041 [line  172] 0x80004016  JMP        A=0 sBx=2
+    0042 [line  173] 0x0100005E  RETURN     A=1 B=2 C=0
+    0043 [line  173] 0x80004016  JMP        A=0 sBx=2
+    0044 [line  175] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0045 [line  175] 0x0100009E  RETURN     A=2 B=2 C=0
+    0046 [line  177] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 46
+    'exprFunc': 2 -> 46
+    'exprText': 8 -> 40
+    'err': 9 -> 40
+    'SkillExprEnv': 35 -> 40
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x160A
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 229 - 231
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  230] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  230] 0x00000080  MOVE       R2 = R0
+    0002 [line  230] 0x0100005D  TAILCALL   A=1 B=2 C=0
+    0003 [line  230] 0x0000005E  RETURN     A=1 B=0 C=0
+    0004 [line  231] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'level': 0 -> 4
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x1681
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 260 - 262
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  261] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  261] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0002 [line  261] 0x000000C0  MOVE       R3 = R0
+    0003 [line  261] 0x0180005D  TAILCALL   A=1 B=3 C=0
+    0004 [line  261] 0x0000005E  RETURN     A=1 B=0 C=0
+    0005 [line  262] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'id': 0 -> 5
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x171A
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 271 - 273
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'calcExpr'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  272] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  272] 0x00C00046  GETTABLE   R1 = R1[K[0]='calcExpr']
+    0002 [line  272] 0x00000080  MOVE       R2 = R0
+    0003 [line  272] 0x0100005D  TAILCALL   A=1 B=2 C=0
+    0004 [line  272] 0x0000005E  RETURN     A=1 B=0 C=0
+    0005 [line  273] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 5
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x17A2
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 279 - 281
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'calcExprOnLevel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  280] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  280] 0x01400086  GETTABLE   R2 = R2[K[0]='calcExprOnLevel']
+    0002 [line  280] 0x000000C0  MOVE       R3 = R0
+    0003 [line  280] 0x00800100  MOVE       R4 = R1
+    0004 [line  280] 0x0180009D  TAILCALL   A=2 B=3 C=0
+    0005 [line  280] 0x0000009E  RETURN     A=2 B=0 C=0
+    0006 [line  281] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 6
+    'level': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x184B
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 287 - 303
+    Params : 1
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'process_id'
+    K[002] = 'len'
+    K[003] = 0.0
+    K[004] = 'getProcess'
+    K[005] = 'states'
+    K[006] = 'state_id'
+    K[007] = 'setupCurrentStatus'
+    K[008] = 'warn'
+    K[009] = 'skill status %d not found in skill %s'
+    K[010] = 'format'
+    K[011] = 'tostring'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  288] 0x00000041  LOADK      R1 = K[0]=1.0
+    0001 [line  288] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  288] 0x01404086  GETTABLE   R2 = R2[K[1]='process_id']
+    0003 [line  288] 0x01408086  GETTABLE   R2 = R2[K[2]='len']
+    0004 [line  288] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0005 [line  288] 0x80060060  FORPREP    A=1 sBx=25
+    0006 [line  289] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0007 [line  289] 0x02C04146  GETTABLE   R5 = R5[K[1]='process_id']
+    0008 [line  289] 0x02810146  GETTABLE   R5 = R5[R4]
+    0009 [line  290] 0x02C0C057  EQ         A=1 B=R5 C=K[3]=0.0
+    0010 [line  290] 0x8004C016  JMP        A=0 sBx=20
+    0011 [line  291] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0012 [line  291] 0x03410186  GETTABLE   R6 = R6[K[4]='getProcess']
+    0013 [line  291] 0x028001C0  MOVE       R7 = R5
+    0014 [line  291] 0x0100819C  CALL       A=6 B=2 C=2
+    0015 [line  292] 0x000001C1  LOADK      R7 = K[0]=1.0
+    0016 [line  292] 0x03414206  GETTABLE   R8 = R6[K[5]='states']
+    0017 [line  292] 0x04408206  GETTABLE   R8 = R8[K[2]='len']
+    0018 [line  292] 0x00000241  LOADK      R9 = K[0]=1.0
+    0019 [line  292] 0x800241E0  FORPREP    A=7 sBx=10
+    0020 [line  293] 0x034142C6  GETTABLE   R11 = R6[K[5]='states']
+    0021 [line  293] 0x058282C6  GETTABLE   R11 = R11[R10]
+    0022 [line  294] 0x05C18306  GETTABLE   R12 = R11[K[6]='state_id']
+    0023 [line  294] 0x06000017  EQ         A=0 B=R12 C=R0
+    0024 [line  294] 0x80010016  JMP        A=0 sBx=5
+    0025 [line  295] 0x01000304  GETUPVAL   A=12 B=2 C=0 Bx=1024
+    0026 [line  295] 0x0641C306  GETTABLE   R12 = R12[K[7]='setupCurrentStatus']
+    0027 [line  295] 0x05800340  MOVE       R13 = R11
+    0028 [line  295] 0x0100431C  CALL       A=12 B=2 C=1
+    0029 [line  296] 0x010002DE  RETURN     A=11 B=2 C=0
+    0030 [line  292] 0x7FFD01DF  FORLOOP    A=7 sBx=-11
+    0031 [line  288] 0x7FF9405F  FORLOOP    A=1 sBx=-26
+    0032 [line  301] 0x00020045  GETGLOBAL  R1 = GLOBAL K[8]='warn'
+    0033 [line  301] 0x00024081  LOADK      R2 = K[9]='skill status %d not found in skill %s'
+    0034 [line  301] 0x0142808B  SELF       A=2 B=2 C=266 Bx=1290
+    0035 [line  301] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+    0036 [line  301] 0x0002C145  GETGLOBAL  R5 = GLOBAL K[11]='tostring'
+    0037 [line  301] 0x00000180  MOVE       R6 = R0
+    0038 [line  301] 0x0100015C  CALL       A=5 B=2 C=0
+    0039 [line  301] 0x0000009C  CALL       A=2 B=0 C=0
+    0040 [line  301] 0x0000405C  CALL       A=1 B=0 C=1
+    0041 [line  302] 0x00800043  LOADNIL    A=1 B=1 C=0 Bx=512
+    0042 [line  302] 0x0100005E  RETURN     A=1 B=2 C=0
+    0043 [line  303] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'status_id': 0 -> 43
+    '(for index)': 5 -> 32
+    '(for limit)': 5 -> 32
+    '(for step)': 5 -> 32
+    'iProcess': 6 -> 31
+    'processId': 9 -> 31
+    'processData': 15 -> 31
+    '(for index)': 19 -> 31
+    '(for limit)': 19 -> 31
+    '(for step)': 19 -> 31
+    'iStatus': 20 -> 30
+    'statusParam': 22 -> 30
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x1BE9
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 309 - 318
+    Params : 0
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'level_max'
+    K[002] = 'calcExprOnLevel'
+    K[003] = 'state_probability'
+    K[004] = 0.0
+    K[005] = 'warn'
+    K[006] = 'skill status can not take effect with param:\n'
+    K[007] = 'tostring'
+    K[008] = -1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  310] 0x00000001  LOADK      R0 = K[0]=1.0
+    0001 [line  310] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0002 [line  310] 0x00C04046  GETTABLE   R1 = R1[K[1]='level_max']
+    0003 [line  310] 0x00000081  LOADK      R2 = K[0]=1.0
+    0004 [line  310] 0x80020020  FORPREP    A=0 sBx=9
+    0005 [line  311] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0006 [line  311] 0x02408106  GETTABLE   R4 = R4[K[2]='calcExprOnLevel']
+    0007 [line  311] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0008 [line  311] 0x02C0C146  GETTABLE   R5 = R5[K[3]='state_probability']
+    0009 [line  311] 0x01800180  MOVE       R6 = R3
+    0010 [line  311] 0x0180811C  CALL       A=4 B=3 C=2
+    0011 [line  311] 0x82010018  LT         A=0 B=K[4]=0.0 C=R4
+    0012 [line  311] 0x80000016  JMP        A=0 sBx=1
+    0013 [line  312] 0x010000DE  RETURN     A=3 B=2 C=0
+    0014 [line  310] 0x7FFD401F  FORLOOP    A=0 sBx=-10
+    0015 [line  316] 0x00014005  GETGLOBAL  R0 = GLOBAL K[5]='warn'
+    0016 [line  316] 0x00018041  LOADK      R1 = K[6]='skill status can not take effect with param:\n'
+    0017 [line  316] 0x0001C085  GETGLOBAL  R2 = GLOBAL K[7]='tostring'
+    0018 [line  316] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0019 [line  316] 0x0100809C  CALL       A=2 B=2 C=2
+    0020 [line  316] 0x00808055  CONCAT     A=1 B=1 C=2 Bx=514
+    0021 [line  316] 0x0100401C  CALL       A=0 B=2 C=1
+    0022 [line  317] 0x00020001  LOADK      R0 = K[8]=-1.0
+    0023 [line  317] 0x0100001E  RETURN     A=0 B=2 C=0
+    0024 [line  318] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    '(for index)': 4 -> 15
+    '(for limit)': 4 -> 15
+    '(for step)': 4 -> 15
+    'level': 5 -> 14
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x1E08
+    Source : '@lua\\skill\\skillinfo.lua'
+    Lines  : 324 - 331
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  325] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  325] 0x0080805C  CALL       A=1 B=1 C=2
+    0002 [line  326] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0003 [line  326] 0x00808019  LE         A=0 B=R1 C=R2
+    0004 [line  326] 0x80014016  JMP        A=0 sBx=6
+    0005 [line  327] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+    0006 [line  327] 0x000000C0  MOVE       R3 = R0
+    0007 [line  327] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0008 [line  327] 0x0180009D  TAILCALL   A=2 B=3 C=0
+    0009 [line  327] 0x0000009E  RETURN     A=2 B=0 C=0
+    0010 [line  327] 0x80010016  JMP        A=0 sBx=5
+    0011 [line  329] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+    0012 [line  329] 0x000000C0  MOVE       R3 = R0
+    0013 [line  329] 0x00800100  MOVE       R4 = R1
+    0014 [line  329] 0x0180009D  TAILCALL   A=2 B=3 C=0
+    0015 [line  329] 0x0000009E  RETURN     A=2 B=0 C=0
+    0016 [line  331] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'expr_id': 0 -> 16
+    'activateLevel': 2 -> 16

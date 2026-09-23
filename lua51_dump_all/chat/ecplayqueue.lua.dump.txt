@@ -1,0 +1,1046 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\chat\ecplayqueue.lua
+SIZE: 8393
+PARSED: 8393
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\chat\\ecplayqueue.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 11
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'ForwardDeclare'
+K[003] = 'ECGame'
+K[004] = 'ECSpeechUtil'
+K[005] = 'ECChatManager'
+K[006] = 'Class'
+K[007] = 'ECPlayQueue'
+K[008] = 'define'
+K[009] = 'field'
+K[010] = 'table'
+K[011] = 'mQueue'
+K[012] = 'BLANK_TABLE_INIT'
+K[013] = 'boolean'
+K[014] = 'mIsPlaying'
+K[015] = False
+K[016] = 'number'
+K[017] = 'mPlayID'
+K[018] = 0.0
+K[019] = 'mTimerID'
+K[020] = 'mLength'
+K[021] = 'mAutoPlay'
+K[022] = 'mWaitToPlay'
+K[023] = 'static'
+K[024] = '=>'
+K[025] = 'Instance'
+K[026] = 'method'
+K[027] = 'AddToPlayQueue'
+K[028] = 'Remove'
+K[029] = 'RemoveAll'
+K[030] = 'Find'
+K[031] = 'SortQueue'
+K[032] = 'CanPlay'
+K[033] = 'IsPlaying'
+K[034] = 'Stop'
+K[035] = 'Play'
+K[036] = 'PlayMsgAudio'
+K[037] = 'CurPlayingID'
+K[038] = 'StartTimer'
+K[039] = 'StopTimer'
+K[040] = 'PlayCentain'
+K[041] = 'UpdateWaitToPlay'
+K[042] = 'PreDownloadAudio'
+K[043] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    6] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    6] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    6] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    7] 0x00408046  GETTABLE   R1 = R0[K[2]='ForwardDeclare']
+0004 [line    7] 0x0000C081  LOADK      R2 = K[3]='ECGame'
+0005 [line    7] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    8] 0x00408086  GETTABLE   R2 = R0[K[2]='ForwardDeclare']
+0007 [line    8] 0x000100C1  LOADK      R3 = K[4]='ECSpeechUtil'
+0008 [line    8] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    9] 0x004080C6  GETTABLE   R3 = R0[K[2]='ForwardDeclare']
+0010 [line    9] 0x00014101  LOADK      R4 = K[5]='ECChatManager'
+0011 [line    9] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line   11] 0x00418106  GETTABLE   R4 = R0[K[6]='Class']
+0013 [line   11] 0x0001C141  LOADK      R5 = K[7]='ECPlayQueue'
+0014 [line   11] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   12] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+0016 [line   14] 0x02420186  GETTABLE   R6 = R4[K[8]='define']
+0017 [line   15] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0018 [line   15] 0x00028201  LOADK      R8 = K[10]='table'
+0019 [line   15] 0x010081DC  CALL       A=7 B=2 C=2
+0020 [line   15] 0x00030205  GETGLOBAL  R8 = GLOBAL K[12]='BLANK_TABLE_INIT'
+0021 [line   15] 0x858201C9  SETTABLE   R7[K[11]='mQueue'] = R8
+0022 [line   16] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0023 [line   16] 0x00034201  LOADK      R8 = K[13]='boolean'
+0024 [line   16] 0x010081DC  CALL       A=7 B=2 C=2
+0025 [line   16] 0x8743C1C9  SETTABLE   R7[K[14]='mIsPlaying'] = K[15]=False
+0026 [line   17] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0027 [line   17] 0x00040201  LOADK      R8 = K[16]='number'
+0028 [line   17] 0x010081DC  CALL       A=7 B=2 C=2
+0029 [line   17] 0x88C481C9  SETTABLE   R7[K[17]='mPlayID'] = K[18]=0.0
+0030 [line   18] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0031 [line   18] 0x00040201  LOADK      R8 = K[16]='number'
+0032 [line   18] 0x010081DC  CALL       A=7 B=2 C=2
+0033 [line   18] 0x89C481C9  SETTABLE   R7[K[19]='mTimerID'] = K[18]=0.0
+0034 [line   19] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0035 [line   19] 0x00040201  LOADK      R8 = K[16]='number'
+0036 [line   19] 0x010081DC  CALL       A=7 B=2 C=2
+0037 [line   19] 0x8A4481C9  SETTABLE   R7[K[20]='mLength'] = K[18]=0.0
+0038 [line   20] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0039 [line   20] 0x00034201  LOADK      R8 = K[13]='boolean'
+0040 [line   20] 0x010081DC  CALL       A=7 B=2 C=2
+0041 [line   20] 0x8AC3C1C9  SETTABLE   R7[K[21]='mAutoPlay'] = K[15]=False
+0042 [line   21] 0x034241C6  GETTABLE   R7 = R6[K[9]='field']
+0043 [line   21] 0x00040201  LOADK      R8 = K[16]='number'
+0044 [line   21] 0x010081DC  CALL       A=7 B=2 C=2
+0045 [line   21] 0x8B4481C9  SETTABLE   R7[K[22]='mWaitToPlay'] = K[18]=0.0
+0046 [line   22] 0x0345C1C6  GETTABLE   R7 = R6[K[23]='static']
+0047 [line   22] 0x00060201  LOADK      R8 = K[24]='=>'
+0048 [line   22] 0x02000240  MOVE       R9 = R4
+0049 [line   22] 0x018081DC  CALL       A=7 B=3 C=2
+0050 [line   27] 0x00000224  CLOSURE    R8 = PROTO[0]
+0051 [line   27] 0x02800000  MOVE       R0 = R5
+0052 [line   27] 0x02000000  MOVE       R0 = R4
+0053 [line   27] 0x8C8201C9  SETTABLE   R7[K[25]='Instance'] = R8
+0054 [line   29] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0055 [line   29] 0x00028201  LOADK      R8 = K[10]='table'
+0056 [line   29] 0x010081DC  CALL       A=7 B=2 C=2
+0057 [line   51] 0x00004224  CLOSURE    R8 = PROTO[1]
+0058 [line   51] 0x8D8201C9  SETTABLE   R7[K[27]='AddToPlayQueue'] = R8
+0059 [line   52] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0060 [line   52] 0x00040201  LOADK      R8 = K[16]='number'
+0061 [line   52] 0x010081DC  CALL       A=7 B=2 C=2
+0062 [line   57] 0x00008224  CLOSURE    R8 = PROTO[2]
+0063 [line   57] 0x8E0201C9  SETTABLE   R7[K[28]='Remove'] = R8
+0064 [line   58] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0065 [line   58] 0x008081DC  CALL       A=7 B=1 C=2
+0066 [line   64] 0x0000C224  CLOSURE    R8 = PROTO[3]
+0067 [line   64] 0x8E8201C9  SETTABLE   R7[K[29]='RemoveAll'] = R8
+0068 [line   65] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0069 [line   65] 0x00040201  LOADK      R8 = K[16]='number'
+0070 [line   65] 0x00060241  LOADK      R9 = K[24]='=>'
+0071 [line   65] 0x00040281  LOADK      R10 = K[16]='number'
+0072 [line   65] 0x020081DC  CALL       A=7 B=4 C=2
+0073 [line   72] 0x00010224  CLOSURE    R8 = PROTO[4]
+0074 [line   72] 0x8F0201C9  SETTABLE   R7[K[30]='Find'] = R8
+0075 [line   73] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0076 [line   73] 0x008081DC  CALL       A=7 B=1 C=2
+0077 [line  103] 0x00014224  CLOSURE    R8 = PROTO[5]
+0078 [line  103] 0x8F8201C9  SETTABLE   R7[K[31]='SortQueue'] = R8
+0079 [line  104] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0080 [line  104] 0x00060201  LOADK      R8 = K[24]='=>'
+0081 [line  104] 0x00034241  LOADK      R9 = K[13]='boolean'
+0082 [line  104] 0x018081DC  CALL       A=7 B=3 C=2
+0083 [line  106] 0x00018224  CLOSURE    R8 = PROTO[6]
+0084 [line  106] 0x900201C9  SETTABLE   R7[K[32]='CanPlay'] = R8
+0085 [line  107] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0086 [line  107] 0x00060201  LOADK      R8 = K[24]='=>'
+0087 [line  107] 0x00034241  LOADK      R9 = K[13]='boolean'
+0088 [line  107] 0x018081DC  CALL       A=7 B=3 C=2
+0089 [line  109] 0x0001C224  CLOSURE    R8 = PROTO[7]
+0090 [line  109] 0x908201C9  SETTABLE   R7[K[33]='IsPlaying'] = R8
+0091 [line  110] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0092 [line  110] 0x008081DC  CALL       A=7 B=1 C=2
+0093 [line  122] 0x00020224  CLOSURE    R8 = PROTO[8]
+0094 [line  122] 0x01800000  MOVE       R0 = R3
+0095 [line  122] 0x01000000  MOVE       R0 = R2
+0096 [line  122] 0x910201C9  SETTABLE   R7[K[34]='Stop'] = R8
+0097 [line  123] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0098 [line  123] 0x008081DC  CALL       A=7 B=1 C=2
+0099 [line  164] 0x00024224  CLOSURE    R8 = PROTO[9]
+0100 [line  164] 0x01000000  MOVE       R0 = R2
+0101 [line  164] 0x918201C9  SETTABLE   R7[K[35]='Play'] = R8
+0102 [line  165] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0103 [line  165] 0x00028201  LOADK      R8 = K[10]='table'
+0104 [line  165] 0x010081DC  CALL       A=7 B=2 C=2
+0105 [line  177] 0x00028224  CLOSURE    R8 = PROTO[10]
+0106 [line  177] 0x01000000  MOVE       R0 = R2
+0107 [line  177] 0x01800000  MOVE       R0 = R3
+0108 [line  177] 0x920201C9  SETTABLE   R7[K[36]='PlayMsgAudio'] = R8
+0109 [line  178] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0110 [line  178] 0x00060201  LOADK      R8 = K[24]='=>'
+0111 [line  178] 0x00040241  LOADK      R9 = K[16]='number'
+0112 [line  178] 0x018081DC  CALL       A=7 B=3 C=2
+0113 [line  180] 0x0002C224  CLOSURE    R8 = PROTO[11]
+0114 [line  180] 0x928201C9  SETTABLE   R7[K[37]='CurPlayingID'] = R8
+0115 [line  181] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0116 [line  181] 0x008081DC  CALL       A=7 B=1 C=2
+0117 [line  191] 0x00030224  CLOSURE    R8 = PROTO[12]
+0118 [line  191] 0x930201C9  SETTABLE   R7[K[38]='StartTimer'] = R8
+0119 [line  192] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0120 [line  192] 0x008081DC  CALL       A=7 B=1 C=2
+0121 [line  198] 0x00034224  CLOSURE    R8 = PROTO[13]
+0122 [line  198] 0x938201C9  SETTABLE   R7[K[39]='StopTimer'] = R8
+0123 [line  200] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0124 [line  200] 0x00028201  LOADK      R8 = K[10]='table'
+0125 [line  200] 0x010081DC  CALL       A=7 B=2 C=2
+0126 [line  211] 0x00038224  CLOSURE    R8 = PROTO[14]
+0127 [line  211] 0x940201C9  SETTABLE   R7[K[40]='PlayCentain'] = R8
+0128 [line  212] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0129 [line  212] 0x00040201  LOADK      R8 = K[16]='number'
+0130 [line  212] 0x010081DC  CALL       A=7 B=2 C=2
+0131 [line  214] 0x0003C224  CLOSURE    R8 = PROTO[15]
+0132 [line  214] 0x948201C9  SETTABLE   R7[K[41]='UpdateWaitToPlay'] = R8
+0133 [line  216] 0x034681C6  GETTABLE   R7 = R6[K[26]='method']
+0134 [line  216] 0x00028201  LOADK      R8 = K[10]='table'
+0135 [line  216] 0x010081DC  CALL       A=7 B=2 C=2
+0136 [line  218] 0x00040224  CLOSURE    R8 = PROTO[16]
+0137 [line  218] 0x01000000  MOVE       R0 = R2
+0138 [line  218] 0x950201C9  SETTABLE   R7[K[42]='PreDownloadAudio'] = R8
+0139 [line  220] 0x024AC186  GETTABLE   R6 = R4[K[43]='Commit']
+0140 [line  220] 0x0080419C  CALL       A=6 B=1 C=1
+0141 [line  222] 0x0100011E  RETURN     A=4 B=2 C=0
+0142 [line  222] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 142
+'ECGame': 6 -> 142
+'ECSpeechUtil': 9 -> 142
+'ECChatManager': 12 -> 142
+'ECPlayQueue': 15 -> 142
+'playQueue': 16 -> 142
+'def': 17 -> 139
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x4E9
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 22 - 27
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = None
+
+    ----- INSTRUCTIONS -----
+    0000 [line   23] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   23] 0x00400017  EQ         A=0 B=R0 C=K[0]=None
+    0002 [line   23] 0x80008016  JMP        A=0 sBx=3
+    0003 [line   24] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line   24] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line   24] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line   26] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line   26] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   27] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x578
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 29 - 51
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Find'
+    K[001] = 'uniqueMsgID'
+    K[002] = 0.0
+    K[003] = 'mQueue'
+    K[004] = 1.0
+    K[005] = 'SortQueue'
+    K[006] = 'mAutoPlay'
+    K[007] = True
+    K[008] = 'mIsPlaying'
+    K[009] = 'Play'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   30] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+    0001 [line   30] 0x00C04106  GETTABLE   R4 = R1[K[1]='uniqueMsgID']
+    0002 [line   30] 0x0180809C  CALL       A=2 B=3 C=2
+    0003 [line   31] 0x81008018  LT         A=0 B=K[2]=0.0 C=R2
+    0004 [line   31] 0x80008016  JMP        A=0 sBx=3
+    0005 [line   32] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='mQueue']
+    0006 [line   32] 0x010040C9  SETTABLE   R3[R2] = R1
+    0007 [line   32] 0x80010016  JMP        A=0 sBx=5
+    0008 [line   34] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='mQueue']
+    0009 [line   34] 0x0040C106  GETTABLE   R4 = R0[K[3]='mQueue']
+    0010 [line   34] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0011 [line   34] 0x0241010C  ADD        A=4 B=R4 C=K[4]=1.0
+    0012 [line   34] 0x020040C9  SETTABLE   R3[R4] = R1
+    0013 [line   37] 0x004140CB  SELF       A=3 B=0 C=261 Bx=261
+    0014 [line   37] 0x010040DC  CALL       A=3 B=2 C=1
+    0015 [line   42] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='mQueue']
+    0016 [line   42] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0017 [line   43] 0x8341C009  SETTABLE   R0[K[6]='mAutoPlay'] = K[7]=True
+    0018 [line   44] 0x01C10017  EQ         A=0 B=R3 C=K[4]=1.0
+    0019 [line   44] 0x80010016  JMP        A=0 sBx=5
+    0020 [line   44] 0x00420106  GETTABLE   R4 = R0[K[8]='mIsPlaying']
+    0021 [line   44] 0x0000411A  TEST       A=4 B=0 C=1
+    0022 [line   44] 0x80004016  JMP        A=0 sBx=2
+    0023 [line   45] 0x0042410B  SELF       A=4 B=0 C=265 Bx=265
+    0024 [line   45] 0x0100411C  CALL       A=4 B=2 C=1
+    0025 [line   51] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 25
+    'msg': 0 -> 25
+    'index': 3 -> 25
+    'count': 17 -> 25
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x728
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 52 - 57
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Find'
+    K[001] = 0.0
+    K[002] = 'table'
+    K[003] = 'remove'
+    K[004] = 'mQueue'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   53] 0x0040008B  SELF       A=2 B=0 C=256 Bx=256
+    0001 [line   53] 0x00800100  MOVE       R4 = R1
+    0002 [line   53] 0x0180809C  CALL       A=2 B=3 C=2
+    0003 [line   54] 0x80808018  LT         A=0 B=K[1]=0.0 C=R2
+    0004 [line   54] 0x80010016  JMP        A=0 sBx=5
+    0005 [line   55] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='table'
+    0006 [line   55] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='remove']
+    0007 [line   55] 0x00410106  GETTABLE   R4 = R0[K[4]='mQueue']
+    0008 [line   55] 0x01000140  MOVE       R5 = R2
+    0009 [line   55] 0x018040DC  CALL       A=3 B=3 C=1
+    0010 [line   57] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    'uniqueId': 0 -> 10
+    'index': 3 -> 10
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x816
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 58 - 64
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mQueue'
+    K[001] = 'Stop'
+    K[002] = 'StopTimer'
+    K[003] = 'mAutoPlay'
+    K[004] = False
+    K[005] = 'mWaitToPlay'
+    K[006] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   59] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0001 [line   59] 0x80004009  SETTABLE   R0[K[0]='mQueue'] = R1
+    0002 [line   60] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0003 [line   60] 0x0100405C  CALL       A=1 B=2 C=1
+    0004 [line   61] 0x0040804B  SELF       A=1 B=0 C=258 Bx=258
+    0005 [line   61] 0x0100405C  CALL       A=1 B=2 C=1
+    0006 [line   62] 0x81C10009  SETTABLE   R0[K[3]='mAutoPlay'] = K[4]=False
+    0007 [line   63] 0x82C18009  SETTABLE   R0[K[5]='mWaitToPlay'] = K[6]=0.0
+    0008 [line   64] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x8E7
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 65 - 72
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'mQueue'
+    K[002] = 'uniqueMsgID'
+    K[003] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   66] 0x00000081  LOADK      R2 = K[0]=1.0
+    0001 [line   66] 0x004040C6  GETTABLE   R3 = R0[K[1]='mQueue']
+    0002 [line   66] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0003 [line   66] 0x00000101  LOADK      R4 = K[0]=1.0
+    0004 [line   66] 0x800140A0  FORPREP    A=2 sBx=6
+    0005 [line   67] 0x00404186  GETTABLE   R6 = R0[K[1]='mQueue']
+    0006 [line   67] 0x03014186  GETTABLE   R6 = R6[R5]
+    0007 [line   67] 0x03408186  GETTABLE   R6 = R6[K[2]='uniqueMsgID']
+    0008 [line   67] 0x00818017  EQ         A=0 B=R1 C=R6
+    0009 [line   67] 0x80000016  JMP        A=0 sBx=1
+    0010 [line   68] 0x0100015E  RETURN     A=5 B=2 C=0
+    0011 [line   66] 0x7FFE009F  FORLOOP    A=2 sBx=-7
+    0012 [line   71] 0x0000C081  LOADK      R2 = K[3]=0.0
+    0013 [line   71] 0x0100009E  RETURN     A=2 B=2 C=0
+    0014 [line   72] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+    'uniqueId': 0 -> 14
+    '(for index)': 4 -> 12
+    '(for limit)': 4 -> 12
+    '(for step)': 4 -> 12
+    'i': 5 -> 11
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xA31
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 73 - 103
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Data.Expdef'
+    K[002] = 'CHAT_CHANNEL_ENUM'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   74] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+    0001 [line   74] 0x00004081  LOADK      R2 = K[1]='Data.Expdef'
+    0002 [line   74] 0x0100805C  CALL       A=1 B=2 C=2
+    0003 [line   74] 0x00C08046  GETTABLE   R1 = R1[K[2]='CHAT_CHANNEL_ENUM']
+    0004 [line  102] 0x000000A4  CLOSURE    R2 = PROTO[0]
+    0005 [line  102] 0x00800000  MOVE       R0 = R1
+    0006 [line  103] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 6
+    'CHAT_CHANNEL_ENUM': 4 -> 6
+    'sort_func': 6 -> 6
+
+        ============================================================
+        PROTO ROOT.5.0
+        Offset : 0xA9E
+        Source : '@lua\\chat\\ecplayqueue.lua'
+        Lines  : 75 - 102
+        Params : 2
+        Stack  : 7
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'cChannel'
+        K[001] = 'uniqueMsgID'
+        K[002] = 'CHAT_CHANNEL_COMMANDER'
+        K[003] = 'CHAT_CHANNEL_FACTION'
+        K[004] = 'CHAT_CHANNEL_TEAM'
+
+        ----- INSTRUCTIONS -----
+        0000 [line   76] 0x00400086  GETTABLE   R2 = R0[K[0]='cChannel']
+        0001 [line   77] 0x00C000C6  GETTABLE   R3 = R1[K[0]='cChannel']
+        0002 [line   78] 0x00404106  GETTABLE   R4 = R0[K[1]='uniqueMsgID']
+        0003 [line   79] 0x00C04146  GETTABLE   R5 = R1[K[1]='uniqueMsgID']
+        0004 [line   80] 0x0100C017  EQ         A=0 B=R2 C=R3
+        0005 [line   80] 0x80014016  JMP        A=0 sBx=6
+        0006 [line   81] 0x02810058  LT         A=1 B=R5 C=R4
+        0007 [line   81] 0x80000016  JMP        A=0 sBx=1
+        0008 [line   81] 0x00004182  LOADBOOL   A=6 B=0 C=1
+        0009 [line   81] 0x00800182  LOADBOOL   A=6 B=1 C=0
+        0010 [line   81] 0x0100019E  RETURN     A=6 B=2 C=0
+        0011 [line   81] 0x800A4016  JMP        A=0 sBx=42
+        0012 [line   83] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0013 [line   83] 0x03408186  GETTABLE   R6 = R6[K[2]='CHAT_CHANNEL_COMMANDER']
+        0014 [line   83] 0x01018017  EQ         A=0 B=R2 C=R6
+        0015 [line   83] 0x80008016  JMP        A=0 sBx=3
+        0016 [line   84] 0x00800182  LOADBOOL   A=6 B=1 C=0
+        0017 [line   84] 0x0100019E  RETURN     A=6 B=2 C=0
+        0018 [line   84] 0x80088016  JMP        A=0 sBx=35
+        0019 [line   85] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0020 [line   85] 0x0340C186  GETTABLE   R6 = R6[K[3]='CHAT_CHANNEL_FACTION']
+        0021 [line   85] 0x01018017  EQ         A=0 B=R2 C=R6
+        0022 [line   85] 0x80024016  JMP        A=0 sBx=10
+        0023 [line   86] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0024 [line   86] 0x03408186  GETTABLE   R6 = R6[K[2]='CHAT_CHANNEL_COMMANDER']
+        0025 [line   86] 0x01818017  EQ         A=0 B=R3 C=R6
+        0026 [line   86] 0x80008016  JMP        A=0 sBx=3
+        0027 [line   87] 0x00000182  LOADBOOL   A=6 B=0 C=0
+        0028 [line   87] 0x0100019E  RETURN     A=6 B=2 C=0
+        0029 [line   87] 0x8005C016  JMP        A=0 sBx=24
+        0030 [line   89] 0x00800182  LOADBOOL   A=6 B=1 C=0
+        0031 [line   89] 0x0100019E  RETURN     A=6 B=2 C=0
+        0032 [line   90] 0x80050016  JMP        A=0 sBx=21
+        0033 [line   91] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0034 [line   91] 0x03410186  GETTABLE   R6 = R6[K[4]='CHAT_CHANNEL_TEAM']
+        0035 [line   91] 0x01018017  EQ         A=0 B=R2 C=R6
+        0036 [line   91] 0x80040016  JMP        A=0 sBx=17
+        0037 [line   92] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0038 [line   92] 0x03408186  GETTABLE   R6 = R6[K[2]='CHAT_CHANNEL_COMMANDER']
+        0039 [line   92] 0x01818017  EQ         A=0 B=R3 C=R6
+        0040 [line   92] 0x80008016  JMP        A=0 sBx=3
+        0041 [line   93] 0x00000182  LOADBOOL   A=6 B=0 C=0
+        0042 [line   93] 0x0100019E  RETURN     A=6 B=2 C=0
+        0043 [line   93] 0x80024016  JMP        A=0 sBx=10
+        0044 [line   94] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+        0045 [line   94] 0x0340C186  GETTABLE   R6 = R6[K[3]='CHAT_CHANNEL_FACTION']
+        0046 [line   94] 0x01818017  EQ         A=0 B=R3 C=R6
+        0047 [line   94] 0x80008016  JMP        A=0 sBx=3
+        0048 [line   95] 0x00000182  LOADBOOL   A=6 B=0 C=0
+        0049 [line   95] 0x0100019E  RETURN     A=6 B=2 C=0
+        0050 [line   95] 0x80008016  JMP        A=0 sBx=3
+        0051 [line   97] 0x00800182  LOADBOOL   A=6 B=1 C=0
+        0052 [line   97] 0x0100019E  RETURN     A=6 B=2 C=0
+        0053 [line   98] 0x7FFFC016  JMP        A=0 sBx=0
+        0054 [line  102] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'l': 0 -> 54
+        'r': 0 -> 54
+        'l_channel': 1 -> 54
+        'r_channel': 2 -> 54
+        'l_uniqueId': 3 -> 54
+        'r_uniqueId': 4 -> 54
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xDE3
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 104 - 106
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mQueue'
+    K[001] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  105] 0x00400046  GETTABLE   R1 = R0[K[0]='mQueue']
+    0001 [line  105] 0x00800054  LEN        A=1 B=1 C=0 Bx=512
+    0002 [line  105] 0x80804058  LT         A=1 B=K[1]=0.0 C=R1
+    0003 [line  105] 0x80000016  JMP        A=0 sBx=1
+    0004 [line  105] 0x00004042  LOADBOOL   A=1 B=0 C=1
+    0005 [line  105] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0006 [line  105] 0x0100005E  RETURN     A=1 B=2 C=0
+    0007 [line  106] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0xE71
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 107 - 109
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mIsPlaying'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  108] 0x00400046  GETTABLE   R1 = R0[K[0]='mIsPlaying']
+    0001 [line  108] 0x0100005E  RETURN     A=1 B=2 C=0
+    0002 [line  109] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0xED2
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 110 - 122
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mIsPlaying'
+    K[001] = 'Instance'
+    K[002] = 'BroadcastAudioStatus'
+    K[003] = 'mPlayID'
+    K[004] = 'AudioStatus'
+    K[005] = 'DownOk'
+    K[006] = 'StopAudio'
+    K[007] = False
+    K[008] = 0.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  111] 0x00400046  GETTABLE   R1 = R0[K[0]='mIsPlaying']
+    0001 [line  111] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  111] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  112] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  115] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0005 [line  115] 0x00C04046  GETTABLE   R1 = R1[K[1]='Instance']
+    0006 [line  115] 0x0080805C  CALL       A=1 B=1 C=2
+    0007 [line  115] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0008 [line  115] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='mPlayID']
+    0009 [line  115] 0x00010105  GETGLOBAL  R4 = GLOBAL K[4]='AudioStatus'
+    0010 [line  115] 0x02414106  GETTABLE   R4 = R4[K[5]='DownOk']
+    0011 [line  115] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0012 [line  115] 0x0280405C  CALL       A=1 B=5 C=1
+    0013 [line  117] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0014 [line  117] 0x00C04046  GETTABLE   R1 = R1[K[1]='Instance']
+    0015 [line  117] 0x0080805C  CALL       A=1 B=1 C=2
+    0016 [line  117] 0x00C1804B  SELF       A=1 B=1 C=262 Bx=774
+    0017 [line  117] 0x0100405C  CALL       A=1 B=2 C=1
+    0018 [line  120] 0x8041C009  SETTABLE   R0[K[0]='mIsPlaying'] = K[7]=False
+    0019 [line  121] 0x81C20009  SETTABLE   R0[K[3]='mPlayID'] = K[8]=0.0
+    0020 [line  122] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x1052
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 123 - 164
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'StopTimer'
+    K[001] = 'mIsPlaying'
+    K[002] = 'print'
+    K[003] = 'stop the pre audio id:%d'
+    K[004] = 'format'
+    K[005] = 'mPlayID'
+    K[006] = 'Stop'
+    K[007] = 'CanPlay'
+    K[008] = 'there is no audio to play'
+    K[009] = 'there are %d audio in the queue,the first(id:%d) is ready to play'
+    K[010] = 'mQueue'
+    K[011] = 1.0
+    K[012] = 'uniqueMsgID'
+    K[013] = 'CheckAudio'
+    K[014] = 'PlayMsgAudio'
+    K[015] = 'StartTimer'
+    K[016] = 'mWaitToPlay'
+    K[017] = 'Instance'
+    K[018] = 'DownloadAudio'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  124] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  124] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  125] 0x00404046  GETTABLE   R1 = R0[K[1]='mIsPlaying']
+    0003 [line  125] 0x0000005A  TEST       A=1 B=0 C=0
+    0004 [line  125] 0x8001C016  JMP        A=0 sBx=8
+    0005 [line  126] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='print'
+    0006 [line  126] 0x0000C081  LOADK      R2 = K[3]='stop the pre audio id:%d'
+    0007 [line  126] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0008 [line  126] 0x00414106  GETTABLE   R4 = R0[K[5]='mPlayID']
+    0009 [line  126] 0x0180009C  CALL       A=2 B=3 C=0
+    0010 [line  126] 0x0000405C  CALL       A=1 B=0 C=1
+    0011 [line  127] 0x0041804B  SELF       A=1 B=0 C=262 Bx=262
+    0012 [line  127] 0x0100405C  CALL       A=1 B=2 C=1
+    0013 [line  129] 0x0041C04B  SELF       A=1 B=0 C=263 Bx=263
+    0014 [line  129] 0x0100805C  CALL       A=1 B=2 C=2
+    0015 [line  129] 0x0000405A  TEST       A=1 B=0 C=1
+    0016 [line  129] 0x8000C016  JMP        A=0 sBx=4
+    0017 [line  130] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='print'
+    0018 [line  130] 0x00020081  LOADK      R2 = K[8]='there is no audio to play'
+    0019 [line  130] 0x0100405C  CALL       A=1 B=2 C=1
+    0020 [line  131] 0x0080001E  RETURN     A=0 B=1 C=0
+    0021 [line  133] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='print'
+    0022 [line  133] 0x00024081  LOADK      R2 = K[9]='there are %d audio in the queue,the first(id:%d) is ready to play'
+    0023 [line  133] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0024 [line  133] 0x00428106  GETTABLE   R4 = R0[K[10]='mQueue']
+    0025 [line  133] 0x02000114  LEN        A=4 B=4 C=0 Bx=2048
+    0026 [line  133] 0x00428146  GETTABLE   R5 = R0[K[10]='mQueue']
+    0027 [line  133] 0x02C2C146  GETTABLE   R5 = R5[K[11]=1.0]
+    0028 [line  133] 0x02C30146  GETTABLE   R5 = R5[K[12]='uniqueMsgID']
+    0029 [line  133] 0x0200009C  CALL       A=2 B=4 C=0
+    0030 [line  133] 0x0000405C  CALL       A=1 B=0 C=1
+    0031 [line  135] 0x00428046  GETTABLE   R1 = R0[K[10]='mQueue']
+    0032 [line  135] 0x00C2C046  GETTABLE   R1 = R1[K[11]=1.0]
+    0033 [line  137] 0x00C3408B  SELF       A=2 B=1 C=269 Bx=781
+    0034 [line  137] 0x0100809C  CALL       A=2 B=2 C=2
+    0035 [line  137] 0x0000009A  TEST       A=2 B=0 C=0
+    0036 [line  137] 0x80014016  JMP        A=0 sBx=6
+    0037 [line  139] 0x0043808B  SELF       A=2 B=0 C=270 Bx=270
+    0038 [line  139] 0x00800100  MOVE       R4 = R1
+    0039 [line  139] 0x0180409C  CALL       A=2 B=3 C=1
+    0040 [line  141] 0x0043C08B  SELF       A=2 B=0 C=271 Bx=271
+    0041 [line  141] 0x0100409C  CALL       A=2 B=2 C=1
+    0042 [line  141] 0x80028016  JMP        A=0 sBx=11
+    0043 [line  143] 0x00C30086  GETTABLE   R2 = R1[K[12]='uniqueMsgID']
+    0044 [line  143] 0x88008009  SETTABLE   R0[K[16]='mWaitToPlay'] = R2
+    0045 [line  144] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0046 [line  144] 0x01444086  GETTABLE   R2 = R2[K[17]='Instance']
+    0047 [line  144] 0x0080809C  CALL       A=2 B=1 C=2
+    0048 [line  144] 0x0144808B  SELF       A=2 B=2 C=274 Bx=1298
+    0049 [line  144] 0x00800100  MOVE       R4 = R1
+    0050 [line  162] 0x00000164  CLOSURE    R5 = PROTO[0]
+    0051 [line  162] 0x00000000  MOVE       R0 = R0
+    0052 [line  162] 0x00800000  MOVE       R0 = R1
+    0053 [line  144] 0x0200409C  CALL       A=2 B=4 C=1
+    0054 [line  164] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 54
+    'msg': 33 -> 54
+
+        ============================================================
+        PROTO ROOT.9.0
+        Offset : 0x12B2
+        Source : '@lua\\chat\\ecplayqueue.lua'
+        Lines  : 144 - 162
+        Params : 3
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'mWaitToPlay'
+        K[001] = 'audioData'
+        K[002] = 'PlayMsgAudio'
+        K[003] = 'StartTimer'
+        K[004] = 'Remove'
+        K[005] = 'Play'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  145] 0x0000005A  TEST       A=1 B=0 C=0
+        0001 [line  145] 0x8003C016  JMP        A=0 sBx=16
+        0002 [line  148] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0003 [line  148] 0x01C000C6  GETTABLE   R3 = R3[K[0]='mWaitToPlay']
+        0004 [line  148] 0x01800017  EQ         A=0 B=R3 C=R0
+        0005 [line  148] 0x80048016  JMP        A=0 sBx=19
+        0006 [line  148] 0x0000009A  TEST       A=2 B=0 C=0
+        0007 [line  148] 0x80040016  JMP        A=0 sBx=17
+        0008 [line  149] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+        0009 [line  149] 0x808080C9  SETTABLE   R3[K[1]='audioData'] = R2
+        0010 [line  151] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0011 [line  151] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+        0012 [line  151] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+        0013 [line  151] 0x018040DC  CALL       A=3 B=3 C=1
+        0014 [line  153] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0015 [line  153] 0x01C0C0CB  SELF       A=3 B=3 C=259 Bx=1795
+        0016 [line  153] 0x010040DC  CALL       A=3 B=2 C=1
+        0017 [line  154] 0x80018016  JMP        A=0 sBx=7
+        0018 [line  158] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0019 [line  158] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+        0020 [line  158] 0x00000140  MOVE       R5 = R0
+        0021 [line  158] 0x018040DC  CALL       A=3 B=3 C=1
+        0022 [line  160] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0023 [line  160] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+        0024 [line  160] 0x010040DC  CALL       A=3 B=2 C=1
+        0025 [line  162] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'uniqueId': 0 -> 25
+        'success': 0 -> 25
+        'audioData': 0 -> 25
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x156C
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 165 - 177
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mIsPlaying'
+    K[001] = True
+    K[002] = 'mPlayID'
+    K[003] = 'uniqueMsgID'
+    K[004] = 'mLength'
+    K[005] = 'audioLength'
+    K[006] = 'Remove'
+    K[007] = 'audioData'
+    K[008] = 'Instance'
+    K[009] = 'PlayAudio'
+    K[010] = 'string'
+    K[011] = 'len'
+    K[012] = 'audioFile'
+    K[013] = 0.0
+    K[014] = 'PlayAudioFile'
+    K[015] = 'BroadcastAudioStatus'
+    K[016] = 'AudioStatus'
+    K[017] = 'Playing'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  166] 0x80404009  SETTABLE   R0[K[0]='mIsPlaying'] = K[1]=True
+    0001 [line  167] 0x00C0C086  GETTABLE   R2 = R1[K[3]='uniqueMsgID']
+    0002 [line  167] 0x81008009  SETTABLE   R0[K[2]='mPlayID'] = R2
+    0003 [line  168] 0x00C14086  GETTABLE   R2 = R1[K[5]='audioLength']
+    0004 [line  168] 0x82008009  SETTABLE   R0[K[4]='mLength'] = R2
+    0005 [line  169] 0x0041808B  SELF       A=2 B=0 C=262 Bx=262
+    0006 [line  169] 0x00408106  GETTABLE   R4 = R0[K[2]='mPlayID']
+    0007 [line  169] 0x0180409C  CALL       A=2 B=3 C=1
+    0008 [line  170] 0x00C1C086  GETTABLE   R2 = R1[K[7]='audioData']
+    0009 [line  170] 0x0000009A  TEST       A=2 B=0 C=0
+    0010 [line  170] 0x80018016  JMP        A=0 sBx=7
+    0011 [line  171] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0012 [line  171] 0x01420086  GETTABLE   R2 = R2[K[8]='Instance']
+    0013 [line  171] 0x0080809C  CALL       A=2 B=1 C=2
+    0014 [line  171] 0x0142408B  SELF       A=2 B=2 C=265 Bx=1289
+    0015 [line  171] 0x00C1C106  GETTABLE   R4 = R1[K[7]='audioData']
+    0016 [line  171] 0x0180409C  CALL       A=2 B=3 C=1
+    0017 [line  171] 0x8002C016  JMP        A=0 sBx=12
+    0018 [line  172] 0x00028085  GETGLOBAL  R2 = GLOBAL K[10]='string'
+    0019 [line  172] 0x0142C086  GETTABLE   R2 = R2[K[11]='len']
+    0020 [line  172] 0x00C300C6  GETTABLE   R3 = R1[K[12]='audioFile']
+    0021 [line  172] 0x0100809C  CALL       A=2 B=2 C=2
+    0022 [line  172] 0x86808018  LT         A=0 B=K[13]=0.0 C=R2
+    0023 [line  172] 0x80014016  JMP        A=0 sBx=6
+    0024 [line  173] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0025 [line  173] 0x01420086  GETTABLE   R2 = R2[K[8]='Instance']
+    0026 [line  173] 0x0080809C  CALL       A=2 B=1 C=2
+    0027 [line  173] 0x0143808B  SELF       A=2 B=2 C=270 Bx=1294
+    0028 [line  173] 0x00C30106  GETTABLE   R4 = R1[K[12]='audioFile']
+    0029 [line  173] 0x0180409C  CALL       A=2 B=3 C=1
+    0030 [line  176] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0031 [line  176] 0x01420086  GETTABLE   R2 = R2[K[8]='Instance']
+    0032 [line  176] 0x0080809C  CALL       A=2 B=1 C=2
+    0033 [line  176] 0x0143C08B  SELF       A=2 B=2 C=271 Bx=1295
+    0034 [line  176] 0x00C0C106  GETTABLE   R4 = R1[K[3]='uniqueMsgID']
+    0035 [line  176] 0x00040145  GETGLOBAL  R5 = GLOBAL K[16]='AudioStatus'
+    0036 [line  176] 0x02C44146  GETTABLE   R5 = R5[K[17]='Playing']
+    0037 [line  176] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0038 [line  176] 0x0280409C  CALL       A=2 B=5 C=1
+    0039 [line  177] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 39
+    'msg': 0 -> 39
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x1816
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 178 - 180
+    Params : 1
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mPlayID'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  179] 0x00400046  GETTABLE   R1 = R0[K[0]='mPlayID']
+    0001 [line  179] 0x0100005E  RETURN     A=1 B=2 C=0
+    0002 [line  180] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x1874
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 181 - 191
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mLength'
+    K[001] = 0.0
+    K[002] = 'mTimerID'
+    K[003] = 'GameUtil'
+    K[004] = 'AddGlobalTimer'
+    K[005] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  182] 0x00400046  GETTABLE   R1 = R0[K[0]='mLength']
+    0001 [line  182] 0x00C04019  LE         A=0 B=R1 C=K[1]=0.0
+    0002 [line  182] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  182] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  183] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='GameUtil'
+    0005 [line  183] 0x00C10046  GETTABLE   R1 = R1[K[4]='AddGlobalTimer']
+    0006 [line  183] 0x00400086  GETTABLE   R2 = R0[K[0]='mLength']
+    0007 [line  183] 0x0141408C  ADD        A=2 B=R2 C=K[5]=1.0
+    0008 [line  183] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0009 [line  190] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0010 [line  190] 0x00000000  MOVE       R0 = R0
+    0011 [line  183] 0x0200805C  CALL       A=1 B=4 C=2
+    0012 [line  190] 0x81004009  SETTABLE   R0[K[2]='mTimerID'] = R1
+    0013 [line  191] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 13
+
+        ============================================================
+        PROTO ROOT.12.0
+        Offset : 0x1917
+        Source : '@lua\\chat\\ecplayqueue.lua'
+        Lines  : 183 - 190
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'mAutoPlay'
+        K[001] = 'Play'
+        K[002] = 'Stop'
+        K[003] = 'StopTimer'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  184] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  184] 0x00400006  GETTABLE   R0 = R0[K[0]='mAutoPlay']
+        0002 [line  184] 0x0000001A  TEST       A=0 B=0 C=0
+        0003 [line  184] 0x8000C016  JMP        A=0 sBx=4
+        0004 [line  185] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0005 [line  185] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+        0006 [line  185] 0x0100401C  CALL       A=0 B=2 C=1
+        0007 [line  185] 0x80014016  JMP        A=0 sBx=6
+        0008 [line  187] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0009 [line  187] 0x0040800B  SELF       A=0 B=0 C=258 Bx=258
+        0010 [line  187] 0x0100401C  CALL       A=0 B=2 C=1
+        0011 [line  188] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0012 [line  188] 0x0040C00B  SELF       A=0 B=0 C=259 Bx=259
+        0013 [line  188] 0x0100401C  CALL       A=0 B=2 C=1
+        0014 [line  190] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x1A47
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 192 - 198
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mTimerID'
+    K[001] = 0.0
+    K[002] = 'GameUtil'
+    K[003] = 'RemoveGlobalTimer'
+    K[004] = 'mLength'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  193] 0x00400046  GETTABLE   R1 = R0[K[0]='mTimerID']
+    0001 [line  193] 0x00C04057  EQ         A=1 B=R1 C=K[1]=0.0
+    0002 [line  193] 0x80010016  JMP        A=0 sBx=5
+    0003 [line  194] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='GameUtil'
+    0004 [line  194] 0x00C0C046  GETTABLE   R1 = R1[K[3]='RemoveGlobalTimer']
+    0005 [line  194] 0x00400086  GETTABLE   R2 = R0[K[0]='mTimerID']
+    0006 [line  194] 0x0100405C  CALL       A=1 B=2 C=1
+    0007 [line  195] 0x80404009  SETTABLE   R0[K[0]='mTimerID'] = K[1]=0.0
+    0008 [line  197] 0x82404009  SETTABLE   R0[K[4]='mLength'] = K[1]=0.0
+    0009 [line  198] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x1B19
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 200 - 211
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'HasAudio'
+    K[001] = 'print'
+    K[002] = 'has no audio in msg(id:%d)'
+    K[003] = 'format'
+    K[004] = 'uniqueMsgID'
+    K[005] = 'mAutoPlay'
+    K[006] = False
+    K[007] = 'RemoveAll'
+    K[008] = 'mQueue'
+    K[009] = 1.0
+    K[010] = 'Play'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  201] 0x00C0008B  SELF       A=2 B=1 C=256 Bx=768
+    0001 [line  201] 0x0100809C  CALL       A=2 B=2 C=2
+    0002 [line  201] 0x0000409A  TEST       A=2 B=0 C=1
+    0003 [line  201] 0x80018016  JMP        A=0 sBx=7
+    0004 [line  202] 0x00004085  GETGLOBAL  R2 = GLOBAL K[1]='print'
+    0005 [line  202] 0x000080C1  LOADK      R3 = K[2]='has no audio in msg(id:%d)'
+    0006 [line  202] 0x01C0C0CB  SELF       A=3 B=3 C=259 Bx=1795
+    0007 [line  202] 0x00C10146  GETTABLE   R5 = R1[K[4]='uniqueMsgID']
+    0008 [line  202] 0x018000DC  CALL       A=3 B=3 C=0
+    0009 [line  202] 0x0000409C  CALL       A=2 B=0 C=1
+    0010 [line  203] 0x0080001E  RETURN     A=0 B=1 C=0
+    0011 [line  205] 0x82C18009  SETTABLE   R0[K[5]='mAutoPlay'] = K[6]=False
+    0012 [line  206] 0x0041C08B  SELF       A=2 B=0 C=263 Bx=263
+    0013 [line  206] 0x0100409C  CALL       A=2 B=2 C=1
+    0014 [line  207] 0x00420086  GETTABLE   R2 = R0[K[8]='mQueue']
+    0015 [line  207] 0x004200C6  GETTABLE   R3 = R0[K[8]='mQueue']
+    0016 [line  207] 0x018000D4  LEN        A=3 B=3 C=0 Bx=1536
+    0017 [line  207] 0x01C240CC  ADD        A=3 B=R3 C=K[9]=1.0
+    0018 [line  207] 0x01804089  SETTABLE   R2[R3] = R1
+    0019 [line  208] 0x00420086  GETTABLE   R2 = R0[K[8]='mQueue']
+    0020 [line  208] 0x01000094  LEN        A=2 B=2 C=0 Bx=1024
+    0021 [line  208] 0x01424017  EQ         A=0 B=R2 C=K[9]=1.0
+    0022 [line  208] 0x80004016  JMP        A=0 sBx=2
+    0023 [line  209] 0x0042808B  SELF       A=2 B=0 C=266 Bx=266
+    0024 [line  209] 0x0100409C  CALL       A=2 B=2 C=1
+    0025 [line  211] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 25
+    'msg': 0 -> 25
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x1CC7
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 212 - 214
+    Params : 2
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'mWaitToPlay'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  213] 0x80004009  SETTABLE   R0[K[0]='mWaitToPlay'] = R1
+    0001 [line  214] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 1
+    'id': 0 -> 1
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x1D30
+    Source : '@lua\\chat\\ecplayqueue.lua'
+    Lines  : 216 - 218
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'DownloadAudio'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  217] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  217] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line  217] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line  217] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0004 [line  217] 0x00800100  MOVE       R4 = R1
+    0005 [line  217] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0006 [line  217] 0x0200409C  CALL       A=2 B=4 C=1
+    0007 [line  218] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7
+    'msg': 0 -> 7

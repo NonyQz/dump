@@ -1,0 +1,323 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\pb\pb_card.lua
+SIZE: 3077
+PARSED: 3077
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\pb\\pb_card.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 6
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'PB.pb_helper'
+K[002] = 'Main.ECGame'
+K[003] = 'AddHandler'
+K[004] = 'gp_card_data_notify'
+
+----- INSTRUCTIONS -----
+0000 [line    6] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    6] 0x00004041  LOADK      R1 = K[1]='PB.pb_helper'
+0002 [line    6] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    7] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    7] 0x00008081  LOADK      R2 = K[2]='Main.ECGame'
+0005 [line    7] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   90] 0x000000A4  CLOSURE    R2 = PROTO[0]
+0007 [line   90] 0x00800000  MOVE       R0 = R1
+0008 [line   92] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='AddHandler']
+0009 [line   92] 0x00010101  LOADK      R4 = K[4]='gp_card_data_notify'
+0010 [line   92] 0x01000140  MOVE       R5 = R2
+0011 [line   92] 0x018040DC  CALL       A=3 B=3 C=1
+0012 [line   92] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'pb_helper': 3 -> 12
+'ECGame': 6 -> 12
+'on_card_data_notify': 8 -> 12
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xC9
+    Source : '@lua\\pb\\pb_card.lua'
+    Lines  : 17 - 90
+    Params : 2
+    Stack  : 15
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'require'
+    K[001] = 'Players.ECCards'
+    K[002] = 'GUI.ECPanelCard'
+    K[003] = 'Instance'
+    K[004] = 'notify_type'
+    K[005] = 1.0
+    K[006] = 'Clear'
+    K[007] = 'cards'
+    K[008] = 'card_id'
+    K[009] = 'card_count'
+    K[010] = 'card_suits'
+    K[011] = 'cardSuits'
+    K[012] = 2.0
+    K[013] = 'GUI.ECPanelCardGet'
+    K[014] = 'carddelayshowid'
+    K[015] = 'GetCard'
+    K[016] = 0.0
+    K[017] = 'Event.NotifyCard'
+    K[018] = 'result'
+    K[019] = 'EventManager'
+    K[020] = 'raiseEvent'
+    K[021] = 3.0
+    K[022] = None
+    K[023] = 'ActiveSuit'
+    K[024] = 4.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   18] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+    0001 [line   18] 0x000040C1  LOADK      R3 = K[1]='Players.ECCards'
+    0002 [line   18] 0x0100809C  CALL       A=2 B=2 C=2
+    0003 [line   19] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+    0004 [line   19] 0x00008101  LOADK      R4 = K[2]='GUI.ECPanelCard'
+    0005 [line   19] 0x010080DC  CALL       A=3 B=2 C=2
+    0006 [line   20] 0x0140C106  GETTABLE   R4 = R2[K[3]='Instance']
+    0007 [line   20] 0x0080811C  CALL       A=4 B=1 C=2
+    0008 [line   21] 0x00C10146  GETTABLE   R5 = R1[K[4]='notify_type']
+    0009 [line   21] 0x02C14017  EQ         A=0 B=R5 C=K[5]=1.0
+    0010 [line   21] 0x80068016  JMP        A=0 sBx=27
+    0011 [line   22] 0x0241814B  SELF       A=5 B=4 C=262 Bx=2310
+    0012 [line   22] 0x0100415C  CALL       A=5 B=2 C=1
+    0013 [line   23] 0x00014141  LOADK      R5 = K[5]=1.0
+    0014 [line   23] 0x00C1C186  GETTABLE   R6 = R1[K[7]='cards']
+    0015 [line   23] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0016 [line   23] 0x000141C1  LOADK      R7 = K[5]=1.0
+    0017 [line   23] 0x8001C160  FORPREP    A=5 sBx=8
+    0018 [line   24] 0x0241C246  GETTABLE   R9 = R4[K[7]='cards']
+    0019 [line   24] 0x00C1C286  GETTABLE   R10 = R1[K[7]='cards']
+    0020 [line   24] 0x05020286  GETTABLE   R10 = R10[R8]
+    0021 [line   24] 0x05420286  GETTABLE   R10 = R10[K[8]='card_id']
+    0022 [line   24] 0x00C1C2C6  GETTABLE   R11 = R1[K[7]='cards']
+    0023 [line   24] 0x058202C6  GETTABLE   R11 = R11[R8]
+    0024 [line   24] 0x05C242C6  GETTABLE   R11 = R11[K[9]='card_count']
+    0025 [line   24] 0x0502C249  SETTABLE   R9[R10] = R11
+    0026 [line   23] 0x7FFD815F  FORLOOP    A=5 sBx=-9
+    0027 [line   26] 0x00014141  LOADK      R5 = K[5]=1.0
+    0028 [line   26] 0x00C28186  GETTABLE   R6 = R1[K[10]='card_suits']
+    0029 [line   26] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0030 [line   26] 0x000141C1  LOADK      R7 = K[5]=1.0
+    0031 [line   26] 0x8000C160  FORPREP    A=5 sBx=4
+    0032 [line   27] 0x0242C246  GETTABLE   R9 = R4[K[11]='cardSuits']
+    0033 [line   27] 0x00C28286  GETTABLE   R10 = R1[K[10]='card_suits']
+    0034 [line   27] 0x05020286  GETTABLE   R10 = R10[R8]
+    0035 [line   27] 0x05414249  SETTABLE   R9[R10] = K[5]=1.0
+    0036 [line   26] 0x7FFE815F  FORLOOP    A=5 sBx=-5
+    0037 [line   28] 0x8027C016  JMP        A=0 sBx=160
+    0038 [line   29] 0x00C10146  GETTABLE   R5 = R1[K[4]='notify_type']
+    0039 [line   29] 0x02C30017  EQ         A=0 B=R5 C=K[12]=2.0
+    0040 [line   29] 0x800C4016  JMP        A=0 sBx=50
+    0041 [line   31] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+    0042 [line   31] 0x00034181  LOADK      R6 = K[13]='GUI.ECPanelCardGet'
+    0043 [line   31] 0x0100815C  CALL       A=5 B=2 C=2
+    0044 [line   44] 0x00014181  LOADK      R6 = K[5]=1.0
+    0045 [line   44] 0x00C1C1C6  GETTABLE   R7 = R1[K[7]='cards']
+    0046 [line   44] 0x038001D4  LEN        A=7 B=7 C=0 Bx=3584
+    0047 [line   44] 0x00014201  LOADK      R8 = K[5]=1.0
+    0048 [line   44] 0x8006C1A0  FORPREP    A=6 sBx=28
+    0049 [line   45] 0x00C1C286  GETTABLE   R10 = R1[K[7]='cards']
+    0050 [line   45] 0x05024286  GETTABLE   R10 = R10[R9]
+    0051 [line   45] 0x05420286  GETTABLE   R10 = R10[K[8]='card_id']
+    0052 [line   46] 0x00C1C2C6  GETTABLE   R11 = R1[K[7]='cards']
+    0053 [line   46] 0x058242C6  GETTABLE   R11 = R11[R9]
+    0054 [line   46] 0x05C242C6  GETTABLE   R11 = R11[K[9]='card_count']
+    0055 [line   47] 0x0241C306  GETTABLE   R12 = R4[K[7]='cards']
+    0056 [line   47] 0x06028306  GETTABLE   R12 = R12[R10]
+    0057 [line   47] 0x0000031A  TEST       A=12 B=0 C=0
+    0058 [line   47] 0x80014016  JMP        A=0 sBx=6
+    0059 [line   48] 0x0241C306  GETTABLE   R12 = R4[K[7]='cards']
+    0060 [line   48] 0x0241C346  GETTABLE   R13 = R4[K[7]='cards']
+    0061 [line   48] 0x06828346  GETTABLE   R13 = R13[R10]
+    0062 [line   48] 0x0682C34C  ADD        A=13 B=R13 C=R11
+    0063 [line   48] 0x05034309  SETTABLE   R12[R10] = R13
+    0064 [line   48] 0x80004016  JMP        A=0 sBx=2
+    0065 [line   50] 0x0241C306  GETTABLE   R12 = R4[K[7]='cards']
+    0066 [line   50] 0x0502C309  SETTABLE   R12[R10] = R11
+    0067 [line   53] 0x02438306  GETTABLE   R12 = R4[K[14]='carddelayshowid']
+    0068 [line   53] 0x05030057  EQ         A=1 B=R10 C=R12
+    0069 [line   53] 0x80014016  JMP        A=0 sBx=6
+    0070 [line   54] 0x02C0C306  GETTABLE   R12 = R5[K[3]='Instance']
+    0071 [line   54] 0x0080831C  CALL       A=12 B=1 C=2
+    0072 [line   54] 0x0643C30B  SELF       A=12 B=12 C=271 Bx=6415
+    0073 [line   54] 0x05000380  MOVE       R14 = R10
+    0074 [line   54] 0x0180431C  CALL       A=12 B=3 C=1
+    0075 [line   54] 0x80000016  JMP        A=0 sBx=1
+    0076 [line   56] 0x87440109  SETTABLE   R4[K[14]='carddelayshowid'] = K[16]=0.0
+    0077 [line   44] 0x7FF8819F  FORLOOP    A=6 sBx=-29
+    0078 [line   59] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+    0079 [line   59] 0x000441C1  LOADK      R7 = K[17]='Event.NotifyCard'
+    0080 [line   59] 0x0100819C  CALL       A=6 B=2 C=2
+    0081 [line   60] 0x030001C0  MOVE       R7 = R6
+    0082 [line   60] 0x008081DC  CALL       A=7 B=1 C=2
+    0083 [line   61] 0x890041C9  SETTABLE   R7[K[18]='result'] = R1
+    0084 [line   62] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0085 [line   62] 0x0444C206  GETTABLE   R8 = R8[K[19]='EventManager']
+    0086 [line   62] 0x0445020B  SELF       A=8 B=8 C=276 Bx=4372
+    0087 [line   62] 0x05000283  LOADNIL    A=10 B=10 C=0 Bx=5120
+    0088 [line   62] 0x038002C0  MOVE       R11 = R7
+    0089 [line   62] 0x0200421C  CALL       A=8 B=4 C=1
+    0090 [line   62] 0x801A8016  JMP        A=0 sBx=107
+    0091 [line   63] 0x00C10146  GETTABLE   R5 = R1[K[4]='notify_type']
+    0092 [line   63] 0x02C54017  EQ         A=0 B=R5 C=K[21]=3.0
+    0093 [line   63] 0x800E0016  JMP        A=0 sBx=57
+    0094 [line   64] 0x00C28146  GETTABLE   R5 = R1[K[10]='card_suits']
+    0095 [line   64] 0x02C14146  GETTABLE   R5 = R5[K[5]=1.0]
+    0096 [line   65] 0x0242C186  GETTABLE   R6 = R4[K[11]='cardSuits']
+    0097 [line   65] 0x02C14189  SETTABLE   R6[R5] = K[5]=1.0
+    0098 [line   66] 0x00014181  LOADK      R6 = K[5]=1.0
+    0099 [line   66] 0x00C1C1C6  GETTABLE   R7 = R1[K[7]='cards']
+    0100 [line   66] 0x038001D4  LEN        A=7 B=7 C=0 Bx=3584
+    0101 [line   66] 0x00014201  LOADK      R8 = K[5]=1.0
+    0102 [line   66] 0x800641A0  FORPREP    A=6 sBx=26
+    0103 [line   67] 0x0241C286  GETTABLE   R10 = R4[K[7]='cards']
+    0104 [line   67] 0x00C1C2C6  GETTABLE   R11 = R1[K[7]='cards']
+    0105 [line   67] 0x058242C6  GETTABLE   R11 = R11[R9]
+    0106 [line   67] 0x05C202C6  GETTABLE   R11 = R11[K[8]='card_id']
+    0107 [line   67] 0x0241C306  GETTABLE   R12 = R4[K[7]='cards']
+    0108 [line   67] 0x00C1C346  GETTABLE   R13 = R1[K[7]='cards']
+    0109 [line   67] 0x06824346  GETTABLE   R13 = R13[R9]
+    0110 [line   67] 0x06C20346  GETTABLE   R13 = R13[K[8]='card_id']
+    0111 [line   67] 0x06034306  GETTABLE   R12 = R12[R13]
+    0112 [line   67] 0x00C1C346  GETTABLE   R13 = R1[K[7]='cards']
+    0113 [line   67] 0x06824346  GETTABLE   R13 = R13[R9]
+    0114 [line   67] 0x06C24346  GETTABLE   R13 = R13[K[9]='card_count']
+    0115 [line   67] 0x0603430D  SUB        A=12 B=R12 C=R13
+    0116 [line   67] 0x05830289  SETTABLE   R10[R11] = R12
+    0117 [line   68] 0x0241C286  GETTABLE   R10 = R4[K[7]='cards']
+    0118 [line   68] 0x00C1C2C6  GETTABLE   R11 = R1[K[7]='cards']
+    0119 [line   68] 0x058242C6  GETTABLE   R11 = R11[R9]
+    0120 [line   68] 0x05C202C6  GETTABLE   R11 = R11[K[8]='card_id']
+    0121 [line   68] 0x0502C286  GETTABLE   R10 = R10[R11]
+    0122 [line   68] 0x05440019  LE         A=0 B=R10 C=K[16]=0.0
+    0123 [line   68] 0x80010016  JMP        A=0 sBx=5
+    0124 [line   69] 0x0241C286  GETTABLE   R10 = R4[K[7]='cards']
+    0125 [line   69] 0x00C1C2C6  GETTABLE   R11 = R1[K[7]='cards']
+    0126 [line   69] 0x058242C6  GETTABLE   R11 = R11[R9]
+    0127 [line   69] 0x05C202C6  GETTABLE   R11 = R11[K[8]='card_id']
+    0128 [line   69] 0x05C58289  SETTABLE   R10[R11] = K[22]=None
+    0129 [line   66] 0x7FF9019F  FORLOOP    A=6 sBx=-27
+    0130 [line   72] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+    0131 [line   72] 0x000081C1  LOADK      R7 = K[2]='GUI.ECPanelCard'
+    0132 [line   72] 0x0100819C  CALL       A=6 B=2 C=2
+    0133 [line   73] 0x0340C1C6  GETTABLE   R7 = R6[K[3]='Instance']
+    0134 [line   73] 0x008081DC  CALL       A=7 B=1 C=2
+    0135 [line   73] 0x03C5C1CB  SELF       A=7 B=7 C=279 Bx=3863
+    0136 [line   73] 0x02800240  MOVE       R9 = R5
+    0137 [line   73] 0x018041DC  CALL       A=7 B=3 C=1
+    0138 [line   74] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+    0139 [line   74] 0x00044201  LOADK      R8 = K[17]='Event.NotifyCard'
+    0140 [line   74] 0x010081DC  CALL       A=7 B=2 C=2
+    0141 [line   75] 0x03800200  MOVE       R8 = R7
+    0142 [line   75] 0x0080821C  CALL       A=8 B=1 C=2
+    0143 [line   76] 0x89004209  SETTABLE   R8[K[18]='result'] = R1
+    0144 [line   77] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0145 [line   77] 0x04C4C246  GETTABLE   R9 = R9[K[19]='EventManager']
+    0146 [line   77] 0x04C5024B  SELF       A=9 B=9 C=276 Bx=4884
+    0147 [line   77] 0x058002C3  LOADNIL    A=11 B=11 C=0 Bx=5632
+    0148 [line   77] 0x04000300  MOVE       R12 = R8
+    0149 [line   77] 0x0200425C  CALL       A=9 B=4 C=1
+    0150 [line   77] 0x800B8016  JMP        A=0 sBx=47
+    0151 [line   78] 0x00C10146  GETTABLE   R5 = R1[K[4]='notify_type']
+    0152 [line   78] 0x02C60017  EQ         A=0 B=R5 C=K[24]=4.0
+    0153 [line   78] 0x800AC016  JMP        A=0 sBx=44
+    0154 [line   79] 0x00014141  LOADK      R5 = K[5]=1.0
+    0155 [line   79] 0x00C1C186  GETTABLE   R6 = R1[K[7]='cards']
+    0156 [line   79] 0x03000194  LEN        A=6 B=6 C=0 Bx=3072
+    0157 [line   79] 0x000141C1  LOADK      R7 = K[5]=1.0
+    0158 [line   79] 0x80064160  FORPREP    A=5 sBx=26
+    0159 [line   80] 0x0241C246  GETTABLE   R9 = R4[K[7]='cards']
+    0160 [line   80] 0x00C1C286  GETTABLE   R10 = R1[K[7]='cards']
+    0161 [line   80] 0x05020286  GETTABLE   R10 = R10[R8]
+    0162 [line   80] 0x05420286  GETTABLE   R10 = R10[K[8]='card_id']
+    0163 [line   80] 0x0241C2C6  GETTABLE   R11 = R4[K[7]='cards']
+    0164 [line   80] 0x00C1C306  GETTABLE   R12 = R1[K[7]='cards']
+    0165 [line   80] 0x06020306  GETTABLE   R12 = R12[R8]
+    0166 [line   80] 0x06420306  GETTABLE   R12 = R12[K[8]='card_id']
+    0167 [line   80] 0x058302C6  GETTABLE   R11 = R11[R12]
+    0168 [line   80] 0x00C1C306  GETTABLE   R12 = R1[K[7]='cards']
+    0169 [line   80] 0x06020306  GETTABLE   R12 = R12[R8]
+    0170 [line   80] 0x06424306  GETTABLE   R12 = R12[K[9]='card_count']
+    0171 [line   80] 0x058302CD  SUB        A=11 B=R11 C=R12
+    0172 [line   80] 0x0502C249  SETTABLE   R9[R10] = R11
+    0173 [line   81] 0x0241C246  GETTABLE   R9 = R4[K[7]='cards']
+    0174 [line   81] 0x00C1C286  GETTABLE   R10 = R1[K[7]='cards']
+    0175 [line   81] 0x05020286  GETTABLE   R10 = R10[R8]
+    0176 [line   81] 0x05420286  GETTABLE   R10 = R10[K[8]='card_id']
+    0177 [line   81] 0x04828246  GETTABLE   R9 = R9[R10]
+    0178 [line   81] 0x04C40019  LE         A=0 B=R9 C=K[16]=0.0
+    0179 [line   81] 0x80010016  JMP        A=0 sBx=5
+    0180 [line   82] 0x0241C246  GETTABLE   R9 = R4[K[7]='cards']
+    0181 [line   82] 0x00C1C286  GETTABLE   R10 = R1[K[7]='cards']
+    0182 [line   82] 0x05020286  GETTABLE   R10 = R10[R8]
+    0183 [line   82] 0x05420286  GETTABLE   R10 = R10[K[8]='card_id']
+    0184 [line   82] 0x05458249  SETTABLE   R9[R10] = K[22]=None
+    0185 [line   79] 0x7FF9015F  FORLOOP    A=5 sBx=-27
+    0186 [line   85] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+    0187 [line   85] 0x00044181  LOADK      R6 = K[17]='Event.NotifyCard'
+    0188 [line   85] 0x0100815C  CALL       A=5 B=2 C=2
+    0189 [line   86] 0x02800180  MOVE       R6 = R5
+    0190 [line   86] 0x0080819C  CALL       A=6 B=1 C=2
+    0191 [line   87] 0x89004189  SETTABLE   R6[K[18]='result'] = R1
+    0192 [line   88] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0193 [line   88] 0x03C4C1C6  GETTABLE   R7 = R7[K[19]='EventManager']
+    0194 [line   88] 0x03C501CB  SELF       A=7 B=7 C=276 Bx=3860
+    0195 [line   88] 0x04800243  LOADNIL    A=9 B=9 C=0 Bx=4608
+    0196 [line   88] 0x03000280  MOVE       R10 = R6
+    0197 [line   88] 0x020041DC  CALL       A=7 B=4 C=1
+    0198 [line   90] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 198
+    'msg': 0 -> 198
+    'ECCards': 3 -> 198
+    'ECPanelCard': 6 -> 198
+    'cardsInfo': 8 -> 198
+    '(for index)': 17 -> 27
+    '(for limit)': 17 -> 27
+    '(for step)': 17 -> 27
+    'i': 18 -> 26
+    '(for index)': 31 -> 37
+    '(for limit)': 31 -> 37
+    '(for step)': 31 -> 37
+    'i': 32 -> 36
+    'ECPanelCardGet': 44 -> 90
+    '(for index)': 48 -> 78
+    '(for limit)': 48 -> 78
+    '(for step)': 48 -> 78
+    'i': 49 -> 77
+    'id': 52 -> 77
+    'count': 55 -> 77
+    'NotifyCard': 81 -> 90
+    'p': 83 -> 90
+    'idSuit': 96 -> 150
+    '(for index)': 102 -> 130
+    '(for limit)': 102 -> 130
+    '(for step)': 102 -> 130
+    'i': 103 -> 129
+    'ECPanelCard': 133 -> 150
+    'NotifyCard': 141 -> 150
+    'p': 143 -> 150
+    '(for index)': 158 -> 186
+    '(for limit)': 158 -> 186
+    '(for step)': 158 -> 186
+    'i': 159 -> 185
+    'NotifyCard': 189 -> 198
+    'p': 191 -> 198

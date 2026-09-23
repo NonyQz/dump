@@ -1,0 +1,3781 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpanelfactionwar.lua
+SIZE: 36583
+PARSED: 36583
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpanelfactionwar.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 37
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'GUI.ECPanelBase'
+K[003] = 'Data.ElementData'
+K[004] = 'Data.Exptypes'
+K[005] = 'Data.Expdef'
+K[006] = 'GUI.ECGUITools'
+K[007] = 'ForwardDeclare'
+K[008] = 'ECGame'
+K[009] = 'Main.ECFactionWarMan'
+K[010] = 'Social.ECNationMan'
+K[011] = 'Utility.CleanerHelper'
+K[012] = 'Event.FactionWarEvent'
+K[013] = 'Utility.ECUIUtility'
+K[014] = 'Guide.ECFunctionBadge'
+K[015] = 'MISCELLANEOUS'
+K[016] = 'Extend'
+K[017] = 'ECPanelFactionWar'
+K[018] = 'define'
+K[019] = 0.0
+K[020] = 5.0
+K[021] = 1.0
+K[022] = 5009.0
+K[023] = 2.0
+K[024] = 5003.0
+K[025] = 3.0
+K[026] = 5004.0
+K[027] = 4.0
+K[028] = 5006.0
+K[029] = 5005.0
+K[030] = 'Btn_District'
+K[031] = 'string'
+K[032] = 'len'
+K[033] = 'MakeOverlappedRefreshFunc'
+K[034] = 0.5
+K[035] = 'field'
+K[036] = 'number'
+K[037] = '_curNation'
+K[038] = '_timerID'
+K[039] = 'userdata'
+K[040] = '_timeLabel'
+K[041] = None
+K[042] = '_curPhase'
+K[043] = '_curStep'
+K[044] = -1.0
+K[045] = 'defineCleaner'
+K[046] = 'cleaner'
+K[047] = 'disposeCleaner'
+K[048] = 'static'
+K[049] = '=>'
+K[050] = 'Instance'
+K[051] = 'method'
+K[052] = 'function'
+K[053] = 'OpenPanel'
+K[054] = 'TryPopup'
+K[055] = 'Request'
+K[056] = 'InitControls'
+K[057] = 'override'
+K[058] = 'OnDestroy'
+K[059] = 'OnCreate'
+K[060] = 'boolean'
+K[061] = 'OnGUIChange'
+K[062] = 'UpdateNationList'
+K[063] = 'Update'
+K[064] = 'StopTimer'
+K[065] = 'StartTimer'
+K[066] = 'TimerUpdate'
+K[067] = 'UpdatePhaseState'
+K[068] = 'SelectNation'
+K[069] = 'UpdateMainView'
+K[070] = 'UpdateRegionWarFinish'
+K[071] = 'UpdateDistrictInfo'
+K[072] = 'UpdateRegionBidNum'
+K[073] = 'UpdateRegionBidderNumber'
+K[074] = 'SelectDistrict'
+K[075] = 'ShowReward'
+K[076] = 'onClickObj'
+K[077] = 'RefreshBadge'
+K[078] = 'Commit'
+K[079] = 'MakeBadgeOverlappedRefreshFunc'
+K[080] = 'AddForceRefreshHandler'
+K[081] = 'EventManager'
+K[082] = 'addHandler'
+K[083] = 'Event.NotifyFaction'
+K[084] = 'NotifyFactionInfo'
+K[085] = 'Event.SelfEnterWorldEvent'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    2] 0x00008081  LOADK      R2 = K[2]='GUI.ECPanelBase'
+0005 [line    2] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    3] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    3] 0x0000C0C1  LOADK      R3 = K[3]='Data.ElementData'
+0008 [line    3] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    4] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    4] 0x00010101  LOADK      R4 = K[4]='Data.Exptypes'
+0011 [line    4] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    5] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    5] 0x00014141  LOADK      R5 = K[5]='Data.Expdef'
+0014 [line    5] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    6] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    6] 0x00018181  LOADK      R6 = K[6]='GUI.ECGUITools'
+0017 [line    6] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    7] 0x0041C186  GETTABLE   R6 = R0[K[7]='ForwardDeclare']
+0019 [line    7] 0x000201C1  LOADK      R7 = K[8]='ECGame'
+0020 [line    7] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    8] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    8] 0x00024201  LOADK      R8 = K[9]='Main.ECFactionWarMan'
+0023 [line    8] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line    9] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line    9] 0x00028241  LOADK      R9 = K[10]='Social.ECNationMan'
+0026 [line    9] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   10] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   10] 0x0002C281  LOADK      R10 = K[11]='Utility.CleanerHelper'
+0029 [line   10] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   11] 0x00000285  GETGLOBAL  R10 = GLOBAL K[0]='require'
+0031 [line   11] 0x000302C1  LOADK      R11 = K[12]='Event.FactionWarEvent'
+0032 [line   11] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   12] 0x000002C5  GETGLOBAL  R11 = GLOBAL K[0]='require'
+0034 [line   12] 0x00034301  LOADK      R12 = K[13]='Utility.ECUIUtility'
+0035 [line   12] 0x010082DC  CALL       A=11 B=2 C=2
+0036 [line   13] 0x00000305  GETGLOBAL  R12 = GLOBAL K[0]='require'
+0037 [line   13] 0x00038341  LOADK      R13 = K[14]='Guide.ECFunctionBadge'
+0038 [line   13] 0x0100831C  CALL       A=12 B=2 C=2
+0039 [line   15] 0x0243C346  GETTABLE   R13 = R4[K[15]='MISCELLANEOUS']
+0040 [line   17] 0x00440386  GETTABLE   R14 = R0[K[16]='Extend']
+0041 [line   17] 0x008003C0  MOVE       R15 = R1
+0042 [line   17] 0x00044401  LOADK      R16 = K[17]='ECPanelFactionWar'
+0043 [line   17] 0x0180839C  CALL       A=14 B=3 C=2
+0044 [line   18] 0x074483C6  GETTABLE   R15 = R14[K[18]='define']
+0045 [line   19] 0x08000403  LOADNIL    A=16 B=16 C=0 Bx=8192
+0046 [line   20] 0x0004C441  LOADK      R17 = K[19]=0.0
+0047 [line   21] 0x00050481  LOADK      R18 = K[20]=5.0
+0048 [line   22] 0x000144CA  NEWTABLE   A=19 B=0 C=5 Bx=5
+0049 [line   23] 0x8AC584C9  SETTABLE   R19[K[21]=1.0] = K[22]=5009.0
+0050 [line   24] 0x8BC604C9  SETTABLE   R19[K[23]=2.0] = K[24]=5003.0
+0051 [line   25] 0x8CC684C9  SETTABLE   R19[K[25]=3.0] = K[26]=5004.0
+0052 [line   26] 0x8DC704C9  SETTABLE   R19[K[27]=4.0] = K[28]=5006.0
+0053 [line   27] 0x8A4744C9  SETTABLE   R19[K[20]=5.0] = K[29]=5005.0
+0054 [line   29] 0x0001450A  NEWTABLE   A=20 B=0 C=5 Bx=5
+0055 [line   30] 0x8B454509  SETTABLE   R20[K[22]=5009.0] = K[21]=1.0
+0056 [line   31] 0x8C45C509  SETTABLE   R20[K[24]=5003.0] = K[23]=2.0
+0057 [line   32] 0x8D464509  SETTABLE   R20[K[26]=5004.0] = K[25]=3.0
+0058 [line   33] 0x8E46C509  SETTABLE   R20[K[28]=5006.0] = K[27]=4.0
+0059 [line   34] 0x8EC50509  SETTABLE   R20[K[29]=5005.0] = K[20]=5.0
+0060 [line   37] 0x00078541  LOADK      R21 = K[30]='Btn_District'
+0061 [line   38] 0x0007C585  GETGLOBAL  R22 = GLOBAL K[31]='string'
+0062 [line   38] 0x0B480586  GETTABLE   R22 = R22[K[32]='len']
+0063 [line   38] 0x0A8005C0  MOVE       R23 = R21
+0064 [line   38] 0x0100859C  CALL       A=22 B=2 C=2
+0065 [line   40] 0x0B8005C3  LOADNIL    A=23 B=23 C=0 Bx=11776
+0066 [line   41] 0x000045DA  TEST       A=23 B=0 C=1
+0067 [line   41] 0x80014016  JMP        A=0 sBx=6
+0068 [line   42] 0x05C84606  GETTABLE   R24 = R11[K[33]='MakeOverlappedRefreshFunc']
+0069 [line   47] 0x00000664  CLOSURE    R25 = PROTO[0]
+0070 [line   47] 0x07000000  MOVE       R0 = R14
+0071 [line   47] 0x00088681  LOADK      R26 = K[34]=0.5
+0072 [line   42] 0x0180861C  CALL       A=24 B=3 C=2
+0073 [line   47] 0x0C0005C0  MOVE       R23 = R24
+0074 [line   77] 0x00004624  CLOSURE    R24 = PROTO[1]
+0075 [line   77] 0x07000000  MOVE       R0 = R14
+0076 [line   77] 0x0B800000  MOVE       R0 = R23
+0077 [line   77] 0x03800000  MOVE       R0 = R7
+0078 [line   88] 0x00008664  CLOSURE    R25 = PROTO[2]
+0079 [line  100] 0x0000C6A4  CLOSURE    R26 = PROTO[3]
+0080 [line  100] 0x0C800000  MOVE       R0 = R25
+0081 [line  102] 0x07C8C6C6  GETTABLE   R27 = R15[K[35]='field']
+0082 [line  102] 0x00090701  LOADK      R28 = K[36]='number'
+0083 [line  102] 0x010086DC  CALL       A=27 B=2 C=2
+0084 [line  102] 0x92C4C6C9  SETTABLE   R27[K[37]='_curNation'] = K[19]=0.0
+0085 [line  103] 0x07C8C6C6  GETTABLE   R27 = R15[K[35]='field']
+0086 [line  103] 0x00090701  LOADK      R28 = K[36]='number'
+0087 [line  103] 0x010086DC  CALL       A=27 B=2 C=2
+0088 [line  103] 0x9344C6C9  SETTABLE   R27[K[38]='_timerID'] = K[19]=0.0
+0089 [line  104] 0x07C8C6C6  GETTABLE   R27 = R15[K[35]='field']
+0090 [line  104] 0x0009C701  LOADK      R28 = K[39]='userdata'
+0091 [line  104] 0x010086DC  CALL       A=27 B=2 C=2
+0092 [line  104] 0x944A46C9  SETTABLE   R27[K[40]='_timeLabel'] = K[41]=None
+0093 [line  105] 0x07C8C6C6  GETTABLE   R27 = R15[K[35]='field']
+0094 [line  105] 0x00090701  LOADK      R28 = K[36]='number'
+0095 [line  105] 0x010086DC  CALL       A=27 B=2 C=2
+0096 [line  105] 0x9544C6C9  SETTABLE   R27[K[42]='_curPhase'] = K[19]=0.0
+0097 [line  106] 0x07C8C6C6  GETTABLE   R27 = R15[K[35]='field']
+0098 [line  106] 0x00090701  LOADK      R28 = K[36]='number'
+0099 [line  106] 0x010086DC  CALL       A=27 B=2 C=2
+0100 [line  106] 0x95CB06C9  SETTABLE   R27[K[43]='_curStep'] = K[44]=-1.0
+0101 [line  107] 0x04CB46C6  GETTABLE   R27 = R9[K[45]='defineCleaner']
+0102 [line  107] 0x07800700  MOVE       R28 = R15
+0103 [line  107] 0x000B8741  LOADK      R29 = K[46]='cleaner'
+0104 [line  107] 0x000BC781  LOADK      R30 = K[47]='disposeCleaner'
+0105 [line  107] 0x020046DC  CALL       A=27 B=4 C=1
+0106 [line  109] 0x07CC06C6  GETTABLE   R27 = R15[K[48]='static']
+0107 [line  109] 0x000C4701  LOADK      R28 = K[49]='=>'
+0108 [line  109] 0x07000740  MOVE       R29 = R14
+0109 [line  109] 0x018086DC  CALL       A=27 B=3 C=2
+0110 [line  116] 0x00010724  CLOSURE    R28 = PROTO[4]
+0111 [line  116] 0x08000000  MOVE       R0 = R16
+0112 [line  116] 0x07000000  MOVE       R0 = R14
+0113 [line  116] 0x990706C9  SETTABLE   R27[K[50]='Instance'] = R28
+0114 [line  118] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0115 [line  118] 0x000D0701  LOADK      R28 = K[52]='function'
+0116 [line  118] 0x010086DC  CALL       A=27 B=2 C=2
+0117 [line  124] 0x00014724  CLOSURE    R28 = PROTO[5]
+0118 [line  124] 0x9A8706C9  SETTABLE   R27[K[53]='OpenPanel'] = R28
+0119 [line  125] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0120 [line  125] 0x008086DC  CALL       A=27 B=1 C=2
+0121 [line  164] 0x00018724  CLOSURE    R28 = PROTO[6]
+0122 [line  164] 0x03000000  MOVE       R0 = R6
+0123 [line  164] 0x03800000  MOVE       R0 = R7
+0124 [line  164] 0x0C800000  MOVE       R0 = R25
+0125 [line  164] 0x9B0706C9  SETTABLE   R27[K[54]='TryPopup'] = R28
+0126 [line  166] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0127 [line  166] 0x008086DC  CALL       A=27 B=1 C=2
+0128 [line  178] 0x0001C724  CLOSURE    R28 = PROTO[7]
+0129 [line  178] 0x03800000  MOVE       R0 = R7
+0130 [line  178] 0x9B8706C9  SETTABLE   R27[K[55]='Request'] = R28
+0131 [line  204] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0132 [line  204] 0x008086DC  CALL       A=27 B=1 C=2
+0133 [line  206] 0x00020724  CLOSURE    R28 = PROTO[8]
+0134 [line  206] 0x9C0706C9  SETTABLE   R27[K[56]='InitControls'] = R28
+0135 [line  207] 0x07CE46C6  GETTABLE   R27 = R15[K[57]='override']
+0136 [line  207] 0x008086DC  CALL       A=27 B=1 C=2
+0137 [line  216] 0x00024724  CLOSURE    R28 = PROTO[9]
+0138 [line  216] 0x08800000  MOVE       R0 = R17
+0139 [line  216] 0x9D0706C9  SETTABLE   R27[K[58]='OnDestroy'] = R28
+0140 [line  217] 0x07CE46C6  GETTABLE   R27 = R15[K[57]='override']
+0141 [line  217] 0x008086DC  CALL       A=27 B=1 C=2
+0142 [line  245] 0x00028724  CLOSURE    R28 = PROTO[10]
+0143 [line  245] 0x03000000  MOVE       R0 = R6
+0144 [line  245] 0x05000000  MOVE       R0 = R10
+0145 [line  245] 0x0C000000  MOVE       R0 = R24
+0146 [line  245] 0x03800000  MOVE       R0 = R7
+0147 [line  245] 0x9D8706C9  SETTABLE   R27[K[59]='OnCreate'] = R28
+0148 [line  246] 0x07CE46C6  GETTABLE   R27 = R15[K[57]='override']
+0149 [line  246] 0x000F0701  LOADK      R28 = K[60]='boolean'
+0150 [line  246] 0x000F0741  LOADK      R29 = K[60]='boolean'
+0151 [line  246] 0x018086DC  CALL       A=27 B=3 C=2
+0152 [line  251] 0x0002C724  CLOSURE    R28 = PROTO[11]
+0153 [line  251] 0x03800000  MOVE       R0 = R7
+0154 [line  251] 0x9E8706C9  SETTABLE   R27[K[61]='OnGUIChange'] = R28
+0155 [line  253] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0156 [line  253] 0x008086DC  CALL       A=27 B=1 C=2
+0157 [line  259] 0x00030724  CLOSURE    R28 = PROTO[12]
+0158 [line  259] 0x03000000  MOVE       R0 = R6
+0159 [line  259] 0x02800000  MOVE       R0 = R5
+0160 [line  259] 0x9F0706C9  SETTABLE   R27[K[62]='UpdateNationList'] = R28
+0161 [line  261] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0162 [line  261] 0x008086DC  CALL       A=27 B=1 C=2
+0163 [line  269] 0x00034724  CLOSURE    R28 = PROTO[13]
+0164 [line  269] 0x03800000  MOVE       R0 = R7
+0165 [line  269] 0x9F8706C9  SETTABLE   R27[K[63]='Update'] = R28
+0166 [line  271] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0167 [line  271] 0x008086DC  CALL       A=27 B=1 C=2
+0168 [line  276] 0x00038724  CLOSURE    R28 = PROTO[14]
+0169 [line  276] 0xA00706C9  SETTABLE   R27[K[64]='StopTimer'] = R28
+0170 [line  277] 0x07CCC6C6  GETTABLE   R27 = R15[K[51]='method']
+0171 [line  277] 0x008086DC  CALL       A=27 B=1 C=2
+0172 [line  285] 0x0003C724  CLOSURE    R28 = PROTO[15]
+0173 [line  285] 0xA08706C9  SETTABLE   R27[K[65]='StartTimer'] = R28
+0174 [line  287] 0x0D8006C3  LOADNIL    A=27 B=27 C=0 Bx=13824
+0175 [line  288] 0x000046DA  TEST       A=27 B=0 C=1
+0176 [line  288] 0x80014016  JMP        A=0 sBx=6
+0177 [line  289] 0x05C84706  GETTABLE   R28 = R11[K[33]='MakeOverlappedRefreshFunc']
+0178 [line  292] 0x00040764  CLOSURE    R29 = PROTO[16]
+0179 [line  292] 0x07000000  MOVE       R0 = R14
+0180 [line  292] 0x00064781  LOADK      R30 = K[25]=3.0
+0181 [line  289] 0x0180871C  CALL       A=28 B=3 C=2
+0182 [line  292] 0x0E0006C0  MOVE       R27 = R28
+0183 [line  294] 0x0E000703  LOADNIL    A=28 B=28 C=0 Bx=14336
+0184 [line  295] 0x0000471A  TEST       A=28 B=0 C=1
+0185 [line  295] 0x80014016  JMP        A=0 sBx=6
+0186 [line  296] 0x05C84746  GETTABLE   R29 = R11[K[33]='MakeOverlappedRefreshFunc']
+0187 [line  302] 0x000447A4  CLOSURE    R30 = PROTO[17]
+0188 [line  302] 0x07000000  MOVE       R0 = R14
+0189 [line  302] 0x000647C1  LOADK      R31 = K[25]=3.0
+0190 [line  296] 0x0180875C  CALL       A=29 B=3 C=2
+0191 [line  302] 0x0E800700  MOVE       R28 = R29
+0192 [line  305] 0x07CCC746  GETTABLE   R29 = R15[K[51]='method']
+0193 [line  305] 0x0080875C  CALL       A=29 B=1 C=2
+0194 [line  352] 0x000487A4  CLOSURE    R30 = PROTO[18]
+0195 [line  352] 0x03800000  MOVE       R0 = R7
+0196 [line  352] 0x08800000  MOVE       R0 = R17
+0197 [line  352] 0x0E000000  MOVE       R0 = R28
+0198 [line  352] 0x0D800000  MOVE       R0 = R27
+0199 [line  352] 0x0D000000  MOVE       R0 = R26
+0200 [line  352] 0xA1078749  SETTABLE   R29[K[66]='TimerUpdate'] = R30
+0201 [line  363] 0x0004C764  CLOSURE    R29 = PROTO[19]
+0202 [line  363] 0x03800000  MOVE       R0 = R7
+0203 [line  366] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0204 [line  366] 0x0080879C  CALL       A=30 B=1 C=2
+0205 [line  421] 0x000507E4  CLOSURE    R31 = PROTO[20]
+0206 [line  421] 0x03800000  MOVE       R0 = R7
+0207 [line  421] 0x0E800000  MOVE       R0 = R29
+0208 [line  421] 0x04000000  MOVE       R0 = R8
+0209 [line  421] 0x02800000  MOVE       R0 = R5
+0210 [line  421] 0xA187C789  SETTABLE   R30[K[67]='UpdatePhaseState'] = R31
+0211 [line  423] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0212 [line  423] 0x000907C1  LOADK      R31 = K[36]='number'
+0213 [line  423] 0x0100879C  CALL       A=30 B=2 C=2
+0214 [line  429] 0x000547E4  CLOSURE    R31 = PROTO[21]
+0215 [line  429] 0xA207C789  SETTABLE   R30[K[68]='SelectNation'] = R31
+0216 [line  431] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0217 [line  431] 0x0080879C  CALL       A=30 B=1 C=2
+0218 [line  457] 0x000587E4  CLOSURE    R31 = PROTO[22]
+0219 [line  457] 0x09000000  MOVE       R0 = R18
+0220 [line  457] 0x0A800000  MOVE       R0 = R21
+0221 [line  457] 0x09800000  MOVE       R0 = R19
+0222 [line  457] 0x03800000  MOVE       R0 = R7
+0223 [line  457] 0x02800000  MOVE       R0 = R5
+0224 [line  457] 0x03000000  MOVE       R0 = R6
+0225 [line  457] 0xA287C789  SETTABLE   R30[K[69]='UpdateMainView'] = R31
+0226 [line  459] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0227 [line  459] 0x000907C1  LOADK      R31 = K[36]='number'
+0228 [line  459] 0x0100879C  CALL       A=30 B=2 C=2
+0229 [line  467] 0x0005C7E4  CLOSURE    R31 = PROTO[23]
+0230 [line  467] 0x03800000  MOVE       R0 = R7
+0231 [line  467] 0xA307C789  SETTABLE   R30[K[70]='UpdateRegionWarFinish'] = R31
+0232 [line  469] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0233 [line  469] 0x0009C7C1  LOADK      R31 = K[39]='userdata'
+0234 [line  469] 0x00090801  LOADK      R32 = K[36]='number'
+0235 [line  469] 0x00090841  LOADK      R33 = K[36]='number'
+0236 [line  469] 0x0200879C  CALL       A=30 B=4 C=2
+0237 [line  610] 0x000607E4  CLOSURE    R31 = PROTO[24]
+0238 [line  610] 0x03800000  MOVE       R0 = R7
+0239 [line  610] 0x03000000  MOVE       R0 = R6
+0240 [line  610] 0x04000000  MOVE       R0 = R8
+0241 [line  610] 0x02800000  MOVE       R0 = R5
+0242 [line  610] 0xA387C789  SETTABLE   R30[K[71]='UpdateDistrictInfo'] = R31
+0243 [line  612] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0244 [line  612] 0x0080879C  CALL       A=30 B=1 C=2
+0245 [line  624] 0x000647E4  CLOSURE    R31 = PROTO[25]
+0246 [line  624] 0x09000000  MOVE       R0 = R18
+0247 [line  624] 0x0A800000  MOVE       R0 = R21
+0248 [line  624] 0x09800000  MOVE       R0 = R19
+0249 [line  624] 0x03800000  MOVE       R0 = R7
+0250 [line  624] 0xA407C789  SETTABLE   R30[K[72]='UpdateRegionBidNum'] = R31
+0251 [line  626] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0252 [line  626] 0x000907C1  LOADK      R31 = K[36]='number'
+0253 [line  626] 0x0100879C  CALL       A=30 B=2 C=2
+0254 [line  638] 0x000687E4  CLOSURE    R31 = PROTO[26]
+0255 [line  638] 0x03800000  MOVE       R0 = R7
+0256 [line  638] 0x0A000000  MOVE       R0 = R20
+0257 [line  638] 0x02800000  MOVE       R0 = R5
+0258 [line  638] 0xA487C789  SETTABLE   R30[K[73]='UpdateRegionBidderNumber'] = R31
+0259 [line  640] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0260 [line  640] 0x000907C1  LOADK      R31 = K[36]='number'
+0261 [line  640] 0x0100879C  CALL       A=30 B=2 C=2
+0262 [line  669] 0x0006C7E4  CLOSURE    R31 = PROTO[27]
+0263 [line  669] 0x09800000  MOVE       R0 = R19
+0264 [line  669] 0x03800000  MOVE       R0 = R7
+0265 [line  669] 0xA507C789  SETTABLE   R30[K[74]='SelectDistrict'] = R31
+0266 [line  671] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0267 [line  671] 0x000F07C1  LOADK      R31 = K[60]='boolean'
+0268 [line  671] 0x0100879C  CALL       A=30 B=2 C=2
+0269 [line  677] 0x000707E4  CLOSURE    R31 = PROTO[28]
+0270 [line  677] 0xA587C789  SETTABLE   R30[K[75]='ShowReward'] = R31
+0271 [line  679] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0272 [line  679] 0x0009C7C1  LOADK      R31 = K[39]='userdata'
+0273 [line  679] 0x0100879C  CALL       A=30 B=2 C=2
+0274 [line  724] 0x000747E4  CLOSURE    R31 = PROTO[29]
+0275 [line  724] 0x03800000  MOVE       R0 = R7
+0276 [line  724] 0xA607C789  SETTABLE   R30[K[76]='onClickObj'] = R31
+0277 [line  726] 0x07CCC786  GETTABLE   R30 = R15[K[51]='method']
+0278 [line  726] 0x0080879C  CALL       A=30 B=1 C=2
+0279 [line  742] 0x000787E4  CLOSURE    R31 = PROTO[30]
+0280 [line  742] 0x03000000  MOVE       R0 = R6
+0281 [line  742] 0x03800000  MOVE       R0 = R7
+0282 [line  742] 0x06000000  MOVE       R0 = R12
+0283 [line  742] 0xA687C789  SETTABLE   R30[K[77]='RefreshBadge'] = R31
+0284 [line  744] 0x07538786  GETTABLE   R30 = R14[K[78]='Commit']
+0285 [line  744] 0x0080479C  CALL       A=30 B=1 C=1
+0286 [line  749] 0x00000785  GETGLOBAL  R30 = GLOBAL K[0]='require'
+0287 [line  749] 0x000347C1  LOADK      R31 = K[13]='Utility.ECUIUtility'
+0288 [line  749] 0x0100879C  CALL       A=30 B=2 C=2
+0289 [line  749] 0x0F53C786  GETTABLE   R30 = R30[K[79]='MakeBadgeOverlappedRefreshFunc']
+0290 [line  751] 0x0007C7E4  CLOSURE    R31 = PROTO[31]
+0291 [line  751] 0x07000000  MOVE       R0 = R14
+0292 [line  751] 0x00054801  LOADK      R32 = K[21]=1.0
+0293 [line  751] 0x074C8846  GETTABLE   R33 = R14[K[50]='Instance']
+0294 [line  751] 0x0080085C  CALL       A=33 B=1 C=0
+0295 [line  749] 0x0000879C  CALL       A=30 B=0 C=2
+0296 [line  755] 0x065407C6  GETTABLE   R31 = R12[K[80]='AddForceRefreshHandler']
+0297 [line  755] 0x0F000800  MOVE       R32 = R30
+0298 [line  755] 0x010047DC  CALL       A=31 B=2 C=1
+0299 [line  758] 0x035447C6  GETTABLE   R31 = R6[K[81]='EventManager']
+0300 [line  758] 0x0FD487CB  SELF       A=31 B=31 C=338 Bx=16210
+0301 [line  758] 0x05000840  MOVE       R33 = R10
+0302 [line  758] 0x0F000880  MOVE       R34 = R30
+0303 [line  758] 0x020047DC  CALL       A=31 B=4 C=1
+0304 [line  760] 0x000007C5  GETGLOBAL  R31 = GLOBAL K[0]='require'
+0305 [line  760] 0x0014C801  LOADK      R32 = K[83]='Event.NotifyFaction'
+0306 [line  760] 0x010087DC  CALL       A=31 B=2 C=2
+0307 [line  761] 0x03544806  GETTABLE   R32 = R6[K[81]='EventManager']
+0308 [line  761] 0x1054880B  SELF       A=32 B=32 C=338 Bx=16722
+0309 [line  761] 0x0FD50886  GETTABLE   R34 = R31[K[84]='NotifyFactionInfo']
+0310 [line  761] 0x0F0008C0  MOVE       R35 = R30
+0311 [line  761] 0x0200481C  CALL       A=32 B=4 C=1
+0312 [line  763] 0x00000805  GETGLOBAL  R32 = GLOBAL K[0]='require'
+0313 [line  763] 0x00154841  LOADK      R33 = K[85]='Event.SelfEnterWorldEvent'
+0314 [line  763] 0x0100881C  CALL       A=32 B=2 C=2
+0315 [line  764] 0x03544846  GETTABLE   R33 = R6[K[81]='EventManager']
+0316 [line  764] 0x10D4884B  SELF       A=33 B=33 C=338 Bx=17234
+0317 [line  764] 0x100008C0  MOVE       R35 = R32
+0318 [line  764] 0x0F000900  MOVE       R36 = R30
+0319 [line  764] 0x0200485C  CALL       A=33 B=4 C=1
+0320 [line  767] 0x0100039E  RETURN     A=14 B=2 C=0
+0321 [line  767] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 321
+'ECPanelBase': 6 -> 321
+'ElementData': 9 -> 321
+'Exptypes': 12 -> 321
+'Expdef': 15 -> 321
+'ECGUITools': 18 -> 321
+'ECGame': 21 -> 321
+'ECFactionWarMan': 24 -> 321
+'ECNationMan': 27 -> 321
+'CleanerHelper': 30 -> 321
+'FactionWarEvent': 33 -> 321
+'ECUIUtility': 36 -> 321
+'ECFunctionBadge': 39 -> 321
+'MISC': 40 -> 321
+'ECPanelFactionWar': 44 -> 321
+'def': 45 -> 321
+'l_instance': 46 -> 321
+'_counter': 47 -> 321
+'_district_num': 48 -> 321
+'_index_district_list': 54 -> 321
+'_district_index_list': 60 -> 321
+'_district_btn_prefix': 61 -> 321
+'_district_btn_prefix_len': 65 -> 321
+'_updateAllFunc': 66 -> 321
+'onFactionWarEvent': 78 -> 321
+'formatTime': 79 -> 321
+'formatTimeStr': 81 -> 321
+'_refreshFunc': 175 -> 321
+'_updateFunc': 184 -> 321
+'get_step_tips': 203 -> 321
+'refreshBadge': 296 -> 320
+'NotifyFaction': 307 -> 320
+'SelfEnterWorldEvent': 315 -> 320
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0xAE3
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 42 - 47
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_panel'
+    K[002] = 'isnil'
+    K[003] = 'Update'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   43] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   43] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line   43] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line   44] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0004 [line   44] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line   44] 0x80014016  JMP        A=0 sBx=6
+    0006 [line   44] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0007 [line   44] 0x00C08046  GETTABLE   R1 = R1[K[2]='isnil']
+    0008 [line   44] 0x0000405A  TEST       A=1 B=0 C=1
+    0009 [line   44] 0x80004016  JMP        A=0 sBx=2
+    0010 [line   45] 0x0040C04B  SELF       A=1 B=0 C=259 Bx=259
+    0011 [line   45] 0x0100405C  CALL       A=1 B=2 C=1
+    0012 [line   47] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 3 -> 12
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0xBCC
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 50 - 77
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_panel'
+    K[002] = 'isnil'
+    K[003] = 'is_event'
+    K[004] = 'all'
+    K[005] = 'delta_time'
+    K[006] = 'region_list'
+    K[007] = 'war_list'
+    K[008] = 'daily_bouns'
+    K[009] = 'bid_list'
+    K[010] = 'crops_info'
+    K[011] = 'war_query_region_list'
+    K[012] = 'UpdateRegionBidNum'
+    K[013] = 'host_sign_region'
+    K[014] = 'war_bid_result'
+    K[015] = 'RequestRegionBidNum'
+    K[016] = '_curNation'
+    K[017] = 'RequestHPSignRegion'
+    K[018] = 'cheer_info'
+    K[019] = 'Request'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   51] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   51] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0002 [line   51] 0x0080809C  CALL       A=2 B=1 C=2
+    0003 [line   52] 0x014040C6  GETTABLE   R3 = R2[K[1]='m_panel']
+    0004 [line   52] 0x000000DA  TEST       A=3 B=0 C=0
+    0005 [line   52] 0x8000C016  JMP        A=0 sBx=4
+    0006 [line   52] 0x014040C6  GETTABLE   R3 = R2[K[1]='m_panel']
+    0007 [line   52] 0x01C080C6  GETTABLE   R3 = R3[K[2]='isnil']
+    0008 [line   52] 0x000000DA  TEST       A=3 B=0 C=0
+    0009 [line   52] 0x80000016  JMP        A=0 sBx=1
+    0010 [line   53] 0x0080001E  RETURN     A=0 B=1 C=0
+    0011 [line   55] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0012 [line   55] 0x00010141  LOADK      R5 = K[4]='all'
+    0013 [line   55] 0x018080DC  CALL       A=3 B=3 C=2
+    0014 [line   55] 0x000040DA  TEST       A=3 B=0 C=1
+    0015 [line   55] 0x80010016  JMP        A=0 sBx=5
+    0016 [line   55] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0017 [line   55] 0x00014141  LOADK      R5 = K[5]='delta_time'
+    0018 [line   55] 0x018080DC  CALL       A=3 B=3 C=2
+    0019 [line   55] 0x000000DA  TEST       A=3 B=0 C=0
+    0020 [line   55] 0x80008016  JMP        A=0 sBx=3
+    0021 [line   56] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0022 [line   56] 0x008040DC  CALL       A=3 B=1 C=1
+    0023 [line   56] 0x80120016  JMP        A=0 sBx=73
+    0024 [line   57] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0025 [line   57] 0x00018141  LOADK      R5 = K[6]='region_list'
+    0026 [line   57] 0x018080DC  CALL       A=3 B=3 C=2
+    0027 [line   57] 0x000040DA  TEST       A=3 B=0 C=1
+    0028 [line   57] 0x80010016  JMP        A=0 sBx=5
+    0029 [line   57] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0030 [line   57] 0x0001C141  LOADK      R5 = K[7]='war_list'
+    0031 [line   57] 0x018080DC  CALL       A=3 B=3 C=2
+    0032 [line   57] 0x000000DA  TEST       A=3 B=0 C=0
+    0033 [line   57] 0x80008016  JMP        A=0 sBx=3
+    0034 [line   58] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0035 [line   58] 0x008040DC  CALL       A=3 B=1 C=1
+    0036 [line   58] 0x800EC016  JMP        A=0 sBx=60
+    0037 [line   59] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0038 [line   59] 0x00020141  LOADK      R5 = K[8]='daily_bouns'
+    0039 [line   59] 0x018080DC  CALL       A=3 B=3 C=2
+    0040 [line   59] 0x000000DA  TEST       A=3 B=0 C=0
+    0041 [line   59] 0x80008016  JMP        A=0 sBx=3
+    0042 [line   60] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0043 [line   60] 0x008040DC  CALL       A=3 B=1 C=1
+    0044 [line   60] 0x800CC016  JMP        A=0 sBx=52
+    0045 [line   61] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0046 [line   61] 0x00024141  LOADK      R5 = K[9]='bid_list'
+    0047 [line   61] 0x018080DC  CALL       A=3 B=3 C=2
+    0048 [line   61] 0x000000DA  TEST       A=3 B=0 C=0
+    0049 [line   61] 0x80008016  JMP        A=0 sBx=3
+    0050 [line   64] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0051 [line   64] 0x008040DC  CALL       A=3 B=1 C=1
+    0052 [line   64] 0x800AC016  JMP        A=0 sBx=44
+    0053 [line   65] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0054 [line   65] 0x00028141  LOADK      R5 = K[10]='crops_info'
+    0055 [line   65] 0x018080DC  CALL       A=3 B=3 C=2
+    0056 [line   65] 0x000000DA  TEST       A=3 B=0 C=0
+    0057 [line   65] 0x80008016  JMP        A=0 sBx=3
+    0058 [line   66] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0059 [line   66] 0x008040DC  CALL       A=3 B=1 C=1
+    0060 [line   66] 0x8008C016  JMP        A=0 sBx=36
+    0061 [line   67] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0062 [line   67] 0x0002C141  LOADK      R5 = K[11]='war_query_region_list'
+    0063 [line   67] 0x018080DC  CALL       A=3 B=3 C=2
+    0064 [line   67] 0x000000DA  TEST       A=3 B=0 C=0
+    0065 [line   67] 0x80008016  JMP        A=0 sBx=3
+    0066 [line   68] 0x014300CB  SELF       A=3 B=2 C=268 Bx=1292
+    0067 [line   68] 0x010040DC  CALL       A=3 B=2 C=1
+    0068 [line   68] 0x8006C016  JMP        A=0 sBx=28
+    0069 [line   69] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0070 [line   69] 0x00034141  LOADK      R5 = K[13]='host_sign_region'
+    0071 [line   69] 0x018080DC  CALL       A=3 B=3 C=2
+    0072 [line   69] 0x000000DA  TEST       A=3 B=0 C=0
+    0073 [line   69] 0x80008016  JMP        A=0 sBx=3
+    0074 [line   70] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0075 [line   70] 0x008040DC  CALL       A=3 B=1 C=1
+    0076 [line   70] 0x8004C016  JMP        A=0 sBx=20
+    0077 [line   71] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0078 [line   71] 0x00038141  LOADK      R5 = K[14]='war_bid_result'
+    0079 [line   71] 0x018080DC  CALL       A=3 B=3 C=2
+    0080 [line   71] 0x000000DA  TEST       A=3 B=0 C=0
+    0081 [line   71] 0x8001C016  JMP        A=0 sBx=8
+    0082 [line   72] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0083 [line   72] 0x01C3C0C6  GETTABLE   R3 = R3[K[15]='RequestRegionBidNum']
+    0084 [line   72] 0x01440106  GETTABLE   R4 = R2[K[16]='_curNation']
+    0085 [line   72] 0x010040DC  CALL       A=3 B=2 C=1
+    0086 [line   73] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0087 [line   73] 0x01C440C6  GETTABLE   R3 = R3[K[17]='RequestHPSignRegion']
+    0088 [line   73] 0x008040DC  CALL       A=3 B=1 C=1
+    0089 [line   73] 0x80018016  JMP        A=0 sBx=7
+    0090 [line   74] 0x00C0C0CB  SELF       A=3 B=1 C=259 Bx=771
+    0091 [line   74] 0x00048141  LOADK      R5 = K[18]='cheer_info'
+    0092 [line   74] 0x018080DC  CALL       A=3 B=3 C=2
+    0093 [line   74] 0x000000DA  TEST       A=3 B=0 C=0
+    0094 [line   74] 0x80004016  JMP        A=0 sBx=2
+    0095 [line   75] 0x0144C0CB  SELF       A=3 B=2 C=275 Bx=1299
+    0096 [line   75] 0x010040DC  CALL       A=3 B=2 C=1
+    0097 [line   77] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 97
+    'event': 0 -> 97
+    'self': 3 -> 97
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x10CE
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 79 - 88
+    Params : 1
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 60.0
+    K[001] = 24.0
+    K[002] = 'math'
+    K[003] = 'floor'
+    K[004] = 'day'
+    K[005] = 'hour'
+    K[006] = 'min'
+    K[007] = 'sec'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   80] 0x00000041  LOADK      R1 = K[0]=60.0
+    0001 [line   81] 0x00C0008E  MUL        A=2 B=R1 C=K[0]=60.0
+    0002 [line   82] 0x014040CE  MUL        A=3 B=R2 C=K[1]=24.0
+    0003 [line   83] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='math'
+    0004 [line   83] 0x0240C106  GETTABLE   R4 = R4[K[3]='floor']
+    0005 [line   83] 0x0000C14F  DIV        A=5 B=R0 C=R3
+    0006 [line   83] 0x0100811C  CALL       A=4 B=2 C=2
+    0007 [line   84] 0x00008145  GETGLOBAL  R5 = GLOBAL K[2]='math'
+    0008 [line   84] 0x02C0C146  GETTABLE   R5 = R5[K[3]='floor']
+    0009 [line   84] 0x0200C18E  MUL        A=6 B=R4 C=R3
+    0010 [line   84] 0x0001818D  SUB        A=6 B=R0 C=R6
+    0011 [line   84] 0x0300818F  DIV        A=6 B=R6 C=R2
+    0012 [line   84] 0x0100815C  CALL       A=5 B=2 C=2
+    0013 [line   85] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='math'
+    0014 [line   85] 0x0340C186  GETTABLE   R6 = R6[K[3]='floor']
+    0015 [line   85] 0x0200C1CE  MUL        A=7 B=R4 C=R3
+    0016 [line   85] 0x0001C1CD  SUB        A=7 B=R0 C=R7
+    0017 [line   85] 0x0280820E  MUL        A=8 B=R5 C=R2
+    0018 [line   85] 0x038201CD  SUB        A=7 B=R7 C=R8
+    0019 [line   85] 0x038041CF  DIV        A=7 B=R7 C=R1
+    0020 [line   85] 0x0100819C  CALL       A=6 B=2 C=2
+    0021 [line   86] 0x000081C5  GETGLOBAL  R7 = GLOBAL K[2]='math'
+    0022 [line   86] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='floor']
+    0023 [line   86] 0x0200C20E  MUL        A=8 B=R4 C=R3
+    0024 [line   86] 0x0002020D  SUB        A=8 B=R0 C=R8
+    0025 [line   86] 0x0280824E  MUL        A=9 B=R5 C=R2
+    0026 [line   86] 0x0402420D  SUB        A=8 B=R8 C=R9
+    0027 [line   86] 0x0300424E  MUL        A=9 B=R6 C=R1
+    0028 [line   86] 0x0402420D  SUB        A=8 B=R8 C=R9
+    0029 [line   86] 0x010081DC  CALL       A=7 B=2 C=2
+    0030 [line   87] 0x0001020A  NEWTABLE   A=8 B=0 C=4 Bx=4
+    0031 [line   87] 0x82010209  SETTABLE   R8[K[4]='day'] = R4
+    0032 [line   87] 0x82814209  SETTABLE   R8[K[5]='hour'] = R5
+    0033 [line   87] 0x83018209  SETTABLE   R8[K[6]='min'] = R6
+    0034 [line   87] 0x8381C209  SETTABLE   R8[K[7]='sec'] = R7
+    0035 [line   87] 0x0100021E  RETURN     A=8 B=2 C=0
+    0036 [line   88] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'n_seconds': 0 -> 36
+    'mi': 1 -> 36
+    'hi': 2 -> 36
+    'di': 3 -> 36
+    'days': 7 -> 36
+    'hours': 13 -> 36
+    'minutes': 21 -> 36
+    'seconds': 30 -> 36
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x12F8
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 89 - 100
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'day'
+    K[001] = 0.0
+    K[002] = 'StringTable'
+    K[003] = 'Get'
+    K[004] = 652.0
+    K[005] = 'format'
+    K[006] = 'hour'
+    K[007] = 'min'
+    K[008] = 607.0
+    K[009] = 'sec'
+    K[010] = 606.0
+    K[011] = 604.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   90] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   90] 0x00000080  MOVE       R2 = R0
+    0002 [line   90] 0x0100805C  CALL       A=1 B=2 C=2
+    0003 [line   91] 0x00C00086  GETTABLE   R2 = R1[K[0]='day']
+    0004 [line   91] 0x80808018  LT         A=0 B=K[1]=0.0 C=R2
+    0005 [line   91] 0x80028016  JMP        A=0 sBx=11
+    0006 [line   92] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='StringTable'
+    0007 [line   92] 0x0140C086  GETTABLE   R2 = R2[K[3]='Get']
+    0008 [line   92] 0x000100C1  LOADK      R3 = K[4]=652.0
+    0009 [line   92] 0x0100809C  CALL       A=2 B=2 C=2
+    0010 [line   92] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+    0011 [line   92] 0x00C00106  GETTABLE   R4 = R1[K[0]='day']
+    0012 [line   92] 0x00C18146  GETTABLE   R5 = R1[K[6]='hour']
+    0013 [line   92] 0x00C1C186  GETTABLE   R6 = R1[K[7]='min']
+    0014 [line   92] 0x0280009D  TAILCALL   A=2 B=5 C=0
+    0015 [line   92] 0x0000009E  RETURN     A=2 B=0 C=0
+    0016 [line   92] 0x80094016  JMP        A=0 sBx=38
+    0017 [line   93] 0x00C18086  GETTABLE   R2 = R1[K[6]='hour']
+    0018 [line   93] 0x80808018  LT         A=0 B=K[1]=0.0 C=R2
+    0019 [line   93] 0x80028016  JMP        A=0 sBx=11
+    0020 [line   94] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='StringTable'
+    0021 [line   94] 0x0140C086  GETTABLE   R2 = R2[K[3]='Get']
+    0022 [line   94] 0x000200C1  LOADK      R3 = K[8]=607.0
+    0023 [line   94] 0x0100809C  CALL       A=2 B=2 C=2
+    0024 [line   94] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+    0025 [line   94] 0x00C18106  GETTABLE   R4 = R1[K[6]='hour']
+    0026 [line   94] 0x00C1C146  GETTABLE   R5 = R1[K[7]='min']
+    0027 [line   94] 0x00C24186  GETTABLE   R6 = R1[K[9]='sec']
+    0028 [line   94] 0x0280009D  TAILCALL   A=2 B=5 C=0
+    0029 [line   94] 0x0000009E  RETURN     A=2 B=0 C=0
+    0030 [line   94] 0x8005C016  JMP        A=0 sBx=24
+    0031 [line   95] 0x00C1C086  GETTABLE   R2 = R1[K[7]='min']
+    0032 [line   95] 0x80808018  LT         A=0 B=K[1]=0.0 C=R2
+    0033 [line   95] 0x80024016  JMP        A=0 sBx=10
+    0034 [line   96] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='StringTable'
+    0035 [line   96] 0x0140C086  GETTABLE   R2 = R2[K[3]='Get']
+    0036 [line   96] 0x000280C1  LOADK      R3 = K[10]=606.0
+    0037 [line   96] 0x0100809C  CALL       A=2 B=2 C=2
+    0038 [line   96] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+    0039 [line   96] 0x00C1C106  GETTABLE   R4 = R1[K[7]='min']
+    0040 [line   96] 0x00C24146  GETTABLE   R5 = R1[K[9]='sec']
+    0041 [line   96] 0x0200009D  TAILCALL   A=2 B=4 C=0
+    0042 [line   96] 0x0000009E  RETURN     A=2 B=0 C=0
+    0043 [line   96] 0x80028016  JMP        A=0 sBx=11
+    0044 [line   97] 0x00C24086  GETTABLE   R2 = R1[K[9]='sec']
+    0045 [line   97] 0x80808019  LE         A=0 B=K[1]=0.0 C=R2
+    0046 [line   97] 0x8001C016  JMP        A=0 sBx=8
+    0047 [line   98] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='StringTable'
+    0048 [line   98] 0x0140C086  GETTABLE   R2 = R2[K[3]='Get']
+    0049 [line   98] 0x0002C0C1  LOADK      R3 = K[11]=604.0
+    0050 [line   98] 0x0100809C  CALL       A=2 B=2 C=2
+    0051 [line   98] 0x0141408B  SELF       A=2 B=2 C=261 Bx=1285
+    0052 [line   98] 0x00C24106  GETTABLE   R4 = R1[K[9]='sec']
+    0053 [line   98] 0x0180009D  TAILCALL   A=2 B=3 C=0
+    0054 [line   98] 0x0000009E  RETURN     A=2 B=0 C=0
+    0055 [line  100] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'n_seconds': 0 -> 55
+    'tm': 3 -> 55
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0x158C
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 109 - 116
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_TrigGC'
+    K[001] = True
+    K[002] = 'm_DelayCreate'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  110] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  110] 0x0000401A  TEST       A=0 B=0 C=1
+    0002 [line  110] 0x80018016  JMP        A=0 sBx=7
+    0003 [line  111] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0004 [line  111] 0x0080801C  CALL       A=0 B=1 C=2
+    0005 [line  111] 0x00000008  SETUPVAL   A=0 B=0 C=0 Bx=0
+    0006 [line  112] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0007 [line  112] 0x80404009  SETTABLE   R0[K[0]='m_TrigGC'] = K[1]=True
+    0008 [line  113] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0009 [line  113] 0x81404009  SETTABLE   R0[K[2]='m_DelayCreate'] = K[1]=True
+    0010 [line  115] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0011 [line  115] 0x0100001E  RETURN     A=0 B=2 C=0
+    0012 [line  116] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0x1664
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 118 - 124
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'CreatePanel'
+    K[002] = 'RESPATH'
+    K[003] = 'Panel_FactionWar'
+    K[004] = 'Update'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  119] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  119] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  119] 0x80010016  JMP        A=0 sBx=5
+    0003 [line  120] 0x0040408B  SELF       A=2 B=0 C=257 Bx=257
+    0004 [line  120] 0x00008105  GETGLOBAL  R4 = GLOBAL K[2]='RESPATH'
+    0005 [line  120] 0x0240C106  GETTABLE   R4 = R4[K[3]='Panel_FactionWar']
+    0006 [line  120] 0x0180409C  CALL       A=2 B=3 C=1
+    0007 [line  120] 0x80004016  JMP        A=0 sBx=2
+    0008 [line  122] 0x0041008B  SELF       A=2 B=0 C=260 Bx=260
+    0009 [line  122] 0x0100409C  CALL       A=2 B=2 C=1
+    0010 [line  124] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    'cb': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0x1751
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 125 - 164
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'Faction'
+    K[003] = '_factionid'
+    K[004] = 0.0
+    K[005] = 'FlashTipMan'
+    K[006] = 'FlashTip'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 17005.0
+    K[010] = 'faction_verify'
+    K[011] = 'IsFunctionOpen'
+    K[012] = 'day'
+    K[013] = 652.0
+    K[014] = 'format'
+    K[015] = 'hour'
+    K[016] = 'min'
+    K[017] = 602.0
+    K[018] = 603.0
+    K[019] = 604.0
+    K[020] = 'sec'
+    K[021] = 17039.0
+    K[022] = -1.0
+    K[023] = 'warn'
+    K[024] = 'ECFactionWarMan.Instance()._function_open_time:'
+    K[025] = '_function_open_time'
+    K[026] = 17069.0
+    K[027] = 'GetFactionWarRequired'
+    K[028] = '_factionlevel'
+    K[029] = 17007.0
+    K[030] = 'faction_leval_verify'
+    K[031] = 'OpenPanel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  126] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  126] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  126] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  126] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  127] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line  127] 0x80000016  JMP        A=0 sBx=1
+    0006 [line  128] 0x0080001E  RETURN     A=0 B=1 C=0
+    0007 [line  130] 0x00C08086  GETTABLE   R2 = R1[K[2]='Faction']
+    0008 [line  130] 0x0140C086  GETTABLE   R2 = R2[K[3]='_factionid']
+    0009 [line  130] 0x01410017  EQ         A=0 B=R2 C=K[4]=0.0
+    0010 [line  130] 0x80020016  JMP        A=0 sBx=9
+    0011 [line  131] 0x00014085  GETGLOBAL  R2 = GLOBAL K[5]='FlashTipMan'
+    0012 [line  131] 0x01418086  GETTABLE   R2 = R2[K[6]='FlashTip']
+    0013 [line  131] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='StringTable'
+    0014 [line  131] 0x01C200C6  GETTABLE   R3 = R3[K[8]='Get']
+    0015 [line  131] 0x00024101  LOADK      R4 = K[9]=17005.0
+    0016 [line  131] 0x010080DC  CALL       A=3 B=2 C=2
+    0017 [line  131] 0x00028101  LOADK      R4 = K[10]='faction_verify'
+    0018 [line  131] 0x0180409C  CALL       A=2 B=3 C=1
+    0019 [line  132] 0x0080001E  RETURN     A=0 B=1 C=0
+    0020 [line  134] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0021 [line  134] 0x01400086  GETTABLE   R2 = R2[K[0]='Instance']
+    0022 [line  134] 0x0080809C  CALL       A=2 B=1 C=2
+    0023 [line  134] 0x0142C08B  SELF       A=2 B=2 C=267 Bx=1291
+    0024 [line  134] 0x0100C09C  CALL       A=2 B=2 C=3
+    0025 [line  135] 0x0000409A  TEST       A=2 B=0 C=1
+    0026 [line  135] 0x801A4016  JMP        A=0 sBx=106
+    0027 [line  136] 0x8200C018  LT         A=0 B=K[4]=0.0 C=R3
+    0028 [line  136] 0x80158016  JMP        A=0 sBx=87
+    0029 [line  137] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0030 [line  137] 0x01800140  MOVE       R5 = R3
+    0031 [line  137] 0x0100811C  CALL       A=4 B=2 C=2
+    0032 [line  138] 0x02800143  LOADNIL    A=5 B=5 C=0 Bx=2560
+    0033 [line  139] 0x02430186  GETTABLE   R6 = R4[K[12]='day']
+    0034 [line  139] 0x82018018  LT         A=0 B=K[4]=0.0 C=R6
+    0035 [line  139] 0x80028016  JMP        A=0 sBx=11
+    0036 [line  140] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='StringTable'
+    0037 [line  140] 0x03420186  GETTABLE   R6 = R6[K[8]='Get']
+    0038 [line  140] 0x000341C1  LOADK      R7 = K[13]=652.0
+    0039 [line  140] 0x0100819C  CALL       A=6 B=2 C=2
+    0040 [line  140] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0041 [line  140] 0x02430206  GETTABLE   R8 = R4[K[12]='day']
+    0042 [line  140] 0x0243C246  GETTABLE   R9 = R4[K[15]='hour']
+    0043 [line  140] 0x02440286  GETTABLE   R10 = R4[K[16]='min']
+    0044 [line  140] 0x0280819C  CALL       A=6 B=5 C=2
+    0045 [line  140] 0x03000140  MOVE       R5 = R6
+    0046 [line  140] 0x800DC016  JMP        A=0 sBx=56
+    0047 [line  141] 0x0243C186  GETTABLE   R6 = R4[K[15]='hour']
+    0048 [line  141] 0x82018018  LT         A=0 B=K[4]=0.0 C=R6
+    0049 [line  141] 0x80058016  JMP        A=0 sBx=23
+    0050 [line  142] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='StringTable'
+    0051 [line  142] 0x03420186  GETTABLE   R6 = R6[K[8]='Get']
+    0052 [line  142] 0x000441C1  LOADK      R7 = K[17]=602.0
+    0053 [line  142] 0x0100819C  CALL       A=6 B=2 C=2
+    0054 [line  142] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0055 [line  142] 0x0243C206  GETTABLE   R8 = R4[K[15]='hour']
+    0056 [line  142] 0x0180819C  CALL       A=6 B=3 C=2
+    0057 [line  142] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='StringTable'
+    0058 [line  142] 0x03C201C6  GETTABLE   R7 = R7[K[8]='Get']
+    0059 [line  142] 0x00048201  LOADK      R8 = K[18]=603.0
+    0060 [line  142] 0x010081DC  CALL       A=7 B=2 C=2
+    0061 [line  142] 0x03C381CB  SELF       A=7 B=7 C=270 Bx=3854
+    0062 [line  142] 0x02440246  GETTABLE   R9 = R4[K[16]='min']
+    0063 [line  142] 0x018081DC  CALL       A=7 B=3 C=2
+    0064 [line  142] 0x0001C205  GETGLOBAL  R8 = GLOBAL K[7]='StringTable'
+    0065 [line  142] 0x04420206  GETTABLE   R8 = R8[K[8]='Get']
+    0066 [line  142] 0x0004C241  LOADK      R9 = K[19]=604.0
+    0067 [line  142] 0x0100821C  CALL       A=8 B=2 C=2
+    0068 [line  142] 0x0443820B  SELF       A=8 B=8 C=270 Bx=4366
+    0069 [line  142] 0x02450286  GETTABLE   R10 = R4[K[20]='sec']
+    0070 [line  142] 0x0180821C  CALL       A=8 B=3 C=2
+    0071 [line  142] 0x03020155  CONCAT     A=5 B=6 C=8 Bx=3080
+    0072 [line  142] 0x80074016  JMP        A=0 sBx=30
+    0073 [line  143] 0x02440186  GETTABLE   R6 = R4[K[16]='min']
+    0074 [line  143] 0x82018018  LT         A=0 B=K[4]=0.0 C=R6
+    0075 [line  143] 0x8003C016  JMP        A=0 sBx=16
+    0076 [line  144] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='StringTable'
+    0077 [line  144] 0x03420186  GETTABLE   R6 = R6[K[8]='Get']
+    0078 [line  144] 0x000481C1  LOADK      R7 = K[18]=603.0
+    0079 [line  144] 0x0100819C  CALL       A=6 B=2 C=2
+    0080 [line  144] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0081 [line  144] 0x02440206  GETTABLE   R8 = R4[K[16]='min']
+    0082 [line  144] 0x0180819C  CALL       A=6 B=3 C=2
+    0083 [line  144] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='StringTable'
+    0084 [line  144] 0x03C201C6  GETTABLE   R7 = R7[K[8]='Get']
+    0085 [line  144] 0x0004C201  LOADK      R8 = K[19]=604.0
+    0086 [line  144] 0x010081DC  CALL       A=7 B=2 C=2
+    0087 [line  144] 0x03C381CB  SELF       A=7 B=7 C=270 Bx=3854
+    0088 [line  144] 0x02450246  GETTABLE   R9 = R4[K[20]='sec']
+    0089 [line  144] 0x018081DC  CALL       A=7 B=3 C=2
+    0090 [line  144] 0x0301C155  CONCAT     A=5 B=6 C=7 Bx=3079
+    0091 [line  144] 0x80028016  JMP        A=0 sBx=11
+    0092 [line  145] 0x02450186  GETTABLE   R6 = R4[K[20]='sec']
+    0093 [line  145] 0x82018018  LT         A=0 B=K[4]=0.0 C=R6
+    0094 [line  145] 0x8001C016  JMP        A=0 sBx=8
+    0095 [line  146] 0x0001C185  GETGLOBAL  R6 = GLOBAL K[7]='StringTable'
+    0096 [line  146] 0x03420186  GETTABLE   R6 = R6[K[8]='Get']
+    0097 [line  146] 0x0004C1C1  LOADK      R7 = K[19]=604.0
+    0098 [line  146] 0x0100819C  CALL       A=6 B=2 C=2
+    0099 [line  146] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0100 [line  146] 0x02450206  GETTABLE   R8 = R4[K[20]='sec']
+    0101 [line  146] 0x0180819C  CALL       A=6 B=3 C=2
+    0102 [line  146] 0x03000140  MOVE       R5 = R6
+    0103 [line  148] 0x0000015A  TEST       A=5 B=0 C=0
+    0104 [line  148] 0x80068016  JMP        A=0 sBx=27
+    0105 [line  149] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='FlashTipMan'
+    0106 [line  149] 0x03418186  GETTABLE   R6 = R6[K[6]='FlashTip']
+    0107 [line  149] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='StringTable'
+    0108 [line  149] 0x03C201C6  GETTABLE   R7 = R7[K[8]='Get']
+    0109 [line  149] 0x00054201  LOADK      R8 = K[21]=17039.0
+    0110 [line  149] 0x010081DC  CALL       A=7 B=2 C=2
+    0111 [line  149] 0x03C381CB  SELF       A=7 B=7 C=270 Bx=3854
+    0112 [line  149] 0x02800240  MOVE       R9 = R5
+    0113 [line  149] 0x018001DC  CALL       A=7 B=3 C=0
+    0114 [line  149] 0x0000419C  CALL       A=6 B=0 C=1
+    0115 [line  150] 0x8003C016  JMP        A=0 sBx=16
+    0116 [line  151] 0x01C58017  EQ         A=0 B=R3 C=K[22]=-1.0
+    0117 [line  151] 0x80034016  JMP        A=0 sBx=14
+    0118 [line  152] 0x0005C105  GETGLOBAL  R4 = GLOBAL K[23]='warn'
+    0119 [line  152] 0x00060141  LOADK      R5 = K[24]='ECFactionWarMan.Instance()._function_open_time:'
+    0120 [line  152] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0121 [line  152] 0x03400186  GETTABLE   R6 = R6[K[0]='Instance']
+    0122 [line  152] 0x0080819C  CALL       A=6 B=1 C=2
+    0123 [line  152] 0x03464186  GETTABLE   R6 = R6[K[25]='_function_open_time']
+    0124 [line  152] 0x0180411C  CALL       A=4 B=3 C=1
+    0125 [line  153] 0x00014105  GETGLOBAL  R4 = GLOBAL K[5]='FlashTipMan'
+    0126 [line  153] 0x02418106  GETTABLE   R4 = R4[K[6]='FlashTip']
+    0127 [line  153] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='StringTable'
+    0128 [line  153] 0x02C20146  GETTABLE   R5 = R5[K[8]='Get']
+    0129 [line  153] 0x00068181  LOADK      R6 = K[26]=17069.0
+    0130 [line  153] 0x0100015C  CALL       A=5 B=2 C=0
+    0131 [line  153] 0x0000411C  CALL       A=4 B=0 C=1
+    0132 [line  155] 0x0080001E  RETURN     A=0 B=1 C=0
+    0133 [line  157] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0134 [line  157] 0x0246C106  GETTABLE   R4 = R4[K[27]='GetFactionWarRequired']
+    0135 [line  157] 0x0080C11C  CALL       A=4 B=1 C=3
+    0136 [line  158] 0x00C08186  GETTABLE   R6 = R1[K[2]='Faction']
+    0137 [line  158] 0x03470186  GETTABLE   R6 = R6[K[28]='_factionlevel']
+    0138 [line  158] 0x03010018  LT         A=0 B=R6 C=R4
+    0139 [line  158] 0x8002C016  JMP        A=0 sBx=12
+    0140 [line  159] 0x00014185  GETGLOBAL  R6 = GLOBAL K[5]='FlashTipMan'
+    0141 [line  159] 0x03418186  GETTABLE   R6 = R6[K[6]='FlashTip']
+    0142 [line  159] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='StringTable'
+    0143 [line  159] 0x03C201C6  GETTABLE   R7 = R7[K[8]='Get']
+    0144 [line  159] 0x00074201  LOADK      R8 = K[29]=17007.0
+    0145 [line  159] 0x010081DC  CALL       A=7 B=2 C=2
+    0146 [line  159] 0x03C381CB  SELF       A=7 B=7 C=270 Bx=3854
+    0147 [line  159] 0x02000240  MOVE       R9 = R4
+    0148 [line  159] 0x018081DC  CALL       A=7 B=3 C=2
+    0149 [line  159] 0x00078201  LOADK      R8 = K[30]='faction_leval_verify'
+    0150 [line  159] 0x0180419C  CALL       A=6 B=3 C=1
+    0151 [line  160] 0x0080001E  RETURN     A=0 B=1 C=0
+    0152 [line  163] 0x0047C18B  SELF       A=6 B=0 C=287 Bx=287
+    0153 [line  163] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0154 [line  163] 0x0180419C  CALL       A=6 B=3 C=1
+    0155 [line  164] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 155
+    'hp': 4 -> 155
+    'isFunctionOpen': 25 -> 155
+    'leftTime': 25 -> 155
+    'tm': 32 -> 115
+    'tmp': 33 -> 115
+    'required_faction_level': 136 -> 155
+    'required_player_level': 136 -> 155
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1F13
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 166 - 178
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetCurrentWarPhase'
+    K[002] = 'RequestRegionList'
+    K[003] = '_curNation'
+    K[004] = 'RequestWarList'
+    K[005] = 'RequestRegionBidNum'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  167] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  167] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  167] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  167] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0004 [line  167] 0x0100805C  CALL       A=1 B=2 C=2
+    0005 [line  169] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0006 [line  169] 0x01408086  GETTABLE   R2 = R2[K[2]='RequestRegionList']
+    0007 [line  169] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='_curNation']
+    0008 [line  169] 0x0100409C  CALL       A=2 B=2 C=1
+    0009 [line  171] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0010 [line  171] 0x01410086  GETTABLE   R2 = R2[K[4]='RequestWarList']
+    0011 [line  171] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='_curNation']
+    0012 [line  171] 0x0100409C  CALL       A=2 B=2 C=1
+    0013 [line  175] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0014 [line  175] 0x01414086  GETTABLE   R2 = R2[K[5]='RequestRegionBidNum']
+    0015 [line  175] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='_curNation']
+    0016 [line  175] 0x0100409C  CALL       A=2 B=2 C=1
+    0017 [line  178] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'curState': 5 -> 17
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x207F
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 204 - 206
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_timeLabel'
+    K[001] = 'm_panel'
+    K[002] = 'FindDirect'
+    K[003] = 'Widget/Group_Btn/Btn_IntoWar/Txt_IntoWarTime'
+    K[004] = 'GetComponent'
+    K[005] = 'UILabel'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  205] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0001 [line  205] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0002 [line  205] 0x0000C0C1  LOADK      R3 = K[3]='Widget/Group_Btn/Btn_IntoWar/Txt_IntoWarTime'
+    0003 [line  205] 0x0180805C  CALL       A=1 B=3 C=2
+    0004 [line  205] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0005 [line  205] 0x000140C1  LOADK      R3 = K[5]='UILabel'
+    0006 [line  205] 0x0180805C  CALL       A=1 B=3 C=2
+    0007 [line  205] 0x80004009  SETTABLE   R0[K[0]='_timeLabel'] = R1
+    0008 [line  206] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x217E
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 207 - 216
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'disposeCleaner'
+    K[001] = '_curNation'
+    K[002] = 0.0
+    K[003] = '_curPhase'
+    K[004] = '_curStep'
+    K[005] = -1.0
+    K[006] = '_timeLabel'
+    K[007] = None
+    K[008] = 'StopTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  208] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  208] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  209] 0x80C08009  SETTABLE   R0[K[1]='_curNation'] = K[2]=0.0
+    0003 [line  210] 0x81C08009  SETTABLE   R0[K[3]='_curPhase'] = K[2]=0.0
+    0004 [line  211] 0x82414009  SETTABLE   R0[K[4]='_curStep'] = K[5]=-1.0
+    0005 [line  212] 0x8341C009  SETTABLE   R0[K[6]='_timeLabel'] = K[7]=None
+    0006 [line  213] 0x0042004B  SELF       A=1 B=0 C=264 Bx=264
+    0007 [line  213] 0x0100405C  CALL       A=1 B=2 C=1
+    0008 [line  215] 0x00008041  LOADK      R1 = K[2]=0.0
+    0009 [line  215] 0x00000048  SETUPVAL   A=1 B=0 C=0 Bx=0
+    0010 [line  216] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x228F
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 217 - 245
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'InitControls'
+    K[001] = 'EventManager'
+    K[002] = 'addHandlerWithCleaner'
+    K[003] = 'cleaner'
+    K[004] = 'UpdateNationList'
+    K[005] = '_curNation'
+    K[006] = 0.0
+    K[007] = 1.0
+    K[008] = 'Instance'
+    K[009] = 'm_HostPlayer'
+    K[010] = 'InfoData'
+    K[011] = 'Faction'
+    K[012] = 'RequestCropInfo'
+    K[013] = 'LuaUInt64'
+    K[014] = 'FromDouble'
+    K[015] = 'Update'
+    K[016] = 'RequestHPSignRegion'
+    K[017] = 'Request'
+    K[018] = 'SelectNation'
+    K[019] = 'm_panel'
+    K[020] = 'FindDirect'
+    K[021] = 'Widget/Group_Rtn/Rtn0'
+    K[022] = 'GetComponent'
+    K[023] = 'UIToggle'
+    K[024] = 'value'
+    K[025] = True
+    K[026] = 'StartTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  218] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  218] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  219] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0003 [line  219] 0x00C04046  GETTABLE   R1 = R1[K[1]='EventManager']
+    0004 [line  219] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0005 [line  219] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0006 [line  219] 0x01000104  GETUPVAL   A=4 B=2 C=0 Bx=1024
+    0007 [line  219] 0x0040C14B  SELF       A=5 B=0 C=259 Bx=259
+    0008 [line  219] 0x0100015C  CALL       A=5 B=2 C=0
+    0009 [line  219] 0x0000405C  CALL       A=1 B=0 C=1
+    0010 [line  221] 0x0041004B  SELF       A=1 B=0 C=260 Bx=260
+    0011 [line  221] 0x0100405C  CALL       A=1 B=2 C=1
+    0012 [line  223] 0x00414046  GETTABLE   R1 = R0[K[5]='_curNation']
+    0013 [line  223] 0x00C18017  EQ         A=0 B=R1 C=K[6]=0.0
+    0014 [line  223] 0x80000016  JMP        A=0 sBx=1
+    0015 [line  224] 0x82C1C009  SETTABLE   R0[K[5]='_curNation'] = K[7]=1.0
+    0016 [line  227] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0017 [line  227] 0x00C20046  GETTABLE   R1 = R1[K[8]='Instance']
+    0018 [line  227] 0x0080805C  CALL       A=1 B=1 C=2
+    0019 [line  227] 0x00C24046  GETTABLE   R1 = R1[K[9]='m_HostPlayer']
+    0020 [line  227] 0x00C28046  GETTABLE   R1 = R1[K[10]='InfoData']
+    0021 [line  227] 0x00C2C046  GETTABLE   R1 = R1[K[11]='Faction']
+    0022 [line  228] 0x00C18057  EQ         A=1 B=R1 C=K[6]=0.0
+    0023 [line  228] 0x80018016  JMP        A=0 sBx=7
+    0024 [line  229] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+    0025 [line  229] 0x01430086  GETTABLE   R2 = R2[K[12]='RequestCropInfo']
+    0026 [line  229] 0x000340C5  GETGLOBAL  R3 = GLOBAL K[13]='LuaUInt64'
+    0027 [line  229] 0x01C380C6  GETTABLE   R3 = R3[K[14]='FromDouble']
+    0028 [line  229] 0x00800100  MOVE       R4 = R1
+    0029 [line  229] 0x010000DC  CALL       A=3 B=2 C=0
+    0030 [line  229] 0x0000409C  CALL       A=2 B=0 C=1
+    0031 [line  232] 0x0043C08B  SELF       A=2 B=0 C=271 Bx=271
+    0032 [line  232] 0x0100409C  CALL       A=2 B=2 C=1
+    0033 [line  234] 0x01800084  GETUPVAL   A=2 B=3 C=0 Bx=1536
+    0034 [line  234] 0x01440086  GETTABLE   R2 = R2[K[16]='RequestHPSignRegion']
+    0035 [line  234] 0x0080409C  CALL       A=2 B=1 C=1
+    0036 [line  237] 0x0044408B  SELF       A=2 B=0 C=273 Bx=273
+    0037 [line  237] 0x0100409C  CALL       A=2 B=2 C=1
+    0038 [line  239] 0x0044808B  SELF       A=2 B=0 C=274 Bx=274
+    0039 [line  239] 0x00414106  GETTABLE   R4 = R0[K[5]='_curNation']
+    0040 [line  239] 0x0180409C  CALL       A=2 B=3 C=1
+    0041 [line  241] 0x0044C086  GETTABLE   R2 = R0[K[19]='m_panel']
+    0042 [line  241] 0x0145008B  SELF       A=2 B=2 C=276 Bx=1300
+    0043 [line  241] 0x00054101  LOADK      R4 = K[21]='Widget/Group_Rtn/Rtn0'
+    0044 [line  241] 0x00414146  GETTABLE   R5 = R0[K[5]='_curNation']
+    0045 [line  241] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+    0046 [line  241] 0x0180809C  CALL       A=2 B=3 C=2
+    0047 [line  242] 0x014580CB  SELF       A=3 B=2 C=278 Bx=1302
+    0048 [line  242] 0x0005C141  LOADK      R5 = K[23]='UIToggle'
+    0049 [line  242] 0x018080DC  CALL       A=3 B=3 C=2
+    0050 [line  242] 0x8C4640C9  SETTABLE   R3[K[24]='value'] = K[25]=True
+    0051 [line  244] 0x004680CB  SELF       A=3 B=0 C=282 Bx=282
+    0052 [line  244] 0x010040DC  CALL       A=3 B=2 C=1
+    0053 [line  245] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 53
+    'factionID': 22 -> 53
+    'rdo': 47 -> 53
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x2693
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 246 - 251
+    Params : 3
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'DestroyPanel'
+    K[001] = 'Instance'
+    K[002] = 'ResetData'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  247] 0x004000CB  SELF       A=3 B=0 C=256 Bx=256
+    0001 [line  247] 0x010040DC  CALL       A=3 B=2 C=1
+    0002 [line  248] 0x0000005A  TEST       A=1 B=0 C=0
+    0003 [line  248] 0x80010016  JMP        A=0 sBx=5
+    0004 [line  249] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0005 [line  249] 0x01C040C6  GETTABLE   R3 = R3[K[1]='Instance']
+    0006 [line  249] 0x008080DC  CALL       A=3 B=1 C=2
+    0007 [line  249] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+    0008 [line  249] 0x010040DC  CALL       A=3 B=2 C=1
+    0009 [line  251] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 9
+    'rolechange': 0 -> 9
+    'userchange': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x278D
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 253 - 259
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostInfo'
+    K[002] = 'nation'
+    K[003] = 'm_panel'
+    K[004] = 'FindDirect'
+    K[005] = 'Widget/Group_Rtn'
+    K[006] = 1.0
+    K[007] = 6.0
+    K[008] = 'setVisible'
+    K[009] = 'Rtn0'
+    K[010] = '/Group_Txt/Txt_MyNation'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  254] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  254] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  254] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  254] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostInfo']
+    0004 [line  254] 0x00C08046  GETTABLE   R1 = R1[K[2]='nation']
+    0005 [line  255] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_panel']
+    0006 [line  255] 0x0141008B  SELF       A=2 B=2 C=260 Bx=1284
+    0007 [line  255] 0x00014101  LOADK      R4 = K[5]='Widget/Group_Rtn'
+    0008 [line  255] 0x0180809C  CALL       A=2 B=3 C=2
+    0009 [line  256] 0x000180C1  LOADK      R3 = K[6]=1.0
+    0010 [line  256] 0x0001C101  LOADK      R4 = K[7]=6.0
+    0011 [line  256] 0x00018141  LOADK      R5 = K[6]=1.0
+    0012 [line  256] 0x800300E0  FORPREP    A=3 sBx=13
+    0013 [line  257] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0014 [line  257] 0x03C201C6  GETTABLE   R7 = R7[K[8]='setVisible']
+    0015 [line  257] 0x0141020B  SELF       A=8 B=2 C=260 Bx=1284
+    0016 [line  257] 0x00024281  LOADK      R10 = K[9]='Rtn0'
+    0017 [line  257] 0x030002C0  MOVE       R11 = R6
+    0018 [line  257] 0x00028301  LOADK      R12 = K[10]='/Group_Txt/Txt_MyNation'
+    0019 [line  257] 0x05030295  CONCAT     A=10 B=10 C=12 Bx=5132
+    0020 [line  257] 0x0180821C  CALL       A=8 B=3 C=2
+    0021 [line  257] 0x03004057  EQ         A=1 B=R6 C=R1
+    0022 [line  257] 0x80000016  JMP        A=0 sBx=1
+    0023 [line  257] 0x00004242  LOADBOOL   A=9 B=0 C=1
+    0024 [line  257] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0025 [line  257] 0x018041DC  CALL       A=7 B=3 C=1
+    0026 [line  256] 0x7FFC40DF  FORLOOP    A=3 sBx=-14
+    0027 [line  259] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 27
+    'nation': 5 -> 27
+    'groupObj': 9 -> 27
+    '(for index)': 12 -> 27
+    '(for limit)': 12 -> 27
+    '(for step)': 12 -> 27
+    'i': 13 -> 26
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x29E3
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 261 - 269
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'UpdatePhaseState'
+    K[001] = 'UpdateMainView'
+    K[002] = 'Instance'
+    K[003] = '_hasDailyReward'
+    K[004] = 'ShowReward'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  263] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  263] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  265] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0003 [line  265] 0x0100405C  CALL       A=1 B=2 C=1
+    0004 [line  267] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0005 [line  267] 0x00C08046  GETTABLE   R1 = R1[K[2]='Instance']
+    0006 [line  267] 0x0080805C  CALL       A=1 B=1 C=2
+    0007 [line  267] 0x00C0C046  GETTABLE   R1 = R1[K[3]='_hasDailyReward']
+    0008 [line  268] 0x0041008B  SELF       A=2 B=0 C=260 Bx=260
+    0009 [line  268] 0x00800100  MOVE       R4 = R1
+    0010 [line  268] 0x0180409C  CALL       A=2 B=3 C=1
+    0011 [line  269] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 11
+    'hasReward': 8 -> 11
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x2B03
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 271 - 276
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_timerID'
+    K[001] = 0.0
+    K[002] = 'GameUtil'
+    K[003] = 'RemoveGlobalTimer'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  272] 0x00400046  GETTABLE   R1 = R0[K[0]='_timerID']
+    0001 [line  272] 0x00C04057  EQ         A=1 B=R1 C=K[1]=0.0
+    0002 [line  272] 0x80010016  JMP        A=0 sBx=5
+    0003 [line  273] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='GameUtil'
+    0004 [line  273] 0x00C0C046  GETTABLE   R1 = R1[K[3]='RemoveGlobalTimer']
+    0005 [line  273] 0x00400086  GETTABLE   R2 = R0[K[0]='_timerID']
+    0006 [line  273] 0x0100405C  CALL       A=1 B=2 C=1
+    0007 [line  274] 0x80404009  SETTABLE   R0[K[0]='_timerID'] = K[1]=0.0
+    0008 [line  276] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 8
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x2BC0
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 277 - 285
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_timerID'
+    K[001] = 0.0
+    K[002] = 'TimerUpdate'
+    K[003] = 'GameUtil'
+    K[004] = 'AddGlobalTimer'
+    K[005] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  278] 0x00400046  GETTABLE   R1 = R0[K[0]='_timerID']
+    0001 [line  278] 0x00C04057  EQ         A=1 B=R1 C=K[1]=0.0
+    0002 [line  278] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  279] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  281] 0x0040804B  SELF       A=1 B=0 C=258 Bx=258
+    0005 [line  281] 0x0100405C  CALL       A=1 B=2 C=1
+    0006 [line  282] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='GameUtil'
+    0007 [line  282] 0x00C10046  GETTABLE   R1 = R1[K[4]='AddGlobalTimer']
+    0008 [line  282] 0x00014081  LOADK      R2 = K[5]=1.0
+    0009 [line  282] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0010 [line  284] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0011 [line  284] 0x00000000  MOVE       R0 = R0
+    0012 [line  282] 0x0200805C  CALL       A=1 B=4 C=2
+    0013 [line  284] 0x80004009  SETTABLE   R0[K[0]='_timerID'] = R1
+    0014 [line  285] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+
+        ============================================================
+        PROTO ROOT.15.0
+        Offset : 0x2C6B
+        Source : '@lua\\gui\\ecpanelfactionwar.lua'
+        Lines  : 282 - 284
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'TimerUpdate'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  283] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  283] 0x0040000B  SELF       A=0 B=0 C=256 Bx=256
+        0002 [line  283] 0x0100401C  CALL       A=0 B=2 C=1
+        0003 [line  284] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x2D26
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 289 - 292
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'Request'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  290] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  290] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line  290] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line  291] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0004 [line  291] 0x0100405C  CALL       A=1 B=2 C=1
+    0005 [line  292] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 3 -> 5
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x2DC0
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 296 - 302
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_panel'
+    K[002] = 'isnil'
+    K[003] = 'UpdatePhaseState'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  297] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  297] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line  297] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line  298] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0004 [line  298] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  298] 0x80014016  JMP        A=0 sBx=6
+    0006 [line  298] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0007 [line  298] 0x00C08046  GETTABLE   R1 = R1[K[2]='isnil']
+    0008 [line  298] 0x0000405A  TEST       A=1 B=0 C=1
+    0009 [line  298] 0x80004016  JMP        A=0 sBx=2
+    0010 [line  300] 0x0040C04B  SELF       A=1 B=0 C=259 Bx=259
+    0011 [line  300] 0x0100405C  CALL       A=1 B=2 C=1
+    0012 [line  302] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 3 -> 12
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x2EB3
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 305 - 352
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'isnil'
+    K[002] = 'Instance'
+    K[003] = 'GetCurrentWarPhase'
+    K[004] = '_curPhase'
+    K[005] = 'WAR_PHASE'
+    K[006] = 'Declaration'
+    K[007] = 'ClearBidInfo'
+    K[008] = '_curStep'
+    K[009] = 'GetCurrentPhaseDetail'
+    K[010] = 0.0
+    K[011] = 'Update'
+    K[012] = 'GameUtil'
+    K[013] = 'AddGlobalTimer'
+    K[014] = 3.0
+    K[015] = '_timeLabel'
+    K[016] = 'GetCurrentWarRegion'
+    K[017] = 5.0
+    K[018] = 1.0
+    K[019] = 'warn'
+    K[020] = 'can not get war info...'
+    K[021] = 'GetRegionWarOpenTime'
+    K[022] = 'GetRegionWarServerGMTTime'
+    K[023] = 'text'
+    K[024] = 'StringTable'
+    K[025] = 'Get'
+    K[026] = 17031.0
+    K[027] = 17020.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  306] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  306] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  306] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  306] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0004 [line  306] 0x00C04046  GETTABLE   R1 = R1[K[1]='isnil']
+    0005 [line  306] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  306] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  307] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  310] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0009 [line  310] 0x00C08046  GETTABLE   R1 = R1[K[2]='Instance']
+    0010 [line  310] 0x0080805C  CALL       A=1 B=1 C=2
+    0011 [line  310] 0x00C0C04B  SELF       A=1 B=1 C=259 Bx=771
+    0012 [line  310] 0x0100805C  CALL       A=1 B=2 C=2
+    0013 [line  311] 0x00410086  GETTABLE   R2 = R0[K[4]='_curPhase']
+    0014 [line  311] 0x00808057  EQ         A=1 B=R1 C=R2
+    0015 [line  311] 0x80024016  JMP        A=0 sBx=10
+    0016 [line  311] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0017 [line  311] 0x01414086  GETTABLE   R2 = R2[K[5]='WAR_PHASE']
+    0018 [line  311] 0x01418086  GETTABLE   R2 = R2[K[6]='Declaration']
+    0019 [line  311] 0x01004018  LT         A=0 B=R2 C=R1
+    0020 [line  311] 0x80010016  JMP        A=0 sBx=5
+    0021 [line  312] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0022 [line  312] 0x01408086  GETTABLE   R2 = R2[K[2]='Instance']
+    0023 [line  312] 0x0080809C  CALL       A=2 B=1 C=2
+    0024 [line  312] 0x0141C08B  SELF       A=2 B=2 C=263 Bx=1287
+    0025 [line  312] 0x0100409C  CALL       A=2 B=2 C=1
+    0026 [line  315] 0x00420086  GETTABLE   R2 = R0[K[8]='_curStep']
+    0027 [line  315] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0028 [line  315] 0x01C080C6  GETTABLE   R3 = R3[K[2]='Instance']
+    0029 [line  315] 0x008080DC  CALL       A=3 B=1 C=2
+    0030 [line  315] 0x01C240CB  SELF       A=3 B=3 C=265 Bx=1801
+    0031 [line  315] 0x010080DC  CALL       A=3 B=2 C=2
+    0032 [line  315] 0x0100C057  EQ         A=1 B=R2 C=R3
+    0033 [line  315] 0x8002C016  JMP        A=0 sBx=12
+    0034 [line  316] 0x00028081  LOADK      R2 = K[10]=0.0
+    0035 [line  316] 0x00800088  SETUPVAL   A=2 B=1 C=0 Bx=512
+    0036 [line  317] 0x0042C08B  SELF       A=2 B=0 C=267 Bx=267
+    0037 [line  317] 0x0100409C  CALL       A=2 B=2 C=1
+    0038 [line  318] 0x00030085  GETGLOBAL  R2 = GLOBAL K[12]='GameUtil'
+    0039 [line  318] 0x01434086  GETTABLE   R2 = R2[K[13]='AddGlobalTimer']
+    0040 [line  318] 0x000380C1  LOADK      R3 = K[14]=3.0
+    0041 [line  318] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0042 [line  320] 0x00000164  CLOSURE    R5 = PROTO[0]
+    0043 [line  320] 0x00000000  MOVE       R0 = R0
+    0044 [line  318] 0x0200409C  CALL       A=2 B=4 C=1
+    0045 [line  321] 0x0080001E  RETURN     A=0 B=1 C=0
+    0046 [line  324] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+    0047 [line  324] 0x0080409C  CALL       A=2 B=1 C=1
+    0048 [line  326] 0x0043C086  GETTABLE   R2 = R0[K[15]='_timeLabel']
+    0049 [line  326] 0x0000009A  TEST       A=2 B=0 C=0
+    0050 [line  326] 0x8000C016  JMP        A=0 sBx=4
+    0051 [line  326] 0x0043C086  GETTABLE   R2 = R0[K[15]='_timeLabel']
+    0052 [line  326] 0x01404086  GETTABLE   R2 = R2[K[1]='isnil']
+    0053 [line  326] 0x0000009A  TEST       A=2 B=0 C=0
+    0054 [line  326] 0x80000016  JMP        A=0 sBx=1
+    0055 [line  327] 0x0080001E  RETURN     A=0 B=1 C=0
+    0056 [line  329] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0057 [line  329] 0x01408086  GETTABLE   R2 = R2[K[2]='Instance']
+    0058 [line  329] 0x0080809C  CALL       A=2 B=1 C=2
+    0059 [line  329] 0x0144008B  SELF       A=2 B=2 C=272 Bx=1296
+    0060 [line  329] 0x0100809C  CALL       A=2 B=2 C=2
+    0061 [line  330] 0x01428017  EQ         A=0 B=R2 C=K[10]=0.0
+    0062 [line  330] 0x8006C016  JMP        A=0 sBx=28
+    0063 [line  331] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0064 [line  331] 0x01C080C6  GETTABLE   R3 = R3[K[2]='Instance']
+    0065 [line  331] 0x008080DC  CALL       A=3 B=1 C=2
+    0066 [line  331] 0x01C0C0CB  SELF       A=3 B=3 C=259 Bx=1795
+    0067 [line  331] 0x010080DC  CALL       A=3 B=2 C=2
+    0068 [line  331] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0069 [line  331] 0x02414106  GETTABLE   R4 = R4[K[5]='WAR_PHASE']
+    0070 [line  331] 0x02418106  GETTABLE   R4 = R4[K[6]='Declaration']
+    0071 [line  331] 0x0200C018  LT         A=0 B=R4 C=R3
+    0072 [line  331] 0x80040016  JMP        A=0 sBx=17
+    0073 [line  332] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0074 [line  332] 0x01C44018  LT         A=0 B=R3 C=K[17]=5.0
+    0075 [line  332] 0x80028016  JMP        A=0 sBx=11
+    0076 [line  333] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0077 [line  333] 0x01C480CC  ADD        A=3 B=R3 C=K[18]=1.0
+    0078 [line  333] 0x008000C8  SETUPVAL   A=3 B=1 C=0 Bx=512
+    0079 [line  334] 0x000300C5  GETGLOBAL  R3 = GLOBAL K[12]='GameUtil'
+    0080 [line  334] 0x01C340C6  GETTABLE   R3 = R3[K[13]='AddGlobalTimer']
+    0081 [line  334] 0x00038101  LOADK      R4 = K[14]=3.0
+    0082 [line  334] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0083 [line  336] 0x000041A4  CLOSURE    R6 = PROTO[1]
+    0084 [line  336] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0085 [line  334] 0x020040DC  CALL       A=3 B=4 C=1
+    0086 [line  336] 0x80008016  JMP        A=0 sBx=3
+    0087 [line  338] 0x0004C0C5  GETGLOBAL  R3 = GLOBAL K[19]='warn'
+    0088 [line  338] 0x00050101  LOADK      R4 = K[20]='can not get war info...'
+    0089 [line  338] 0x010040DC  CALL       A=3 B=2 C=1
+    0090 [line  341] 0x0080001E  RETURN     A=0 B=1 C=0
+    0091 [line  343] 0x010000C0  MOVE       R3 = R2
+    0092 [line  344] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0093 [line  344] 0x02408106  GETTABLE   R4 = R4[K[2]='Instance']
+    0094 [line  344] 0x0080811C  CALL       A=4 B=1 C=2
+    0095 [line  344] 0x0245410B  SELF       A=4 B=4 C=277 Bx=2325
+    0096 [line  344] 0x01800180  MOVE       R6 = R3
+    0097 [line  344] 0x0180811C  CALL       A=4 B=3 C=2
+    0098 [line  345] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0099 [line  345] 0x02C58146  GETTABLE   R5 = R5[K[22]='GetRegionWarServerGMTTime']
+    0100 [line  345] 0x0080815C  CALL       A=5 B=1 C=2
+    0101 [line  346] 0x0201418D  SUB        A=6 B=R4 C=R5
+    0102 [line  346] 0x0343818C  ADD        A=6 B=R6 C=K[14]=3.0
+    0103 [line  347] 0x03428018  LT         A=0 B=R6 C=K[10]=0.0
+    0104 [line  347] 0x80018016  JMP        A=0 sBx=7
+    0105 [line  348] 0x0043C1C6  GETTABLE   R7 = R0[K[15]='_timeLabel']
+    0106 [line  348] 0x00060205  GETGLOBAL  R8 = GLOBAL K[24]='StringTable'
+    0107 [line  348] 0x04464206  GETTABLE   R8 = R8[K[25]='Get']
+    0108 [line  348] 0x00068241  LOADK      R9 = K[26]=17031.0
+    0109 [line  348] 0x0100821C  CALL       A=8 B=2 C=2
+    0110 [line  348] 0x8B8201C9  SETTABLE   R7[K[23]='text'] = R8
+    0111 [line  348] 0x80024016  JMP        A=0 sBx=10
+    0112 [line  350] 0x0043C1C6  GETTABLE   R7 = R0[K[15]='_timeLabel']
+    0113 [line  350] 0x02000204  GETUPVAL   A=8 B=4 C=0 Bx=2048
+    0114 [line  350] 0x03000240  MOVE       R9 = R6
+    0115 [line  350] 0x0100821C  CALL       A=8 B=2 C=2
+    0116 [line  350] 0x00060245  GETGLOBAL  R9 = GLOBAL K[24]='StringTable'
+    0117 [line  350] 0x04C64246  GETTABLE   R9 = R9[K[25]='Get']
+    0118 [line  350] 0x0006C281  LOADK      R10 = K[27]=17020.0
+    0119 [line  350] 0x0100825C  CALL       A=9 B=2 C=2
+    0120 [line  350] 0x04024215  CONCAT     A=8 B=8 C=9 Bx=4105
+    0121 [line  350] 0x8B8201C9  SETTABLE   R7[K[23]='text'] = R8
+    0122 [line  352] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 122
+    'tmpPhase': 13 -> 122
+    'lord_region_id': 61 -> 122
+    'region_id': 92 -> 122
+    'open_time': 98 -> 122
+    'cur_time': 101 -> 122
+    'left': 103 -> 122
+
+        ============================================================
+        PROTO ROOT.18.0
+        Offset : 0x3274
+        Source : '@lua\\gui\\ecpanelfactionwar.lua'
+        Lines  : 318 - 320
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Request'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  319] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  319] 0x0040000B  SELF       A=0 B=0 C=256 Bx=256
+        0002 [line  319] 0x0100401C  CALL       A=0 B=2 C=1
+        0003 [line  320] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.18.1
+        Offset : 0x32D2
+        Source : '@lua\\gui\\ecpanelfactionwar.lua'
+        Lines  : 334 - 336
+        Params : 0
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line  335] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  335] 0x0080401C  CALL       A=0 B=1 C=1
+        0002 [line  336] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x3602
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 353 - 363
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'STEP_PHASE'
+    K[001] = 'War_1_Declaration'
+    K[002] = 'War_1_Fight'
+    K[003] = 'StringTable'
+    K[004] = 'Get'
+    K[005] = 17023.0
+    K[006] = 17024.0
+    K[007] = 17025.0
+    K[008] = 'War_2_Declaration'
+    K[009] = 'War_2_Fight'
+    K[010] = 17026.0
+    K[011] = 17027.0
+    K[012] = 17028.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  354] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  354] 0x00C00046  GETTABLE   R1 = R1[K[0]='STEP_PHASE']
+    0002 [line  354] 0x00C04046  GETTABLE   R1 = R1[K[1]='War_1_Declaration']
+    0003 [line  354] 0x00800019  LE         A=0 B=R1 C=R0
+    0004 [line  354] 0x80048016  JMP        A=0 sBx=19
+    0005 [line  354] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0006 [line  354] 0x00C00046  GETTABLE   R1 = R1[K[0]='STEP_PHASE']
+    0007 [line  354] 0x00C08046  GETTABLE   R1 = R1[K[2]='War_1_Fight']
+    0008 [line  354] 0x00004019  LE         A=0 B=R0 C=R1
+    0009 [line  354] 0x80034016  JMP        A=0 sBx=14
+    0010 [line  355] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='StringTable'
+    0011 [line  355] 0x00C10046  GETTABLE   R1 = R1[K[4]='Get']
+    0012 [line  355] 0x00014081  LOADK      R2 = K[5]=17023.0
+    0013 [line  355] 0x0100805C  CALL       A=1 B=2 C=2
+    0014 [line  355] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='StringTable'
+    0015 [line  355] 0x01410086  GETTABLE   R2 = R2[K[4]='Get']
+    0016 [line  355] 0x000180C1  LOADK      R3 = K[6]=17024.0
+    0017 [line  355] 0x0100809C  CALL       A=2 B=2 C=2
+    0018 [line  355] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='StringTable'
+    0019 [line  355] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Get']
+    0020 [line  355] 0x0001C101  LOADK      R4 = K[7]=17025.0
+    0021 [line  355] 0x010000DC  CALL       A=3 B=2 C=0
+    0022 [line  355] 0x0000005E  RETURN     A=1 B=0 C=0
+    0023 [line  355] 0x800DC016  JMP        A=0 sBx=56
+    0024 [line  356] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0025 [line  356] 0x00C00046  GETTABLE   R1 = R1[K[0]='STEP_PHASE']
+    0026 [line  356] 0x00C20046  GETTABLE   R1 = R1[K[8]='War_2_Declaration']
+    0027 [line  356] 0x00800019  LE         A=0 B=R1 C=R0
+    0028 [line  356] 0x80048016  JMP        A=0 sBx=19
+    0029 [line  356] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0030 [line  356] 0x00C00046  GETTABLE   R1 = R1[K[0]='STEP_PHASE']
+    0031 [line  356] 0x00C24046  GETTABLE   R1 = R1[K[9]='War_2_Fight']
+    0032 [line  356] 0x00004019  LE         A=0 B=R0 C=R1
+    0033 [line  356] 0x80034016  JMP        A=0 sBx=14
+    0034 [line  357] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='StringTable'
+    0035 [line  357] 0x00C10046  GETTABLE   R1 = R1[K[4]='Get']
+    0036 [line  357] 0x00028081  LOADK      R2 = K[10]=17026.0
+    0037 [line  357] 0x0100805C  CALL       A=1 B=2 C=2
+    0038 [line  357] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='StringTable'
+    0039 [line  357] 0x01410086  GETTABLE   R2 = R2[K[4]='Get']
+    0040 [line  357] 0x0002C0C1  LOADK      R3 = K[11]=17027.0
+    0041 [line  357] 0x0100809C  CALL       A=2 B=2 C=2
+    0042 [line  357] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='StringTable'
+    0043 [line  357] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Get']
+    0044 [line  357] 0x00030101  LOADK      R4 = K[12]=17028.0
+    0045 [line  357] 0x010000DC  CALL       A=3 B=2 C=0
+    0046 [line  357] 0x0000005E  RETURN     A=1 B=0 C=0
+    0047 [line  357] 0x8007C016  JMP        A=0 sBx=32
+    0048 [line  358] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0049 [line  358] 0x00C00046  GETTABLE   R1 = R1[K[0]='STEP_PHASE']
+    0050 [line  358] 0x00C04046  GETTABLE   R1 = R1[K[1]='War_1_Declaration']
+    0051 [line  358] 0x00004018  LT         A=0 B=R0 C=R1
+    0052 [line  358] 0x80034016  JMP        A=0 sBx=14
+    0053 [line  359] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='StringTable'
+    0054 [line  359] 0x00C10046  GETTABLE   R1 = R1[K[4]='Get']
+    0055 [line  359] 0x00014081  LOADK      R2 = K[5]=17023.0
+    0056 [line  359] 0x0100805C  CALL       A=1 B=2 C=2
+    0057 [line  359] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='StringTable'
+    0058 [line  359] 0x01410086  GETTABLE   R2 = R2[K[4]='Get']
+    0059 [line  359] 0x000180C1  LOADK      R3 = K[6]=17024.0
+    0060 [line  359] 0x0100809C  CALL       A=2 B=2 C=2
+    0061 [line  359] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='StringTable'
+    0062 [line  359] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Get']
+    0063 [line  359] 0x0001C101  LOADK      R4 = K[7]=17025.0
+    0064 [line  359] 0x010000DC  CALL       A=3 B=2 C=0
+    0065 [line  359] 0x0000005E  RETURN     A=1 B=0 C=0
+    0066 [line  359] 0x80030016  JMP        A=0 sBx=13
+    0067 [line  361] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='StringTable'
+    0068 [line  361] 0x00C10046  GETTABLE   R1 = R1[K[4]='Get']
+    0069 [line  361] 0x00028081  LOADK      R2 = K[10]=17026.0
+    0070 [line  361] 0x0100805C  CALL       A=1 B=2 C=2
+    0071 [line  361] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='StringTable'
+    0072 [line  361] 0x01410086  GETTABLE   R2 = R2[K[4]='Get']
+    0073 [line  361] 0x0002C0C1  LOADK      R3 = K[11]=17027.0
+    0074 [line  361] 0x0100809C  CALL       A=2 B=2 C=2
+    0075 [line  361] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='StringTable'
+    0076 [line  361] 0x01C100C6  GETTABLE   R3 = R3[K[4]='Get']
+    0077 [line  361] 0x00030101  LOADK      R4 = K[12]=17028.0
+    0078 [line  361] 0x010000DC  CALL       A=3 B=2 C=0
+    0079 [line  361] 0x0000005E  RETURN     A=1 B=0 C=0
+    0080 [line  363] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'st': 0 -> 80
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x3985
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 366 - 421
+    Params : 1
+    Stack  : 34
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'FindDirect'
+    K[002] = 'Widget/SubPanel_Map/Txt_SignUpHit'
+    K[003] = 'Widget/SubPanel_Map/Txt_PrepareHit'
+    K[004] = 'Widget/SubPanel_Map/Txt_OpenWarHit'
+    K[005] = 1.0
+    K[006] = 3.0
+    K[007] = 'Widget/Group_Progress/Group_Step0'
+    K[008] = 'Widget/Group_Btn/Btn_IntoWar'
+    K[009] = 'Widget/Group_Btn/Btn_GetQuest'
+    K[010] = 'Instance'
+    K[011] = 'GetCurrentWarPhase'
+    K[012] = 'GetCurrentPhaseDetail'
+    K[013] = 'SetActive'
+    K[014] = 'WAR_PHASE'
+    K[015] = 'Declaration'
+    K[016] = 'Prepare'
+    K[017] = 'STEP_PHASE'
+    K[018] = 'War_1_Declaration'
+    K[019] = 'War_2_Declaration'
+    K[020] = 'War_1_Prepare'
+    K[021] = 'War_2_Prepare'
+    K[022] = 'War_1_Fight'
+    K[023] = 'War_2_Fight'
+    K[024] = 'GetComponent'
+    K[025] = 'UIToggle'
+    K[026] = 'value'
+    K[027] = 2.0
+    K[028] = 'Txt_Time'
+    K[029] = 'UILabel'
+    K[030] = 'text'
+    K[031] = 'CanAttendWar'
+    K[032] = 'isRegionWarScene'
+    K[033] = '_successEnd'
+    K[034] = 'OneMinutesLeft'
+    K[035] = 'isRegionWarJustFinished'
+    K[036] = 'LogWarn'
+    K[037] = 'canGoInto:'
+    K[038] = 'canGoTask:'
+    K[039] = 'GetCurrentWarRegion'
+    K[040] = 0.0
+    K[041] = 'GetNationAndSceneID'
+    K[042] = 'GetSectionName'
+    K[043] = 'getNationName'
+    K[044] = 'setTextAndColor'
+    K[045] = 'Txt_MyWar'
+    K[046] = 'StringTable'
+    K[047] = 'Get'
+    K[048] = 17021.0
+    K[049] = 'format'
+    K[050] = '_curStep'
+    K[051] = '_curPhase'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  367] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  367] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0002 [line  367] 0x000080C1  LOADK      R3 = K[2]='Widget/SubPanel_Map/Txt_SignUpHit'
+    0003 [line  367] 0x0180805C  CALL       A=1 B=3 C=2
+    0004 [line  368] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0005 [line  368] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0006 [line  368] 0x0000C101  LOADK      R4 = K[3]='Widget/SubPanel_Map/Txt_PrepareHit'
+    0007 [line  368] 0x0180809C  CALL       A=2 B=3 C=2
+    0008 [line  369] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_panel']
+    0009 [line  369] 0x01C040CB  SELF       A=3 B=3 C=257 Bx=1793
+    0010 [line  369] 0x00010141  LOADK      R5 = K[4]='Widget/SubPanel_Map/Txt_OpenWarHit'
+    0011 [line  369] 0x018080DC  CALL       A=3 B=3 C=2
+    0012 [line  370] 0x0000010A  NEWTABLE   A=4 B=0 C=0 Bx=0
+    0013 [line  371] 0x00014141  LOADK      R5 = K[5]=1.0
+    0014 [line  371] 0x00018181  LOADK      R6 = K[6]=3.0
+    0015 [line  371] 0x000141C1  LOADK      R7 = K[5]=1.0
+    0016 [line  371] 0x80018160  FORPREP    A=5 sBx=7
+    0017 [line  372] 0x00400246  GETTABLE   R9 = R0[K[0]='m_panel']
+    0018 [line  372] 0x04C0424B  SELF       A=9 B=9 C=257 Bx=4865
+    0019 [line  372] 0x0001C2C1  LOADK      R11 = K[7]='Widget/Group_Progress/Group_Step0'
+    0020 [line  372] 0x04000300  MOVE       R12 = R8
+    0021 [line  372] 0x058302D5  CONCAT     A=11 B=11 C=12 Bx=5644
+    0022 [line  372] 0x0180825C  CALL       A=9 B=3 C=2
+    0023 [line  372] 0x04024109  SETTABLE   R4[R8] = R9
+    0024 [line  371] 0x7FFDC15F  FORLOOP    A=5 sBx=-8
+    0025 [line  374] 0x00400146  GETTABLE   R5 = R0[K[0]='m_panel']
+    0026 [line  374] 0x02C0414B  SELF       A=5 B=5 C=257 Bx=2817
+    0027 [line  374] 0x000201C1  LOADK      R7 = K[8]='Widget/Group_Btn/Btn_IntoWar'
+    0028 [line  374] 0x0180815C  CALL       A=5 B=3 C=2
+    0029 [line  375] 0x00400186  GETTABLE   R6 = R0[K[0]='m_panel']
+    0030 [line  375] 0x0340418B  SELF       A=6 B=6 C=257 Bx=3329
+    0031 [line  375] 0x00024201  LOADK      R8 = K[9]='Widget/Group_Btn/Btn_GetQuest'
+    0032 [line  375] 0x0180819C  CALL       A=6 B=3 C=2
+    0033 [line  377] 0x000001C4  GETUPVAL   A=7 B=0 C=0 Bx=0
+    0034 [line  377] 0x03C281C6  GETTABLE   R7 = R7[K[10]='Instance']
+    0035 [line  377] 0x008081DC  CALL       A=7 B=1 C=2
+    0036 [line  377] 0x03C2C1CB  SELF       A=7 B=7 C=267 Bx=3851
+    0037 [line  377] 0x010081DC  CALL       A=7 B=2 C=2
+    0038 [line  378] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0039 [line  378] 0x04428206  GETTABLE   R8 = R8[K[10]='Instance']
+    0040 [line  378] 0x0080821C  CALL       A=8 B=1 C=2
+    0041 [line  378] 0x0443020B  SELF       A=8 B=8 C=268 Bx=4364
+    0042 [line  378] 0x0100821C  CALL       A=8 B=2 C=2
+    0043 [line  380] 0x00C3424B  SELF       A=9 B=1 C=269 Bx=781
+    0044 [line  380] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0045 [line  380] 0x05C382C6  GETTABLE   R11 = R11[K[14]='WAR_PHASE']
+    0046 [line  380] 0x05C3C2C6  GETTABLE   R11 = R11[K[15]='Declaration']
+    0047 [line  380] 0x0382C059  LE         A=1 B=R7 C=R11
+    0048 [line  380] 0x80000016  JMP        A=0 sBx=1
+    0049 [line  380] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0050 [line  380] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0051 [line  380] 0x0180425C  CALL       A=9 B=3 C=1
+    0052 [line  381] 0x0143424B  SELF       A=9 B=2 C=269 Bx=1293
+    0053 [line  381] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0054 [line  381] 0x05C382C6  GETTABLE   R11 = R11[K[14]='WAR_PHASE']
+    0055 [line  381] 0x05C3C2C6  GETTABLE   R11 = R11[K[15]='Declaration']
+    0056 [line  381] 0x0581C018  LT         A=0 B=R11 C=R7
+    0057 [line  381] 0x80010016  JMP        A=0 sBx=5
+    0058 [line  381] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0059 [line  381] 0x05C382C6  GETTABLE   R11 = R11[K[14]='WAR_PHASE']
+    0060 [line  381] 0x05C402C6  GETTABLE   R11 = R11[K[16]='Prepare']
+    0061 [line  381] 0x0382C059  LE         A=1 B=R7 C=R11
+    0062 [line  381] 0x80000016  JMP        A=0 sBx=1
+    0063 [line  381] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0064 [line  381] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0065 [line  381] 0x0180425C  CALL       A=9 B=3 C=1
+    0066 [line  382] 0x01C3424B  SELF       A=9 B=3 C=269 Bx=1805
+    0067 [line  382] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0068 [line  382] 0x05C382C6  GETTABLE   R11 = R11[K[14]='WAR_PHASE']
+    0069 [line  382] 0x05C402C6  GETTABLE   R11 = R11[K[16]='Prepare']
+    0070 [line  382] 0x0581C058  LT         A=1 B=R11 C=R7
+    0071 [line  382] 0x80000016  JMP        A=0 sBx=1
+    0072 [line  382] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0073 [line  382] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0074 [line  382] 0x0180425C  CALL       A=9 B=3 C=1
+    0075 [line  384] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0076 [line  384] 0x04C44246  GETTABLE   R9 = R9[K[17]='STEP_PHASE']
+    0077 [line  384] 0x04C48246  GETTABLE   R9 = R9[K[18]='War_1_Declaration']
+    0078 [line  384] 0x04024057  EQ         A=1 B=R8 C=R9
+    0079 [line  384] 0x80014016  JMP        A=0 sBx=6
+    0080 [line  384] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0081 [line  384] 0x04C44246  GETTABLE   R9 = R9[K[17]='STEP_PHASE']
+    0082 [line  384] 0x04C4C246  GETTABLE   R9 = R9[K[19]='War_2_Declaration']
+    0083 [line  384] 0x04024057  EQ         A=1 B=R8 C=R9
+    0084 [line  384] 0x80000016  JMP        A=0 sBx=1
+    0085 [line  384] 0x00004242  LOADBOOL   A=9 B=0 C=1
+    0086 [line  384] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0087 [line  385] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0088 [line  385] 0x05444286  GETTABLE   R10 = R10[K[17]='STEP_PHASE']
+    0089 [line  385] 0x05450286  GETTABLE   R10 = R10[K[20]='War_1_Prepare']
+    0090 [line  385] 0x04028057  EQ         A=1 B=R8 C=R10
+    0091 [line  385] 0x80014016  JMP        A=0 sBx=6
+    0092 [line  385] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0093 [line  385] 0x05444286  GETTABLE   R10 = R10[K[17]='STEP_PHASE']
+    0094 [line  385] 0x05454286  GETTABLE   R10 = R10[K[21]='War_2_Prepare']
+    0095 [line  385] 0x04028057  EQ         A=1 B=R8 C=R10
+    0096 [line  385] 0x80000016  JMP        A=0 sBx=1
+    0097 [line  385] 0x00004282  LOADBOOL   A=10 B=0 C=1
+    0098 [line  385] 0x00800282  LOADBOOL   A=10 B=1 C=0
+    0099 [line  386] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0100 [line  386] 0x05C442C6  GETTABLE   R11 = R11[K[17]='STEP_PHASE']
+    0101 [line  386] 0x05C582C6  GETTABLE   R11 = R11[K[22]='War_1_Fight']
+    0102 [line  386] 0x0402C057  EQ         A=1 B=R8 C=R11
+    0103 [line  386] 0x80014016  JMP        A=0 sBx=6
+    0104 [line  386] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0105 [line  386] 0x05C442C6  GETTABLE   R11 = R11[K[17]='STEP_PHASE']
+    0106 [line  386] 0x05C5C2C6  GETTABLE   R11 = R11[K[23]='War_2_Fight']
+    0107 [line  386] 0x0402C057  EQ         A=1 B=R8 C=R11
+    0108 [line  386] 0x80000016  JMP        A=0 sBx=1
+    0109 [line  386] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0110 [line  386] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0111 [line  388] 0x02414306  GETTABLE   R12 = R4[K[5]=1.0]
+    0112 [line  388] 0x0646030B  SELF       A=12 B=12 C=280 Bx=6424
+    0113 [line  388] 0x00064381  LOADK      R14 = K[25]='UIToggle'
+    0114 [line  388] 0x0180831C  CALL       A=12 B=3 C=2
+    0115 [line  388] 0x8D024309  SETTABLE   R12[K[26]='value'] = R9
+    0116 [line  389] 0x0246C306  GETTABLE   R12 = R4[K[27]=2.0]
+    0117 [line  389] 0x0646030B  SELF       A=12 B=12 C=280 Bx=6424
+    0118 [line  389] 0x00064381  LOADK      R14 = K[25]='UIToggle'
+    0119 [line  389] 0x0180831C  CALL       A=12 B=3 C=2
+    0120 [line  389] 0x8D028309  SETTABLE   R12[K[26]='value'] = R10
+    0121 [line  390] 0x02418306  GETTABLE   R12 = R4[K[6]=3.0]
+    0122 [line  390] 0x0646030B  SELF       A=12 B=12 C=280 Bx=6424
+    0123 [line  390] 0x00064381  LOADK      R14 = K[25]='UIToggle'
+    0124 [line  390] 0x0180831C  CALL       A=12 B=3 C=2
+    0125 [line  390] 0x8D02C309  SETTABLE   R12[K[26]='value'] = R11
+    0126 [line  392] 0x00800304  GETUPVAL   A=12 B=1 C=0 Bx=512
+    0127 [line  392] 0x04000340  MOVE       R13 = R8
+    0128 [line  392] 0x0101031C  CALL       A=12 B=2 C=4
+    0129 [line  393] 0x024143C6  GETTABLE   R15 = R4[K[5]=1.0]
+    0130 [line  393] 0x07C043CB  SELF       A=15 B=15 C=257 Bx=7937
+    0131 [line  393] 0x00070441  LOADK      R17 = K[28]='Txt_Time'
+    0132 [line  393] 0x018083DC  CALL       A=15 B=3 C=2
+    0133 [line  393] 0x07C603CB  SELF       A=15 B=15 C=280 Bx=7960
+    0134 [line  393] 0x00074441  LOADK      R17 = K[29]='UILabel'
+    0135 [line  393] 0x018083DC  CALL       A=15 B=3 C=2
+    0136 [line  393] 0x8F0303C9  SETTABLE   R15[K[30]='text'] = R12
+    0137 [line  394] 0x0246C3C6  GETTABLE   R15 = R4[K[27]=2.0]
+    0138 [line  394] 0x07C043CB  SELF       A=15 B=15 C=257 Bx=7937
+    0139 [line  394] 0x00070441  LOADK      R17 = K[28]='Txt_Time'
+    0140 [line  394] 0x018083DC  CALL       A=15 B=3 C=2
+    0141 [line  394] 0x07C603CB  SELF       A=15 B=15 C=280 Bx=7960
+    0142 [line  394] 0x00074441  LOADK      R17 = K[29]='UILabel'
+    0143 [line  394] 0x018083DC  CALL       A=15 B=3 C=2
+    0144 [line  394] 0x8F0343C9  SETTABLE   R15[K[30]='text'] = R13
+    0145 [line  395] 0x024183C6  GETTABLE   R15 = R4[K[6]=3.0]
+    0146 [line  395] 0x07C043CB  SELF       A=15 B=15 C=257 Bx=7937
+    0147 [line  395] 0x00070441  LOADK      R17 = K[28]='Txt_Time'
+    0148 [line  395] 0x018083DC  CALL       A=15 B=3 C=2
+    0149 [line  395] 0x07C603CB  SELF       A=15 B=15 C=280 Bx=7960
+    0150 [line  395] 0x00074441  LOADK      R17 = K[29]='UILabel'
+    0151 [line  395] 0x018083DC  CALL       A=15 B=3 C=2
+    0152 [line  395] 0x8F0383C9  SETTABLE   R15[K[30]='text'] = R14
+    0153 [line  397] 0x000003C4  GETUPVAL   A=15 B=0 C=0 Bx=0
+    0154 [line  397] 0x07C283C6  GETTABLE   R15 = R15[K[10]='Instance']
+    0155 [line  397] 0x008083DC  CALL       A=15 B=1 C=2
+    0156 [line  397] 0x07C7C3CB  SELF       A=15 B=15 C=287 Bx=7967
+    0157 [line  397] 0x00000442  LOADBOOL   A=17 B=0 C=0
+    0158 [line  397] 0x018083DC  CALL       A=15 B=3 C=2
+    0159 [line  398] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0160 [line  398] 0x08428406  GETTABLE   R16 = R16[K[10]='Instance']
+    0161 [line  398] 0x0080841C  CALL       A=16 B=1 C=2
+    0162 [line  398] 0x0848040B  SELF       A=16 B=16 C=288 Bx=8480
+    0163 [line  398] 0x0100841C  CALL       A=16 B=2 C=2
+    0164 [line  399] 0x00000444  GETUPVAL   A=17 B=0 C=0 Bx=0
+    0165 [line  399] 0x08C28446  GETTABLE   R17 = R17[K[10]='Instance']
+    0166 [line  399] 0x0080845C  CALL       A=17 B=1 C=2
+    0167 [line  399] 0x08C84446  GETTABLE   R17 = R17[K[33]='_successEnd']
+    0168 [line  400] 0x00000484  GETUPVAL   A=18 B=0 C=0 Bx=0
+    0169 [line  400] 0x09428486  GETTABLE   R18 = R18[K[10]='Instance']
+    0170 [line  400] 0x0080849C  CALL       A=18 B=1 C=2
+    0171 [line  400] 0x0948848B  SELF       A=18 B=18 C=290 Bx=9506
+    0172 [line  400] 0x0100849C  CALL       A=18 B=2 C=2
+    0173 [line  401] 0x000004C4  GETUPVAL   A=19 B=0 C=0 Bx=0
+    0174 [line  401] 0x09C284C6  GETTABLE   R19 = R19[K[10]='Instance']
+    0175 [line  401] 0x008084DC  CALL       A=19 B=1 C=2
+    0176 [line  401] 0x09C8C4CB  SELF       A=19 B=19 C=291 Bx=10019
+    0177 [line  401] 0x010084DC  CALL       A=19 B=2 C=2
+    0178 [line  403] 0x000003DA  TEST       A=15 B=0 C=0
+    0179 [line  403] 0x80020016  JMP        A=0 sBx=9
+    0180 [line  403] 0x0000441A  TEST       A=16 B=0 C=1
+    0181 [line  403] 0x80018016  JMP        A=0 sBx=7
+    0182 [line  403] 0x0000449A  TEST       A=18 B=0 C=1
+    0183 [line  403] 0x80004016  JMP        A=0 sBx=2
+    0184 [line  403] 0x000002DA  TEST       A=11 B=0 C=0
+    0185 [line  403] 0x80008016  JMP        A=0 sBx=3
+    0186 [line  403] 0x000044DA  TEST       A=19 B=0 C=1
+    0187 [line  403] 0x80000016  JMP        A=0 sBx=1
+    0188 [line  403] 0x80008016  JMP        A=0 sBx=3
+    0189 [line  403] 0x00000502  LOADBOOL   A=20 B=0 C=0
+    0190 [line  403] 0x80004016  JMP        A=0 sBx=2
+    0191 [line  403] 0x00004502  LOADBOOL   A=20 B=0 C=1
+    0192 [line  403] 0x00800502  LOADBOOL   A=20 B=1 C=0
+    0193 [line  404] 0x00000544  GETUPVAL   A=21 B=0 C=0 Bx=0
+    0194 [line  404] 0x0AC90546  GETTABLE   R21 = R21[K[36]='LogWarn']
+    0195 [line  404] 0x00094581  LOADK      R22 = K[37]='canGoInto:'
+    0196 [line  404] 0x0A0005C0  MOVE       R23 = R20
+    0197 [line  404] 0x0180455C  CALL       A=21 B=3 C=1
+    0198 [line  405] 0x000043DA  TEST       A=15 B=0 C=1
+    0199 [line  405] 0x80018016  JMP        A=0 sBx=7
+    0200 [line  405] 0x0000441A  TEST       A=16 B=0 C=1
+    0201 [line  405] 0x80010016  JMP        A=0 sBx=5
+    0202 [line  405] 0x0000445A  TEST       A=17 B=0 C=1
+    0203 [line  405] 0x80008016  JMP        A=0 sBx=3
+    0204 [line  405] 0x000044DA  TEST       A=19 B=0 C=1
+    0205 [line  405] 0x80000016  JMP        A=0 sBx=1
+    0206 [line  405] 0x80008016  JMP        A=0 sBx=3
+    0207 [line  405] 0x00000542  LOADBOOL   A=21 B=0 C=0
+    0208 [line  405] 0x80004016  JMP        A=0 sBx=2
+    0209 [line  405] 0x00004542  LOADBOOL   A=21 B=0 C=1
+    0210 [line  405] 0x00800542  LOADBOOL   A=21 B=1 C=0
+    0211 [line  406] 0x00000584  GETUPVAL   A=22 B=0 C=0 Bx=0
+    0212 [line  406] 0x0B490586  GETTABLE   R22 = R22[K[36]='LogWarn']
+    0213 [line  406] 0x000985C1  LOADK      R23 = K[38]='canGoTask:'
+    0214 [line  406] 0x0A800600  MOVE       R24 = R21
+    0215 [line  406] 0x0180459C  CALL       A=22 B=3 C=1
+    0216 [line  408] 0x02C3458B  SELF       A=22 B=5 C=269 Bx=2829
+    0217 [line  408] 0x00000604  GETUPVAL   A=24 B=0 C=0 Bx=0
+    0218 [line  408] 0x0C438606  GETTABLE   R24 = R24[K[14]='WAR_PHASE']
+    0219 [line  408] 0x0C43C606  GETTABLE   R24 = R24[K[15]='Declaration']
+    0220 [line  408] 0x0C01C018  LT         A=0 B=R24 C=R7
+    0221 [line  408] 0x80004016  JMP        A=0 sBx=2
+    0222 [line  408] 0x0A000600  MOVE       R24 = R20
+    0223 [line  408] 0x80004016  JMP        A=0 sBx=2
+    0224 [line  408] 0x00004602  LOADBOOL   A=24 B=0 C=1
+    0225 [line  408] 0x00800602  LOADBOOL   A=24 B=1 C=0
+    0226 [line  408] 0x0180459C  CALL       A=22 B=3 C=1
+    0227 [line  409] 0x0343458B  SELF       A=22 B=6 C=269 Bx=3341
+    0228 [line  409] 0x00000604  GETUPVAL   A=24 B=0 C=0 Bx=0
+    0229 [line  409] 0x0C438606  GETTABLE   R24 = R24[K[14]='WAR_PHASE']
+    0230 [line  409] 0x0C440606  GETTABLE   R24 = R24[K[16]='Prepare']
+    0231 [line  409] 0x0C01C018  LT         A=0 B=R24 C=R7
+    0232 [line  409] 0x80004016  JMP        A=0 sBx=2
+    0233 [line  409] 0x0A800600  MOVE       R24 = R21
+    0234 [line  409] 0x80004016  JMP        A=0 sBx=2
+    0235 [line  409] 0x00004602  LOADBOOL   A=24 B=0 C=1
+    0236 [line  409] 0x00800602  LOADBOOL   A=24 B=1 C=0
+    0237 [line  409] 0x0180459C  CALL       A=22 B=3 C=1
+    0238 [line  411] 0x00000584  GETUPVAL   A=22 B=0 C=0 Bx=0
+    0239 [line  411] 0x0B428586  GETTABLE   R22 = R22[K[10]='Instance']
+    0240 [line  411] 0x0080859C  CALL       A=22 B=1 C=2
+    0241 [line  411] 0x0B49C58B  SELF       A=22 B=22 C=295 Bx=11559
+    0242 [line  411] 0x0100859C  CALL       A=22 B=2 C=2
+    0243 [line  412] 0x0B4A0057  EQ         A=1 B=R22 C=K[40]=0.0
+    0244 [line  412] 0x80068016  JMP        A=0 sBx=27
+    0245 [line  413] 0x0B0005C0  MOVE       R23 = R22
+    0246 [line  414] 0x00000604  GETUPVAL   A=24 B=0 C=0 Bx=0
+    0247 [line  414] 0x0C4A4606  GETTABLE   R24 = R24[K[41]='GetNationAndSceneID']
+    0248 [line  414] 0x0B800640  MOVE       R25 = R23
+    0249 [line  414] 0x0100C61C  CALL       A=24 B=2 C=3
+    0250 [line  415] 0x00000684  GETUPVAL   A=26 B=0 C=0 Bx=0
+    0251 [line  415] 0x0D4A8686  GETTABLE   R26 = R26[K[42]='GetSectionName']
+    0252 [line  415] 0x0C8006C0  MOVE       R27 = R25
+    0253 [line  415] 0x0100869C  CALL       A=26 B=2 C=2
+    0254 [line  416] 0x010006C4  GETUPVAL   A=27 B=2 C=0 Bx=1024
+    0255 [line  416] 0x0DCAC6C6  GETTABLE   R27 = R27[K[43]='getNationName']
+    0256 [line  416] 0x0C000700  MOVE       R28 = R24
+    0257 [line  416] 0x010086DC  CALL       A=27 B=2 C=2
+    0258 [line  417] 0x01800704  GETUPVAL   A=28 B=3 C=0 Bx=1536
+    0259 [line  417] 0x0E4B0706  GETTABLE   R28 = R28[K[44]='setTextAndColor']
+    0260 [line  417] 0x02C0474B  SELF       A=29 B=5 C=257 Bx=2817
+    0261 [line  417] 0x000B47C1  LOADK      R31 = K[45]='Txt_MyWar'
+    0262 [line  417] 0x0180875C  CALL       A=29 B=3 C=2
+    0263 [line  417] 0x000B8785  GETGLOBAL  R30 = GLOBAL K[46]='StringTable'
+    0264 [line  417] 0x0F4BC786  GETTABLE   R30 = R30[K[47]='Get']
+    0265 [line  417] 0x000C07C1  LOADK      R31 = K[48]=17021.0
+    0266 [line  417] 0x0100879C  CALL       A=30 B=2 C=2
+    0267 [line  417] 0x0F4C478B  SELF       A=30 B=30 C=305 Bx=15665
+    0268 [line  417] 0x0D800800  MOVE       R32 = R27
+    0269 [line  417] 0x0D000840  MOVE       R33 = R26
+    0270 [line  417] 0x0200079C  CALL       A=30 B=4 C=0
+    0271 [line  417] 0x0000471C  CALL       A=28 B=0 C=1
+    0272 [line  419] 0x99020009  SETTABLE   R0[K[50]='_curStep'] = R8
+    0273 [line  420] 0x9981C009  SETTABLE   R0[K[51]='_curPhase'] = R7
+    0274 [line  421] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 274
+    'SignUpHit': 4 -> 274
+    'PrepareHit': 8 -> 274
+    'OpenWarHit': 12 -> 274
+    'ProSteps': 13 -> 274
+    '(for index)': 16 -> 25
+    '(for limit)': 16 -> 25
+    '(for step)': 16 -> 25
+    'i': 17 -> 24
+    'GoIntoWar': 29 -> 274
+    'GetTask': 33 -> 274
+    'curState': 38 -> 274
+    'curStep': 43 -> 274
+    'isDeclaration': 87 -> 274
+    'isPrepare': 99 -> 274
+    'isFight': 111 -> 274
+    'tip1': 129 -> 274
+    'tip2': 129 -> 274
+    'tip3': 129 -> 274
+    'canAttendWar': 159 -> 274
+    'isInRegionWar': 164 -> 274
+    'successEnd': 168 -> 274
+    'minuteLeft': 173 -> 274
+    'isJustEnd': 178 -> 274
+    'canGoIntoWar': 193 -> 274
+    'canGoTask': 211 -> 274
+    'lord_region_id': 243 -> 274
+    'region_id_lord': 246 -> 272
+    'nation_id_lord': 250 -> 272
+    'scene_id_lord': 250 -> 272
+    'scene_name': 254 -> 272
+    'nation_name': 258 -> 272
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x492A
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 423 - 429
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_curNation'
+    K[001] = 'UpdatePhaseState'
+    K[002] = 'UpdateMainView'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  424] 0x80004009  SETTABLE   R0[K[0]='_curNation'] = R1
+    0001 [line  426] 0x0040408B  SELF       A=2 B=0 C=257 Bx=257
+    0002 [line  426] 0x0100409C  CALL       A=2 B=2 C=1
+    0003 [line  428] 0x0040808B  SELF       A=2 B=0 C=258 Bx=258
+    0004 [line  428] 0x0100409C  CALL       A=2 B=2 C=1
+    0005 [line  429] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 5
+    'nation_id': 0 -> 5
+
+    ============================================================
+    PROTO ROOT.22
+    Offset : 0x49E3
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 431 - 457
+    Params : 1
+    Stack  : 21
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_curNation'
+    K[001] = 'm_panel'
+    K[002] = 'FindDirect'
+    K[003] = 'Widget/SubPanel_Map'
+    K[004] = 1.0
+    K[005] = 'GetFactionWarSectionTemplate'
+    K[006] = 'can_be_robbed'
+    K[007] = 0.0
+    K[008] = 'Img_Lock'
+    K[009] = 'SetActive'
+    K[010] = 'Group_SignUpInfo'
+    K[011] = 'Group_PrepareInfo'
+    K[012] = 'Group_WarEnd'
+    K[013] = 'UpdateDistrictInfo'
+    K[014] = 'setVisible'
+    K[015] = 'Img_Enemy'
+    K[016] = 'Instance'
+    K[017] = 'm_HostPlayer'
+    K[018] = 'InfoData'
+    K[019] = 'Nation'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  432] 0x00400046  GETTABLE   R1 = R0[K[0]='_curNation']
+    0001 [line  433] 0x00404086  GETTABLE   R2 = R0[K[1]='m_panel']
+    0002 [line  433] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0003 [line  433] 0x0000C101  LOADK      R4 = K[3]='Widget/SubPanel_Map'
+    0004 [line  433] 0x0180809C  CALL       A=2 B=3 C=2
+    0005 [line  436] 0x000100C1  LOADK      R3 = K[4]=1.0
+    0006 [line  436] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0007 [line  436] 0x00010141  LOADK      R5 = K[4]=1.0
+    0008 [line  436] 0x800F00E0  FORPREP    A=3 sBx=61
+    0009 [line  437] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0010 [line  437] 0x03000200  MOVE       R8 = R6
+    0011 [line  437] 0x038201D5  CONCAT     A=7 B=7 C=8 Bx=3592
+    0012 [line  438] 0x0140820B  SELF       A=8 B=2 C=258 Bx=1282
+    0013 [line  438] 0x03800280  MOVE       R10 = R7
+    0014 [line  438] 0x0180821C  CALL       A=8 B=3 C=2
+    0015 [line  439] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0016 [line  439] 0x04818246  GETTABLE   R9 = R9[R6]
+    0017 [line  440] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0018 [line  440] 0x05414286  GETTABLE   R10 = R10[K[5]='GetFactionWarSectionTemplate']
+    0019 [line  440] 0x008002C0  MOVE       R11 = R1
+    0020 [line  440] 0x04800300  MOVE       R12 = R9
+    0021 [line  440] 0x0180829C  CALL       A=10 B=3 C=2
+    0022 [line  441] 0x0000029A  TEST       A=10 B=0 C=0
+    0023 [line  441] 0x80008016  JMP        A=0 sBx=3
+    0024 [line  441] 0x054182C6  GETTABLE   R11 = R10[K[6]='can_be_robbed']
+    0025 [line  441] 0x05C1C017  EQ         A=0 B=R11 C=K[7]=0.0
+    0026 [line  441] 0x80008016  JMP        A=0 sBx=3
+    0027 [line  441] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0028 [line  441] 0x80004016  JMP        A=0 sBx=2
+    0029 [line  441] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0030 [line  441] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0031 [line  443] 0x0440830B  SELF       A=12 B=8 C=258 Bx=4354
+    0032 [line  443] 0x00020381  LOADK      R14 = K[8]='Img_Lock'
+    0033 [line  443] 0x0180831C  CALL       A=12 B=3 C=2
+    0034 [line  444] 0x0000031A  TEST       A=12 B=0 C=0
+    0035 [line  444] 0x80008016  JMP        A=0 sBx=3
+    0036 [line  444] 0x0642434B  SELF       A=13 B=12 C=265 Bx=6409
+    0037 [line  444] 0x058003D3  NOT        A=15 B=11 C=0 Bx=5632
+    0038 [line  444] 0x0180435C  CALL       A=13 B=3 C=1
+    0039 [line  445] 0x0440834B  SELF       A=13 B=8 C=258 Bx=4354
+    0040 [line  445] 0x000283C1  LOADK      R15 = K[10]='Group_SignUpInfo'
+    0041 [line  445] 0x0180835C  CALL       A=13 B=3 C=2
+    0042 [line  446] 0x0000035A  TEST       A=13 B=0 C=0
+    0043 [line  446] 0x80008016  JMP        A=0 sBx=3
+    0044 [line  446] 0x06C2438B  SELF       A=14 B=13 C=265 Bx=6921
+    0045 [line  446] 0x00000402  LOADBOOL   A=16 B=0 C=0
+    0046 [line  446] 0x0180439C  CALL       A=14 B=3 C=1
+    0047 [line  447] 0x0440838B  SELF       A=14 B=8 C=258 Bx=4354
+    0048 [line  447] 0x0002C401  LOADK      R16 = K[11]='Group_PrepareInfo'
+    0049 [line  447] 0x0180839C  CALL       A=14 B=3 C=2
+    0050 [line  448] 0x0000039A  TEST       A=14 B=0 C=0
+    0051 [line  448] 0x80008016  JMP        A=0 sBx=3
+    0052 [line  448] 0x074243CB  SELF       A=15 B=14 C=265 Bx=7433
+    0053 [line  448] 0x00000442  LOADBOOL   A=17 B=0 C=0
+    0054 [line  448] 0x018043DC  CALL       A=15 B=3 C=1
+    0055 [line  449] 0x044083CB  SELF       A=15 B=8 C=258 Bx=4354
+    0056 [line  449] 0x00030441  LOADK      R17 = K[12]='Group_WarEnd'
+    0057 [line  449] 0x018083DC  CALL       A=15 B=3 C=2
+    0058 [line  450] 0x000003DA  TEST       A=15 B=0 C=0
+    0059 [line  450] 0x80008016  JMP        A=0 sBx=3
+    0060 [line  450] 0x07C2440B  SELF       A=16 B=15 C=265 Bx=7945
+    0061 [line  450] 0x00000482  LOADBOOL   A=18 B=0 C=0
+    0062 [line  450] 0x0180441C  CALL       A=16 B=3 C=1
+    0063 [line  451] 0x000002DA  TEST       A=11 B=0 C=0
+    0064 [line  451] 0x80010016  JMP        A=0 sBx=5
+    0065 [line  452] 0x0043440B  SELF       A=16 B=0 C=269 Bx=269
+    0066 [line  452] 0x04000480  MOVE       R18 = R8
+    0067 [line  452] 0x008004C0  MOVE       R19 = R1
+    0068 [line  452] 0x04800500  MOVE       R20 = R9
+    0069 [line  452] 0x0280441C  CALL       A=16 B=5 C=1
+    0070 [line  436] 0x7FF040DF  FORLOOP    A=3 sBx=-62
+    0071 [line  456] 0x020000C4  GETUPVAL   A=3 B=4 C=0 Bx=2048
+    0072 [line  456] 0x01C380C6  GETTABLE   R3 = R3[K[14]='setVisible']
+    0073 [line  456] 0x0140810B  SELF       A=4 B=2 C=258 Bx=1282
+    0074 [line  456] 0x0003C181  LOADK      R6 = K[15]='Img_Enemy'
+    0075 [line  456] 0x0180811C  CALL       A=4 B=3 C=2
+    0076 [line  456] 0x02800144  GETUPVAL   A=5 B=5 C=0 Bx=2560
+    0077 [line  456] 0x02C40146  GETTABLE   R5 = R5[K[16]='Instance']
+    0078 [line  456] 0x0080815C  CALL       A=5 B=1 C=2
+    0079 [line  456] 0x02C44146  GETTABLE   R5 = R5[K[17]='m_HostPlayer']
+    0080 [line  456] 0x02C48146  GETTABLE   R5 = R5[K[18]='InfoData']
+    0081 [line  456] 0x02C4C146  GETTABLE   R5 = R5[K[19]='Nation']
+    0082 [line  456] 0x02804017  EQ         A=0 B=R5 C=R1
+    0083 [line  456] 0x80000016  JMP        A=0 sBx=1
+    0084 [line  456] 0x00004142  LOADBOOL   A=5 B=0 C=1
+    0085 [line  456] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0086 [line  456] 0x018040DC  CALL       A=3 B=3 C=1
+    0087 [line  457] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 87
+    'curNation': 1 -> 87
+    'mapObj': 5 -> 87
+    '(for index)': 8 -> 71
+    '(for limit)': 8 -> 71
+    '(for step)': 8 -> 71
+    'i': 9 -> 70
+    'btn_name': 12 -> 70
+    'gObj': 15 -> 70
+    'scene_id': 17 -> 70
+    'template': 22 -> 70
+    'can_be_robbed': 31 -> 70
+    'Img_Lock': 34 -> 70
+    'Group_SignUpInfo': 42 -> 70
+    'Group_PrepareInfo': 50 -> 70
+    'Group_WarEnd': 58 -> 70
+
+    ============================================================
+    PROTO ROOT.23
+    Offset : 0x4FF9
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 459 - 467
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'isnil'
+    K[002] = 'RequestRegionList'
+    K[003] = 'RequestWarList'
+    K[004] = 'RequestRegionBidNum'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  460] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  460] 0x0000009A  TEST       A=2 B=0 C=0
+    0002 [line  460] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  460] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0004 [line  460] 0x01404086  GETTABLE   R2 = R2[K[1]='isnil']
+    0005 [line  460] 0x0000009A  TEST       A=2 B=0 C=0
+    0006 [line  460] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  461] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  464] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0009 [line  464] 0x01408086  GETTABLE   R2 = R2[K[2]='RequestRegionList']
+    0010 [line  464] 0x008000C0  MOVE       R3 = R1
+    0011 [line  464] 0x0100409C  CALL       A=2 B=2 C=1
+    0012 [line  465] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0013 [line  465] 0x0140C086  GETTABLE   R2 = R2[K[3]='RequestWarList']
+    0014 [line  465] 0x008000C0  MOVE       R3 = R1
+    0015 [line  465] 0x0100409C  CALL       A=2 B=2 C=1
+    0016 [line  466] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0017 [line  466] 0x01410086  GETTABLE   R2 = R2[K[4]='RequestRegionBidNum']
+    0018 [line  466] 0x008000C0  MOVE       R3 = R1
+    0019 [line  466] 0x0100409C  CALL       A=2 B=2 C=1
+    0020 [line  467] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 20
+    'nation_id': 0 -> 20
+
+    ============================================================
+    PROTO ROOT.24
+    Offset : 0x5160
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 469 - 610
+    Params : 4
+    Stack  : 22
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'FindDirect'
+    K[001] = 'Img_Lock'
+    K[002] = 'SetActive'
+    K[003] = 'Instance'
+    K[004] = 'GetCurrentWarPhase'
+    K[005] = 'GetSectionID'
+    K[006] = 'm_HostPlayer'
+    K[007] = 'WAR_PHASE'
+    K[008] = 'Declaration'
+    K[009] = 'Group_SignUpInfo'
+    K[010] = 'GetRegionInfo'
+    K[011] = 'region_status'
+    K[012] = 'GetRegionBidNum'
+    K[013] = 'region_owner_nation'
+    K[014] = 0.0
+    K[015] = 'GetCropNation'
+    K[016] = 'LuaUInt64'
+    K[017] = 'ToDouble'
+    K[018] = 'region_owner'
+    K[019] = 6.0
+    K[020] = '['
+    K[021] = 'getNationSimpleName'
+    K[022] = ']'
+    K[023] = ''
+    K[024] = 'ZeroUInt64'
+    K[025] = 'GameUtil'
+    K[026] = 'UnicodeToUtf8'
+    K[027] = 'region_owner_name'
+    K[028] = 'StringTable'
+    K[029] = 'Get'
+    K[030] = 17004.0
+    K[031] = 'RequestCropInfo'
+    K[032] = '_G'
+    K[033] = 'ColorGray'
+    K[034] = 'InfoData'
+    K[035] = 'Nation'
+    K[036] = 'ColorRed'
+    K[037] = 'ColorGreen'
+    K[038] = 'setTextAndColor'
+    K[039] = 'Txt_FactionLord'
+    K[040] = 'Txt_SignUpNum'
+    K[041] = 'tostring'
+    K[042] = 'isSignUp'
+    K[043] = 'setVisible'
+    K[044] = 'Img_AlreadySignUp'
+    K[045] = 'Group_PrepareInfo'
+    K[046] = 'GetRegionWarInfo'
+    K[047] = 'Group_Red'
+    K[048] = 'war_attacker'
+    K[049] = 'attacker_name'
+    K[050] = 'Txt_FactionRed'
+    K[051] = 'bless_value_attack'
+    K[052] = 'GetInspireUpLimit'
+    K[053] = 'Txt_FactionPopularyRed'
+    K[054] = 1.0
+    K[055] = 17022.0
+    K[056] = 'Group_Blue'
+    K[057] = 'war_defender'
+    K[058] = 'defender_name'
+    K[059] = 'Txt_FactionBlue'
+    K[060] = 'bless_value_defend'
+    K[061] = 'Txt_FactionPopularyBlue'
+    K[062] = 'GetRegionOwnerWhenFinish'
+    K[063] = 'GetRegionOwner'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  470] 0x00C0010B  SELF       A=4 B=1 C=256 Bx=768
+    0001 [line  470] 0x00004181  LOADK      R6 = K[1]='Img_Lock'
+    0002 [line  470] 0x0180811C  CALL       A=4 B=3 C=2
+    0003 [line  471] 0x0000011A  TEST       A=4 B=0 C=0
+    0004 [line  471] 0x80008016  JMP        A=0 sBx=3
+    0005 [line  471] 0x0240814B  SELF       A=5 B=4 C=258 Bx=2306
+    0006 [line  471] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0007 [line  471] 0x0180415C  CALL       A=5 B=3 C=1
+    0008 [line  473] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0009 [line  473] 0x02C0C146  GETTABLE   R5 = R5[K[3]='Instance']
+    0010 [line  473] 0x0080815C  CALL       A=5 B=1 C=2
+    0011 [line  473] 0x02C1014B  SELF       A=5 B=5 C=260 Bx=2820
+    0012 [line  473] 0x0100815C  CALL       A=5 B=2 C=2
+    0013 [line  474] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0014 [line  474] 0x03414186  GETTABLE   R6 = R6[K[5]='GetSectionID']
+    0015 [line  474] 0x010001C0  MOVE       R7 = R2
+    0016 [line  474] 0x01800200  MOVE       R8 = R3
+    0017 [line  474] 0x0180819C  CALL       A=6 B=3 C=2
+    0018 [line  475] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0019 [line  475] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='Instance']
+    0020 [line  475] 0x008081DC  CALL       A=7 B=1 C=2
+    0021 [line  475] 0x03C181C6  GETTABLE   R7 = R7[K[6]='m_HostPlayer']
+    0022 [line  477] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0023 [line  477] 0x0441C206  GETTABLE   R8 = R8[K[7]='WAR_PHASE']
+    0024 [line  477] 0x04420206  GETTABLE   R8 = R8[K[8]='Declaration']
+    0025 [line  477] 0x02820019  LE         A=0 B=R5 C=R8
+    0026 [line  477] 0x80274016  JMP        A=0 sBx=158
+    0027 [line  478] 0x00C0020B  SELF       A=8 B=1 C=256 Bx=768
+    0028 [line  478] 0x00024281  LOADK      R10 = K[9]='Group_SignUpInfo'
+    0029 [line  478] 0x0180821C  CALL       A=8 B=3 C=2
+    0030 [line  479] 0x0000021A  TEST       A=8 B=0 C=0
+    0031 [line  479] 0x80678016  JMP        A=0 sBx=415
+    0032 [line  480] 0x0440824B  SELF       A=9 B=8 C=258 Bx=4354
+    0033 [line  480] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0034 [line  480] 0x05C1C2C6  GETTABLE   R11 = R11[K[7]='WAR_PHASE']
+    0035 [line  480] 0x05C202C6  GETTABLE   R11 = R11[K[8]='Declaration']
+    0036 [line  480] 0x0282C059  LE         A=1 B=R5 C=R11
+    0037 [line  480] 0x80000016  JMP        A=0 sBx=1
+    0038 [line  480] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0039 [line  480] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0040 [line  480] 0x0180425C  CALL       A=9 B=3 C=1
+    0041 [line  481] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0042 [line  481] 0x04C0C246  GETTABLE   R9 = R9[K[3]='Instance']
+    0043 [line  481] 0x0080825C  CALL       A=9 B=1 C=2
+    0044 [line  481] 0x04C2824B  SELF       A=9 B=9 C=266 Bx=4874
+    0045 [line  481] 0x030002C0  MOVE       R11 = R6
+    0046 [line  481] 0x0180825C  CALL       A=9 B=3 C=2
+    0047 [line  482] 0x0000025A  TEST       A=9 B=0 C=0
+    0048 [line  482] 0x801A8016  JMP        A=0 sBx=107
+    0049 [line  483] 0x04C2C286  GETTABLE   R10 = R9[K[11]='region_status']
+    0050 [line  484] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0051 [line  484] 0x05C0C2C6  GETTABLE   R11 = R11[K[3]='Instance']
+    0052 [line  484] 0x008082DC  CALL       A=11 B=1 C=2
+    0053 [line  484] 0x05C302CB  SELF       A=11 B=11 C=268 Bx=5900
+    0054 [line  484] 0x03000340  MOVE       R13 = R6
+    0055 [line  484] 0x018082DC  CALL       A=11 B=3 C=2
+    0056 [line  485] 0x04C34306  GETTABLE   R12 = R9[K[13]='region_owner_nation']
+    0057 [line  486] 0x06438017  EQ         A=0 B=R12 C=K[14]=0.0
+    0058 [line  486] 0x80024016  JMP        A=0 sBx=10
+    0059 [line  487] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0060 [line  487] 0x06C0C346  GETTABLE   R13 = R13[K[3]='Instance']
+    0061 [line  487] 0x0080835C  CALL       A=13 B=1 C=2
+    0062 [line  487] 0x06C3C34B  SELF       A=13 B=13 C=271 Bx=6927
+    0063 [line  487] 0x000403C5  GETGLOBAL  R15 = GLOBAL K[16]='LuaUInt64'
+    0064 [line  487] 0x07C443C6  GETTABLE   R15 = R15[K[17]='ToDouble']
+    0065 [line  487] 0x04C48406  GETTABLE   R16 = R9[K[18]='region_owner']
+    0066 [line  487] 0x010003DC  CALL       A=15 B=2 C=0
+    0067 [line  487] 0x0000835C  CALL       A=13 B=0 C=2
+    0068 [line  487] 0x06800300  MOVE       R12 = R13
+    0069 [line  489] 0x04C48346  GETTABLE   R13 = R9[K[18]='region_owner']
+    0070 [line  490] 0x87030018  LT         A=0 B=K[14]=0.0 C=R12
+    0071 [line  490] 0x80028016  JMP        A=0 sBx=11
+    0072 [line  490] 0x0644C019  LE         A=0 B=R12 C=K[19]=6.0
+    0073 [line  490] 0x80020016  JMP        A=0 sBx=9
+    0074 [line  490] 0x00050381  LOADK      R14 = K[20]='['
+    0075 [line  490] 0x010003C4  GETUPVAL   A=15 B=2 C=0 Bx=1024
+    0076 [line  490] 0x07C543C6  GETTABLE   R15 = R15[K[21]='getNationSimpleName']
+    0077 [line  490] 0x06000400  MOVE       R16 = R12
+    0078 [line  490] 0x010083DC  CALL       A=15 B=2 C=2
+    0079 [line  490] 0x00058401  LOADK      R16 = K[22]=']'
+    0080 [line  490] 0x07040395  CONCAT     A=14 B=14 C=16 Bx=7184
+    0081 [line  490] 0x0000439A  TEST       A=14 B=0 C=1
+    0082 [line  490] 0x80000016  JMP        A=0 sBx=1
+    0083 [line  490] 0x0005C381  LOADK      R14 = K[23]=''
+    0084 [line  491] 0x000603C5  GETGLOBAL  R15 = GLOBAL K[24]='ZeroUInt64'
+    0085 [line  491] 0x0683C057  EQ         A=1 B=R13 C=R15
+    0086 [line  491] 0x8001C016  JMP        A=0 sBx=8
+    0087 [line  491] 0x070003C0  MOVE       R15 = R14
+    0088 [line  491] 0x00064405  GETGLOBAL  R16 = GLOBAL K[25]='GameUtil'
+    0089 [line  491] 0x08468406  GETTABLE   R16 = R16[K[26]='UnicodeToUtf8']
+    0090 [line  491] 0x04C6C446  GETTABLE   R17 = R9[K[27]='region_owner_name']
+    0091 [line  491] 0x0100841C  CALL       A=16 B=2 C=2
+    0092 [line  491] 0x078403D5  CONCAT     A=15 B=15 C=16 Bx=7696
+    0093 [line  491] 0x000043DA  TEST       A=15 B=0 C=1
+    0094 [line  491] 0x8000C016  JMP        A=0 sBx=4
+    0095 [line  491] 0x000703C5  GETGLOBAL  R15 = GLOBAL K[28]='StringTable'
+    0096 [line  491] 0x07C743C6  GETTABLE   R15 = R15[K[29]='Get']
+    0097 [line  491] 0x00078401  LOADK      R16 = K[30]=17004.0
+    0098 [line  491] 0x010083DC  CALL       A=15 B=2 C=2
+    0099 [line  492] 0x06438017  EQ         A=0 B=R12 C=K[14]=0.0
+    0100 [line  492] 0x80018016  JMP        A=0 sBx=7
+    0101 [line  492] 0x00060405  GETGLOBAL  R16 = GLOBAL K[24]='ZeroUInt64'
+    0102 [line  492] 0x06840057  EQ         A=1 B=R13 C=R16
+    0103 [line  492] 0x8000C016  JMP        A=0 sBx=4
+    0104 [line  493] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0105 [line  493] 0x0847C406  GETTABLE   R16 = R16[K[31]='RequestCropInfo']
+    0106 [line  493] 0x06800440  MOVE       R17 = R13
+    0107 [line  493] 0x0100441C  CALL       A=16 B=2 C=1
+    0108 [line  495] 0x00080405  GETGLOBAL  R16 = GLOBAL K[32]='_G'
+    0109 [line  495] 0x08484406  GETTABLE   R16 = R16[K[33]='ColorGray']
+    0110 [line  496] 0x00060445  GETGLOBAL  R17 = GLOBAL K[24]='ZeroUInt64'
+    0111 [line  496] 0x06844017  EQ         A=0 B=R13 C=R17
+    0112 [line  496] 0x80008016  JMP        A=0 sBx=3
+    0113 [line  497] 0x00080445  GETGLOBAL  R17 = GLOBAL K[32]='_G'
+    0114 [line  497] 0x08C84406  GETTABLE   R16 = R17[K[33]='ColorGray']
+    0115 [line  497] 0x80020016  JMP        A=0 sBx=9
+    0116 [line  498] 0x03C88446  GETTABLE   R17 = R7[K[34]='InfoData']
+    0117 [line  498] 0x08C8C446  GETTABLE   R17 = R17[K[35]='Nation']
+    0118 [line  498] 0x08830057  EQ         A=1 B=R17 C=R12
+    0119 [line  498] 0x80008016  JMP        A=0 sBx=3
+    0120 [line  499] 0x00080445  GETGLOBAL  R17 = GLOBAL K[32]='_G'
+    0121 [line  499] 0x08C90406  GETTABLE   R16 = R17[K[36]='ColorRed']
+    0122 [line  499] 0x80004016  JMP        A=0 sBx=2
+    0123 [line  501] 0x00080445  GETGLOBAL  R17 = GLOBAL K[32]='_G'
+    0124 [line  501] 0x08C94406  GETTABLE   R16 = R17[K[37]='ColorGreen']
+    0125 [line  504] 0x01800444  GETUPVAL   A=17 B=3 C=0 Bx=1536
+    0126 [line  504] 0x08C98446  GETTABLE   R17 = R17[K[38]='setTextAndColor']
+    0127 [line  504] 0x0440048B  SELF       A=18 B=8 C=256 Bx=4352
+    0128 [line  504] 0x0009C501  LOADK      R20 = K[39]='Txt_FactionLord'
+    0129 [line  504] 0x0180849C  CALL       A=18 B=3 C=2
+    0130 [line  504] 0x078004C0  MOVE       R19 = R15
+    0131 [line  504] 0x08000500  MOVE       R20 = R16
+    0132 [line  504] 0x0200445C  CALL       A=17 B=4 C=1
+    0133 [line  505] 0x01800444  GETUPVAL   A=17 B=3 C=0 Bx=1536
+    0134 [line  505] 0x08C98446  GETTABLE   R17 = R17[K[38]='setTextAndColor']
+    0135 [line  505] 0x0440048B  SELF       A=18 B=8 C=256 Bx=4352
+    0136 [line  505] 0x000A0501  LOADK      R20 = K[40]='Txt_SignUpNum'
+    0137 [line  505] 0x0180849C  CALL       A=18 B=3 C=2
+    0138 [line  505] 0x000A44C5  GETGLOBAL  R19 = GLOBAL K[41]='tostring'
+    0139 [line  505] 0x05800500  MOVE       R20 = R11
+    0140 [line  505] 0x010004DC  CALL       A=19 B=2 C=0
+    0141 [line  505] 0x0000445C  CALL       A=17 B=0 C=1
+    0142 [line  507] 0x00000444  GETUPVAL   A=17 B=0 C=0 Bx=0
+    0143 [line  507] 0x08C0C446  GETTABLE   R17 = R17[K[3]='Instance']
+    0144 [line  507] 0x0080845C  CALL       A=17 B=1 C=2
+    0145 [line  507] 0x08CA844B  SELF       A=17 B=17 C=298 Bx=9002
+    0146 [line  507] 0x030004C0  MOVE       R19 = R6
+    0147 [line  507] 0x0180845C  CALL       A=17 B=3 C=2
+    0148 [line  508] 0x01800484  GETUPVAL   A=18 B=3 C=0 Bx=1536
+    0149 [line  508] 0x094AC486  GETTABLE   R18 = R18[K[43]='setVisible']
+    0150 [line  508] 0x044004CB  SELF       A=19 B=8 C=256 Bx=4352
+    0151 [line  508] 0x000B0541  LOADK      R21 = K[44]='Img_AlreadySignUp'
+    0152 [line  508] 0x018084DC  CALL       A=19 B=3 C=2
+    0153 [line  508] 0x08800500  MOVE       R20 = R17
+    0154 [line  508] 0x0180449C  CALL       A=18 B=3 C=1
+    0155 [line  508] 0x80488016  JMP        A=0 sBx=291
+    0156 [line  510] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0157 [line  510] 0x05498286  GETTABLE   R10 = R10[K[38]='setTextAndColor']
+    0158 [line  510] 0x044002CB  SELF       A=11 B=8 C=256 Bx=4352
+    0159 [line  510] 0x0009C341  LOADK      R13 = K[39]='Txt_FactionLord'
+    0160 [line  510] 0x018082DC  CALL       A=11 B=3 C=2
+    0161 [line  510] 0x00070305  GETGLOBAL  R12 = GLOBAL K[28]='StringTable'
+    0162 [line  510] 0x06474306  GETTABLE   R12 = R12[K[29]='Get']
+    0163 [line  510] 0x00078341  LOADK      R13 = K[30]=17004.0
+    0164 [line  510] 0x0100831C  CALL       A=12 B=2 C=2
+    0165 [line  510] 0x00080345  GETGLOBAL  R13 = GLOBAL K[32]='_G'
+    0166 [line  510] 0x06C84346  GETTABLE   R13 = R13[K[33]='ColorGray']
+    0167 [line  510] 0x0200429C  CALL       A=10 B=4 C=1
+    0168 [line  511] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0169 [line  511] 0x05498286  GETTABLE   R10 = R10[K[38]='setTextAndColor']
+    0170 [line  511] 0x044002CB  SELF       A=11 B=8 C=256 Bx=4352
+    0171 [line  511] 0x000A0341  LOADK      R13 = K[40]='Txt_SignUpNum'
+    0172 [line  511] 0x018082DC  CALL       A=11 B=3 C=2
+    0173 [line  511] 0x000A4305  GETGLOBAL  R12 = GLOBAL K[41]='tostring'
+    0174 [line  511] 0x00038341  LOADK      R13 = K[14]=0.0
+    0175 [line  511] 0x0100031C  CALL       A=12 B=2 C=0
+    0176 [line  511] 0x0000429C  CALL       A=10 B=0 C=1
+    0177 [line  512] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0178 [line  512] 0x054AC286  GETTABLE   R10 = R10[K[43]='setVisible']
+    0179 [line  512] 0x044002CB  SELF       A=11 B=8 C=256 Bx=4352
+    0180 [line  512] 0x000B0341  LOADK      R13 = K[44]='Img_AlreadySignUp'
+    0181 [line  512] 0x018082DC  CALL       A=11 B=3 C=2
+    0182 [line  512] 0x00000302  LOADBOOL   A=12 B=0 C=0
+    0183 [line  512] 0x0180429C  CALL       A=10 B=3 C=1
+    0184 [line  514] 0x80414016  JMP        A=0 sBx=262
+    0185 [line  516] 0x00038201  LOADK      R8 = K[14]=0.0
+    0186 [line  517] 0x00C0024B  SELF       A=9 B=1 C=256 Bx=768
+    0187 [line  517] 0x000B42C1  LOADK      R11 = K[45]='Group_PrepareInfo'
+    0188 [line  517] 0x0180825C  CALL       A=9 B=3 C=2
+    0189 [line  518] 0x0000025A  TEST       A=9 B=0 C=0
+    0190 [line  518] 0x80340016  JMP        A=0 sBx=209
+    0191 [line  519] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0192 [line  519] 0x0540C286  GETTABLE   R10 = R10[K[3]='Instance']
+    0193 [line  519] 0x0080829C  CALL       A=10 B=1 C=2
+    0194 [line  519] 0x054B828B  SELF       A=10 B=10 C=302 Bx=5422
+    0195 [line  519] 0x03000300  MOVE       R12 = R6
+    0196 [line  519] 0x0180829C  CALL       A=10 B=3 C=2
+    0197 [line  520] 0x04C082CB  SELF       A=11 B=9 C=258 Bx=4866
+    0198 [line  520] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0199 [line  520] 0x06C1C346  GETTABLE   R13 = R13[K[7]='WAR_PHASE']
+    0200 [line  520] 0x06C20346  GETTABLE   R13 = R13[K[8]='Declaration']
+    0201 [line  520] 0x06814058  LT         A=1 B=R13 C=R5
+    0202 [line  520] 0x80000016  JMP        A=0 sBx=1
+    0203 [line  520] 0x00004342  LOADBOOL   A=13 B=0 C=1
+    0204 [line  520] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0205 [line  520] 0x018042DC  CALL       A=11 B=3 C=1
+    0206 [line  521] 0x04C002CB  SELF       A=11 B=9 C=256 Bx=4864
+    0207 [line  521] 0x000BC341  LOADK      R13 = K[47]='Group_Red'
+    0208 [line  521] 0x018082DC  CALL       A=11 B=3 C=2
+    0209 [line  523] 0x0000029A  TEST       A=10 B=0 C=0
+    0210 [line  523] 0x80120016  JMP        A=0 sBx=73
+    0211 [line  523] 0x054C0306  GETTABLE   R12 = R10[K[48]='war_attacker']
+    0212 [line  523] 0x00060345  GETGLOBAL  R13 = GLOBAL K[24]='ZeroUInt64'
+    0213 [line  523] 0x06034057  EQ         A=1 B=R12 C=R13
+    0214 [line  523] 0x80110016  JMP        A=0 sBx=69
+    0215 [line  524] 0x00000304  GETUPVAL   A=12 B=0 C=0 Bx=0
+    0216 [line  524] 0x0640C306  GETTABLE   R12 = R12[K[3]='Instance']
+    0217 [line  524] 0x0080831C  CALL       A=12 B=1 C=2
+    0218 [line  524] 0x0643C30B  SELF       A=12 B=12 C=271 Bx=6415
+    0219 [line  524] 0x00040385  GETGLOBAL  R14 = GLOBAL K[16]='LuaUInt64'
+    0220 [line  524] 0x07444386  GETTABLE   R14 = R14[K[17]='ToDouble']
+    0221 [line  524] 0x054C03C6  GETTABLE   R15 = R10[K[48]='war_attacker']
+    0222 [line  524] 0x0100039C  CALL       A=14 B=2 C=0
+    0223 [line  524] 0x0000831C  CALL       A=12 B=0 C=2
+    0224 [line  525] 0x06438017  EQ         A=0 B=R12 C=K[14]=0.0
+    0225 [line  525] 0x8001C016  JMP        A=0 sBx=8
+    0226 [line  525] 0x054C0346  GETTABLE   R13 = R10[K[48]='war_attacker']
+    0227 [line  525] 0x00060385  GETGLOBAL  R14 = GLOBAL K[24]='ZeroUInt64'
+    0228 [line  525] 0x06838057  EQ         A=1 B=R13 C=R14
+    0229 [line  525] 0x8000C016  JMP        A=0 sBx=4
+    0230 [line  526] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0231 [line  526] 0x06C7C346  GETTABLE   R13 = R13[K[31]='RequestCropInfo']
+    0232 [line  526] 0x054C0386  GETTABLE   R14 = R10[K[48]='war_attacker']
+    0233 [line  526] 0x0100435C  CALL       A=13 B=2 C=1
+    0234 [line  528] 0x87030018  LT         A=0 B=K[14]=0.0 C=R12
+    0235 [line  528] 0x80028016  JMP        A=0 sBx=11
+    0236 [line  528] 0x0644C019  LE         A=0 B=R12 C=K[19]=6.0
+    0237 [line  528] 0x80020016  JMP        A=0 sBx=9
+    0238 [line  528] 0x00050341  LOADK      R13 = K[20]='['
+    0239 [line  528] 0x01000384  GETUPVAL   A=14 B=2 C=0 Bx=1024
+    0240 [line  528] 0x07454386  GETTABLE   R14 = R14[K[21]='getNationSimpleName']
+    0241 [line  528] 0x060003C0  MOVE       R15 = R12
+    0242 [line  528] 0x0100839C  CALL       A=14 B=2 C=2
+    0243 [line  528] 0x000583C1  LOADK      R15 = K[22]=']'
+    0244 [line  528] 0x0683C355  CONCAT     A=13 B=13 C=15 Bx=6671
+    0245 [line  528] 0x0000435A  TEST       A=13 B=0 C=1
+    0246 [line  528] 0x80000016  JMP        A=0 sBx=1
+    0247 [line  528] 0x0005C341  LOADK      R13 = K[23]=''
+    0248 [line  529] 0x06800380  MOVE       R14 = R13
+    0249 [line  529] 0x000643C5  GETGLOBAL  R15 = GLOBAL K[25]='GameUtil'
+    0250 [line  529] 0x07C683C6  GETTABLE   R15 = R15[K[26]='UnicodeToUtf8']
+    0251 [line  529] 0x054C4406  GETTABLE   R16 = R10[K[49]='attacker_name']
+    0252 [line  529] 0x010083DC  CALL       A=15 B=2 C=2
+    0253 [line  529] 0x0703C395  CONCAT     A=14 B=14 C=15 Bx=7183
+    0254 [line  530] 0x018003C4  GETUPVAL   A=15 B=3 C=0 Bx=1536
+    0255 [line  530] 0x07C983C6  GETTABLE   R15 = R15[K[38]='setTextAndColor']
+    0256 [line  530] 0x05C0040B  SELF       A=16 B=11 C=256 Bx=5888
+    0257 [line  530] 0x000C8481  LOADK      R18 = K[50]='Txt_FactionRed'
+    0258 [line  530] 0x0180841C  CALL       A=16 B=3 C=2
+    0259 [line  530] 0x07000440  MOVE       R17 = R14
+    0260 [line  530] 0x018043DC  CALL       A=15 B=3 C=1
+    0261 [line  532] 0x000403C5  GETGLOBAL  R15 = GLOBAL K[16]='LuaUInt64'
+    0262 [line  532] 0x07C443C6  GETTABLE   R15 = R15[K[17]='ToDouble']
+    0263 [line  532] 0x054CC406  GETTABLE   R16 = R10[K[51]='bless_value_attack']
+    0264 [line  532] 0x010083DC  CALL       A=15 B=2 C=2
+    0265 [line  533] 0x00000404  GETUPVAL   A=16 B=0 C=0 Bx=0
+    0266 [line  533] 0x084D0406  GETTABLE   R16 = R16[K[52]='GetInspireUpLimit']
+    0267 [line  533] 0x0080841C  CALL       A=16 B=1 C=2
+    0268 [line  534] 0x08438057  EQ         A=1 B=R16 C=K[14]=0.0
+    0269 [line  534] 0x80008016  JMP        A=0 sBx=3
+    0270 [line  534] 0x0803C018  LT         A=0 B=R16 C=R15
+    0271 [line  534] 0x80000016  JMP        A=0 sBx=1
+    0272 [line  535] 0x080003C0  MOVE       R15 = R16
+    0273 [line  537] 0x01800444  GETUPVAL   A=17 B=3 C=0 Bx=1536
+    0274 [line  537] 0x08C98446  GETTABLE   R17 = R17[K[38]='setTextAndColor']
+    0275 [line  537] 0x05C0048B  SELF       A=18 B=11 C=256 Bx=5888
+    0276 [line  537] 0x000D4501  LOADK      R20 = K[53]='Txt_FactionPopularyRed'
+    0277 [line  537] 0x0180849C  CALL       A=18 B=3 C=2
+    0278 [line  537] 0x000A44C5  GETGLOBAL  R19 = GLOBAL K[41]='tostring'
+    0279 [line  537] 0x07800500  MOVE       R20 = R15
+    0280 [line  537] 0x010004DC  CALL       A=19 B=2 C=0
+    0281 [line  537] 0x0000445C  CALL       A=17 B=0 C=1
+    0282 [line  539] 0x044D820C  ADD        A=8 B=R8 C=K[54]=1.0
+    0283 [line  539] 0x80048016  JMP        A=0 sBx=19
+    0284 [line  541] 0x01800304  GETUPVAL   A=12 B=3 C=0 Bx=1536
+    0285 [line  541] 0x06498306  GETTABLE   R12 = R12[K[38]='setTextAndColor']
+    0286 [line  541] 0x05C0034B  SELF       A=13 B=11 C=256 Bx=5888
+    0287 [line  541] 0x000C83C1  LOADK      R15 = K[50]='Txt_FactionRed'
+    0288 [line  541] 0x0180835C  CALL       A=13 B=3 C=2
+    0289 [line  541] 0x00070385  GETGLOBAL  R14 = GLOBAL K[28]='StringTable'
+    0290 [line  541] 0x07474386  GETTABLE   R14 = R14[K[29]='Get']
+    0291 [line  541] 0x000DC3C1  LOADK      R15 = K[55]=17022.0
+    0292 [line  541] 0x0100039C  CALL       A=14 B=2 C=0
+    0293 [line  541] 0x0000431C  CALL       A=12 B=0 C=1
+    0294 [line  542] 0x01800304  GETUPVAL   A=12 B=3 C=0 Bx=1536
+    0295 [line  542] 0x06498306  GETTABLE   R12 = R12[K[38]='setTextAndColor']
+    0296 [line  542] 0x05C0034B  SELF       A=13 B=11 C=256 Bx=5888
+    0297 [line  542] 0x000D43C1  LOADK      R15 = K[53]='Txt_FactionPopularyRed'
+    0298 [line  542] 0x0180835C  CALL       A=13 B=3 C=2
+    0299 [line  542] 0x000A4385  GETGLOBAL  R14 = GLOBAL K[41]='tostring'
+    0300 [line  542] 0x000383C1  LOADK      R15 = K[14]=0.0
+    0301 [line  542] 0x0100039C  CALL       A=14 B=2 C=0
+    0302 [line  542] 0x0000431C  CALL       A=12 B=0 C=1
+    0303 [line  544] 0x04C0030B  SELF       A=12 B=9 C=256 Bx=4864
+    0304 [line  544] 0x000E0381  LOADK      R14 = K[56]='Group_Blue'
+    0305 [line  544] 0x0180831C  CALL       A=12 B=3 C=2
+    0306 [line  546] 0x0000029A  TEST       A=10 B=0 C=0
+    0307 [line  546] 0x80120016  JMP        A=0 sBx=73
+    0308 [line  546] 0x054E4346  GETTABLE   R13 = R10[K[57]='war_defender']
+    0309 [line  546] 0x00060385  GETGLOBAL  R14 = GLOBAL K[24]='ZeroUInt64'
+    0310 [line  546] 0x06838057  EQ         A=1 B=R13 C=R14
+    0311 [line  546] 0x80110016  JMP        A=0 sBx=69
+    0312 [line  547] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0313 [line  547] 0x06C0C346  GETTABLE   R13 = R13[K[3]='Instance']
+    0314 [line  547] 0x0080835C  CALL       A=13 B=1 C=2
+    0315 [line  547] 0x06C3C34B  SELF       A=13 B=13 C=271 Bx=6927
+    0316 [line  547] 0x000403C5  GETGLOBAL  R15 = GLOBAL K[16]='LuaUInt64'
+    0317 [line  547] 0x07C443C6  GETTABLE   R15 = R15[K[17]='ToDouble']
+    0318 [line  547] 0x054E4406  GETTABLE   R16 = R10[K[57]='war_defender']
+    0319 [line  547] 0x010003DC  CALL       A=15 B=2 C=0
+    0320 [line  547] 0x0000835C  CALL       A=13 B=0 C=2
+    0321 [line  548] 0x06C38017  EQ         A=0 B=R13 C=K[14]=0.0
+    0322 [line  548] 0x8001C016  JMP        A=0 sBx=8
+    0323 [line  548] 0x054E4386  GETTABLE   R14 = R10[K[57]='war_defender']
+    0324 [line  548] 0x000603C5  GETGLOBAL  R15 = GLOBAL K[24]='ZeroUInt64'
+    0325 [line  548] 0x0703C057  EQ         A=1 B=R14 C=R15
+    0326 [line  548] 0x8000C016  JMP        A=0 sBx=4
+    0327 [line  549] 0x00000384  GETUPVAL   A=14 B=0 C=0 Bx=0
+    0328 [line  549] 0x0747C386  GETTABLE   R14 = R14[K[31]='RequestCropInfo']
+    0329 [line  549] 0x054E43C6  GETTABLE   R15 = R10[K[57]='war_defender']
+    0330 [line  549] 0x0100439C  CALL       A=14 B=2 C=1
+    0331 [line  551] 0x87034018  LT         A=0 B=K[14]=0.0 C=R13
+    0332 [line  551] 0x80028016  JMP        A=0 sBx=11
+    0333 [line  551] 0x06C4C019  LE         A=0 B=R13 C=K[19]=6.0
+    0334 [line  551] 0x80020016  JMP        A=0 sBx=9
+    0335 [line  551] 0x00050381  LOADK      R14 = K[20]='['
+    0336 [line  551] 0x010003C4  GETUPVAL   A=15 B=2 C=0 Bx=1024
+    0337 [line  551] 0x07C543C6  GETTABLE   R15 = R15[K[21]='getNationSimpleName']
+    0338 [line  551] 0x06800400  MOVE       R16 = R13
+    0339 [line  551] 0x010083DC  CALL       A=15 B=2 C=2
+    0340 [line  551] 0x00058401  LOADK      R16 = K[22]=']'
+    0341 [line  551] 0x07040395  CONCAT     A=14 B=14 C=16 Bx=7184
+    0342 [line  551] 0x0000439A  TEST       A=14 B=0 C=1
+    0343 [line  551] 0x80000016  JMP        A=0 sBx=1
+    0344 [line  551] 0x0005C381  LOADK      R14 = K[23]=''
+    0345 [line  552] 0x070003C0  MOVE       R15 = R14
+    0346 [line  552] 0x00064405  GETGLOBAL  R16 = GLOBAL K[25]='GameUtil'
+    0347 [line  552] 0x08468406  GETTABLE   R16 = R16[K[26]='UnicodeToUtf8']
+    0348 [line  552] 0x054E8446  GETTABLE   R17 = R10[K[58]='defender_name']
+    0349 [line  552] 0x0100841C  CALL       A=16 B=2 C=2
+    0350 [line  552] 0x078403D5  CONCAT     A=15 B=15 C=16 Bx=7696
+    0351 [line  553] 0x01800404  GETUPVAL   A=16 B=3 C=0 Bx=1536
+    0352 [line  553] 0x08498406  GETTABLE   R16 = R16[K[38]='setTextAndColor']
+    0353 [line  553] 0x0640044B  SELF       A=17 B=12 C=256 Bx=6400
+    0354 [line  553] 0x000EC4C1  LOADK      R19 = K[59]='Txt_FactionBlue'
+    0355 [line  553] 0x0180845C  CALL       A=17 B=3 C=2
+    0356 [line  553] 0x07800480  MOVE       R18 = R15
+    0357 [line  553] 0x0180441C  CALL       A=16 B=3 C=1
+    0358 [line  555] 0x00040405  GETGLOBAL  R16 = GLOBAL K[16]='LuaUInt64'
+    0359 [line  555] 0x08444406  GETTABLE   R16 = R16[K[17]='ToDouble']
+    0360 [line  555] 0x054F0446  GETTABLE   R17 = R10[K[60]='bless_value_defend']
+    0361 [line  555] 0x0100841C  CALL       A=16 B=2 C=2
+    0362 [line  556] 0x00000444  GETUPVAL   A=17 B=0 C=0 Bx=0
+    0363 [line  556] 0x08CD0446  GETTABLE   R17 = R17[K[52]='GetInspireUpLimit']
+    0364 [line  556] 0x0080845C  CALL       A=17 B=1 C=2
+    0365 [line  557] 0x08C38057  EQ         A=1 B=R17 C=K[14]=0.0
+    0366 [line  557] 0x80008016  JMP        A=0 sBx=3
+    0367 [line  557] 0x08840018  LT         A=0 B=R17 C=R16
+    0368 [line  557] 0x80000016  JMP        A=0 sBx=1
+    0369 [line  558] 0x08800400  MOVE       R16 = R17
+    0370 [line  560] 0x01800484  GETUPVAL   A=18 B=3 C=0 Bx=1536
+    0371 [line  560] 0x09498486  GETTABLE   R18 = R18[K[38]='setTextAndColor']
+    0372 [line  560] 0x064004CB  SELF       A=19 B=12 C=256 Bx=6400
+    0373 [line  560] 0x000F4541  LOADK      R21 = K[61]='Txt_FactionPopularyBlue'
+    0374 [line  560] 0x018084DC  CALL       A=19 B=3 C=2
+    0375 [line  560] 0x000A4505  GETGLOBAL  R20 = GLOBAL K[41]='tostring'
+    0376 [line  560] 0x08000540  MOVE       R21 = R16
+    0377 [line  560] 0x0100051C  CALL       A=20 B=2 C=0
+    0378 [line  560] 0x0000449C  CALL       A=18 B=0 C=1
+    0379 [line  562] 0x044D820C  ADD        A=8 B=R8 C=K[54]=1.0
+    0380 [line  562] 0x80048016  JMP        A=0 sBx=19
+    0381 [line  564] 0x01800344  GETUPVAL   A=13 B=3 C=0 Bx=1536
+    0382 [line  564] 0x06C98346  GETTABLE   R13 = R13[K[38]='setTextAndColor']
+    0383 [line  564] 0x0640038B  SELF       A=14 B=12 C=256 Bx=6400
+    0384 [line  564] 0x000EC401  LOADK      R16 = K[59]='Txt_FactionBlue'
+    0385 [line  564] 0x0180839C  CALL       A=14 B=3 C=2
+    0386 [line  564] 0x000703C5  GETGLOBAL  R15 = GLOBAL K[28]='StringTable'
+    0387 [line  564] 0x07C743C6  GETTABLE   R15 = R15[K[29]='Get']
+    0388 [line  564] 0x000DC401  LOADK      R16 = K[55]=17022.0
+    0389 [line  564] 0x010003DC  CALL       A=15 B=2 C=0
+    0390 [line  564] 0x0000435C  CALL       A=13 B=0 C=1
+    0391 [line  565] 0x01800344  GETUPVAL   A=13 B=3 C=0 Bx=1536
+    0392 [line  565] 0x06C98346  GETTABLE   R13 = R13[K[38]='setTextAndColor']
+    0393 [line  565] 0x0640038B  SELF       A=14 B=12 C=256 Bx=6400
+    0394 [line  565] 0x000F4401  LOADK      R16 = K[61]='Txt_FactionPopularyBlue'
+    0395 [line  565] 0x0180839C  CALL       A=14 B=3 C=2
+    0396 [line  565] 0x000A43C5  GETGLOBAL  R15 = GLOBAL K[41]='tostring'
+    0397 [line  565] 0x00038401  LOADK      R16 = K[14]=0.0
+    0398 [line  565] 0x010003DC  CALL       A=15 B=2 C=0
+    0399 [line  565] 0x0000435C  CALL       A=13 B=0 C=1
+    0400 [line  570] 0x00000284  GETUPVAL   A=10 B=0 C=0 Bx=0
+    0401 [line  570] 0x0540C286  GETTABLE   R10 = R10[K[3]='Instance']
+    0402 [line  570] 0x0080829C  CALL       A=10 B=1 C=2
+    0403 [line  570] 0x054F828B  SELF       A=10 B=10 C=318 Bx=5438
+    0404 [line  570] 0x03000300  MOVE       R12 = R6
+    0405 [line  570] 0x0180829C  CALL       A=10 B=3 C=2
+    0406 [line  571] 0x000002C4  GETUPVAL   A=11 B=0 C=0 Bx=0
+    0407 [line  571] 0x05C0C2C6  GETTABLE   R11 = R11[K[3]='Instance']
+    0408 [line  571] 0x008082DC  CALL       A=11 B=1 C=2
+    0409 [line  571] 0x05CFC2CB  SELF       A=11 B=11 C=319 Bx=5951
+    0410 [line  571] 0x03000340  MOVE       R13 = R6
+    0411 [line  571] 0x018082DC  CALL       A=11 B=3 C=2
+    0412 [line  603] 0x00000324  CLOSURE    R12 = PROTO[0]
+    0413 [line  603] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0414 [line  603] 0x03000000  MOVE       R0 = R6
+    0415 [line  603] 0x00800000  MOVE       R0 = R1
+    0416 [line  603] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0417 [line  603] 0x05800000  MOVE       R0 = R11
+    0418 [line  603] 0x03800000  MOVE       R0 = R7
+    0419 [line  603] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0420 [line  603] 0x04800000  MOVE       R0 = R9
+    0421 [line  604] 0x04438017  EQ         A=0 B=R8 C=K[14]=0.0
+    0422 [line  604] 0x80028016  JMP        A=0 sBx=11
+    0423 [line  604] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0424 [line  604] 0x06C1C346  GETTABLE   R13 = R13[K[7]='WAR_PHASE']
+    0425 [line  604] 0x06C20346  GETTABLE   R13 = R13[K[8]='Declaration']
+    0426 [line  604] 0x06814018  LT         A=0 B=R13 C=R5
+    0427 [line  604] 0x80014016  JMP        A=0 sBx=6
+    0428 [line  604] 0x00060345  GETGLOBAL  R13 = GLOBAL K[24]='ZeroUInt64'
+    0429 [line  604] 0x05834057  EQ         A=1 B=R11 C=R13
+    0430 [line  604] 0x80008016  JMP        A=0 sBx=3
+    0431 [line  605] 0x06000340  MOVE       R13 = R12
+    0432 [line  605] 0x0080435C  CALL       A=13 B=1 C=1
+    0433 [line  605] 0x8002C016  JMP        A=0 sBx=12
+    0434 [line  606] 0x04438057  EQ         A=1 B=R8 C=K[14]=0.0
+    0435 [line  606] 0x80024016  JMP        A=0 sBx=10
+    0436 [line  606] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0437 [line  606] 0x06C1C346  GETTABLE   R13 = R13[K[7]='WAR_PHASE']
+    0438 [line  606] 0x06C20346  GETTABLE   R13 = R13[K[8]='Declaration']
+    0439 [line  606] 0x06814018  LT         A=0 B=R13 C=R5
+    0440 [line  606] 0x80010016  JMP        A=0 sBx=5
+    0441 [line  606] 0x00060345  GETGLOBAL  R13 = GLOBAL K[24]='ZeroUInt64'
+    0442 [line  606] 0x05034057  EQ         A=1 B=R10 C=R13
+    0443 [line  606] 0x80004016  JMP        A=0 sBx=2
+    0444 [line  607] 0x06000340  MOVE       R13 = R12
+    0445 [line  607] 0x0080435C  CALL       A=13 B=1 C=1
+    0446 [line  608] 0x00000223  CLOSE      A=8 B=0 C=0 Bx=0
+    0447 [line  610] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 447
+    'gObj': 0 -> 447
+    'nation_id': 0 -> 447
+    'scene_id': 0 -> 447
+    'Img_Lock': 3 -> 447
+    'curState': 13 -> 447
+    'region_id': 18 -> 447
+    'hp': 22 -> 447
+    'Group_SignUpInfo': 30 -> 184
+    'info': 47 -> 184
+    'region_status': 50 -> 155
+    'bidder_number': 56 -> 155
+    'nation_occupation': 57 -> 155
+    'region_owner': 70 -> 155
+    'nation_name': 84 -> 155
+    'region_owner_name': 99 -> 155
+    'color': 110 -> 155
+    'isSign': 148 -> 155
+    'flag': 186 -> 446
+    'Group_PrepareInfo': 189 -> 446
+    'info': 197 -> 400
+    'Group_Red': 209 -> 400
+    'war_attack_nation': 224 -> 283
+    'nation_name': 248 -> 283
+    'war_attack_faction_name': 254 -> 283
+    'bless_value_attack': 265 -> 283
+    'max_bless_value': 268 -> 283
+    'Group_Blue': 306 -> 400
+    'war_defend_nation': 321 -> 380
+    'nation_name': 345 -> 380
+    'war_defend_faction_name': 351 -> 380
+    'bless_value_defend': 362 -> 380
+    'max_bless_value': 365 -> 380
+    'region_owner_when_finish': 406 -> 446
+    'region_owner': 412 -> 446
+    'war_finish': 421 -> 446
+
+        ============================================================
+        PROTO ROOT.24.0
+        Offset : 0x5CD0
+        Source : '@lua\\gui\\ecpanelfactionwar.lua'
+        Lines  : 573 - 603
+        Params : 0
+        Stack  : 10
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'Instance'
+        K[001] = 'GetRegionInfo'
+        K[002] = 'FindDirect'
+        K[003] = 'Group_WarEnd'
+        K[004] = 'region_owner_nation'
+        K[005] = 0.0
+        K[006] = 'GetCropNation'
+        K[007] = 'LuaUInt64'
+        K[008] = 'ToDouble'
+        K[009] = 'region_owner'
+        K[010] = 6.0
+        K[011] = '['
+        K[012] = 'getNationSimpleName'
+        K[013] = ']'
+        K[014] = ''
+        K[015] = 'ZeroUInt64'
+        K[016] = 'GameUtil'
+        K[017] = 'UnicodeToUtf8'
+        K[018] = 'region_owner_name'
+        K[019] = 'StringTable'
+        K[020] = 'Get'
+        K[021] = 17004.0
+        K[022] = 'RequestCropInfo'
+        K[023] = '_G'
+        K[024] = 'ColorGray'
+        K[025] = 'InfoData'
+        K[026] = 'Nation'
+        K[027] = 'ColorRed'
+        K[028] = 'ColorGreen'
+        K[029] = 'setTextAndColor'
+        K[030] = 'Txt_FactionLord'
+        K[031] = 'SetActive'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  574] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line  574] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+        0002 [line  574] 0x0080801C  CALL       A=0 B=1 C=2
+        0003 [line  574] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+        0004 [line  574] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+        0005 [line  574] 0x0180801C  CALL       A=0 B=3 C=2
+        0006 [line  575] 0x01000044  GETUPVAL   A=1 B=2 C=0 Bx=1024
+        0007 [line  575] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+        0008 [line  575] 0x0000C0C1  LOADK      R3 = K[3]='Group_WarEnd'
+        0009 [line  575] 0x0180805C  CALL       A=1 B=3 C=2
+        0010 [line  576] 0x0000005A  TEST       A=1 B=0 C=0
+        0011 [line  576] 0x80160016  JMP        A=0 sBx=89
+        0012 [line  576] 0x0000001A  TEST       A=0 B=0 C=0
+        0013 [line  576] 0x80158016  JMP        A=0 sBx=87
+        0014 [line  577] 0x00410086  GETTABLE   R2 = R0[K[4]='region_owner_nation']
+        0015 [line  578] 0x01414017  EQ         A=0 B=R2 C=K[5]=0.0
+        0016 [line  578] 0x80024016  JMP        A=0 sBx=10
+        0017 [line  579] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0018 [line  579] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+        0019 [line  579] 0x008080DC  CALL       A=3 B=1 C=2
+        0020 [line  579] 0x01C180CB  SELF       A=3 B=3 C=262 Bx=1798
+        0021 [line  579] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='LuaUInt64'
+        0022 [line  579] 0x02C20146  GETTABLE   R5 = R5[K[8]='ToDouble']
+        0023 [line  579] 0x00424186  GETTABLE   R6 = R0[K[9]='region_owner']
+        0024 [line  579] 0x0100015C  CALL       A=5 B=2 C=0
+        0025 [line  579] 0x000080DC  CALL       A=3 B=0 C=2
+        0026 [line  579] 0x01800080  MOVE       R2 = R3
+        0027 [line  582] 0x82808018  LT         A=0 B=K[5]=0.0 C=R2
+        0028 [line  582] 0x80028016  JMP        A=0 sBx=11
+        0029 [line  582] 0x01428019  LE         A=0 B=R2 C=K[10]=6.0
+        0030 [line  582] 0x80020016  JMP        A=0 sBx=9
+        0031 [line  582] 0x0002C0C1  LOADK      R3 = K[11]='['
+        0032 [line  582] 0x01800104  GETUPVAL   A=4 B=3 C=0 Bx=1536
+        0033 [line  582] 0x02430106  GETTABLE   R4 = R4[K[12]='getNationSimpleName']
+        0034 [line  582] 0x01000140  MOVE       R5 = R2
+        0035 [line  582] 0x0100811C  CALL       A=4 B=2 C=2
+        0036 [line  582] 0x00034141  LOADK      R5 = K[13]=']'
+        0037 [line  582] 0x018140D5  CONCAT     A=3 B=3 C=5 Bx=1541
+        0038 [line  582] 0x000040DA  TEST       A=3 B=0 C=1
+        0039 [line  582] 0x80000016  JMP        A=0 sBx=1
+        0040 [line  582] 0x000380C1  LOADK      R3 = K[14]=''
+        0041 [line  583] 0x02000104  GETUPVAL   A=4 B=4 C=0 Bx=2048
+        0042 [line  583] 0x0003C145  GETGLOBAL  R5 = GLOBAL K[15]='ZeroUInt64'
+        0043 [line  583] 0x02014057  EQ         A=1 B=R4 C=R5
+        0044 [line  583] 0x8001C016  JMP        A=0 sBx=8
+        0045 [line  583] 0x01800100  MOVE       R4 = R3
+        0046 [line  583] 0x00040145  GETGLOBAL  R5 = GLOBAL K[16]='GameUtil'
+        0047 [line  583] 0x02C44146  GETTABLE   R5 = R5[K[17]='UnicodeToUtf8']
+        0048 [line  583] 0x00448186  GETTABLE   R6 = R0[K[18]='region_owner_name']
+        0049 [line  583] 0x0100815C  CALL       A=5 B=2 C=2
+        0050 [line  583] 0x02014115  CONCAT     A=4 B=4 C=5 Bx=2053
+        0051 [line  583] 0x0000411A  TEST       A=4 B=0 C=1
+        0052 [line  583] 0x8000C016  JMP        A=0 sBx=4
+        0053 [line  583] 0x0004C105  GETGLOBAL  R4 = GLOBAL K[19]='StringTable'
+        0054 [line  583] 0x02450106  GETTABLE   R4 = R4[K[20]='Get']
+        0055 [line  583] 0x00054141  LOADK      R5 = K[21]=17004.0
+        0056 [line  583] 0x0100811C  CALL       A=4 B=2 C=2
+        0057 [line  585] 0x01414017  EQ         A=0 B=R2 C=K[5]=0.0
+        0058 [line  585] 0x8001C016  JMP        A=0 sBx=8
+        0059 [line  585] 0x02000144  GETUPVAL   A=5 B=4 C=0 Bx=2048
+        0060 [line  585] 0x0003C185  GETGLOBAL  R6 = GLOBAL K[15]='ZeroUInt64'
+        0061 [line  585] 0x02818057  EQ         A=1 B=R5 C=R6
+        0062 [line  585] 0x8000C016  JMP        A=0 sBx=4
+        0063 [line  586] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+        0064 [line  586] 0x02C58146  GETTABLE   R5 = R5[K[22]='RequestCropInfo']
+        0065 [line  586] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+        0066 [line  586] 0x0100415C  CALL       A=5 B=2 C=1
+        0067 [line  589] 0x0005C145  GETGLOBAL  R5 = GLOBAL K[23]='_G'
+        0068 [line  589] 0x02C60146  GETTABLE   R5 = R5[K[24]='ColorGray']
+        0069 [line  590] 0x02000184  GETUPVAL   A=6 B=4 C=0 Bx=2048
+        0070 [line  590] 0x0003C1C5  GETGLOBAL  R7 = GLOBAL K[15]='ZeroUInt64'
+        0071 [line  590] 0x0301C017  EQ         A=0 B=R6 C=R7
+        0072 [line  590] 0x80008016  JMP        A=0 sBx=3
+        0073 [line  591] 0x0005C185  GETGLOBAL  R6 = GLOBAL K[23]='_G'
+        0074 [line  591] 0x03460146  GETTABLE   R5 = R6[K[24]='ColorGray']
+        0075 [line  591] 0x80024016  JMP        A=0 sBx=10
+        0076 [line  592] 0x02800184  GETUPVAL   A=6 B=5 C=0 Bx=2560
+        0077 [line  592] 0x03464186  GETTABLE   R6 = R6[K[25]='InfoData']
+        0078 [line  592] 0x03468186  GETTABLE   R6 = R6[K[26]='Nation']
+        0079 [line  592] 0x03008057  EQ         A=1 B=R6 C=R2
+        0080 [line  592] 0x80008016  JMP        A=0 sBx=3
+        0081 [line  593] 0x0005C185  GETGLOBAL  R6 = GLOBAL K[23]='_G'
+        0082 [line  593] 0x0346C146  GETTABLE   R5 = R6[K[27]='ColorRed']
+        0083 [line  593] 0x80004016  JMP        A=0 sBx=2
+        0084 [line  595] 0x0005C185  GETGLOBAL  R6 = GLOBAL K[23]='_G'
+        0085 [line  595] 0x03470146  GETTABLE   R5 = R6[K[28]='ColorGreen']
+        0086 [line  598] 0x03000184  GETUPVAL   A=6 B=6 C=0 Bx=3072
+        0087 [line  598] 0x03474186  GETTABLE   R6 = R6[K[29]='setTextAndColor']
+        0088 [line  598] 0x00C081CB  SELF       A=7 B=1 C=258 Bx=770
+        0089 [line  598] 0x00078241  LOADK      R9 = K[30]='Txt_FactionLord'
+        0090 [line  598] 0x018081DC  CALL       A=7 B=3 C=2
+        0091 [line  598] 0x02000200  MOVE       R8 = R4
+        0092 [line  598] 0x02800240  MOVE       R9 = R5
+        0093 [line  598] 0x0200419C  CALL       A=6 B=4 C=1
+        0094 [line  600] 0x00C7C18B  SELF       A=6 B=1 C=287 Bx=799
+        0095 [line  600] 0x00800202  LOADBOOL   A=8 B=1 C=0
+        0096 [line  600] 0x0180419C  CALL       A=6 B=3 C=1
+        0097 [line  601] 0x03800184  GETUPVAL   A=6 B=7 C=0 Bx=3584
+        0098 [line  601] 0x0347C18B  SELF       A=6 B=6 C=287 Bx=3359
+        0099 [line  601] 0x00000202  LOADBOOL   A=8 B=0 C=0
+        0100 [line  601] 0x0180419C  CALL       A=6 B=3 C=1
+        0101 [line  603] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'info': 6 -> 101
+        'Group_WarEnd': 10 -> 101
+        'nation_occupation': 15 -> 101
+        'nation_name': 41 -> 101
+        'region_owner_name': 57 -> 101
+        'color': 69 -> 101
+
+    ============================================================
+    PROTO ROOT.25
+    Offset : 0x6DDB
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 612 - 624
+    Params : 1
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_curNation'
+    K[001] = 'm_panel'
+    K[002] = 'FindDirect'
+    K[003] = 'Widget/SubPanel_Map'
+    K[004] = 1.0
+    K[005] = 'GetSectionID'
+    K[006] = 'UpdateRegionBidderNumber'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  613] 0x00400046  GETTABLE   R1 = R0[K[0]='_curNation']
+    0001 [line  614] 0x00404086  GETTABLE   R2 = R0[K[1]='m_panel']
+    0002 [line  614] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0003 [line  614] 0x0000C101  LOADK      R4 = K[3]='Widget/SubPanel_Map'
+    0004 [line  614] 0x0180809C  CALL       A=2 B=3 C=2
+    0005 [line  617] 0x000100C1  LOADK      R3 = K[4]=1.0
+    0006 [line  617] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0007 [line  617] 0x00010141  LOADK      R5 = K[4]=1.0
+    0008 [line  617] 0x8003C0E0  FORPREP    A=3 sBx=16
+    0009 [line  618] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0010 [line  618] 0x03000200  MOVE       R8 = R6
+    0011 [line  618] 0x038201D5  CONCAT     A=7 B=7 C=8 Bx=3592
+    0012 [line  619] 0x0140820B  SELF       A=8 B=2 C=258 Bx=1282
+    0013 [line  619] 0x03800280  MOVE       R10 = R7
+    0014 [line  619] 0x0180821C  CALL       A=8 B=3 C=2
+    0015 [line  620] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0016 [line  620] 0x04818246  GETTABLE   R9 = R9[R6]
+    0017 [line  621] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0018 [line  621] 0x05414286  GETTABLE   R10 = R10[K[5]='GetSectionID']
+    0019 [line  621] 0x008002C0  MOVE       R11 = R1
+    0020 [line  621] 0x04800300  MOVE       R12 = R9
+    0021 [line  621] 0x0180829C  CALL       A=10 B=3 C=2
+    0022 [line  622] 0x004182CB  SELF       A=11 B=0 C=262 Bx=262
+    0023 [line  622] 0x05000340  MOVE       R13 = R10
+    0024 [line  622] 0x018042DC  CALL       A=11 B=3 C=1
+    0025 [line  617] 0x7FFB80DF  FORLOOP    A=3 sBx=-17
+    0026 [line  624] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 26
+    'curNation': 1 -> 26
+    'mapObj': 5 -> 26
+    '(for index)': 8 -> 26
+    '(for limit)': 8 -> 26
+    '(for step)': 8 -> 26
+    'i': 9 -> 25
+    'btn_name': 12 -> 25
+    'gObj': 15 -> 25
+    'scene_id': 17 -> 25
+    'region_id': 22 -> 25
+
+    ============================================================
+    PROTO ROOT.26
+    Offset : 0x7092
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 626 - 638
+    Params : 2
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetNationAndSceneID'
+    K[001] = '_curNation'
+    K[002] = 'm_panel'
+    K[003] = 'FindDirect'
+    K[004] = 'Widget/SubPanel_Map/Btn_District'
+    K[005] = '/Group_SignUpInfo/Txt_SignUpNum'
+    K[006] = 'setTextAndColor'
+    K[007] = 'tostring'
+    K[008] = 'Instance'
+    K[009] = 'GetRegionBidNum'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  627] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  627] 0x01400086  GETTABLE   R2 = R2[K[0]='GetNationAndSceneID']
+    0002 [line  627] 0x008000C0  MOVE       R3 = R1
+    0003 [line  627] 0x0100C09C  CALL       A=2 B=2 C=3
+    0004 [line  628] 0x00404106  GETTABLE   R4 = R0[K[1]='_curNation']
+    0005 [line  628] 0x01010057  EQ         A=1 B=R2 C=R4
+    0006 [line  628] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  629] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  631] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0009 [line  631] 0x0200C106  GETTABLE   R4 = R4[R3]
+    0010 [line  632] 0x0000411A  TEST       A=4 B=0 C=1
+    0011 [line  632] 0x80000016  JMP        A=0 sBx=1
+    0012 [line  633] 0x0080001E  RETURN     A=0 B=1 C=0
+    0013 [line  635] 0x00408146  GETTABLE   R5 = R0[K[2]='m_panel']
+    0014 [line  635] 0x02C0C14B  SELF       A=5 B=5 C=259 Bx=2819
+    0015 [line  635] 0x000101C1  LOADK      R7 = K[4]='Widget/SubPanel_Map/Btn_District'
+    0016 [line  635] 0x02000200  MOVE       R8 = R4
+    0017 [line  635] 0x00014241  LOADK      R9 = K[5]='/Group_SignUpInfo/Txt_SignUpNum'
+    0018 [line  635] 0x038241D5  CONCAT     A=7 B=7 C=9 Bx=3593
+    0019 [line  635] 0x0180815C  CALL       A=5 B=3 C=2
+    0020 [line  636] 0x0000415A  TEST       A=5 B=0 C=1
+    0021 [line  636] 0x80000016  JMP        A=0 sBx=1
+    0022 [line  636] 0x0080001E  RETURN     A=0 B=1 C=0
+    0023 [line  637] 0x01000184  GETUPVAL   A=6 B=2 C=0 Bx=1024
+    0024 [line  637] 0x03418186  GETTABLE   R6 = R6[K[6]='setTextAndColor']
+    0025 [line  637] 0x028001C0  MOVE       R7 = R5
+    0026 [line  637] 0x0001C205  GETGLOBAL  R8 = GLOBAL K[7]='tostring'
+    0027 [line  637] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0028 [line  637] 0x04C20246  GETTABLE   R9 = R9[K[8]='Instance']
+    0029 [line  637] 0x0080825C  CALL       A=9 B=1 C=2
+    0030 [line  637] 0x04C2424B  SELF       A=9 B=9 C=265 Bx=4873
+    0031 [line  637] 0x008002C0  MOVE       R11 = R1
+    0032 [line  637] 0x0180025C  CALL       A=9 B=3 C=0
+    0033 [line  637] 0x0000021C  CALL       A=8 B=0 C=0
+    0034 [line  637] 0x0000419C  CALL       A=6 B=0 C=1
+    0035 [line  638] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+    'region_id': 0 -> 35
+    'nation_id': 4 -> 35
+    'scene_id': 4 -> 35
+    'index': 10 -> 35
+    'gObj': 20 -> 35
+
+    ============================================================
+    PROTO ROOT.27
+    Offset : 0x7362
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 640 - 669
+    Params : 2
+    Stack  : 14
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_curNation'
+    K[001] = 'GetFactionWarSectionTemplate'
+    K[002] = 'can_be_robbed'
+    K[003] = 0.0
+    K[004] = 'FlashTipMan'
+    K[005] = 'FlashTip'
+    K[006] = 'StringTable'
+    K[007] = 'Get'
+    K[008] = 17009.0
+    K[009] = 'format'
+    K[010] = 'name'
+    K[011] = 'rebbed_verify'
+    K[012] = 'section_id'
+    K[013] = 'Instance'
+    K[014] = 'GetCurrentWarPhase'
+    K[015] = 'WAR_PHASE'
+    K[016] = 'Declaration'
+    K[017] = 'GetRegionInfo'
+    K[018] = 'require'
+    K[019] = 'GUI.ECPanelFactionWarSignUp'
+    K[020] = 'OpenPanel'
+    K[021] = 'GetRegionWarInfo'
+    K[022] = 'war_attacker'
+    K[023] = 'ZeroUInt64'
+    K[024] = 'war_defender'
+    K[025] = 17055.0
+    K[026] = 'GUI.ECPanelFactionWarInspire'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  641] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line  641] 0x01004086  GETTABLE   R2 = R2[R1]
+    0002 [line  642] 0x004000C6  GETTABLE   R3 = R0[K[0]='_curNation']
+    0003 [line  643] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0004 [line  643] 0x02404106  GETTABLE   R4 = R4[K[1]='GetFactionWarSectionTemplate']
+    0005 [line  643] 0x01800140  MOVE       R5 = R3
+    0006 [line  643] 0x01000180  MOVE       R6 = R2
+    0007 [line  643] 0x0180811C  CALL       A=4 B=3 C=2
+    0008 [line  644] 0x0000011A  TEST       A=4 B=0 C=0
+    0009 [line  644] 0x80038016  JMP        A=0 sBx=15
+    0010 [line  644] 0x02408146  GETTABLE   R5 = R4[K[2]='can_be_robbed']
+    0011 [line  644] 0x02C0C017  EQ         A=0 B=R5 C=K[3]=0.0
+    0012 [line  644] 0x8002C016  JMP        A=0 sBx=12
+    0013 [line  645] 0x00010145  GETGLOBAL  R5 = GLOBAL K[4]='FlashTipMan'
+    0014 [line  645] 0x02C14146  GETTABLE   R5 = R5[K[5]='FlashTip']
+    0015 [line  645] 0x00018185  GETGLOBAL  R6 = GLOBAL K[6]='StringTable'
+    0016 [line  645] 0x0341C186  GETTABLE   R6 = R6[K[7]='Get']
+    0017 [line  645] 0x000201C1  LOADK      R7 = K[8]=17009.0
+    0018 [line  645] 0x0100819C  CALL       A=6 B=2 C=2
+    0019 [line  645] 0x0342418B  SELF       A=6 B=6 C=265 Bx=3337
+    0020 [line  645] 0x02428206  GETTABLE   R8 = R4[K[10]='name']
+    0021 [line  645] 0x0180819C  CALL       A=6 B=3 C=2
+    0022 [line  645] 0x0002C1C1  LOADK      R7 = K[11]='rebbed_verify'
+    0023 [line  645] 0x0180415C  CALL       A=5 B=3 C=1
+    0024 [line  646] 0x0080001E  RETURN     A=0 B=1 C=0
+    0025 [line  649] 0x02430146  GETTABLE   R5 = R4[K[12]='section_id']
+    0026 [line  650] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0027 [line  650] 0x03434186  GETTABLE   R6 = R6[K[13]='Instance']
+    0028 [line  650] 0x0080819C  CALL       A=6 B=1 C=2
+    0029 [line  650] 0x0343818B  SELF       A=6 B=6 C=270 Bx=3342
+    0030 [line  650] 0x0100819C  CALL       A=6 B=2 C=2
+    0031 [line  651] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0032 [line  651] 0x03C3C1C6  GETTABLE   R7 = R7[K[15]='WAR_PHASE']
+    0033 [line  651] 0x03C401C6  GETTABLE   R7 = R7[K[16]='Declaration']
+    0034 [line  651] 0x0301C019  LE         A=0 B=R6 C=R7
+    0035 [line  651] 0x8004C016  JMP        A=0 sBx=20
+    0036 [line  652] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0037 [line  652] 0x03C341C6  GETTABLE   R7 = R7[K[13]='Instance']
+    0038 [line  652] 0x008081DC  CALL       A=7 B=1 C=2
+    0039 [line  652] 0x03C441CB  SELF       A=7 B=7 C=273 Bx=3857
+    0040 [line  652] 0x02800240  MOVE       R9 = R5
+    0041 [line  652] 0x018081DC  CALL       A=7 B=3 C=2
+    0042 [line  653] 0x000041DA  TEST       A=7 B=0 C=1
+    0043 [line  653] 0x80000016  JMP        A=0 sBx=1
+    0044 [line  653] 0x0080001E  RETURN     A=0 B=1 C=0
+    0045 [line  655] 0x00048205  GETGLOBAL  R8 = GLOBAL K[18]='require'
+    0046 [line  655] 0x0004C241  LOADK      R9 = K[19]='GUI.ECPanelFactionWarSignUp'
+    0047 [line  655] 0x0100821C  CALL       A=8 B=2 C=2
+    0048 [line  656] 0x04434246  GETTABLE   R9 = R8[K[13]='Instance']
+    0049 [line  656] 0x0080825C  CALL       A=9 B=1 C=2
+    0050 [line  656] 0x04C5024B  SELF       A=9 B=9 C=276 Bx=4884
+    0051 [line  656] 0x004002C6  GETTABLE   R11 = R0[K[0]='_curNation']
+    0052 [line  656] 0x01000300  MOVE       R12 = R2
+    0053 [line  656] 0x03800340  MOVE       R13 = R7
+    0054 [line  656] 0x0280425C  CALL       A=9 B=5 C=1
+    0055 [line  656] 0x80084016  JMP        A=0 sBx=34
+    0056 [line  658] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0057 [line  658] 0x03C341C6  GETTABLE   R7 = R7[K[13]='Instance']
+    0058 [line  658] 0x008081DC  CALL       A=7 B=1 C=2
+    0059 [line  658] 0x03C541CB  SELF       A=7 B=7 C=277 Bx=3861
+    0060 [line  658] 0x02800240  MOVE       R9 = R5
+    0061 [line  658] 0x018081DC  CALL       A=7 B=3 C=2
+    0062 [line  659] 0x000001DA  TEST       A=7 B=0 C=0
+    0063 [line  659] 0x8001C016  JMP        A=0 sBx=8
+    0064 [line  659] 0x03C58206  GETTABLE   R8 = R7[K[22]='war_attacker']
+    0065 [line  659] 0x0005C245  GETGLOBAL  R9 = GLOBAL K[23]='ZeroUInt64'
+    0066 [line  659] 0x04024057  EQ         A=1 B=R8 C=R9
+    0067 [line  659] 0x8000C016  JMP        A=0 sBx=4
+    0068 [line  659] 0x03C60206  GETTABLE   R8 = R7[K[24]='war_defender']
+    0069 [line  659] 0x0005C245  GETGLOBAL  R9 = GLOBAL K[23]='ZeroUInt64'
+    0070 [line  659] 0x04024017  EQ         A=0 B=R8 C=R9
+    0071 [line  659] 0x8001C016  JMP        A=0 sBx=8
+    0072 [line  660] 0x00010205  GETGLOBAL  R8 = GLOBAL K[4]='FlashTipMan'
+    0073 [line  660] 0x04414206  GETTABLE   R8 = R8[K[5]='FlashTip']
+    0074 [line  660] 0x00018245  GETGLOBAL  R9 = GLOBAL K[6]='StringTable'
+    0075 [line  660] 0x04C1C246  GETTABLE   R9 = R9[K[7]='Get']
+    0076 [line  660] 0x00064281  LOADK      R10 = K[25]=17055.0
+    0077 [line  660] 0x0100025C  CALL       A=9 B=2 C=0
+    0078 [line  660] 0x0000421C  CALL       A=8 B=0 C=1
+    0079 [line  661] 0x0080001E  RETURN     A=0 B=1 C=0
+    0080 [line  663] 0x00048205  GETGLOBAL  R8 = GLOBAL K[18]='require'
+    0081 [line  663] 0x00068241  LOADK      R9 = K[26]='GUI.ECPanelFactionWarInspire'
+    0082 [line  663] 0x0100821C  CALL       A=8 B=2 C=2
+    0083 [line  664] 0x04434246  GETTABLE   R9 = R8[K[13]='Instance']
+    0084 [line  664] 0x0080825C  CALL       A=9 B=1 C=2
+    0085 [line  664] 0x04C5024B  SELF       A=9 B=9 C=276 Bx=4884
+    0086 [line  664] 0x004002C6  GETTABLE   R11 = R0[K[0]='_curNation']
+    0087 [line  664] 0x01000300  MOVE       R12 = R2
+    0088 [line  664] 0x03800340  MOVE       R13 = R7
+    0089 [line  664] 0x0280425C  CALL       A=9 B=5 C=1
+    0090 [line  669] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 90
+    'district_index': 0 -> 90
+    'scene_id': 2 -> 90
+    'nation_id': 3 -> 90
+    'template': 8 -> 90
+    'region_id': 26 -> 90
+    'curState': 31 -> 90
+    'info': 42 -> 55
+    'ECPanelFactionWarSignUp': 48 -> 55
+    'info': 62 -> 90
+    'ECPanelFactionWarInspire': 83 -> 90
+
+    ============================================================
+    PROTO ROOT.28
+    Offset : 0x7965
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 671 - 677
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'isnil'
+    K[002] = 'FindDirect'
+    K[003] = 'Widget/Group_Reward'
+    K[004] = 'SetActive'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  672] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0001 [line  672] 0x0000009A  TEST       A=2 B=0 C=0
+    0002 [line  672] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  672] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0004 [line  672] 0x01404086  GETTABLE   R2 = R2[K[1]='isnil']
+    0005 [line  672] 0x0000009A  TEST       A=2 B=0 C=0
+    0006 [line  672] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  673] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  675] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0009 [line  675] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0010 [line  675] 0x0000C101  LOADK      R4 = K[3]='Widget/Group_Reward'
+    0011 [line  675] 0x0180809C  CALL       A=2 B=3 C=2
+    0012 [line  676] 0x014100CB  SELF       A=3 B=2 C=260 Bx=1284
+    0013 [line  676] 0x00800140  MOVE       R5 = R1
+    0014 [line  676] 0x018040DC  CALL       A=3 B=3 C=1
+    0015 [line  677] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 15
+    'hasReward': 0 -> 15
+    'obj': 12 -> 15
+
+    ============================================================
+    PROTO ROOT.29
+    Offset : 0x7A94
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 679 - 724
+    Params : 2
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'name'
+    K[001] = 'Btn_Close'
+    K[002] = 'DestroyPanel'
+    K[003] = 'Btn_Hit'
+    K[004] = 'm_panel'
+    K[005] = 'FindDirect'
+    K[006] = 'Widget/SubPanel_FactionWarHit'
+    K[007] = 'SetActive'
+    K[008] = 'activeSelf'
+    K[009] = 'Btn_IntoWar'
+    K[010] = 'Instance'
+    K[011] = 'AttendInstance'
+    K[012] = 'Btn_GetQuest'
+    K[013] = 'CanAcceptCompensateTask'
+    K[014] = 'GetCompensateTaskID'
+    K[015] = 0.0
+    K[016] = 'warn'
+    K[017] = 'can not get task info in faction_war config'
+    K[018] = 'RequestCompensationTask'
+    K[019] = 'Btn_Reward'
+    K[020] = 'GetDailyBouns'
+    K[021] = 'string'
+    K[022] = 'find'
+    K[023] = 'Rtn(%d+)'
+    K[024] = 'tonumber'
+    K[025] = '_curNation'
+    K[026] = 'SelectNation'
+    K[027] = 'Request'
+    K[028] = 'Btn_District(%d+)'
+    K[029] = 'SelectDistrict'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  680] 0x00C00086  GETTABLE   R2 = R1[K[0]='name']
+    0001 [line  682] 0x01404017  EQ         A=0 B=R2 C=K[1]='Btn_Close'
+    0002 [line  682] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  683] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+    0004 [line  683] 0x010040DC  CALL       A=3 B=2 C=1
+    0005 [line  684] 0x0080001E  RETURN     A=0 B=1 C=0
+    0006 [line  684] 0x80198016  JMP        A=0 sBx=103
+    0007 [line  685] 0x0140C017  EQ         A=0 B=R2 C=K[3]='Btn_Hit'
+    0008 [line  685] 0x80024016  JMP        A=0 sBx=10
+    0009 [line  686] 0x004100C6  GETTABLE   R3 = R0[K[4]='m_panel']
+    0010 [line  686] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0011 [line  686] 0x00018141  LOADK      R5 = K[6]='Widget/SubPanel_FactionWarHit'
+    0012 [line  686] 0x018080DC  CALL       A=3 B=3 C=2
+    0013 [line  687] 0x01C1C10B  SELF       A=4 B=3 C=263 Bx=1799
+    0014 [line  687] 0x01C20186  GETTABLE   R6 = R3[K[8]='activeSelf']
+    0015 [line  687] 0x03000193  NOT        A=6 B=6 C=0 Bx=3072
+    0016 [line  687] 0x0180411C  CALL       A=4 B=3 C=1
+    0017 [line  688] 0x0080001E  RETURN     A=0 B=1 C=0
+    0018 [line  688] 0x80168016  JMP        A=0 sBx=91
+    0019 [line  689] 0x01424017  EQ         A=0 B=R2 C=K[9]='Btn_IntoWar'
+    0020 [line  689] 0x80028016  JMP        A=0 sBx=11
+    0021 [line  690] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0022 [line  690] 0x01C280C6  GETTABLE   R3 = R3[K[10]='Instance']
+    0023 [line  690] 0x008080DC  CALL       A=3 B=1 C=2
+    0024 [line  690] 0x01C2C0CB  SELF       A=3 B=3 C=267 Bx=1803
+    0025 [line  690] 0x010080DC  CALL       A=3 B=2 C=2
+    0026 [line  690] 0x000040DA  TEST       A=3 B=0 C=1
+    0027 [line  690] 0x80000016  JMP        A=0 sBx=1
+    0028 [line  691] 0x0080001E  RETURN     A=0 B=1 C=0
+    0029 [line  693] 0x004080CB  SELF       A=3 B=0 C=258 Bx=258
+    0030 [line  693] 0x010040DC  CALL       A=3 B=2 C=1
+    0031 [line  693] 0x80134016  JMP        A=0 sBx=78
+    0032 [line  694] 0x01430017  EQ         A=0 B=R2 C=K[12]='Btn_GetQuest'
+    0033 [line  694] 0x80050016  JMP        A=0 sBx=21
+    0034 [line  695] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0035 [line  695] 0x01C340C6  GETTABLE   R3 = R3[K[13]='CanAcceptCompensateTask']
+    0036 [line  695] 0x00800102  LOADBOOL   A=4 B=1 C=0
+    0037 [line  695] 0x010080DC  CALL       A=3 B=2 C=2
+    0038 [line  695] 0x000040DA  TEST       A=3 B=0 C=1
+    0039 [line  695] 0x80000016  JMP        A=0 sBx=1
+    0040 [line  696] 0x0080001E  RETURN     A=0 B=1 C=0
+    0041 [line  698] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0042 [line  698] 0x01C380C6  GETTABLE   R3 = R3[K[14]='GetCompensateTaskID']
+    0043 [line  698] 0x008080DC  CALL       A=3 B=1 C=2
+    0044 [line  699] 0x01C3C017  EQ         A=0 B=R3 C=K[15]=0.0
+    0045 [line  699] 0x8000C016  JMP        A=0 sBx=4
+    0046 [line  700] 0x00040105  GETGLOBAL  R4 = GLOBAL K[16]='warn'
+    0047 [line  700] 0x00044141  LOADK      R5 = K[17]='can not get task info in faction_war config'
+    0048 [line  700] 0x0100411C  CALL       A=4 B=2 C=1
+    0049 [line  701] 0x0080001E  RETURN     A=0 B=1 C=0
+    0050 [line  705] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0051 [line  705] 0x02448106  GETTABLE   R4 = R4[K[18]='RequestCompensationTask']
+    0052 [line  705] 0x01800140  MOVE       R5 = R3
+    0053 [line  705] 0x0100411C  CALL       A=4 B=2 C=1
+    0054 [line  705] 0x800D8016  JMP        A=0 sBx=55
+    0055 [line  706] 0x0144C017  EQ         A=0 B=R2 C=K[19]='Btn_Reward'
+    0056 [line  706] 0x8000C016  JMP        A=0 sBx=4
+    0057 [line  707] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0058 [line  707] 0x01C500C6  GETTABLE   R3 = R3[K[20]='GetDailyBouns']
+    0059 [line  707] 0x008040DC  CALL       A=3 B=1 C=1
+    0060 [line  707] 0x800C0016  JMP        A=0 sBx=49
+    0061 [line  709] 0x004100C6  GETTABLE   R3 = R0[K[4]='m_panel']
+    0062 [line  709] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0063 [line  709] 0x00018141  LOADK      R5 = K[6]='Widget/SubPanel_FactionWarHit'
+    0064 [line  709] 0x018080DC  CALL       A=3 B=3 C=2
+    0065 [line  710] 0x01C1C10B  SELF       A=4 B=3 C=263 Bx=1799
+    0066 [line  710] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0067 [line  710] 0x0180411C  CALL       A=4 B=3 C=1
+    0068 [line  711] 0x00054105  GETGLOBAL  R4 = GLOBAL K[21]='string'
+    0069 [line  711] 0x02458106  GETTABLE   R4 = R4[K[22]='find']
+    0070 [line  711] 0x01000140  MOVE       R5 = R2
+    0071 [line  711] 0x0005C181  LOADK      R6 = K[23]='Rtn(%d+)'
+    0072 [line  711] 0x0180811C  CALL       A=4 B=3 C=2
+    0073 [line  711] 0x0000011A  TEST       A=4 B=0 C=0
+    0074 [line  711] 0x80040016  JMP        A=0 sBx=17
+    0075 [line  712] 0x00054105  GETGLOBAL  R4 = GLOBAL K[21]='string'
+    0076 [line  712] 0x02458106  GETTABLE   R4 = R4[K[22]='find']
+    0077 [line  712] 0x01000140  MOVE       R5 = R2
+    0078 [line  712] 0x0005C181  LOADK      R6 = K[23]='Rtn(%d+)'
+    0079 [line  712] 0x0181011C  CALL       A=4 B=3 C=4
+    0080 [line  713] 0x000601C5  GETGLOBAL  R7 = GLOBAL K[24]='tonumber'
+    0081 [line  713] 0x03000200  MOVE       R8 = R6
+    0082 [line  713] 0x010081DC  CALL       A=7 B=2 C=2
+    0083 [line  714] 0x00464206  GETTABLE   R8 = R0[K[25]='_curNation']
+    0084 [line  714] 0x03820057  EQ         A=1 B=R7 C=R8
+    0085 [line  714] 0x8005C016  JMP        A=0 sBx=24
+    0086 [line  715] 0x0046820B  SELF       A=8 B=0 C=282 Bx=282
+    0087 [line  715] 0x03800280  MOVE       R10 = R7
+    0088 [line  715] 0x0180421C  CALL       A=8 B=3 C=1
+    0089 [line  716] 0x0046C20B  SELF       A=8 B=0 C=283 Bx=283
+    0090 [line  716] 0x0100421C  CALL       A=8 B=2 C=1
+    0091 [line  717] 0x80044016  JMP        A=0 sBx=18
+    0092 [line  718] 0x00054105  GETGLOBAL  R4 = GLOBAL K[21]='string'
+    0093 [line  718] 0x02458106  GETTABLE   R4 = R4[K[22]='find']
+    0094 [line  718] 0x01000140  MOVE       R5 = R2
+    0095 [line  718] 0x00070181  LOADK      R6 = K[28]='Btn_District(%d+)'
+    0096 [line  718] 0x0180811C  CALL       A=4 B=3 C=2
+    0097 [line  718] 0x0000011A  TEST       A=4 B=0 C=0
+    0098 [line  718] 0x80028016  JMP        A=0 sBx=11
+    0099 [line  719] 0x00054105  GETGLOBAL  R4 = GLOBAL K[21]='string'
+    0100 [line  719] 0x02458106  GETTABLE   R4 = R4[K[22]='find']
+    0101 [line  719] 0x01000140  MOVE       R5 = R2
+    0102 [line  719] 0x00070181  LOADK      R6 = K[28]='Btn_District(%d+)'
+    0103 [line  719] 0x0181011C  CALL       A=4 B=3 C=4
+    0104 [line  720] 0x000601C5  GETGLOBAL  R7 = GLOBAL K[24]='tonumber'
+    0105 [line  720] 0x03000200  MOVE       R8 = R6
+    0106 [line  720] 0x010081DC  CALL       A=7 B=2 C=2
+    0107 [line  721] 0x0047420B  SELF       A=8 B=0 C=285 Bx=285
+    0108 [line  721] 0x03800280  MOVE       R10 = R7
+    0109 [line  721] 0x0180421C  CALL       A=8 B=3 C=1
+    0110 [line  724] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 110
+    'sender': 0 -> 110
+    'id': 1 -> 110
+    'hint': 13 -> 18
+    'compensate_task_id': 44 -> 54
+    'hint': 65 -> 110
+    '_': 80 -> 91
+    '_': 80 -> 91
+    'index': 80 -> 91
+    'nation_id': 83 -> 91
+    '_': 104 -> 110
+    '_': 104 -> 110
+    'index': 104 -> 110
+    'district_index': 107 -> 110
+
+    ============================================================
+    PROTO ROOT.30
+    Offset : 0x816B
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 726 - 742
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_HostPlayer'
+    K[002] = 'InfoData'
+    K[003] = 'Faction'
+    K[004] = 0.0
+    K[005] = 'CanAttendWar'
+    K[006] = 'isRegionWarScene'
+    K[007] = '_successEnd'
+    K[008] = 'GetCurrentWarPhase'
+    K[009] = 'WAR_PHASE'
+    K[010] = 'Fighting'
+    K[011] = '_hasDailyReward'
+    K[012] = 'SetBadgeNumber'
+    K[013] = 'faction_activity'
+    K[014] = 1.0
+    K[015] = 'ShowReward'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  727] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  727] 0x00C00046  GETTABLE   R1 = R1[K[0]='Instance']
+    0002 [line  727] 0x0080805C  CALL       A=1 B=1 C=2
+    0003 [line  727] 0x00C04046  GETTABLE   R1 = R1[K[1]='m_HostPlayer']
+    0004 [line  728] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line  728] 0x80010016  JMP        A=0 sBx=5
+    0006 [line  728] 0x00C08086  GETTABLE   R2 = R1[K[2]='InfoData']
+    0007 [line  728] 0x0140C086  GETTABLE   R2 = R2[K[3]='Faction']
+    0008 [line  728] 0x01410057  EQ         A=1 B=R2 C=K[4]=0.0
+    0009 [line  728] 0x80000016  JMP        A=0 sBx=1
+    0010 [line  728] 0x80008016  JMP        A=0 sBx=3
+    0011 [line  728] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0012 [line  728] 0x80004016  JMP        A=0 sBx=2
+    0013 [line  728] 0x00004082  LOADBOOL   A=2 B=0 C=1
+    0014 [line  728] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0015 [line  730] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0016 [line  730] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+    0017 [line  730] 0x008080DC  CALL       A=3 B=1 C=2
+    0018 [line  730] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0019 [line  730] 0x00000142  LOADBOOL   A=5 B=0 C=0
+    0020 [line  730] 0x018080DC  CALL       A=3 B=3 C=2
+    0021 [line  731] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0022 [line  731] 0x02400106  GETTABLE   R4 = R4[K[0]='Instance']
+    0023 [line  731] 0x0080811C  CALL       A=4 B=1 C=2
+    0024 [line  731] 0x0241810B  SELF       A=4 B=4 C=262 Bx=2310
+    0025 [line  731] 0x0100811C  CALL       A=4 B=2 C=2
+    0026 [line  732] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0027 [line  732] 0x02C00146  GETTABLE   R5 = R5[K[0]='Instance']
+    0028 [line  732] 0x0080815C  CALL       A=5 B=1 C=2
+    0029 [line  732] 0x02C1C146  GETTABLE   R5 = R5[K[7]='_successEnd']
+    0030 [line  733] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0031 [line  733] 0x03400186  GETTABLE   R6 = R6[K[0]='Instance']
+    0032 [line  733] 0x0080819C  CALL       A=6 B=1 C=2
+    0033 [line  733] 0x0342018B  SELF       A=6 B=6 C=264 Bx=3336
+    0034 [line  733] 0x0100819C  CALL       A=6 B=2 C=2
+    0035 [line  733] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0036 [line  733] 0x03C241C6  GETTABLE   R7 = R7[K[9]='WAR_PHASE']
+    0037 [line  733] 0x03C281C6  GETTABLE   R7 = R7[K[10]='Fighting']
+    0038 [line  733] 0x0301C057  EQ         A=1 B=R6 C=R7
+    0039 [line  733] 0x80000016  JMP        A=0 sBx=1
+    0040 [line  733] 0x00004182  LOADBOOL   A=6 B=0 C=1
+    0041 [line  733] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0042 [line  734] 0x018001DB  TESTSET    A=7 B=3 C=0
+    0043 [line  734] 0x8001C016  JMP        A=0 sBx=8
+    0044 [line  734] 0x0000411A  TEST       A=4 B=0 C=1
+    0045 [line  734] 0x8000C016  JMP        A=0 sBx=4
+    0046 [line  734] 0x030001DB  TESTSET    A=7 B=6 C=0
+    0047 [line  734] 0x8000C016  JMP        A=0 sBx=4
+    0048 [line  734] 0x028001D3  NOT        A=7 B=5 C=0 Bx=2560
+    0049 [line  734] 0x80004016  JMP        A=0 sBx=2
+    0050 [line  734] 0x000041C2  LOADBOOL   A=7 B=0 C=1
+    0051 [line  734] 0x008001C2  LOADBOOL   A=7 B=1 C=0
+    0052 [line  736] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0053 [line  736] 0x04400206  GETTABLE   R8 = R8[K[0]='Instance']
+    0054 [line  736] 0x0080821C  CALL       A=8 B=1 C=2
+    0055 [line  736] 0x0442C206  GETTABLE   R8 = R8[K[11]='_hasDailyReward']
+    0056 [line  738] 0x0380425B  TESTSET    A=9 B=7 C=1
+    0057 [line  738] 0x80000016  JMP        A=0 sBx=1
+    0058 [line  738] 0x04000240  MOVE       R9 = R8
+    0059 [line  739] 0x01000284  GETUPVAL   A=10 B=2 C=0 Bx=1024
+    0060 [line  739] 0x05430286  GETTABLE   R10 = R10[K[12]='SetBadgeNumber']
+    0061 [line  739] 0x000342C1  LOADK      R11 = K[13]='faction_activity'
+    0062 [line  739] 0x0000009A  TEST       A=2 B=0 C=0
+    0063 [line  739] 0x80010016  JMP        A=0 sBx=5
+    0064 [line  739] 0x0000025A  TEST       A=9 B=0 C=0
+    0065 [line  739] 0x80008016  JMP        A=0 sBx=3
+    0066 [line  739] 0x00038301  LOADK      R12 = K[14]=1.0
+    0067 [line  739] 0x0000431A  TEST       A=12 B=0 C=1
+    0068 [line  739] 0x80000016  JMP        A=0 sBx=1
+    0069 [line  739] 0x00010301  LOADK      R12 = K[4]=0.0
+    0070 [line  739] 0x0180429C  CALL       A=10 B=3 C=1
+    0071 [line  741] 0x0043C28B  SELF       A=10 B=0 C=271 Bx=271
+    0072 [line  741] 0x04000300  MOVE       R12 = R8
+    0073 [line  741] 0x0180429C  CALL       A=10 B=3 C=1
+    0074 [line  742] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 74
+    'hp': 4 -> 74
+    'hasFaction': 15 -> 74
+    'canAttendWar': 21 -> 74
+    'isInRegionWar': 26 -> 74
+    'successEnd': 30 -> 74
+    'isFight': 42 -> 74
+    'canGoInto': 52 -> 74
+    'hasReward': 56 -> 74
+    'RedPoint': 59 -> 74
+
+    ============================================================
+    PROTO ROOT.31
+    Offset : 0x85FE
+    Source : '@lua\\gui\\ecpanelfactionwar.lua'
+    Lines  : 749 - 751
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'RefreshBadge'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  750] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  750] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line  750] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line  750] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+    0004 [line  750] 0x0100401C  CALL       A=0 B=2 C=1
+    0005 [line  751] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----

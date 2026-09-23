@@ -1,0 +1,2380 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecpanelnpcquest.lua
+SIZE: 22733
+PARSED: 22733
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecpanelnpcquest.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 25
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Utility.HtmlUtility'
+K[003] = 'GUI.ECPanelBase'
+K[004] = 'Task.ECTaskInterface'
+K[005] = 'Main.ECGame'
+K[006] = 'Types.Vector3'
+K[007] = 'Task.ECTaskDef'
+K[008] = 'Utility.ECUIUtility'
+K[009] = 'Event.TaskEvents'
+K[010] = 'Task.TaskListItem'
+K[011] = 'Task.ECTaskUtility'
+K[012] = 'GUI.ECGUITools'
+K[013] = 'Inventory.ECInventory'
+K[014] = 'Data.ECEquipDesc'
+K[015] = 'Utility.ECIvtrUIUtility'
+K[016] = 'Data.ElementData'
+K[017] = 'Utility.Task'
+K[018] = 'Extend'
+K[019] = 'ECPanelNPCQuest'
+K[020] = 'define'
+K[021] = 3.0
+K[022] = 'static'
+K[023] = 'table'
+K[024] = 'number'
+K[025] = 'PopForReceiveTask'
+K[026] = 'PopForFinishTask'
+K[027] = 'PopForManualReceiveTask'
+K[028] = 'PopForManualFinishTask'
+K[029] = 'PopForReceivePrompt'
+K[030] = 'SavePopState'
+K[031] = 'RecoverPopState'
+K[032] = '=>'
+K[033] = 'Instance'
+K[034] = 'method'
+K[035] = 'string'
+K[036] = 'Popup_inner'
+K[037] = 'Create'
+K[038] = 'field'
+K[039] = 'm_mode'
+K[040] = ''
+K[041] = 'boolean'
+K[042] = 'm_MultiAward'
+K[043] = False
+K[044] = 'm_npcEss'
+K[045] = None
+K[046] = 'm_taskId'
+K[047] = 0.0
+K[048] = 'm_AwardItem'
+K[049] = 'm_SelectItemIndex'
+K[050] = 'm_savedPopState'
+K[051] = 'Setup'
+K[052] = 'override'
+K[053] = 'OnCreate'
+K[054] = 'RefreshView'
+K[055] = 'raiseOpenPanelEvent'
+K[056] = 'onClick'
+K[057] = 'searchNextStep'
+K[058] = 'doNextStep'
+K[059] = 'End'
+K[060] = 'Commit'
+K[061] = 'SetHideOnDestroy'
+K[062] = 'TASK_SERVER_NOTIFY'
+K[063] = 'TASK_SVR_NOTIFY_NEW'
+K[064] = 'EventManager'
+K[065] = 'addHandler'
+K[066] = 'SimpleNotifyEvent'
+K[067] = 'ClosePanelOnNPCServiceEnd'
+
+----- INSTRUCTIONS -----
+0000 [line   10] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line   10] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line   10] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line   11] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line   11] 0x00008081  LOADK      R2 = K[2]='Utility.HtmlUtility'
+0005 [line   11] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line   12] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line   12] 0x0000C0C1  LOADK      R3 = K[3]='GUI.ECPanelBase'
+0008 [line   12] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line   13] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line   13] 0x00010101  LOADK      R4 = K[4]='Task.ECTaskInterface'
+0011 [line   13] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line   14] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line   14] 0x00014141  LOADK      R5 = K[5]='Main.ECGame'
+0014 [line   14] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line   15] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line   15] 0x00018181  LOADK      R6 = K[6]='Types.Vector3'
+0017 [line   15] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line   16] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line   16] 0x0001C1C1  LOADK      R7 = K[7]='Task.ECTaskDef'
+0020 [line   16] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line   17] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line   17] 0x00020201  LOADK      R8 = K[8]='Utility.ECUIUtility'
+0023 [line   17] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line   18] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line   18] 0x00024241  LOADK      R9 = K[9]='Event.TaskEvents'
+0026 [line   18] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   19] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   19] 0x00028281  LOADK      R10 = K[10]='Task.TaskListItem'
+0029 [line   19] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   20] 0x00000285  GETGLOBAL  R10 = GLOBAL K[0]='require'
+0031 [line   20] 0x0002C2C1  LOADK      R11 = K[11]='Task.ECTaskUtility'
+0032 [line   20] 0x0100829C  CALL       A=10 B=2 C=2
+0033 [line   21] 0x000002C5  GETGLOBAL  R11 = GLOBAL K[0]='require'
+0034 [line   21] 0x00030301  LOADK      R12 = K[12]='GUI.ECGUITools'
+0035 [line   21] 0x010082DC  CALL       A=11 B=2 C=2
+0036 [line   22] 0x00000305  GETGLOBAL  R12 = GLOBAL K[0]='require'
+0037 [line   22] 0x00034341  LOADK      R13 = K[13]='Inventory.ECInventory'
+0038 [line   22] 0x0100831C  CALL       A=12 B=2 C=2
+0039 [line   23] 0x00000345  GETGLOBAL  R13 = GLOBAL K[0]='require'
+0040 [line   23] 0x00038381  LOADK      R14 = K[14]='Data.ECEquipDesc'
+0041 [line   23] 0x0100835C  CALL       A=13 B=2 C=2
+0042 [line   24] 0x00000385  GETGLOBAL  R14 = GLOBAL K[0]='require'
+0043 [line   24] 0x0003C3C1  LOADK      R15 = K[15]='Utility.ECIvtrUIUtility'
+0044 [line   24] 0x0100839C  CALL       A=14 B=2 C=2
+0045 [line   25] 0x000003C5  GETGLOBAL  R15 = GLOBAL K[0]='require'
+0046 [line   25] 0x00040401  LOADK      R16 = K[16]='Data.ElementData'
+0047 [line   25] 0x010083DC  CALL       A=15 B=2 C=2
+0048 [line   26] 0x00000405  GETGLOBAL  R16 = GLOBAL K[0]='require'
+0049 [line   26] 0x00044441  LOADK      R17 = K[17]='Utility.Task'
+0050 [line   26] 0x0100841C  CALL       A=16 B=2 C=2
+0051 [line   28] 0x00448446  GETTABLE   R17 = R0[K[18]='Extend']
+0052 [line   28] 0x01000480  MOVE       R18 = R2
+0053 [line   28] 0x0004C4C1  LOADK      R19 = K[19]='ECPanelNPCQuest'
+0054 [line   28] 0x0180845C  CALL       A=17 B=3 C=2
+0055 [line   29] 0x09000483  LOADNIL    A=18 B=18 C=0 Bx=9216
+0056 [line   31] 0x08C504C6  GETTABLE   R19 = R17[K[20]='define']
+0057 [line   34] 0x00054501  LOADK      R20 = K[21]=3.0
+0058 [line   39] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0059 [line   39] 0x0005C581  LOADK      R22 = K[23]='table'
+0060 [line   39] 0x000605C1  LOADK      R23 = K[24]='number'
+0061 [line   39] 0x0180855C  CALL       A=21 B=3 C=2
+0062 [line   42] 0x000005A4  CLOSURE    R22 = PROTO[0]
+0063 [line   42] 0x09000000  MOVE       R0 = R18
+0064 [line   42] 0x8C858549  SETTABLE   R21[K[25]='PopForReceiveTask'] = R22
+0065 [line   47] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0066 [line   47] 0x0005C581  LOADK      R22 = K[23]='table'
+0067 [line   47] 0x000605C1  LOADK      R23 = K[24]='number'
+0068 [line   47] 0x0180855C  CALL       A=21 B=3 C=2
+0069 [line   50] 0x000045A4  CLOSURE    R22 = PROTO[1]
+0070 [line   50] 0x09000000  MOVE       R0 = R18
+0071 [line   50] 0x8D058549  SETTABLE   R21[K[26]='PopForFinishTask'] = R22
+0072 [line   55] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0073 [line   55] 0x00060581  LOADK      R22 = K[24]='number'
+0074 [line   55] 0x0100855C  CALL       A=21 B=2 C=2
+0075 [line   57] 0x000085A4  CLOSURE    R22 = PROTO[2]
+0076 [line   57] 0x09000000  MOVE       R0 = R18
+0077 [line   57] 0x8D858549  SETTABLE   R21[K[27]='PopForManualReceiveTask'] = R22
+0078 [line   62] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0079 [line   62] 0x00060581  LOADK      R22 = K[24]='number'
+0080 [line   62] 0x0100855C  CALL       A=21 B=2 C=2
+0081 [line   64] 0x0000C5A4  CLOSURE    R22 = PROTO[3]
+0082 [line   64] 0x09000000  MOVE       R0 = R18
+0083 [line   64] 0x8E058549  SETTABLE   R21[K[28]='PopForManualFinishTask'] = R22
+0084 [line   69] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0085 [line   69] 0x00060581  LOADK      R22 = K[24]='number'
+0086 [line   69] 0x0100855C  CALL       A=21 B=2 C=2
+0087 [line   71] 0x000105A4  CLOSURE    R22 = PROTO[4]
+0088 [line   71] 0x09000000  MOVE       R0 = R18
+0089 [line   71] 0x8E858549  SETTABLE   R21[K[29]='PopForReceivePrompt'] = R22
+0090 [line   73] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0091 [line   73] 0x0080855C  CALL       A=21 B=1 C=2
+0092 [line   84] 0x000145A4  CLOSURE    R22 = PROTO[5]
+0093 [line   84] 0x08800000  MOVE       R0 = R17
+0094 [line   84] 0x8F058549  SETTABLE   R21[K[30]='SavePopState'] = R22
+0095 [line   86] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0096 [line   86] 0x0080855C  CALL       A=21 B=1 C=2
+0097 [line  138] 0x000185A4  CLOSURE    R22 = PROTO[6]
+0098 [line  138] 0x08800000  MOVE       R0 = R17
+0099 [line  138] 0x02000000  MOVE       R0 = R4
+0100 [line  138] 0x01800000  MOVE       R0 = R3
+0101 [line  138] 0x8F858549  SETTABLE   R21[K[31]='RecoverPopState'] = R22
+0102 [line  143] 0x09C58546  GETTABLE   R21 = R19[K[22]='static']
+0103 [line  143] 0x00080581  LOADK      R22 = K[32]='=>'
+0104 [line  143] 0x088005C0  MOVE       R23 = R17
+0105 [line  143] 0x0180855C  CALL       A=21 B=3 C=2
+0106 [line  145] 0x0001C5A4  CLOSURE    R22 = PROTO[7]
+0107 [line  145] 0x09000000  MOVE       R0 = R18
+0108 [line  145] 0x90858549  SETTABLE   R21[K[33]='Instance'] = R22
+0109 [line  147] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0110 [line  147] 0x0008C581  LOADK      R22 = K[35]='string'
+0111 [line  147] 0x0005C5C1  LOADK      R23 = K[23]='table'
+0112 [line  147] 0x00060601  LOADK      R24 = K[24]='number'
+0113 [line  147] 0x0200855C  CALL       A=21 B=4 C=2
+0114 [line  175] 0x000205A4  CLOSURE    R22 = PROTO[8]
+0115 [line  175] 0x01800000  MOVE       R0 = R3
+0116 [line  175] 0x05000000  MOVE       R0 = R10
+0117 [line  175] 0x08800000  MOVE       R0 = R17
+0118 [line  175] 0x92058549  SETTABLE   R21[K[36]='Popup_inner'] = R22
+0119 [line  177] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0120 [line  177] 0x0080855C  CALL       A=21 B=1 C=2
+0121 [line  181] 0x000245A4  CLOSURE    R22 = PROTO[9]
+0122 [line  181] 0x92858549  SETTABLE   R21[K[37]='Create'] = R22
+0123 [line  183] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0124 [line  183] 0x0008C581  LOADK      R22 = K[35]='string'
+0125 [line  183] 0x0100855C  CALL       A=21 B=2 C=2
+0126 [line  183] 0x93CA0549  SETTABLE   R21[K[39]='m_mode'] = K[40]=''
+0127 [line  184] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0128 [line  184] 0x000A4581  LOADK      R22 = K[41]='boolean'
+0129 [line  184] 0x0100855C  CALL       A=21 B=2 C=2
+0130 [line  184] 0x954AC549  SETTABLE   R21[K[42]='m_MultiAward'] = K[43]=False
+0131 [line  185] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0132 [line  185] 0x0005C581  LOADK      R22 = K[23]='table'
+0133 [line  185] 0x0100855C  CALL       A=21 B=2 C=2
+0134 [line  185] 0x964B4549  SETTABLE   R21[K[44]='m_npcEss'] = K[45]=None
+0135 [line  186] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0136 [line  186] 0x00060581  LOADK      R22 = K[24]='number'
+0137 [line  186] 0x0100855C  CALL       A=21 B=2 C=2
+0138 [line  186] 0x974BC549  SETTABLE   R21[K[46]='m_taskId'] = K[47]=0.0
+0139 [line  187] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0140 [line  187] 0x0005C581  LOADK      R22 = K[23]='table'
+0141 [line  187] 0x0100855C  CALL       A=21 B=2 C=2
+0142 [line  187] 0x984B4549  SETTABLE   R21[K[48]='m_AwardItem'] = K[45]=None
+0143 [line  188] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0144 [line  188] 0x00060581  LOADK      R22 = K[24]='number'
+0145 [line  188] 0x0100855C  CALL       A=21 B=2 C=2
+0146 [line  188] 0x98CBC549  SETTABLE   R21[K[49]='m_SelectItemIndex'] = K[47]=0.0
+0147 [line  189] 0x09C98546  GETTABLE   R21 = R19[K[38]='field']
+0148 [line  189] 0x0005C581  LOADK      R22 = K[23]='table'
+0149 [line  189] 0x0100855C  CALL       A=21 B=2 C=2
+0150 [line  189] 0x994B4549  SETTABLE   R21[K[50]='m_savedPopState'] = K[45]=None
+0151 [line  192] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0152 [line  192] 0x0008C581  LOADK      R22 = K[35]='string'
+0153 [line  192] 0x0005C5C1  LOADK      R23 = K[23]='table'
+0154 [line  192] 0x00060601  LOADK      R24 = K[24]='number'
+0155 [line  192] 0x0200855C  CALL       A=21 B=4 C=2
+0156 [line  198] 0x000285A4  CLOSURE    R22 = PROTO[10]
+0157 [line  198] 0x99858549  SETTABLE   R21[K[51]='Setup'] = R22
+0158 [line  200] 0x09CD0546  GETTABLE   R21 = R19[K[52]='override']
+0159 [line  200] 0x0080855C  CALL       A=21 B=1 C=2
+0160 [line  203] 0x0002C5A4  CLOSURE    R22 = PROTO[11]
+0161 [line  203] 0x9A858549  SETTABLE   R21[K[53]='OnCreate'] = R22
+0162 [line  205] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0163 [line  205] 0x0080855C  CALL       A=21 B=1 C=2
+0164 [line  462] 0x000305A4  CLOSURE    R22 = PROTO[12]
+0165 [line  462] 0x07800000  MOVE       R0 = R15
+0166 [line  462] 0x05800000  MOVE       R0 = R11
+0167 [line  462] 0x01800000  MOVE       R0 = R3
+0168 [line  462] 0x00800000  MOVE       R0 = R1
+0169 [line  462] 0x0A000000  MOVE       R0 = R20
+0170 [line  462] 0x06000000  MOVE       R0 = R12
+0171 [line  462] 0x07000000  MOVE       R0 = R14
+0172 [line  462] 0x9B058549  SETTABLE   R21[K[54]='RefreshView'] = R22
+0173 [line  464] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0174 [line  464] 0x0080855C  CALL       A=21 B=1 C=2
+0175 [line  466] 0x000345A4  CLOSURE    R22 = PROTO[13]
+0176 [line  466] 0x02000000  MOVE       R0 = R4
+0177 [line  466] 0x04000000  MOVE       R0 = R8
+0178 [line  466] 0x9B858549  SETTABLE   R21[K[55]='raiseOpenPanelEvent'] = R22
+0179 [line  468] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0180 [line  468] 0x0008C581  LOADK      R22 = K[35]='string'
+0181 [line  468] 0x0100855C  CALL       A=21 B=2 C=2
+0182 [line  524] 0x000385A4  CLOSURE    R22 = PROTO[14]
+0183 [line  524] 0x05000000  MOVE       R0 = R10
+0184 [line  524] 0x03000000  MOVE       R0 = R6
+0185 [line  524] 0x9C058549  SETTABLE   R21[K[56]='onClick'] = R22
+0186 [line  526] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0187 [line  526] 0x00080581  LOADK      R22 = K[32]='=>'
+0188 [line  526] 0x048005C0  MOVE       R23 = R9
+0189 [line  526] 0x0180855C  CALL       A=21 B=3 C=2
+0190 [line  539] 0x0003C5A4  CLOSURE    R22 = PROTO[15]
+0191 [line  539] 0x05000000  MOVE       R0 = R10
+0192 [line  539] 0x04800000  MOVE       R0 = R9
+0193 [line  539] 0x01800000  MOVE       R0 = R3
+0194 [line  539] 0x9C858549  SETTABLE   R21[K[57]='searchNextStep'] = R22
+0195 [line  541] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0196 [line  541] 0x00060581  LOADK      R22 = K[24]='number'
+0197 [line  541] 0x000605C1  LOADK      R23 = K[24]='number'
+0198 [line  541] 0x0180855C  CALL       A=21 B=3 C=2
+0199 [line  576] 0x000405A4  CLOSURE    R22 = PROTO[16]
+0200 [line  576] 0x08000000  MOVE       R0 = R16
+0201 [line  576] 0x02000000  MOVE       R0 = R4
+0202 [line  576] 0x04000000  MOVE       R0 = R8
+0203 [line  576] 0x04800000  MOVE       R0 = R9
+0204 [line  576] 0x08800000  MOVE       R0 = R17
+0205 [line  576] 0x9D058549  SETTABLE   R21[K[58]='doNextStep'] = R22
+0206 [line  578] 0x09C88546  GETTABLE   R21 = R19[K[34]='method']
+0207 [line  578] 0x0080855C  CALL       A=21 B=1 C=2
+0208 [line  584] 0x000445A4  CLOSURE    R22 = PROTO[17]
+0209 [line  584] 0x9D858549  SETTABLE   R21[K[59]='End'] = R22
+0210 [line  584] 0x000004E3  CLOSE      A=19 B=0 C=0 Bx=0
+0211 [line  587] 0x08CF04C6  GETTABLE   R19 = R17[K[60]='Commit']
+0212 [line  587] 0x008044DC  CALL       A=19 B=1 C=1
+0213 [line  589] 0x088004C0  MOVE       R19 = R17
+0214 [line  589] 0x008084DC  CALL       A=19 B=1 C=2
+0215 [line  589] 0x09800480  MOVE       R18 = R19
+0216 [line  590] 0x094F44CB  SELF       A=19 B=18 C=317 Bx=9533
+0217 [line  590] 0x00800542  LOADBOOL   A=21 B=1 C=0
+0218 [line  590] 0x018044DC  CALL       A=19 B=3 C=1
+0219 [line  593] 0x034F84C6  GETTABLE   R19 = R6[K[62]='TASK_SERVER_NOTIFY']
+0220 [line  593] 0x09CFC4C6  GETTABLE   R19 = R19[K[63]='TASK_SVR_NOTIFY_NEW']
+0221 [line  595] 0x02500506  GETTABLE   R20 = R4[K[64]='EventManager']
+0222 [line  595] 0x0A50450B  SELF       A=20 B=20 C=321 Bx=10561
+0223 [line  595] 0x04508586  GETTABLE   R22 = R8[K[66]='SimpleNotifyEvent']
+0224 [line  602] 0x000485E4  CLOSURE    R23 = PROTO[18]
+0225 [line  602] 0x09800000  MOVE       R0 = R19
+0226 [line  602] 0x01800000  MOVE       R0 = R3
+0227 [line  602] 0x08800000  MOVE       R0 = R17
+0228 [line  595] 0x0200451C  CALL       A=20 B=4 C=1
+0229 [line  604] 0x03D0C506  GETTABLE   R20 = R7[K[67]='ClosePanelOnNPCServiceEnd']
+0230 [line  604] 0x08C84546  GETTABLE   R21 = R17[K[33]='Instance']
+0231 [line  604] 0x0080055C  CALL       A=21 B=1 C=0
+0232 [line  604] 0x0000451C  CALL       A=20 B=0 C=1
+0233 [line  606] 0x0100045E  RETURN     A=17 B=2 C=0
+0234 [line  606] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 234
+'HtmlUtility': 6 -> 234
+'ECPanelBase': 9 -> 234
+'ECTaskInterface': 12 -> 234
+'ECGame': 15 -> 234
+'EC': 18 -> 234
+'ECTaskDef': 21 -> 234
+'ECUIUtility': 24 -> 234
+'TaskEvents': 27 -> 234
+'TaskListItem': 30 -> 234
+'ECTaskUtility': 33 -> 234
+'ECGUITools': 36 -> 234
+'ECInventory': 39 -> 234
+'ECEquipDesc': 42 -> 234
+'ECIvtrUIUtility': 45 -> 234
+'ElementData': 48 -> 234
+'Task': 51 -> 234
+'ECPanelNPCQuest': 55 -> 234
+'l_Instance': 56 -> 234
+'def': 57 -> 210
+'MAX_AWARD_ITEM': 58 -> 210
+'TASK_SVR_NOTIFY_NEW': 221 -> 234
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x892
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 39 - 42
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'assert'
+    K[001] = 'Popup_inner'
+    K[002] = 'receive'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   40] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='assert'
+    0001 [line   40] 0x000000C0  MOVE       R3 = R0
+    0002 [line   40] 0x0100409C  CALL       A=2 B=2 C=1
+    0003 [line   41] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   41] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0005 [line   41] 0x00008101  LOADK      R4 = K[2]='receive'
+    0006 [line   41] 0x00000140  MOVE       R5 = R0
+    0007 [line   41] 0x00800180  MOVE       R6 = R1
+    0008 [line   41] 0x0280409C  CALL       A=2 B=5 C=1
+    0009 [line   42] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npcEss': 0 -> 9
+    'taskId': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x969
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 47 - 50
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'assert'
+    K[001] = 'Popup_inner'
+    K[002] = 'finish'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   48] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='assert'
+    0001 [line   48] 0x000000C0  MOVE       R3 = R0
+    0002 [line   48] 0x0100409C  CALL       A=2 B=2 C=1
+    0003 [line   49] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0004 [line   49] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0005 [line   49] 0x00008101  LOADK      R4 = K[2]='finish'
+    0006 [line   49] 0x00000140  MOVE       R5 = R0
+    0007 [line   49] 0x00800180  MOVE       R6 = R1
+    0008 [line   49] 0x0280409C  CALL       A=2 B=5 C=1
+    0009 [line   50] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'npcEss': 0 -> 9
+    'taskId': 0 -> 9
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0xA3F
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 55 - 57
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Popup_inner'
+    K[001] = 'manual_receive'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   56] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   56] 0x00C0004B  SELF       A=1 B=1 C=256 Bx=768
+    0002 [line   56] 0x000040C1  LOADK      R3 = K[1]='manual_receive'
+    0003 [line   56] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0004 [line   56] 0x00000140  MOVE       R5 = R0
+    0005 [line   56] 0x0280405C  CALL       A=1 B=5 C=1
+    0006 [line   57] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0xAE6
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 62 - 64
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Popup_inner'
+    K[001] = 'manual_finish'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   63] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   63] 0x00C0004B  SELF       A=1 B=1 C=256 Bx=768
+    0002 [line   63] 0x000040C1  LOADK      R3 = K[1]='manual_finish'
+    0003 [line   63] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0004 [line   63] 0x00000140  MOVE       R5 = R0
+    0005 [line   63] 0x0280405C  CALL       A=1 B=5 C=1
+    0006 [line   64] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xB8C
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 69 - 71
+    Params : 1
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Popup_inner'
+    K[001] = 'receive_prompt'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   70] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line   70] 0x00C0004B  SELF       A=1 B=1 C=256 Bx=768
+    0002 [line   70] 0x000040C1  LOADK      R3 = K[1]='receive_prompt'
+    0003 [line   70] 0x02000103  LOADNIL    A=4 B=4 C=0 Bx=2048
+    0004 [line   70] 0x00000140  MOVE       R5 = R0
+    0005 [line   70] 0x0280405C  CALL       A=1 B=5 C=1
+    0006 [line   71] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'taskId': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xC33
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 73 - 84
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_panel'
+    K[002] = 'm_mode'
+    K[003] = 'm_taskId'
+    K[004] = 'm_npcEss'
+    K[005] = 'm_savedPopState'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   74] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   74] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line   74] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line   75] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0004 [line   75] 0x0000405A  TEST       A=1 B=0 C=1
+    0005 [line   75] 0x80000016  JMP        A=0 sBx=1
+    0006 [line   76] 0x0080001E  RETURN     A=0 B=1 C=0
+    0007 [line   79] 0x0000004A  NEWTABLE   A=1 B=0 C=0 Bx=0
+    0008 [line   80] 0x00408086  GETTABLE   R2 = R0[K[2]='m_mode']
+    0009 [line   80] 0x81008049  SETTABLE   R1[K[2]='m_mode'] = R2
+    0010 [line   81] 0x0040C086  GETTABLE   R2 = R0[K[3]='m_taskId']
+    0011 [line   81] 0x81808049  SETTABLE   R1[K[3]='m_taskId'] = R2
+    0012 [line   82] 0x00410086  GETTABLE   R2 = R0[K[4]='m_npcEss']
+    0013 [line   82] 0x82008049  SETTABLE   R1[K[4]='m_npcEss'] = R2
+    0014 [line   83] 0x82804009  SETTABLE   R0[K[5]='m_savedPopState'] = R1
+    0015 [line   84] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 3 -> 15
+    'savedState': 8 -> 15
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xD6F
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 86 - 138
+    Params : 0
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'm_panel'
+    K[002] = 'm_savedPopState'
+    K[003] = 'End'
+    K[004] = 'm_npcEss'
+    K[005] = 'm_HostPlayer'
+    K[006] = 'HostOpHdl'
+    K[007] = 'GetCurServiceNPC'
+    K[008] = 'InfoData'
+    K[009] = 'Tid'
+    K[010] = 'id'
+    K[011] = 'm_mode'
+    K[012] = 'm_taskId'
+    K[013] = 'receive'
+    K[014] = 'CanShowTask'
+    K[015] = 'finish'
+    K[016] = 'CanFinishTask'
+    K[017] = 'manual_receive'
+    K[018] = 'manual_finish'
+    K[019] = 'receive_prompt'
+    K[020] = 'assert'
+    K[021] = 'bad mode: '
+    K[022] = 'tostring'
+    K[023] = 'Popup_inner'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   87] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line   87] 0x00400006  GETTABLE   R0 = R0[K[0]='Instance']
+    0002 [line   87] 0x0080801C  CALL       A=0 B=1 C=2
+    0003 [line   88] 0x00404046  GETTABLE   R1 = R0[K[1]='m_panel']
+    0004 [line   88] 0x0000005A  TEST       A=1 B=0 C=0
+    0005 [line   88] 0x80000016  JMP        A=0 sBx=1
+    0006 [line   89] 0x0080001E  RETURN     A=0 B=1 C=0
+    0007 [line   92] 0x00408046  GETTABLE   R1 = R0[K[2]='m_savedPopState']
+    0008 [line   93] 0x0000405A  TEST       A=1 B=0 C=1
+    0009 [line   93] 0x80008016  JMP        A=0 sBx=3
+    0010 [line   94] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0011 [line   94] 0x0100409C  CALL       A=2 B=2 C=1
+    0012 [line   95] 0x0080001E  RETURN     A=0 B=1 C=0
+    0013 [line   99] 0x00000082  LOADBOOL   A=2 B=0 C=0
+    0014 [line  100] 0x00C100C6  GETTABLE   R3 = R1[K[4]='m_npcEss']
+    0015 [line  100] 0x000000DA  TEST       A=3 B=0 C=0
+    0016 [line  100] 0x8003C016  JMP        A=0 sBx=16
+    0017 [line  101] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+    0018 [line  101] 0x01C000C6  GETTABLE   R3 = R3[K[0]='Instance']
+    0019 [line  101] 0x008080DC  CALL       A=3 B=1 C=2
+    0020 [line  101] 0x01C140C6  GETTABLE   R3 = R3[K[5]='m_HostPlayer']
+    0021 [line  101] 0x01C180C6  GETTABLE   R3 = R3[K[6]='HostOpHdl']
+    0022 [line  101] 0x01C1C0CB  SELF       A=3 B=3 C=263 Bx=1799
+    0023 [line  101] 0x010080DC  CALL       A=3 B=2 C=2
+    0024 [line  102] 0x000000DA  TEST       A=3 B=0 C=0
+    0025 [line  102] 0x80018016  JMP        A=0 sBx=7
+    0026 [line  102] 0x01C20106  GETTABLE   R4 = R3[K[8]='InfoData']
+    0027 [line  102] 0x02424106  GETTABLE   R4 = R4[K[9]='Tid']
+    0028 [line  102] 0x00410146  GETTABLE   R5 = R0[K[4]='m_npcEss']
+    0029 [line  102] 0x02C28146  GETTABLE   R5 = R5[K[10]='id']
+    0030 [line  102] 0x02014017  EQ         A=0 B=R4 C=R5
+    0031 [line  102] 0x80000016  JMP        A=0 sBx=1
+    0032 [line  103] 0x00800082  LOADBOOL   A=2 B=1 C=0
+    0033 [line  107] 0x00C2C0C6  GETTABLE   R3 = R1[K[11]='m_mode']
+    0034 [line  108] 0x00C30106  GETTABLE   R4 = R1[K[12]='m_taskId']
+    0035 [line  109] 0x00C10146  GETTABLE   R5 = R1[K[4]='m_npcEss']
+    0036 [line  111] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0037 [line  112] 0x01C34017  EQ         A=0 B=R3 C=K[13]='receive'
+    0038 [line  112] 0x80024016  JMP        A=0 sBx=10
+    0039 [line  113] 0x0000009A  TEST       A=2 B=0 C=0
+    0040 [line  113] 0x800CC016  JMP        A=0 sBx=52
+    0041 [line  113] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0042 [line  113] 0x03C381C6  GETTABLE   R7 = R7[K[14]='CanShowTask']
+    0043 [line  113] 0x02000200  MOVE       R8 = R4
+    0044 [line  113] 0x010081DC  CALL       A=7 B=2 C=2
+    0045 [line  113] 0x000001DA  TEST       A=7 B=0 C=0
+    0046 [line  113] 0x800B4016  JMP        A=0 sBx=46
+    0047 [line  114] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0048 [line  115] 0x800AC016  JMP        A=0 sBx=44
+    0049 [line  116] 0x01C3C017  EQ         A=0 B=R3 C=K[15]='finish'
+    0050 [line  116] 0x80024016  JMP        A=0 sBx=10
+    0051 [line  117] 0x0000009A  TEST       A=2 B=0 C=0
+    0052 [line  117] 0x8009C016  JMP        A=0 sBx=40
+    0053 [line  117] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0054 [line  117] 0x03C401C6  GETTABLE   R7 = R7[K[16]='CanFinishTask']
+    0055 [line  117] 0x02000200  MOVE       R8 = R4
+    0056 [line  117] 0x010081DC  CALL       A=7 B=2 C=2
+    0057 [line  117] 0x000001DA  TEST       A=7 B=0 C=0
+    0058 [line  117] 0x80084016  JMP        A=0 sBx=34
+    0059 [line  118] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0060 [line  119] 0x8007C016  JMP        A=0 sBx=32
+    0061 [line  120] 0x01C44017  EQ         A=0 B=R3 C=K[17]='manual_receive'
+    0062 [line  120] 0x8001C016  JMP        A=0 sBx=8
+    0063 [line  121] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0064 [line  121] 0x03C381C6  GETTABLE   R7 = R7[K[14]='CanShowTask']
+    0065 [line  121] 0x02000200  MOVE       R8 = R4
+    0066 [line  121] 0x010081DC  CALL       A=7 B=2 C=2
+    0067 [line  121] 0x000001DA  TEST       A=7 B=0 C=0
+    0068 [line  121] 0x8005C016  JMP        A=0 sBx=24
+    0069 [line  122] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0070 [line  123] 0x80054016  JMP        A=0 sBx=22
+    0071 [line  124] 0x01C48017  EQ         A=0 B=R3 C=K[18]='manual_finish'
+    0072 [line  124] 0x8001C016  JMP        A=0 sBx=8
+    0073 [line  125] 0x010001C4  GETUPVAL   A=7 B=2 C=0 Bx=1024
+    0074 [line  125] 0x03C401C6  GETTABLE   R7 = R7[K[16]='CanFinishTask']
+    0075 [line  125] 0x02000200  MOVE       R8 = R4
+    0076 [line  125] 0x010081DC  CALL       A=7 B=2 C=2
+    0077 [line  125] 0x000001DA  TEST       A=7 B=0 C=0
+    0078 [line  125] 0x80034016  JMP        A=0 sBx=14
+    0079 [line  126] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0080 [line  127] 0x8002C016  JMP        A=0 sBx=12
+    0081 [line  128] 0x01C4C017  EQ         A=0 B=R3 C=K[19]='receive_prompt'
+    0082 [line  128] 0x80000016  JMP        A=0 sBx=1
+    0083 [line  128] 0x80020016  JMP        A=0 sBx=9
+    0084 [line  131] 0x000501C5  GETGLOBAL  R7 = GLOBAL K[20]='assert'
+    0085 [line  131] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0086 [line  131] 0x00054241  LOADK      R9 = K[21]='bad mode: '
+    0087 [line  131] 0x00058285  GETGLOBAL  R10 = GLOBAL K[22]='tostring'
+    0088 [line  131] 0x018002C0  MOVE       R11 = R3
+    0089 [line  131] 0x0100829C  CALL       A=10 B=2 C=2
+    0090 [line  131] 0x04828255  CONCAT     A=9 B=9 C=10 Bx=4618
+    0091 [line  131] 0x018041DC  CALL       A=7 B=3 C=1
+    0092 [line  132] 0x0080001E  RETURN     A=0 B=1 C=0
+    0093 [line  135] 0x0000019A  TEST       A=6 B=0 C=0
+    0094 [line  135] 0x80010016  JMP        A=0 sBx=5
+    0095 [line  136] 0x0045C1CB  SELF       A=7 B=0 C=279 Bx=279
+    0096 [line  136] 0x01800240  MOVE       R9 = R3
+    0097 [line  136] 0x02800280  MOVE       R10 = R5
+    0098 [line  136] 0x020002C0  MOVE       R11 = R4
+    0099 [line  136] 0x028041DC  CALL       A=7 B=5 C=1
+    0100 [line  138] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 3 -> 100
+    'savedState': 8 -> 100
+    'bSameServNPC': 14 -> 100
+    'curServNpc': 24 -> 33
+    'mode': 34 -> 100
+    'taskId': 35 -> 100
+    'npcEss': 36 -> 100
+    'canPopup': 37 -> 100
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x1300
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 143 - 145
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line  144] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+    0001 [line  144] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line  145] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x134F
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 147 - 175
+    Params : 4
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Instance'
+    K[001] = 'GetTaskView'
+    K[002] = 'receive'
+    K[003] = 'bShowReceivePanel'
+    K[004] = 'AcceptTask'
+    K[005] = 'finish'
+    K[006] = 'bShowFinishPanel'
+    K[007] = 'FinishTask'
+    K[008] = -1.0
+    K[009] = 'manual_receive'
+    K[010] = 'ManualAcceptTask'
+    K[011] = 'manual_finish'
+    K[012] = 'ManualFinishTask'
+    K[013] = 'Setup'
+    K[014] = 'Create'
+    K[015] = 'Show'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  148] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0001 [line  148] 0x02400106  GETTABLE   R4 = R4[K[0]='Instance']
+    0002 [line  148] 0x0080811C  CALL       A=4 B=1 C=2
+    0003 [line  148] 0x0240410B  SELF       A=4 B=4 C=257 Bx=2305
+    0004 [line  148] 0x01800180  MOVE       R6 = R3
+    0005 [line  148] 0x0180811C  CALL       A=4 B=3 C=2
+    0006 [line  149] 0x00C08017  EQ         A=0 B=R1 C=K[2]='receive'
+    0007 [line  149] 0x80020016  JMP        A=0 sBx=9
+    0008 [line  150] 0x0240C146  GETTABLE   R5 = R4[K[3]='bShowReceivePanel']
+    0009 [line  150] 0x0000415A  TEST       A=5 B=0 C=1
+    0010 [line  150] 0x80098016  JMP        A=0 sBx=39
+    0011 [line  151] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0012 [line  151] 0x02C10146  GETTABLE   R5 = R5[K[4]='AcceptTask']
+    0013 [line  151] 0x01800180  MOVE       R6 = R3
+    0014 [line  151] 0x0100415C  CALL       A=5 B=2 C=1
+    0015 [line  152] 0x0080001E  RETURN     A=0 B=1 C=0
+    0016 [line  153] 0x80080016  JMP        A=0 sBx=33
+    0017 [line  154] 0x00C14017  EQ         A=0 B=R1 C=K[5]='finish'
+    0018 [line  154] 0x80024016  JMP        A=0 sBx=10
+    0019 [line  155] 0x02418146  GETTABLE   R5 = R4[K[6]='bShowFinishPanel']
+    0020 [line  155] 0x0000415A  TEST       A=5 B=0 C=1
+    0021 [line  155] 0x8006C016  JMP        A=0 sBx=28
+    0022 [line  156] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0023 [line  156] 0x02C1C146  GETTABLE   R5 = R5[K[7]='FinishTask']
+    0024 [line  156] 0x01800180  MOVE       R6 = R3
+    0025 [line  156] 0x000201C1  LOADK      R7 = K[8]=-1.0
+    0026 [line  156] 0x0180415C  CALL       A=5 B=3 C=1
+    0027 [line  157] 0x0080001E  RETURN     A=0 B=1 C=0
+    0028 [line  158] 0x80050016  JMP        A=0 sBx=21
+    0029 [line  159] 0x00C24017  EQ         A=0 B=R1 C=K[9]='manual_receive'
+    0030 [line  159] 0x80020016  JMP        A=0 sBx=9
+    0031 [line  160] 0x0240C146  GETTABLE   R5 = R4[K[3]='bShowReceivePanel']
+    0032 [line  160] 0x0000415A  TEST       A=5 B=0 C=1
+    0033 [line  160] 0x8003C016  JMP        A=0 sBx=16
+    0034 [line  161] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0035 [line  161] 0x02C28146  GETTABLE   R5 = R5[K[10]='ManualAcceptTask']
+    0036 [line  161] 0x01800180  MOVE       R6 = R3
+    0037 [line  161] 0x0100415C  CALL       A=5 B=2 C=1
+    0038 [line  162] 0x0080001E  RETURN     A=0 B=1 C=0
+    0039 [line  163] 0x80024016  JMP        A=0 sBx=10
+    0040 [line  164] 0x00C2C017  EQ         A=0 B=R1 C=K[11]='manual_finish'
+    0041 [line  164] 0x8001C016  JMP        A=0 sBx=8
+    0042 [line  165] 0x02418146  GETTABLE   R5 = R4[K[6]='bShowFinishPanel']
+    0043 [line  165] 0x0000415A  TEST       A=5 B=0 C=1
+    0044 [line  165] 0x80010016  JMP        A=0 sBx=5
+    0045 [line  166] 0x00800144  GETUPVAL   A=5 B=1 C=0 Bx=512
+    0046 [line  166] 0x02C30146  GETTABLE   R5 = R5[K[12]='ManualFinishTask']
+    0047 [line  166] 0x01800180  MOVE       R6 = R3
+    0048 [line  166] 0x0100415C  CALL       A=5 B=2 C=1
+    0049 [line  167] 0x0080001E  RETURN     A=0 B=1 C=0
+    0050 [line  171] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0051 [line  171] 0x02C00146  GETTABLE   R5 = R5[K[0]='Instance']
+    0052 [line  171] 0x0080815C  CALL       A=5 B=1 C=2
+    0053 [line  172] 0x02C3418B  SELF       A=6 B=5 C=269 Bx=2829
+    0054 [line  172] 0x00800200  MOVE       R8 = R1
+    0055 [line  172] 0x01000240  MOVE       R9 = R2
+    0056 [line  172] 0x01800280  MOVE       R10 = R3
+    0057 [line  172] 0x0280419C  CALL       A=6 B=5 C=1
+    0058 [line  173] 0x02C3818B  SELF       A=6 B=5 C=270 Bx=2830
+    0059 [line  173] 0x0100419C  CALL       A=6 B=2 C=1
+    0060 [line  174] 0x02C3C18B  SELF       A=6 B=5 C=271 Bx=2831
+    0061 [line  174] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0062 [line  174] 0x0180419C  CALL       A=6 B=3 C=1
+    0063 [line  175] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 63
+    'mode': 0 -> 63
+    'npcEss': 0 -> 63
+    'taskId': 0 -> 63
+    'taskView': 6 -> 63
+    'self': 53 -> 63
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x1721
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 177 - 181
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'CreatePanel'
+    K[002] = 'RESPATH'
+    K[003] = 'Panel_NpcQuest'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  178] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  178] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  178] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  179] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0004 [line  179] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='RESPATH'
+    0005 [line  179] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='Panel_NpcQuest']
+    0006 [line  179] 0x0180405C  CALL       A=1 B=3 C=1
+    0007 [line  181] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 7
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x17D9
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 192 - 198
+    Params : 4
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mode'
+    K[001] = 'm_npcEss'
+    K[002] = 'm_taskId'
+    K[003] = 'RefreshView'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  193] 0x80004009  SETTABLE   R0[K[0]='m_mode'] = R1
+    0001 [line  194] 0x80808009  SETTABLE   R0[K[1]='m_npcEss'] = R2
+    0002 [line  195] 0x8100C009  SETTABLE   R0[K[2]='m_taskId'] = R3
+    0003 [line  197] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0004 [line  197] 0x0100411C  CALL       A=4 B=2 C=1
+    0005 [line  198] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 5
+    'mode': 0 -> 5
+    'npcEss': 0 -> 5
+    'taskId': 0 -> 5
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x18B2
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 200 - 203
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'RefreshView'
+    K[001] = 'raiseOpenPanelEvent'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  201] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  201] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  202] 0x0040404B  SELF       A=1 B=0 C=257 Bx=257
+    0003 [line  202] 0x0100405C  CALL       A=1 B=2 C=1
+    0004 [line  203] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 4
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x193D
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 205 - 462
+    Params : 1
+    Stack  : 42
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_panel'
+    K[001] = 'FindChild'
+    K[002] = 'ScrollView_Desc'
+    K[003] = 'GetComponent'
+    K[004] = 'UIScrollView'
+    K[005] = 'ResetPosition'
+    K[006] = 'm_mode'
+    K[007] = 'Panel_Award'
+    K[008] = 'Table'
+    K[009] = 'Img_Npc'
+    K[010] = 'Txt_Npcname'
+    K[011] = 'm_npcEss'
+    K[012] = 'SetActive'
+    K[013] = 'UILabel'
+    K[014] = 'text'
+    K[015] = 'name'
+    K[016] = ''
+    K[017] = 'getEssence'
+    K[018] = 'id'
+    K[019] = 'file_portrait'
+    K[020] = 0.0
+    K[021] = 'datapath'
+    K[022] = 'GetPathByID'
+    K[023] = 437.0
+    K[024] = 'UpdateGridImage'
+    K[025] = 'Instance'
+    K[026] = 'GetTaskFullInfo'
+    K[027] = 'm_taskId'
+    K[028] = 'view'
+    K[029] = 'dynview'
+    K[030] = 'finish'
+    K[031] = 'manual_finish'
+    K[032] = 'finishDescrption'
+    K[033] = 'acceptDescription'
+    K[034] = 'description'
+    K[035] = 'Txt_Desc'
+    K[036] = 'HtmlToNguiText'
+    K[037] = 'award'
+    K[038] = 'exp'
+    K[039] = 'TxtAward01'
+    K[040] = 'Txt_Award01'
+    K[041] = 'bindMoney'
+    K[042] = 'TxtAward02'
+    K[043] = 'Txt_Award02'
+    K[044] = 'SetMoneyString'
+    K[045] = 'tradeMoney'
+    K[046] = 'TxtAward03'
+    K[047] = 'Txt_Award03'
+    K[048] = 'profExp'
+    K[049] = 'TxtAward04'
+    K[050] = 'Txt_Award04'
+    K[051] = 'tostring'
+    K[052] = 'repuCount'
+    K[053] = 'TxtAward05'
+    K[054] = 'TxtAward06'
+    K[055] = 'repuData'
+    K[056] = 1.0
+    K[057] = 'REPUID'
+    K[058] = 'NATION_WAR'
+    K[059] = 'Txt_Award05'
+    K[060] = 'value'
+    K[061] = 'FACTION_CONTRIBUTION'
+    K[062] = 'Txt_Award06'
+    K[063] = 'factionMoney'
+    K[064] = 'TxtAward07'
+    K[065] = 'Txt_Award07'
+    K[066] = 'factionContribution'
+    K[067] = 'TxtAward08'
+    K[068] = 'Txt_Award08'
+    K[069] = 'Award'
+    K[070] = 'Hint'
+    K[071] = 'bShowAwardContent'
+    K[072] = 'Txt_Hintsp'
+    K[073] = 'Txt_Awardsp'
+    K[074] = 'canItemNum'
+    K[075] = 'Txt_Hint01'
+    K[076] = 'Txt_Hint02'
+    K[077] = 'receive'
+    K[078] = 'manual_receive'
+    K[079] = 'Txt_Hint03'
+    K[080] = 'canItem'
+    K[081] = 'awardItemNum'
+    K[082] = 'm_AwardItem'
+    K[083] = 'Award%02d'
+    K[084] = 'format'
+    K[085] = 'award_itemArr'
+    K[086] = 'count'
+    K[087] = 'bind'
+    K[088] = 'produceTemplate'
+    K[089] = 'CreateItemWithGenerateConfig'
+    K[090] = 'tid'
+    K[091] = 'SetIconEx'
+    K[092] = 'm_MultiAward'
+    K[093] = True
+    K[094] = 'Check'
+    K[095] = 'Award01'
+    K[096] = 'Award02'
+    K[097] = 'Award03'
+    K[098] = 'awardContent'
+    K[099] = 'string'
+    K[100] = 'len'
+    K[101] = 'UITable'
+    K[102] = 'repositionNow'
+    K[103] = 'Btn_Accept'
+    K[104] = 'Btn_Finish'
+    K[105] = 'Btn_Confirm'
+    K[106] = 'UIButton'
+    K[107] = 'isEnabled'
+    K[108] = 'CanShowTask'
+    K[109] = 'receive_prompt'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  206] 0x00400046  GETTABLE   R1 = R0[K[0]='m_panel']
+    0001 [line  207] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  207] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  208] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  210] 0x00400086  GETTABLE   R2 = R0[K[0]='m_panel']
+    0005 [line  210] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0006 [line  210] 0x00008101  LOADK      R4 = K[2]='ScrollView_Desc'
+    0007 [line  210] 0x0180809C  CALL       A=2 B=3 C=2
+    0008 [line  211] 0x0000009A  TEST       A=2 B=0 C=0
+    0009 [line  211] 0x80010016  JMP        A=0 sBx=5
+    0010 [line  211] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0011 [line  211] 0x00010141  LOADK      R5 = K[4]='UIScrollView'
+    0012 [line  211] 0x018080DC  CALL       A=3 B=3 C=2
+    0013 [line  211] 0x01C140CB  SELF       A=3 B=3 C=261 Bx=1797
+    0014 [line  211] 0x010040DC  CALL       A=3 B=2 C=1
+    0015 [line  212] 0x004180C6  GETTABLE   R3 = R0[K[6]='m_mode']
+    0016 [line  213] 0x00C0410B  SELF       A=4 B=1 C=257 Bx=769
+    0017 [line  213] 0x0001C181  LOADK      R6 = K[7]='Panel_Award'
+    0018 [line  213] 0x0180811C  CALL       A=4 B=3 C=2
+    0019 [line  213] 0x0240410B  SELF       A=4 B=4 C=257 Bx=2305
+    0020 [line  213] 0x00020181  LOADK      R6 = K[8]='Table'
+    0021 [line  213] 0x0180811C  CALL       A=4 B=3 C=2
+    0022 [line  217] 0x00C0414B  SELF       A=5 B=1 C=257 Bx=769
+    0023 [line  217] 0x000241C1  LOADK      R7 = K[9]='Img_Npc'
+    0024 [line  217] 0x0180815C  CALL       A=5 B=3 C=2
+    0025 [line  218] 0x00C0418B  SELF       A=6 B=1 C=257 Bx=769
+    0026 [line  218] 0x00028201  LOADK      R8 = K[10]='Txt_Npcname'
+    0027 [line  218] 0x0180819C  CALL       A=6 B=3 C=2
+    0028 [line  220] 0x0042C1C6  GETTABLE   R7 = R0[K[11]='m_npcEss']
+    0029 [line  220] 0x000001DA  TEST       A=7 B=0 C=0
+    0030 [line  220] 0x80094016  JMP        A=0 sBx=38
+    0031 [line  221] 0x02C301CB  SELF       A=7 B=5 C=268 Bx=2828
+    0032 [line  221] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0033 [line  221] 0x018041DC  CALL       A=7 B=3 C=1
+    0034 [line  222] 0x034301CB  SELF       A=7 B=6 C=268 Bx=3340
+    0035 [line  222] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0036 [line  222] 0x018041DC  CALL       A=7 B=3 C=1
+    0037 [line  223] 0x0340C1CB  SELF       A=7 B=6 C=259 Bx=3331
+    0038 [line  223] 0x00034241  LOADK      R9 = K[13]='UILabel'
+    0039 [line  223] 0x018081DC  CALL       A=7 B=3 C=2
+    0040 [line  223] 0x0042C206  GETTABLE   R8 = R0[K[11]='m_npcEss']
+    0041 [line  223] 0x0443C206  GETTABLE   R8 = R8[K[15]='name']
+    0042 [line  223] 0x870201C9  SETTABLE   R7[K[14]='text'] = R8
+    0043 [line  225] 0x000401C1  LOADK      R7 = K[16]=''
+    0044 [line  226] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0045 [line  226] 0x04444206  GETTABLE   R8 = R8[K[17]='getEssence']
+    0046 [line  226] 0x0042C246  GETTABLE   R9 = R0[K[11]='m_npcEss']
+    0047 [line  226] 0x04C48246  GETTABLE   R9 = R9[K[18]='id']
+    0048 [line  226] 0x0100821C  CALL       A=8 B=2 C=2
+    0049 [line  226] 0x0444C206  GETTABLE   R8 = R8[K[19]='file_portrait']
+    0050 [line  228] 0x04450057  EQ         A=1 B=R8 C=K[20]=0.0
+    0051 [line  228] 0x80014016  JMP        A=0 sBx=6
+    0052 [line  229] 0x00054245  GETGLOBAL  R9 = GLOBAL K[21]='datapath'
+    0053 [line  229] 0x04C58246  GETTABLE   R9 = R9[K[22]='GetPathByID']
+    0054 [line  229] 0x04000280  MOVE       R10 = R8
+    0055 [line  229] 0x0100825C  CALL       A=9 B=2 C=2
+    0056 [line  229] 0x048001C0  MOVE       R7 = R9
+    0057 [line  229] 0x80010016  JMP        A=0 sBx=5
+    0058 [line  231] 0x00054245  GETGLOBAL  R9 = GLOBAL K[21]='datapath'
+    0059 [line  231] 0x04C58246  GETTABLE   R9 = R9[K[22]='GetPathByID']
+    0060 [line  231] 0x0005C281  LOADK      R10 = K[23]=437.0
+    0061 [line  231] 0x0100825C  CALL       A=9 B=2 C=2
+    0062 [line  231] 0x048001C0  MOVE       R7 = R9
+    0063 [line  233] 0x00800244  GETUPVAL   A=9 B=1 C=0 Bx=512
+    0064 [line  233] 0x04C60246  GETTABLE   R9 = R9[K[24]='UpdateGridImage']
+    0065 [line  233] 0x03800280  MOVE       R10 = R7
+    0066 [line  233] 0x028002C0  MOVE       R11 = R5
+    0067 [line  233] 0x0180425C  CALL       A=9 B=3 C=1
+    0068 [line  233] 0x80028016  JMP        A=0 sBx=11
+    0069 [line  237] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0070 [line  237] 0x03C601C6  GETTABLE   R7 = R7[K[24]='UpdateGridImage']
+    0071 [line  237] 0x00054205  GETGLOBAL  R8 = GLOBAL K[21]='datapath'
+    0072 [line  237] 0x04458206  GETTABLE   R8 = R8[K[22]='GetPathByID']
+    0073 [line  237] 0x0005C241  LOADK      R9 = K[23]=437.0
+    0074 [line  237] 0x0100821C  CALL       A=8 B=2 C=2
+    0075 [line  237] 0x02800240  MOVE       R9 = R5
+    0076 [line  237] 0x018041DC  CALL       A=7 B=3 C=1
+    0077 [line  238] 0x034301CB  SELF       A=7 B=6 C=268 Bx=3340
+    0078 [line  238] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0079 [line  238] 0x018041DC  CALL       A=7 B=3 C=1
+    0080 [line  244] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+    0081 [line  244] 0x02C64146  GETTABLE   R5 = R5[K[25]='Instance']
+    0082 [line  244] 0x0080815C  CALL       A=5 B=1 C=2
+    0083 [line  244] 0x02C6814B  SELF       A=5 B=5 C=282 Bx=2842
+    0084 [line  244] 0x0046C1C6  GETTABLE   R7 = R0[K[27]='m_taskId']
+    0085 [line  244] 0x0180815C  CALL       A=5 B=3 C=2
+    0086 [line  245] 0x02C70186  GETTABLE   R6 = R5[K[28]='view']
+    0087 [line  246] 0x02C741C6  GETTABLE   R7 = R5[K[29]='dynview']
+    0088 [line  250] 0x04000203  LOADNIL    A=8 B=8 C=0 Bx=4096
+    0089 [line  251] 0x01C78057  EQ         A=1 B=R3 C=K[30]='finish'
+    0090 [line  251] 0x80004016  JMP        A=0 sBx=2
+    0091 [line  251] 0x01C7C017  EQ         A=0 B=R3 C=K[31]='manual_finish'
+    0092 [line  251] 0x8000C016  JMP        A=0 sBx=4
+    0093 [line  252] 0x03480246  GETTABLE   R9 = R6[K[32]='finishDescrption']
+    0094 [line  252] 0x0080825C  CALL       A=9 B=1 C=2
+    0095 [line  252] 0x04800200  MOVE       R8 = R9
+    0096 [line  252] 0x80008016  JMP        A=0 sBx=3
+    0097 [line  254] 0x03484246  GETTABLE   R9 = R6[K[33]='acceptDescription']
+    0098 [line  254] 0x0080825C  CALL       A=9 B=1 C=2
+    0099 [line  254] 0x04800200  MOVE       R8 = R9
+    0100 [line  256] 0x04440017  EQ         A=0 B=R8 C=K[16]=''
+    0101 [line  256] 0x80008016  JMP        A=0 sBx=3
+    0102 [line  257] 0x03488246  GETTABLE   R9 = R6[K[34]='description']
+    0103 [line  257] 0x0080825C  CALL       A=9 B=1 C=2
+    0104 [line  257] 0x04800200  MOVE       R8 = R9
+    0105 [line  259] 0x00C0424B  SELF       A=9 B=1 C=257 Bx=769
+    0106 [line  259] 0x0008C2C1  LOADK      R11 = K[35]='Txt_Desc'
+    0107 [line  259] 0x0180825C  CALL       A=9 B=3 C=2
+    0108 [line  259] 0x04C0C24B  SELF       A=9 B=9 C=259 Bx=4867
+    0109 [line  259] 0x000342C1  LOADK      R11 = K[13]='UILabel'
+    0110 [line  259] 0x0180825C  CALL       A=9 B=3 C=2
+    0111 [line  259] 0x01800284  GETUPVAL   A=10 B=3 C=0 Bx=1536
+    0112 [line  259] 0x05490286  GETTABLE   R10 = R10[K[36]='HtmlToNguiText']
+    0113 [line  259] 0x040002C0  MOVE       R11 = R8
+    0114 [line  259] 0x0100829C  CALL       A=10 B=2 C=2
+    0115 [line  259] 0x87028249  SETTABLE   R9[K[14]='text'] = R10
+    0116 [line  264] 0x03C94206  GETTABLE   R8 = R7[K[37]='award']
+    0117 [line  266] 0x04498246  GETTABLE   R9 = R8[K[38]='exp']
+    0118 [line  268] 0x00C0428B  SELF       A=10 B=1 C=257 Bx=769
+    0119 [line  268] 0x0009C301  LOADK      R12 = K[39]='TxtAward01'
+    0120 [line  268] 0x0180829C  CALL       A=10 B=3 C=2
+    0121 [line  269] 0x04C50057  EQ         A=1 B=R9 C=K[20]=0.0
+    0122 [line  269] 0x80034016  JMP        A=0 sBx=14
+    0123 [line  270] 0x054302CB  SELF       A=11 B=10 C=268 Bx=5388
+    0124 [line  270] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0125 [line  270] 0x018042DC  CALL       A=11 B=3 C=1
+    0126 [line  271] 0x054042CB  SELF       A=11 B=10 C=257 Bx=5377
+    0127 [line  271] 0x000A0341  LOADK      R13 = K[40]='Txt_Award01'
+    0128 [line  271] 0x018082DC  CALL       A=11 B=3 C=2
+    0129 [line  271] 0x05C0C2CB  SELF       A=11 B=11 C=259 Bx=5891
+    0130 [line  271] 0x00034341  LOADK      R13 = K[13]='UILabel'
+    0131 [line  271] 0x018082DC  CALL       A=11 B=3 C=2
+    0132 [line  271] 0x04800300  MOVE       R12 = R9
+    0133 [line  271] 0x00040341  LOADK      R13 = K[16]=''
+    0134 [line  271] 0x06034315  CONCAT     A=12 B=12 C=13 Bx=6157
+    0135 [line  271] 0x870302C9  SETTABLE   R11[K[14]='text'] = R12
+    0136 [line  271] 0x80008016  JMP        A=0 sBx=3
+    0137 [line  273] 0x054302CB  SELF       A=11 B=10 C=268 Bx=5388
+    0138 [line  273] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0139 [line  273] 0x018042DC  CALL       A=11 B=3 C=1
+    0140 [line  277] 0x044A42C6  GETTABLE   R11 = R8[K[41]='bindMoney']
+    0141 [line  279] 0x00C0430B  SELF       A=12 B=1 C=257 Bx=769
+    0142 [line  279] 0x000A8381  LOADK      R14 = K[42]='TxtAward02'
+    0143 [line  279] 0x0180831C  CALL       A=12 B=3 C=2
+    0144 [line  280] 0x05C50057  EQ         A=1 B=R11 C=K[20]=0.0
+    0145 [line  280] 0x80038016  JMP        A=0 sBx=15
+    0146 [line  281] 0x0643034B  SELF       A=13 B=12 C=268 Bx=6412
+    0147 [line  281] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0148 [line  281] 0x0180435C  CALL       A=13 B=3 C=1
+    0149 [line  282] 0x0640434B  SELF       A=13 B=12 C=257 Bx=6401
+    0150 [line  282] 0x000AC3C1  LOADK      R15 = K[43]='Txt_Award02'
+    0151 [line  282] 0x0180835C  CALL       A=13 B=3 C=2
+    0152 [line  282] 0x06C0C34B  SELF       A=13 B=13 C=259 Bx=6915
+    0153 [line  282] 0x000343C1  LOADK      R15 = K[13]='UILabel'
+    0154 [line  282] 0x0180835C  CALL       A=13 B=3 C=2
+    0155 [line  282] 0x00800384  GETUPVAL   A=14 B=1 C=0 Bx=512
+    0156 [line  282] 0x074B0386  GETTABLE   R14 = R14[K[44]='SetMoneyString']
+    0157 [line  282] 0x058003C0  MOVE       R15 = R11
+    0158 [line  282] 0x0100839C  CALL       A=14 B=2 C=2
+    0159 [line  282] 0x87038349  SETTABLE   R13[K[14]='text'] = R14
+    0160 [line  282] 0x80008016  JMP        A=0 sBx=3
+    0161 [line  284] 0x0643034B  SELF       A=13 B=12 C=268 Bx=6412
+    0162 [line  284] 0x000003C2  LOADBOOL   A=15 B=0 C=0
+    0163 [line  284] 0x0180435C  CALL       A=13 B=3 C=1
+    0164 [line  288] 0x044B4346  GETTABLE   R13 = R8[K[45]='tradeMoney']
+    0165 [line  290] 0x00C0438B  SELF       A=14 B=1 C=257 Bx=769
+    0166 [line  290] 0x000B8401  LOADK      R16 = K[46]='TxtAward03'
+    0167 [line  290] 0x0180839C  CALL       A=14 B=3 C=2
+    0168 [line  291] 0x06C50057  EQ         A=1 B=R13 C=K[20]=0.0
+    0169 [line  291] 0x80038016  JMP        A=0 sBx=15
+    0170 [line  292] 0x074303CB  SELF       A=15 B=14 C=268 Bx=7436
+    0171 [line  292] 0x00800442  LOADBOOL   A=17 B=1 C=0
+    0172 [line  292] 0x018043DC  CALL       A=15 B=3 C=1
+    0173 [line  293] 0x074043CB  SELF       A=15 B=14 C=257 Bx=7425
+    0174 [line  293] 0x000BC441  LOADK      R17 = K[47]='Txt_Award03'
+    0175 [line  293] 0x018083DC  CALL       A=15 B=3 C=2
+    0176 [line  293] 0x07C0C3CB  SELF       A=15 B=15 C=259 Bx=7939
+    0177 [line  293] 0x00034441  LOADK      R17 = K[13]='UILabel'
+    0178 [line  293] 0x018083DC  CALL       A=15 B=3 C=2
+    0179 [line  293] 0x00800404  GETUPVAL   A=16 B=1 C=0 Bx=512
+    0180 [line  293] 0x084B0406  GETTABLE   R16 = R16[K[44]='SetMoneyString']
+    0181 [line  293] 0x06800440  MOVE       R17 = R13
+    0182 [line  293] 0x0100841C  CALL       A=16 B=2 C=2
+    0183 [line  293] 0x870403C9  SETTABLE   R15[K[14]='text'] = R16
+    0184 [line  293] 0x80008016  JMP        A=0 sBx=3
+    0185 [line  295] 0x074303CB  SELF       A=15 B=14 C=268 Bx=7436
+    0186 [line  295] 0x00000442  LOADBOOL   A=17 B=0 C=0
+    0187 [line  295] 0x018043DC  CALL       A=15 B=3 C=1
+    0188 [line  298] 0x03C943C6  GETTABLE   R15 = R7[K[37]='award']
+    0189 [line  298] 0x07CC03C6  GETTABLE   R15 = R15[K[48]='profExp']
+    0190 [line  300] 0x00C0440B  SELF       A=16 B=1 C=257 Bx=769
+    0191 [line  300] 0x000C4481  LOADK      R18 = K[49]='TxtAward04'
+    0192 [line  300] 0x0180841C  CALL       A=16 B=3 C=2
+    0193 [line  301] 0x07C50057  EQ         A=1 B=R15 C=K[20]=0.0
+    0194 [line  301] 0x80034016  JMP        A=0 sBx=14
+    0195 [line  302] 0x0843044B  SELF       A=17 B=16 C=268 Bx=8460
+    0196 [line  302] 0x008004C2  LOADBOOL   A=19 B=1 C=0
+    0197 [line  302] 0x0180445C  CALL       A=17 B=3 C=1
+    0198 [line  303] 0x0840444B  SELF       A=17 B=16 C=257 Bx=8449
+    0199 [line  303] 0x000C84C1  LOADK      R19 = K[50]='Txt_Award04'
+    0200 [line  303] 0x0180845C  CALL       A=17 B=3 C=2
+    0201 [line  303] 0x08C0C44B  SELF       A=17 B=17 C=259 Bx=8963
+    0202 [line  303] 0x000344C1  LOADK      R19 = K[13]='UILabel'
+    0203 [line  303] 0x0180845C  CALL       A=17 B=3 C=2
+    0204 [line  303] 0x000CC485  GETGLOBAL  R18 = GLOBAL K[51]='tostring'
+    0205 [line  303] 0x078004C0  MOVE       R19 = R15
+    0206 [line  303] 0x0100849C  CALL       A=18 B=2 C=2
+    0207 [line  303] 0x87048449  SETTABLE   R17[K[14]='text'] = R18
+    0208 [line  303] 0x80008016  JMP        A=0 sBx=3
+    0209 [line  305] 0x0843044B  SELF       A=17 B=16 C=268 Bx=8460
+    0210 [line  305] 0x000004C2  LOADBOOL   A=19 B=0 C=0
+    0211 [line  305] 0x0180445C  CALL       A=17 B=3 C=1
+    0212 [line  308] 0x03C94446  GETTABLE   R17 = R7[K[37]='award']
+    0213 [line  308] 0x08CD0446  GETTABLE   R17 = R17[K[52]='repuCount']
+    0214 [line  309] 0x00C0448B  SELF       A=18 B=1 C=257 Bx=769
+    0215 [line  309] 0x000D4501  LOADK      R20 = K[53]='TxtAward05'
+    0216 [line  309] 0x0180849C  CALL       A=18 B=3 C=2
+    0217 [line  310] 0x00C044CB  SELF       A=19 B=1 C=257 Bx=769
+    0218 [line  310] 0x000D8541  LOADK      R21 = K[54]='TxtAward06'
+    0219 [line  310] 0x018084DC  CALL       A=19 B=3 C=2
+    0220 [line  311] 0x0943050B  SELF       A=20 B=18 C=268 Bx=9484
+    0221 [line  311] 0x00000582  LOADBOOL   A=22 B=0 C=0
+    0222 [line  311] 0x0180451C  CALL       A=20 B=3 C=1
+    0223 [line  312] 0x09C3050B  SELF       A=20 B=19 C=268 Bx=9996
+    0224 [line  312] 0x00000582  LOADBOOL   A=22 B=0 C=0
+    0225 [line  312] 0x0180451C  CALL       A=20 B=3 C=1
+    0226 [line  313] 0x0000045A  TEST       A=17 B=0 C=0
+    0227 [line  313] 0x800DC016  JMP        A=0 sBx=56
+    0228 [line  313] 0x08C50057  EQ         A=1 B=R17 C=K[20]=0.0
+    0229 [line  313] 0x800D4016  JMP        A=0 sBx=54
+    0230 [line  314] 0x03C94506  GETTABLE   R20 = R7[K[37]='award']
+    0231 [line  314] 0x0A4DC506  GETTABLE   R20 = R20[K[55]='repuData']
+    0232 [line  315] 0x000E0541  LOADK      R21 = K[56]=1.0
+    0233 [line  315] 0x08800580  MOVE       R22 = R17
+    0234 [line  315] 0x000E05C1  LOADK      R23 = K[56]=1.0
+    0235 [line  315] 0x800B8560  FORPREP    A=21 sBx=47
+    0236 [line  316] 0x0A060646  GETTABLE   R25 = R20[R24]
+    0237 [line  316] 0x0000065A  TEST       A=25 B=0 C=0
+    0238 [line  316] 0x80050016  JMP        A=0 sBx=21
+    0239 [line  316] 0x0A060646  GETTABLE   R25 = R20[R24]
+    0240 [line  316] 0x0CC48646  GETTABLE   R25 = R25[K[18]='id']
+    0241 [line  316] 0x000E4685  GETGLOBAL  R26 = GLOBAL K[57]='REPUID'
+    0242 [line  316] 0x0D4E8686  GETTABLE   R26 = R26[K[58]='NATION_WAR']
+    0243 [line  316] 0x0C868017  EQ         A=0 B=R25 C=R26
+    0244 [line  316] 0x80038016  JMP        A=0 sBx=15
+    0245 [line  318] 0x0943064B  SELF       A=25 B=18 C=268 Bx=9484
+    0246 [line  318] 0x008006C2  LOADBOOL   A=27 B=1 C=0
+    0247 [line  318] 0x0180465C  CALL       A=25 B=3 C=1
+    0248 [line  319] 0x0940464B  SELF       A=25 B=18 C=257 Bx=9473
+    0249 [line  319] 0x000EC6C1  LOADK      R27 = K[59]='Txt_Award05'
+    0250 [line  319] 0x0180865C  CALL       A=25 B=3 C=2
+    0251 [line  319] 0x0CC0C64B  SELF       A=25 B=25 C=259 Bx=13059
+    0252 [line  319] 0x000346C1  LOADK      R27 = K[13]='UILabel'
+    0253 [line  319] 0x0180865C  CALL       A=25 B=3 C=2
+    0254 [line  319] 0x000CC685  GETGLOBAL  R26 = GLOBAL K[51]='tostring'
+    0255 [line  319] 0x0A0606C6  GETTABLE   R27 = R20[R24]
+    0256 [line  319] 0x0DCF06C6  GETTABLE   R27 = R27[K[60]='value']
+    0257 [line  319] 0x0100869C  CALL       A=26 B=2 C=2
+    0258 [line  319] 0x87068649  SETTABLE   R25[K[14]='text'] = R26
+    0259 [line  319] 0x80058016  JMP        A=0 sBx=23
+    0260 [line  320] 0x0A060646  GETTABLE   R25 = R20[R24]
+    0261 [line  320] 0x0000065A  TEST       A=25 B=0 C=0
+    0262 [line  320] 0x8004C016  JMP        A=0 sBx=20
+    0263 [line  320] 0x0A060646  GETTABLE   R25 = R20[R24]
+    0264 [line  320] 0x0CC48646  GETTABLE   R25 = R25[K[18]='id']
+    0265 [line  320] 0x000E4685  GETGLOBAL  R26 = GLOBAL K[57]='REPUID'
+    0266 [line  320] 0x0D4F4686  GETTABLE   R26 = R26[K[61]='FACTION_CONTRIBUTION']
+    0267 [line  320] 0x0C868017  EQ         A=0 B=R25 C=R26
+    0268 [line  320] 0x80034016  JMP        A=0 sBx=14
+    0269 [line  321] 0x09C3064B  SELF       A=25 B=19 C=268 Bx=9996
+    0270 [line  321] 0x008006C2  LOADBOOL   A=27 B=1 C=0
+    0271 [line  321] 0x0180465C  CALL       A=25 B=3 C=1
+    0272 [line  322] 0x09C0464B  SELF       A=25 B=19 C=257 Bx=9985
+    0273 [line  322] 0x000F86C1  LOADK      R27 = K[62]='Txt_Award06'
+    0274 [line  322] 0x0180865C  CALL       A=25 B=3 C=2
+    0275 [line  322] 0x0CC0C64B  SELF       A=25 B=25 C=259 Bx=13059
+    0276 [line  322] 0x000346C1  LOADK      R27 = K[13]='UILabel'
+    0277 [line  322] 0x0180865C  CALL       A=25 B=3 C=2
+    0278 [line  322] 0x000CC685  GETGLOBAL  R26 = GLOBAL K[51]='tostring'
+    0279 [line  322] 0x0A0606C6  GETTABLE   R27 = R20[R24]
+    0280 [line  322] 0x0DCF06C6  GETTABLE   R27 = R27[K[60]='value']
+    0281 [line  322] 0x0100869C  CALL       A=26 B=2 C=2
+    0282 [line  322] 0x87068649  SETTABLE   R25[K[14]='text'] = R26
+    0283 [line  315] 0x7FF3C55F  FORLOOP    A=21 sBx=-48
+    0284 [line  327] 0x03C94506  GETTABLE   R20 = R7[K[37]='award']
+    0285 [line  327] 0x0A4FC506  GETTABLE   R20 = R20[K[63]='factionMoney']
+    0286 [line  329] 0x00C0454B  SELF       A=21 B=1 C=257 Bx=769
+    0287 [line  329] 0x001005C1  LOADK      R23 = K[64]='TxtAward07'
+    0288 [line  329] 0x0180855C  CALL       A=21 B=3 C=2
+    0289 [line  330] 0x0000051A  TEST       A=20 B=0 C=0
+    0290 [line  330] 0x8003C016  JMP        A=0 sBx=16
+    0291 [line  330] 0x0A450057  EQ         A=1 B=R20 C=K[20]=0.0
+    0292 [line  330] 0x80034016  JMP        A=0 sBx=14
+    0293 [line  331] 0x0AC3058B  SELF       A=22 B=21 C=268 Bx=11020
+    0294 [line  331] 0x00800602  LOADBOOL   A=24 B=1 C=0
+    0295 [line  331] 0x0180459C  CALL       A=22 B=3 C=1
+    0296 [line  332] 0x0AC0458B  SELF       A=22 B=21 C=257 Bx=11009
+    0297 [line  332] 0x00104601  LOADK      R24 = K[65]='Txt_Award07'
+    0298 [line  332] 0x0180859C  CALL       A=22 B=3 C=2
+    0299 [line  332] 0x0B40C58B  SELF       A=22 B=22 C=259 Bx=11523
+    0300 [line  332] 0x00034601  LOADK      R24 = K[13]='UILabel'
+    0301 [line  332] 0x0180859C  CALL       A=22 B=3 C=2
+    0302 [line  332] 0x000CC5C5  GETGLOBAL  R23 = GLOBAL K[51]='tostring'
+    0303 [line  332] 0x0A000600  MOVE       R24 = R20
+    0304 [line  332] 0x010085DC  CALL       A=23 B=2 C=2
+    0305 [line  332] 0x8705C589  SETTABLE   R22[K[14]='text'] = R23
+    0306 [line  332] 0x80008016  JMP        A=0 sBx=3
+    0307 [line  334] 0x0AC3058B  SELF       A=22 B=21 C=268 Bx=11020
+    0308 [line  334] 0x00000602  LOADBOOL   A=24 B=0 C=0
+    0309 [line  334] 0x0180459C  CALL       A=22 B=3 C=1
+    0310 [line  337] 0x03C94586  GETTABLE   R22 = R7[K[37]='award']
+    0311 [line  337] 0x0B508586  GETTABLE   R22 = R22[K[66]='factionContribution']
+    0312 [line  339] 0x00C045CB  SELF       A=23 B=1 C=257 Bx=769
+    0313 [line  339] 0x0010C641  LOADK      R25 = K[67]='TxtAward08'
+    0314 [line  339] 0x018085DC  CALL       A=23 B=3 C=2
+    0315 [line  340] 0x0000059A  TEST       A=22 B=0 C=0
+    0316 [line  340] 0x8003C016  JMP        A=0 sBx=16
+    0317 [line  340] 0x0B450057  EQ         A=1 B=R22 C=K[20]=0.0
+    0318 [line  340] 0x80034016  JMP        A=0 sBx=14
+    0319 [line  341] 0x0BC3060B  SELF       A=24 B=23 C=268 Bx=12044
+    0320 [line  341] 0x00800682  LOADBOOL   A=26 B=1 C=0
+    0321 [line  341] 0x0180461C  CALL       A=24 B=3 C=1
+    0322 [line  342] 0x0BC0460B  SELF       A=24 B=23 C=257 Bx=12033
+    0323 [line  342] 0x00110681  LOADK      R26 = K[68]='Txt_Award08'
+    0324 [line  342] 0x0180861C  CALL       A=24 B=3 C=2
+    0325 [line  342] 0x0C40C60B  SELF       A=24 B=24 C=259 Bx=12547
+    0326 [line  342] 0x00034681  LOADK      R26 = K[13]='UILabel'
+    0327 [line  342] 0x0180861C  CALL       A=24 B=3 C=2
+    0328 [line  342] 0x000CC645  GETGLOBAL  R25 = GLOBAL K[51]='tostring'
+    0329 [line  342] 0x0B000680  MOVE       R26 = R22
+    0330 [line  342] 0x0100865C  CALL       A=25 B=2 C=2
+    0331 [line  342] 0x87064609  SETTABLE   R24[K[14]='text'] = R25
+    0332 [line  342] 0x80008016  JMP        A=0 sBx=3
+    0333 [line  344] 0x0BC3060B  SELF       A=24 B=23 C=268 Bx=12044
+    0334 [line  344] 0x00000682  LOADBOOL   A=26 B=0 C=0
+    0335 [line  344] 0x0180461C  CALL       A=24 B=3 C=1
+    0336 [line  348] 0x00C0460B  SELF       A=24 B=1 C=257 Bx=769
+    0337 [line  348] 0x00114681  LOADK      R26 = K[69]='Award'
+    0338 [line  348] 0x0180861C  CALL       A=24 B=3 C=2
+    0339 [line  349] 0x00C0464B  SELF       A=25 B=1 C=257 Bx=769
+    0340 [line  349] 0x001186C1  LOADK      R27 = K[70]='Hint'
+    0341 [line  349] 0x0180865C  CALL       A=25 B=3 C=2
+    0342 [line  351] 0x0C43068B  SELF       A=26 B=24 C=268 Bx=12556
+    0343 [line  351] 0x00800702  LOADBOOL   A=28 B=1 C=0
+    0344 [line  351] 0x0180469C  CALL       A=26 B=3 C=1
+    0345 [line  352] 0x0CC3068B  SELF       A=26 B=25 C=268 Bx=13068
+    0346 [line  352] 0x00800702  LOADBOOL   A=28 B=1 C=0
+    0347 [line  352] 0x0180469C  CALL       A=26 B=3 C=1
+    0348 [line  357] 0x0351C686  GETTABLE   R26 = R6[K[71]='bShowAwardContent']
+    0349 [line  357] 0x0000069A  TEST       A=26 B=0 C=0
+    0350 [line  357] 0x8000C016  JMP        A=0 sBx=4
+    0351 [line  357] 0x01C78057  EQ         A=1 B=R3 C=K[30]='finish'
+    0352 [line  357] 0x80004016  JMP        A=0 sBx=2
+    0353 [line  357] 0x01C7C017  EQ         A=0 B=R3 C=K[31]='manual_finish'
+    0354 [line  357] 0x80374016  JMP        A=0 sBx=222
+    0355 [line  358] 0x0CC0468B  SELF       A=26 B=25 C=257 Bx=13057
+    0356 [line  358] 0x00120701  LOADK      R28 = K[72]='Txt_Hintsp'
+    0357 [line  358] 0x0180869C  CALL       A=26 B=3 C=2
+    0358 [line  358] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0359 [line  358] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0360 [line  358] 0x0180469C  CALL       A=26 B=3 C=1
+    0361 [line  359] 0x0C40468B  SELF       A=26 B=24 C=257 Bx=12545
+    0362 [line  359] 0x00124701  LOADK      R28 = K[73]='Txt_Awardsp'
+    0363 [line  359] 0x0180869C  CALL       A=26 B=3 C=2
+    0364 [line  359] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0365 [line  359] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0366 [line  359] 0x0180469C  CALL       A=26 B=3 C=1
+    0367 [line  360] 0x04528686  GETTABLE   R26 = R8[K[74]='canItemNum']
+    0368 [line  363] 0x0CC046CB  SELF       A=27 B=25 C=257 Bx=13057
+    0369 [line  363] 0x0012C741  LOADK      R29 = K[75]='Txt_Hint01'
+    0370 [line  363] 0x018086DC  CALL       A=27 B=3 C=2
+    0371 [line  363] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0372 [line  363] 0x0D4E0057  EQ         A=1 B=R26 C=K[56]=1.0
+    0373 [line  363] 0x80000016  JMP        A=0 sBx=1
+    0374 [line  363] 0x00004742  LOADBOOL   A=29 B=0 C=1
+    0375 [line  363] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0376 [line  363] 0x018046DC  CALL       A=27 B=3 C=1
+    0377 [line  364] 0x0CC046CB  SELF       A=27 B=25 C=257 Bx=13057
+    0378 [line  364] 0x00130741  LOADK      R29 = K[76]='Txt_Hint02'
+    0379 [line  364] 0x018086DC  CALL       A=27 B=3 C=2
+    0380 [line  364] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0381 [line  364] 0x9C068018  LT         A=0 B=K[56]=1.0 C=R26
+    0382 [line  364] 0x8000C016  JMP        A=0 sBx=4
+    0383 [line  364] 0x01D34057  EQ         A=1 B=R3 C=K[77]='receive'
+    0384 [line  364] 0x80008016  JMP        A=0 sBx=3
+    0385 [line  364] 0x01D38057  EQ         A=1 B=R3 C=K[78]='manual_receive'
+    0386 [line  364] 0x80000016  JMP        A=0 sBx=1
+    0387 [line  364] 0x00004742  LOADBOOL   A=29 B=0 C=1
+    0388 [line  364] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0389 [line  364] 0x018046DC  CALL       A=27 B=3 C=1
+    0390 [line  365] 0x0CC046CB  SELF       A=27 B=25 C=257 Bx=13057
+    0391 [line  365] 0x0013C741  LOADK      R29 = K[79]='Txt_Hint03'
+    0392 [line  365] 0x018086DC  CALL       A=27 B=3 C=2
+    0393 [line  365] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0394 [line  365] 0x9C068018  LT         A=0 B=K[56]=1.0 C=R26
+    0395 [line  365] 0x8000C016  JMP        A=0 sBx=4
+    0396 [line  365] 0x01C78057  EQ         A=1 B=R3 C=K[30]='finish'
+    0397 [line  365] 0x80008016  JMP        A=0 sBx=3
+    0398 [line  365] 0x01C7C057  EQ         A=1 B=R3 C=K[31]='manual_finish'
+    0399 [line  365] 0x80000016  JMP        A=0 sBx=1
+    0400 [line  365] 0x00004742  LOADBOOL   A=29 B=0 C=1
+    0401 [line  365] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0402 [line  365] 0x018046DC  CALL       A=27 B=3 C=1
+    0403 [line  367] 0x0D4E0017  EQ         A=0 B=R26 C=K[56]=1.0
+    0404 [line  367] 0x80114016  JMP        A=0 sBx=70
+    0405 [line  368] 0x045406C6  GETTABLE   R27 = R8[K[80]='canItem']
+    0406 [line  368] 0x0DCE06C6  GETTABLE   R27 = R27[K[56]=1.0]
+    0407 [line  368] 0x0DD446C6  GETTABLE   R27 = R27[K[81]='awardItemNum']
+    0408 [line  369] 0x0000070A  NEWTABLE   A=28 B=0 C=0 Bx=0
+    0409 [line  369] 0xA9070009  SETTABLE   R0[K[82]='m_AwardItem'] = R28
+    0410 [line  370] 0x000E0701  LOADK      R28 = K[56]=1.0
+    0411 [line  370] 0x02000744  GETUPVAL   A=29 B=4 C=0 Bx=2048
+    0412 [line  370] 0x000E0781  LOADK      R30 = K[56]=1.0
+    0413 [line  370] 0x800E8720  FORPREP    A=28 sBx=59
+    0414 [line  371] 0x0C40480B  SELF       A=32 B=24 C=257 Bx=12545
+    0415 [line  371] 0x0014C881  LOADK      R34 = K[83]='Award%02d'
+    0416 [line  371] 0x1155088B  SELF       A=34 B=34 C=340 Bx=17748
+    0417 [line  371] 0x0F800900  MOVE       R36 = R31
+    0418 [line  371] 0x0180089C  CALL       A=34 B=3 C=0
+    0419 [line  371] 0x0000881C  CALL       A=32 B=0 C=2
+    0420 [line  373] 0x0F86C019  LE         A=0 B=R31 C=R27
+    0421 [line  373] 0x800BC016  JMP        A=0 sBx=48
+    0422 [line  374] 0x1043084B  SELF       A=33 B=32 C=268 Bx=16652
+    0423 [line  374] 0x008008C2  LOADBOOL   A=35 B=1 C=0
+    0424 [line  374] 0x0180485C  CALL       A=33 B=3 C=1
+    0425 [line  376] 0x04540846  GETTABLE   R33 = R8[K[80]='canItem']
+    0426 [line  376] 0x10CE0846  GETTABLE   R33 = R33[K[56]=1.0]
+    0427 [line  376] 0x10D54846  GETTABLE   R33 = R33[K[85]='award_itemArr']
+    0428 [line  376] 0x1087C846  GETTABLE   R33 = R33[R31]
+    0429 [line  376] 0x10D58846  GETTABLE   R33 = R33[K[86]='count']
+    0430 [line  377] 0x04540886  GETTABLE   R34 = R8[K[80]='canItem']
+    0431 [line  377] 0x114E0886  GETTABLE   R34 = R34[K[56]=1.0]
+    0432 [line  377] 0x11554886  GETTABLE   R34 = R34[K[85]='award_itemArr']
+    0433 [line  377] 0x1107C886  GETTABLE   R34 = R34[R31]
+    0434 [line  377] 0x1155C886  GETTABLE   R34 = R34[K[87]='bind']
+    0435 [line  378] 0x045408C6  GETTABLE   R35 = R8[K[80]='canItem']
+    0436 [line  378] 0x11CE08C6  GETTABLE   R35 = R35[K[56]=1.0]
+    0437 [line  378] 0x11D548C6  GETTABLE   R35 = R35[K[85]='award_itemArr']
+    0438 [line  378] 0x1187C8C6  GETTABLE   R35 = R35[R31]
+    0439 [line  378] 0x11D608C6  GETTABLE   R35 = R35[K[88]='produceTemplate']
+    0440 [line  379] 0x02800904  GETUPVAL   A=36 B=5 C=0 Bx=2560
+    0441 [line  379] 0x12564906  GETTABLE   R36 = R36[K[89]='CreateItemWithGenerateConfig']
+    0442 [line  379] 0x04540946  GETTABLE   R37 = R8[K[80]='canItem']
+    0443 [line  379] 0x12CE0946  GETTABLE   R37 = R37[K[56]=1.0]
+    0444 [line  379] 0x12D54946  GETTABLE   R37 = R37[K[85]='award_itemArr']
+    0445 [line  379] 0x1287C946  GETTABLE   R37 = R37[R31]
+    0446 [line  379] 0x12D68946  GETTABLE   R37 = R37[K[90]='tid']
+    0447 [line  379] 0x00050981  LOADK      R38 = K[20]=0.0
+    0448 [line  379] 0x0000089A  TEST       A=34 B=0 C=0
+    0449 [line  379] 0x80008016  JMP        A=0 sBx=3
+    0450 [line  379] 0x000509C1  LOADK      R39 = K[20]=0.0
+    0451 [line  379] 0x000049DA  TEST       A=39 B=0 C=1
+    0452 [line  379] 0x80000016  JMP        A=0 sBx=1
+    0453 [line  379] 0x108009C0  MOVE       R39 = R33
+    0454 [line  379] 0x0000089A  TEST       A=34 B=0 C=0
+    0455 [line  379] 0x80004016  JMP        A=0 sBx=2
+    0456 [line  379] 0x10804A1B  TESTSET    A=40 B=33 C=1
+    0457 [line  379] 0x80000016  JMP        A=0 sBx=1
+    0458 [line  379] 0x00050A01  LOADK      R40 = K[20]=0.0
+    0459 [line  379] 0x11800A40  MOVE       R41 = R35
+    0460 [line  379] 0x0300891C  CALL       A=36 B=6 C=2
+    0461 [line  381] 0x03000944  GETUPVAL   A=37 B=6 C=0 Bx=3072
+    0462 [line  381] 0x12D6C946  GETTABLE   R37 = R37[K[91]='SetIconEx']
+    0463 [line  381] 0x10000980  MOVE       R38 = R32
+    0464 [line  381] 0x120009C0  MOVE       R39 = R36
+    0465 [line  381] 0x00800A02  LOADBOOL   A=40 B=1 C=0
+    0466 [line  381] 0x0200495C  CALL       A=37 B=4 C=1
+    0467 [line  382] 0x00548946  GETTABLE   R37 = R0[K[82]='m_AwardItem']
+    0468 [line  382] 0x0F890949  SETTABLE   R37[R31] = R36
+    0469 [line  382] 0x80008016  JMP        A=0 sBx=3
+    0470 [line  384] 0x1043084B  SELF       A=33 B=32 C=268 Bx=16652
+    0471 [line  384] 0x000008C2  LOADBOOL   A=35 B=0 C=0
+    0472 [line  384] 0x0180485C  CALL       A=33 B=3 C=1
+    0473 [line  370] 0x7FF0C71F  FORLOOP    A=28 sBx=-60
+    0474 [line  386] 0x8012C016  JMP        A=0 sBx=76
+    0475 [line  388] 0x9C068018  LT         A=0 B=K[56]=1.0 C=R26
+    0476 [line  388] 0x8010C016  JMP        A=0 sBx=68
+    0477 [line  389] 0xAE574009  SETTABLE   R0[K[92]='m_MultiAward'] = K[93]=True
+    0478 [line  390] 0x000006CA  NEWTABLE   A=27 B=0 C=0 Bx=0
+    0479 [line  390] 0xA906C009  SETTABLE   R0[K[82]='m_AwardItem'] = R27
+    0480 [line  391] 0x000E06C1  LOADK      R27 = K[56]=1.0
+    0481 [line  391] 0x02000704  GETUPVAL   A=28 B=4 C=0 Bx=2048
+    0482 [line  391] 0x000E0741  LOADK      R29 = K[56]=1.0
+    0483 [line  391] 0x800E86E0  FORPREP    A=27 sBx=59
+    0484 [line  392] 0x0C4047CB  SELF       A=31 B=24 C=257 Bx=12545
+    0485 [line  392] 0x0014C841  LOADK      R33 = K[83]='Award%02d'
+    0486 [line  392] 0x10D5084B  SELF       A=33 B=33 C=340 Bx=17236
+    0487 [line  392] 0x0F0008C0  MOVE       R35 = R30
+    0488 [line  392] 0x0180085C  CALL       A=33 B=3 C=0
+    0489 [line  392] 0x000087DC  CALL       A=31 B=0 C=2
+    0490 [line  394] 0x0F068019  LE         A=0 B=R30 C=R26
+    0491 [line  394] 0x800BC016  JMP        A=0 sBx=48
+    0492 [line  395] 0x0FC3080B  SELF       A=32 B=31 C=268 Bx=16140
+    0493 [line  395] 0x00800882  LOADBOOL   A=34 B=1 C=0
+    0494 [line  395] 0x0180481C  CALL       A=32 B=3 C=1
+    0495 [line  397] 0x04540806  GETTABLE   R32 = R8[K[80]='canItem']
+    0496 [line  397] 0x10078806  GETTABLE   R32 = R32[R30]
+    0497 [line  397] 0x10554806  GETTABLE   R32 = R32[K[85]='award_itemArr']
+    0498 [line  397] 0x104E0806  GETTABLE   R32 = R32[K[56]=1.0]
+    0499 [line  397] 0x10558806  GETTABLE   R32 = R32[K[86]='count']
+    0500 [line  398] 0x04540846  GETTABLE   R33 = R8[K[80]='canItem']
+    0501 [line  398] 0x10878846  GETTABLE   R33 = R33[R30]
+    0502 [line  398] 0x10D54846  GETTABLE   R33 = R33[K[85]='award_itemArr']
+    0503 [line  398] 0x10CE0846  GETTABLE   R33 = R33[K[56]=1.0]
+    0504 [line  398] 0x10D5C846  GETTABLE   R33 = R33[K[87]='bind']
+    0505 [line  399] 0x04540886  GETTABLE   R34 = R8[K[80]='canItem']
+    0506 [line  399] 0x114E0886  GETTABLE   R34 = R34[K[56]=1.0]
+    0507 [line  399] 0x11554886  GETTABLE   R34 = R34[K[85]='award_itemArr']
+    0508 [line  399] 0x11078886  GETTABLE   R34 = R34[R30]
+    0509 [line  399] 0x11560886  GETTABLE   R34 = R34[K[88]='produceTemplate']
+    0510 [line  400] 0x028008C4  GETUPVAL   A=35 B=5 C=0 Bx=2560
+    0511 [line  400] 0x11D648C6  GETTABLE   R35 = R35[K[89]='CreateItemWithGenerateConfig']
+    0512 [line  400] 0x04540906  GETTABLE   R36 = R8[K[80]='canItem']
+    0513 [line  400] 0x124E0906  GETTABLE   R36 = R36[K[56]=1.0]
+    0514 [line  400] 0x12554906  GETTABLE   R36 = R36[K[85]='award_itemArr']
+    0515 [line  400] 0x12078906  GETTABLE   R36 = R36[R30]
+    0516 [line  400] 0x12568906  GETTABLE   R36 = R36[K[90]='tid']
+    0517 [line  400] 0x00050941  LOADK      R37 = K[20]=0.0
+    0518 [line  400] 0x0000085A  TEST       A=33 B=0 C=0
+    0519 [line  400] 0x80008016  JMP        A=0 sBx=3
+    0520 [line  400] 0x00050981  LOADK      R38 = K[20]=0.0
+    0521 [line  400] 0x0000499A  TEST       A=38 B=0 C=1
+    0522 [line  400] 0x80000016  JMP        A=0 sBx=1
+    0523 [line  400] 0x10000980  MOVE       R38 = R32
+    0524 [line  400] 0x0000085A  TEST       A=33 B=0 C=0
+    0525 [line  400] 0x80004016  JMP        A=0 sBx=2
+    0526 [line  400] 0x100049DB  TESTSET    A=39 B=32 C=1
+    0527 [line  400] 0x80000016  JMP        A=0 sBx=1
+    0528 [line  400] 0x000509C1  LOADK      R39 = K[20]=0.0
+    0529 [line  400] 0x11000A00  MOVE       R40 = R34
+    0530 [line  400] 0x030088DC  CALL       A=35 B=6 C=2
+    0531 [line  402] 0x03000904  GETUPVAL   A=36 B=6 C=0 Bx=3072
+    0532 [line  402] 0x1256C906  GETTABLE   R36 = R36[K[91]='SetIconEx']
+    0533 [line  402] 0x0F800940  MOVE       R37 = R31
+    0534 [line  402] 0x11800980  MOVE       R38 = R35
+    0535 [line  402] 0x008009C2  LOADBOOL   A=39 B=1 C=0
+    0536 [line  402] 0x0200491C  CALL       A=36 B=4 C=1
+    0537 [line  404] 0x00548906  GETTABLE   R36 = R0[K[82]='m_AwardItem']
+    0538 [line  404] 0x0F08C909  SETTABLE   R36[R30] = R35
+    0539 [line  404] 0x80008016  JMP        A=0 sBx=3
+    0540 [line  406] 0x0FC3080B  SELF       A=32 B=31 C=268 Bx=16140
+    0541 [line  406] 0x00000882  LOADBOOL   A=34 B=0 C=0
+    0542 [line  406] 0x0180481C  CALL       A=32 B=3 C=1
+    0543 [line  391] 0x7FF0C6DF  FORLOOP    A=27 sBx=-60
+    0544 [line  408] 0x80014016  JMP        A=0 sBx=6
+    0545 [line  412] 0x0C4306CB  SELF       A=27 B=24 C=268 Bx=12556
+    0546 [line  412] 0x00000742  LOADBOOL   A=29 B=0 C=0
+    0547 [line  412] 0x018046DC  CALL       A=27 B=3 C=1
+    0548 [line  413] 0x0CC306CB  SELF       A=27 B=25 C=268 Bx=13068
+    0549 [line  413] 0x00000742  LOADBOOL   A=29 B=0 C=0
+    0550 [line  413] 0x018046DC  CALL       A=27 B=3 C=1
+    0551 [line  416] 0x9C068018  LT         A=0 B=K[56]=1.0 C=R26
+    0552 [line  416] 0x8000C016  JMP        A=0 sBx=4
+    0553 [line  416] 0x01C78057  EQ         A=1 B=R3 C=K[30]='finish'
+    0554 [line  416] 0x80008016  JMP        A=0 sBx=3
+    0555 [line  416] 0x01C7C057  EQ         A=1 B=R3 C=K[31]='manual_finish'
+    0556 [line  416] 0x80000016  JMP        A=0 sBx=1
+    0557 [line  416] 0x000046C2  LOADBOOL   A=27 B=0 C=1
+    0558 [line  416] 0x008006C2  LOADBOOL   A=27 B=1 C=0
+    0559 [line  417] 0x000E0701  LOADK      R28 = K[56]=1.0
+    0560 [line  417] 0x02000744  GETUPVAL   A=29 B=4 C=0 Bx=2048
+    0561 [line  417] 0x000E0781  LOADK      R30 = K[56]=1.0
+    0562 [line  417] 0x8002C720  FORPREP    A=28 sBx=12
+    0563 [line  418] 0x0C40480B  SELF       A=32 B=24 C=257 Bx=12545
+    0564 [line  418] 0x0014C881  LOADK      R34 = K[83]='Award%02d'
+    0565 [line  418] 0x1155088B  SELF       A=34 B=34 C=340 Bx=17748
+    0566 [line  418] 0x0F800900  MOVE       R36 = R31
+    0567 [line  418] 0x0180089C  CALL       A=34 B=3 C=0
+    0568 [line  418] 0x0000881C  CALL       A=32 B=0 C=2
+    0569 [line  418] 0x1040480B  SELF       A=32 B=32 C=257 Bx=16641
+    0570 [line  418] 0x00178881  LOADK      R34 = K[94]='Check'
+    0571 [line  418] 0x0180881C  CALL       A=32 B=3 C=2
+    0572 [line  419] 0x1043084B  SELF       A=33 B=32 C=268 Bx=16652
+    0573 [line  419] 0x0D8008C0  MOVE       R35 = R27
+    0574 [line  419] 0x0180485C  CALL       A=33 B=3 C=1
+    0575 [line  417] 0x7FFC871F  FORLOOP    A=28 sBx=-13
+    0576 [line  420] 0x80138016  JMP        A=0 sBx=79
+    0577 [line  422] 0x0CC0468B  SELF       A=26 B=25 C=257 Bx=13057
+    0578 [line  422] 0x0012C701  LOADK      R28 = K[75]='Txt_Hint01'
+    0579 [line  422] 0x0180869C  CALL       A=26 B=3 C=2
+    0580 [line  422] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0581 [line  422] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0582 [line  422] 0x0180469C  CALL       A=26 B=3 C=1
+    0583 [line  423] 0x0CC0468B  SELF       A=26 B=25 C=257 Bx=13057
+    0584 [line  423] 0x00130701  LOADK      R28 = K[76]='Txt_Hint02'
+    0585 [line  423] 0x0180869C  CALL       A=26 B=3 C=2
+    0586 [line  423] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0587 [line  423] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0588 [line  423] 0x0180469C  CALL       A=26 B=3 C=1
+    0589 [line  424] 0x0CC0468B  SELF       A=26 B=25 C=257 Bx=13057
+    0590 [line  424] 0x0013C701  LOADK      R28 = K[79]='Txt_Hint03'
+    0591 [line  424] 0x0180869C  CALL       A=26 B=3 C=2
+    0592 [line  424] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0593 [line  424] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0594 [line  424] 0x0180469C  CALL       A=26 B=3 C=1
+    0595 [line  425] 0x0C40468B  SELF       A=26 B=24 C=257 Bx=12545
+    0596 [line  425] 0x0017C701  LOADK      R28 = K[95]='Award01'
+    0597 [line  425] 0x0180869C  CALL       A=26 B=3 C=2
+    0598 [line  425] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0599 [line  425] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0600 [line  425] 0x0180469C  CALL       A=26 B=3 C=1
+    0601 [line  426] 0x0C40468B  SELF       A=26 B=24 C=257 Bx=12545
+    0602 [line  426] 0x00180701  LOADK      R28 = K[96]='Award02'
+    0603 [line  426] 0x0180869C  CALL       A=26 B=3 C=2
+    0604 [line  426] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0605 [line  426] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0606 [line  426] 0x0180469C  CALL       A=26 B=3 C=1
+    0607 [line  427] 0x0C40468B  SELF       A=26 B=24 C=257 Bx=12545
+    0608 [line  427] 0x00184701  LOADK      R28 = K[97]='Award03'
+    0609 [line  427] 0x0180869C  CALL       A=26 B=3 C=2
+    0610 [line  427] 0x0D43068B  SELF       A=26 B=26 C=268 Bx=13580
+    0611 [line  427] 0x00000702  LOADBOOL   A=28 B=0 C=0
+    0612 [line  427] 0x0180469C  CALL       A=26 B=3 C=1
+    0613 [line  428] 0x03588686  GETTABLE   R26 = R6[K[98]='awardContent']
+    0614 [line  430] 0x0018C6C5  GETGLOBAL  R27 = GLOBAL K[99]='string'
+    0615 [line  430] 0x0DD906C6  GETTABLE   R27 = R27[K[100]='len']
+    0616 [line  430] 0x0D000700  MOVE       R28 = R26
+    0617 [line  430] 0x010086DC  CALL       A=27 B=2 C=2
+    0618 [line  430] 0x0DC50017  EQ         A=0 B=R27 C=K[20]=0.0
+    0619 [line  430] 0x80030016  JMP        A=0 sBx=13
+    0620 [line  431] 0x0C4046CB  SELF       A=27 B=24 C=257 Bx=12545
+    0621 [line  431] 0x00124741  LOADK      R29 = K[73]='Txt_Awardsp'
+    0622 [line  431] 0x018086DC  CALL       A=27 B=3 C=2
+    0623 [line  431] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0624 [line  431] 0x00000742  LOADBOOL   A=29 B=0 C=0
+    0625 [line  431] 0x018046DC  CALL       A=27 B=3 C=1
+    0626 [line  432] 0x0CC046CB  SELF       A=27 B=25 C=257 Bx=13057
+    0627 [line  432] 0x00120741  LOADK      R29 = K[72]='Txt_Hintsp'
+    0628 [line  432] 0x018086DC  CALL       A=27 B=3 C=2
+    0629 [line  432] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0630 [line  432] 0x00000742  LOADBOOL   A=29 B=0 C=0
+    0631 [line  432] 0x018046DC  CALL       A=27 B=3 C=1
+    0632 [line  432] 0x80058016  JMP        A=0 sBx=23
+    0633 [line  435] 0x0C4046CB  SELF       A=27 B=24 C=257 Bx=12545
+    0634 [line  435] 0x00124741  LOADK      R29 = K[73]='Txt_Awardsp'
+    0635 [line  435] 0x018086DC  CALL       A=27 B=3 C=2
+    0636 [line  435] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0637 [line  435] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0638 [line  435] 0x018046DC  CALL       A=27 B=3 C=1
+    0639 [line  436] 0x0CC046CB  SELF       A=27 B=25 C=257 Bx=13057
+    0640 [line  436] 0x00120741  LOADK      R29 = K[72]='Txt_Hintsp'
+    0641 [line  436] 0x018086DC  CALL       A=27 B=3 C=2
+    0642 [line  436] 0x0DC306CB  SELF       A=27 B=27 C=268 Bx=14092
+    0643 [line  436] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0644 [line  436] 0x018046DC  CALL       A=27 B=3 C=1
+    0645 [line  437] 0x0C4046CB  SELF       A=27 B=24 C=257 Bx=12545
+    0646 [line  437] 0x00124741  LOADK      R29 = K[73]='Txt_Awardsp'
+    0647 [line  437] 0x018086DC  CALL       A=27 B=3 C=2
+    0648 [line  437] 0x0DC0C6CB  SELF       A=27 B=27 C=259 Bx=14083
+    0649 [line  437] 0x00034741  LOADK      R29 = K[13]='UILabel'
+    0650 [line  437] 0x018086DC  CALL       A=27 B=3 C=2
+    0651 [line  437] 0x01800704  GETUPVAL   A=28 B=3 C=0 Bx=1536
+    0652 [line  437] 0x0E490706  GETTABLE   R28 = R28[K[36]='HtmlToNguiText']
+    0653 [line  437] 0x03588746  GETTABLE   R29 = R6[K[98]='awardContent']
+    0654 [line  437] 0x0100871C  CALL       A=28 B=2 C=2
+    0655 [line  437] 0x870706C9  SETTABLE   R27[K[14]='text'] = R28
+    0656 [line  441] 0x0240C68B  SELF       A=26 B=4 C=259 Bx=2307
+    0657 [line  441] 0x00194701  LOADK      R28 = K[101]='UITable'
+    0658 [line  441] 0x0180869C  CALL       A=26 B=3 C=2
+    0659 [line  441] 0xB3574689  SETTABLE   R26[K[102]='repositionNow'] = K[93]=True
+    0660 [line  448] 0x00C0414B  SELF       A=5 B=1 C=257 Bx=769
+    0661 [line  448] 0x0019C1C1  LOADK      R7 = K[103]='Btn_Accept'
+    0662 [line  448] 0x0180815C  CALL       A=5 B=3 C=2
+    0663 [line  449] 0x00C0418B  SELF       A=6 B=1 C=257 Bx=769
+    0664 [line  449] 0x001A0201  LOADK      R8 = K[104]='Btn_Finish'
+    0665 [line  449] 0x0180819C  CALL       A=6 B=3 C=2
+    0666 [line  450] 0x00C041CB  SELF       A=7 B=1 C=257 Bx=769
+    0667 [line  450] 0x001A4241  LOADK      R9 = K[105]='Btn_Confirm'
+    0668 [line  450] 0x018081DC  CALL       A=7 B=3 C=2
+    0669 [line  452] 0x01D34057  EQ         A=1 B=R3 C=K[77]='receive'
+    0670 [line  452] 0x80008016  JMP        A=0 sBx=3
+    0671 [line  452] 0x01D38057  EQ         A=1 B=R3 C=K[78]='manual_receive'
+    0672 [line  452] 0x80000016  JMP        A=0 sBx=1
+    0673 [line  452] 0x00004202  LOADBOOL   A=8 B=0 C=1
+    0674 [line  452] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0675 [line  453] 0x02C3024B  SELF       A=9 B=5 C=268 Bx=2828
+    0676 [line  453] 0x040002C0  MOVE       R11 = R8
+    0677 [line  453] 0x0180425C  CALL       A=9 B=3 C=1
+    0678 [line  454] 0x0000021A  TEST       A=8 B=0 C=0
+    0679 [line  454] 0x8001C016  JMP        A=0 sBx=8
+    0680 [line  455] 0x02C0C24B  SELF       A=9 B=5 C=259 Bx=2819
+    0681 [line  455] 0x001A82C1  LOADK      R11 = K[106]='UIButton'
+    0682 [line  455] 0x0180825C  CALL       A=9 B=3 C=2
+    0683 [line  455] 0x01000284  GETUPVAL   A=10 B=2 C=0 Bx=1024
+    0684 [line  455] 0x055B0286  GETTABLE   R10 = R10[K[108]='CanShowTask']
+    0685 [line  455] 0x0046C2C6  GETTABLE   R11 = R0[K[27]='m_taskId']
+    0686 [line  455] 0x0100829C  CALL       A=10 B=2 C=2
+    0687 [line  455] 0xB5828249  SETTABLE   R9[K[107]='isEnabled'] = R10
+    0688 [line  457] 0x0343024B  SELF       A=9 B=6 C=268 Bx=3340
+    0689 [line  457] 0x01C78057  EQ         A=1 B=R3 C=K[30]='finish'
+    0690 [line  457] 0x80008016  JMP        A=0 sBx=3
+    0691 [line  457] 0x01C7C057  EQ         A=1 B=R3 C=K[31]='manual_finish'
+    0692 [line  457] 0x80000016  JMP        A=0 sBx=1
+    0693 [line  457] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0694 [line  457] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0695 [line  457] 0x0180425C  CALL       A=9 B=3 C=1
+    0696 [line  458] 0x03C3024B  SELF       A=9 B=7 C=268 Bx=3852
+    0697 [line  458] 0x01DB4057  EQ         A=1 B=R3 C=K[109]='receive_prompt'
+    0698 [line  458] 0x80000016  JMP        A=0 sBx=1
+    0699 [line  458] 0x000042C2  LOADBOOL   A=11 B=0 C=1
+    0700 [line  458] 0x008002C2  LOADBOOL   A=11 B=1 C=0
+    0701 [line  458] 0x0180425C  CALL       A=9 B=3 C=1
+    0702 [line  462] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 702
+    'panel': 1 -> 702
+    'scrollViewGO': 8 -> 702
+    'mode': 16 -> 702
+    'tab': 22 -> 702
+    'npc_img': 25 -> 80
+    'npc_name': 28 -> 80
+    'imgPath': 44 -> 68
+    'pathID': 50 -> 68
+    'fullInfo': 86 -> 660
+    'view': 87 -> 660
+    'dynview': 88 -> 660
+    'desc': 89 -> 116
+    'award': 117 -> 660
+    'exp': 118 -> 660
+    'expDesc': 121 -> 660
+    'money': 141 -> 660
+    'moneyDesc': 144 -> 660
+    'money': 165 -> 660
+    'moneyDesc': 168 -> 660
+    'profExp': 190 -> 660
+    'profExpDesc': 193 -> 660
+    'repuCount': 214 -> 660
+    'repuDataDesc': 217 -> 660
+    'factionDonationDesc': 220 -> 660
+    'repuData': 232 -> 284
+    '(for index)': 235 -> 284
+    '(for limit)': 235 -> 284
+    '(for step)': 235 -> 284
+    'i': 236 -> 283
+    'factionMoney': 286 -> 660
+    'factionMoneyDesc': 289 -> 660
+    'factionContribution': 312 -> 660
+    'factionDonationDesc': 315 -> 660
+    'awardItem': 339 -> 660
+    'hint': 342 -> 660
+    'canItemNum': 368 -> 576
+    'awardItemNum': 408 -> 474
+    '(for index)': 413 -> 474
+    '(for limit)': 413 -> 474
+    '(for step)': 413 -> 474
+    'i': 414 -> 473
+    'oneItemDesc': 420 -> 473
+    'count': 430 -> 469
+    'bind': 435 -> 469
+    'tempid': 440 -> 469
+    'item': 461 -> 469
+    '(for index)': 483 -> 544
+    '(for limit)': 483 -> 544
+    '(for step)': 483 -> 544
+    'i': 484 -> 543
+    'oneItemDesc': 490 -> 543
+    'count': 500 -> 539
+    'bind': 505 -> 539
+    'tempid': 510 -> 539
+    'item': 531 -> 539
+    'canSelect': 559 -> 576
+    '(for index)': 562 -> 576
+    '(for limit)': 562 -> 576
+    '(for step)': 562 -> 576
+    'i': 563 -> 575
+    'check': 572 -> 575
+    'awardContent': 614 -> 656
+    'btn_accept': 663 -> 702
+    'btn_finish': 666 -> 702
+    'btn_confirm': 669 -> 702
+    'canReceive': 675 -> 702
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x3BF8
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 464 - 466
+    Params : 1
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'EventManager'
+    K[001] = 'raiseEvent'
+    K[002] = 'TaskOpenPanel'
+    K[003] = 'new'
+    K[004] = 'm_taskId'
+    K[005] = 'm_mode'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  465] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  465] 0x00C00046  GETTABLE   R1 = R1[K[0]='EventManager']
+    0002 [line  465] 0x00C0404B  SELF       A=1 B=1 C=257 Bx=769
+    0003 [line  465] 0x000000C0  MOVE       R3 = R0
+    0004 [line  465] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+    0005 [line  465] 0x02408106  GETTABLE   R4 = R4[K[2]='TaskOpenPanel']
+    0006 [line  465] 0x0240C106  GETTABLE   R4 = R4[K[3]='new']
+    0007 [line  465] 0x00410146  GETTABLE   R5 = R0[K[4]='m_taskId']
+    0008 [line  465] 0x00414186  GETTABLE   R6 = R0[K[5]='m_mode']
+    0009 [line  465] 0x0180011C  CALL       A=4 B=3 C=0
+    0010 [line  465] 0x0000405C  CALL       A=1 B=0 C=1
+    0011 [line  466] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 11
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x3D03
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 468 - 524
+    Params : 2
+    Stack  : 10
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'Btn_Close'
+    K[001] = 'm_savedPopState'
+    K[002] = None
+    K[003] = 'End'
+    K[004] = 'Btn_Accept'
+    K[005] = 'm_mode'
+    K[006] = 'receive'
+    K[007] = 'require'
+    K[008] = 'Task.ECTaskInterface'
+    K[009] = 'AcceptTask'
+    K[010] = 'm_taskId'
+    K[011] = 'doNextStep'
+    K[012] = 'TASK_SERVER_NOTIFY'
+    K[013] = 'TASK_SVR_NOTIFY_NEW'
+    K[014] = 'manual_receive'
+    K[015] = 'ManualAcceptTask'
+    K[016] = 'Btn_Finish'
+    K[017] = 'finish'
+    K[018] = 'm_SelectItemIndex'
+    K[019] = 1.0
+    K[020] = 0.0
+    K[021] = 'm_MultiAward'
+    K[022] = 'FlashTipMan'
+    K[023] = 'FlashTip'
+    K[024] = 'StringTable'
+    K[025] = 'Get'
+    K[026] = 15028.0
+    K[027] = 'FinishTask'
+    K[028] = 'TASK_SVR_NOTIFY_COMPLETE'
+    K[029] = 'manual_finish'
+    K[030] = 'ManualFinishTask'
+    K[031] = 'Btn_Confirm'
+    K[032] = 'find'
+    K[033] = 'Award'
+    K[034] = 'tonumber'
+    K[035] = 'sub'
+    K[036] = -2.0
+    K[037] = -1.0
+    K[038] = 'm_AwardItem'
+    K[039] = 'ItemTipMan'
+    K[040] = 'ShowItemTip'
+    K[041] = 'm_panel'
+    K[042] = 'FindChild'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  470] 0x00C00017  EQ         A=0 B=R1 C=K[0]='Btn_Close'
+    0001 [line  470] 0x8000C016  JMP        A=0 sBx=4
+    0002 [line  471] 0x80C08009  SETTABLE   R0[K[1]='m_savedPopState'] = K[2]=None
+    0003 [line  472] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0004 [line  472] 0x0100409C  CALL       A=2 B=2 C=1
+    0005 [line  472] 0x801BC016  JMP        A=0 sBx=112
+    0006 [line  473] 0x00C10017  EQ         A=0 B=R1 C=K[4]='Btn_Accept'
+    0007 [line  473] 0x80070016  JMP        A=0 sBx=29
+    0008 [line  474] 0x00414086  GETTABLE   R2 = R0[K[5]='m_mode']
+    0009 [line  474] 0x01418017  EQ         A=0 B=R2 C=K[6]='receive'
+    0010 [line  474] 0x8003C016  JMP        A=0 sBx=16
+    0011 [line  475] 0x0001C085  GETGLOBAL  R2 = GLOBAL K[7]='require'
+    0012 [line  475] 0x000200C1  LOADK      R3 = K[8]='Task.ECTaskInterface'
+    0013 [line  475] 0x0100809C  CALL       A=2 B=2 C=2
+    0014 [line  476] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0015 [line  476] 0x01C240C6  GETTABLE   R3 = R3[K[9]='AcceptTask']
+    0016 [line  476] 0x00428106  GETTABLE   R4 = R0[K[10]='m_taskId']
+    0017 [line  476] 0x010080DC  CALL       A=3 B=2 C=2
+    0018 [line  476] 0x000000DA  TEST       A=3 B=0 C=0
+    0019 [line  476] 0x80184016  JMP        A=0 sBx=98
+    0020 [line  477] 0x0042C0CB  SELF       A=3 B=0 C=267 Bx=267
+    0021 [line  477] 0x00428146  GETTABLE   R5 = R0[K[10]='m_taskId']
+    0022 [line  477] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0023 [line  477] 0x03430186  GETTABLE   R6 = R6[K[12]='TASK_SERVER_NOTIFY']
+    0024 [line  477] 0x03434186  GETTABLE   R6 = R6[K[13]='TASK_SVR_NOTIFY_NEW']
+    0025 [line  477] 0x020040DC  CALL       A=3 B=4 C=1
+    0026 [line  478] 0x80168016  JMP        A=0 sBx=91
+    0027 [line  479] 0x00414086  GETTABLE   R2 = R0[K[5]='m_mode']
+    0028 [line  479] 0x01438017  EQ         A=0 B=R2 C=K[14]='manual_receive'
+    0029 [line  479] 0x8015C016  JMP        A=0 sBx=88
+    0030 [line  480] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0031 [line  480] 0x0143C086  GETTABLE   R2 = R2[K[15]='ManualAcceptTask']
+    0032 [line  480] 0x004280C6  GETTABLE   R3 = R0[K[10]='m_taskId']
+    0033 [line  480] 0x0100409C  CALL       A=2 B=2 C=1
+    0034 [line  481] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0035 [line  481] 0x0100409C  CALL       A=2 B=2 C=1
+    0036 [line  482] 0x80140016  JMP        A=0 sBx=81
+    0037 [line  483] 0x00C40017  EQ         A=0 B=R1 C=K[16]='Btn_Finish'
+    0038 [line  483] 0x800B0016  JMP        A=0 sBx=45
+    0039 [line  484] 0x00414086  GETTABLE   R2 = R0[K[5]='m_mode']
+    0040 [line  484] 0x01444017  EQ         A=0 B=R2 C=K[17]='finish'
+    0041 [line  484] 0x8007C016  JMP        A=0 sBx=32
+    0042 [line  485] 0x0001C085  GETGLOBAL  R2 = GLOBAL K[7]='require'
+    0043 [line  485] 0x000200C1  LOADK      R3 = K[8]='Task.ECTaskInterface'
+    0044 [line  485] 0x0100809C  CALL       A=2 B=2 C=2
+    0045 [line  487] 0x004480C6  GETTABLE   R3 = R0[K[18]='m_SelectItemIndex']
+    0046 [line  487] 0x01C4C0CD  SUB        A=3 B=R3 C=K[19]=1.0
+    0047 [line  488] 0x01C50018  LT         A=0 B=R3 C=K[20]=0.0
+    0048 [line  488] 0x80030016  JMP        A=0 sBx=13
+    0049 [line  489] 0x00454106  GETTABLE   R4 = R0[K[21]='m_MultiAward']
+    0050 [line  489] 0x0000011A  TEST       A=4 B=0 C=0
+    0051 [line  489] 0x80020016  JMP        A=0 sBx=9
+    0052 [line  490] 0x00058105  GETGLOBAL  R4 = GLOBAL K[22]='FlashTipMan'
+    0053 [line  490] 0x0245C106  GETTABLE   R4 = R4[K[23]='FlashTip']
+    0054 [line  490] 0x00060145  GETGLOBAL  R5 = GLOBAL K[24]='StringTable'
+    0055 [line  490] 0x02C64146  GETTABLE   R5 = R5[K[25]='Get']
+    0056 [line  490] 0x00068181  LOADK      R6 = K[26]=15028.0
+    0057 [line  490] 0x0100015C  CALL       A=5 B=2 C=0
+    0058 [line  490] 0x0000411C  CALL       A=4 B=0 C=1
+    0059 [line  491] 0x0080001E  RETURN     A=0 B=1 C=0
+    0060 [line  491] 0x80000016  JMP        A=0 sBx=1
+    0061 [line  493] 0x000500C1  LOADK      R3 = K[20]=0.0
+    0062 [line  497] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0063 [line  497] 0x0246C106  GETTABLE   R4 = R4[K[27]='FinishTask']
+    0064 [line  497] 0x00428146  GETTABLE   R5 = R0[K[10]='m_taskId']
+    0065 [line  497] 0x01800180  MOVE       R6 = R3
+    0066 [line  497] 0x0180411C  CALL       A=4 B=3 C=1
+    0067 [line  498] 0x0042C10B  SELF       A=4 B=0 C=267 Bx=267
+    0068 [line  498] 0x00428186  GETTABLE   R6 = R0[K[10]='m_taskId']
+    0069 [line  498] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0070 [line  498] 0x03C301C6  GETTABLE   R7 = R7[K[12]='TASK_SERVER_NOTIFY']
+    0071 [line  498] 0x03C701C6  GETTABLE   R7 = R7[K[28]='TASK_SVR_NOTIFY_COMPLETE']
+    0072 [line  498] 0x0200411C  CALL       A=4 B=4 C=1
+    0073 [line  498] 0x800AC016  JMP        A=0 sBx=44
+    0074 [line  499] 0x00414086  GETTABLE   R2 = R0[K[5]='m_mode']
+    0075 [line  499] 0x01474017  EQ         A=0 B=R2 C=K[29]='manual_finish'
+    0076 [line  499] 0x800A0016  JMP        A=0 sBx=41
+    0077 [line  500] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0078 [line  500] 0x01478086  GETTABLE   R2 = R2[K[30]='ManualFinishTask']
+    0079 [line  500] 0x004280C6  GETTABLE   R3 = R0[K[10]='m_taskId']
+    0080 [line  500] 0x0100409C  CALL       A=2 B=2 C=1
+    0081 [line  501] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0082 [line  501] 0x0100409C  CALL       A=2 B=2 C=1
+    0083 [line  502] 0x80084016  JMP        A=0 sBx=34
+    0084 [line  503] 0x00C7C017  EQ         A=0 B=R1 C=K[31]='Btn_Confirm'
+    0085 [line  503] 0x80008016  JMP        A=0 sBx=3
+    0086 [line  504] 0x0040C08B  SELF       A=2 B=0 C=259 Bx=259
+    0087 [line  504] 0x0100409C  CALL       A=2 B=2 C=1
+    0088 [line  504] 0x80070016  JMP        A=0 sBx=29
+    0089 [line  505] 0x00C8008B  SELF       A=2 B=1 C=288 Bx=800
+    0090 [line  505] 0x00084101  LOADK      R4 = K[33]='Award'
+    0091 [line  505] 0x0180809C  CALL       A=2 B=3 C=2
+    0092 [line  505] 0x0144C017  EQ         A=0 B=R2 C=K[19]=1.0
+    0093 [line  505] 0x8005C016  JMP        A=0 sBx=24
+    0094 [line  506] 0x00088085  GETGLOBAL  R2 = GLOBAL K[34]='tonumber'
+    0095 [line  506] 0x00C8C0CB  SELF       A=3 B=1 C=291 Bx=803
+    0096 [line  506] 0x00090141  LOADK      R5 = K[36]=-2.0
+    0097 [line  506] 0x00094181  LOADK      R6 = K[37]=-1.0
+    0098 [line  506] 0x020000DC  CALL       A=3 B=4 C=0
+    0099 [line  506] 0x0000809C  CALL       A=2 B=0 C=2
+    0100 [line  507] 0x89008009  SETTABLE   R0[K[18]='m_SelectItemIndex'] = R2
+    0101 [line  508] 0x004480C6  GETTABLE   R3 = R0[K[18]='m_SelectItemIndex']
+    0102 [line  508] 0x8A00C018  LT         A=0 B=K[20]=0.0 C=R3
+    0103 [line  508] 0x80034016  JMP        A=0 sBx=14
+    0104 [line  518] 0x004980C6  GETTABLE   R3 = R0[K[38]='m_AwardItem']
+    0105 [line  518] 0x018080C6  GETTABLE   R3 = R3[R2]
+    0106 [line  519] 0x000000DA  TEST       A=3 B=0 C=0
+    0107 [line  519] 0x80024016  JMP        A=0 sBx=10
+    0108 [line  520] 0x0009C105  GETGLOBAL  R4 = GLOBAL K[39]='ItemTipMan'
+    0109 [line  520] 0x024A0106  GETTABLE   R4 = R4[K[40]='ShowItemTip']
+    0110 [line  520] 0x01800140  MOVE       R5 = R3
+    0111 [line  520] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0112 [line  520] 0x004A41C6  GETTABLE   R7 = R0[K[41]='m_panel']
+    0113 [line  520] 0x03CA81CB  SELF       A=7 B=7 C=298 Bx=3882
+    0114 [line  520] 0x00800240  MOVE       R9 = R1
+    0115 [line  520] 0x018081DC  CALL       A=7 B=3 C=2
+    0116 [line  520] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0117 [line  520] 0x0280411C  CALL       A=4 B=5 C=1
+    0118 [line  524] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 118
+    'id': 0 -> 118
+    'ECTaskInterface': 14 -> 26
+    'ECTaskInterface': 45 -> 73
+    'selectIndex': 47 -> 73
+    'index': 100 -> 118
+    'awardItem': 106 -> 118
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x442F
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 526 - 539
+    Params : 1
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetNPCTaskList'
+    K[001] = 'm_npcEss'
+    K[002] = 'ipairs'
+    K[003] = 'FunctionType'
+    K[004] = 'function_type'
+    K[005] = 'RECEIVE'
+    K[006] = 'FINISH'
+    K[007] = 'Instance'
+    K[008] = 'GetTaskView'
+    K[009] = 'id'
+    K[010] = 'bAutoProcess'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  527] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0001 [line  527] 0x00C00046  GETTABLE   R1 = R1[K[0]='GetNPCTaskList']
+    0002 [line  527] 0x00404086  GETTABLE   R2 = R0[K[1]='m_npcEss']
+    0003 [line  527] 0x0100805C  CALL       A=1 B=2 C=2
+    0004 [line  528] 0x00008085  GETGLOBAL  R2 = GLOBAL K[2]='ipairs'
+    0005 [line  528] 0x008000C0  MOVE       R3 = R1
+    0006 [line  528] 0x0101009C  CALL       A=2 B=2 C=4
+    0007 [line  528] 0x80050016  JMP        A=0 sBx=21
+    0008 [line  529] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0009 [line  529] 0x03C0C1C6  GETTABLE   R7 = R7[K[3]='FunctionType']
+    0010 [line  530] 0x03410206  GETTABLE   R8 = R6[K[4]='function_type']
+    0011 [line  531] 0x03C14246  GETTABLE   R9 = R7[K[5]='RECEIVE']
+    0012 [line  531] 0x04024057  EQ         A=1 B=R8 C=R9
+    0013 [line  531] 0x80008016  JMP        A=0 sBx=3
+    0014 [line  531] 0x03C18246  GETTABLE   R9 = R7[K[6]='FINISH']
+    0015 [line  531] 0x04024017  EQ         A=0 B=R8 C=R9
+    0016 [line  531] 0x8002C016  JMP        A=0 sBx=12
+    0017 [line  532] 0x01000244  GETUPVAL   A=9 B=2 C=0 Bx=1024
+    0018 [line  532] 0x04C1C246  GETTABLE   R9 = R9[K[7]='Instance']
+    0019 [line  532] 0x0080825C  CALL       A=9 B=1 C=2
+    0020 [line  532] 0x04C2024B  SELF       A=9 B=9 C=264 Bx=4872
+    0021 [line  532] 0x034242C6  GETTABLE   R11 = R6[K[9]='id']
+    0022 [line  532] 0x0180825C  CALL       A=9 B=3 C=2
+    0023 [line  533] 0x0000025A  TEST       A=9 B=0 C=0
+    0024 [line  533] 0x8000C016  JMP        A=0 sBx=4
+    0025 [line  533] 0x04C28286  GETTABLE   R10 = R9[K[10]='bAutoProcess']
+    0026 [line  533] 0x0000029A  TEST       A=10 B=0 C=0
+    0027 [line  533] 0x80000016  JMP        A=0 sBx=1
+    0028 [line  534] 0x0100019E  RETURN     A=6 B=2 C=0
+    0029 [line  528] 0x000080A1  TFORLOOP   A=2 B=0 C=2
+    0030 [line  536] 0x7FFA0016  JMP        A=0 sBx=-23
+    0031 [line  538] 0x01000083  LOADNIL    A=2 B=2 C=0 Bx=1024
+    0032 [line  538] 0x0100009E  RETURN     A=2 B=2 C=0
+    0033 [line  539] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 33
+    'task_list': 4 -> 33
+    '(for generator)': 7 -> 31
+    '(for state)': 7 -> 31
+    '(for control)': 7 -> 31
+    '_': 8 -> 29
+    'task_item': 8 -> 29
+    'FunctionType': 10 -> 29
+    'function_type': 11 -> 29
+    'taskView': 23 -> 29
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x4724
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 541 - 576
+    Params : 3
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'createOneStep'
+    K[001] = 'completeWith'
+    K[002] = 'start'
+    K[003] = 'DestroyPanel'
+    K[004] = 'm_SelectItemIndex'
+    K[005] = 0.0
+    K[006] = 'm_MultiAward'
+    K[007] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  542] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0001 [line  542] 0x01C000C6  GETTABLE   R3 = R3[K[0]='createOneStep']
+    0002 [line  558] 0x00000124  CLOSURE    R4 = PROTO[0]
+    0003 [line  558] 0x00800000  MOVE       R0 = R1
+    0004 [line  558] 0x01000000  MOVE       R0 = R2
+    0005 [line  558] 0x00000000  MOVE       R0 = R0
+    0006 [line  558] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+    0007 [line  558] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+    0008 [line  542] 0x010080DC  CALL       A=3 B=2 C=2
+    0009 [line  560] 0x01C0410B  SELF       A=4 B=3 C=257 Bx=1793
+    0010 [line  571] 0x000041A4  CLOSURE    R6 = PROTO[1]
+    0011 [line  571] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+    0012 [line  571] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+    0013 [line  571] 0x00000000  MOVE       R0 = R0
+    0014 [line  560] 0x0180411C  CALL       A=4 B=3 C=1
+    0015 [line  572] 0x01C0810B  SELF       A=4 B=3 C=258 Bx=1794
+    0016 [line  572] 0x0100411C  CALL       A=4 B=2 C=1
+    0017 [line  573] 0x0040C10B  SELF       A=4 B=0 C=259 Bx=259
+    0018 [line  573] 0x0100411C  CALL       A=4 B=2 C=1
+    0019 [line  574] 0x82414009  SETTABLE   R0[K[4]='m_SelectItemIndex'] = K[5]=0.0
+    0020 [line  575] 0x8341C009  SETTABLE   R0[K[6]='m_MultiAward'] = K[7]=False
+    0021 [line  576] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 21
+    'waitForTaskId': 0 -> 21
+    'waitForTaskMsgType': 0 -> 21
+    'task': 9 -> 21
+
+        ============================================================
+        PROTO ROOT.16.0
+        Offset : 0x480E
+        Source : '@lua\\gui\\ecpanelnpcquest.lua'
+        Lines  : 542 - 558
+        Params : 1
+        Stack  : 2
+        ============================================================
+
+        ----- CONSTANTS -----
+
+        ----- INSTRUCTIONS -----
+        0000 [line  557] 0x00000064  CLOSURE    R1 = PROTO[0]
+        0001 [line  557] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0002 [line  557] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0003 [line  557] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+        0004 [line  557] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+        0005 [line  557] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+        0006 [line  557] 0x0100005E  RETURN     A=1 B=2 C=0
+        0007 [line  558] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'task': 0 -> 7
+
+            ============================================================
+            PROTO ROOT.16.0.0
+            Offset : 0x484A
+            Source : '@lua\\gui\\ecpanelnpcquest.lua'
+            Lines  : 543 - 557
+            Params : 2
+            Stack  : 7
+            ============================================================
+
+            ----- CONSTANTS -----
+            K[000] = 'EventManager'
+            K[001] = 'addHandler'
+            K[002] = 'SimpleNotifyEvent'
+            K[003] = 'GameUtil'
+            K[004] = 'AddGlobalTimer'
+            K[005] = 5.0
+
+            ----- INSTRUCTIONS -----
+            0000 [line  550] 0x000000A4  CLOSURE    R2 = PROTO[0]
+            0001 [line  550] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+            0002 [line  550] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+            0003 [line  550] 0x01000004  GETUPVAL   A=0 B=2 C=0 Bx=1024
+            0004 [line  550] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+            0005 [line  550] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+            0006 [line  550] 0x01000000  MOVE       R0 = R2
+            0007 [line  550] 0x00800000  MOVE       R0 = R1
+            0008 [line  551] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+            0009 [line  551] 0x01C000C6  GETTABLE   R3 = R3[K[0]='EventManager']
+            0010 [line  551] 0x01C040CB  SELF       A=3 B=3 C=257 Bx=1793
+            0011 [line  551] 0x02000144  GETUPVAL   A=5 B=4 C=0 Bx=2048
+            0012 [line  551] 0x02C08146  GETTABLE   R5 = R5[K[2]='SimpleNotifyEvent']
+            0013 [line  551] 0x01000180  MOVE       R6 = R2
+            0014 [line  551] 0x020040DC  CALL       A=3 B=4 C=1
+            0015 [line  553] 0x0000C0C5  GETGLOBAL  R3 = GLOBAL K[3]='GameUtil'
+            0016 [line  553] 0x01C100C6  GETTABLE   R3 = R3[K[4]='AddGlobalTimer']
+            0017 [line  553] 0x00014101  LOADK      R4 = K[5]=5.0
+            0018 [line  553] 0x00800142  LOADBOOL   A=5 B=1 C=0
+            0019 [line  556] 0x000041A4  CLOSURE    R6 = PROTO[1]
+            0020 [line  556] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+            0021 [line  556] 0x02000004  GETUPVAL   A=0 B=4 C=0 Bx=2048
+            0022 [line  556] 0x01000000  MOVE       R0 = R2
+            0023 [line  556] 0x00000000  MOVE       R0 = R0
+            0024 [line  553] 0x020040DC  CALL       A=3 B=4 C=1
+            0025 [line  557] 0x0080001E  RETURN     A=0 B=1 C=0
+
+            ----- LOCALS -----
+            'task': 0 -> 25
+            'resumeEntry': 0 -> 25
+            'onTaskMsg': 8 -> 25
+
+                ============================================================
+                PROTO ROOT.16.0.0.0
+                Offset : 0x4932
+                Source : '@lua\\gui\\ecpanelnpcquest.lua'
+                Lines  : 544 - 550
+                Params : 2
+                Stack  : 7
+                ============================================================
+
+                ----- CONSTANTS -----
+                K[000] = 'taskId'
+                K[001] = 'notifyType'
+                K[002] = 'searchNextStep'
+                K[003] = 'EventManager'
+                K[004] = 'removeHandler'
+                K[005] = 'SimpleNotifyEvent'
+
+                ----- INSTRUCTIONS -----
+                0000 [line  545] 0x00C00086  GETTABLE   R2 = R1[K[0]='taskId']
+                0001 [line  545] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+                0002 [line  545] 0x0100C017  EQ         A=0 B=R2 C=R3
+                0003 [line  545] 0x80040016  JMP        A=0 sBx=17
+                0004 [line  545] 0x00C04086  GETTABLE   R2 = R1[K[1]='notifyType']
+                0005 [line  545] 0x008000C4  GETUPVAL   A=3 B=1 C=0 Bx=512
+                0006 [line  545] 0x0100C017  EQ         A=0 B=R2 C=R3
+                0007 [line  545] 0x80030016  JMP        A=0 sBx=13
+                0008 [line  546] 0x01000084  GETUPVAL   A=2 B=2 C=0 Bx=1024
+                0009 [line  546] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+                0010 [line  546] 0x0100809C  CALL       A=2 B=2 C=2
+                0011 [line  547] 0x018000C4  GETUPVAL   A=3 B=3 C=0 Bx=1536
+                0012 [line  547] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='EventManager']
+                0013 [line  547] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+                0014 [line  547] 0x02000144  GETUPVAL   A=5 B=4 C=0 Bx=2048
+                0015 [line  547] 0x02C14146  GETTABLE   R5 = R5[K[5]='SimpleNotifyEvent']
+                0016 [line  547] 0x02800184  GETUPVAL   A=6 B=5 C=0 Bx=2560
+                0017 [line  547] 0x020040DC  CALL       A=3 B=4 C=1
+                0018 [line  548] 0x030000C4  GETUPVAL   A=3 B=6 C=0 Bx=3072
+                0019 [line  548] 0x01000100  MOVE       R4 = R2
+                0020 [line  548] 0x010040DC  CALL       A=3 B=2 C=1
+                0021 [line  550] 0x0080001E  RETURN     A=0 B=1 C=0
+
+                ----- LOCALS -----
+                'sender': 0 -> 21
+                'event': 0 -> 21
+                'nextTaskItem': 11 -> 21
+
+                ============================================================
+                PROTO ROOT.16.0.0.1
+                Offset : 0x4B1E
+                Source : '@lua\\gui\\ecpanelnpcquest.lua'
+                Lines  : 553 - 556
+                Params : 0
+                Stack  : 4
+                ============================================================
+
+                ----- CONSTANTS -----
+                K[000] = 'EventManager'
+                K[001] = 'removeHandler'
+                K[002] = 'SimpleNotifyEvent'
+                K[003] = 'cancel'
+
+                ----- INSTRUCTIONS -----
+                0000 [line  554] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+                0001 [line  554] 0x00400006  GETTABLE   R0 = R0[K[0]='EventManager']
+                0002 [line  554] 0x0040400B  SELF       A=0 B=0 C=257 Bx=257
+                0003 [line  554] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+                0004 [line  554] 0x01408086  GETTABLE   R2 = R2[K[2]='SimpleNotifyEvent']
+                0005 [line  554] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+                0006 [line  554] 0x0200401C  CALL       A=0 B=4 C=1
+                0007 [line  555] 0x01800004  GETUPVAL   A=0 B=3 C=0 Bx=1536
+                0008 [line  555] 0x0040C00B  SELF       A=0 B=0 C=259 Bx=259
+                0009 [line  555] 0x0100401C  CALL       A=0 B=2 C=1
+                0010 [line  556] 0x0080001E  RETURN     A=0 B=1 C=0
+
+                ----- LOCALS -----
+
+        ============================================================
+        PROTO ROOT.16.1
+        Offset : 0x4D9F
+        Source : '@lua\\gui\\ecpanelnpcquest.lua'
+        Lines  : 560 - 571
+        Params : 1
+        Stack  : 7
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'getResult'
+        K[001] = 'FunctionType'
+        K[002] = 'function_type'
+        K[003] = 'RECEIVE'
+        K[004] = 'PopForReceiveTask'
+        K[005] = 'm_npcEss'
+        K[006] = 'id'
+        K[007] = 'FINISH'
+        K[008] = 'PopForFinishTask'
+
+        ----- INSTRUCTIONS -----
+        0000 [line  561] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+        0001 [line  561] 0x0100805C  CALL       A=1 B=2 C=2
+        0002 [line  562] 0x0000005A  TEST       A=1 B=0 C=0
+        0003 [line  562] 0x80054016  JMP        A=0 sBx=22
+        0004 [line  563] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0005 [line  563] 0x01404086  GETTABLE   R2 = R2[K[1]='FunctionType']
+        0006 [line  564] 0x00C080C6  GETTABLE   R3 = R1[K[2]='function_type']
+        0007 [line  565] 0x0140C106  GETTABLE   R4 = R2[K[3]='RECEIVE']
+        0008 [line  565] 0x01810017  EQ         A=0 B=R3 C=R4
+        0009 [line  565] 0x80018016  JMP        A=0 sBx=7
+        0010 [line  566] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+        0011 [line  566] 0x02410106  GETTABLE   R4 = R4[K[4]='PopForReceiveTask']
+        0012 [line  566] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+        0013 [line  566] 0x02C14146  GETTABLE   R5 = R5[K[5]='m_npcEss']
+        0014 [line  566] 0x00C18186  GETTABLE   R6 = R1[K[6]='id']
+        0015 [line  566] 0x0180411C  CALL       A=4 B=3 C=1
+        0016 [line  566] 0x80020016  JMP        A=0 sBx=9
+        0017 [line  567] 0x0141C106  GETTABLE   R4 = R2[K[7]='FINISH']
+        0018 [line  567] 0x01810017  EQ         A=0 B=R3 C=R4
+        0019 [line  567] 0x80014016  JMP        A=0 sBx=6
+        0020 [line  568] 0x00800104  GETUPVAL   A=4 B=1 C=0 Bx=512
+        0021 [line  568] 0x02420106  GETTABLE   R4 = R4[K[8]='PopForFinishTask']
+        0022 [line  568] 0x01000144  GETUPVAL   A=5 B=2 C=0 Bx=1024
+        0023 [line  568] 0x02C14146  GETTABLE   R5 = R5[K[5]='m_npcEss']
+        0024 [line  568] 0x00C18186  GETTABLE   R6 = R1[K[6]='id']
+        0025 [line  568] 0x0180411C  CALL       A=4 B=3 C=1
+        0026 [line  571] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+        'task': 0 -> 26
+        'nextTaskItem': 2 -> 26
+        'FunctionType': 6 -> 26
+        'function_type': 7 -> 26
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x50C1
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 578 - 584
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'DestroyPanel'
+    K[001] = 'm_SelectItemIndex'
+    K[002] = 0.0
+    K[003] = 'm_MultiAward'
+    K[004] = False
+
+    ----- INSTRUCTIONS -----
+    0000 [line  580] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  580] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line  581] 0x80C08009  SETTABLE   R0[K[1]='m_SelectItemIndex'] = K[2]=0.0
+    0003 [line  582] 0x81C10009  SETTABLE   R0[K[3]='m_MultiAward'] = K[4]=False
+    0004 [line  584] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 4
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x5168
+    Source : '@lua\\gui\\ecpanelnpcquest.lua'
+    Lines  : 595 - 602
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'notifyType'
+    K[001] = 'Instance'
+    K[002] = 'GetTaskView'
+    K[003] = 'taskId'
+    K[004] = 'bPopReceivePrompt'
+    K[005] = 'PopForReceivePrompt'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  596] 0x00C00086  GETTABLE   R2 = R1[K[0]='notifyType']
+    0001 [line  596] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0002 [line  596] 0x0100C017  EQ         A=0 B=R2 C=R3
+    0003 [line  596] 0x80038016  JMP        A=0 sBx=15
+    0004 [line  597] 0x00800084  GETUPVAL   A=2 B=1 C=0 Bx=512
+    0005 [line  597] 0x01404086  GETTABLE   R2 = R2[K[1]='Instance']
+    0006 [line  597] 0x0080809C  CALL       A=2 B=1 C=2
+    0007 [line  597] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0008 [line  597] 0x00C0C106  GETTABLE   R4 = R1[K[3]='taskId']
+    0009 [line  597] 0x0180809C  CALL       A=2 B=3 C=2
+    0010 [line  598] 0x0000009A  TEST       A=2 B=0 C=0
+    0011 [line  598] 0x80018016  JMP        A=0 sBx=7
+    0012 [line  598] 0x014100C6  GETTABLE   R3 = R2[K[4]='bPopReceivePrompt']
+    0013 [line  598] 0x000000DA  TEST       A=3 B=0 C=0
+    0014 [line  598] 0x8000C016  JMP        A=0 sBx=4
+    0015 [line  599] 0x010000C4  GETUPVAL   A=3 B=2 C=0 Bx=1024
+    0016 [line  599] 0x01C140C6  GETTABLE   R3 = R3[K[5]='PopForReceivePrompt']
+    0017 [line  599] 0x00C0C106  GETTABLE   R4 = R1[K[3]='taskId']
+    0018 [line  599] 0x010040DC  CALL       A=3 B=2 C=1
+    0019 [line  602] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'sender': 0 -> 19
+    'msg': 0 -> 19
+    'taskView': 10 -> 19

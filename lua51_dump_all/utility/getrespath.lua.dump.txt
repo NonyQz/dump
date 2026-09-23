@@ -1,0 +1,208 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\utility\getrespath.lua
+SIZE: 1818
+PARSED: 1818
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\utility\\getrespath.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 5
+============================================================
+
+----- CONSTANTS -----
+K[000] = '../../'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x01000025  VARARG     A=0 B=2 C=0
+0001 [line    2] 0x0000401A  TEST       A=0 B=0 C=1
+0002 [line    2] 0x80000016  JMP        A=0 sBx=1
+0003 [line    2] 0x00000001  LOADK      R0 = K[0]='../../'
+0004 [line   16] 0x00000064  CLOSURE    R1 = PROTO[0]
+0005 [line   16] 0x00000000  MOVE       R0 = R0
+0006 [line   35] 0x000040A4  CLOSURE    R2 = PROTO[1]
+0007 [line   35] 0x00000000  MOVE       R0 = R0
+0008 [line   42] 0x000080E4  CLOSURE    R3 = PROTO[2]
+0009 [line   42] 0x00800000  MOVE       R0 = R1
+0010 [line   42] 0x01000000  MOVE       R0 = R2
+0011 [line   44] 0x01800100  MOVE       R4 = R3
+0012 [line   44] 0x0080011D  TAILCALL   A=4 B=1 C=0
+0013 [line   44] 0x0000011E  RETURN     A=4 B=0 C=0
+0014 [line   44] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'basepath': 1 -> 14
+'get_scene_res_path': 6 -> 14
+'get_material_data_path': 8 -> 14
+'GetResPath': 11 -> 14
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x8C
+    Source : '@lua\\utility\\getrespath.lua'
+    Lines  : 4 - 16
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_G'
+    K[001] = 'GetConfigLua'
+    K[002] = 'Configs/instance_client_data.lua'
+    K[003] = 'dofile'
+    K[004] = 'pairs'
+    K[005] = 'skybox'
+    K[006] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line    6] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='_G'
+    0001 [line    6] 0x01404086  GETTABLE   R2 = R2[K[1]='GetConfigLua']
+    0002 [line    6] 0x0000009A  TEST       A=2 B=0 C=0
+    0003 [line    6] 0x8001C016  JMP        A=0 sBx=8
+    0004 [line    7] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='_G'
+    0005 [line    7] 0x01404086  GETTABLE   R2 = R2[K[1]='GetConfigLua']
+    0006 [line    7] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0007 [line    7] 0x00008101  LOADK      R4 = K[2]='Configs/instance_client_data.lua'
+    0008 [line    7] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0009 [line    7] 0x0100809C  CALL       A=2 B=2 C=2
+    0010 [line    7] 0x01000040  MOVE       R1 = R2
+    0011 [line    7] 0x80014016  JMP        A=0 sBx=6
+    0012 [line    9] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='dofile'
+    0013 [line    9] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0014 [line    9] 0x00008101  LOADK      R4 = K[2]='Configs/instance_client_data.lua'
+    0015 [line    9] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0016 [line    9] 0x0100809C  CALL       A=2 B=2 C=2
+    0017 [line    9] 0x01000040  MOVE       R1 = R2
+    0018 [line   11] 0x00010085  GETGLOBAL  R2 = GLOBAL K[4]='pairs'
+    0019 [line   11] 0x008000C0  MOVE       R3 = R1
+    0020 [line   11] 0x0101009C  CALL       A=2 B=2 C=4
+    0021 [line   11] 0x80018016  JMP        A=0 sBx=7
+    0022 [line   12] 0x034141C6  GETTABLE   R7 = R6[K[5]='skybox']
+    0023 [line   12] 0x000001DA  TEST       A=7 B=0 C=0
+    0024 [line   12] 0x8000C016  JMP        A=0 sBx=4
+    0025 [line   13] 0x000001D4  LEN        A=7 B=0 C=0 Bx=0
+    0026 [line   13] 0x03C181CC  ADD        A=7 B=R7 C=K[6]=1.0
+    0027 [line   13] 0x03414206  GETTABLE   R8 = R6[K[5]='skybox']
+    0028 [line   13] 0x03820009  SETTABLE   R0[R7] = R8
+    0029 [line   11] 0x000080A1  TFORLOOP   A=2 B=0 C=2
+    0030 [line   14] 0x7FFD8016  JMP        A=0 sBx=-9
+    0031 [line   16] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'path_list': 0 -> 31
+    'InstInfo_Client': 0 -> 31
+    '(for generator)': 21 -> 31
+    '(for state)': 21 -> 31
+    '(for control)': 21 -> 31
+    'k': 22 -> 29
+    'v': 22 -> 29
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x2C9
+    Source : '@lua\\utility\\getrespath.lua'
+    Lines  : 18 - 35
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = '_G'
+    K[001] = 'GetConfigLua'
+    K[002] = 'Configs/material_data.lua'
+    K[003] = 'dofile'
+    K[004] = 'pairs'
+    K[005] = 'path'
+    K[006] = 1.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   20] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='_G'
+    0001 [line   20] 0x01404086  GETTABLE   R2 = R2[K[1]='GetConfigLua']
+    0002 [line   20] 0x0000009A  TEST       A=2 B=0 C=0
+    0003 [line   20] 0x8001C016  JMP        A=0 sBx=8
+    0004 [line   21] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='_G'
+    0005 [line   21] 0x01404086  GETTABLE   R2 = R2[K[1]='GetConfigLua']
+    0006 [line   21] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0007 [line   21] 0x00008101  LOADK      R4 = K[2]='Configs/material_data.lua'
+    0008 [line   21] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0009 [line   21] 0x0100809C  CALL       A=2 B=2 C=2
+    0010 [line   21] 0x01000040  MOVE       R1 = R2
+    0011 [line   21] 0x80014016  JMP        A=0 sBx=6
+    0012 [line   23] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='dofile'
+    0013 [line   23] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0014 [line   23] 0x00008101  LOADK      R4 = K[2]='Configs/material_data.lua'
+    0015 [line   23] 0x018100D5  CONCAT     A=3 B=3 C=4 Bx=1540
+    0016 [line   23] 0x0100809C  CALL       A=2 B=2 C=2
+    0017 [line   23] 0x01000040  MOVE       R1 = R2
+    0018 [line   26] 0x0000008A  NEWTABLE   A=2 B=0 C=0 Bx=0
+    0019 [line   27] 0x000100C5  GETGLOBAL  R3 = GLOBAL K[4]='pairs'
+    0020 [line   27] 0x00800100  MOVE       R4 = R1
+    0021 [line   27] 0x010100DC  CALL       A=3 B=2 C=4
+    0022 [line   27] 0x80010016  JMP        A=0 sBx=5
+    0023 [line   28] 0x03C14206  GETTABLE   R8 = R7[K[5]='path']
+    0024 [line   28] 0x0000021A  TEST       A=8 B=0 C=0
+    0025 [line   28] 0x80004016  JMP        A=0 sBx=2
+    0026 [line   29] 0x03C14206  GETTABLE   R8 = R7[K[5]='path']
+    0027 [line   29] 0x04418089  SETTABLE   R2[R8] = K[6]=1.0
+    0028 [line   27] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0029 [line   30] 0x7FFE0016  JMP        A=0 sBx=-7
+    0030 [line   32] 0x000100C5  GETGLOBAL  R3 = GLOBAL K[4]='pairs'
+    0031 [line   32] 0x01000100  MOVE       R4 = R2
+    0032 [line   32] 0x010100DC  CALL       A=3 B=2 C=4
+    0033 [line   32] 0x80008016  JMP        A=0 sBx=3
+    0034 [line   33] 0x00000214  LEN        A=8 B=0 C=0 Bx=0
+    0035 [line   33] 0x0441820C  ADD        A=8 B=R8 C=K[6]=1.0
+    0036 [line   33] 0x04018009  SETTABLE   R0[R8] = R6
+    0037 [line   32] 0x000080E1  TFORLOOP   A=3 B=0 C=2
+    0038 [line   33] 0x7FFE8016  JMP        A=0 sBx=-5
+    0039 [line   35] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'path_list': 0 -> 39
+    'mat': 0 -> 39
+    'path': 19 -> 39
+    '(for generator)': 22 -> 30
+    '(for state)': 22 -> 30
+    '(for control)': 22 -> 30
+    'k': 23 -> 28
+    'v': 23 -> 28
+    '(for generator)': 33 -> 39
+    '(for state)': 33 -> 39
+    '(for control)': 33 -> 39
+    'k': 34 -> 37
+    'v': 34 -> 37
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x5AC
+    Source : '@lua\\utility\\getrespath.lua'
+    Lines  : 37 - 42
+    Params : 0
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   38] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   39] 0x00000044  GETUPVAL   A=1 B=0 C=0 Bx=0
+    0002 [line   39] 0x00000080  MOVE       R2 = R0
+    0003 [line   39] 0x0100405C  CALL       A=1 B=2 C=1
+    0004 [line   40] 0x00800044  GETUPVAL   A=1 B=1 C=0 Bx=512
+    0005 [line   40] 0x00000080  MOVE       R2 = R0
+    0006 [line   40] 0x0100405C  CALL       A=1 B=2 C=1
+    0007 [line   41] 0x0100001E  RETURN     A=0 B=2 C=0
+    0008 [line   42] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'path_list': 1 -> 8

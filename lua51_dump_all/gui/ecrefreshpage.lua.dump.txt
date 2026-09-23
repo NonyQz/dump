@@ -1,0 +1,2043 @@
+FILE: C:\Users\nony\Desktop\patch-loongcraft\patch-all\merged\element\lua\gui\ecrefreshpage.lua
+SIZE: 19590
+PARSED: 19590
+HEADER:
+  version: 0x51
+  format: 0
+  endianness: little
+  int_size: 4
+  size_t_size: 4
+  instruction_size: 4
+  number_size: 8
+  number_integral: 0
+
+============================================================
+PROTO ROOT
+Offset : 0xC
+Source : '@lua\\gui\\ecrefreshpage.lua'
+Lines  : 0 - 0
+Params : 0
+Stack  : 19
+============================================================
+
+----- CONSTANTS -----
+K[000] = 'require'
+K[001] = 'Lplus'
+K[002] = 'Inventory.ECIvtrItems'
+K[003] = 'Data.ElementData'
+K[004] = 'GUI.ECGUITools'
+K[005] = 'Data.ECEquipDesc'
+K[006] = 'Utility.HtmlUtility'
+K[007] = 'GUI.ECPanelEquipChoose'
+K[008] = 'Data.Exptypes'
+K[009] = 'Inventory.ECItemTools'
+K[010] = 'Data.Expdef'
+K[011] = 'MISCELLANEOUS'
+K[012] = 'ForwardDeclare'
+K[013] = 'ECGame'
+K[014] = 'Class'
+K[015] = 'ECRefreshPage'
+K[016] = 'define'
+K[017] = 'field'
+K[018] = 'table'
+K[019] = 'm_mainEquip'
+K[020] = None
+K[021] = 'm_Parent'
+K[022] = 'userdata'
+K[023] = 'm_Panel'
+K[024] = 'static'
+K[025] = '=>'
+K[026] = 'new'
+K[027] = 'method'
+K[028] = 'Init'
+K[029] = 'OnRefreshResponse'
+K[030] = 'OnIvtrUpdate'
+K[031] = 'boolean'
+K[032] = 'number'
+K[033] = 'string'
+K[034] = 'ShowOneAttr'
+K[035] = 'UpdateMainEquipment'
+K[036] = 'UpdateRefreshUI'
+K[037] = 'UpdateAll'
+K[038] = 'Refresh'
+K[039] = 'Keep'
+K[040] = 'OnSelectEquip'
+K[041] = 'LockThis'
+K[042] = 'LockAttrByIndex'
+K[043] = 'UnlockAll'
+K[044] = 'CheckLocked'
+K[045] = 'CheckLockCount'
+K[046] = 'GetNeedLockItemTid'
+K[047] = 'GetLeaveCount'
+K[048] = 'CanDoIt'
+K[049] = 'onClickObj'
+K[050] = 'Commit'
+
+----- INSTRUCTIONS -----
+0000 [line    1] 0x00000005  GETGLOBAL  R0 = GLOBAL K[0]='require'
+0001 [line    1] 0x00004041  LOADK      R1 = K[1]='Lplus'
+0002 [line    1] 0x0100801C  CALL       A=0 B=2 C=2
+0003 [line    2] 0x00000045  GETGLOBAL  R1 = GLOBAL K[0]='require'
+0004 [line    2] 0x00008081  LOADK      R2 = K[2]='Inventory.ECIvtrItems'
+0005 [line    2] 0x0100805C  CALL       A=1 B=2 C=2
+0006 [line    3] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='require'
+0007 [line    3] 0x0000C0C1  LOADK      R3 = K[3]='Data.ElementData'
+0008 [line    3] 0x0100809C  CALL       A=2 B=2 C=2
+0009 [line    4] 0x000000C5  GETGLOBAL  R3 = GLOBAL K[0]='require'
+0010 [line    4] 0x00010101  LOADK      R4 = K[4]='GUI.ECGUITools'
+0011 [line    4] 0x010080DC  CALL       A=3 B=2 C=2
+0012 [line    5] 0x00000105  GETGLOBAL  R4 = GLOBAL K[0]='require'
+0013 [line    5] 0x00014141  LOADK      R5 = K[5]='Data.ECEquipDesc'
+0014 [line    5] 0x0100811C  CALL       A=4 B=2 C=2
+0015 [line    6] 0x00000145  GETGLOBAL  R5 = GLOBAL K[0]='require'
+0016 [line    6] 0x00018181  LOADK      R6 = K[6]='Utility.HtmlUtility'
+0017 [line    6] 0x0100815C  CALL       A=5 B=2 C=2
+0018 [line    7] 0x00000185  GETGLOBAL  R6 = GLOBAL K[0]='require'
+0019 [line    7] 0x0001C1C1  LOADK      R7 = K[7]='GUI.ECPanelEquipChoose'
+0020 [line    7] 0x0100819C  CALL       A=6 B=2 C=2
+0021 [line    8] 0x000001C5  GETGLOBAL  R7 = GLOBAL K[0]='require'
+0022 [line    8] 0x00020201  LOADK      R8 = K[8]='Data.Exptypes'
+0023 [line    8] 0x010081DC  CALL       A=7 B=2 C=2
+0024 [line    9] 0x00000205  GETGLOBAL  R8 = GLOBAL K[0]='require'
+0025 [line    9] 0x00024241  LOADK      R9 = K[9]='Inventory.ECItemTools'
+0026 [line    9] 0x0100821C  CALL       A=8 B=2 C=2
+0027 [line   10] 0x00000245  GETGLOBAL  R9 = GLOBAL K[0]='require'
+0028 [line   10] 0x00028281  LOADK      R10 = K[10]='Data.Expdef'
+0029 [line   10] 0x0100825C  CALL       A=9 B=2 C=2
+0030 [line   10] 0x04C2C246  GETTABLE   R9 = R9[K[11]='MISCELLANEOUS']
+0031 [line   11] 0x00430286  GETTABLE   R10 = R0[K[12]='ForwardDeclare']
+0032 [line   11] 0x000342C1  LOADK      R11 = K[13]='ECGame'
+0033 [line   11] 0x0100829C  CALL       A=10 B=2 C=2
+0034 [line   13] 0x004382C6  GETTABLE   R11 = R0[K[14]='Class']
+0035 [line   13] 0x0003C301  LOADK      R12 = K[15]='ECRefreshPage'
+0036 [line   13] 0x010082DC  CALL       A=11 B=2 C=2
+0037 [line   14] 0x05C40306  GETTABLE   R12 = R11[K[16]='define']
+0038 [line   16] 0x06444346  GETTABLE   R13 = R12[K[17]='field']
+0039 [line   16] 0x00048381  LOADK      R14 = K[18]='table'
+0040 [line   16] 0x0100835C  CALL       A=13 B=2 C=2
+0041 [line   16] 0x89C50349  SETTABLE   R13[K[19]='m_mainEquip'] = K[20]=None
+0042 [line   18] 0x06444346  GETTABLE   R13 = R12[K[17]='field']
+0043 [line   18] 0x00048381  LOADK      R14 = K[18]='table'
+0044 [line   18] 0x0100835C  CALL       A=13 B=2 C=2
+0045 [line   18] 0x000003A4  CLOSURE    R14 = PROTO[0]
+0046 [line   18] 0x8A838349  SETTABLE   R13[K[21]='m_Parent'] = R14
+0047 [line   19] 0x06444346  GETTABLE   R13 = R12[K[17]='field']
+0048 [line   19] 0x00058381  LOADK      R14 = K[22]='userdata'
+0049 [line   19] 0x0100835C  CALL       A=13 B=2 C=2
+0050 [line   19] 0x8BC50349  SETTABLE   R13[K[23]='m_Panel'] = K[20]=None
+0051 [line   22] 0x06460346  GETTABLE   R13 = R12[K[24]='static']
+0052 [line   22] 0x00048381  LOADK      R14 = K[18]='table'
+0053 [line   22] 0x000583C1  LOADK      R15 = K[22]='userdata'
+0054 [line   22] 0x00064401  LOADK      R16 = K[25]='=>'
+0055 [line   22] 0x05800440  MOVE       R17 = R11
+0056 [line   22] 0x0280835C  CALL       A=13 B=5 C=2
+0057 [line   28] 0x000043A4  CLOSURE    R14 = PROTO[1]
+0058 [line   28] 0x05800000  MOVE       R0 = R11
+0059 [line   28] 0x8D038349  SETTABLE   R13[K[26]='new'] = R14
+0060 [line   30] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0061 [line   30] 0x0080835C  CALL       A=13 B=1 C=2
+0062 [line   32] 0x000083A4  CLOSURE    R14 = PROTO[2]
+0063 [line   32] 0x8E038349  SETTABLE   R13[K[28]='Init'] = R14
+0064 [line   34] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0065 [line   34] 0x00048381  LOADK      R14 = K[18]='table'
+0066 [line   34] 0x0100835C  CALL       A=13 B=2 C=2
+0067 [line   45] 0x0000C3A4  CLOSURE    R14 = PROTO[3]
+0068 [line   45] 0x8E838349  SETTABLE   R13[K[29]='OnRefreshResponse'] = R14
+0069 [line   47] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0070 [line   47] 0x00048381  LOADK      R14 = K[18]='table'
+0071 [line   47] 0x0100835C  CALL       A=13 B=2 C=2
+0072 [line   50] 0x000103A4  CLOSURE    R14 = PROTO[4]
+0073 [line   50] 0x8F038349  SETTABLE   R13[K[30]='OnIvtrUpdate'] = R14
+0074 [line   53] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0075 [line   53] 0x0007C381  LOADK      R14 = K[31]='boolean'
+0076 [line   53] 0x000803C1  LOADK      R15 = K[32]='number'
+0077 [line   53] 0x00084401  LOADK      R16 = K[33]='string'
+0078 [line   53] 0x00080441  LOADK      R17 = K[32]='number'
+0079 [line   53] 0x00080481  LOADK      R18 = K[32]='number'
+0080 [line   53] 0x0300835C  CALL       A=13 B=6 C=2
+0081 [line   64] 0x000143A4  CLOSURE    R14 = PROTO[5]
+0082 [line   64] 0x04800000  MOVE       R0 = R9
+0083 [line   64] 0x01800000  MOVE       R0 = R3
+0084 [line   64] 0x91038349  SETTABLE   R13[K[34]='ShowOneAttr'] = R14
+0085 [line   67] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0086 [line   67] 0x0080835C  CALL       A=13 B=1 C=2
+0087 [line   74] 0x000183A4  CLOSURE    R14 = PROTO[6]
+0088 [line   74] 0x91838349  SETTABLE   R13[K[35]='UpdateMainEquipment'] = R14
+0089 [line   79] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0090 [line   79] 0x0080835C  CALL       A=13 B=1 C=2
+0091 [line  195] 0x0001C3A4  CLOSURE    R14 = PROTO[7]
+0092 [line  195] 0x01800000  MOVE       R0 = R3
+0093 [line  195] 0x04800000  MOVE       R0 = R9
+0094 [line  195] 0x05000000  MOVE       R0 = R10
+0095 [line  195] 0x01000000  MOVE       R0 = R2
+0096 [line  195] 0x92038349  SETTABLE   R13[K[36]='UpdateRefreshUI'] = R14
+0097 [line  197] 0x0646C346  GETTABLE   R13 = R12[K[27]='method']
+0098 [line  197] 0x0080835C  CALL       A=13 B=1 C=2
+0099 [line  213] 0x000203A4  CLOSURE    R14 = PROTO[8]
+0100 [line  213] 0x92838349  SETTABLE   R13[K[37]='UpdateAll'] = R14
+0101 [line  250] 0x00024364  CLOSURE    R13 = PROTO[9]
+0102 [line  250] 0x01000000  MOVE       R0 = R2
+0103 [line  250] 0x04800000  MOVE       R0 = R9
+0104 [line  252] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0105 [line  252] 0x0080839C  CALL       A=14 B=1 C=2
+0106 [line  264] 0x000283E4  CLOSURE    R15 = PROTO[10]
+0107 [line  264] 0x06800000  MOVE       R0 = R13
+0108 [line  264] 0x9303C389  SETTABLE   R14[K[38]='Refresh'] = R15
+0109 [line  267] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0110 [line  267] 0x0080839C  CALL       A=14 B=1 C=2
+0111 [line  288] 0x0002C3E4  CLOSURE    R15 = PROTO[11]
+0112 [line  288] 0x01000000  MOVE       R0 = R2
+0113 [line  288] 0x9383C389  SETTABLE   R14[K[39]='Keep'] = R15
+0114 [line  291] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0115 [line  291] 0x000483C1  LOADK      R15 = K[18]='table'
+0116 [line  291] 0x0100839C  CALL       A=14 B=2 C=2
+0117 [line  305] 0x000303E4  CLOSURE    R15 = PROTO[12]
+0118 [line  305] 0x9403C389  SETTABLE   R14[K[40]='OnSelectEquip'] = R15
+0119 [line  307] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0120 [line  307] 0x000803C1  LOADK      R15 = K[32]='number'
+0121 [line  307] 0x0100839C  CALL       A=14 B=2 C=2
+0122 [line  323] 0x000343E4  CLOSURE    R15 = PROTO[13]
+0123 [line  323] 0x04800000  MOVE       R0 = R9
+0124 [line  323] 0x9483C389  SETTABLE   R14[K[41]='LockThis'] = R15
+0125 [line  327] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0126 [line  327] 0x000803C1  LOADK      R15 = K[32]='number'
+0127 [line  327] 0x0007C401  LOADK      R16 = K[31]='boolean'
+0128 [line  327] 0x0180839C  CALL       A=14 B=3 C=2
+0129 [line  332] 0x000383E4  CLOSURE    R15 = PROTO[14]
+0130 [line  332] 0x01800000  MOVE       R0 = R3
+0131 [line  332] 0x9503C389  SETTABLE   R14[K[42]='LockAttrByIndex'] = R15
+0132 [line  334] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0133 [line  334] 0x0080839C  CALL       A=14 B=1 C=2
+0134 [line  338] 0x0003C3E4  CLOSURE    R15 = PROTO[15]
+0135 [line  338] 0x04800000  MOVE       R0 = R9
+0136 [line  338] 0x9583C389  SETTABLE   R14[K[43]='UnlockAll'] = R15
+0137 [line  340] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0138 [line  340] 0x000803C1  LOADK      R15 = K[32]='number'
+0139 [line  340] 0x00064401  LOADK      R16 = K[25]='=>'
+0140 [line  340] 0x0007C441  LOADK      R17 = K[31]='boolean'
+0141 [line  340] 0x0200839C  CALL       A=14 B=4 C=2
+0142 [line  345] 0x000403E4  CLOSURE    R15 = PROTO[16]
+0143 [line  345] 0x9603C389  SETTABLE   R14[K[44]='CheckLocked'] = R15
+0144 [line  347] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0145 [line  347] 0x000643C1  LOADK      R15 = K[25]='=>'
+0146 [line  347] 0x00080401  LOADK      R16 = K[32]='number'
+0147 [line  347] 0x0180839C  CALL       A=14 B=3 C=2
+0148 [line  360] 0x000443E4  CLOSURE    R15 = PROTO[17]
+0149 [line  360] 0x04800000  MOVE       R0 = R9
+0150 [line  360] 0x9683C389  SETTABLE   R14[K[45]='CheckLockCount'] = R15
+0151 [line  362] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0152 [line  362] 0x000643C1  LOADK      R15 = K[25]='=>'
+0153 [line  362] 0x00080401  LOADK      R16 = K[32]='number'
+0154 [line  362] 0x0180839C  CALL       A=14 B=3 C=2
+0155 [line  367] 0x000483E4  CLOSURE    R15 = PROTO[18]
+0156 [line  367] 0x01000000  MOVE       R0 = R2
+0157 [line  367] 0x9703C389  SETTABLE   R14[K[46]='GetNeedLockItemTid'] = R15
+0158 [line  371] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0159 [line  371] 0x000643C1  LOADK      R15 = K[25]='=>'
+0160 [line  371] 0x00080401  LOADK      R16 = K[32]='number'
+0161 [line  371] 0x00080441  LOADK      R17 = K[32]='number'
+0162 [line  371] 0x0200839C  CALL       A=14 B=4 C=2
+0163 [line  389] 0x0004C3E4  CLOSURE    R15 = PROTO[19]
+0164 [line  389] 0x01000000  MOVE       R0 = R2
+0165 [line  389] 0x05000000  MOVE       R0 = R10
+0166 [line  389] 0x9783C389  SETTABLE   R14[K[47]='GetLeaveCount'] = R15
+0167 [line  392] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0168 [line  392] 0x000643C1  LOADK      R15 = K[25]='=>'
+0169 [line  392] 0x0007C401  LOADK      R16 = K[31]='boolean'
+0170 [line  392] 0x0180839C  CALL       A=14 B=3 C=2
+0171 [line  398] 0x000503E4  CLOSURE    R15 = PROTO[20]
+0172 [line  398] 0x9803C389  SETTABLE   R14[K[48]='CanDoIt'] = R15
+0173 [line  401] 0x0646C386  GETTABLE   R14 = R12[K[27]='method']
+0174 [line  401] 0x000583C1  LOADK      R15 = K[22]='userdata'
+0175 [line  401] 0x0100839C  CALL       A=14 B=2 C=2
+0176 [line  420] 0x000543E4  CLOSURE    R15 = PROTO[21]
+0177 [line  420] 0x9883C389  SETTABLE   R14[K[49]='onClickObj'] = R15
+0178 [line  421] 0x05CC8386  GETTABLE   R14 = R11[K[50]='Commit']
+0179 [line  421] 0x0080439C  CALL       A=14 B=1 C=1
+0180 [line  423] 0x010002DE  RETURN     A=11 B=2 C=0
+0181 [line  423] 0x0080001E  RETURN     A=0 B=1 C=0
+
+----- LOCALS -----
+'Lplus': 3 -> 181
+'ECIvtrItems': 6 -> 181
+'ElementData': 9 -> 181
+'ECGUITools': 12 -> 181
+'ECEquipDesc': 15 -> 181
+'HtmlUtility': 18 -> 181
+'ECPanelEquipChoose': 21 -> 181
+'Exptypes': 24 -> 181
+'ECItemTools': 27 -> 181
+'MISC': 31 -> 181
+'ECGame': 34 -> 181
+'ECRefreshPage': 37 -> 181
+'def': 38 -> 181
+'msgbox_click_callback': 104 -> 181
+
+    ============================================================
+    PROTO ROOT.0
+    Offset : 0x654
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 18 - 18
+    Params : 0
+    Stack  : 2
+    ============================================================
+
+    ----- CONSTANTS -----
+
+    ----- INSTRUCTIONS -----
+    0000 [line   18] 0x0000000A  NEWTABLE   A=0 B=0 C=0 Bx=0
+    0001 [line   18] 0x0100001E  RETURN     A=0 B=2 C=0
+    0002 [line   18] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.1
+    Offset : 0x694
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 22 - 28
+    Params : 2
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Panel'
+    K[001] = 'm_Parent'
+    K[002] = 'Init'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   23] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0001 [line   23] 0x0080809C  CALL       A=2 B=1 C=2
+    0002 [line   24] 0x80004089  SETTABLE   R2[K[0]='m_Panel'] = R1
+    0003 [line   25] 0x80800089  SETTABLE   R2[K[1]='m_Parent'] = R0
+    0004 [line   26] 0x014080CB  SELF       A=3 B=2 C=258 Bx=1282
+    0005 [line   26] 0x010040DC  CALL       A=3 B=2 C=1
+    0006 [line   27] 0x0100009E  RETURN     A=2 B=2 C=0
+    0007 [line   28] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'parent': 0 -> 7
+    'panel': 0 -> 7
+    'obj': 2 -> 7
+
+    ============================================================
+    PROTO ROOT.2
+    Offset : 0x768
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 30 - 32
+    Params : 1
+    Stack  : 3
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'UpdateAll'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   31] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line   31] 0x0100405C  CALL       A=1 B=2 C=1
+    0002 [line   32] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 2
+
+    ============================================================
+    PROTO ROOT.3
+    Offset : 0x7C8
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 34 - 45
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'result'
+    K[001] = 'count'
+    K[002] = 1.0
+    K[003] = 'require'
+    K[004] = 'Utility.ECUIUtility'
+    K[005] = 'GameUtil'
+    K[006] = 'AddGlobalTimer'
+    K[007] = 0.1
+    K[008] = 'FlashTipMan'
+    K[009] = 'FlashTip'
+    K[010] = 'StringTable'
+    K[011] = 'Get'
+    K[012] = 127.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line   36] 0x00C00086  GETTABLE   R2 = R1[K[0]='result']
+    0001 [line   36] 0x01404086  GETTABLE   R2 = R2[K[1]='count']
+    0002 [line   36] 0x01408017  EQ         A=0 B=R2 C=K[2]=1.0
+    0003 [line   36] 0x80048016  JMP        A=0 sBx=19
+    0004 [line   37] 0x0000C085  GETGLOBAL  R2 = GLOBAL K[3]='require'
+    0005 [line   37] 0x000100C1  LOADK      R3 = K[4]='Utility.ECUIUtility'
+    0006 [line   37] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line   38] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='GameUtil'
+    0008 [line   38] 0x01C180C6  GETTABLE   R3 = R3[K[6]='AddGlobalTimer']
+    0009 [line   38] 0x0001C101  LOADK      R4 = K[7]=0.1
+    0010 [line   38] 0x00800142  LOADBOOL   A=5 B=1 C=0
+    0011 [line   42] 0x000001A4  CLOSURE    R6 = PROTO[0]
+    0012 [line   42] 0x00000000  MOVE       R0 = R0
+    0013 [line   42] 0x01000000  MOVE       R0 = R2
+    0014 [line   38] 0x020040DC  CALL       A=3 B=4 C=1
+    0015 [line   43] 0x000200C5  GETGLOBAL  R3 = GLOBAL K[8]='FlashTipMan'
+    0016 [line   43] 0x01C240C6  GETTABLE   R3 = R3[K[9]='FlashTip']
+    0017 [line   43] 0x00028105  GETGLOBAL  R4 = GLOBAL K[10]='StringTable'
+    0018 [line   43] 0x0242C106  GETTABLE   R4 = R4[K[11]='Get']
+    0019 [line   43] 0x00030141  LOADK      R5 = K[12]=127.0
+    0020 [line   43] 0x0100011C  CALL       A=4 B=2 C=0
+    0021 [line   43] 0x000040DC  CALL       A=3 B=0 C=1
+    0022 [line   43] 0x000000A3  CLOSE      A=2 B=0 C=0 Bx=0
+    0023 [line   45] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 23
+    'event': 0 -> 23
+    'ECUIUtility': 7 -> 22
+
+        ============================================================
+        PROTO ROOT.3.0
+        Offset : 0x8F7
+        Source : '@lua\\gui\\ecrefreshpage.lua'
+        Lines  : 38 - 42
+        Params : 0
+        Stack  : 6
+        ============================================================
+
+        ----- CONSTANTS -----
+        K[000] = 'm_Panel'
+        K[001] = 'isnil'
+        K[002] = 'AddSelfDestroyObject'
+        K[003] = 'RESPATH'
+        K[004] = 'fx_ui_refresh'
+        K[005] = 'm_Parent'
+        K[006] = 'FindChild'
+        K[007] = 'SubPanel_Refresh/SubPanel_Refresh/AttriAfter'
+
+        ----- INSTRUCTIONS -----
+        0000 [line   39] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0001 [line   39] 0x00400006  GETTABLE   R0 = R0[K[0]='m_Panel']
+        0002 [line   39] 0x0000001A  TEST       A=0 B=0 C=0
+        0003 [line   39] 0x80040016  JMP        A=0 sBx=17
+        0004 [line   39] 0x00000004  GETUPVAL   A=0 B=0 C=0 Bx=0
+        0005 [line   39] 0x00400006  GETTABLE   R0 = R0[K[0]='m_Panel']
+        0006 [line   39] 0x00404006  GETTABLE   R0 = R0[K[1]='isnil']
+        0007 [line   39] 0x0000401A  TEST       A=0 B=0 C=1
+        0008 [line   39] 0x8002C016  JMP        A=0 sBx=12
+        0009 [line   40] 0x00800004  GETUPVAL   A=0 B=1 C=0 Bx=512
+        0010 [line   40] 0x00408006  GETTABLE   R0 = R0[K[2]='AddSelfDestroyObject']
+        0011 [line   40] 0x0000C045  GETGLOBAL  R1 = GLOBAL K[3]='RESPATH'
+        0012 [line   40] 0x00C10046  GETTABLE   R1 = R1[K[4]='fx_ui_refresh']
+        0013 [line   40] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+        0014 [line   40] 0x01414086  GETTABLE   R2 = R2[K[5]='m_Parent']
+        0015 [line   40] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+        0016 [line   40] 0x01C000C6  GETTABLE   R3 = R3[K[0]='m_Panel']
+        0017 [line   40] 0x01C180CB  SELF       A=3 B=3 C=262 Bx=1798
+        0018 [line   40] 0x0001C141  LOADK      R5 = K[7]='SubPanel_Refresh/SubPanel_Refresh/AttriAfter'
+        0019 [line   40] 0x018000DC  CALL       A=3 B=3 C=0
+        0020 [line   40] 0x0000401C  CALL       A=0 B=0 C=1
+        0021 [line   42] 0x0080001E  RETURN     A=0 B=1 C=0
+
+        ----- LOCALS -----
+
+    ============================================================
+    PROTO ROOT.4
+    Offset : 0xB30
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 47 - 50
+    Params : 2
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'UpdateAll'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   48] 0x00400086  GETTABLE   R2 = R0[K[0]='m_mainEquip']
+    0001 [line   48] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line   48] 0x80000016  JMP        A=0 sBx=1
+    0003 [line   48] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line   49] 0x0040408B  SELF       A=2 B=0 C=257 Bx=257
+    0005 [line   49] 0x0100409C  CALL       A=2 B=2 C=1
+    0006 [line   50] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 6
+    'event': 0 -> 6
+
+    ============================================================
+    PROTO ROOT.5
+    Offset : 0xBD3
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 53 - 64
+    Params : 6
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Panel'
+    K[001] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[002] = 'string'
+    K[003] = 'format'
+    K[004] = 'SubPanel_Refresh/EquipAttri/Group_Attri%d'
+    K[005] = 'FindChild'
+    K[006] = 'UpdateLable'
+    K[007] = 'Txt_Attri'
+    K[008] = '%d'
+    K[009] = 'Txt_AttriNum'
+    K[010] = 'Txt_AfterNum'
+    K[011] = 'SetActive'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   54] 0x00400186  GETTABLE   R6 = R0[K[0]='m_Panel']
+    0001 [line   54] 0x0000419A  TEST       A=6 B=0 C=1
+    0002 [line   54] 0x80000016  JMP        A=0 sBx=1
+    0003 [line   54] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line   55] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0005 [line   55] 0x03404186  GETTABLE   R6 = R6[K[1]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0006 [line   55] 0x03008018  LT         A=0 B=R6 C=R2
+    0007 [line   55] 0x80000016  JMP        A=0 sBx=1
+    0008 [line   55] 0x0080001E  RETURN     A=0 B=1 C=0
+    0009 [line   56] 0x00008185  GETGLOBAL  R6 = GLOBAL K[2]='string'
+    0010 [line   56] 0x0340C186  GETTABLE   R6 = R6[K[3]='format']
+    0011 [line   56] 0x000101C1  LOADK      R7 = K[4]='SubPanel_Refresh/EquipAttri/Group_Attri%d'
+    0012 [line   56] 0x01000200  MOVE       R8 = R2
+    0013 [line   56] 0x0180819C  CALL       A=6 B=3 C=2
+    0014 [line   57] 0x004001C6  GETTABLE   R7 = R0[K[0]='m_Panel']
+    0015 [line   57] 0x03C141CB  SELF       A=7 B=7 C=261 Bx=3845
+    0016 [line   57] 0x03000240  MOVE       R9 = R6
+    0017 [line   57] 0x018081DC  CALL       A=7 B=3 C=2
+    0018 [line   58] 0x0000005A  TEST       A=1 B=0 C=0
+    0019 [line   58] 0x80070016  JMP        A=0 sBx=29
+    0020 [line   59] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0021 [line   59] 0x04418206  GETTABLE   R8 = R8[K[6]='UpdateLable']
+    0022 [line   59] 0x01800240  MOVE       R9 = R3
+    0023 [line   59] 0x03C1428B  SELF       A=10 B=7 C=261 Bx=3845
+    0024 [line   59] 0x0001C301  LOADK      R12 = K[7]='Txt_Attri'
+    0025 [line   59] 0x0180029C  CALL       A=10 B=3 C=0
+    0026 [line   59] 0x0000421C  CALL       A=8 B=0 C=1
+    0027 [line   60] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0028 [line   60] 0x04418206  GETTABLE   R8 = R8[K[6]='UpdateLable']
+    0029 [line   60] 0x00008245  GETGLOBAL  R9 = GLOBAL K[2]='string'
+    0030 [line   60] 0x04C0C246  GETTABLE   R9 = R9[K[3]='format']
+    0031 [line   60] 0x00020281  LOADK      R10 = K[8]='%d'
+    0032 [line   60] 0x020002C0  MOVE       R11 = R4
+    0033 [line   60] 0x0180825C  CALL       A=9 B=3 C=2
+    0034 [line   60] 0x03C1428B  SELF       A=10 B=7 C=261 Bx=3845
+    0035 [line   60] 0x00024301  LOADK      R12 = K[9]='Txt_AttriNum'
+    0036 [line   60] 0x0180029C  CALL       A=10 B=3 C=0
+    0037 [line   60] 0x0000421C  CALL       A=8 B=0 C=1
+    0038 [line   61] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0039 [line   61] 0x04418206  GETTABLE   R8 = R8[K[6]='UpdateLable']
+    0040 [line   61] 0x00008245  GETGLOBAL  R9 = GLOBAL K[2]='string'
+    0041 [line   61] 0x04C0C246  GETTABLE   R9 = R9[K[3]='format']
+    0042 [line   61] 0x00020281  LOADK      R10 = K[8]='%d'
+    0043 [line   61] 0x028002C0  MOVE       R11 = R5
+    0044 [line   61] 0x0180825C  CALL       A=9 B=3 C=2
+    0045 [line   61] 0x03C1428B  SELF       A=10 B=7 C=261 Bx=3845
+    0046 [line   61] 0x00028301  LOADK      R12 = K[10]='Txt_AfterNum'
+    0047 [line   61] 0x0180029C  CALL       A=10 B=3 C=0
+    0048 [line   61] 0x0000421C  CALL       A=8 B=0 C=1
+    0049 [line   63] 0x03C2C20B  SELF       A=8 B=7 C=267 Bx=3851
+    0050 [line   63] 0x00800280  MOVE       R10 = R1
+    0051 [line   63] 0x0180421C  CALL       A=8 B=3 C=1
+    0052 [line   64] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 52
+    'show': 0 -> 52
+    'index': 0 -> 52
+    'attrNameStr': 0 -> 52
+    'curGradeNum': 0 -> 52
+    'nextGradeNum': 0 -> 52
+    'attrName': 14 -> 52
+    'attr': 18 -> 52
+
+    ============================================================
+    PROTO ROOT.6
+    Offset : 0xF46
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 67 - 74
+    Params : 1
+    Stack  : 15
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'ShowOnPanel'
+    K[004] = 'm_Panel'
+    K[005] = 'FindChild'
+    K[006] = 'SubPanel_Refresh/Group_Equip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   68] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line   69] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line   69] 0x80000016  JMP        A=0 sBx=1
+    0003 [line   69] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line   71] 0x00C04086  GETTABLE   R2 = R1[K[1]='itemHandle']
+    0005 [line   71] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0006 [line   71] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line   72] 0x0000409A  TEST       A=2 B=0 C=1
+    0008 [line   72] 0x80000016  JMP        A=0 sBx=1
+    0009 [line   72] 0x0080001E  RETURN     A=0 B=1 C=0
+    0010 [line   73] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0011 [line   73] 0x00410146  GETTABLE   R5 = R0[K[4]='m_Panel']
+    0012 [line   73] 0x02C1414B  SELF       A=5 B=5 C=261 Bx=2821
+    0013 [line   73] 0x000181C1  LOADK      R7 = K[6]='SubPanel_Refresh/Group_Equip'
+    0014 [line   73] 0x0180815C  CALL       A=5 B=3 C=2
+    0015 [line   73] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0016 [line   73] 0x000001C2  LOADBOOL   A=7 B=0 C=0
+    0017 [line   73] 0x00800202  LOADBOOL   A=8 B=1 C=0
+    0018 [line   73] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0019 [line   73] 0x00000282  LOADBOOL   A=10 B=0 C=0
+    0020 [line   73] 0x000002C2  LOADBOOL   A=11 B=0 C=0
+    0021 [line   73] 0x00000302  LOADBOOL   A=12 B=0 C=0
+    0022 [line   73] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0023 [line   73] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0024 [line   73] 0x060040DC  CALL       A=3 B=12 C=1
+    0025 [line   74] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 25
+    'mainEquipment': 1 -> 25
+    'itemData': 7 -> 25
+
+    ============================================================
+    PROTO ROOT.7
+    Offset : 0x10F7
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 79 - 195
+    Params : 1
+    Stack  : 32
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'm_Panel'
+    K[004] = 'FindChild'
+    K[005] = 'SubPanel_Refresh/SubPanel_Refresh'
+    K[006] = 'SetActive'
+    K[007] = 'AttriBefore'
+    K[008] = 'AttriAfter'
+    K[009] = 'Group_Hit'
+    K[010] = 'HasRefreshAddons'
+    K[011] = 1.0
+    K[012] = 'm_pDBEssence'
+    K[013] = 'max_addon_count'
+    K[014] = 'Chk_Lock'
+    K[015] = 'Txt_Attri'
+    K[016] = 'setTextAndColor'
+    K[017] = 'GetAddonString'
+    K[018] = 0.0
+    K[019] = 'm_Essence'
+    K[020] = '_fixed_ess'
+    K[021] = 'base_addon_count'
+    K[022] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[023] = 'GetFightScore'
+    K[024] = 'Txt_Force02'
+    K[025] = 'Img_Up'
+    K[026] = 'Img_Down'
+    K[027] = 'Instance'
+    K[028] = 'm_HostPlayer'
+    K[029] = 'Package'
+    K[030] = 'NormalPack'
+    K[031] = 'getConfig'
+    K[032] = 'special_id_config'
+    K[033] = 'id_special_id_config'
+    K[034] = 'GetItemTotalNum'
+    K[035] = 'id_equip_refresh_item'
+    K[036] = 'ItemView/Item_Stone'
+    K[037] = 'setTextAndColor3'
+    K[038] = 'Txt_StoneNum'
+    K[039] = 'string'
+    K[040] = 'format'
+    K[041] = '%d/%d'
+    K[042] = 'EQUIP_MULTI_REFRESH_COUNT'
+    K[043] = 'GetNeedLockItemTid'
+    K[044] = 'ItemView/Item_Lock'
+    K[045] = 'getEssence'
+    K[046] = 'Txt_Lock'
+    K[047] = 'name'
+    K[048] = 'Txt_LockNum'
+    K[049] = 'CheckLockCount'
+    K[050] = 'Btn_Refresh'
+    K[051] = 'GetComponent'
+    K[052] = 'UIButton'
+    K[053] = 'isEnabled'
+    K[054] = 'Btn_RefresThree'
+    K[055] = 'Btn_Keep'
+    K[056] = 'GetLeaveCount'
+    K[057] = 'FindDirect'
+    K[058] = 'TimeLimited_Refresh/Txt_TimeLimited_Refresh'
+    K[059] = 'setTextAndColor5'
+
+    ----- INSTRUCTIONS -----
+    0000 [line   80] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line   81] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line   81] 0x80000016  JMP        A=0 sBx=1
+    0003 [line   81] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line   82] 0x00C04086  GETTABLE   R2 = R1[K[1]='itemHandle']
+    0005 [line   82] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0006 [line   82] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line   84] 0x0040C0C6  GETTABLE   R3 = R0[K[3]='m_Panel']
+    0008 [line   84] 0x01C100CB  SELF       A=3 B=3 C=260 Bx=1796
+    0009 [line   84] 0x00014141  LOADK      R5 = K[5]='SubPanel_Refresh/SubPanel_Refresh'
+    0010 [line   84] 0x018080DC  CALL       A=3 B=3 C=2
+    0011 [line   85] 0x01C1810B  SELF       A=4 B=3 C=262 Bx=1798
+    0012 [line   85] 0x00800182  LOADBOOL   A=6 B=1 C=0
+    0013 [line   85] 0x0180411C  CALL       A=4 B=3 C=1
+    0014 [line   87] 0x01C1010B  SELF       A=4 B=3 C=260 Bx=1796
+    0015 [line   87] 0x0001C181  LOADK      R6 = K[7]='AttriBefore'
+    0016 [line   87] 0x0180811C  CALL       A=4 B=3 C=2
+    0017 [line   88] 0x01C1014B  SELF       A=5 B=3 C=260 Bx=1796
+    0018 [line   88] 0x000201C1  LOADK      R7 = K[8]='AttriAfter'
+    0019 [line   88] 0x0180815C  CALL       A=5 B=3 C=2
+    0020 [line   90] 0x01C1018B  SELF       A=6 B=3 C=260 Bx=1796
+    0021 [line   90] 0x00024201  LOADK      R8 = K[9]='Group_Hit'
+    0022 [line   90] 0x0180819C  CALL       A=6 B=3 C=2
+    0023 [line   92] 0x014281CB  SELF       A=7 B=2 C=266 Bx=1290
+    0024 [line   92] 0x0002C241  LOADK      R9 = K[11]=1.0
+    0025 [line   92] 0x018081DC  CALL       A=7 B=3 C=2
+    0026 [line   92] 0x000001DA  TEST       A=7 B=0 C=0
+    0027 [line   92] 0x80018016  JMP        A=0 sBx=7
+    0028 [line   93] 0x034181CB  SELF       A=7 B=6 C=262 Bx=3334
+    0029 [line   93] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0030 [line   93] 0x018041DC  CALL       A=7 B=3 C=1
+    0031 [line   94] 0x02C181CB  SELF       A=7 B=5 C=262 Bx=2822
+    0032 [line   94] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0033 [line   94] 0x018041DC  CALL       A=7 B=3 C=1
+    0034 [line   94] 0x80014016  JMP        A=0 sBx=6
+    0035 [line   96] 0x034181CB  SELF       A=7 B=6 C=262 Bx=3334
+    0036 [line   96] 0x00800242  LOADBOOL   A=9 B=1 C=0
+    0037 [line   96] 0x018041DC  CALL       A=7 B=3 C=1
+    0038 [line   97] 0x02C181CB  SELF       A=7 B=5 C=262 Bx=2822
+    0039 [line   97] 0x00000242  LOADBOOL   A=9 B=0 C=0
+    0040 [line   97] 0x018041DC  CALL       A=7 B=3 C=1
+    0041 [line  100] 0x0002C1C1  LOADK      R7 = K[11]=1.0
+    0042 [line  100] 0x01430206  GETTABLE   R8 = R2[K[12]='m_pDBEssence']
+    0043 [line  100] 0x04434206  GETTABLE   R8 = R8[K[13]='max_addon_count']
+    0044 [line  100] 0x0002C241  LOADK      R9 = K[11]=1.0
+    0045 [line  100] 0x8009C1E0  FORPREP    A=7 sBx=40
+    0046 [line  101] 0x024102CB  SELF       A=11 B=4 C=260 Bx=2308
+    0047 [line  101] 0x00038341  LOADK      R13 = K[14]='Chk_Lock'
+    0048 [line  101] 0x05000380  MOVE       R14 = R10
+    0049 [line  101] 0x06838355  CONCAT     A=13 B=13 C=14 Bx=6670
+    0050 [line  101] 0x018082DC  CALL       A=11 B=3 C=2
+    0051 [line  102] 0x05C1830B  SELF       A=12 B=11 C=262 Bx=5894
+    0052 [line  102] 0x00800382  LOADBOOL   A=14 B=1 C=0
+    0053 [line  102] 0x0180431C  CALL       A=12 B=3 C=1
+    0054 [line  103] 0x02C1030B  SELF       A=12 B=5 C=260 Bx=2820
+    0055 [line  103] 0x0003C381  LOADK      R14 = K[15]='Txt_Attri'
+    0056 [line  103] 0x050003C0  MOVE       R15 = R10
+    0057 [line  103] 0x0703C395  CONCAT     A=14 B=14 C=15 Bx=7183
+    0058 [line  103] 0x0180831C  CALL       A=12 B=3 C=2
+    0059 [line  104] 0x0641834B  SELF       A=13 B=12 C=262 Bx=6406
+    0060 [line  104] 0x008003C2  LOADBOOL   A=15 B=1 C=0
+    0061 [line  104] 0x0180435C  CALL       A=13 B=3 C=1
+    0062 [line  107] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0063 [line  107] 0x06C40346  GETTABLE   R13 = R13[K[16]='setTextAndColor']
+    0064 [line  107] 0x05C1038B  SELF       A=14 B=11 C=260 Bx=5892
+    0065 [line  107] 0x0003C401  LOADK      R16 = K[15]='Txt_Attri'
+    0066 [line  107] 0x05000440  MOVE       R17 = R10
+    0067 [line  107] 0x08044415  CONCAT     A=16 B=16 C=17 Bx=8209
+    0068 [line  107] 0x0180839C  CALL       A=14 B=3 C=2
+    0069 [line  107] 0x014443CB  SELF       A=15 B=2 C=273 Bx=1297
+    0070 [line  107] 0x00048441  LOADK      R17 = K[18]=0.0
+    0071 [line  107] 0x05000480  MOVE       R18 = R10
+    0072 [line  107] 0x020003DC  CALL       A=15 B=4 C=0
+    0073 [line  107] 0x0000435C  CALL       A=13 B=0 C=1
+    0074 [line  109] 0x00000344  GETUPVAL   A=13 B=0 C=0 Bx=0
+    0075 [line  109] 0x06C40346  GETTABLE   R13 = R13[K[16]='setTextAndColor']
+    0076 [line  109] 0x02C1038B  SELF       A=14 B=5 C=260 Bx=2820
+    0077 [line  109] 0x0003C401  LOADK      R16 = K[15]='Txt_Attri'
+    0078 [line  109] 0x05000440  MOVE       R17 = R10
+    0079 [line  109] 0x08044415  CONCAT     A=16 B=16 C=17 Bx=8209
+    0080 [line  109] 0x0180839C  CALL       A=14 B=3 C=2
+    0081 [line  109] 0x014443CB  SELF       A=15 B=2 C=273 Bx=1297
+    0082 [line  109] 0x0002C441  LOADK      R17 = K[11]=1.0
+    0083 [line  109] 0x05000480  MOVE       R18 = R10
+    0084 [line  109] 0x020003DC  CALL       A=15 B=4 C=0
+    0085 [line  109] 0x0000435C  CALL       A=13 B=0 C=1
+    0086 [line  100] 0x7FF581DF  FORLOOP    A=7 sBx=-41
+    0087 [line  113] 0x0144C1C6  GETTABLE   R7 = R2[K[19]='m_Essence']
+    0088 [line  113] 0x03C501C6  GETTABLE   R7 = R7[K[20]='_fixed_ess']
+    0089 [line  113] 0x03C541C6  GETTABLE   R7 = R7[K[21]='base_addon_count']
+    0090 [line  113] 0x03C2C1CC  ADD        A=7 B=R7 C=K[11]=1.0
+    0091 [line  113] 0x00800204  GETUPVAL   A=8 B=1 C=0 Bx=512
+    0092 [line  113] 0x04458206  GETTABLE   R8 = R8[K[22]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0093 [line  113] 0x0002C241  LOADK      R9 = K[11]=1.0
+    0094 [line  113] 0x8003C1E0  FORPREP    A=7 sBx=16
+    0095 [line  114] 0x024102CB  SELF       A=11 B=4 C=260 Bx=2308
+    0096 [line  114] 0x00038341  LOADK      R13 = K[14]='Chk_Lock'
+    0097 [line  114] 0x05000380  MOVE       R14 = R10
+    0098 [line  114] 0x06838355  CONCAT     A=13 B=13 C=14 Bx=6670
+    0099 [line  114] 0x018082DC  CALL       A=11 B=3 C=2
+    0100 [line  115] 0x05C1830B  SELF       A=12 B=11 C=262 Bx=5894
+    0101 [line  115] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0102 [line  115] 0x0180431C  CALL       A=12 B=3 C=1
+    0103 [line  116] 0x02C1030B  SELF       A=12 B=5 C=260 Bx=2820
+    0104 [line  116] 0x0003C381  LOADK      R14 = K[15]='Txt_Attri'
+    0105 [line  116] 0x050003C0  MOVE       R15 = R10
+    0106 [line  116] 0x0703C395  CONCAT     A=14 B=14 C=15 Bx=7183
+    0107 [line  116] 0x0180831C  CALL       A=12 B=3 C=2
+    0108 [line  117] 0x0641834B  SELF       A=13 B=12 C=262 Bx=6406
+    0109 [line  117] 0x000003C2  LOADBOOL   A=15 B=0 C=0
+    0110 [line  117] 0x0180435C  CALL       A=13 B=3 C=1
+    0111 [line  113] 0x7FFB81DF  FORLOOP    A=7 sBx=-17
+    0112 [line  120] 0x0145C1CB  SELF       A=7 B=2 C=279 Bx=1303
+    0113 [line  120] 0x00048241  LOADK      R9 = K[18]=0.0
+    0114 [line  120] 0x018081DC  CALL       A=7 B=3 C=2
+    0115 [line  121] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0116 [line  121] 0x04440206  GETTABLE   R8 = R8[K[16]='setTextAndColor']
+    0117 [line  121] 0x0241024B  SELF       A=9 B=4 C=260 Bx=2308
+    0118 [line  121] 0x000602C1  LOADK      R11 = K[24]='Txt_Force02'
+    0119 [line  121] 0x0180825C  CALL       A=9 B=3 C=2
+    0120 [line  121] 0x03800280  MOVE       R10 = R7
+    0121 [line  121] 0x0180421C  CALL       A=8 B=3 C=1
+    0122 [line  122] 0x0145C20B  SELF       A=8 B=2 C=279 Bx=1303
+    0123 [line  122] 0x0002C281  LOADK      R10 = K[11]=1.0
+    0124 [line  122] 0x0180821C  CALL       A=8 B=3 C=2
+    0125 [line  123] 0x00000244  GETUPVAL   A=9 B=0 C=0 Bx=0
+    0126 [line  123] 0x04C40246  GETTABLE   R9 = R9[K[16]='setTextAndColor']
+    0127 [line  123] 0x02C1028B  SELF       A=10 B=5 C=260 Bx=2820
+    0128 [line  123] 0x00060301  LOADK      R12 = K[24]='Txt_Force02'
+    0129 [line  123] 0x0180829C  CALL       A=10 B=3 C=2
+    0130 [line  123] 0x040002C0  MOVE       R11 = R8
+    0131 [line  123] 0x0180425C  CALL       A=9 B=3 C=1
+    0132 [line  125] 0x02C1024B  SELF       A=9 B=5 C=260 Bx=2820
+    0133 [line  125] 0x000642C1  LOADK      R11 = K[25]='Img_Up'
+    0134 [line  125] 0x0180825C  CALL       A=9 B=3 C=2
+    0135 [line  126] 0x02C1028B  SELF       A=10 B=5 C=260 Bx=2820
+    0136 [line  126] 0x00068301  LOADK      R12 = K[26]='Img_Down'
+    0137 [line  126] 0x0180829C  CALL       A=10 B=3 C=2
+    0138 [line  127] 0x0401C018  LT         A=0 B=R8 C=R7
+    0139 [line  127] 0x80018016  JMP        A=0 sBx=7
+    0140 [line  128] 0x04C182CB  SELF       A=11 B=9 C=262 Bx=4870
+    0141 [line  128] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0142 [line  128] 0x018042DC  CALL       A=11 B=3 C=1
+    0143 [line  129] 0x054182CB  SELF       A=11 B=10 C=262 Bx=5382
+    0144 [line  129] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0145 [line  129] 0x018042DC  CALL       A=11 B=3 C=1
+    0146 [line  129] 0x80038016  JMP        A=0 sBx=15
+    0147 [line  130] 0x03820018  LT         A=0 B=R7 C=R8
+    0148 [line  130] 0x80018016  JMP        A=0 sBx=7
+    0149 [line  131] 0x04C182CB  SELF       A=11 B=9 C=262 Bx=4870
+    0150 [line  131] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0151 [line  131] 0x018042DC  CALL       A=11 B=3 C=1
+    0152 [line  132] 0x054182CB  SELF       A=11 B=10 C=262 Bx=5382
+    0153 [line  132] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0154 [line  132] 0x018042DC  CALL       A=11 B=3 C=1
+    0155 [line  132] 0x80014016  JMP        A=0 sBx=6
+    0156 [line  134] 0x04C182CB  SELF       A=11 B=9 C=262 Bx=4870
+    0157 [line  134] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0158 [line  134] 0x018042DC  CALL       A=11 B=3 C=1
+    0159 [line  135] 0x054182CB  SELF       A=11 B=10 C=262 Bx=5382
+    0160 [line  135] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0161 [line  135] 0x018042DC  CALL       A=11 B=3 C=1
+    0162 [line  139] 0x010002C4  GETUPVAL   A=11 B=2 C=0 Bx=1024
+    0163 [line  139] 0x05C6C2C6  GETTABLE   R11 = R11[K[27]='Instance']
+    0164 [line  139] 0x008082DC  CALL       A=11 B=1 C=2
+    0165 [line  139] 0x05C702C6  GETTABLE   R11 = R11[K[28]='m_HostPlayer']
+    0166 [line  140] 0x05C74306  GETTABLE   R12 = R11[K[29]='Package']
+    0167 [line  140] 0x06478306  GETTABLE   R12 = R12[K[30]='NormalPack']
+    0168 [line  142] 0x00800342  LOADBOOL   A=13 B=1 C=0
+    0169 [line  143] 0x00800382  LOADBOOL   A=14 B=1 C=0
+    0170 [line  145] 0x018003C4  GETUPVAL   A=15 B=3 C=0 Bx=1536
+    0171 [line  145] 0x07C7C3C6  GETTABLE   R15 = R15[K[31]='getConfig']
+    0172 [line  145] 0x00080405  GETGLOBAL  R16 = GLOBAL K[32]='special_id_config'
+    0173 [line  145] 0x08484406  GETTABLE   R16 = R16[K[33]='id_special_id_config']
+    0174 [line  145] 0x0100C3DC  CALL       A=15 B=2 C=3
+    0175 [line  146] 0x0648844B  SELF       A=17 B=12 C=290 Bx=6434
+    0176 [line  146] 0x07C8C4C6  GETTABLE   R19 = R15[K[35]='id_equip_refresh_item']
+    0177 [line  146] 0x0180845C  CALL       A=17 B=3 C=2
+    0178 [line  147] 0x01C1048B  SELF       A=18 B=3 C=260 Bx=1796
+    0179 [line  147] 0x00090501  LOADK      R20 = K[36]='ItemView/Item_Stone'
+    0180 [line  147] 0x0180849C  CALL       A=18 B=3 C=2
+    0181 [line  148] 0x0002C4C1  LOADK      R19 = K[11]=1.0
+    0182 [line  149] 0x00000504  GETUPVAL   A=20 B=0 C=0 Bx=0
+    0183 [line  149] 0x0A494506  GETTABLE   R20 = R20[K[37]='setTextAndColor3']
+    0184 [line  149] 0x0941054B  SELF       A=21 B=18 C=260 Bx=9476
+    0185 [line  149] 0x000985C1  LOADK      R23 = K[38]='Txt_StoneNum'
+    0186 [line  149] 0x0180855C  CALL       A=21 B=3 C=2
+    0187 [line  149] 0x0009C585  GETGLOBAL  R22 = GLOBAL K[39]='string'
+    0188 [line  149] 0x0B4A0586  GETTABLE   R22 = R22[K[40]='format']
+    0189 [line  149] 0x000A45C1  LOADK      R23 = K[41]='%d/%d'
+    0190 [line  149] 0x08800600  MOVE       R24 = R17
+    0191 [line  149] 0x09800640  MOVE       R25 = R19
+    0192 [line  149] 0x0200859C  CALL       A=22 B=4 C=2
+    0193 [line  149] 0x09844059  LE         A=1 B=R19 C=R17
+    0194 [line  149] 0x80000016  JMP        A=0 sBx=1
+    0195 [line  149] 0x000045C2  LOADBOOL   A=23 B=0 C=1
+    0196 [line  149] 0x008005C2  LOADBOOL   A=23 B=1 C=0
+    0197 [line  149] 0x0200451C  CALL       A=20 B=4 C=1
+    0198 [line  150] 0x0884C018  LT         A=0 B=R17 C=R19
+    0199 [line  150] 0x80000016  JMP        A=0 sBx=1
+    0200 [line  151] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0201 [line  153] 0x00800504  GETUPVAL   A=20 B=1 C=0 Bx=512
+    0202 [line  153] 0x0A4A8506  GETTABLE   R20 = R20[K[42]='EQUIP_MULTI_REFRESH_COUNT']
+    0203 [line  153] 0x0985050E  MUL        A=20 B=R19 C=R20
+    0204 [line  153] 0x08850018  LT         A=0 B=R17 C=R20
+    0205 [line  153] 0x80000016  JMP        A=0 sBx=1
+    0206 [line  154] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0207 [line  158] 0x004AC50B  SELF       A=20 B=0 C=299 Bx=299
+    0208 [line  158] 0x0100851C  CALL       A=20 B=2 C=2
+    0209 [line  159] 0x01C1054B  SELF       A=21 B=3 C=260 Bx=1796
+    0210 [line  159] 0x000B05C1  LOADK      R23 = K[44]='ItemView/Item_Lock'
+    0211 [line  159] 0x0180855C  CALL       A=21 B=3 C=2
+    0212 [line  160] 0x0A448017  EQ         A=0 B=R20 C=K[18]=0.0
+    0213 [line  160] 0x8000C016  JMP        A=0 sBx=4
+    0214 [line  161] 0x0AC1858B  SELF       A=22 B=21 C=262 Bx=11014
+    0215 [line  161] 0x00000602  LOADBOOL   A=24 B=0 C=0
+    0216 [line  161] 0x0180459C  CALL       A=22 B=3 C=1
+    0217 [line  161] 0x800B0016  JMP        A=0 sBx=45
+    0218 [line  163] 0x0AC1858B  SELF       A=22 B=21 C=262 Bx=11014
+    0219 [line  163] 0x00800602  LOADBOOL   A=24 B=1 C=0
+    0220 [line  163] 0x0180459C  CALL       A=22 B=3 C=1
+    0221 [line  164] 0x01800584  GETUPVAL   A=22 B=3 C=0 Bx=1536
+    0222 [line  164] 0x0B4B4586  GETTABLE   R22 = R22[K[45]='getEssence']
+    0223 [line  164] 0x0A0005C0  MOVE       R23 = R20
+    0224 [line  164] 0x0100859C  CALL       A=22 B=2 C=2
+    0225 [line  165] 0x0000059A  TEST       A=22 B=0 C=0
+    0226 [line  165] 0x80018016  JMP        A=0 sBx=7
+    0227 [line  167] 0x000005C4  GETUPVAL   A=23 B=0 C=0 Bx=0
+    0228 [line  167] 0x0BC405C6  GETTABLE   R23 = R23[K[16]='setTextAndColor']
+    0229 [line  167] 0x0AC1060B  SELF       A=24 B=21 C=260 Bx=11012
+    0230 [line  167] 0x000B8681  LOADK      R26 = K[46]='Txt_Lock'
+    0231 [line  167] 0x0180861C  CALL       A=24 B=3 C=2
+    0232 [line  167] 0x0B4BC646  GETTABLE   R25 = R22[K[47]='name']
+    0233 [line  167] 0x018045DC  CALL       A=23 B=3 C=1
+    0234 [line  169] 0x064885CB  SELF       A=23 B=12 C=290 Bx=6434
+    0235 [line  169] 0x0A000640  MOVE       R25 = R20
+    0236 [line  169] 0x018085DC  CALL       A=23 B=3 C=2
+    0237 [line  170] 0x0002C601  LOADK      R24 = K[11]=1.0
+    0238 [line  171] 0x00000644  GETUPVAL   A=25 B=0 C=0 Bx=0
+    0239 [line  171] 0x0CC94646  GETTABLE   R25 = R25[K[37]='setTextAndColor3']
+    0240 [line  171] 0x0AC1068B  SELF       A=26 B=21 C=260 Bx=11012
+    0241 [line  171] 0x000C0701  LOADK      R28 = K[48]='Txt_LockNum'
+    0242 [line  171] 0x0180869C  CALL       A=26 B=3 C=2
+    0243 [line  171] 0x0009C6C5  GETGLOBAL  R27 = GLOBAL K[39]='string'
+    0244 [line  171] 0x0DCA06C6  GETTABLE   R27 = R27[K[40]='format']
+    0245 [line  171] 0x000A4701  LOADK      R28 = K[41]='%d/%d'
+    0246 [line  171] 0x0B800740  MOVE       R29 = R23
+    0247 [line  171] 0x0C000780  MOVE       R30 = R24
+    0248 [line  171] 0x020086DC  CALL       A=27 B=4 C=2
+    0249 [line  171] 0x0C05C059  LE         A=1 B=R24 C=R23
+    0250 [line  171] 0x80000016  JMP        A=0 sBx=1
+    0251 [line  171] 0x00004702  LOADBOOL   A=28 B=0 C=1
+    0252 [line  171] 0x00800702  LOADBOOL   A=28 B=1 C=0
+    0253 [line  171] 0x0200465C  CALL       A=25 B=4 C=1
+    0254 [line  172] 0x0B860018  LT         A=0 B=R23 C=R24
+    0255 [line  172] 0x80000016  JMP        A=0 sBx=1
+    0256 [line  173] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0257 [line  175] 0x00800644  GETUPVAL   A=25 B=1 C=0 Bx=512
+    0258 [line  175] 0x0CCA8646  GETTABLE   R25 = R25[K[42]='EQUIP_MULTI_REFRESH_COUNT']
+    0259 [line  175] 0x0C06464E  MUL        A=25 B=R24 C=R25
+    0260 [line  175] 0x0B864018  LT         A=0 B=R23 C=R25
+    0261 [line  175] 0x80000016  JMP        A=0 sBx=1
+    0262 [line  176] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0263 [line  181] 0x004C458B  SELF       A=22 B=0 C=305 Bx=305
+    0264 [line  181] 0x0100859C  CALL       A=22 B=2 C=2
+    0265 [line  182] 0x0144C5C6  GETTABLE   R23 = R2[K[19]='m_Essence']
+    0266 [line  182] 0x0BC505C6  GETTABLE   R23 = R23[K[20]='_fixed_ess']
+    0267 [line  182] 0x0BC545C6  GETTABLE   R23 = R23[K[21]='base_addon_count']
+    0268 [line  182] 0x0B858019  LE         A=0 B=R23 C=R22
+    0269 [line  182] 0x80004016  JMP        A=0 sBx=2
+    0270 [line  183] 0x00000342  LOADBOOL   A=13 B=0 C=0
+    0271 [line  184] 0x00000382  LOADBOOL   A=14 B=0 C=0
+    0272 [line  188] 0x01C105CB  SELF       A=23 B=3 C=260 Bx=1796
+    0273 [line  188] 0x000C8641  LOADK      R25 = K[50]='Btn_Refresh'
+    0274 [line  188] 0x018085DC  CALL       A=23 B=3 C=2
+    0275 [line  188] 0x0BCCC5CB  SELF       A=23 B=23 C=307 Bx=12083
+    0276 [line  188] 0x000D0641  LOADK      R25 = K[52]='UIButton'
+    0277 [line  188] 0x018085DC  CALL       A=23 B=3 C=2
+    0278 [line  188] 0x9A8345C9  SETTABLE   R23[K[53]='isEnabled'] = R13
+    0279 [line  189] 0x01C105CB  SELF       A=23 B=3 C=260 Bx=1796
+    0280 [line  189] 0x000D8641  LOADK      R25 = K[54]='Btn_RefresThree'
+    0281 [line  189] 0x018085DC  CALL       A=23 B=3 C=2
+    0282 [line  189] 0x0BCCC5CB  SELF       A=23 B=23 C=307 Bx=12083
+    0283 [line  189] 0x000D0641  LOADK      R25 = K[52]='UIButton'
+    0284 [line  189] 0x018085DC  CALL       A=23 B=3 C=2
+    0285 [line  189] 0x9A8385C9  SETTABLE   R23[K[53]='isEnabled'] = R14
+    0286 [line  190] 0x01C105CB  SELF       A=23 B=3 C=260 Bx=1796
+    0287 [line  190] 0x000DC641  LOADK      R25 = K[55]='Btn_Keep'
+    0288 [line  190] 0x018085DC  CALL       A=23 B=3 C=2
+    0289 [line  190] 0x0BCCC5CB  SELF       A=23 B=23 C=307 Bx=12083
+    0290 [line  190] 0x000D0641  LOADK      R25 = K[52]='UIButton'
+    0291 [line  190] 0x018085DC  CALL       A=23 B=3 C=2
+    0292 [line  190] 0x0142860B  SELF       A=24 B=2 C=266 Bx=1290
+    0293 [line  190] 0x0002C681  LOADK      R26 = K[11]=1.0
+    0294 [line  190] 0x0180861C  CALL       A=24 B=3 C=2
+    0295 [line  190] 0x9A8605C9  SETTABLE   R23[K[53]='isEnabled'] = R24
+    0296 [line  192] 0x004E05CB  SELF       A=23 B=0 C=312 Bx=312
+    0297 [line  192] 0x0100C5DC  CALL       A=23 B=2 C=3
+    0298 [line  193] 0x0040C646  GETTABLE   R25 = R0[K[3]='m_Panel']
+    0299 [line  193] 0x0CCE464B  SELF       A=25 B=25 C=313 Bx=13113
+    0300 [line  193] 0x000E86C1  LOADK      R27 = K[58]='TimeLimited_Refresh/Txt_TimeLimited_Refresh'
+    0301 [line  193] 0x0180865C  CALL       A=25 B=3 C=2
+    0302 [line  194] 0x00000684  GETUPVAL   A=26 B=0 C=0 Bx=0
+    0303 [line  194] 0x0D4EC686  GETTABLE   R26 = R26[K[59]='setTextAndColor5']
+    0304 [line  194] 0x0C8006C0  MOVE       R27 = R25
+    0305 [line  194] 0x0009C705  GETGLOBAL  R28 = GLOBAL K[39]='string'
+    0306 [line  194] 0x0E4A0706  GETTABLE   R28 = R28[K[40]='format']
+    0307 [line  194] 0x000A4741  LOADK      R29 = K[41]='%d/%d'
+    0308 [line  194] 0x0B800780  MOVE       R30 = R23
+    0309 [line  194] 0x0C0007C0  MOVE       R31 = R24
+    0310 [line  194] 0x0200871C  CALL       A=28 B=4 C=2
+    0311 [line  194] 0x8905C058  LT         A=1 B=K[18]=0.0 C=R23
+    0312 [line  194] 0x80000016  JMP        A=0 sBx=1
+    0313 [line  194] 0x00004742  LOADBOOL   A=29 B=0 C=1
+    0314 [line  194] 0x00800742  LOADBOOL   A=29 B=1 C=0
+    0315 [line  194] 0x0200469C  CALL       A=26 B=4 C=1
+    0316 [line  195] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 316
+    'mainEquipment': 1 -> 316
+    'itemData': 7 -> 316
+    'refreshPanel': 11 -> 316
+    'before': 17 -> 316
+    'after': 20 -> 316
+    'hint': 23 -> 316
+    '(for index)': 45 -> 87
+    '(for limit)': 45 -> 87
+    '(for step)': 45 -> 87
+    'i': 46 -> 86
+    'Chk_Lock': 51 -> 86
+    'Txt_Attri': 59 -> 86
+    '(for index)': 94 -> 112
+    '(for limit)': 94 -> 112
+    '(for step)': 94 -> 112
+    'i': 95 -> 111
+    'Chk_Lock': 100 -> 111
+    'Txt_Attri': 108 -> 111
+    'beforeScore': 115 -> 316
+    'afterScore': 125 -> 316
+    'panelUp': 135 -> 316
+    'panelDown': 138 -> 316
+    'hostPlayer': 166 -> 316
+    'pack': 168 -> 316
+    'canRefresh': 169 -> 316
+    'canMultiRefresh': 170 -> 316
+    'specialIdConfigTempalte': 175 -> 316
+    '_': 175 -> 316
+    'haveCount': 178 -> 316
+    'stonePanel': 181 -> 316
+    'needCount': 182 -> 316
+    'needLockItemTid': 209 -> 316
+    'lockPanel': 212 -> 316
+    'ess': 225 -> 263
+    'haveCount': 237 -> 263
+    'needCount': 238 -> 263
+    'lockCount': 265 -> 316
+    'leaveCount': 298 -> 316
+    'maxCount': 298 -> 316
+    'leaveCount_txt': 302 -> 316
+
+    ============================================================
+    PROTO ROOT.8
+    Offset : 0x2315
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 197 - 213
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'm_Panel'
+    K[002] = 'FindChild'
+    K[003] = 'Img_EmptyBg'
+    K[004] = 'SetActive'
+    K[005] = 'SubPanel_Refresh'
+    K[006] = 'UpdateMainEquipment'
+    K[007] = 'itemHandle'
+    K[008] = 'Get'
+    K[009] = 'UpdateRefreshUI'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  198] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line  198] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  198] 0x80038016  JMP        A=0 sBx=15
+    0003 [line  199] 0x00404046  GETTABLE   R1 = R0[K[1]='m_Panel']
+    0004 [line  199] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0005 [line  199] 0x0000C0C1  LOADK      R3 = K[3]='Img_EmptyBg'
+    0006 [line  199] 0x0180805C  CALL       A=1 B=3 C=2
+    0007 [line  199] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0008 [line  199] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0009 [line  199] 0x0180405C  CALL       A=1 B=3 C=1
+    0010 [line  200] 0x00404046  GETTABLE   R1 = R0[K[1]='m_Panel']
+    0011 [line  200] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0012 [line  200] 0x000140C1  LOADK      R3 = K[5]='SubPanel_Refresh'
+    0013 [line  200] 0x0180805C  CALL       A=1 B=3 C=2
+    0014 [line  200] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0015 [line  200] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0016 [line  200] 0x0180405C  CALL       A=1 B=3 C=1
+    0017 [line  200] 0x80034016  JMP        A=0 sBx=14
+    0018 [line  202] 0x00404046  GETTABLE   R1 = R0[K[1]='m_Panel']
+    0019 [line  202] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0020 [line  202] 0x0000C0C1  LOADK      R3 = K[3]='Img_EmptyBg'
+    0021 [line  202] 0x0180805C  CALL       A=1 B=3 C=2
+    0022 [line  202] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0023 [line  202] 0x008000C2  LOADBOOL   A=3 B=1 C=0
+    0024 [line  202] 0x0180405C  CALL       A=1 B=3 C=1
+    0025 [line  203] 0x00404046  GETTABLE   R1 = R0[K[1]='m_Panel']
+    0026 [line  203] 0x00C0804B  SELF       A=1 B=1 C=258 Bx=770
+    0027 [line  203] 0x000140C1  LOADK      R3 = K[5]='SubPanel_Refresh'
+    0028 [line  203] 0x0180805C  CALL       A=1 B=3 C=2
+    0029 [line  203] 0x00C1004B  SELF       A=1 B=1 C=260 Bx=772
+    0030 [line  203] 0x000000C2  LOADBOOL   A=3 B=0 C=0
+    0031 [line  203] 0x0180405C  CALL       A=1 B=3 C=1
+    0032 [line  206] 0x0041804B  SELF       A=1 B=0 C=262 Bx=262
+    0033 [line  206] 0x0100405C  CALL       A=1 B=2 C=1
+    0034 [line  208] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0035 [line  209] 0x0000405A  TEST       A=1 B=0 C=1
+    0036 [line  209] 0x80000016  JMP        A=0 sBx=1
+    0037 [line  209] 0x0080001E  RETURN     A=0 B=1 C=0
+    0038 [line  210] 0x00C1C086  GETTABLE   R2 = R1[K[7]='itemHandle']
+    0039 [line  210] 0x0142008B  SELF       A=2 B=2 C=264 Bx=1288
+    0040 [line  210] 0x0100809C  CALL       A=2 B=2 C=2
+    0041 [line  212] 0x004240CB  SELF       A=3 B=0 C=265 Bx=265
+    0042 [line  212] 0x010040DC  CALL       A=3 B=2 C=1
+    0043 [line  213] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 43
+    'mainEquipment': 35 -> 43
+    'itemData': 41 -> 43
+
+    ============================================================
+    PROTO ROOT.9
+    Offset : 0x2587
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 215 - 250
+    Params : 2
+    Stack  : 19
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'MsgBox'
+    K[004] = 'MsgBoxRetT'
+    K[005] = 'MBRT_OK'
+    K[006] = 'getConfig'
+    K[007] = 'special_id_config'
+    K[008] = 'id_special_id_config'
+    K[009] = 'require'
+    K[010] = 'PB.pb_helper'
+    K[011] = 'PB.net_common'
+    K[012] = 'gp_equip_xilian'
+    K[013] = 'location'
+    K[014] = 'Pack'
+    K[015] = 'equip_index'
+    K[016] = 'Slot'
+    K[017] = 'equip_tid'
+    K[018] = 'tid'
+    K[019] = 'save'
+    K[020] = False
+    K[021] = 'tool_tid'
+    K[022] = 'id_equip_refresh_item'
+    K[023] = 'count'
+    K[024] = 1.0
+    K[025] = 'CheckLockCount'
+    K[026] = 'lock_tid'
+    K[027] = 'GetNeedLockItemTid'
+    K[028] = 'reply'
+    K[029] = 'addons'
+    K[030] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[031] = 'CheckLocked'
+    K[032] = 'table'
+    K[033] = 'insert'
+    K[034] = 'Send'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  216] 0x00400086  GETTABLE   R2 = R0[K[0]='m_mainEquip']
+    0001 [line  217] 0x0000409A  TEST       A=2 B=0 C=1
+    0002 [line  217] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  217] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  218] 0x014040C6  GETTABLE   R3 = R2[K[1]='itemHandle']
+    0005 [line  218] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+    0006 [line  218] 0x010080DC  CALL       A=3 B=2 C=2
+    0007 [line  219] 0x0000C105  GETGLOBAL  R4 = GLOBAL K[3]='MsgBox'
+    0008 [line  219] 0x02410106  GETTABLE   R4 = R4[K[4]='MsgBoxRetT']
+    0009 [line  219] 0x02414106  GETTABLE   R4 = R4[K[5]='MBRT_OK']
+    0010 [line  219] 0x00810017  EQ         A=0 B=R1 C=R4
+    0011 [line  219] 0x800E0016  JMP        A=0 sBx=57
+    0012 [line  220] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0013 [line  220] 0x02418106  GETTABLE   R4 = R4[K[6]='getConfig']
+    0014 [line  220] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='special_id_config'
+    0015 [line  220] 0x02C20146  GETTABLE   R5 = R5[K[8]='id_special_id_config']
+    0016 [line  220] 0x0100C11C  CALL       A=4 B=2 C=3
+    0017 [line  221] 0x0000411A  TEST       A=4 B=0 C=1
+    0018 [line  221] 0x80000016  JMP        A=0 sBx=1
+    0019 [line  222] 0x0080001E  RETURN     A=0 B=1 C=0
+    0020 [line  225] 0x00024185  GETGLOBAL  R6 = GLOBAL K[9]='require'
+    0021 [line  225] 0x000281C1  LOADK      R7 = K[10]='PB.pb_helper'
+    0022 [line  225] 0x0100819C  CALL       A=6 B=2 C=2
+    0023 [line  226] 0x000241C5  GETGLOBAL  R7 = GLOBAL K[9]='require'
+    0024 [line  226] 0x0002C201  LOADK      R8 = K[11]='PB.net_common'
+    0025 [line  226] 0x010081DC  CALL       A=7 B=2 C=2
+    0026 [line  227] 0x03C30206  GETTABLE   R8 = R7[K[12]='gp_equip_xilian']
+    0027 [line  228] 0x04000240  MOVE       R9 = R8
+    0028 [line  228] 0x0080825C  CALL       A=9 B=1 C=2
+    0029 [line  229] 0x01404286  GETTABLE   R10 = R2[K[1]='itemHandle']
+    0030 [line  229] 0x0543828B  SELF       A=10 B=10 C=270 Bx=5390
+    0031 [line  229] 0x0100829C  CALL       A=10 B=2 C=2
+    0032 [line  229] 0x86828249  SETTABLE   R9[K[13]='location'] = R10
+    0033 [line  230] 0x01404286  GETTABLE   R10 = R2[K[1]='itemHandle']
+    0034 [line  230] 0x0544028B  SELF       A=10 B=10 C=272 Bx=5392
+    0035 [line  230] 0x0100829C  CALL       A=10 B=2 C=2
+    0036 [line  230] 0x87828249  SETTABLE   R9[K[15]='equip_index'] = R10
+    0037 [line  231] 0x01C48286  GETTABLE   R10 = R3[K[18]='tid']
+    0038 [line  231] 0x88828249  SETTABLE   R9[K[17]='equip_tid'] = R10
+    0039 [line  232] 0x89C50249  SETTABLE   R9[K[19]='save'] = K[20]=False
+    0040 [line  233] 0x02458286  GETTABLE   R10 = R4[K[22]='id_equip_refresh_item']
+    0041 [line  233] 0x8A828249  SETTABLE   R9[K[21]='tool_tid'] = R10
+    0042 [line  234] 0x8BC60249  SETTABLE   R9[K[23]='count'] = K[24]=1.0
+    0043 [line  236] 0x0046428B  SELF       A=10 B=0 C=281 Bx=281
+    0044 [line  236] 0x0100829C  CALL       A=10 B=2 C=2
+    0045 [line  238] 0x0046C2CB  SELF       A=11 B=0 C=283 Bx=283
+    0046 [line  238] 0x010082DC  CALL       A=11 B=2 C=2
+    0047 [line  238] 0x8D02C249  SETTABLE   R9[K[26]='lock_tid'] = R11
+    0048 [line  239] 0x8E450249  SETTABLE   R9[K[28]='reply'] = K[20]=False
+    0049 [line  241] 0x04C742C6  GETTABLE   R11 = R9[K[29]='addons']
+    0050 [line  242] 0x00060301  LOADK      R12 = K[24]=1.0
+    0051 [line  242] 0x00800344  GETUPVAL   A=13 B=1 C=0 Bx=512
+    0052 [line  242] 0x06C78346  GETTABLE   R13 = R13[K[30]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0053 [line  242] 0x00060381  LOADK      R14 = K[24]=1.0
+    0054 [line  242] 0x80024320  FORPREP    A=12 sBx=10
+    0055 [line  243] 0x0047C40B  SELF       A=16 B=0 C=287 Bx=287
+    0056 [line  243] 0x07800480  MOVE       R18 = R15
+    0057 [line  243] 0x0180841C  CALL       A=16 B=3 C=2
+    0058 [line  243] 0x0000041A  TEST       A=16 B=0 C=0
+    0059 [line  243] 0x80010016  JMP        A=0 sBx=5
+    0060 [line  244] 0x00080405  GETGLOBAL  R16 = GLOBAL K[32]='table'
+    0061 [line  244] 0x08484406  GETTABLE   R16 = R16[K[33]='insert']
+    0062 [line  244] 0x05800440  MOVE       R17 = R11
+    0063 [line  244] 0x07800480  MOVE       R18 = R15
+    0064 [line  244] 0x0180441C  CALL       A=16 B=3 C=1
+    0065 [line  242] 0x7FFD031F  FORLOOP    A=12 sBx=-11
+    0066 [line  248] 0x03488306  GETTABLE   R12 = R6[K[34]='Send']
+    0067 [line  248] 0x04800340  MOVE       R13 = R9
+    0068 [line  248] 0x0100431C  CALL       A=12 B=2 C=1
+    0069 [line  250] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 69
+    'retval': 0 -> 69
+    'equipment': 1 -> 69
+    'equipData': 7 -> 69
+    'cfg': 17 -> 69
+    'datatype': 17 -> 69
+    'pb_helper': 23 -> 69
+    'net_common': 26 -> 69
+    'gp_equip_xilian': 27 -> 69
+    'msg': 29 -> 69
+    'lockCount': 45 -> 69
+    'addons': 50 -> 69
+    '(for index)': 54 -> 66
+    '(for limit)': 54 -> 66
+    '(for step)': 54 -> 66
+    'i': 55 -> 65
+
+    ============================================================
+    PROTO ROOT.10
+    Offset : 0x2B5F
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 252 - 264
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'HasRefreshAddons'
+    K[004] = 1.0
+    K[005] = 'GetFightScore'
+    K[006] = 0.0
+    K[007] = 'MsgBox'
+    K[008] = 'ShowMsgBox'
+    K[009] = 'StringTable'
+    K[010] = 58.0
+    K[011] = 'MsgBoxType'
+    K[012] = 'MBBT_OKCANCEL'
+    K[013] = 'GetBindState'
+    K[014] = 9014.0
+    K[015] = 'MsgBoxRetT'
+    K[016] = 'MBRT_OK'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  253] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line  254] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  254] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  254] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  255] 0x00C04086  GETTABLE   R2 = R1[K[1]='itemHandle']
+    0005 [line  255] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0006 [line  255] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line  257] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0008 [line  257] 0x00010141  LOADK      R5 = K[4]=1.0
+    0009 [line  257] 0x018080DC  CALL       A=3 B=3 C=2
+    0010 [line  257] 0x000000DA  TEST       A=3 B=0 C=0
+    0011 [line  257] 0x80054016  JMP        A=0 sBx=22
+    0012 [line  257] 0x014140CB  SELF       A=3 B=2 C=261 Bx=1285
+    0013 [line  257] 0x00018141  LOADK      R5 = K[6]=0.0
+    0014 [line  257] 0x018080DC  CALL       A=3 B=3 C=2
+    0015 [line  257] 0x0141410B  SELF       A=4 B=2 C=261 Bx=1285
+    0016 [line  257] 0x00010181  LOADK      R6 = K[4]=1.0
+    0017 [line  257] 0x0180811C  CALL       A=4 B=3 C=2
+    0018 [line  257] 0x01810018  LT         A=0 B=R3 C=R4
+    0019 [line  257] 0x80034016  JMP        A=0 sBx=14
+    0020 [line  258] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='MsgBox'
+    0021 [line  258] 0x01C200C6  GETTABLE   R3 = R3[K[8]='ShowMsgBox']
+    0022 [line  258] 0x00000100  MOVE       R4 = R0
+    0023 [line  258] 0x00024145  GETGLOBAL  R5 = GLOBAL K[9]='StringTable'
+    0024 [line  258] 0x02C08146  GETTABLE   R5 = R5[K[2]='Get']
+    0025 [line  258] 0x00028181  LOADK      R6 = K[10]=58.0
+    0026 [line  258] 0x0100815C  CALL       A=5 B=2 C=2
+    0027 [line  258] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0028 [line  258] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='MsgBox'
+    0029 [line  258] 0x03C2C1C6  GETTABLE   R7 = R7[K[11]='MsgBoxType']
+    0030 [line  258] 0x03C301C6  GETTABLE   R7 = R7[K[12]='MBBT_OKCANCEL']
+    0031 [line  258] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0032 [line  258] 0x030040DC  CALL       A=3 B=6 C=1
+    0033 [line  258] 0x8005C016  JMP        A=0 sBx=24
+    0034 [line  259] 0x014340CB  SELF       A=3 B=2 C=269 Bx=1293
+    0035 [line  259] 0x010080DC  CALL       A=3 B=2 C=2
+    0036 [line  259] 0x000040DA  TEST       A=3 B=0 C=1
+    0037 [line  259] 0x80034016  JMP        A=0 sBx=14
+    0038 [line  260] 0x0001C0C5  GETGLOBAL  R3 = GLOBAL K[7]='MsgBox'
+    0039 [line  260] 0x01C200C6  GETTABLE   R3 = R3[K[8]='ShowMsgBox']
+    0040 [line  260] 0x00000100  MOVE       R4 = R0
+    0041 [line  260] 0x00024145  GETGLOBAL  R5 = GLOBAL K[9]='StringTable'
+    0042 [line  260] 0x02C08146  GETTABLE   R5 = R5[K[2]='Get']
+    0043 [line  260] 0x00038181  LOADK      R6 = K[14]=9014.0
+    0044 [line  260] 0x0100815C  CALL       A=5 B=2 C=2
+    0045 [line  260] 0x03000183  LOADNIL    A=6 B=6 C=0 Bx=3072
+    0046 [line  260] 0x0001C1C5  GETGLOBAL  R7 = GLOBAL K[7]='MsgBox'
+    0047 [line  260] 0x03C2C1C6  GETTABLE   R7 = R7[K[11]='MsgBoxType']
+    0048 [line  260] 0x03C301C6  GETTABLE   R7 = R7[K[12]='MBBT_OKCANCEL']
+    0049 [line  260] 0x00000204  GETUPVAL   A=8 B=0 C=0 Bx=0
+    0050 [line  260] 0x030040DC  CALL       A=3 B=6 C=1
+    0051 [line  260] 0x80014016  JMP        A=0 sBx=6
+    0052 [line  262] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0053 [line  262] 0x00000100  MOVE       R4 = R0
+    0054 [line  262] 0x0001C145  GETGLOBAL  R5 = GLOBAL K[7]='MsgBox'
+    0055 [line  262] 0x02C3C146  GETTABLE   R5 = R5[K[15]='MsgBoxRetT']
+    0056 [line  262] 0x02C40146  GETTABLE   R5 = R5[K[16]='MBRT_OK']
+    0057 [line  262] 0x018040DC  CALL       A=3 B=3 C=1
+    0058 [line  264] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 58
+    'equipment': 1 -> 58
+    'equipData': 7 -> 58
+
+    ============================================================
+    PROTO ROOT.11
+    Offset : 0x2EAC
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 267 - 288
+    Params : 1
+    Stack  : 13
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'getConfig'
+    K[004] = 'special_id_config'
+    K[005] = 'id_special_id_config'
+    K[006] = 'require'
+    K[007] = 'PB.pb_helper'
+    K[008] = 'PB.net_common'
+    K[009] = 'gp_equip_xilian'
+    K[010] = 'location'
+    K[011] = 'Pack'
+    K[012] = 'equip_index'
+    K[013] = 'Slot'
+    K[014] = 'equip_tid'
+    K[015] = 'tid'
+    K[016] = 'save'
+    K[017] = True
+    K[018] = 'lock_tid'
+    K[019] = 0.0
+    K[020] = 'tool_tid'
+    K[021] = 'id_equip_refresh_item'
+    K[022] = 'count'
+    K[023] = 1.0
+    K[024] = 'reply'
+    K[025] = 'addons'
+    K[026] = 'table'
+    K[027] = 'insert'
+    K[028] = 'Send'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  268] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line  269] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  269] 0x80000016  JMP        A=0 sBx=1
+    0003 [line  269] 0x0080001E  RETURN     A=0 B=1 C=0
+    0004 [line  270] 0x00C04086  GETTABLE   R2 = R1[K[1]='itemHandle']
+    0005 [line  270] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0006 [line  270] 0x0100809C  CALL       A=2 B=2 C=2
+    0007 [line  271] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0008 [line  271] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='getConfig']
+    0009 [line  271] 0x00010105  GETGLOBAL  R4 = GLOBAL K[4]='special_id_config'
+    0010 [line  271] 0x02414106  GETTABLE   R4 = R4[K[5]='id_special_id_config']
+    0011 [line  271] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0012 [line  272] 0x000040DA  TEST       A=3 B=0 C=1
+    0013 [line  272] 0x80000016  JMP        A=0 sBx=1
+    0014 [line  272] 0x0080001E  RETURN     A=0 B=1 C=0
+    0015 [line  273] 0x00018145  GETGLOBAL  R5 = GLOBAL K[6]='require'
+    0016 [line  273] 0x0001C181  LOADK      R6 = K[7]='PB.pb_helper'
+    0017 [line  273] 0x0100815C  CALL       A=5 B=2 C=2
+    0018 [line  274] 0x00018185  GETGLOBAL  R6 = GLOBAL K[6]='require'
+    0019 [line  274] 0x000201C1  LOADK      R7 = K[8]='PB.net_common'
+    0020 [line  274] 0x0100819C  CALL       A=6 B=2 C=2
+    0021 [line  275] 0x034241C6  GETTABLE   R7 = R6[K[9]='gp_equip_xilian']
+    0022 [line  276] 0x03800200  MOVE       R8 = R7
+    0023 [line  276] 0x0080821C  CALL       A=8 B=1 C=2
+    0024 [line  277] 0x00C04246  GETTABLE   R9 = R1[K[1]='itemHandle']
+    0025 [line  277] 0x04C2C24B  SELF       A=9 B=9 C=267 Bx=4875
+    0026 [line  277] 0x0100825C  CALL       A=9 B=2 C=2
+    0027 [line  277] 0x85024209  SETTABLE   R8[K[10]='location'] = R9
+    0028 [line  278] 0x00C04246  GETTABLE   R9 = R1[K[1]='itemHandle']
+    0029 [line  278] 0x04C3424B  SELF       A=9 B=9 C=269 Bx=4877
+    0030 [line  278] 0x0100825C  CALL       A=9 B=2 C=2
+    0031 [line  278] 0x86024209  SETTABLE   R8[K[12]='equip_index'] = R9
+    0032 [line  279] 0x0143C246  GETTABLE   R9 = R2[K[15]='tid']
+    0033 [line  279] 0x87024209  SETTABLE   R8[K[14]='equip_tid'] = R9
+    0034 [line  280] 0x88444209  SETTABLE   R8[K[16]='save'] = K[17]=True
+    0035 [line  281] 0x8944C209  SETTABLE   R8[K[18]='lock_tid'] = K[19]=0.0
+    0036 [line  282] 0x01C54246  GETTABLE   R9 = R3[K[21]='id_equip_refresh_item']
+    0037 [line  282] 0x8A024209  SETTABLE   R8[K[20]='tool_tid'] = R9
+    0038 [line  283] 0x8B45C209  SETTABLE   R8[K[22]='count'] = K[23]=1.0
+    0039 [line  284] 0x8C444209  SETTABLE   R8[K[24]='reply'] = K[17]=True
+    0040 [line  285] 0x04464246  GETTABLE   R9 = R8[K[25]='addons']
+    0041 [line  286] 0x00068285  GETGLOBAL  R10 = GLOBAL K[26]='table'
+    0042 [line  286] 0x0546C286  GETTABLE   R10 = R10[K[27]='insert']
+    0043 [line  286] 0x048002C0  MOVE       R11 = R9
+    0044 [line  286] 0x0004C301  LOADK      R12 = K[19]=0.0
+    0045 [line  286] 0x0180429C  CALL       A=10 B=3 C=1
+    0046 [line  287] 0x02C70286  GETTABLE   R10 = R5[K[28]='Send']
+    0047 [line  287] 0x040002C0  MOVE       R11 = R8
+    0048 [line  287] 0x0100429C  CALL       A=10 B=2 C=1
+    0049 [line  288] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 49
+    'equipment': 1 -> 49
+    'equipData': 7 -> 49
+    'cfg': 12 -> 49
+    'datatype': 12 -> 49
+    'pb_helper': 18 -> 49
+    'net_common': 21 -> 49
+    'gp_equip_xilian': 22 -> 49
+    'msg': 24 -> 49
+    'addons': 41 -> 49
+
+    ============================================================
+    PROTO ROOT.12
+    Offset : 0x32D6
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 291 - 305
+    Params : 2
+    Stack  : 6
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 'itemHandle'
+    K[002] = 'Get'
+    K[003] = 'PackageType'
+    K[004] = 'Slot'
+    K[005] = 'UnlockAll'
+    K[006] = 'UpdateAll'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  292] 0x0000405A  TEST       A=1 B=0 C=1
+    0001 [line  292] 0x80000016  JMP        A=0 sBx=1
+    0002 [line  292] 0x0080001E  RETURN     A=0 B=1 C=0
+    0003 [line  293] 0x00400086  GETTABLE   R2 = R0[K[0]='m_mainEquip']
+    0004 [line  293] 0x00808017  EQ         A=0 B=R1 C=R2
+    0005 [line  293] 0x80000016  JMP        A=0 sBx=1
+    0006 [line  293] 0x0080001E  RETURN     A=0 B=1 C=0
+    0007 [line  294] 0x00400086  GETTABLE   R2 = R0[K[0]='m_mainEquip']
+    0008 [line  294] 0x0000009A  TEST       A=2 B=0 C=0
+    0009 [line  294] 0x8004C016  JMP        A=0 sBx=20
+    0010 [line  295] 0x00400086  GETTABLE   R2 = R0[K[0]='m_mainEquip']
+    0011 [line  295] 0x01404086  GETTABLE   R2 = R2[K[1]='itemHandle']
+    0012 [line  295] 0x0140808B  SELF       A=2 B=2 C=258 Bx=1282
+    0013 [line  295] 0x0100809C  CALL       A=2 B=2 C=2
+    0014 [line  296] 0x00C040C6  GETTABLE   R3 = R1[K[1]='itemHandle']
+    0015 [line  296] 0x01C080CB  SELF       A=3 B=3 C=258 Bx=1794
+    0016 [line  296] 0x010080DC  CALL       A=3 B=2 C=2
+    0017 [line  297] 0x000000DA  TEST       A=3 B=0 C=0
+    0018 [line  297] 0x80028016  JMP        A=0 sBx=11
+    0019 [line  297] 0x0000009A  TEST       A=2 B=0 C=0
+    0020 [line  297] 0x80020016  JMP        A=0 sBx=9
+    0021 [line  297] 0x0140C106  GETTABLE   R4 = R2[K[3]='PackageType']
+    0022 [line  297] 0x01C0C146  GETTABLE   R5 = R3[K[3]='PackageType']
+    0023 [line  297] 0x02014017  EQ         A=0 B=R4 C=R5
+    0024 [line  297] 0x80010016  JMP        A=0 sBx=5
+    0025 [line  297] 0x01410106  GETTABLE   R4 = R2[K[4]='Slot']
+    0026 [line  297] 0x01C10146  GETTABLE   R5 = R3[K[4]='Slot']
+    0027 [line  297] 0x02014017  EQ         A=0 B=R4 C=R5
+    0028 [line  297] 0x80000016  JMP        A=0 sBx=1
+    0029 [line  298] 0x0080001E  RETURN     A=0 B=1 C=0
+    0030 [line  302] 0x80004009  SETTABLE   R0[K[0]='m_mainEquip'] = R1
+    0031 [line  303] 0x0041408B  SELF       A=2 B=0 C=261 Bx=261
+    0032 [line  303] 0x0100409C  CALL       A=2 B=2 C=1
+    0033 [line  304] 0x0041808B  SELF       A=2 B=0 C=262 Bx=262
+    0034 [line  304] 0x0100409C  CALL       A=2 B=2 C=1
+    0035 [line  305] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+    'equipment': 0 -> 35
+    'item': 14 -> 30
+    'selectItem': 17 -> 30
+
+    ============================================================
+    PROTO ROOT.13
+    Offset : 0x34D0
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 307 - 323
+    Params : 2
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'string'
+    K[001] = 'format'
+    K[002] = 'Chk_Lock%d'
+    K[003] = 'CheckLockCount'
+    K[004] = 'EXP_EQUIP_REFRESH_LOCK_PROP_MAX'
+    K[005] = 'FlashTipMan'
+    K[006] = 'FlashTip'
+    K[007] = 'StringTable'
+    K[008] = 'Get'
+    K[009] = 116.0
+    K[010] = 'LockAttrByIndex'
+    K[011] = 'm_mainEquip'
+    K[012] = 'itemHandle'
+    K[013] = 'm_Essence'
+    K[014] = '_fixed_ess'
+    K[015] = 'base_addon_count'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  308] 0x00000085  GETGLOBAL  R2 = GLOBAL K[0]='string'
+    0001 [line  308] 0x01404086  GETTABLE   R2 = R2[K[1]='format']
+    0002 [line  308] 0x000080C1  LOADK      R3 = K[2]='Chk_Lock%d'
+    0003 [line  308] 0x00800100  MOVE       R4 = R1
+    0004 [line  308] 0x0180809C  CALL       A=2 B=3 C=2
+    0005 [line  309] 0x0040C0CB  SELF       A=3 B=0 C=259 Bx=259
+    0006 [line  309] 0x010080DC  CALL       A=3 B=2 C=2
+    0007 [line  309] 0x00000104  GETUPVAL   A=4 B=0 C=0 Bx=0
+    0008 [line  309] 0x02410106  GETTABLE   R4 = R4[K[4]='EXP_EQUIP_REFRESH_LOCK_PROP_MAX']
+    0009 [line  309] 0x0200C018  LT         A=0 B=R4 C=R3
+    0010 [line  309] 0x8002C016  JMP        A=0 sBx=12
+    0011 [line  310] 0x000140C5  GETGLOBAL  R3 = GLOBAL K[5]='FlashTipMan'
+    0012 [line  310] 0x01C180C6  GETTABLE   R3 = R3[K[6]='FlashTip']
+    0013 [line  310] 0x0001C105  GETGLOBAL  R4 = GLOBAL K[7]='StringTable'
+    0014 [line  310] 0x02420106  GETTABLE   R4 = R4[K[8]='Get']
+    0015 [line  310] 0x00024141  LOADK      R5 = K[9]=116.0
+    0016 [line  310] 0x0100011C  CALL       A=4 B=2 C=0
+    0017 [line  310] 0x000040DC  CALL       A=3 B=0 C=1
+    0018 [line  311] 0x004280CB  SELF       A=3 B=0 C=266 Bx=266
+    0019 [line  311] 0x00800140  MOVE       R5 = R1
+    0020 [line  311] 0x00000182  LOADBOOL   A=6 B=0 C=0
+    0021 [line  311] 0x020040DC  CALL       A=3 B=4 C=1
+    0022 [line  312] 0x0080001E  RETURN     A=0 B=1 C=0
+    0023 [line  315] 0x0042C0C6  GETTABLE   R3 = R0[K[11]='m_mainEquip']
+    0024 [line  316] 0x000040DA  TEST       A=3 B=0 C=1
+    0025 [line  316] 0x80000016  JMP        A=0 sBx=1
+    0026 [line  316] 0x0080001E  RETURN     A=0 B=1 C=0
+    0027 [line  318] 0x01C30106  GETTABLE   R4 = R3[K[12]='itemHandle']
+    0028 [line  318] 0x0242010B  SELF       A=4 B=4 C=264 Bx=2312
+    0029 [line  318] 0x0100811C  CALL       A=4 B=2 C=2
+    0030 [line  319] 0x02434146  GETTABLE   R5 = R4[K[13]='m_Essence']
+    0031 [line  319] 0x02C38146  GETTABLE   R5 = R5[K[14]='_fixed_ess']
+    0032 [line  319] 0x02C3C146  GETTABLE   R5 = R5[K[15]='base_addon_count']
+    0033 [line  319] 0x02804018  LT         A=0 B=R5 C=R1
+    0034 [line  319] 0x80010016  JMP        A=0 sBx=5
+    0035 [line  320] 0x0042814B  SELF       A=5 B=0 C=266 Bx=266
+    0036 [line  320] 0x008001C0  MOVE       R7 = R1
+    0037 [line  320] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0038 [line  320] 0x0200415C  CALL       A=5 B=4 C=1
+    0039 [line  321] 0x0080001E  RETURN     A=0 B=1 C=0
+    0040 [line  323] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 40
+    'index': 0 -> 40
+    'who': 5 -> 40
+    'mainEquipment': 24 -> 40
+    'itemData': 30 -> 40
+
+    ============================================================
+    PROTO ROOT.14
+    Offset : 0x37B9
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 327 - 332
+    Params : 3
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Panel'
+    K[001] = 'FindChild'
+    K[002] = 'SubPanel_Refresh/SubPanel_Refresh'
+    K[003] = 'AttriBefore'
+    K[004] = 'Chk_Lock'
+    K[005] = 'setToggle'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  328] 0x004000C6  GETTABLE   R3 = R0[K[0]='m_Panel']
+    0001 [line  328] 0x01C040CB  SELF       A=3 B=3 C=257 Bx=1793
+    0002 [line  328] 0x00008141  LOADK      R5 = K[2]='SubPanel_Refresh/SubPanel_Refresh'
+    0003 [line  328] 0x018080DC  CALL       A=3 B=3 C=2
+    0004 [line  329] 0x01C0410B  SELF       A=4 B=3 C=257 Bx=1793
+    0005 [line  329] 0x0000C181  LOADK      R6 = K[3]='AttriBefore'
+    0006 [line  329] 0x0180811C  CALL       A=4 B=3 C=2
+    0007 [line  330] 0x0240414B  SELF       A=5 B=4 C=257 Bx=2305
+    0008 [line  330] 0x000101C1  LOADK      R7 = K[4]='Chk_Lock'
+    0009 [line  330] 0x00800200  MOVE       R8 = R1
+    0010 [line  330] 0x038201D5  CONCAT     A=7 B=7 C=8 Bx=3592
+    0011 [line  330] 0x0180815C  CALL       A=5 B=3 C=2
+    0012 [line  331] 0x00000184  GETUPVAL   A=6 B=0 C=0 Bx=0
+    0013 [line  331] 0x03414186  GETTABLE   R6 = R6[K[5]='setToggle']
+    0014 [line  331] 0x028001C0  MOVE       R7 = R5
+    0015 [line  331] 0x01000200  MOVE       R8 = R2
+    0016 [line  331] 0x0180419C  CALL       A=6 B=3 C=1
+    0017 [line  332] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'index': 0 -> 17
+    'lock': 0 -> 17
+    'refreshPanel': 4 -> 17
+    'before': 7 -> 17
+    'obj': 12 -> 17
+
+    ============================================================
+    PROTO ROOT.15
+    Offset : 0x3961
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 334 - 338
+    Params : 1
+    Stack  : 9
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 1.0
+    K[001] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[002] = 'LockAttrByIndex'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  335] 0x00000041  LOADK      R1 = K[0]=1.0
+    0001 [line  335] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0002 [line  335] 0x01404086  GETTABLE   R2 = R2[K[1]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0003 [line  335] 0x000000C1  LOADK      R3 = K[0]=1.0
+    0004 [line  335] 0x8000C060  FORPREP    A=1 sBx=4
+    0005 [line  336] 0x0040814B  SELF       A=5 B=0 C=258 Bx=258
+    0006 [line  336] 0x020001C0  MOVE       R7 = R4
+    0007 [line  336] 0x00000202  LOADBOOL   A=8 B=0 C=0
+    0008 [line  336] 0x0200415C  CALL       A=5 B=4 C=1
+    0009 [line  335] 0x7FFE805F  FORLOOP    A=1 sBx=-5
+    0010 [line  338] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 10
+    '(for index)': 4 -> 10
+    '(for limit)': 4 -> 10
+    '(for step)': 4 -> 10
+    'i': 5 -> 9
+
+    ============================================================
+    PROTO ROOT.16
+    Offset : 0x3A98
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 340 - 345
+    Params : 2
+    Stack  : 8
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Panel'
+    K[001] = 'FindChild'
+    K[002] = 'SubPanel_Refresh/SubPanel_Refresh'
+    K[003] = 'AttriBefore'
+    K[004] = 'Chk_Lock'
+    K[005] = 'GetComponent'
+    K[006] = 'UIToggle'
+    K[007] = 'value'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  341] 0x00400086  GETTABLE   R2 = R0[K[0]='m_Panel']
+    0001 [line  341] 0x0140408B  SELF       A=2 B=2 C=257 Bx=1281
+    0002 [line  341] 0x00008101  LOADK      R4 = K[2]='SubPanel_Refresh/SubPanel_Refresh'
+    0003 [line  341] 0x0180809C  CALL       A=2 B=3 C=2
+    0004 [line  342] 0x014040CB  SELF       A=3 B=2 C=257 Bx=1281
+    0005 [line  342] 0x0000C141  LOADK      R5 = K[3]='AttriBefore'
+    0006 [line  342] 0x018080DC  CALL       A=3 B=3 C=2
+    0007 [line  343] 0x01C0410B  SELF       A=4 B=3 C=257 Bx=1793
+    0008 [line  343] 0x00010181  LOADK      R6 = K[4]='Chk_Lock'
+    0009 [line  343] 0x008001C0  MOVE       R7 = R1
+    0010 [line  343] 0x0301C195  CONCAT     A=6 B=6 C=7 Bx=3079
+    0011 [line  343] 0x0180811C  CALL       A=4 B=3 C=2
+    0012 [line  344] 0x0241414B  SELF       A=5 B=4 C=261 Bx=2309
+    0013 [line  344] 0x000181C1  LOADK      R7 = K[6]='UIToggle'
+    0014 [line  344] 0x0180815C  CALL       A=5 B=3 C=2
+    0015 [line  344] 0x02C1C146  GETTABLE   R5 = R5[K[7]='value']
+    0016 [line  344] 0x0100015E  RETURN     A=5 B=2 C=0
+    0017 [line  345] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 17
+    'index': 0 -> 17
+    'refreshPanel': 4 -> 17
+    'before': 7 -> 17
+    'obj': 12 -> 17
+
+    ============================================================
+    PROTO ROOT.17
+    Offset : 0x3C3C
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 347 - 360
+    Params : 1
+    Stack  : 12
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_Panel'
+    K[001] = 'isnil'
+    K[002] = 0.0
+    K[003] = 'FindChild'
+    K[004] = 'SubPanel_Refresh/SubPanel_Refresh'
+    K[005] = 'AttriBefore'
+    K[006] = 1.0
+    K[007] = 'EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX'
+    K[008] = 'Chk_Lock'
+    K[009] = 'GetComponent'
+    K[010] = 'UIToggle'
+    K[011] = 'value'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  348] 0x00400046  GETTABLE   R1 = R0[K[0]='m_Panel']
+    0001 [line  348] 0x0000005A  TEST       A=1 B=0 C=0
+    0002 [line  348] 0x8000C016  JMP        A=0 sBx=4
+    0003 [line  348] 0x00400046  GETTABLE   R1 = R0[K[0]='m_Panel']
+    0004 [line  348] 0x00C04046  GETTABLE   R1 = R1[K[1]='isnil']
+    0005 [line  348] 0x0000005A  TEST       A=1 B=0 C=0
+    0006 [line  348] 0x80000016  JMP        A=0 sBx=1
+    0007 [line  348] 0x0080001E  RETURN     A=0 B=1 C=0
+    0008 [line  350] 0x00008041  LOADK      R1 = K[2]=0.0
+    0009 [line  351] 0x00400086  GETTABLE   R2 = R0[K[0]='m_Panel']
+    0010 [line  351] 0x0140C08B  SELF       A=2 B=2 C=259 Bx=1283
+    0011 [line  351] 0x00010101  LOADK      R4 = K[4]='SubPanel_Refresh/SubPanel_Refresh'
+    0012 [line  351] 0x0180809C  CALL       A=2 B=3 C=2
+    0013 [line  352] 0x0140C0CB  SELF       A=3 B=2 C=259 Bx=1283
+    0014 [line  352] 0x00014141  LOADK      R5 = K[5]='AttriBefore'
+    0015 [line  352] 0x018080DC  CALL       A=3 B=3 C=2
+    0016 [line  353] 0x00018101  LOADK      R4 = K[6]=1.0
+    0017 [line  353] 0x00000144  GETUPVAL   A=5 B=0 C=0 Bx=0
+    0018 [line  353] 0x02C1C146  GETTABLE   R5 = R5[K[7]='EXP_EQUIP_REFRESH_ACTIVATE_ADDON_MAX']
+    0019 [line  353] 0x00018181  LOADK      R6 = K[6]=1.0
+    0020 [line  353] 0x8002C120  FORPREP    A=4 sBx=12
+    0021 [line  354] 0x01C0C20B  SELF       A=8 B=3 C=259 Bx=1795
+    0022 [line  354] 0x00020281  LOADK      R10 = K[8]='Chk_Lock'
+    0023 [line  354] 0x038002C0  MOVE       R11 = R7
+    0024 [line  354] 0x0502C295  CONCAT     A=10 B=10 C=11 Bx=5131
+    0025 [line  354] 0x0180821C  CALL       A=8 B=3 C=2
+    0026 [line  355] 0x0442424B  SELF       A=9 B=8 C=265 Bx=4361
+    0027 [line  355] 0x000282C1  LOADK      R11 = K[10]='UIToggle'
+    0028 [line  355] 0x0180825C  CALL       A=9 B=3 C=2
+    0029 [line  355] 0x04C2C246  GETTABLE   R9 = R9[K[11]='value']
+    0030 [line  355] 0x0000025A  TEST       A=9 B=0 C=0
+    0031 [line  355] 0x80000016  JMP        A=0 sBx=1
+    0032 [line  356] 0x00C1804C  ADD        A=1 B=R1 C=K[6]=1.0
+    0033 [line  353] 0x7FFC811F  FORLOOP    A=4 sBx=-13
+    0034 [line  359] 0x0100005E  RETURN     A=1 B=2 C=0
+    0035 [line  360] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 35
+    'count': 9 -> 35
+    'refreshPanel': 13 -> 35
+    'before': 16 -> 35
+    '(for index)': 20 -> 34
+    '(for limit)': 20 -> 34
+    '(for step)': 20 -> 34
+    'i': 21 -> 33
+    'Chk_Lock': 26 -> 33
+
+    ============================================================
+    PROTO ROOT.18
+    Offset : 0x3F1A
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 362 - 367
+    Params : 1
+    Stack  : 5
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'CheckLockCount'
+    K[001] = 'getConfig'
+    K[002] = 'special_id_config'
+    K[003] = 'id_special_id_config'
+    K[004] = 0.0
+    K[005] = 'id_equip_refresh_lock_prop_item'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  363] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  363] 0x0100805C  CALL       A=1 B=2 C=2
+    0002 [line  364] 0x00000084  GETUPVAL   A=2 B=0 C=0 Bx=0
+    0003 [line  364] 0x01404086  GETTABLE   R2 = R2[K[1]='getConfig']
+    0004 [line  364] 0x000080C5  GETGLOBAL  R3 = GLOBAL K[2]='special_id_config'
+    0005 [line  364] 0x01C0C0C6  GETTABLE   R3 = R3[K[3]='id_special_id_config']
+    0006 [line  364] 0x0100C09C  CALL       A=2 B=2 C=3
+    0007 [line  365] 0x00C10017  EQ         A=0 B=R1 C=K[4]=0.0
+    0008 [line  365] 0x80004016  JMP        A=0 sBx=2
+    0009 [line  365] 0x00010101  LOADK      R4 = K[4]=0.0
+    0010 [line  365] 0x0100011E  RETURN     A=4 B=2 C=0
+    0011 [line  366] 0x01414106  GETTABLE   R4 = R2[K[5]='id_equip_refresh_lock_prop_item']
+    0012 [line  366] 0x02004106  GETTABLE   R4 = R4[R1]
+    0013 [line  366] 0x0100011E  RETURN     A=4 B=2 C=0
+    0014 [line  367] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 14
+    'lockCount': 2 -> 14
+    'specialIdConfigTempalte': 7 -> 14
+    '_': 7 -> 14
+
+    ============================================================
+    PROTO ROOT.19
+    Offset : 0x40A5
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 371 - 389
+    Params : 1
+    Stack  : 11
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'm_mainEquip'
+    K[001] = 0.0
+    K[002] = 'itemHandle'
+    K[003] = 'Get'
+    K[004] = 'getEssence'
+    K[005] = 'tid'
+    K[006] = None
+    K[007] = 'xilian_use_limit'
+    K[008] = 'Instance'
+    K[009] = 'm_HostPlayer'
+    K[010] = 'GetCommonUseMaxCount'
+    K[011] = 'GetCommonUseCount'
+    K[012] = 'math'
+    K[013] = 'max'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  372] 0x00400046  GETTABLE   R1 = R0[K[0]='m_mainEquip']
+    0001 [line  373] 0x0000405A  TEST       A=1 B=0 C=1
+    0002 [line  373] 0x80008016  JMP        A=0 sBx=3
+    0003 [line  374] 0x00004081  LOADK      R2 = K[1]=0.0
+    0004 [line  374] 0x000040C1  LOADK      R3 = K[1]=0.0
+    0005 [line  374] 0x0180009E  RETURN     A=2 B=3 C=0
+    0006 [line  377] 0x00C08086  GETTABLE   R2 = R1[K[2]='itemHandle']
+    0007 [line  377] 0x0140C08B  SELF       A=2 B=2 C=259 Bx=1283
+    0008 [line  377] 0x0100809C  CALL       A=2 B=2 C=2
+    0009 [line  378] 0x000000C4  GETUPVAL   A=3 B=0 C=0 Bx=0
+    0010 [line  378] 0x01C100C6  GETTABLE   R3 = R3[K[4]='getEssence']
+    0011 [line  378] 0x01414106  GETTABLE   R4 = R2[K[5]='tid']
+    0012 [line  378] 0x0100C0DC  CALL       A=3 B=2 C=3
+    0013 [line  379] 0x01C18017  EQ         A=0 B=R3 C=K[6]=None
+    0014 [line  379] 0x80008016  JMP        A=0 sBx=3
+    0015 [line  380] 0x00004141  LOADK      R5 = K[1]=0.0
+    0016 [line  380] 0x00004181  LOADK      R6 = K[1]=0.0
+    0017 [line  380] 0x0180015E  RETURN     A=5 B=3 C=0
+    0018 [line  383] 0x01C1C146  GETTABLE   R5 = R3[K[7]='xilian_use_limit']
+    0019 [line  385] 0x00800184  GETUPVAL   A=6 B=1 C=0 Bx=512
+    0020 [line  385] 0x03420186  GETTABLE   R6 = R6[K[8]='Instance']
+    0021 [line  385] 0x0080819C  CALL       A=6 B=1 C=2
+    0022 [line  385] 0x03424186  GETTABLE   R6 = R6[K[9]='m_HostPlayer']
+    0023 [line  385] 0x0342818B  SELF       A=6 B=6 C=266 Bx=3338
+    0024 [line  385] 0x02800200  MOVE       R8 = R5
+    0025 [line  385] 0x0180819C  CALL       A=6 B=3 C=2
+    0026 [line  386] 0x008001C4  GETUPVAL   A=7 B=1 C=0 Bx=512
+    0027 [line  386] 0x03C201C6  GETTABLE   R7 = R7[K[8]='Instance']
+    0028 [line  386] 0x008081DC  CALL       A=7 B=1 C=2
+    0029 [line  386] 0x03C241C6  GETTABLE   R7 = R7[K[9]='m_HostPlayer']
+    0030 [line  386] 0x03C2C1CB  SELF       A=7 B=7 C=267 Bx=3851
+    0031 [line  386] 0x02800240  MOVE       R9 = R5
+    0032 [line  386] 0x018081DC  CALL       A=7 B=3 C=2
+    0033 [line  388] 0x00030205  GETGLOBAL  R8 = GLOBAL K[12]='math'
+    0034 [line  388] 0x04434206  GETTABLE   R8 = R8[K[13]='max']
+    0035 [line  388] 0x0301C24D  SUB        A=9 B=R6 C=R7
+    0036 [line  388] 0x00004281  LOADK      R10 = K[1]=0.0
+    0037 [line  388] 0x0180821C  CALL       A=8 B=3 C=2
+    0038 [line  388] 0x03000240  MOVE       R9 = R6
+    0039 [line  388] 0x0180021E  RETURN     A=8 B=3 C=0
+    0040 [line  389] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 40
+    'equipment': 1 -> 40
+    'equipData': 9 -> 40
+    'ess': 13 -> 40
+    'dt': 13 -> 40
+    'limit_id': 19 -> 40
+    'maxUseLimit': 26 -> 40
+    'mHaveUsed': 33 -> 40
+
+    ============================================================
+    PROTO ROOT.20
+    Offset : 0x4396
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 392 - 398
+    Params : 1
+    Stack  : 4
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'GetLeaveCount'
+    K[001] = 0.0
+    K[002] = 'FlashTipMan'
+    K[003] = 'FlashTip'
+    K[004] = 'StringTable'
+    K[005] = 'Get'
+    K[006] = 301201.0
+
+    ----- INSTRUCTIONS -----
+    0000 [line  393] 0x0040004B  SELF       A=1 B=0 C=256 Bx=256
+    0001 [line  393] 0x0100805C  CALL       A=1 B=2 C=2
+    0002 [line  393] 0x00C04019  LE         A=0 B=R1 C=K[1]=0.0
+    0003 [line  393] 0x80020016  JMP        A=0 sBx=9
+    0004 [line  394] 0x00008045  GETGLOBAL  R1 = GLOBAL K[2]='FlashTipMan'
+    0005 [line  394] 0x00C0C046  GETTABLE   R1 = R1[K[3]='FlashTip']
+    0006 [line  394] 0x00010085  GETGLOBAL  R2 = GLOBAL K[4]='StringTable'
+    0007 [line  394] 0x01414086  GETTABLE   R2 = R2[K[5]='Get']
+    0008 [line  394] 0x000180C1  LOADK      R3 = K[6]=301201.0
+    0009 [line  394] 0x0100009C  CALL       A=2 B=2 C=0
+    0010 [line  394] 0x0000405C  CALL       A=1 B=0 C=1
+    0011 [line  395] 0x00000042  LOADBOOL   A=1 B=0 C=0
+    0012 [line  395] 0x0100005E  RETURN     A=1 B=2 C=0
+    0013 [line  397] 0x00800042  LOADBOOL   A=1 B=1 C=0
+    0014 [line  397] 0x0100005E  RETURN     A=1 B=2 C=0
+    0015 [line  398] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 15
+
+    ============================================================
+    PROTO ROOT.21
+    Offset : 0x44AD
+    Source : '@lua\\gui\\ecrefreshpage.lua'
+    Lines  : 401 - 420
+    Params : 2
+    Stack  : 7
+    ============================================================
+
+    ----- CONSTANTS -----
+    K[000] = 'name'
+    K[001] = 'string'
+    K[002] = 'find'
+    K[003] = 'Btn_Refresh'
+    K[004] = 1.0
+    K[005] = 'CanDoIt'
+    K[006] = 'Refresh'
+    K[007] = 'Chk_Lock'
+    K[008] = 'tonumber'
+    K[009] = 'sub'
+    K[010] = -1.0
+    K[011] = 'LockThis'
+    K[012] = 'UpdateAll'
+    K[013] = 'Btn_Keep'
+    K[014] = 'Keep'
+    K[015] = 'Btn_RefresThree'
+    K[016] = 'require'
+    K[017] = 'GUI.ECPanelMultiRefresh'
+    K[018] = 'Instance'
+    K[019] = 'ShowView'
+    K[020] = 'm_mainEquip'
+
+    ----- INSTRUCTIONS -----
+    0000 [line  402] 0x00C00086  GETTABLE   R2 = R1[K[0]='name']
+    0001 [line  404] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='string'
+    0002 [line  404] 0x01C080C6  GETTABLE   R3 = R3[K[2]='find']
+    0003 [line  404] 0x01000100  MOVE       R4 = R2
+    0004 [line  404] 0x0000C141  LOADK      R5 = K[3]='Btn_Refresh'
+    0005 [line  404] 0x018080DC  CALL       A=3 B=3 C=2
+    0006 [line  404] 0x01C10017  EQ         A=0 B=R3 C=K[4]=1.0
+    0007 [line  404] 0x8001C016  JMP        A=0 sBx=8
+    0008 [line  405] 0x004140CB  SELF       A=3 B=0 C=261 Bx=261
+    0009 [line  405] 0x010080DC  CALL       A=3 B=2 C=2
+    0010 [line  405] 0x000040DA  TEST       A=3 B=0 C=1
+    0011 [line  405] 0x80000016  JMP        A=0 sBx=1
+    0012 [line  406] 0x0080001E  RETURN     A=0 B=1 C=0
+    0013 [line  408] 0x004180CB  SELF       A=3 B=0 C=262 Bx=262
+    0014 [line  408] 0x010040DC  CALL       A=3 B=2 C=1
+    0015 [line  408] 0x800B8016  JMP        A=0 sBx=47
+    0016 [line  409] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='string'
+    0017 [line  409] 0x01C080C6  GETTABLE   R3 = R3[K[2]='find']
+    0018 [line  409] 0x01000100  MOVE       R4 = R2
+    0019 [line  409] 0x0001C141  LOADK      R5 = K[7]='Chk_Lock'
+    0020 [line  409] 0x018080DC  CALL       A=3 B=3 C=2
+    0021 [line  409] 0x01C10017  EQ         A=0 B=R3 C=K[4]=1.0
+    0022 [line  409] 0x80030016  JMP        A=0 sBx=13
+    0023 [line  410] 0x000200C5  GETGLOBAL  R3 = GLOBAL K[8]='tonumber'
+    0024 [line  410] 0x00004105  GETGLOBAL  R4 = GLOBAL K[1]='string'
+    0025 [line  410] 0x02424106  GETTABLE   R4 = R4[K[9]='sub']
+    0026 [line  410] 0x01000140  MOVE       R5 = R2
+    0027 [line  410] 0x00028181  LOADK      R6 = K[10]=-1.0
+    0028 [line  410] 0x0180011C  CALL       A=4 B=3 C=0
+    0029 [line  410] 0x000080DC  CALL       A=3 B=0 C=2
+    0030 [line  411] 0x0042C10B  SELF       A=4 B=0 C=267 Bx=267
+    0031 [line  411] 0x01800180  MOVE       R6 = R3
+    0032 [line  411] 0x0180411C  CALL       A=4 B=3 C=1
+    0033 [line  412] 0x0043010B  SELF       A=4 B=0 C=268 Bx=268
+    0034 [line  412] 0x0100411C  CALL       A=4 B=2 C=1
+    0035 [line  412] 0x80068016  JMP        A=0 sBx=27
+    0036 [line  413] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='string'
+    0037 [line  413] 0x01C080C6  GETTABLE   R3 = R3[K[2]='find']
+    0038 [line  413] 0x01000100  MOVE       R4 = R2
+    0039 [line  413] 0x00034141  LOADK      R5 = K[13]='Btn_Keep'
+    0040 [line  413] 0x018080DC  CALL       A=3 B=3 C=2
+    0041 [line  413] 0x01C10017  EQ         A=0 B=R3 C=K[4]=1.0
+    0042 [line  413] 0x80010016  JMP        A=0 sBx=5
+    0043 [line  414] 0x004380CB  SELF       A=3 B=0 C=270 Bx=270
+    0044 [line  414] 0x010040DC  CALL       A=3 B=2 C=1
+    0045 [line  415] 0x004300CB  SELF       A=3 B=0 C=268 Bx=268
+    0046 [line  415] 0x010040DC  CALL       A=3 B=2 C=1
+    0047 [line  415] 0x80038016  JMP        A=0 sBx=15
+    0048 [line  416] 0x000040C5  GETGLOBAL  R3 = GLOBAL K[1]='string'
+    0049 [line  416] 0x01C080C6  GETTABLE   R3 = R3[K[2]='find']
+    0050 [line  416] 0x01000100  MOVE       R4 = R2
+    0051 [line  416] 0x0003C141  LOADK      R5 = K[15]='Btn_RefresThree'
+    0052 [line  416] 0x018080DC  CALL       A=3 B=3 C=2
+    0053 [line  416] 0x01C10017  EQ         A=0 B=R3 C=K[4]=1.0
+    0054 [line  416] 0x8001C016  JMP        A=0 sBx=8
+    0055 [line  417] 0x000400C5  GETGLOBAL  R3 = GLOBAL K[16]='require'
+    0056 [line  417] 0x00044101  LOADK      R4 = K[17]='GUI.ECPanelMultiRefresh'
+    0057 [line  417] 0x010080DC  CALL       A=3 B=2 C=2
+    0058 [line  418] 0x01C48106  GETTABLE   R4 = R3[K[18]='Instance']
+    0059 [line  418] 0x0080811C  CALL       A=4 B=1 C=2
+    0060 [line  418] 0x0244C10B  SELF       A=4 B=4 C=275 Bx=2323
+    0061 [line  418] 0x00450186  GETTABLE   R6 = R0[K[20]='m_mainEquip']
+    0062 [line  418] 0x0180411C  CALL       A=4 B=3 C=1
+    0063 [line  420] 0x0080001E  RETURN     A=0 B=1 C=0
+
+    ----- LOCALS -----
+    'self': 0 -> 63
+    'sender': 0 -> 63
+    'id': 1 -> 63
+    'index': 30 -> 35
+    'ECPanelMultiRefresh': 58 -> 63
