@@ -1,0 +1,31 @@
+return {
+File = {
+"Models/Player/Male/Equip/Fashion/m_haizeizhuang.fbx.asset.u3dext",
+"Models/Player/Male/Equip/Fashion/Materials/m_haizeizhuang_green.mat.u3dext",
+"Models/Player/Male/Equip/Fashion/Materials/m_haizeizhuang_tf.mat.u3dext",
+},
+Bones = {
+"Bip01 Head",
+"Bip01 Neck",
+"Bip01 Spine1",
+"Bip01 R Clavicle",
+"Bip01 L UpperArm",
+"Bip01 L Clavicle",
+"Bip01 Spine",
+"Bip01 Pelvis",
+"Bip01 L Thigh",
+"Bip01 L Forearm",
+"Bip01 L Hand",
+"Bip01 L Finger0",
+"Bip01 R UpperArm",
+"Bip01 R Thigh",
+"Bip01 R Forearm",
+"Bip01 R Hand",
+"Bip01 R Finger0",
+"Bip01 L Calf",
+"Bip01 L Foot",
+"Bip01 B Skirt03",
+"Bip01 R Calf",
+"Bip01 R Foot",
+}
+}

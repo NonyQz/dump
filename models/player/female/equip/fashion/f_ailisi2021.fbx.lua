@@ -1,0 +1,32 @@
+return {
+File = {
+"Models/Player/Female/Equip/Fashion/f_ailisi2021.FBX.asset.u3dext",
+"Models/Player/Female/Equip/Fashion/Materials/f_ailisi2021.mat.u3dext",
+"Models/Player/Female/Equip/Fashion/Materials/femalebody.mat.u3dext",
+"Models/Player/Female/Equip/Fashion/Materials/f_ailisi2021_tf.mat.u3dext",
+},
+Bones = {
+"Bip01 Spine1",
+"Bip01 Spine",
+"Bip01 Pelvis",
+"Bip01 B Skirt01",
+"Bip01 F Skirt01",
+"Bip01 Head",
+"Bip01 R Clavicle",
+"Bip01 L Clavicle",
+"Bip01 R UpperArm",
+"Bip01 R Forearm",
+"Bip01 L UpperArm",
+"Bip01 L Forearm",
+"Bip01 L Hand",
+"Bip01 L Finger0",
+"Bip01 R Hand",
+"Bip01 R Finger0",
+"Bip01 R Thigh",
+"Bip01 R Calf",
+"Bip01 R Foot",
+"Bip01 L Thigh",
+"Bip01 L Calf",
+"Bip01 L Foot",
+}
+}
